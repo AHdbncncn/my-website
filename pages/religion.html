@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="محتوى ديني موثوق يشمل تفسير القرآن الكريم، الفقه الإسلامي، والعلوم الشرعية بطريقة سهلة وواضحة">
+    <meta name="keywords" content="إسلام، قرآن، تفسير، فقه، حديث، سيرة نبوية، عقيدة، علم شرعي، spiritualité, religion">
+    <title>الدين والروحانيات - الموقع المتعدد المجالات</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📿</text></svg>">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🌐</span>
+                        <span class="logo-text">الموقع المتعدد المجالات</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="programming.html" class="nav-link">البرمجة والتقنية</a></li>
+                        <li><a href="health.html" class="nav-link">الطب والصحة</a></li>
+                        <li><a href="religion.html" class="nav-link active">الدين والروحانيات</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" id="main-search" placeholder="بحث في الموقع..." aria-label="بحث في الموقع">
+                        <button type="button" class="search-btn" aria-label="بحث">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="mobile-menu-btn" aria-label="القائمة" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
+                <li><a href="programming.html" class="mobile-nav-link">البرمجة والتقنية</a></li>
+                <li><a href="health.html" class="mobile-nav-link">الطب والصحة</a></li>
+                <li><a href="religion.html" class="mobile-nav-link active">الدين والروحانيات</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- قسم رأس الصفحة -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">الرئيسية</a>
+                <span>/</span>
+                <span>الدين والروحانيات</span>
+            </div>
+            <h1 class="page-hero-title">الدين والروحانيات</h1>
+            <p class="page-hero-description">محتوى ديني موثوق يشمل تفسير القرآن الكريم، الفقه الإسلامي، والعلوم الشرعية بطريقة سهلة وواضحة</p>
+        </div>
+    </section>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <!-- قسم التصنيفات الفرعية -->
+        <section class="categories-section" style="padding: 3rem 0;">
+            <div class="container">
+                <div class="subcategories">
+                    <div class="subcategory-filters">
+                        <button class="filter-btn active" data-filter="all">الكل</button>
+                        <button class="filter-btn" data-filter="quran">القرآن الكريم</button>
+                        <button class="filter-btn" data-filter="hadith">الحديث والسنة</button>
+                        <button class="filter-btn" data-filter="fiqh">الفقه الإسلامي</button>
+                        <button class="filter-btn" data-filter="aqeedah">العقيدة</button>
+                        <button class="filter-btn" data-filter="seerah">السيرة النبوية</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المقالات -->
+        <section class="latest-articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">أحدث المقالات الدينية</h2>
+                    <p class="section-description">محتوى شرعي موثوق لتوعية المسلمين وزيادة معرفتهم بدينهم</p>
+                </div>
+                
+                <div class="articles-grid">
+                    <!-- مقال 1 -->
+                    <article class="article-card" data-category="quran">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">
+                                <span>📖</span>
+                            </div>
+                            <span class="article-category">التفسير</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تفسير سورة الكهف كاملة مع المعاني</h3>
+                            <p class="article-excerpt">تفسير مبسط وعلمي لسورة الكهف مع شرح آياتها ومعانيها العميقة والإرشادات المستفادة منها.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 15 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 15 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 2 -->
+                    <article class="article-card" data-category="fiqh">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span>🕌</span>
+                            </div>
+                            <span class="article-category">الفقه</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أحكام الصيام في الإسلام شرح مفصل</h3>
+                            <p class="article-excerpt">شرح شامل لأحكام الصيام من حيث تعريفه، شروطه، واجباته، وسننه النبوية الشريفة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 12 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 11 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 3 -->
+                    <article class="article-card" data-category="seerah">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <span>☪️</span>
+                            </div>
+                            <span class="article-category">السيرة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">حياة الرسول محمد صلى الله عليه وسلم</h3>
+                            <p class="article-excerpt">نظرة شاملة على السيرة النبوية الشريفة من الولادة إلى الهجرة النبوية المباركة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 10 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 20 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 4 -->
+                    <article class="article-card" data-category="aqeedah">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <span>✨</span>
+                            </div>
+                            <span class="article-category">العقيدة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أركان الإيمان الستة شرح وتوضيح</h3>
+                            <p class="article-excerpt">شرح مفصل لأركان الإيمان الإسلامي وكيفية تطبيقها في حياة المسلم اليومية.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 8 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 12 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 5 -->
+                    <article class="article-card" data-category="hadith">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <span>📿</span>
+                            </div>
+                            <span class="article-category">الحديث</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أحاديث نبوية شريفة في فضل الذكر والدعاء</h3>
+                            <p class="article-excerpt">مجموعة من الأحاديث النبوية الصحيحة في فضل الذكر والتسبيح والدعاء المستجاب.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 5 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 8 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 6 -->
+                    <article class="article-card" data-category="fiqh">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span>🤲</span>
+                            </div>
+                            <span class="article-category">العبادات</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">كيفية أداء الصلاة الصحيحة خطوة بخطوة</h3>
+                            <p class="article-excerpt">دليل شامل لتعلم كيفية أداء الصلوات المفروضة والنوافل بأسلوب صحيح وسهل.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 3 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 10 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 7 -->
+                    <article class="article-card" data-category="quran">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                <span>🌙</span>
+                            </div>
+                            <span class="article-category">المصاحف</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أفضل التطبيقات القرآنية للهاتف والكمبيوتر</h3>
+                            <p class="article-excerpt">قائمة بأفضل التطبيقات والبرامج المجانية لقراءة وسماع القرآن الكريم.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 1 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 7 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 8 -->
+                    <article class="article-card" data-category="aqeedah">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span>🕋</span>
+                            </div>
+                            <span class="article-category">الإيمان</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">الإيمان بالملائكة الكرام وأدلته من القرآن</h3>
+                            <p class="article-excerpt">تعرف على الملائكة الكرام وأدوارهم ومكانتهم في الإسلام مع الأدلة من القرآن والسنة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 28 نوفمبر 2024</span>
+                                <span class="article-read-time">⏱️ 9 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="articles-pagination">
+                    <button class="pagination-btn" disabled>← السابق</button>
+                    <span class="pagination-info">صفحة 1 من 5</span>
+                    <button class="pagination-btn">التالي →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأدعية والأذكار -->
+        <section class="tools-section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">الأدعية والأذكار</h2>
+                    <p class="section-description">أذكار الصباح والمساء، الأدعية المستجابة، والأدعية النبوية الشريفة</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🌅</div>
+                        <h3 class="tool-title">أذكار الصباح</h3>
+                        <p class="tool-description">أذكار الصباح الكاملة من القرآن والسنة النبوية الشريفة</p>
+                        <button class="tool-btn" onclick="showAzkar('sabah')">اطلع على الأذكار</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🌃</div>
+                        <h3 class="tool-title">أذكار المساء</h3>
+                        <p class="tool-description">أذكار المساء الكاملة للحفظ من الشرور والأسواء</p>
+                        <button class="tool-btn" onclick="showAzkar('masa')">اطلع على الأذكار</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🤲</div>
+                        <h3 class="tool-title">أدعية مستجابة</h3>
+                        <p class="tool-description">مجموعة من الأدعية النبوية المستجابة في مختلف المواقف</p>
+                        <button class="tool-btn" onclick="showAzkar('doa')">اطلع على الأدعية</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📿</div>
+                        <h3 class="tool-title">تسابيح صوتية</h3>
+                        <p class="tool-description">تسابيح صوتية متنوعة للتسبيح والتهليل والتكبير</p>
+                        <button class="tool-btn" onclick="showTasbihAudio()">استمع الآن</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم القرآن الكريم -->
+        <section class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">القرآن الكريم</h2>
+                    <p class="section-description">استمع إلى القرآن الكريم واقرأ تفسير آياته</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🎧</div>
+                        <h3 class="tool-title">الاستماع للقرآن</h3>
+                        <p class="tool-description">استمع إلى القرآن الكريم بصوت أشهر القراء في العالم</p>
+                        <button class="tool-btn" onclick="openQuranPlayer()">ابدأ الاستماع</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📖</div>
+                        <h3 class="tool-title">التفسير الميسر</h3>
+                        <p class="tool-description">تفسير آيات القرآن الكريم بلغة سهلة ومفهومة للجميع</p>
+                        <button class="tool-btn" onclick="openTafsir()">ابدأ القراءة</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📝</div>
+                        <h3 class="tool-title">تعلم التجويد</h3>
+                        <p class="tool-description">دروس تعليمية لتعلم أحكام التجويد والإتقان في تلاوة القرآن</p>
+                        <button class="tool-btn" onclick="openTajweed()">ابدأ التعلم</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🗂️</div>
+                        <h3 class="tool-title">المصحف الكامل</h3>
+                        <p class="tool-description">تصفح المصحف كاملاً مع إمكانية البحث والنسخ</p>
+                        <button class="tool-btn" onclick="open Mushaf()">تصفح المصحف</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم النشرة البريدية -->
+        <section class="newsletter-section" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 class="newsletter-title">احصل على محتوى ديني يومي</h2>
+                        <p class="newsletter-description">اشترك في نشرتنا لتصلك آيات قرآنية، أحاديث نبوية، ونصائح شرعية يومياً</p>
+                    </div>
+                    <form class="newsletter-form" id="religion-newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required aria-label="البريد الإلكتروني">
+                        <button type="submit" class="btn btn-primary" style="color: #a855f7;">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section about">
+                    <h3 class="footer-title">عن الموقع</h3>
+                    <p class="footer-description">الموقع المتعدد المجالات هو منصة شاملة تقدم محتوى موثوق ومتميز في مجالات البرمجة والتقنية، الطب والصحة، والدين والروحانيات.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="فيس بوك">📘</a>
+                        <a href="#" class="social-link" aria-label="تويتر">🐦</a>
+                        <a href="#" class="social-link" aria-label="يوتيوب">📺</a>
+                        <a href="#" class="social-link" aria-label="انستغرام">📷</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="programming.html">البرمجة والتقنية</a></li>
+                        <li><a href="health.html">الطب والصحة</a></li>
+                        <li><a href="religion.html">الدين والروحانيات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section categories">
+                    <h3 class="footer-title">أقسام الدين</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">القرآن الكريم</a></li>
+                        <li><a href="#">الحديث والسنة</a></li>
+                        <li><a href="#">الفقه الإسلامي</a></li>
+                        <li><a href="#">العقيدة الإسلامية</a></li>
+                        <li><a href="#">السيرة النبوية</a></li>
+                        <li><a href="#">أذكار وأدعية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact">
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li><span class="contact-icon">📧</span><span>info@example.com</span></li>
+                        <li><span class="contact-icon">📍</span><span>المملكة العربية السعودية</span></li>
+                        <li><span class="contact-icon">📱</span><span>+966 123 456 789</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 الموقع المتعدد المجالات. جميع الحقوق محفوظة.</p>
+                <div class="footer-legal">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

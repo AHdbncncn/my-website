@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع متعدد المجالات يشمل البرمجة والتقنية، الطب والصحة، والدين والروحانيات - محتوى موثوق ومتميز">
+    <meta name="keywords" content="برمجة، تقنية، طب، صحة، دين، روحانيات، تعلم، شروحات">
+    <meta name="author" content="الموقع المتعدد المجالات">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="الموقع المتعدد المجالات - برمجة، طب، ودين">
+    <meta property="og:description" content="موقع شامل يقدم محتوى موثوق في البرمجة والتقنية، الطب والصحة، والدين والروحانيات">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <title>الموقع المتعدد المجالات - برمجة، طب، ودين</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">🌐</span>
+                        <span class="logo-text">الموقع المتعدد المجالات</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                        <li><a href="pages/programming.html" class="nav-link">البرمجة والتقنية</a></li>
+                        <li><a href="pages/health.html" class="nav-link">الطب والصحة</a></li>
+                        <li><a href="pages/religion.html" class="nav-link">الدين والروحانيات</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" id="main-search" placeholder="بحث في الموقع..." aria-label="بحث في الموقع">
+                        <button type="button" class="search-btn" aria-label="بحث">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="mobile-menu-btn" aria-label="القائمة" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">الرئيسية</a></li>
+                <li><a href="pages/programming.html" class="mobile-nav-link">البرمجة والتقنية</a></li>
+                <li><a href="pages/health.html" class="mobile-nav-link">الطب والصحة</a></li>
+                <li><a href="pages/religion.html" class="mobile-nav-link">الدين والروحانيات</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <!-- قسم الترحيب -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">مرحباً بكم في الموقع المتعدد المجالات</h1>
+                    <p class="hero-subtitle">وجهتكم الأولى للمعرفة في ثلاثة مجالات أساسية: البرمجة والتقنية، الطب والصحة، والدين والروحانيات. نقدم محتوى موثوق ومتميز لمساعدتكم في رحلة التعلم والتميز.</p>
+                    <div class="hero-buttons">
+                        <a href="#categories" class="btn btn-primary">استكشف المجالات</a>
+                        <a href="pages/programming.html" class="btn btn-secondary">ابدأ التعلم</a>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+500</span>
+                        <span class="stat-label">مقال وشروحات</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+50</span>
+                        <span class="stat-label">فيديوهات تعليمية</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+10000</span>
+                        <span class="stat-label">زائر شهرياً</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التصنيفات -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">المجالات المتاحة</h2>
+                    <p class="section-description">استكشف مجموعتنا المتنوعة من المحتوى المتخصص في المجالات المختلفة</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <!-- بطاقة البرمجة والتقنية -->
+                    <article class="category-card programming">
+                        <div class="card-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">البرمجة والتقنية</h3>
+                            <p class="card-description">تعلم لغات البرمجة الحديثة، تطوير المواقع والتطبيقات، وأحدث التقنيات الناشئة في عالم التقنية</p>
+                            <ul class="card-topics">
+                                <li>تطوير الويب</li>
+                                <li>تطبيقات الجوال</li>
+                                <li>الذكاء الاصطناعي</li>
+                                <li>البرمجة الأساسية</li>
+                            </ul>
+                            <a href="pages/programming.html" class="card-link">استكشف المزيد ←</a>
+                        </div>
+                    </article>
+
+                    <!-- بطاقة الطب والصحة -->
+                    <article class="category-card health">
+                        <div class="card-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">الطب والصحة</h3>
+                            <p class="card-description">مقالات صحية موثوقة، نصائح طبية عامة، ووصفات طبيعية وعلمية لحياة أفضل وصحة أسلم</p>
+                            <ul class="card-topics">
+                                <li>الصحة العامة</li>
+                                <li>التغذية السليمة</li>
+                                <li>الطب البديل</li>
+                                <li>الصحة النفسية</li>
+                            </ul>
+                            <a href="pages/health.html" class="card-link">استكشف المزيد ←</a>
+                        </div>
+                    </article>
+
+                    <!-- بطاقة الدين والروحانيات -->
+                    <article class="category-card religion">
+                        <div class="card-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">الدين والروحانيات</h3>
+                            <p class="card-description">محتوى ديني موثوق يشمل تفسير القرآن الكريم، الفقه الإسلامي، والعلوم الشرعية المتنوعة</p>
+                            <ul class="card-topics">
+                                <li>التفسير وعلوم القرآن</li>
+                                <li>الفقه الإسلامي</li>
+                                <li>السيرة النبوية</li>
+                                <li>العقيدة الإسلامية</li>
+                            </ul>
+                            <a href="pages/religion.html" class="card-link">استكشف المزيد ←</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم أحدث المقالات -->
+        <section class="latest-articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">أحدث المقالات والشروحات</h2>
+                    <p class="section-description">اطلع على أحدث المحتويات المضافة إلى موقعنا</p>
+                </div>
+                
+                <div class="articles-tabs">
+                    <button class="tab-btn active" data-tab="all">الكل</button>
+                    <button class="tab-btn" data-tab="programming">البرمجة</button>
+                    <button class="tab-btn" data-tab="health">الصحة</button>
+                    <button class="tab-btn" data-tab="religion">الدين</button>
+                </div>
+
+                <div class="articles-grid">
+                    <!-- مقال برمجة -->
+                    <article class="article-card" data-category="programming">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span>💻</span>
+                            </div>
+                            <span class="article-category">البرمجة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">دليل شامل لتعلم لغة بايثون من الصفر</h3>
+                            <p class="article-excerpt">تعلم لغة بايثون بسهولة مع هذا الدليل الشامل الذي يغطي كل ما تحتاجه للبدء في عالم البرمجة...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 15 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 10 دقائق قراءة</span>
+                            </div>
+                            <a href="pages/programming.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال صحة -->
+                    <article class="article-card" data-category="health">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                <span>🥗</span>
+                            </div>
+                            <span class="article-category">الصحة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">10 أطعمة تع المناعة في الشتاءزز جهاز</h3>
+                            <p class="article-excerpt">اكتشف أفضل الأطعمة الطبيعية التي تساعد على تقوية جهاز المناعة وحماية جسمك من الأمراض الموسمية...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 12 ديسمبر 2024</span>
+                                <span class="⏱️article-read-time"> 7 دقائق قراءة</span>
+                            </div>
+                            <a href="pages/health.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال دين -->
+                    <article class="article-card" data-category="religion">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span>📖</span>
+                            </div>
+                            <span class="article-category">الدين</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تفسير سورة الكهف كاملة مع المعاني</h3>
+                            <p class="article-excerpt">تفسير مبسط وعلمي لسورة الكهف مع شرح آياتها ومعانيها العميقة والإرشادات المستفادة منها...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 10 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 15 دقيقة قراءة</span>
+                            </div>
+                            <a href="pages/religion.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال برمجة -->
+                    <article class="article-card" data-category="programming">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <span>🌐</span>
+                            </div>
+                            <span class="article-category">البرمجة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">مقدمة في تطوير الويب باستخدام HTML وCSS</h3>
+                            <p class="article-excerpt">ابدأ رحلتك في عالم تطوير الويب من خلال تعلم أساسيات HTML وCSS لبناء مواقع احترافية...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 8 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 12 دقيقة قراءة</span>
+                            </div>
+                            <a href="pages/programming.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال صحة -->
+                    <article class="article-card" data-category="health">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <span>🧘</span>
+                            </div>
+                            <span class="article-category">الصحة</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تمارين التأمل والاسترخاء للقلق والتوتر</h3>
+                            <p class="article-excerpt">تعلم تقنيات التأمل والاسترخاء الفعالة للتخفيف من القلق والتوتر وتحسين الصحة النفسية...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 5 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 8 دقائق قراءة</span>
+                            </div>
+                            <a href="pages/health.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال دين -->
+                    <article class="article-card" data-category="religion">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <span>🕋</span>
+                            </div>
+                            <span class="article-category">الدين</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أحكام الصيام في الإسلام شرح مفصل</h3>
+                            <p class="article-excerpt">شرح شامل لأحكام الصيام من حيث 정의ه، شروطه، واجباته، وسننه النبوية الشريفة...</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 3 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 11 دقيقة قراءة</span>
+                            </div>
+                            <a href="pages/religion.html" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="articles-pagination">
+                    <button class="pagination-btn" disabled>← السابق</button>
+                    <span class="pagination-info">صفحة 1 من 5</span>
+                    <button class="pagination-btn">التالي →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأدوات التفاعلية -->
+        <section class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">أدوات تفاعلية</h2>
+                    <p class="section-description">استخدم أدواتنا المفيدة لتسهيل حياتك اليومية</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🔢</div>
+                        <h3 class="tool-title">آلة حاسبة برمجية</h3>
+                        <p class="tool-description">آلة حاسبة متقدمة تدعم العمليات الحسابية الأساسية والمتقدمة</p>
+                        <button class="tool-btn" onclick="openCalculator()">استخدم الأداة</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📅</div>
+                        <h3 class="tool-title">عداد الأيام</h3>
+                        <p class="tool-description">اعرف عدد الأيام المتبقية لمناسبة أو حدث مهم</p>
+                        <button class="tool-btn" onclick="openDaysCounter()">استخدم الأداة</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">💊</div>
+                        <h3 class="tool-title">مؤشر كتلة الجسم</h3>
+                        <p class="tool-description">احسب مؤشر كتلة جسمك واكتشف وزنك الصحي</p>
+                        <button class="tool-btn" onclick="openBMICalculator()">استخدم الأداة</button>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📿</div>
+                        <h3 class="tool-title">عداد تسبيح</h3>
+                        <p class="tool-description">عداد تسبيح إلكتروني لتسهيل الذكر والتسبيح</p>
+                        <button class="tool-btn" onclick="openTasbih()">استخدم الأداة</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم النشرة البريدية -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2 class="newsletter-title">اشترك في نشرتنا البريدية</h2>
+                        <p class="newsletter-description">احصل على أحدث المقالات والشروحات مباشرة في بريدك الإلكتروني</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required aria-label="البريد الإلكتروني">
+                        <button type="submit" class="btn btn-primary">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section about">
+                    <h3 class="footer-title">عن الموقع</h3>
+                    <p class="footer-description">الموقع المتعدد المجالات هو منصة شاملة تقدم محتوى موثوق ومتميز في مجالات البرمجة والتقنية، الطب والصحة، والدين والروحانيات. نسعى لنشر المعرفة وتحسين حياة الناس من خلال محتوى عربي أصيل.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="فيس بوك">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="تويتر">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="يوتيوب">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75,15.02 15.5,11.75 9.75,8.48 9.75,15.02" fill="white"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="انستغرام">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="pages/programming.html">البرمجة والتقنية</a></li>
+                        <li><a href="pages/health.html">الطب والصحة</a></li>
+                        <li><a href="pages/religion.html">الدين والروحانيات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section categories">
+                    <h3 class="footer-title">المجالات</h3>
+                    <ul class="footer-links">
+                        <li><a href="pages/programming.html">تطوير الويب</a></li>
+                        <li><a href="pages/programming.html">الذكاء الاصطناعي</a></li>
+                        <li><a href="pages/health.html">التغذية الصحية</a></li>
+                        <li><a href="pages/health.html">الصحة النفسية</a></li>
+                        <li><a href="pages/religion.html">التفسير وعلوم القرآن</a></li>
+                        <li><a href="pages/religion.html">الفقه الإسلامي</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact">
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <span>info@example.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>المملكة العربية السعودية</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📱</span>
+                            <span>+966 123 456 789</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 الموقع المتعدد المجالات. جميع الحقوق محفوظة.</p>
+                <div class="footer-legal">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- النافذة المنبثقة للآلة الحاسبة -->
+    <div id="calculator-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>آلة حاسبة برمجية</h3>
+                <button class="modal-close" onclick="closeCalculator()">×</button>
+            </div>
+            <div class="calculator">
+                <input type="text" id="calc-display" class="calc-display" readonly>
+                <div class="calc-buttons">
+                    <button onclick="clearCalc()" class="calc-btn operator">C</button>
+                    <button onclick="deleteCalc()" class="calc-btn operator">⌫</button>
+                    <button onclick="calcPercent()" class="calc-btn operator">%</button>
+                    <button onclick="calcOp('/')" class="calc-btn operator">÷</button>
+                    <button onclick="calcNum('7')" class="calc-btn">7</button>
+                    <button onclick="calcNum('8')" class="calc-btn">8</button>
+                    <button onclick="calcNum('9')" class="calc-btn">9</button>
+                    <button onclick="calcOp('*')" class="calc-btn operator">×</button>
+                    <button onclick="calcNum('4')" class="calc-btn">4</button>
+                    <button onclick="calcNum('5')" class="calc-btn">5</button>
+                    <button onclick="calcNum('6')" class="calc-btn">6</button>
+                    <button onclick="calcOp('-')" class="calc-btn operator">−</button>
+                    <button onclick="calcNum('1')" class="calc-btn">1</button>
+                    <button onclick="calcNum('2')" class="calc-btn">2</button>
+                    <button onclick="calcNum('3')" class="calc-btn">3</button>
+                    <button onclick="calcOp('+')" class="calc-btn operator">+</button>
+                    <button onclick="calcNum('0')" class="calc-btn zero">0</button>
+                    <button onclick="calcNum('.')" class="calc-btn">.</button>
+                    <button onclick="calcEqual()" class="calc-btn equal">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة لعدة أيام -->
+    <div id="days-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>عداد الأيام</h3>
+                <button class="modal-close" onclick="closeDaysCounter()">×</button>
+            </div>
+            <div class="days-counter">
+                <div class="input-group">
+                    <label for="event-date">حدد تاريخ المناسبة:</label>
+                    <input type="date" id="event-date">
+                </div>
+                <div class="input-group">
+                    <label for="event-name">اسم المناسبة:</label>
+                    <input type="text" id="event-name" placeholder="مثل: نهاية العام، عيد ميلاد...">
+                </div>
+                <button onclick="calculateDays()" class="btn btn-primary btn-full">احسب الأيام المتبقية</button>
+                <div id="days-result" class="days-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة لمؤشر كتلة الجسم -->
+    <div id="bmi-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>مؤشر كتلة الجسم (BMI)</h3>
+                <button class="modal-close" onclick="closeBMICalculator()">×</button>
+            </div>
+            <div class="bmi-calculator">
+                <div class="input-group">
+                    <label for="height">الطول (سم):</label>
+                    <input type="number" id="height" placeholder="أدخل طولك بالسنتيمتر">
+                </div>
+                <div class="input-group">
+                    <label for="weight">الوزن (كجم):</label>
+                    <input type="number" id="weight" placeholder="أدخل وزنك بالكيلوجرام">
+                </div>
+                <button onclick="calculateBMI()" class="btn btn-primary btn-full">احسب مؤشر الكتلة</button>
+                <div id="bmi-result" class="bmi-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة لعدة التسبيح -->
+    <div id="tasbih-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>عداد تسبيح</h3>
+                <button class="modal-close" onclick="closeTasbih()">×</button>
+            </div>
+            <div class="tasbih-counter">
+                <div class="tasbih-display">
+                    <span id="tasbih-count">0</span>
+                </div>
+                <div class="tasbih-buttons">
+                    <button onclick="incrementTasbih()" class="tasbih-btn">تسبيح</button>
+                    <button onclick="resetTasbih()" class="tasbih-btn secondary">إعادة تعيين</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

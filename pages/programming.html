@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دروس وشروحات عملية حول لغات البرمجة، تطوير المواقع والتطبيقات، وأحدث التقنيات في عالم البرمجة">
+    <meta name="keywords" content="برمجة، تطوير مواقع، تطبيقات، جافاسكريبت، بايثون، html، css، الذكاء الاصطناعي، تعلم البرمجة">
+    <title>البرمجة والتقنية - الموقع المتعدد المجالات</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-icon">🌐</span>
+                        <span class="logo-text">الموقع المتعدد المجالات</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="programming.html" class="nav-link active">البرمجة والتقنية</a></li>
+                        <li><a href="health.html" class="nav-link">الطب والصحة</a></li>
+                        <li><a href="religion.html" class="nav-link">الدين والروحانيات</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" id="main-search" placeholder="بحث في الموقع..." aria-label="بحث في الموقع">
+                        <button type="button" class="search-btn" aria-label="بحث">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="mobile-menu-btn" aria-label="القائمة" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
+                <li><a href="programming.html" class="mobile-nav-link active">البرمجة والتقنية</a></li>
+                <li><a href="health.html" class="mobile-nav-link">الطب والصحة</a></li>
+                <li><a href="religion.html" class="mobile-nav-link">الدين والروحانيات</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- قسم رأس الصفحة -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">الرئيسية</a>
+                <span>/</span>
+                <span>البرمجة والتقنية</span>
+            </div>
+            <h1 class="page-hero-title">البرمجة والتقنية</h1>
+            <p class="page-hero-description">تعلم لغات البرمجة الحديثة، تطوير المواقع والتطبيقات، وأحدث التقنيات الناشئة في عالم التقنية</p>
+        </div>
+    </section>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <!-- قسم التصنيفات الفرعية -->
+        <section class="categories-section" style="padding: 3rem 0;">
+            <div class="container">
+                <div class="subcategories">
+                    <div class="subcategory-filters">
+                        <button class="filter-btn active" data-filter="all">الكل</button>
+                        <button class="filter-btn" data-filter="web">تطوير الويب</button>
+                        <button class="filter-btn" data-filter="mobile">تطبيقات الجوال</button>
+                        <button class="filter-btn" data-filter="ai">الذكاء الاصطناعي</button>
+                        <button class="filter-btn" data-filter="data">علم البيانات</button>
+                        <button class="filter-btn" data-filter="security">الأمن السيبراني</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المقالات -->
+        <section class="latest-articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">أحدث شروحات البرمجة</h2>
+                    <p class="section-description">مقالات وشروحات عملية لتعلم البرمجة من الصفر إلى الاحتراف</p>
+                </div>
+                
+                <div class="articles-grid">
+                    <!-- مقال 1 -->
+                    <article class="article-card" data-category="web">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span>🐍</span>
+                            </div>
+                            <span class="article-category">بايثون</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">دليل شامل لتعلم لغة بايثون من الصفر</h3>
+                            <p class="article-excerpt">تعلم لغة بايثون بسهولة مع هذا الدليل الشامل الذي يغطي كل ما تحتاجه للبدء في عالم البرمجة، من الأساسيات إلى المفاهيم المتقدمة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 15 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 10 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 2 -->
+                    <article class="article-card" data-category="web">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span>🌐</span>
+                            </div>
+                            <span class="article-category">تطوير الويب</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">مقدمة في تطوير الويب باستخدام HTML وCSS</h3>
+                            <p class="article-excerpt">ابدأ رحلتك في عالم تطوير الويب من خلال تعلم أساسيات HTML وCSS لبناء مواقع احترافية وجذابة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 12 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 12 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 3 -->
+                    <article class="article-card" data-category="web">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <span>⚛️</span>
+                            </div>
+                            <span class="article-category">جافاسكريبت</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تعلم React.js لبناء واجهات المستخدم الحديثة</h3>
+                            <p class="article-excerpt">دليل شامل لتعلم مكتبة React.js وأفضل الممارسات لبناء تطبيقات ويب تفاعلية وسريعة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 10 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 15 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 4 -->
+                    <article class="article-card" data-category="ai">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <span>🤖</span>
+                            </div>
+                            <span class="article-category">الذكاء الاصطناعي</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">مقدمة في تعلم الآلة والذكاء الاصطناعي</h3>
+                            <p class="article-excerpt">فهم أساسيات تعلم الآلة وكيفية بناء نماذج ذكية قادرة على التعلم من البيانات واتخاذ القرارات.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 8 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 18 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">قرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 5 -->
+                    <article class="article-card" data-category="mobile">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                <span>📱</span>
+                            </div>
+                            <span class="article-category">تطبيقات الجوال</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">بناء تطبيقات React Native للمبتدئين</h3>
+                            <p class="article-excerpt">تعلم كيفية بناء تطبيقات جوال لنظامي iOS وAndroid باستخدام React Native و JavaScript.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 5 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 14 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 6 -->
+                    <article class="article-card" data-category="data">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <span>📊</span>
+                            </div>
+                                <span class="article-category">علم البيانات</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تحليل البيانات باستخدام Python وPandas</h3>
+                            <p class="article-excerpt">تعلم كيفية تحليل البيانات واستخراج الرؤى القيمة باستخدام لغة Python ومكتبة Pandas.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 3 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 16 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 7 -->
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <span>🔒</span>
+                            </div>
+                            <span class="article-category">الأمن السيبراني</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">أساسيات الأمن السيبراني وحماية التطبيقات</h3>
+                            <p class="article-excerpt">تعلم كيفية حماية تطبيقات الويب من الثغرات الأمنية والهجمات الإلكترونية الشائعة.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 1 ديسمبر 2024</span>
+                                <span class="article-read-time">⏱️ 12 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+
+                    <!-- مقال 8 -->
+                    <article class="article-card" data-category="web">
+                        <div class="article-image">
+                            <div class="article-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span>🅰️</span>
+                            </div>
+                            <span class="article-category">Angular</span>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">تعلم Angular لتطوير تطبيقات الويب المتقدمة</h3>
+                            <p class="article-excerpt">دليل شامل لتعلم إطار عمل Angular من Google لبناء تطبيقات ويب قوية وقابلة للتوسع.</p>
+                            <div class="article-meta">
+                                <span class="article-date">📅 28 نوفمبر 2024</span>
+                                <span class="article-read-time">⏱️ 20 دقيقة قراءة</span>
+                            </div>
+                            <a href="#" class="article-link">اقرأ المزيد</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="articles-pagination">
+                    <button class="pagination-btn" disabled>← السابق</button>
+                    <span class="pagination-info">صفحة 1 من 5</span>
+                    <button class="pagination-btn">التالي →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم مسار التعلم -->
+        <section class="tools-section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مسارات التعلم المقترحة</h2>
+                    <p class="section-description">اختر المسار المناسب لك وابدأ رحلتك في عالم البرمجة</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🌐</div>
+                        <h3 class="tool-title">مسار مطور الويب</h3>
+                        <p class="tool-description">تعلم HTML, CSS, JavaScript, React لبناء مواقع وتطبيقات ويب احترافية</p>
+                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">ابدأ التعلم</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🐍</div>
+                        <h3 class="tool-title">مسار بايثون</h3>
+                        <p class="tool-description">إتقان لغة بايثون للذكاء الاصطناعي، تحليل البيانات، وتطوير البرمجيات</p>
+                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">ابدأ التعلم</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📱</div>
+                        <h3 class="tool-title">مسار مطور الجوال</h3>
+                        <p class="tool-description">بناء تطبيقات جوال لنظامي iOS وAndroid باستخدام Flutter أو React Native</p>
+                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">ابدأ التعلم</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🤖</div>
+                        <h3 class="tool-title">مسار الذكاء الاصطناعي</h3>
+                        <p class="tool-description">التعمق في تعلم الآلة، الشبكات العصبية، ومعالجة اللغات الطبيعية</p>
+                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">ابدأ التعلم</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الفيديوهات التعليمية -->
+        <section class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">فيديوهات تعليمية</h2>
+                    <p class="section-description">شاهد شروحات فيديو تفاعلية لتعلم البرمجة بسهولة</p>
+                </div>
+                
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <span style="font-size: 4rem;">▶️</span>
+                            </div>
+                            <span class="video-duration">15:30</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">شرح لغة بايثون للمبتدئين</h3>
+                            <p class="video-description">الدرس الأول: مقدمة وتثبيت البيئة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <span style="font-size: 4rem;">▶️</span>
+                            </div>
+                            <span class="video-duration">22:45</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">HTML وCSS من الصفر</h3>
+                            <p class="video-description">بناء أول صفحة ويب احترافية</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <span style="font-size: 4rem;">▶️</span>
+                            </div>
+                            <span class="video-duration">18:20</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">أساسيات جافاسكريبت</h3>
+                            <p class="video-description">التغيرات، الدوال، والكائنات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section about">
+                    <h3 class="footer-title">عن الموقع</h3>
+                    <p class="footer-description">الموقع المتعدد المجالات هو منصة شاملة تقدم محتوى موثوق ومتميز في مجالات البرمجة والتقنية، الطب والصحة، والدين والروحانيات.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="فيس بوك">📘</a>
+                        <a href="#" class="social-link" aria-label="تويتر">🐦</a>
+                        <a href="#" class="social-link" aria-label="يوتيوب">📺</a>
+                        <a href="#" class="social-link" aria-label="انستغرام">📷</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="programming.html">البرمجة والتقنية</a></li>
+                        <li><a href="health.html">الطب والصحة</a></li>
+                        <li><a href="religion.html">الدين والروحانيات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section categories">
+                    <h3 class="footer-title">أقسام البرمجة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">تطوير الويب</a></li>
+                        <li><a href="#">تطبيقات الجوال</a></li>
+                        <li><a href="#">الذكاء الاصطناعي</a></li>
+                        <li><a href="#">علم البيانات</a></li>
+                        <li><a href="#">الأمن السيبراني</a></li>
+                        <li><a href="#">البرمجة الأساسية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact">
+                    <h3 class="footer-title">اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li><span class="contact-icon">📧</span><span>info@example.com</span></li>
+                        <li><span class="contact-icon">📍</span><span>المملكة العربية السعودية</span></li>
+                        <li><span class="contact-icon">📱</span><span>+966 123 456 789</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 الموقع المتعدد المجالات. جميع الحقوق محفوظة.</p>
+                <div class="footer-legal">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
