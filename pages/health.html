@@ -5,381 +5,1063 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="مقالات صحية موثوقة، نصائح طبية عامة، ووصفات طبيعية وعلمية لحياة صحية أفضل">
     <meta name="keywords" content="صحة، طب، تغذية، رياضة، طب بديل، صحة نفسية، اللياقة، نظام غذائي">
-    <title>الطب والصحة - الموقع المتعدد المجالات</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <title>الطب والصحة - مقالات موسعة ومفصلة</title>
+    <style>
+        :root {
+            --primary-color: #11998e;
+            --secondary-color: #38ef7d;
+            --accent-color: #4facfe;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Amiri', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* تحسين الهيدر */
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* تحسين الأزرار */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        /* قسم البطل */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 5rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* نظام التصفية */
+        .filter-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-tag {
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .filter-tag.active,
+        .filter-tag:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: transparent;
+        }
+
+        /* تصميم البطاقات المحسّن */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-header {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .article-card:hover .article-image {
+            transform: scale(1.1);
+        }
+
+        .article-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .article-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .article-icon-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(17, 153, 142, 0.3);
+        }
+
+        .article-icon-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(17, 153, 142, 0.4);
+        }
+
+        /* قسم الشرح الموسع */
+        .article-detail-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+        }
+
+        .detail-content {
+            background: white;
+            max-width: 900px;
+            margin: 50px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .detail-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .detail-category {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .detail-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .detail-body {
+            padding: 3rem;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .detail-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .detail-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-size: 1.4rem;
+        }
+
+        .detail-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .detail-list {
+            list-style-type: none;
+            padding-right: 1.5rem;
+        }
+
+        .detail-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+
+        .detail-list li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* قسم الاشتراك */
+        .newsletter-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* الفوتر */
+        .main-footer {
+            background: #2c3e50;
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-title {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* التجاوب */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-content {
+                margin: 20px;
+            }
+            
+            .detail-body {
+                padding: 2rem;
+                max-height: 70vh;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-section {
+                padding: 3rem 0;
+            }
+            
+            .detail-body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- رأس الصفحة -->
+    <!-- الهيدر -->
     <header class="main-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="../index.html">
-                        <span class="logo-icon">🌐</span>
-                        <span class="logo-text">الموقع المتعدد المجالات</span>
+                    <a href="#">
+                        <span>🏥</span>
+                        <span>الطب والصحة المتقدم</span>
                     </a>
                 </div>
-                
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-                        <li><a href="programming.html" class="nav-link">البرمجة والتقنية</a></li>
-                        <li><a href="health.html" class="nav-link active">الطب والصحة</a></li>
-                        <li><a href="religion.html" class="nav-link">الدين والروحانيات</a></li>
-                    </ul>
+                <nav>
+                    <button class="btn btn-primary">اشترك في النشرة</button>
                 </nav>
-
-                <div class="header-actions">
-                    <div class="search-box">
-                        <input type="search" id="main-search" placeholder="بحث في الموقع..." aria-label="بحث في الموقع">
-                        <button type="button" class="search-btn" aria-label="بحث">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="mobile-menu-btn" aria-label="القائمة" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- القائمة الجانبية للجوال -->
-    <div class="mobile-menu">
-        <nav class="mobile-nav">
-            <ul class="mobile-nav-list">
-                <li><a href="../index.html" class="mobile-nav-link">الرئيسية</a></li>
-                <li><a href="programming.html" class="mobile-nav-link">البرمجة والتقنية</a></li>
-                <li><a href="health.html" class="mobile-nav-link active">الطب والصحة</a></li>
-                <li><a href="religion.html" class="mobile-nav-link">الدين والروحانيات</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- قسم رأس الصفحة -->
-    <section class="page-hero" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+    <!-- قسم البطل -->
+    <section class="hero-section">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="../index.html">الرئيسية</a>
-                <span>/</span>
-                <span>الطب والصحة</span>
-            </div>
-            <h1 class="page-hero-title">الطب والصحة</h1>
-            <p class="page-hero-description">مقالات صحية موثوقة، نصائح طبية عامة، ووصفات طبيعية وعلمية لحياة أفضل وصحة أسلم</p>
+            <h1 class="hero-title">الطب والصحة</h1>
+            <p class="hero-description">
+                مقالات صحية موثوقة، نصائح طبية عامة، ووصفات طبيعية وعلمية لحياة أفضل وصحة أسلم
+            </p>
         </div>
     </section>
 
-    <!-- القسم الرئيسي -->
-    <main>
-        <!-- قسم التصنيفات الفرعية -->
-        <section class="categories-section" style="padding: 3rem 0;">
-            <div class="container">
-                <div class="subcategories">
-                    <div class="subcategory-filters">
-                        <button class="filter-btn active" data-filter="all">الكل</button>
-                        <button class="filter-btn" data-filter="nutrition">التغذية</button>
-                        <button class="filter-btn" data-filter="fitness">الرياضة واللياقة</button>
-                        <button class="filter-btn" data-filter="mental">الصحة النفسية</button>
-                        <button class="filter-btn" data-filter="natural">الطب البديل</button>
-                        <button class="filter-btn" data-filter="diseases">الأمراض والوقاية</button>
-                    </div>
-                </div>
+    <!-- نظام التصفية -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tags">
+                <button class="filter-tag active" data-filter="all">الكل</button>
+                <button class="filter-tag" data-filter="nutrition">التغذية</button>
+                <button class="filter-tag" data-filter="fitness">الرياضة واللياقة</button>
+                <button class="filter-tag" data-filter="mental">الصحة النفسية</button>
+                <button class="filter-tag" data-filter="natural">الطب البديل</button>
+                <button class="filter-tag" data-filter="diseases">الأمراض والوقاية</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- قسم المقالات -->
-        <section class="latest-articles-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">أحدث المقالات الصحية</h2>
-                    <p class="section-description">نصائح ومعلومات موثوقة لتحسين نمط حياتك وصحتك</p>
+    <!-- المقالات -->
+    <main class="container">
+        <div class="articles-grid" id="articles-grid">
+            
+            <!-- مقال 1 -->
+            <article class="article-card" data-category="nutrition">
+                <div class="article-header">
+                    <div class="article-category">التغذية</div>
+                    <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); height: 100%;"></div>
                 </div>
-                
-                <div class="articles-grid">
-                    <!-- مقال 1 -->
-                    <article class="article-card" data-category="nutrition">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-                                <span>🥗</span>
-                            </div>
-                            <span class="article-category">التغذية</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">10 أطعمة تقوي جهاز المناعة في الشتاء</h3>
-                            <p class="article-excerpt">اكتشف أفضل الأطعمة الطبيعية التي تساعد على تقوية جهاز المناعة وحماية جسمك من الأمراض الموسمية.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 15 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 7 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 2 -->
-                    <article class="article-card" data-category="mental">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                                <span>🧘</span>
-                            </div>
-                            <span class="article-category">الصحة النفسية</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">تمارين التأمل والاسترخاء للتخفيف من القلق</h3>
-                            <p class="article-excerpt">تعلم تقنيات التأمل والاسترخاء الفعالة للتخفيف من القلق والتوتر وتحسين الصحة النفسية.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 12 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 8 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 3 -->
-                    <article class="article-card" data-category="fitness">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                                <span>🏃</span>
-                            </div>
-                            <span class="article-category">الرياضة</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">أفضل exercises للتنحيف وحرق الدهون</h3>
-                            <p class="article-excerpt">برنامج رياضي متكامل لحرق الدهون وتنحيف الجسم بشكل صحي وفعال دون الإضرار بالصحة.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 10 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 10 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 4 -->
-                    <article class="article-card" data-category="natural">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                <span>🌿</span>
-                            </div>
-                            <span class="article-category">الطب البديل</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">الطب النبوي والأعشاب الطبية المفيدة</h3>
-                            <p class="article-excerpt">تعرف على فوائد الأعشاب الطبية المستخدمة في الطب النبوي والطب البديل للعلاج والوقاية.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 8 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 12 دقيقة قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 5 -->
-                    <article class="article-card" data-category="nutrition">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                                <span>🥤</span>
-                            </div>
-                            <span class="article-category">التغذية</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">المشروبات الطبيعية لفقدان الوزن</h3>
-                            <p class="article-excerpt">مشروبات طبيعية فعالة تساعد على حرق الدهون وفقدان الوزن بشكل صحي وآمن.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 5 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 6 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 6 -->
-                    <article class="article-card" data-category="diseases">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                <span>💤</span>
-                            </div>
-                            <span class="article-category">صحة النوم</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">10 نصائح لتحسين جودة النوم ليلاً</h3>
-                            <p class="article-excerpt">نصائح علمية فعالة للتغلب على الأرق والحصول على نوم هادئ ومريح يجدد طاقتك.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 3 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 8 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 7 -->
-                    <article class="article-card" data-category="fitness">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-                                <span>💪</span>
-                            </div>
-                            <span class="article-category">بناء العضلات</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">تمارين القوة والحديد للرجال والنساء</h3>
-                            <p class="article-excerpt">دليل شامل لتمارين القوة وبناء العضلات بأسلوب صحيح وآمن للرياضيين المبتدئين والمتقدمين.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 1 ديسمبر 2024</span>
-                                <span class="article-read-time">⏱️ 14 دقيقة قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">قرأ المزيد</a>
-                        </div>
-                    </article>
-
-                    <!-- مقال 8 -->
-                    <article class="article-card" data-category="mental">
-                        <div class="article-image">
-                            <div class="article-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                                <span>😊</span>
-                            </div>
-                            <span class="article-category">السعادة</span>
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-title">العادات السبع للسعادة الحقيقية</h3>
-                            <p class="article-excerpt">تعرف على العادات اليومية التي ستساعدك على تحقيق السعادة الحقيقية والرضا عن الحياة.</p>
-                            <div class="article-meta">
-                                <span class="article-date">📅 28 نوفمبر 2024</span>
-                                <span class="article-read-time">⏱️ 9 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="article-link">اقرأ المزيد</a>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="articles-pagination">
-                    <button class="pagination-btn" disabled>← السابق</button>
-                    <span class="pagination-info">صفحة 1 من 5</span>
-                    <button class="pagination-btn">التالي →</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم الوصفات الطبيعية -->
-        <section class="tools-section" style="background-color: var(--bg-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">وصفات طبيعية مميزة</h2>
-                    <p class="section-description">وصفات طبيعية وعلمية لتحسين صحتك وجمالك</p>
-                </div>
-                
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <div class="tool-icon">🍯</div>
-                        <h3 class="tool-title">وصفات العسل والقرفة</h3>
-                        <p class="tool-description">وصفات طبيعية باستخدام العسل والقرفة للتنحيف وتعزيز المناعة</p>
-                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">اطلع على الوصفات</a>
+                <div class="article-content">
+                    <h2 class="article-title">10 أطعمة تقوي جهاز المناعة في الشتاء</h2>
+                    <p class="article-excerpt">
+                        اكتشف أفضل الأطعمة الطبيعية التي تساعد على تقوية جهاز المناعة وحماية جسمك من الأمراض الموسمية.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 15 ديسمبر 2024</span>
+                        <span>⏱️ 7 دقائق قراءة</span>
                     </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-icon">🥬</div>
-                        <h3 class="tool-title">وصفات الخضروات</h3>
-                        <p class="tool-description">وصفات صحية ولذيذة من الخضروات الطازجة لفقدان الوزن</p>
-                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">اطلع على الوصفات</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-icon">🧴</div>
-                        <h3 class="tool-title">وصفات التجميل الطبيعية</h3>
-                        <p class="tool-description">وصفات طبيعية للعناية بالبشرة والشعر دون مواد كيميائية</p>
-                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">اطلع على الوصفات</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <div class="tool-icon">🍵</div>
-                        <h3 class="tool-title">مشروبات صحية</h3>
-                        <p class="tool-description">مشروبات طبيعية مفيدة للصحة والجمال والطاقة</p>
-                        <a href="#" class="tool-btn" style="display: inline-block; text-decoration: none;">اطلع على الوصفات</a>
-                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(1)">📖</button>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <!-- نصائح سريعة -->
-        <section class="newsletter-section" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-            <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <h2 class="newsletter-title">احصل على نصائح صحية يومية</h2>
-                        <p class="newsletter-description">اشترك في نشرتنا لتصلك نصائح يومية للحفاظ على صحتك وجمالك</p>
-                    </div>
-                    <form class="newsletter-form" id="health-newsletter-form">
-                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required aria-label="البريد الإلكتروني">
-                        <button type="submit" class="btn btn-primary" style="color: #11998e;">اشترك الآن</button>
-                    </form>
+            <!-- مقال 2 -->
+            <article class="article-card" data-category="mental">
+                <div class="article-header">
+                    <div class="article-category">الصحة النفسية</div>
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 100%;"></div>
                 </div>
-            </div>
-        </section>
+                <div class="article-content">
+                    <h2 class="article-title">تمارين التأمل والاسترخاء للتخفيف من القلق</h2>
+                    <p class="article-excerpt">
+                        تعلم تقنيات التأمل والاسترخاء الفعالة للتخفيف من القلق والتوتر وتحسين الصحة النفسية.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 12 ديسمبر 2024</span>
+                        <span>⏱️ 8 دقائق قراءة</span>
+                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(2)">📖</button>
+                </div>
+            </article>
+
+            <!-- مقال 3 -->
+            <article class="article-card" data-category="fitness">
+                <div class="article-header">
+                    <div class="article-category">الرياضة واللياقة</div>
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 100%;"></div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">أفضل تمارين للتنحيف وحرق الدهون</h2>
+                    <p class="article-excerpt">
+                        برنامج رياضي متكامل لحرق الدهون وتنحيف الجسم بشكل صحي وفعال دون الإضرار بالصحة.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 10 ديسمبر 2024</span>
+                        <span>⏱️ 10 دقائق قراءة</span>
+                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(3)">📖</button>
+                </div>
+            </article>
+
+            <!-- مقال 4 -->
+            <article class="article-card" data-category="natural">
+                <div class="article-header">
+                    <div class="article-category">الطب البديل</div>
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 100%;"></div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">الطب النبوي والأعشاب الطبية المفيدة</h2>
+                    <p class="article-excerpt">
+                        تعرف على فوائد الأعشاب الطبية المستخدمة في الطب النبوي والطب البديل للعلاج والوقاية.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 8 ديسمبر 2024</span>
+                        <span>⏱️ 12 دقيقة قراءة</span>
+                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(4)">📖</button>
+                </div>
+            </article>
+
+            <!-- مقال 5 -->
+            <article class="article-card" data-category="nutrition">
+                <div class="article-header">
+                    <div class="article-category">التغذية</div>
+                    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); height: 100%;"></div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">المشروبات الطبيعية لفقدان الوزن</h2>
+                    <p class="article-excerpt">
+                        مشروبات طبيعية فعالة تساعد على حرق الدهون وفقدان الوزن بشكل صحي وآمن.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 5 ديسمبر 2024</span>
+                        <span>⏱️ 6 دقائق قراءة</span>
+                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(5)">📖</button>
+                </div>
+            </article>
+
+            <!-- مقال 6 -->
+            <article class="article-card" data-category="diseases">
+                <div class="article-header">
+                    <div class="article-category">صحة النوم</div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%;"></div>
+                </div>
+                <div class="article-content">
+                    <h2 class="article-title">10 نصائح لتحسين جودة النوم ليلاً</h2>
+                    <p class="article-excerpt">
+                        نصائح علمية فعالة للتغلب على الأرق والحصول على نوم هادئ ومريح يجدد طاقتك.
+                    </p>
+                    <div class="article-meta">
+                        <span>📅 3 ديسمبر 2024</span>
+                        <span>⏱️ 8 دقائق قراءة</span>
+                    </div>
+                    <button class="article-icon-btn" onclick="showArticleDetail(6)">📖</button>
+                </div>
+            </article>
+
+        </div>
     </main>
 
-    <!-- تذييل الصفحة -->
+    <!-- قسم الاشتراك -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>احصل على نصائح صحية يومية</h2>
+            <p>اشترك في نشرتنا لتصلك نصائح يومية للحفاظ على صحتك وجمالك</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                <button type="submit" class="btn btn-primary">اشترك الآن</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-section about">
+                <div>
                     <h3 class="footer-title">عن الموقع</h3>
-                    <p class="footer-description">الموقع المتعدد المجالات هو منصة شاملة تقدم محتوى موثوق ومتميز في مجالات البرمجة والتقنية، الطب والصحة، والدين والروحانيات.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="فيسوك">📘</a>
-                        <a href="#" class="social-link" aria-label="تويتر">🐦</a>
-                        <a href="#" class="social-link" aria-label="يوتيوب">📺</a>
-                        <a href="#" class="social-link" aria-label="انستغرام">📷</a>
-                    </div>
+                    <p>الطب والصحة المتقدم هو منصة تقدم محتوى طبي موثوق ومدقق علمياً لتحسين جودة الحياة.</p>
                 </div>
-                
-                <div class="footer-section links">
+                <div>
                     <h3 class="footer-title">روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="../index.html">الرئيسية</a></li>
-                        <li><a href="programming.html">البرمجة والتقنية</a></li>
-                        <li><a href="health.html">الطب والصحة</a></li>
-                        <li><a href="religion.html">الدين والروحانيات</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section categories">
-                    <h3 class="footer-title">أقسام الصحة</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">التغذية السليمة</a></li>
-                        <li><a href="#">الرياضة واللياقة</a></li>
+                        <li><a href="#">مقالات التغذية</a></li>
                         <li><a href="#">الصحة النفسية</a></li>
+                        <li><a href="#">اللياقة البدنية</a></li>
                         <li><a href="#">الطب البديل</a></li>
-                        <li><a href="#">صحة المرأة</a></li>
-                        <li><a href="#">صحة الأطفال</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section contact">
-                    <h3 class="footer-title">اتصل بنا</h3>
-                    <ul class="contact-info">
-                        <li><span class="contact-icon">📧</span><span>info@example.com</span></li>
-                        <li><span class="contact-icon">📍</span><span>المملكة العربية السعودية</span></li>
-                        <li><span class="contact-icon">📱</span><span>+966 123 456 789</span></li>
+                <div>
+                    <h3 class="footer-title">معلومات التواصل</h3>
+                    <ul class="footer-links">
+                        <li>📧 info@health.com</li>
+                        <li>📱 +966 500 000 000</li>
+                        <li>📍 المملكة العربية السعودية</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">© 2024 الموقع المتعدد المجالات. جميع الحقوق محفوظة.</p>
-                <div class="footer-legal">
-                    <a href="#">سياسة الخصوصية</a>
-                    <a href="#">شروط الاستخدام</a>
-                </div>
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>© 2024 الطب والصحة المتقدم. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <!-- نافذة الشرح الموسع -->
+    <div id="articleDetailModal" class="article-detail-modal">
+        <div class="detail-content">
+            <div class="detail-header">
+                <button class="close-modal" onclick="closeArticleDetail()">×</button>
+                <div class="detail-category" id="detailCategory">التغذية</div>
+                <h1 class="detail-title" id="detailTitle">10 أطعمة تقوي جهاز المناعة في الشتاء</h1>
+                <div class="article-meta" style="color: white; border-color: rgba(255,255,255,0.3);">
+                    <span id="detailDate">📅 15 ديسمبر 2024</span>
+                    <span id="detailTime">⏱️ 7 دقائق قراءة</span>
+                </div>
+            </div>
+            <div class="detail-body" id="detailBody">
+                <!-- المحتوى سيتم إضافته ديناميكياً -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات المقالات الموسعة
+        const articlesData = {
+            1: {
+                category: "التغذية",
+                title: "10 أطعمة تقوي جهاز المناعة في الشتاء",
+                date: "📅 15 ديسمبر 2024",
+                time: "⏱️ 7 دقائق قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة</h3>
+                        <p>مع قدوم فصل الشتاء، تزداد فرص الإصابة بالأمراض الموسمية مثل الإنفلونزا والبرد. جهاز المناعة القوي هو خط الدفاع الأول ضد هذه الأمراض، ويمكن تقويته من خلال التغذية السليمة.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>الأطعمة العشرة المقوية للمناعة</h3>
+                        <ul class="detail-list">
+                            <li><strong>الثوم:</strong> يحتوي على مركبات الأليسين التي تحارب البكتيريا والفيروسات وتقوي المناعة.</li>
+                            <li><strong>الحمضيات:</strong> البرتقال، الليمون، الجريب فروت - غنية بفيتامين C الذي يحفز إنتاج خلايا الدم البيضاء.</li>
+                            <li><strong>الزنجبيل:</strong> يقلل الالتهابات، ويخفف التهاب الحلق، ويساعد في الوقاية من الأمراض.</li>
+                            <li><strong>السبانخ:</strong> غني بفيتامين C، مضادات الأكسدة، والبيتا كاروتين التي تزيد من قدرة جهاز المناعة على مكافحة العدوى.</li>
+                            <li><strong>الزبادي:</strong> يحتوي على البروبيوتيك الذي يدعم صحة الأمعاء ويعزز المناعة.</li>
+                            <li><strong>اللوز:</strong> مصدر غني بفيتامين E المضاد للأكسدة الذي يحمي الخلايا من التلف.</li>
+                            <li><strong>الكركم:</strong> يحتوي على الكركمين الذي له خصائص مضادة للالتهابات ويعزز الاستجابة المناعية.</li>
+                            <li><strong>الشاي الأخضر:</strong> غني بمضادات الأكسدة الفلافونويدات التي تعزز وظيفة المناعة.</li>
+                            <li><strong>الفلفل الأحمر:</strong> يحتوي على ضعف كمية فيتامين C الموجودة في الحمضيات.</li>
+                            <li><strong>بذور عباد الشمس:</strong> غنية بالفوسفور والمغنيسيوم وفيتامين B6 وE.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>نصائح إضافية لتقوية المناعة</h3>
+                        <p>إلى جانب التغذية، احرص على:</p>
+                        <ul class="detail-list">
+                            <li>النوم 7-8 ساعات يومياً</li>
+                            <li>ممارسة الرياضة بانتظام</li>
+                            <li>تجنب التوتر والضغط النفسي</li>
+                            <li>شرب كمية كافية من الماء</li>
+                            <li>الابتعاد عن التدخين والكحول</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>وصفة طبيعية لتقوية المناعة</h3>
+                        <p><strong>مشروب الليمون والزنجبيل والعسل:</strong></p>
+                        <p>اخلط عصير ليمونة، ملعقة صغيرة من الزنجبيل الطازج المبشور، ملعقة عسل، وكوب ماء دافئ. اشرب مرة يومياً على الريق.</p>
+                    </div>
+                `
+            },
+            2: {
+                category: "الصحة النفسية",
+                title: "تمارين التأمل والاسترخاء للتخفيف من القلق",
+                date: "📅 12 ديسمبر 2024",
+                time: "⏱️ 8 دقائق قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة عن التأمل وأهميته</h3>
+                        <p>التأمل هو ممارسة قديمة تساعد على تهدئة العقل وتحسين الصحة النفسية. أثبتت الدراسات الحديثة فعاليته في تقليل القلق والتوتر وتحسين المزاج.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين التأمل للمبتدئين</h3>
+                        <ul class="detail-list">
+                            <li><strong>التنفس الواعي:</strong> ركز على أنفاسك، اشهق لمدة 4 ثوانٍ، احبس النفس 4 ثوانٍ، ازفر 4 ثوانٍ.</li>
+                            <li><strong>تأمل الجسد:</strong> ركز على كل جزء من جسدك بدءاً من أصابع القدم وحتى الرأس.</li>
+                            <li><strong>التأمل الموجه:</strong> استمع لتسجيلات تأمل موجه لمدة 10-15 دقيقة يومياً.</li>
+                            <li><strong>تأمل المشي:</strong> امشِ ببطء وركز على حركة قدميك وتنفسك.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين الاسترخاء المتقدمة</h3>
+                        <p><strong>استرخاء العضلات التدريجي:</strong></p>
+                        <p>قم بشد وإرخاء كل مجموعة عضلية لمدة 5 ثوانٍ، بدءاً من القدمين وصعوداً إلى الوجه.</p>
+                        
+                        <p><strong>التخيل الموجه:</strong></p>
+                        <p>تخيل مكاناً هادئاً ومريحاً، ركز على التفاصيل: الأصوات، الروائح، والمشاهد.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>فوائد الممارسة المنتظمة</h3>
+                        <ul class="detail-list">
+                            <li>خفض مستويات هرمون الكورتيزول (هرمون التوتر)</li>
+                            <li>تحسين جودة النوم</li>
+                            <li>زيادة التركيز والانتباه</li>
+                            <li>تحسين المزاج وتقليل الاكتئاب</li>
+                            <li>تعزيز الثقة بالنفس</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>برنامج أسبوعي للمبتدئين</h3>
+                        <p>اليوم 1-2: 5 دقائق تنفس واعي</p>
+                        <p>اليوم 3-4: 10 دقائق تأمل جالس</p>
+                        <p>اليوم 5-6: 15 دقائق تأمل موجه</p>
+                        <p>اليوم 7: 20 دقيقة ممارسة متكاملة</p>
+                    </div>
+                `
+            },
+            3: {
+                category: "الرياضة واللياقة",
+                title: "أفضل تمارين للتنحيف وحرق الدهون",
+                date: "📅 10 ديسمبر 2024",
+                time: "⏱️ 10 دقائق قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة: أهمية التمارين لحرق الدهون</h3>
+                        <p>ممارسة التمارين الرياضية بانتظام هي المفتاح لحرق الدهون وفقدان الوزن بشكل صحي ومستدام.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين الكارديو (القلب والأوعية الدموية)</h3>
+                        <ul class="detail-list">
+                            <li><strong>الركض:</strong> يحرق 300-400 سعرة حرارية في 30 دقيقة</li>
+                            <li><strong>القفز بالحبل:</strong> تمرين عالي الكثافة يحرق دهون كاملة الجسم</li>
+                            <li><strong>السباحة:</strong> تحريك جميع عضلات الجسم دون إجهاد المفاصل</li>
+                            <li><strong>ركوب الدراجة:</strong> مثالي لحرق دهون الفخذين والبطن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين القوة لبناء العضلات</h3>
+                        <p>زيادة الكتلة العضلية ترفع معدل الأيض الأساسي، مما يساعد على حرق المزيد من السعرات حتى في حالة الراحة:</p>
+                        <ul class="detail-list">
+                            <li>تمرين الضغط (Push-ups)</li>
+                            <li>تمرين القرفصاء (Squats)</li>
+                            <li>تمرين اللانجز (Lunges)</li>
+                            <li>تمرين البلانك (Plank)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين HIIT (التدريب المتقطع عالي الكثافة)</h3>
+                        <p>تمارين قصيرة المدة (15-20 دقيقة) ذات فعالية عالية في حرق الدهون:</p>
+                        <p><strong>برنامج نموذجي:</strong></p>
+                        <p>30 ثانية تمرين مكثف + 30 ثانية راحة × 10 جولات</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>نظام تدريبي أسبوعي متكامل</h3>
+                        <p>الإثنين: تمارين كارديو (30 دقيقة)</p>
+                        <p>الثلاثاء: تمارين قوة الجزء العلوي</p>
+                        <p>الأربعاء: تمارين HIIT (20 دقيقة)</p>
+                        <p>الخميس: تمارين قوة الجزء السفلي</p>
+                        <p>الجمعة: تمارين كارديو متوسطة</p>
+                        <p>السبت: راحة أو رياضة خفيفة</p>
+                        <p>الأحد: راحة كاملة</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>نصائح مهمة</h3>
+                        <ul class="detail-list">
+                            <li>لا تهمل الإحماء والتهدئة</li>
+                            <li>اشرب الماء بكمية كافية</li>
+                            <li>احصل على قسط كافٍ من النوم</li>
+                            <li>اجمع بين التمارين والتغذية السليمة</li>
+                            <li>استشر طبيباً قبل البدء إذا كان لديك أي مشاكل صحية</li>
+                        </ul>
+                    </div>
+                `
+            },
+            4: {
+                category: "الطب البديل",
+                title: "الطب النبوي والأعشاب الطبية المفيدة",
+                date: "📅 8 ديسمبر 2024",
+                time: "⏱️ 12 دقيقة قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة عن الطب النبوي</h3>
+                        <p>الطب النبوي هو مجموعة من الوصفات والعلاجات التي وردت في السنة النبوية، وقد أثبت العلم الحديث فعالية الكثير منها.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>أهم الأعشاب في الطب النبوي</h3>
+                        <ul class="detail-list">
+                            <li><strong>الحبة السوداء:</strong> "شفاء من كل داء إلا السام" - تساعد في علاج الربو والحساسية وتقوي المناعة.</li>
+                            <li><strong>العسل:</strong> "فيه شفاء للناس" - مضاد حيوي طبيعي، يعالج الجروح ومشاكل الجهاز الهضمي.</li>
+                            <li><strong>الزيتون:</strong> "كلوا الزيت وادهنوا به" - غني بمضادات الأكسدة، يحسن صحة القلب.</li>
+                            <li><strong>التمر:</strong> "من تصبح بسبع تمرات لم يضره ذلك اليوم سم ولا سحر" - مصدر طبيعي للطاقة.</li>
+                            <li><strong>الرمان:</strong> ذكر في القرآن - يحسن الهضم ويقوي القلب.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>وصفات علاجية من الطب النبوي</h3>
+                        <p><strong>لعلاج نزلات البرد:</strong> زنجبيل + عسل + ليمون في ماء دافئ.</p>
+                        <p><strong>لتحسين الهضم:</strong> شرب ماء دافئ مع ملعقة عسل على الريق.</p>
+                        <p><strong>لتقوية المناعة:</strong> ملعقة حبة سوداء مطحونة مع عسل يومياً.</p>
+                        <p><strong>لعلاج الصداع:</strong> زيت الزيتون مع قليل من القرنفل.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>أعشاب طبية حديثة مدعومة علمياً</h3>
+                        <ul class="detail-list">
+                            <li><strong>القرفة:</strong> تنظم سكر الدم وتقلل الكوليسترول.</li>
+                            <li><strong>الكركم:</strong> مضاد قوي للالتهابات.</li>
+                            <li><strong>الزعتر:</strong> مضاد حيوي طبيعي.</li>
+                            <li><strong>النعناع:</strong> يهدئ الجهاز الهضمي.</li>
+                            <li><strong>البابونج:</strong> مهدئ طبيعي ومساعد على النوم.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>محاذير واستشارات مهمة</h3>
+                        <ul class="detail-list">
+                            <li>استشر طبيباً قبل استخدام أي عشب إذا كنت تتناول أدوية</li>
+                            <li>تجنب الإفراط في استخدام الأعشاب</li>
+                            <li>اختر مصادر موثوقة للأعشاب</li>
+                            <li>لا تستخدم الأعشاب كبديل كامل للعلاج الطبي في الحالات الخطيرة</li>
+                        </ul>
+                    </div>
+                `
+            },
+            5: {
+                category: "التغذية",
+                title: "المشروبات الطبيعية لفقدان الوزن",
+                date: "📅 5 ديسمبر 2024",
+                time: "⏱️ 6 دقائق قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة: دور المشروبات في فقدان الوزن</h3>
+                        <p>بعض المشروبات الطبيعية يمكن أن تعزز عملية التمثيل الغذائي وتساعد على حرق الدهون.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>أفضل المشروبات لحرق الدهون</h3>
+                        <ul class="detail-list">
+                            <li><strong>ماء الليمون الدافئ:</strong> ينشط الكبد ويساعد على التخلص من السموم.</li>
+                            <li><strong>الشاي الأخضر:</strong> يزيد من معدل حرق الدهون بفضل الكاتيشين.</li>
+                            <li><strong>خل التفاح مع الماء:</strong> يقلل الشهية وينظم سكر الدم.</li>
+                            <li><strong>مشروب الزنجبيل والليمون:</strong> يزيد من الشعور بالشبع ويعزز الهضم.</li>
+                            <li><strong>شاي القرفة:</strong> ينظم مستويات الأنسولين ويقلل الرغبة في السكر.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>وصفات مشروبات فعالة</h3>
+                        <p><strong>مشروب التفاح والقرفة:</strong> تفاحة مبشورة + عود قرفة + ماء دافئ.</p>
+                        <p><strong>مشروب النعناع والخيار:</strong> شرائح خيار + أوراق نعناع + ماء، يترك طوال الليل.</p>
+                        <p><strong>شاي الياسمين:</strong> يقلل التوتر المرتبط بالإفراط في الأكل.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>نصائح لزيادة الفعالية</h3>
+                        <ul class="detail-list">
+                            <li>اشرب كوباً من الماء قبل كل وجبة بنصف ساعة</li>
+                            <li>تجنب إضافة السكر للمشروبات</li>
+                            <li>اشرب المشروبات الدافئة خاصة في الصباح</li>
+                            <li>جمع بين المشروبات الصحية والتغذية المتوازنة</li>
+                        </ul>
+                    </div>
+                `
+            },
+            6: {
+                category: "صحة النوم",
+                title: "10 نصائح لتحسين جودة النوم ليلاً",
+                date: "📅 3 ديسمبر 2024",
+                time: "⏱️ 8 دقائق قراءة",
+                content: `
+                    <div class="detail-section">
+                        <h3>مقدمة: أهمية النوم الجيد</h3>
+                        <p>النوم الجيد ضروري للصحة النفسية والجسدية، حيث يساعد في تجديد خلايا الجسم وتحسين الذاكرة.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>النصائح العشر الذهبية</h3>
+                        <ul class="detail-list">
+                            <li><strong>ضبط جدول نوم منتظم:</strong> نم واستيقظ في نفس الوقت يومياً.</li>
+                            <li><strong>تهيئة بيئة النوم:</strong> غرفة مظلمة، هادئة، ودرجة حرارة مناسبة (18-22°م).</li>
+                            <li><strong>تجنب الكافيين بعد الظهر:</strong> لا تشرب قهوة أو شاي بعد الساعة 3 مساءً.</li>
+                            <li><strong>تجنب الشاشات قبل النوم:</strong> الأضواء الزرقاء تمنع إنتاج الميلاتونين.</li>
+                            <li><strong>ممارسة الرياضة بانتظام:</strong> ولكن ليس قبل النوم مباشرة.</li>
+                            <li><strong>تناول عشاء خفيف:</strong> تجنب الوجبات الثقيلة قبل النوم بثلاث ساعات.</li>
+                            <li><strong>طقوس ما قبل النوم:</strong> قراءة، تأمل، أو حمام دافئ.</li>
+                            <li><strong>الحد من القيلولة:</strong> لا تزيد عن 20-30 دقيقة.</li>
+                            <li><strong>إدارة التوتر:</strong> تدوين المخاوف قبل النوم.</li>
+                            <li><strong>الفراش المريح:</strong> وسادة وفراش يدعمان الجسم بشكل صحيح.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>تمارين تساعد على النوم</h3>
+                        <p><strong>تمرين التنفس 4-7-8:</strong> شهيق 4 ثوانٍ، حبس 7 ثوانٍ، زفير 8 ثوانٍ.</p>
+                        <p><strong>استرخاء العضلات التدريجي:</strong> شد وإرخاء العضلات من القدمين إلى الرأس.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>أطعمة تساعد على النوم</h3>
+                        <ul class="detail-list">
+                            <li>الموز: غني بالمغنيسيوم والبوتاسيوم</li>
+                            <li>اللوز: يحتوي على الميلاتونين</li>
+                            <li>الحليب الدافئ: يحتوي على التريبتوفان</li>
+                            <li>الشوفان: غني بالميلاتونين</li>
+                            <li>الكرز: مصدر طبيعي للميلاتونين</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>متى يجب استشارة الطبيب؟</h3>
+                        <p>إذا استمرت مشاكل النوم لأكثر من 3 أسابيع، أو إذا كانت تؤثر على حياتك اليومية.</p>
+                    </div>
+                `
+            }
+        };
+
+        // دالة عرض الشرح الموسع
+        function showArticleDetail(articleId) {
+            const article = articlesData[articleId];
+            if (!article) return;
+            
+            document.getElementById('detailCategory').textContent = article.category;
+            document.getElementById('detailTitle').textContent = article.title;
+            document.getElementById('detailDate').textContent = article.date;
+            document.getElementById('detailTime').textContent = article.time;
+            document.getElementById('detailBody').innerHTML = article.content;
+            
+            document.getElementById('articleDetailModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // دالة إغلاق الشرح الموسع
+        function closeArticleDetail() {
+            document.getElementById('articleDetailModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // إغلاق بالنقر خارج المحتوى
+        document.getElementById('articleDetailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeArticleDetail();
+            }
+        });
+
+        // إغلاق بالزر Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeArticleDetail();
+            }
+        });
+
+        // نظام التصفية
+        document.querySelectorAll('.filter-tag').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // تحديث الأزرار النشطة
+                document.querySelectorAll('.filter-tag').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // تصفية المقالات
+                document.querySelectorAll('.article-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // تسجيل النشرة البريدية
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`شكراً للاشتراك! تم تسجيل ${email} في النشرة البريدية.`);
+            this.reset();
+        });
+    </script>
 </body>
 </html>
