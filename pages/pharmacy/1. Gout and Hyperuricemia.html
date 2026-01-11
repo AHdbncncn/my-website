@@ -1,103 +1,167 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1. Gout and Hyperuricemia</title>
+    <title>النقرس وفرط حمض اليوريك - Gout and Hyperuricemia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #159895;
-            --accent-color: #eb455f;
-            --bg-color: #f8f9fa;
-            --text-color: #2c3333;
-            --white: #ffffff;
-            --table-header: #2d4263;
-            --table-row-even: #f1f6f9;
-            --code-bg: #1e1e1e;
-            --code-text: #d4d4d4;
-            --p-color-1: #2c3e50;
-            --p-color-2: #34495e;
-            --p-color-3: #2980b9;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.8;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            padding: 40px 20px;
-            direction: ltr;
-            text-align: left;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: var(--white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            padding: 20px;
         }
 
+        /* Header Styles */
         header {
-            border-bottom: 4px solid var(--secondary-color);
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px 0;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
             text-align: center;
         }
 
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         h1 {
-            color: var(--primary-color);
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .lang-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .lang-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 8px solid var(--secondary-color);
-            padding-left: 20px;
-            background: #f0f9f9;
-            padding-top: 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
             padding-bottom: 10px;
-            border-radius: 10px 0 0 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
 
         h3 {
-            color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-decoration: underline;
-            text-decoration-color: var(--accent-color);
+            color: var(--secondary-color);
+            margin: 20px 0 10px;
+            font-size: 1.4rem;
+        }
+
+        h4 {
+            color: var(--dark-color);
+            margin: 15px 0 8px;
+            font-size: 1.2rem;
         }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: justify;
-            font-size: 1.1rem;
         }
 
-        p:nth-of-type(3n+1) { color: var(--p-color-1); }
-        p:nth-of-type(3n+2) { color: var(--p-color-2); }
-        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+        .english-term {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-style: italic;
+        }
 
+        /* Lists */
+        ul, ol {
+            margin: 0 20px 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Tables */
         .table-container {
-            width: 100%;
             overflow-x: auto;
-            margin: 30px 0;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 25px 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
         table {
@@ -106,519 +170,586 @@
             min-width: 600px;
         }
 
-        th, td {
+        th {
+            background-color: var(--primary-color);
+            color: white;
             padding: 15px;
-            border: 1px solid #e0e0e0;
-            text-align: left;
+            text-align: right;
         }
 
-        th {
-            background-color: var(--table-header);
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
         }
 
         tr:nth-child(even) {
-            background-color: var(--table-row-even);
+            background-color: #f9f9f9;
         }
 
         tr:hover {
-            background-color: #e9f5f5;
+            background-color: #f1f7fd;
         }
 
-        pre {
-            background-color: var(--code-bg);
-            color: var(--code-text);
-            padding: 25px;
-            border-radius: 12px;
-            overflow-x: auto;
-            margin: 30px 0;
-            border-left: 6px solid var(--accent-color);
-            font-family: 'Consolas', 'Monaco', monospace;
-            direction: ltr;
-            text-align: left;
-            font-size: 0.95rem;
-            line-height: 1.5;
+        /* Algorithm Box */
+        .algorithm-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
         }
 
-        code {
-            background-color: #fce4ec;
-            padding: 3px 8px;
-            border-radius: 6px;
-            color: var(--accent-color);
-            font-family: inherit;
-            font-weight: 600;
+        .algorithm-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
 
-        ul, ol {
-            margin-bottom: 25px;
-            padding-left: 40px;
+        .algorithm-title i {
+            margin-left: 10px;
+            color: var(--secondary-color);
         }
 
-        li {
-            margin-bottom: 12px;
-            position: relative;
+        /* Key Points */
+        .key-points {
+            background-color: #e8f4fc;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 25px 0;
+            border-right: 5px solid var(--secondary-color);
         }
 
-        @media (max-width: 768px) {
-            body { padding: 15px 10px; }
-            .container { padding: 25px; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.6rem; }
-            p { font-size: 1rem; }
+        .key-points h4 {
+            color: var(--primary-color);
+            margin-top: 0;
         }
 
+        /* Footer */
         footer {
-            margin-top: 60px;
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            font-size: 1rem;
-            color: #888;
-            border-top: 2px solid #eee;
-            padding-top: 30px;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 0;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 120px;
+            background-color: #f1f1f1;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--dark-color);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tab-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Print Styles */
+        @media print {
+            .language-toggle, .nav-tabs {
+                display: none;
+            }
+            
+            .content-section {
+                display: block !important;
+                box-shadow: none;
+            }
+            
+            header {
+                background: white !important;
+                color: black !important;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>1. Gout and Hyperuricemia</h1>
-        </header>
-        <main>
-            <h2>SECTION 1</h2>
-<h2>BONE AND JOINT DISORDERS</h2>
-<p>Edited by Terry L. Schwinghammer</p>
-<p>1</p>
-<p>Gout and Hyperuricemia</p>
-<p>7</p>
-<h2>RETPAHC</h2>
-<li>Gout involves hyperuricemia, recurrent attacks of acute arthritis with monosodium</li>
-<p>urate (MSU) crystals in synovial fluid leukocytes, deposits of MSU crystals in tissues</p>
-<p>in and around joints (tophi), interstitial kidney disease, and uric acid nephrolithiasis.</p>
-<p>Acute Gouty Arthritis</p>
-<h2>PATHOPHYSIOLOGY</h2>
-<li>Uric acid is the end product of purine degradation. An increased urate pool in indi-</li>
-<p>viduals with gout may result from overproduction or underexcretion.</p>
-<li>Purines originate from dietary purine, conversion of tissue nucleic acid to purine</li>
-<p>nucleotides, and de novo synthesis of purine bases.</p>
-<li>Overproduction of uric acid may result from abnormalities in enzyme systems that regu-</li>
-<p>late purine metabolism (eg, increased activity of phosphoribosyl pyrophosphate [PRPP]</p>
-<p>synthetase or deficiency of hypoxanthine-guanine phosphoribosyl transferase [HGPRT]).</p>
-<li>Uric acid may also be overproduced because of increased breakdown of tissue nucleic</li>
-<p>acids, as with myeloproliferative and lymphoproliferative disorders. Cytotoxic drugs can</p>
-<p>result in overproduction of uric acid due to lysis and the breakdown of cellular matter.</p>
-<li>Dietary purines are insignificant in generating hyperuricemia without some derange-</li>
-<p>ment in purine metabolism or elimination.</p>
-<li>Two-thirds of uric acid produced daily is excreted in urine. The remainder is</li>
-<p>eliminated through gastrointestinal (GI) tract after degradation by colonic bacteria.</p>
-<p>Decline in urinary excretion to a concentration below the rate of production leads to</p>
-<p>hyperuricemia and an increased pool of sodium urate.</p>
-<li>Drugs that decrease renal uric acid clearance include diuretics, nicotinic acid, salicy-</li>
-<p>lates (&lt;2 g/day), ethanol, pyrazinamide, levodopa, ethambutol, cyclosporine, and</p>
-<p>cytotoxic drugs.</p>
-<li>Deposition of urate crystals in synovial fluid results in inflammation, vasodilation,</li>
-<p>increased vascular permeability, complement activation, and chemotactic activity for</p>
-<p>polymorphonuclear leukocytes. Phagocytosis of urate crystals by leukocytes results in</p>
-<p>rapid lysis of cells and discharge of proteolytic enzymes into cytoplasm. The ensuing</p>
-<p>inflammatory reaction causes intense joint pain, erythema, warmth, and swelling.</p>
-<li>Uric acid nephrolithiasis occurs in ~10% of patients with gout. Predisposing factors</li>
-<p>include excessive urinary excretion of uric acid, acidic urine (pH &lt;6), and highly</p>
-<p>concentrated urine.</p>
-<li>In acute uric acid nephropathy, acute kidney injury occurs because of blockage of</li>
-<p>urine flow from massive precipitation of uric acid crystals in collecting ducts and</p>
-<p>ureters. Chronic urate nephropathy is caused by long-term deposition of urate crys-</p>
-<p>tals in the renal parenchyma.</p>
-<li>Tophi (urate deposits) are uncommon and are a late complication of hyperuricemia.</li>
-<p>The most common sites are the base of the fingers, olecranon bursae, ulnar aspect of</p>
-<p>forearm, Achilles tendon, knees, wrists, and hands.</p>
-<h2>CLINICAL PRESENTATION</h2>
-<li>Acute gout attacks are characterized by rapid onset of excruciating pain, swelling,</li>
-<p>and inflammation. The attack is typically monoarticular, most often affecting the first</p>
-<p>ch01.indd 7 18-11-2020 11:49:51</p>
-<div class="table-container"><table><tr><th>RETPAHC</th><th>1</th><th>Gout and Hyperuricemia</th></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>metatarsophalangeal joint (podagra), and then, in order of frequency, the insteps,</p>
-<p>ankles, heels, knees, wrists, fingers, and elbows. Attacks commonly begin at night,</p>
-<p>with the patient awakening with excruciating pain. Affected joints are erythematous,</p>
-<p>warm, and swollen. Fever and leukocytosis are common. Untreated attacks last from</p>
-<p>3 to 14 days before spontaneous recovery.</p>
-<li>Acute attacks may occur without provocation or be precipitated by stress, trauma, alco-</li>
-<p>hol ingestion, infection, surgery, rapid lowering of serum uric acid by uric acid-low-</p>
-<p>ering agents, and ingestion of drugs known to elevate serum uric acid concentrations.</p>
-<h2>DIAGNOSIS</h2>
-<li>Definitive diagnosis requires aspiration of synovial fluid from the affected joint and</li>
-<p>identification of intracellular crystals of MSU monohydrate in synovial fluid leukocytes.</p>
-<li>When joint aspiration is not feasible, a presumptive diagnosis is based on presence of</li>
-<p>characteristic signs and symptoms as well as the response to treatment.</p>
-<h2>TREATMENT</h2>
-<li>Goals of Treatment: Terminate the acute attack, prevent recurrent attacks, and pre-</li>
-<p>vent complications associated with chronic deposition of urate crystals in tissues.</p>
-<h2>NONPHARMACOLOGIC THERAPY</h2>
-<li>Local ice application is the most effective adjunctive treatment.</li>
-<li>Dietary supplements (eg, flaxseed, cherry, celery root) are not recommended.</li>
-<h2>PHARMACOLOGIC THERAPY (FIG. 1-1)</h2>
-<li>Most patients are treated successfully with nonsteroidal anti-inflammatory drugs</li>
-<p>(NSAIDs), corticosteroids, or colchicine. Treatment should begin as soon as possible</p>
-<p>after the onset of an attack.</p>
-<h2>NSAIDS</h2>
-<li>NSAIDs have excellent efficacy and minimal toxicity with short-term use. Indometh-</li>
-<p>acin, naproxen, and sulindac have Food and Drug Administration (FDA) approval</p>
-<p>for gout, but others are likely to be effective (Table 1-1).</p>
-<li>Start therapy within 24 hours of attack onset and continue until complete resolution</li>
-<p>(usually 5–8 days). Tapering may be considered after resolution, especially if comorbid-</p>
-<pre><code>ities such as impaired hepatic or kidney function make prolonged therapy undesirable.</code></pre>
-<li>The most common adverse effects involve the GI tract (gastritis, bleeding, and perfo-</li>
-<p>ration), kidneys (renal papillary necrosis, reduced glomerular filtration rate), cardio-</p>
-<p>vascular system (increased blood pressure, sodium and fluid retention), and central</p>
-<pre><code>nervous system (impaired cognitive function, headache, and dizziness).</code></pre>
-<li>Selective cyclooxygenase-2 inhibitors (eg, celecoxib) may be an option for patients</li>
-<p>unable to take nonselective NSAIDs, but the risk-to-benefit ratio in acute gout is</p>
-<p>unclear, and cardiovascular risk must be considered.</p>
-<p>Corticosteroids</p>
-<li>Corticosteroid efficacy is equivalent to NSAIDs; they can be used systemically or by</li>
-<p>intra-articular (IA) injection. If only one or two joints are involved, either IA or oral cor-</p>
-<p>ticosteroids are recommended. Systemic therapy is necessary for polyarticular attacks.</p>
-<li>Prednisone or prednisolone oral dosing strategies include (1) 0.5 mg/kg daily for</li>
-<p>5–10 days followed by abrupt discontinuation, or (2) 0.5 mg/kg daily for 2–5 days</p>
-<p>followed by tapering for 7–10 days. Tapering is often used to reduce the hypothetical</p>
-<p>risk of a rebound attack upon steroid withdrawal.</p>
-<li>Methylprednisolone dose pack is a 6-day regimen starting with 24 mg on day 1 and</li>
-<p>decreasing by 4 mg each day that may be considered.</p>
-<li>Triamcinolone acetonide 20–40 mg given by IA injection may be used if gout is limited</li>
-<p>to one or two joints; give 10–40 mg IA (large joints) or 5–20 mg IA (small joints). IA cor-</p>
-<p>ticosteroids should be used with an oral NSAID, colchicine, or corticosteroid therapy.</p>
-<p>8</p>
-<p>ch01.indd 8 18-11-2020 11:49:52</p>
-<p>9</p>
-<p>Gout</p>
-<p>and</p>
-<p>Hyperuricemia</p>
-<p>|</p>
-<h2>CHAPTER</h2>
-<p>1</p>
-<p>Mild/moderate Severe</p>
-<p>Pain intensity</p>
-<p>Initiate monotherapy:a Initiate combination therapy - examples include:</p>
-<p>NSAID Colchicine NSAID</p>
-<p>Colchicineb Colchicine Oral corticosteroid</p>
-<p>Systemic corticosteroid NSAID Intra-articular corticosteroid</p>
-<p>Colchicine Intra-articular corticosteroid</p>
-<p>Oral corticosteroid Intra-articular corticosteroid</p>
-<p>Successful Inadequateresponse</p>
-<p>Treatment outcome Treatment outcome</p>
-<p>Prevent recurrent attacks: Switch to alternate monotherapy</p>
-<p>Recommend dietary modifications to</p>
-<p>prevent hyperuricemiac</p>
-<p>Educate patient about the role of uric Successful</p>
-<p>acid excess in gout attacks Inadequate</p>
-<p>Develop plan for patient to promptly self- response</p>
-<p>treat any future attacks</p>
-<p>Initiate urate-lowering therapy if indicated Off-label Interleukin-1 inhibitor</p>
-<p>therapy</p>
-<p>a) Recommendation for initial monotherapy with one of these medication groups supported unanimously by guidelines of the American College of Rheumatology (ACR),</p>
-<p>European League Against Rheumatism (EULAR), and American College of Physicians (ACP)</p>
-<p>b) Colchicine should be started as soon as possible, ideally within 12-36 hours of pain onset</p>
-<p>c) Noted as an area of inconclusive evidence by 2017 ACP guidelines</p>
-<p>(Algorithm derived from 2017 ACP, 2016 EULAR, and 2012 ACR gout guidelines.)</p>
-<p>FIGURE 1-1. Algorithm for management of an acute gout attack.</p>
-<p>ch01.indd</p>
-<p>9</p>
-<p>18-11-2020</p>
-<p>11:49:53</p>
-<h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>TABLE 1-1 Dosage Regimens of Oral Nonsteroidal Anti-inflammatory Drugs for Treatment of</p>
-<p>Acute Gout</p>
-<p>Generic Name Initial Dose Usual Range</p>
-<p>Etodolac 300 mg twice daily 300–500 mg twice daily</p>
-<p>Fenoprofen 400 mg three times daily 400–600 mg three to four times daily</p>
-<p>Ibuprofen 400 mg three times daily 400–800 mg three to four times daily</p>
-<p>Indomethacin 50 mg three times daily 50 mg three times daily initially</p>
-<p>until pain is tolerable then rapidly</p>
-<p>reduce to complete cessation</p>
-<p>Ketoprofen 75 mg three times daily or 50 50–75 mg three to four times daily</p>
-<p>mg four times daily</p>
-<p>Naproxen 750 mg followed by 250 mg —</p>
-<p>every 8 hours until the</p>
-<p>attack has subsided</p>
-<p>Piroxicam 20 mg once daily or 10 mg —</p>
-<p>twice daily</p>
-<p>Sulindac 200 mg twice daily 150–200 mg twice daily for 7–10 days</p>
-<p>Meloxicam 5 mg once daily 7.5–15 mg once daily</p>
-<p>Celecoxib 800 mg followed by 400 mg —</p>
-<p>on day one, then 400 mg</p>
-<p>twice daily for 1 week</p>
-<li>Methylprednisolone (a long-acting corticosteroid) given by a single intramuscular</li>
-<p>(IM) injection followed by a short course of oral corticosteroid therapy is another rea-</p>
-<p>sonable approach. Alternatively, IM corticosteroid monotherapy may be considered</p>
-<p>in patients with multiple affected joints who cannot take oral therapy.</p>
-<li>Short-term corticosteroid use is generally well tolerated. Use with caution in patients</li>
-<p>with diabetes, GI problems, bleeding disorders, cardiovascular disease, and psychi-</p>
-<p>atric disorders. Avoid long-term use because of risk for osteoporosis, hypothalamic–</p>
-<p>pituitary–adrenal axis suppression, cataracts, and muscle deconditioning.</p>
-<li>Adrenocorticotropic hormone (ACTH) gel: 40–80 USP units IM every 6–8 hours</li>
-<p>for 2 or 3 days and then discontinued. Limit use to patients with contraindications</p>
-<p>to first-line therapies (eg, heart failure, chronic kidney disease, and history of GI</p>
-<p>bleeding) or patients unable to take oral medications. However, the high drug price</p>
-<p>excludes ACTH as a viable treatment option.</p>
-<p>Colchicine</p>
-<li>Colchicine is highly effective in relieving acute gout attacks; when it is started within</li>
-<p>the first 24 hours of onset, about two-thirds of patients respond within hours. Use</p>
-<p>only within 36 hours of attack onset because the likelihood of success decreases sub-</p>
-<p>stantially if treatment is delayed.</p>
-<li>Colchicine causes dose-dependent GI adverse effects (nausea, vomiting, and diar-</li>
-<p>rhea). Non-GI effects include neutropenia and axonal neuromyopathy, which may</p>
-<p>be worsened in patients taking other myopathic drugs (eg, statins) or with impaired</p>
-<pre><code>kidney function. Use colchicine with caution in patients taking P-glycoprotein or</code></pre>
-<p>strong CYP450 3A4 inhibitors (eg, clarithromycin) due to increased plasma colchi-</p>
-<p>cine levels and potential toxicity; colchicine dose reductions may be required. Also</p>
-<pre><code>use colchicine with caution in patients with impaired kidney or hepatic function.</code></pre>
-<li>Colcrys is an FDA-approved colchicine product available in 0.6 mg oral tablets. The</li>
-<p>recommended dose is 1.2 mg (two tablets) initially, followed by 0.6 mg (one tablet) 1</p>
-<p>hour later. Although not an FDA-approved regimen, the American College of Rheu-</p>
-<p>matology (ACR) gout treatment guidelines suggest that colchicine 0.6 mg once or</p>
-<p>10</p>
-<p>ch01.indd 10 18-11-2020 11:49:53</p>
-<div class="table-container"><table><tr><th>TABLE 1-1 Dosage Regimens of Oral Nonsteroidal Anti-inflammatory Drugs for Treatment of
-Acute Gout</th><th></th><th></th></tr><tr><td>Generic Name</td><td>Initial Dose</td><td>Usual Range</td></tr><tr><td>Etodolac</td><td>300 mg twice daily</td><td>300–500 mg twice daily</td></tr><tr><td>Fenoprofen</td><td>400 mg three times daily</td><td>400–600 mg three to four times daily</td></tr><tr><td>Ibuprofen</td><td>400 mg three times daily</td><td>400–800 mg three to four times daily</td></tr><tr><td>Indomethacin</td><td>50 mg three times daily</td><td>50 mg three times daily initially
-until pain is tolerable then rapidly
-reduce to complete cessation</td></tr><tr><td>Ketoprofen</td><td>75 mg three times daily or 50
-mg four times daily</td><td>50–75 mg three to four times daily</td></tr><tr><td>Naproxen</td><td>750 mg followed by 250 mg
-every 8 hours until the
-attack has subsided</td><td>—</td></tr><tr><td>Piroxicam</td><td>20 mg once daily or 10 mg
-twice daily</td><td>—</td></tr><tr><td>Sulindac</td><td>200 mg twice daily</td><td>150–200 mg twice daily for 7–10 days</td></tr><tr><td>Meloxicam</td><td>5 mg once daily</td><td>7.5–15 mg once daily</td></tr><tr><td>Celecoxib</td><td>800 mg followed by 400 mg
-on day one, then 400 mg
-twice daily for 1 week</td><td>—</td></tr></table></div><h2>Gout and Hyperuricemia | CHAPTER 1</h2>
-<p>twice daily can be started 12 hours after the initial 1.2-mg dose and continued until</p>
-<p>the attack resolves. Colchicine is also available generically.</p>
-<p>Hyperuricemia In Gout</p>
-<li>Recurrent gout attacks can be prevented by maintaining low uric acid levels, but</li>
-<p>adherence with nonpharmacologic and pharmacologic therapies is poor.</p>
-<h2>NONPHARMACOLOGIC THERAPY</h2>
-<li>Patient education should address the recurrent nature of gout and the objective of</li>
-<p>each lifestyle/dietary modification and medication.</p>
-<li>Promote weight loss through caloric restriction and exercise in all patients to enhance</li>
-<p>renal urate excretion.</p>
-<li>Alcohol restriction is important because consumption correlates with gout attacks.</li>
-<p>ACR guidelines recommend limiting alcohol use in all gout patients and avoidance</p>
-<p>of any alcohol during periods of frequent gout attacks and in patients with advanced</p>
-<p>gout under poor control.</p>
-<li>Dietary recommendations include limiting consumption of high-fructose corn syrup</li>
-<p>and purine-rich foods (organ meats and some seafood) and encouraging consump-</p>
-<p>tion of vegetables and low-fat dairy products. The DASH diet (Dietary Approaches</p>
-<p>to Stop Hypertension) may lower serum uric acid by ~1.0 mg/dL in hyperuricemic</p>
-<p>patients who are adherent. However, no studies have demonstrated that dietary inter-</p>
-<p>vention improves clinical outcomes such as reduction in gout flares.</p>
-<li>Evaluate the medication list for potentially unnecessary drugs that may elevate uric acid</li>
-<p>levels. The ACR guidelines recommend elimination of nonessential uric acid-elevating</p>
-<p>medications in patients with hyperuricemia when feasible (eg, thiazide and loop diuret-</p>
-<p>ics, calcineurin inhibitors, niacin). Low-dose aspirin for cardiovascular prevention</p>
-<p>should be continued because aspirin has a negligible effect on elevating serum uric acid.</p>
-<h2>PHARMACOLOGIC THERAPY (FIG. 1-2)</h2>
-<li>After the first attack of acute gout, prophylactic pharmacotherapy is recommended if</li>
-<p>patients have two or more attacks per year, even if serum uric acid is normal or only</p>
-<p>minimally elevated. Other indications include presence of tophi, kidney disease, or</p>
-<p>history of uric acid urolithiasis.</p>
-<li>Urate-lowering therapy can be started during an acute attack if anti-inflammatory</li>
-<p>prophylaxis has been initiated.</p>
-<li>Apply a stepwise approach to hyperuricemia (Fig. 1-2). Xanthine oxidase inhibitors</li>
-<p>are recommended first-line therapy, with uricosurics reserved for patients with a con-</p>
-<p>traindication or intolerance to xanthine oxidase inhibitors. In refractory cases, combi-</p>
-<p>nation therapy with a xanthine oxidase inhibitor plus a drug with uricosuric properties</p>
-<p>(probenecid, losartan, or fenofibrate) is suggested. Pegloticase may be used in severe</p>
-<p>cases in which the patient cannot tolerate or is not responding to other therapies.</p>
-<li>The ACR guideline goal of urate-lowering therapy is to achieve and maintain serum uric</li>
-<p>acid &lt;6 mg/dL (357 μmol/L), and preferably &lt;5 mg/dL (297 μmol/L) if gout is severe or</p>
-<p>signs and symptoms of gout persist. Urate lowering should be prescribed for long-term use.</p>
-<p>Xanthine Oxidase Inhibitors</p>
-<li>Xanthine oxidase inhibitors reduce uric acid by impairing conversion of hypoxan-</li>
-<p>thine to xanthine and xanthine to uric acid. Because they are effective in both over-</p>
-<p>producers and underexcretors of uric acid, they are the most widely prescribed agents</p>
-<p>for long-term prevention of recurrent gout attacks.</p>
-<li>Allopurinol lowers uric acid levels in a dose-dependent manner. ACR guidelines recom-</li>
-<pre><code>mend a starting dose no greater than 100 mg daily in patients with normal kidney function</code></pre>
-<p>and no more than 50 mg/day in patients with chronic kidney disease (stage 4 or worse) to</p>
-<p>avoid allopurinol hypersensitivity syndrome and prevent acute gout attacks common dur-</p>
-<p>ing initiation of urate-lowering therapy. The dose should be titrated gradually every 2–5</p>
-<p>weeks up to a maximum of 800 mg/day until the serum urate target is achieved.</p>
-<p>11</p>
-<p>ch01.indd 11 18-11-2020 11:49:53</p>
-<h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>No Does patient have an indication for Urate Yes</p>
-<p>Lowering Therapy (ULT)?a</p>
-<p>Nonpharmacologic Urate ULT Initiation Anti-inflammatory Gout</p>
-<p>Lowering Strategies First-Line Prophylaxis During ULT</p>
-<p>Dietary Modificationsd • Allopurinol Initiation</p>
-<li>Reduce/avoid alcohol and First-Line</li>
-<p>Alternative</p>
-<p>organ meats • Febuxostatb • Low dose colchicine</p>
-<h2>• Increase vegetable and • Low dose NSAID</h2>
-<li>Probenecid</li>
-<p>dairy consumption Second Line</p>
-<p>Eliminate Urate Elevating • Low dose prednisone</p>
-<p>Medications if Unnecessary or prednisolone</p>
-<li>Diuretics</li>
-<li>Niacin</li>
-<li>Calcineurin inhibitors</li>
-<p>First-Line</p>
-<li>Titrate ULT to maximum dose</li>
-<p>Consider Evidence of gout</p>
-<li>Add therapy with urate-lowering No Achieved Yes activity while</li>
-<p>properties if appropriate Urate Target?e taking ULT?</p>
-<p>comorbidities exist:c</p>
-<p>No</p>
-<li>Losartan (hypertension)</li>
-<li>Fenofibrate (Hypertriglyceridemia) Continue</li>
-<p>prophylactic</p>
-<p>therapy No Yes</p>
-<p>Tophus</p>
-<p>Achieved Yes present?</p>
-<p>urate target? Yes</p>
-<p>No Discontinue Discontinue</p>
-<p>prophylactic prophylatctic</p>
-<p>If using maximized xanthine Continue all measures therapy after the therapy</p>
-<p>oxidase inhibitor, consider needed to maintain greater of: six months</p>
-<p>add-on therapy: serum urate &lt;6 mg/dL 1) Six months after</p>
-<li>Lesinurad (<357 µmol/L) OR achieving</li>
-<li>Probenecid indefintelye 2) Three months urate target</li>
-<p>after achieving</p>
-<p>urate target</p>
-<p>Achieved Yes</p>
-<p>urate target?</p>
-<p>No</p>
-<p>Switch to</p>
-<p>pegloticase</p>
-<p>a) Indications for urate-lowering therapy include: 1) presence of tophus 2) ≥ 2 gout attacks per year 3) kidney disease</p>
-<p>4) past urolithiasis. EULAR, but not ACR or ACP Guidelines, also recognize the following indications for ULT:</p>
-<p>1) first diagnosis of gout at age &lt; 40 years 2) uric acid &gt; 8.0 mg/dL 3) high-risk comorbidities (hypertension,</p>
-<p>ischemic heart disease, hear failure)</p>
-<p>b) Recognized as first line by ACR Guidelines but cardiovascular safety concerns have been reported</p>
-<p>since guideline publication</p>
-<p>c) EULAR Guidelines also recognize calcium channel blockers and statins as add-on therapy for uric acid lowering</p>
-<p>when indicated for treatment of comorbidities</p>
-<p>d) The effectiveness of dietary intervention in improving clinical outcomes is noted as an area of inconclusive evidence</p>
-<p>by 2017 ACP guidelines</p>
-<p>e) Targeting and maintaining a specific urate level is noted as an area of inconclusive evidence by 2017 ACP guidelines</p>
-<p>NSAID, nonsteroidal anti-inflammatory drug; ULT, urate-lowering therapy; XOI, xanthine oxidase inhibitor.</p>
-<p>(Algorithm derived from 2017 ACP, 2016 EULAR, and 2012 ACR gout guidelines.)</p>
-<p>FIGURE 1-2. Algorithm for management of hyperuricemia in gout.</p>
-<p>12</p>
-<p>ch01.indd 12 18-11-2020 11:49:54</p>
-<h2>Gout and Hyperuricemia | CHAPTER 1</h2>
-<li>Mild adverse effects of allopurinol include skin rash, leukopenia, GI problems,</li>
-<p>headache, and urticaria. A more severe adverse reaction known as allopurinol</p>
-<p>hypersensitivity syndrome, which includes severe rash (toxic epidermal necrolysis,</p>
-<p>erythema multiforme, or exfoliative dermatitis), hepatitis, interstitial nephritis, and</p>
-<p>eosinophilia, occurs rarely but is associated with a 20%–25% mortality rate.</p>
-<li>Febuxostat (Uloric) also lowers serum uric acid in a dose-dependent manner. The recom-</li>
-<p>mended starting dose is 40 mg once daily. Increase the dose to 80 mg once daily for patients</p>
-<p>who do not achieve target serum uric acid concentrations after 2 weeks of therapy. Adverse</p>
-<p>events include nausea, arthralgias, and minor hepatic transaminase elevations. Febuxostat</p>
-<pre><code>does not require dose adjustment in hepatic or kidney dysfunction. Recent clinical trial</code></pre>
-<p>evidence demonstrated an increase in all-cause and cardiovascular mortality compared to</p>
-<p>allopurinol, resulting in addition of a warning in the FDA-approved labeling. Because of</p>
-<p>these safety concerns, lack of evidence of superior efficacy compared to equivalent-dosed</p>
-<p>allopurinol, and increased cost, febuxostat is considered a second-line option. Due to rapid</p>
-<p>mobilization of urate deposits during initiation, give concomitant therapy with colchicine</p>
-<p>or an NSAID for at least the first 8 weeks of therapy to prevent acute gout flares.</p>
-<p>Uricosurics</p>
-<li>Uricosuric drugs increase renal clearance of uric acid by inhibiting the postsecretory</li>
-<p>renal proximal tubular reabsorption of uric acid. Patients with a history of urolithiasis</p>
-<p>should not receive uricosurics. Start uricosuric therapy at a low dose to avoid marked</p>
-<p>uricosuria and possible stone formation. Maintaining adequate urine flow and urine</p>
-<p>alkalinization during the first several days of therapy may also decrease likelihood of</p>
-<p>uric acid stone formation. Uricosuric treatment is limited to patients with creatinine</p>
-<p>clearance (CrCl) &gt;45–50 mL/min.</p>
-<li>Probenecid: The initial dose is 250 mg twice daily for 1–2 weeks, then 500 mg twice</li>
-<p>daily for 2 weeks. Increase the daily dose thereafter by 500-mg increments every 1–2</p>
-<p>weeks until satisfactory control is achieved or a maximum dose of 2 g/day is reached.</p>
-<p>Major side effects include GI irritation, rash and hypersensitivity, precipitation of</p>
-<p>acute gouty arthritis, and urolithiasis.</p>
-<li>Lesinurad (Zurampic) inhibits urate transporter 1 in proximal renal tubules, thereby</li>
-<p>increasing uric acid excretion. It is approved as combination therapy with a xanthine</p>
-<p>oxidase inhibitor for treatment of hyperuricemia associated with gout in patients</p>
-<p>who have not achieved target serum uric acid concentrations with xanthine oxidase</p>
-<p>inhibitor monotherapy. The approved lesinurad dose is 200 mg once daily in the</p>
-<p>morning with food and water in combination with a xanthine oxidase inhibitor.</p>
-<p>Lesinurad should not be used in patients with CrCl &lt;45 mL/min. Adverse effects</p>
-<p>include urticaria and elevated levels of serum creatinine, lipase, and creatine kinase.</p>
-<p>It carries a black box warning about increased risk of acute renal failure when used in</p>
-<p>the absence of xanthine oxidase inhibitor therapy. A combination product (Duzallo)</p>
-<p>is available that contains two different allopurinol strengths: lesinurad 200 mg/</p>
-<p>allopurinol 200 mg (for patients with CrCl 45–59 mL/min) and lesinurad 200 mg/</p>
-<p>allopurinol 300 mg (for patients with CrCl &gt;59 mL/min).</p>
-<p>Pegloticase</p>
-<li>Pegloticase (Krystexxa) is a pegylated recombinant uricase that reduces serum uric</li>
-<p>acid by converting uric acid to allantoin, which is water soluble. Pegloticase is indi-</p>
-<p>cated for antihyperuricemic therapy in adults refractory to conventional therapy.</p>
-<li>The dose is 8 mg by IV infusion over at least 2 hours every 2 weeks. Because of</li>
-<p>potential infusion-related allergic reactions, patients must be pretreated with anti-</p>
-<p>histamines and corticosteroids. Pegloticase is substantially more expensive than</p>
-<p>first-line urate-lowering therapies.</p>
-<li>The ideal duration of pegloticase therapy is unknown. Development of pegloticase</li>
-<p>antibodies resulting in loss of efficacy may limit the duration of effective therapy.</p>
-<li>Because of its limitations, reserve pegloticase for patients with refractory gout who</li>
-<p>are unable to take or have failed all other urate-lowering therapies.</p>
-<p>13</p>
-<p>ch01.indd 13 18-11-2020 11:49:54</p>
-<h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>Miscellaneous Urate-Lowering Agents</p>
-<li>Fenofibrate is thought to increase clearance of hypoxanthine and xanthine, leading</li>
-<p>to a sustained reduction in serum urate concentrations of 20%–30%.</p>
-<li>Atorvastatin and rosuvastatin have also been associated with serum uric acid lower-</li>
-<p>ing, although the effect is less than with fenofibrate. The mechanism is unclear but is</p>
-<p>thought to be due to decreased renal reabsorption of uric acid.</p>
-<li>Losartan inhibits renal tubular reabsorption of uric acid and increases urinary excre-</li>
-<p>tion, properties that are not shared with other angiotensin II receptor blockers. It also</p>
-<p>alkalinizes the urine, which helps reduce the risk for stone formation.</p>
-<li>Amlodipine, nifedipine, and diltiazem (calcium channel blockers) have been</li>
-<p>associated with a lower risk of gout, which has been attributed to increased renal</p>
-<p>elimination of uric acid.</p>
-<h2>ANTI-INFLAMMATORY PROPHYLAXIS DURING</h2>
-<h2>INITIATION OF URATE-LOWERING THERAPY</h2>
-<li>Initiation of urate-lowering therapy can precipitate an acute gout attack due to remod-</li>
-<p>eling of urate crystal deposits in joints after rapid lowering of urate concentrations.</p>
-<p>Prophylactic anti-inflammatory therapy is often used to prevent such gout attacks.</p>
-<li>The ACR guidelines recommend low-dose oral colchicine (0.6 mg twice daily) or</li>
-<p>low-dose NSAIDs (eg, naproxen 250 mg twice daily) as first-line prophylactic thera-</p>
-<p>pies, with stronger evidence supporting use of colchicine. For patients on long-term</p>
-<p>NSAID prophylaxis, a proton pump inhibitor or other acid-suppressing therapy is</p>
-<p>indicated to protect from NSAID-induced gastric problems.</p>
-<li>Low-dose corticosteroid therapy (eg, prednisone ≤10 mg/day) is an alternative for</li>
-<p>patients with intolerance, contraindication, or lack of response to first-line therapy.</p>
-<p>The potential severe adverse effects of prolonged corticosteroid therapy preclude</p>
-<p>their use as first-line therapy.</p>
-<li>Continue prophylaxis for at least 6 months or 3 months after achieving target serum</li>
-<p>uric acid, whichever is longer. For patients with one or more tophi, continue prophy-</p>
-<p>lactic therapy for 6 months after achieving the serum urate target (Fig. 1-2).</p>
-<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
-<li>Check the serum uric acid level in patients suspected of having an acute gout attack,</li>
-<p>particularly if it is not the first attack, and a decision is to be made about starting pro-</p>
-<p>phylaxis. However, acute gout can occur with normal serum uric acid concentrations.</p>
-<li>Monitor patients with acute gout for symptomatic relief of joint pain as well as potential</li>
-<p>adverse effects and drug interactions related to drug therapy. Acute pain of an initial</p>
-<p>gout attack should begin to ease within about 8 hours of treatment initiation. Complete</p>
-<p>resolution of pain, erythema, and inflammation usually occurs within 48–72 hours.</p>
-<li>For patients receiving urate-lowering therapy, obtain baseline assessment of kidney</li>
-<pre><code>function, hepatic enzymes, complete blood count, and electrolytes. Recheck the tests</code></pre>
-<p>every 6–12 months in patients receiving long-term treatment.</p>
-<li>During titration of urate-lowering therapy, monitor serum uric acid every 2–5 weeks;</li>
-<p>after the urate target is achieved, monitor uric acid every 6 months.</p>
-<li>Because of the high rates of comorbidities associated with gout (diabetes, chronic</li>
-<p>kidney disease, hypertension, obesity, myocardial infarction, heart failure, and</p>
-<p>stroke), elevated serum uric acid concentrations or gout should prompt evalua-</p>
-<p>tion for cardiovascular disease and the need for appropriate risk reduction mea-</p>
-<p>sures. Clinicians should also look for possible correctable causes of hyperuricemia</p>
-<p>(eg, medications, obesity, malignancy, and alcohol abuse).</p>
-<p>See Chapter 109, Gout and Hyperuricemia, authored by Michelle A. Fravel and Michael</p>
-<p>E. Ernst, for a more detailed discussion of this topic.</p>
-<h2>ALGRAWANY</h2>
-<p>14</p>
-<p>https://www.facebook.com/groups/2202763316616203</p>
-<p>ch01.indd 14 18-11-2020 11:49:54</p>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>النقرس وفرط حمض اليوريك</h1>
+            <div class="subtitle">Gout and Hyperuricemia</div>
+            <p>مرجع شامل عن pathophysiology والتشخيص والعلاج</p>
+            
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" id="arabic-btn">العربية</button>
+                <button class="lang-btn" id="english-btn">English</button>
+            </div>
+        </div>
+    </header>
 
-        </main>
-        <footer>
-            Converted with High Precision by Manus - &copy; 2026
-        </footer>
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" id="nav-tabs">
+            <button class="tab-btn active" data-target="section1">النقرس الحاد</button>
+            <button class="tab-btn" data-target="section2">فرط حمض اليوريك</button>
+            <button class="tab-btn" data-target="section3">الخوارزميات</button>
+            <button class="tab-btn" data-target="section4">الجداول</button>
+        </div>
+
+        <!-- Arabic Content -->
+        <div class="content-section active" id="arabic-content">
+            <!-- Section 1: Acute Gout -->
+            <section id="section1">
+                <h2>التهاب المفاصل النقرسي الحاد (Acute Gouty Arthritis)</h2>
+                
+                <div class="key-points">
+                    <h4><i class="fas fa-lightbulb"></i> النقاط الرئيسية:</h4>
+                    <p>النقرس هو اضطراب استقلابي يتميز بـ <span class="english-term">hyperuricemia</span> (فرط حمض اليوريك)، وهجمات متكررة من التهاب المفاصل الحاد مع بلورات <span class="english-term">monosodium urate (MSU)</span>، وترسبات في الأنسجة (<span class="english-term">tophi</span>)، وأمراض الكلى، وحصوات الكلى من حمض اليوريك.</p>
+                </div>
+
+                <h3>الفيزيولوجيا المرضية (Pathophysiology)</h3>
+                <p>حمض اليوريك (<span class="english-term">Uric acid</span>) هو المنتج النهائي لتحطيم البيورينات. زيادة مخزون اليورات في مرضى النقرس قد تنتج من زيادة الإنتاج أو نقص الإفراز.</p>
+                
+                <h4>أسباب زيادة إنتاج حمض اليوريك:</h4>
+                <ul>
+                    <li>خلل في أنظمة الإنزيمات التي تنظم استقلاب البيورينات (مثل زيادة نشاط <span class="english-term">phosphoribosyl pyrophosphate synthetase</span> أو نقص <span class="english-term">hypoxanthine-guanine phosphoribosyl transferase</span>)</li>
+                    <li>زيادة تحطيم الأحماض النووية للأنسجة كما في اضطرابات التكاثر النقوي واللمفاوي</li>
+                    <li>الأدوية السامة للخلايا التي تسبب تحلل الخلايا</li>
+                </ul>
+                
+                <h4>أسباب نقص إفراز حمض اليوريك:</h4>
+                <ul>
+                    <li>ثُلثا حمض اليوريك المنتَج يوميًا يُفرز في البول، والباقي يُفرز عبر الجهاز الهضمي</li>
+                    <li>الأدوية التي تقلل إفراز حمض اليوريك الكلوي تشمل: مدرات البول، النيكوتينيك أسيد، الساليسيلات (جرعة أقل من 2 غ/يوم)، الإيثانول، بايرازيناميد، ليفودوبا، إيثامبوتول، سيكلوسبورين، والأدوية السامة للخلايا</li>
+                </ul>
+                
+                <h4>ترسب بلورات اليورات (<span class="english-term">Urate crystal deposition</span>):</h4>
+                <p>يؤدي ترسب بلورات اليورات في السائل الزليلي إلى التهاب، توسع الأوعية، زيادة نفاذية الأوعية، تنشيط المتممة، وجذب كريات الدم البيضاء متعددة الأشكال. بلعمة البلورات من قبل كريات الدم البيضاء يؤدي إلى تحلل سريع للخلايا وإطلاق الإنزيمات المحللة للبروتين، مسببًا الألم الشديد، الاحمرار، الدفء، والتورم.</p>
+                
+                <h3>العرض السريري (Clinical Presentation)</h3>
+                <ul>
+                    <li>بداية سريعة لألم مبرح، تورم، والتهاب</li>
+                    <li>عادةً يصيب مفصل واحد (<span class="english-term">monoarticular</span>)، غالبًا المفصل المشطي السلامي لإصبع القدم الكبير (<span class="english-term">podagra</span>)</li>
+                    <li>ثم يصيب (بالترتيب): مشط القدم، الكاحلين، الكعبين، الركبتين، الرسغين، الأصابع، والمرفقين</li>
+                    <li>تبدأ الهجمات عادةً ليلاً، ويستيقظ المريض بألم مبرح</li>
+                    <li>المفاصل المصابة تكون حمراء، دافئة، ومتورمة</li>
+                    <li>الحمى وزيادة كريات الدم البيضاء شائعة</li>
+                    <li>الهجمات غير المعالجة تستمر من 3 إلى 14 يومًا قبل الشفاء التلقائي</li>
+                </ul>
+            </section>
+            
+            <!-- Section 2: Hyperuricemia -->
+            <section id="section2">
+                <h2>فرط حمض اليوريك في النقرس (Hyperuricemia in Gout)</h2>
+                
+                <h3>العلاج غير الدوائي (Nonpharmacologic Therapy)</h3>
+                <ul>
+                    <li>تثقيف المريض حول طبيعة النقرس المتكررة وأهداف العلاج</li>
+                    <li>تشجيع فقدان الوزن عبر تقليل السعرات الحرارية وممارسة الرياضة لتحسين إفراز اليورات الكلوي</li>
+                    <li>تقييد الكحول لأنه يرتبط بهجمات النقرس</li>
+                    <li>التوصيات الغذائية تشمل: الحد من استهلاك شراب الذرة عالي الفركتوز والأطعمة الغنية بالبيورينات (لحوم الأعضاء وبعض المأكولات البحرية)، وتشجيع استهلاك الخضروات ومنتجات الألبان قليلة الدسم</li>
+                    <li>نظام <span class="english-term">DASH diet</span> قد يخفض حمض اليوريك بمقدار ~1.0 مغ/دل في المرضى الملتزمين</li>
+                    <li>مراجعة قائمة الأدوية للتخلص من الأدوية غير الضرورية التي ترفع حمض اليوريك (مثل مدرات البول الثيازيدية والعروية، مثبطات الكالسينيورين، النياسين)</li>
+                </ul>
+                
+                <h3>العلاج الدوائي (Pharmacologic Therapy)</h3>
+                <p>يوصى بالعلاج الوقائي بعد الهجمة الأولى إذا كان المريض يعاني من هجمتين أو أكثر سنويًا، حتى لو كان مستوى حمض اليوريك طبيعيًا أو مرتفعًا قليلاً. مؤشرات أخرى تشمل وجود <span class="english-term">tophi</span>، أمراض الكلى، أو تاريخ حصوات الكلى من حمض اليوريك.</p>
+                
+                <h4>مثبطات الزانثين أوكسيداز (Xanthine Oxidase Inhibitors):</h4>
+                <ul>
+                    <li>العلاج الأولي الموصى به لفرط حمض اليوريك</li>
+                    <li><span class="english-term">Allopurinol</span>: يخفض حمض اليوريك بطريقة تعتمد على الجرعة. الجرعة المبدئية لا تزيد عن 100 مغ يوميًا في مرضى وظائف الكلى الطبيعية، ولا تزيد عن 50 مغ/يوم في مرضى الكلى المزمنة</li>
+                    <li><span class="english-term">Febuxostat (Uloric)</span>: يخفض حمض اليوريك أيضًا بطريقة تعتمد على الجرعة. الجرعة المبدئية 40 مغ مرة يوميًا، ويمكن زيادتها إلى 80 مغ يوميًا بعد أسبوعين إذا لم يتحقق الهدف</li>
+                </ul>
+                
+                <h4>مُفرِغات حمض اليوريك (Uricosurics):</h4>
+                <ul>
+                    <li>تزيد الإفراز الكلوي لحمض اليوريك بتثبيط إعادة الامتصاص الأنبوبي القريب</li>
+                    <li><span class="english-term">Probenecid</span>: الجرعة المبدئية 250 مغ مرتين يوميًا لمدة 1-2 أسبوع، ثم 500 مغ مرتين يوميًا لمدة أسبوعين، ثم تزداد تدريجيًا حتى 2 غ/يوم</li>
+                    <li><span class="english-term">Lesinurad (Zurampic)</span>: مثبط ناقل اليورات 1 في الأنابيب الكلوية القريبة، يستخدم مع مثبط الزانثين أوكسيداز في المرضى الذين لم يحققوا الهدف بالعلاج الأحادي</li>
+                </ul>
+            </section>
+            
+            <!-- Section 3: Algorithms -->
+            <section id="section3">
+                <h2>خوارزميات العلاج (Treatment Algorithms)</h2>
+                
+                <div class="algorithm-box">
+                    <div class="algorithm-title">
+                        <i class="fas fa-project-diagram"></i> خوارزمية علاج هجمة النقرس الحادة
+                    </div>
+                    <p><strong>شدة الألم:</strong> خفيف/متوسط ← بدء العلاج الأحادي بـ <span class="english-term">NSAID</span> أو <span class="english-term">Colchicine</span> أو <span class="english-term">Corticosteroid</span> نظاميًا</p>
+                    <p><strong>استجابة غير كافية:</strong> الانتقال إلى علاج مركب (مثال: <span class="english-term">Colchicine + NSAID</span>)</p>
+                    <p><strong>استجابة غير كافية للعلاج المركب:</strong> الانتقال إلى علاج أحادي بديل أو علاج بـ <span class="english-term">Interleukin-1 inhibitor</span> (خارج التسمية)</p>
+                    <p><strong>النتيجة الناجحة:</strong> منع الهجمات المتكررة عبر تعديلات غذائية، تثقيف المريض، وبدء علاج خافض لليورات إذا لزم</p>
+                </div>
+                
+                <div class="algorithm-box">
+                    <div class="algorithm-title">
+                        <i class="fas fa-chart-line"></i> خوارزمية إدارة فرط حمض اليوريك في النقرس
+                    </div>
+                    <p>1. تحديد إذا كان المريض بحاجة لعلاج خافض لليورات (<span class="english-term">ULT</span>)</p>
+                    <p>2. استراتيجيات غير دوائية: تعديلات غذائية، إزالة الأدوية المرفعة لليورات</p>
+                    <p>3. بدء العلاج: <span class="english-term">Allopurinol</span> (الخط الأول) أو <span class="english-term">Febuxostat</span> أو <span class="english-term">Probenecid</span></p>
+                    <p>4. الوقاية الالتهابية خلال بدء العلاج الخافض لليورات</p>
+                    <p>5. معايرة العلاج لتحقيق هدف اليورات (مصل اليورات &lt;6 مغ/دل)</p>
+                    <p>6. المتابعة المستمرة واستمرار العلاج للوقاية من الهجمات</p>
+                </div>
+            </section>
+            
+            <!-- Section 4: Tables -->
+            <section id="section4">
+                <h2>جداول الجرعات (Dosage Tables)</h2>
+                
+                <h3>جدول جرعات مضادات الالتهاب غير الستيرويدية لعلاج النقرس الحاد</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الاسم العام (Generic Name)</th>
+                                <th>الجرعة الأولية (Initial Dose)</th>
+                                <th>المدى المعتاد (Usual Range)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>إيتودولاك (Etodolac)</td>
+                                <td>300 مغ مرتين يوميًا</td>
+                                <td>300-500 مغ مرتين يوميًا</td>
+                            </tr>
+                            <tr>
+                                <td>فينوبروفين (Fenoprofen)</td>
+                                <td>400 مغ ثلاث مرات يوميًا</td>
+                                <td>400-600 مغ 3-4 مرات يوميًا</td>
+                            </tr>
+                            <tr>
+                                <td>آيبوبروفين (Ibuprofen)</td>
+                                <td>400 مغ ثلاث مرات يوميًا</td>
+                                <td>400-800 مغ 3-4 مرات يوميًا</td>
+                            </tr>
+                            <tr>
+                                <td>إندوميثاسين (Indomethacin)</td>
+                                <td>50 مغ ثلاث مرات يوميًا</td>
+                                <td>50 مغ ثلاث مرات يوميًا حتى يصبح الألم محتملاً ثم تخفيض سريع للتوقف الكامل</td>
+                            </tr>
+                            <tr>
+                                <td>نابروكسين (Naproxen)</td>
+                                <td>750 مغ ثم 250 مغ كل 8 ساعات حتى تخف الهجمة</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>سيليكوكسيب (Celecoxib)</td>
+                                <td>800 مغ ثم 400 مغ في اليوم الأول، ثم 400 مغ مرتين يوميًا لمدة أسبوع</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>العلاجات الأخرى الخافضة لليورات</h3>
+                <ul>
+                    <li><span class="english-term">Fenofibrate</span>: يخفض مصل اليورات بنسبة 20-30%</li>
+                    <li><span class="english-term">Atorvastatin و Rosuvastatin</span>: يرتبطان بخفض حمض اليوريك لكن بشكل أقل من الفينوفيبريت</li>
+                    <li><span class="english-term">Losartan</span>: يثبط إعادة الامتصاص الأنبوبي لحمض اليوريك ويزيد الإفراز البولي</li>
+                    <li><span class="english-term">Amlodipine, Nifedipine, Diltiazem</span>: مرتبطة بانخفاض خطر النقرس بسبب زيادة الإفراز الكلوي لحمض اليوريك</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- English Content -->
+        <div class="content-section" id="english-content">
+            <section id="section1-en">
+                <h2>Acute Gouty Arthritis</h2>
+                
+                <div class="key-points">
+                    <h4><i class="fas fa-lightbulb"></i> Key Points:</h4>
+                    <p>Gout is a metabolic disorder characterized by hyperuricemia, recurrent attacks of acute arthritis with monosodium urate (MSU) crystals, tissue deposits (tophi), kidney disease, and uric acid nephrolithiasis.</p>
+                </div>
+
+                <h3>Pathophysiology</h3>
+                <p>Uric acid is the end product of purine degradation. An increased urate pool in individuals with gout may result from overproduction or underexcretion.</p>
+                
+                <h4>Causes of Uric Acid Overproduction:</h4>
+                <ul>
+                    <li>Abnormalities in enzyme systems that regulate purine metabolism (e.g., increased activity of phosphoribosyl pyrophosphate synthetase or deficiency of hypoxanthine-guanine phosphoribosyl transferase)</li>
+                    <li>Increased breakdown of tissue nucleic acids as in myeloproliferative and lymphoproliferative disorders</li>
+                    <li>Cytotoxic drugs causing cellular lysis</li>
+                </ul>
+                
+                <h4>Causes of Uric Acid Underexcretion:</h4>
+                <ul>
+                    <li>Two-thirds of uric acid produced daily is excreted in urine, the remainder via the gastrointestinal tract</li>
+                    <li>Drugs that decrease renal uric acid clearance include: diuretics, nicotinic acid, salicylates (&lt;2 g/day), ethanol, pyrazinamide, levodopa, ethambutol, cyclosporine, and cytotoxic drugs</li>
+                </ul>
+                
+                <h4>Urate Crystal Deposition:</h4>
+                <p>Deposition of urate crystals in synovial fluid results in inflammation, vasodilation, increased vascular permeability, complement activation, and chemotactic activity for polymorphonuclear leukocytes. Phagocytosis of crystals leads to rapid cell lysis and release of proteolytic enzymes, causing intense pain, erythema, warmth, and swelling.</p>
+                
+                <h3>Clinical Presentation</h3>
+                <ul>
+                    <li>Rapid onset of excruciating pain, swelling, and inflammation</li>
+                    <li>Typically monoarticular, most often affecting the first metatarsophalangeal joint (podagra)</li>
+                    <li>Then affects (in order): insteps, ankles, heels, knees, wrists, fingers, and elbows</li>
+                    <li>Attacks commonly begin at night, with the patient awakening with excruciating pain</li>
+                    <li>Affected joints are erythematous, warm, and swollen</li>
+                    <li>Fever and leukocytosis are common</li>
+                    <li>Untreated attacks last from 3 to 14 days before spontaneous recovery</li>
+                </ul>
+            </section>
+            
+            <section id="section2-en">
+                <h2>Hyperuricemia in Gout</h2>
+                
+                <h3>Nonpharmacologic Therapy</h3>
+                <ul>
+                    <li>Patient education about the recurrent nature of gout and treatment goals</li>
+                    <li>Promote weight loss through caloric restriction and exercise to enhance renal urate excretion</li>
+                    <li>Alcohol restriction as consumption correlates with gout attacks</li>
+                    <li>Dietary recommendations: limit high-fructose corn syrup and purine-rich foods (organ meats, some seafood), encourage vegetables and low-fat dairy products</li>
+                    <li>DASH diet may lower serum uric acid by ~1.0 mg/dL in adherent hyperuricemic patients</li>
+                    <li>Review medication list to eliminate unnecessary uric acid-elevating drugs (e.g., thiazide and loop diuretics, calcineurin inhibitors, niacin)</li>
+                </ul>
+                
+                <h3>Pharmacologic Therapy</h3>
+                <p>Prophylactic pharmacotherapy is recommended after the first attack if patients have two or more attacks per year, even with normal or minimally elevated serum uric acid. Other indications include tophi, kidney disease, or history of uric acid urolithiasis.</p>
+                
+                <h4>Xanthine Oxidase Inhibitors:</h4>
+                <ul>
+                    <li>Recommended first-line therapy for hyperuricemia</li>
+                    <li>Allopurinol: Lowers uric acid in a dose-dependent manner. Starting dose no greater than 100 mg daily in normal kidney function, ≤50 mg/day in chronic kidney disease</li>
+                    <li>Febuxostat (Uloric): Also dose-dependent. Starting dose 40 mg once daily, may increase to 80 mg/day after 2 weeks if target not achieved</li>
+                </ul>
+                
+                <h4>Uricosurics:</h4>
+                <ul>
+                    <li>Increase renal clearance of uric acid by inhibiting postsecretory renal proximal tubular reabsorption</li>
+                    <li>Probenecid: Initial dose 250 mg twice daily for 1-2 weeks, then 500 mg twice daily for 2 weeks, then increase gradually up to 2 g/day</li>
+                    <li>Lesinurad (Zurampic): Inhibits urate transporter 1 in proximal renal tubules, used in combination with xanthine oxidase inhibitor in patients not achieving target with monotherapy</li>
+                </ul>
+            </section>
+            
+            <section id="section3-en">
+                <h2>Treatment Algorithms</h2>
+                
+                <div class="algorithm-box">
+                    <div class="algorithm-title">
+                        <i class="fas fa-project-diagram"></i> Algorithm for Management of Acute Gout Attack
+                    </div>
+                    <p><strong>Pain Intensity:</strong> Mild/Moderate → Initiate monotherapy with NSAID, Colchicine, or Systemic Corticosteroid</p>
+                    <p><strong>Inadequate Response:</strong> Switch to combination therapy (e.g., Colchicine + NSAID)</p>
+                    <p><strong>Inadequate Response to Combination:</strong> Switch to alternate monotherapy or off-label Interleukin-1 inhibitor therapy</p>
+                    <p><strong>Successful Outcome:</strong> Prevent recurrent attacks through dietary modifications, patient education, and initiate urate-lowering therapy if indicated</p>
+                </div>
+                
+                <div class="algorithm-box">
+                    <div class="algorithm-title">
+                        <i class="fas fa-chart-line"></i> Algorithm for Management of Hyperuricemia in Gout
+                    </div>
+                    <p>1. Determine if patient has indication for Urate Lowering Therapy (ULT)</p>
+                    <p>2. Nonpharmacologic strategies: Dietary modifications, eliminate urate-elevating medications</p>
+                    <p>3. Initiate ULT: Allopurinol (first-line) or Febuxostat or Probenecid</p>
+                    <p>4. Anti-inflammatory gout prophylaxis during ULT initiation</p>
+                    <p>5. Titrate ULT to achieve urate target (serum urate &lt;6 mg/dL)</p>
+                    <p>6. Continued monitoring and maintenance therapy to prevent attacks</p>
+                </div>
+            </section>
+            
+            <section id="section4-en">
+                <h2>Dosage Tables</h2>
+                
+                <h3>Oral NSAID Dosage Regimens for Acute Gout</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Generic Name</th>
+                                <th>Initial Dose</th>
+                                <th>Usual Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Etodolac</td>
+                                <td>300 mg twice daily</td>
+                                <td>300-500 mg twice daily</td>
+                            </tr>
+                            <tr>
+                                <td>Fenoprofen</td>
+                                <td>400 mg three times daily</td>
+                                <td>400-600 mg three to four times daily</td>
+                            </tr>
+                            <tr>
+                                <td>Ibuprofen</td>
+                                <td>400 mg three times daily</td>
+                                <td>400-800 mg three to four times daily</td>
+                            </tr>
+                            <tr>
+                                <td>Indomethacin</td>
+                                <td>50 mg three times daily</td>
+                                <td>50 mg three times daily initially until pain tolerable then rapidly reduce to complete cessation</td>
+                            </tr>
+                            <tr>
+                                <td>Naproxen</td>
+                                <td>750 mg followed by 250 mg every 8 hours until attack subsides</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>Celecoxib</td>
+                                <td>800 mg followed by 400 mg on day one, then 400 mg twice daily for 1 week</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3>Other Urate-Lowering Agents</h3>
+                <ul>
+                    <li>Fenofibrate: Reduces serum urate by 20-30%</li>
+                    <li>Atorvastatin and Rosuvastatin: Associated with serum uric acid lowering but less than fenofibrate</li>
+                    <li>Losartan: Inhibits renal tubular reabsorption of uric acid and increases urinary excretion</li>
+                    <li>Amlodipine, Nifedipine, Diltiazem: Associated with lower gout risk due to increased renal elimination of uric acid</li>
+                </ul>
+            </section>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>مرجع النقرس وفرط حمض اليوريك - Gout and Hyperuricemia Reference</p>
+            <p>© 2023 - مصدر: قسم اضطرابات العظام والمفاصل، تحرير Terry L. Schwinghammer</p>
+            <p>ملاحظة: هذه المعلومات للأغراض التعليمية فقط ولا تغني عن استشارة الطبيب</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        document.getElementById('arabic-btn').addEventListener('click', function() {
+            document.getElementById('arabic-content').classList.add('active');
+            document.getElementById('english-content').classList.remove('active');
+            document.getElementById('arabic-btn').classList.add('active');
+            document.getElementById('english-btn').classList.remove('active');
+            
+            // Update tab buttons text to Arabic
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons[0].textContent = 'النقرس الحاد';
+            tabButtons[1].textContent = 'فرط حمض اليوريك';
+            tabButtons[2].textContent = 'الخوارزميات';
+            tabButtons[3].textContent = 'الجداول';
+        });
+        
+        document.getElementById('english-btn').addEventListener('click', function() {
+            document.getElementById('english-content').classList.add('active');
+            document.getElementById('arabic-content').classList.remove('active');
+            document.getElementById('english-btn').classList.add('active');
+            document.getElementById('arabic-btn').classList.remove('active');
+            
+            // Update tab buttons text to English
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons[0].textContent = 'Acute Gout';
+            tabButtons[1].textContent = 'Hyperuricemia';
+            tabButtons[2].textContent = 'Algorithms';
+            tabButtons[3].textContent = 'Tables';
+        });
+        
+        // Tab Navigation Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const targetSectionId = this.getAttribute('data-target');
+                const isArabicActive = document.getElementById('arabic-content').classList.contains('active');
+                
+                if (isArabicActive) {
+                    // Scroll to section in Arabic content
+                    const targetSection = document.getElementById(targetSectionId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Scroll to section in English content
+                    const targetSection = document.getElementById(targetSectionId + '-en');
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Highlight English terms in Arabic content on hover
+        const englishTerms = document.querySelectorAll('.english-term');
+        englishTerms.forEach(term => {
+            term.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#fff3cd';
+                this.style.padding = '2px 5px';
+                this.style.borderRadius = '3px';
+                this.style.transition = 'all 0.2s';
+            });
+            
+            term.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+                this.style.padding = '';
+            });
+        });
+        
+        // Initialize first section as active in navigation
+        document.querySelector('.tab-btn').click();
+    </script>
 </body>
 </html>
