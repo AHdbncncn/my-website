@@ -1,616 +1,1422 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2. Osteoarthritis</title>
+    <title>التهاب المفاصل التنكسي - Osteoarthritis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #159895;
-            --accent-color: #eb455f;
-            --bg-color: #f8f9fa;
-            --text-color: #2c3333;
-            --white: #ffffff;
-            --table-header: #2d4263;
-            --table-row-even: #f1f6f9;
-            --code-bg: #1e1e1e;
-            --code-text: #d4d4d4;
-            --p-color-1: #2c3e50;
-            --p-color-2: #34495e;
-            --p-color-3: #2980b9;
+            --primary-color: #2c5530;
+            --secondary-color: #73a580;
+            --accent-color: #d4a574;
+            --light-color: #f5f5f5;
+            --dark-color: #1a1a1a;
+            --text-color: #333;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.8;
-            background-color: var(--bg-color);
+            background-color: #f9f9f9;
             color: var(--text-color);
-            padding: 40px 20px;
-            direction: ltr;
-            text-align: left;
+            line-height: 1.7;
+            padding-bottom: 30px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: var(--white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            padding: 20px;
         }
 
+        /* Header Styles */
         header {
-            border-bottom: 4px solid var(--secondary-color);
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 35px 0;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
-            color: var(--primary-color);
             font-size: 2.8rem;
-            margin-bottom: 10px;
-            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .lang-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 25px;
+            margin: 0 8px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-btn i {
+            margin-left: 8px;
+        }
+
+        .lang-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-btn.active {
+            background-color: white;
+            color: var(--primary-color);
+            border-color: white;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 140px;
+            background-color: #f1f1f1;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tab-btn.active {
+            background-color: white;
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        /* Main Content Box */
+        .main-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
         }
 
         h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 8px solid var(--secondary-color);
-            padding-left: 20px;
-            background: #f0f9f9;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-radius: 10px 0 0 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
         }
 
         h3 {
-            color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-decoration: underline;
-            text-decoration-color: var(--accent-color);
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--dark-color);
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-align: justify;
-            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        p:nth-of-type(3n+1) { color: var(--p-color-1); }
-        p:nth-of-type(3n+2) { color: var(--p-color-2); }
-        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+        .english-term {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-style: italic;
+            background-color: #f0f7f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border-right: 3px solid var(--accent-color);
+        }
 
+        /* Lists */
+        ul, ol {
+            margin: 0 25px 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            counter-increment: item;
+        }
+
+        ol li:before {
+            content: counter(item) ".";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Tables */
         .table-container {
-            width: 100%;
             overflow-x: auto;
             margin: 30px 0;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px;
-        }
-
-        th, td {
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            text-align: left;
+            min-width: 700px;
         }
 
         th {
-            background-color: var(--table-header);
+            background-color: var(--primary-color);
             color: white;
+            padding: 18px 15px;
+            text-align: right;
             font-weight: 600;
-            text-transform: uppercase;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
 
         tr:nth-child(even) {
-            background-color: var(--table-row-even);
+            background-color: #f9f9f9;
         }
 
         tr:hover {
-            background-color: #e9f5f5;
+            background-color: #f0f7f2;
         }
 
-        pre {
-            background-color: var(--code-bg);
-            color: var(--code-text);
-            padding: 25px;
-            border-radius: 12px;
-            overflow-x: auto;
-            margin: 30px 0;
-            border-left: 6px solid var(--accent-color);
-            font-family: 'Consolas', 'Monaco', monospace;
-            direction: ltr;
-            text-align: left;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        code {
-            background-color: #fce4ec;
-            padding: 3px 8px;
-            border-radius: 6px;
-            color: var(--accent-color);
-            font-family: inherit;
-            font-weight: 600;
-        }
-
-        ul, ol {
-            margin-bottom: 25px;
-            padding-left: 40px;
-        }
-
-        li {
-            margin-bottom: 12px;
+        /* Info Boxes */
+        .info-box {
+            background-color: #f0f7f2;
+            border-right: 5px solid var(--secondary-color);
+            padding: 22px;
+            margin: 28px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
             position: relative;
         }
 
-        @media (max-width: 768px) {
-            body { padding: 15px 10px; }
-            .container { padding: 25px; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.6rem; }
-            p { font-size: 1rem; }
+        .info-box:before {
+            content: '\f05a';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
         }
 
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background-color: #fff8e6;
+            border-right: 5px solid #ffc107;
+            padding: 22px;
+            margin: 28px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            position: relative;
+        }
+
+        .warning-box:before {
+            content: '\f071';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: #ff9800;
+            font-size: 1.2rem;
+        }
+
+        /* Algorithm Box */
+        .algorithm-box {
+            background-color: #e8f4fc;
+            border-right: 5px solid var(--secondary-color);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .algorithm-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .algorithm-title i {
+            margin-left: 12px;
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 60px;
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            font-size: 1rem;
-            color: #888;
-            border-top: 2px solid #eee;
-            padding-top: 30px;
+            padding: 25px;
+            margin-top: 50px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .main-content {
+                padding: 25px;
+            }
+            
+            .tab-btn {
+                min-width: 120px;
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            th, td {
+                padding: 12px 10px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .language-toggle, .nav-tabs {
+                display: none;
+            }
+            
+            .content-section {
+                display: block !important;
+                box-shadow: none;
+            }
+            
+            header {
+                background: white !important;
+                color: black !important;
+                box-shadow: none;
+            }
+            
+            .main-content {
+                box-shadow: none;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>2. Osteoarthritis</h1>
-        </header>
-        <main>
-            <p>15</p>
-<h2>RETPAHC</h2>
-<p>2</p>
-<p>Osteoarthritis</p>
-<li>Osteoarthritis (OA) is a common, progressive disorder affecting primarily weight-</li>
-<p>bearing diarthrodial joints, characterized by progressive destruction of articular</p>
-<p>cartilage, osteophyte formation, pain, limitation of motion, deformity, and disability.</p>
-<h2>PATHOPHYSIOLOGY</h2>
-<li>Primary (idiopathic) OA, the more common type, has no known cause.</li>
-<li>Secondary OA is associated with a known cause such as inflammation, trauma, meta-</li>
-<p>bolic or endocrine disorders, and congenital factors.</p>
-<li>OA usually begins with damage to articular cartilage through injury, excessive</li>
-<p>joint loading from obesity or other reasons, or joint instability. Damage to car-</p>
-<p>tilage increases activity of chondrocytes in attempt to repair damage, leading to</p>
-<p>increased synthesis of matrix constituents with cartilage swelling. Normal balance</p>
-<p>between cartilage breakdown and resynthesis is lost, with increasing destruction and</p>
-<p>cartilage loss.</p>
-<li>Subchondral bone adjacent to articular cartilage undergoes pathologic changes and</li>
-<p>releases vasoactive peptides and matrix metalloproteinases. Neovascularization and</p>
-<p>increased permeability of adjacent cartilage occur, which contribute to cartilage loss</p>
-<p>and chondrocyte apoptosis.</p>
-<li>Cartilage loss causes joint space narrowing and painful, deformed joints. Remaining</li>
-<p>cartilage softens and develops fibrillations, followed by further cartilage loss and</p>
-<p>exposure of underlying bone. New bone formations (osteophytes) at joint margins</p>
-<p>distant from cartilage destruction are thought to help stabilize affected joints.</p>
-<li>Inflammatory changes can occur in the joint capsule and synovium. Crystals or</li>
-<p>cartilage shards in synovial fluid may contribute to inflammation. Interleukin-1,</p>
-<p>prostaglandin E, tumor necrosis factor-α, and nitric oxide in synovial fluid may also</p>
-<p>2</p>
-<p>play a role. Inflammatory changes result in synovial effusions and thickening.</p>
-<li>Pain may result from distention of the synovial capsule by increased joint fluid;</li>
-<p>microfracture; periosteal irritation; or damage to ligaments, synovium, or the</p>
-<p>meniscus.</p>
-<h2>CLINICAL PRESENTATION</h2>
-<li>Risk factors include increasing age, obesity, sex, certain occupations and sports activi-</li>
-<p>ties, history of joint injury or surgery, and genetic predisposition.</p>
-<li>The predominant symptom is deep, aching pain in affected joints. Pain accompanies</li>
-<p>joint activity and decreases with rest.</p>
-<li>Joints most commonly affected are the distal interphalangeal (DIP) and proximal</li>
-<p>interphalangeal (PIP) joints of the hand, first carpometacarpal joint, knees, hips,</p>
-<p>cervical and lumbar spine, and first metatarsophalangeal (MTP) joint of the toe.</p>
-<li>Limitation of motion, stiffness, crepitus, and deformities may occur. Patients with</li>
-<p>lower extremity involvement may report weakness or instability.</p>
-<li>Upon arising, joint stiffness typically lasts less than 30 minutes and resolves with</li>
-<p>motion.</p>
-<li>Presence of warm, red, and tender joints suggests inflammatory synovitis.</li>
-<li>Physical examination of affected joints reveals tenderness, crepitus, and possibly</li>
-<p>enlargement. Heberden and Bouchard nodes are bony enlargements (osteophytes) of</p>
-<p>the DIP and PIP joints, respectively.</p>
-<p>ch02.indd 15 18-11-2020 11:50:57</p>
-<div class="table-container"><table><tr><th>RETPAHC</th><th>2</th><th>Osteoarthritis</th></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
-<h2>DIAGNOSIS</h2>
-<li>Diagnosis is made through patient history, physician examination, radiologic find-</li>
-<p>ings, and laboratory testing.</p>
-<li>American College of Rheumatology criteria for classification of OA of the hips,</li>
-<p>knees, and hands include presence of pain, bony changes on examination, normal</p>
-<p>erythrocyte sedimentation rate (ESR), and radiographs showing osteophytes or joint</p>
-<p>space narrowing.</p>
-<li>For hip OA, patients must have hip pain and two of the following: (1) ESR <20 mm/hr</li>
-<p>(5.6 μm/sec), (2) radiographic femoral or acetabular osteophytes, and/or (3) radio-</p>
-<p>graphic joint space narrowing.</p>
-<li>For knee OA, patients must have knee pain and radiographic osteophytes in addition</li>
-<p>to one or more of the following: (1) age &gt;50 years, (2) morning stiffness lasting ≤30</p>
-<p>minutes, (3) crepitus on motion, (4) bony enlargement, (5) bony tenderness, and/or</p>
-<p>(6) palpable joint warmth.</p>
-<li>ESR may be slightly elevated if inflammation is present. Rheumatoid factor is nega-</li>
-<p>tive. Analysis of synovial fluid reveals high viscosity and mild leukocytosis (&lt;2000</p>
-<p>white blood cells/mm3 [2 × 109/L]) with predominantly mononuclear cells.</p>
-<h2>TREATMENT</h2>
-<li>Goals of Treatment: (1) Educate the patient, family members, and caregivers; (2)</li>
-<pre><code>relieve pain and stiffness; (3) maintain or improve joint mobility; (4) limit functional</code></pre>
-<p>impairment; and (5) maintain or improve quality of life.</p>
-<h2>NONPHARMACOLOGIC THERAPY</h2>
-<li>Educate the patient about the disease process and extent, prognosis, and treatment</li>
-<p>options. Promote dietary counseling, exercise, and a weight loss program for over-</p>
-<p>weight patients.</p>
-<li>Physical therapy—with heat or cold treatments and an exercise program—helps</li>
-<p>maintain range of motion and reduce pain and need for analgesics.</p>
-<li>Assistive and orthotic devices (canes, walkers, braces, heel cups, and insoles) can be</li>
-<p>used during exercise or daily activities.</p>
-<li>Surgical procedures (eg, osteotomy, arthroplasty, joint fusion) are indicated for func-</li>
-<p>tional disability and/or severe pain unresponsive to conservative therapy.</p>
-<h2>PHARMACOLOGIC THERAPY (TABLE 2-1)</h2>
-<p>General Approach</p>
-<li>Drug therapy is targeted at relief of pain. A conservative approach is warranted</li>
-<p>because OA often occurs in older individuals with other medical conditions.</p>
-<li>Apply an individualized approach (Figs. 2-1 and 2-2). Continue appropriate nondrug</li>
-<p>therapies when initiating drug therapy.</p>
-<p>Knee and Hip OA</p>
-<li>Acetaminophen is a preferred first-line treatment; it may be less effective than oral</li>
-<p>nonsteroidal anti-inflammatory drugs (NSAIDs) but has a lower risk of serious</p>
-<p>gastrointestinal (GI) and cardiovascular (CV) events. Acetaminophen is usually well</p>
-<p>tolerated, but potentially fatal hepatotoxicity with overdose is well documented. It</p>
-<p>should be avoided in chronic alcohol users or patients with liver disease.</p>
-<li>Nonselective NSAIDs or cyclooxygenase-2 (COX-2) selective inhibitors (eg,</li>
-<p>celecoxib) are recommended if a patient fails acetaminophen. Nonselective NSAIDs</p>
-<p>may cause minor GI complaints such as nausea, dyspepsia, anorexia, abdominal</p>
-<p>pain, and diarrhea. They may cause gastric and duodenal ulcers and bleeding</p>
-<p>through direct (topical) or indirect (systemic) mechanisms. Risk factors for NSAID-</p>
-<p>associated ulcers and ulcer complications (perforation, gastric outlet obstruction, and</p>
-<p>GI bleeding) include longer duration of NSAID use, higher dosage, age older than</p>
-<p>16</p>
-<p>ch02.indd 16 18-11-2020 11:50:57</p>
-<h2>Osteoarthritis | CHAPTER 2</h2>
-<h2>TABLE 2-1 Medications for the Treatment of Osteoarthritis</h2>
-<p>Drug Starting Dose Usual Range</p>
-<p>Oral analgesics</p>
-<p>Acetaminophen 325–500 mg three 325–650 mg every 4–6 hours or</p>
-<p>times a day 1 g three to four times/day</p>
-<p>Tramadol 25 mg in the morning Titrate dose in 25-mg increments</p>
-<p>to reach a maintenance</p>
-<p>dose of 50–100 mg three</p>
-<p>times a day</p>
-<p>Tramadol ER 100 mg daily Titrate to 200–300 mg daily</p>
-<p>Hydrocodone/ 5 mg/325 mg three 2.5–10 mg/325–650 mg three to</p>
-<p>acetaminophen times daily five times daily</p>
-<p>Oxycodone/acetaminophen 5 mg/325 mg three 2.5–10 mg/325–650 mg three to</p>
-<p>times daily five times daily</p>
-<p>Topical analgesics</p>
-<p>Capsaicin 0.025%–0.15% Apply to affected joint three to</p>
-<p>four times per day</p>
-<p>Diclofenac 1% gel Apply 2 or 4 g per site as</p>
-<p>prescribed, four times daily</p>
-<p>Diclofenac 1.3% patch Apply one patch twice daily</p>
-<p>to the site to be treated, as</p>
-<p>directed</p>
-<p>Diclofenac 1.5% solution Apply 40 drops to the affected</p>
-<p>knee, applying and rubbing in</p>
-<p>10 drops at a time. Repeat for</p>
-<p>a total of four times daily.</p>
-<p>Intra-articular</p>
-<p>corticosteroids</p>
-<p>Triamcinolone 5–15 mg per joint 10–40 mg per large joint (knee,</p>
-<p>hip, shoulder)</p>
-<p>Methylprednisolone acetate 10–20 mg per joint 20–80 mg per large joint (knee,</p>
-<p>hip, shoulder)</p>
-<p>NSAIDs</p>
-<p>Aspirin (plain, buffered, or 325 mg three 325–650 mg four times a day</p>
-<p>enteric-coated) times a day</p>
-<p>Celecoxib 100 mg daily 100 mg twice daily or</p>
-<p>200 mg daily</p>
-<p>Diclofenac IR 50 mg twice a day 50–75 mg twice a day</p>
-<p>Diclofenac XR 100 mg daily 100–200 mg daily</p>
-<p>Diflunisal 250 mg twice a day 500–750 mg twice a day</p>
-<p>Etodolac 300 mg twice a day 400–500 mg twice a day</p>
-<p>Fenoprofen 400 mg three 400–600 mg three to four</p>
-<p>times a day times a day</p>
-<p>Flurbiprofen 100 mg twice a day 200–300 mg/day in two to four</p>
-<p>divided doses</p>
-<p>(Continued)</p>
-<p>17</p>
-<p>ch02.indd 17 18-11-2020 11:50:58</p>
-<div class="table-container"><table><tr><th>TABLE 2-1 Medications for the Treatment of Osteoarthritis</th><th></th><th></th></tr><tr><td>Drug</td><td>Starting Dose</td><td>Usual Range</td></tr><tr><td>Oral analgesics</td><td></td><td></td></tr><tr><td>Acetaminophen</td><td>325–500 mg three
-times a day</td><td>325–650 mg every 4–6 hours or
-1 g three to four times/day</td></tr><tr><td>Tramadol</td><td>25 mg in the morning</td><td>Titrate dose in 25-mg increments
-to reach a maintenance
-dose of 50–100 mg three
-times a day</td></tr><tr><td>Tramadol ER</td><td>100 mg daily</td><td>Titrate to 200–300 mg daily</td></tr><tr><td>Hydrocodone/
-acetaminophen</td><td>5 mg/325 mg three
-times daily</td><td>2.5–10 mg/325–650 mg three to
-five times daily</td></tr><tr><td>Oxycodone/acetaminophen</td><td>5 mg/325 mg three
-times daily</td><td>2.5–10 mg/325–650 mg three to
-five times daily</td></tr><tr><td>Topical analgesics</td><td></td><td></td></tr><tr><td>Capsaicin 0.025%–0.15%</td><td></td><td>Apply to affected joint three to
-four times per day</td></tr><tr><td>Diclofenac 1% gel</td><td></td><td>Apply 2 or 4 g per site as
-prescribed, four times daily</td></tr><tr><td>Diclofenac 1.3% patch</td><td></td><td>Apply one patch twice daily
-to the site to be treated, as
-directed</td></tr><tr><td>Diclofenac 1.5% solution</td><td></td><td>Apply 40 drops to the affected
-knee, applying and rubbing in
-10 drops at a time. Repeat for
-a total of four times daily.</td></tr><tr><td>Intra-articular
-corticosteroids</td><td></td><td></td></tr><tr><td>Triamcinolone</td><td>5–15 mg per joint</td><td>10–40 mg per large joint (knee,
-hip, shoulder)</td></tr><tr><td>Methylprednisolone acetate</td><td>10–20 mg per joint</td><td>20–80 mg per large joint (knee,
-hip, shoulder)</td></tr><tr><td>NSAIDs</td><td></td><td></td></tr><tr><td>Aspirin (plain, buffered, or
-enteric-coated)</td><td>325 mg three
-times a day</td><td>325–650 mg four times a day</td></tr><tr><td>Celecoxib</td><td>100 mg daily</td><td>100 mg twice daily or
-200 mg daily</td></tr><tr><td>Diclofenac IR</td><td>50 mg twice a day</td><td>50–75 mg twice a day</td></tr><tr><td>Diclofenac XR</td><td>100 mg daily</td><td>100–200 mg daily</td></tr><tr><td>Diflunisal</td><td>250 mg twice a day</td><td>500–750 mg twice a day</td></tr><tr><td>Etodolac</td><td>300 mg twice a day</td><td>400–500 mg twice a day</td></tr><tr><td>Fenoprofen</td><td>400 mg three
-times a day</td><td>400–600 mg three to four
-times a day</td></tr><tr><td>Flurbiprofen</td><td>100 mg twice a day</td><td>200–300 mg/day in two to four
-divided doses
-(Continued)</td></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>TABLE 2-1 Medications for the Treatment of Osteoarthritis (Continued)</p>
-<p>Drug Starting Dose Usual Range</p>
-<p>Ibuprofen 200 mg three 1200–3200 mg/day in three to</p>
-<p>times a day four divided doses</p>
-<p>Indomethacin 25 mg twice a day Titrate dose by 25–50 mg/day</p>
-<p>until pain controlled or</p>
-<p>maximum dose of 50 mg</p>
-<p>three times a day</p>
-<p>Indomethacin SR 75 mg SR once daily Can titrate to 75 mg SR twice</p>
-<p>daily if needed</p>
-<p>Ketoprofen 50 mg three times a day 50–75 mg three to four</p>
-<p>times a day</p>
-<p>Meclofenamate 50 mg three times a day 50–100 mg three to four</p>
-<p>times a day</p>
-<p>Mefenamic acid 250 mg three 250 mg four times a day</p>
-<p>times a day</p>
-<p>Meloxicam 7.5 mg daily 15 mg daily</p>
-<p>Nabumetone 500 mg daily 500–1000 mg one to two</p>
-<p>times a day</p>
-<p>Naproxen 250 mg twice a day 500 mg twice a day</p>
-<p>Naproxen sodium 220 mg twice a day 220–550 mg twice a day</p>
-<p>Naproxen sodium CR 750–1000 mg 500–1500 mg once daily</p>
-<p>once daily</p>
-<p>Oxaprozin 600 mg daily 600–1200 mg daily</p>
-<p>Piroxicam 10 mg daily 20 mg daily</p>
-<p>Salsalate 500 mg twice a day 500–1000 mg two to three</p>
-<p>times a day</p>
-<p>CR, controlled-release; ER, extended-release; IR, immediate-release; SR, sustained-release;</p>
-<p>XR, extended-release.</p>
-<p>60 years, past history of peptic ulcer disease of any cause, history of alcohol use, and</p>
-<p>concomitant use of glucocorticoids or anticoagulants. Options for reducing the GI</p>
-<p>risk of nonselective NSAIDs include using (1) the lowest dose possible and only when</p>
-<p>needed, (2) misoprostol four times daily with the NSAID, and (3) a PPI or full-dose</p>
-<p>H-receptor antagonist daily with the NSAID.</p>
-<li>CO 2 X-2 inhibitors pose less risk for adverse GI events than nonselective NSAIDs, but</li>
-<p>this advantage is substantially reduced for patients taking aspirin. Both nonselective</p>
-<p>and selective NSAIDs are associated with an increased risk for CV events (hyperten-</p>
-<p>sion, stroke, myocardial infarction, and death).</p>
-<li>NSAIDs may also cause kidney diseases, hepatitis, hypersensitivity reactions, rash,</li>
-<p>and CNS complaints of drowsiness, dizziness, headaches, depression, confusion, and</p>
-<p>tinnitus. NSAIDs inhibit COX-1–dependent thromboxane production in platelets,</p>
-<p>thereby increasing bleeding risk. Unlike aspirin, celecoxib and nonspecific NSAIDs</p>
-<pre><code>inhibit thromboxane formation reversibly, with normalization of platelet function</code></pre>
-<p>1–3 days after drug discontinuation. Avoid NSAIDs in late pregnancy because of</p>
-<p>risk of premature closure of the ductus arteriosus. The most potentially serious</p>
-<p>drug interactions include use of NSAIDs with lithium, warfarin, oral hypoglyce-</p>
-<p>mics, methotrexate, antihypertensives, angiotensin-converting enzyme inhibitors,</p>
-<p>β-blockers, and diuretics.</p>
-<p>18</p>
-<p>ch02.indd 18 18-11-2020 11:50:58</p>
-<div class="table-container"><table><tr><th>TABLE 2-1 Medications for the Treatment of Osteoarthritis (Continued)</th><th></th><th></th></tr><tr><td>Drug</td><td>Starting Dose</td><td>Usual Range</td></tr><tr><td>Ibuprofen</td><td>200 mg three
-times a day</td><td>1200–3200 mg/day in three to
-four divided doses</td></tr><tr><td>Indomethacin</td><td>25 mg twice a day</td><td>Titrate dose by 25–50 mg/day
-until pain controlled or
-maximum dose of 50 mg
-three times a day</td></tr><tr><td>Indomethacin SR</td><td>75 mg SR once daily</td><td>Can titrate to 75 mg SR twice
-daily if needed</td></tr><tr><td>Ketoprofen</td><td>50 mg three times a day</td><td>50–75 mg three to four
-times a day</td></tr><tr><td>Meclofenamate</td><td>50 mg three times a day</td><td>50–100 mg three to four
-times a day</td></tr><tr><td>Mefenamic acid</td><td>250 mg three
-times a day</td><td>250 mg four times a day</td></tr><tr><td>Meloxicam</td><td>7.5 mg daily</td><td>15 mg daily</td></tr><tr><td>Nabumetone</td><td>500 mg daily</td><td>500–1000 mg one to two
-times a day</td></tr><tr><td>Naproxen</td><td>250 mg twice a day</td><td>500 mg twice a day</td></tr><tr><td>Naproxen sodium</td><td>220 mg twice a day</td><td>220–550 mg twice a day</td></tr><tr><td>Naproxen sodium CR</td><td>750–1000 mg
-once daily</td><td>500–1500 mg once daily</td></tr><tr><td>Oxaprozin</td><td>600 mg daily</td><td>600–1200 mg daily</td></tr><tr><td>Piroxicam</td><td>10 mg daily</td><td>20 mg daily</td></tr><tr><td>Salsalate</td><td>500 mg twice a day</td><td>500–1000 mg two to three
-times a day</td></tr></table></div><h2>Osteoarthritis | CHAPTER 2</h2>
-<p>Patient requires</p>
-<p>pharmacologic treatmenta</p>
-<p>Is acetaminophen</p>
-<p>contraindicated?</p>
-<p>No Yes</p>
-<p>Acetaminophenb Is treatment effective? Alternative first-line</p>
-<p>maximum 4 g/day agents</p>
-<p>Topical NSAIDs</p>
-<p>No Yes (knee only) and/or</p>
-<p>intra-articular</p>
-<p>Alternative second-line</p>
-<p>agents Continue treatment corticosteroids</p>
-<li>Opioid analgesics and/or tramadol</li>
-<li>Surgery and/or oral NSAIDs</li>
-<li>Duloxetine (knee only) (if <75 yo or low CV</li>
-<li>Intra-articular hyaluronates (knee only) and GI risk)c</li>
-<p>aSelection of a medication should consider patient-specific characteristics.</p>
-<p>bThe patient must be counseled regarding all acetaminophen-containing products.</p>
-<p>cWhen used for chronic management of OA, consider addition of a proton-pump inhibitor.</p>
-<p>(CV, cardiovascular; GI, gastrointestinal; NSAID, nonsteroidal anti-inflammatory drug.)</p>
-<p>FIGURE 2-1. Treatment recommendations for hip and knee osteoarthritis.</p>
-<li>Topical NSAIDs are recommended for knee OA if acetaminophen fails, and they are</li>
-<p>preferred over oral NSAIDs in patients older than 75 years. Topical NSAIDs provide</p>
-<p>similar pain relief with fewer adverse GI events than oral NSAIDs but may be associ-</p>
-<p>ated with adverse events at the application site (eg, dry skin, pruritus, and rash). Patients</p>
-<p>using topical products should avoid oral NSAIDs to minimize the potential for additive</p>
-<p>side effects. Use of topical NSAIDs has not been linked with increased risk of CV events.</p>
-<li>Intra-articular (IA) corticosteroid injections are recommended for both hip and</li>
-<p>knee OA when analgesia with acetaminophen or NSAIDs is suboptimal. They can</p>
-<p>provide excellent pain relief, particularly when joint effusion is present. Local anes-</p>
-<p>thetics such as lidocaine or bupivacaine are commonly combined with corticosteroids</p>
-<p>to provide rapid pain relief. Injections may also be given with concomitant oral</p>
-<p>analgesics for additional pain control. After aseptic aspiration of the effusion and</p>
-<p>corticosteroid injection, initial pain relief may occur within 24–72 hours, with peak</p>
-<p>relief occurring after 7–10 days and lasting for 4–8 weeks. Local adverse effects can</p>
-<p>include infection, osteonecrosis, tendon rupture, and skin atrophy at the injection</p>
-<p>site. Do not administer injections more frequently than once every 3 months to mini-</p>
-<p>mize systemic adverse effects. Systemic corticosteroid therapy is not recommended in</p>
-<p>OA, given lack of proven benefit and well-known adverse effects with long-term use.</p>
-<li>Tramadol is recommended for hip and knee OA in patients who have failed scheduled</li>
-<p>full-dose acetaminophen and topical NSAIDs, who are not appropriate candidates</p>
-<p>for oral NSAIDs, and who are not able to receive IA corticosteroids. Tramadol can be</p>
-<p>added to partially effective acetaminophen or oral NSAID therapy. Tramadol is associ-</p>
-<p>ated with opioid-like adverse effects such as nausea, vomiting, dizziness, constipation,</p>
-<p>headache, and somnolence. However, tramadol is not associated with life-threatening</p>
-<p>GI bleeding, CV events, or renal failure. The most serious adverse event is seizures.</p>
-<p>Tramadol is classified as a Schedule IV controlled substance due to its potential for</p>
-<p>dependence, addiction, and diversion. There is increased risk of serotonin syndrome</p>
-<p>when tramadol is used with other serotonergic medications, including duloxetine.</p>
-<li>Opioids should be considered in patients not responding adequately to nonphar-</li>
-<p>macologic and first-line pharmacologic therapies. Patients who are at high surgical</p>
-<p>risk and cannot undergo joint arthroplasty are also candidates for opioid therapy.</p>
-<p>Use opioid analgesics in the lowest effective dose and the smallest quantity needed.</p>
-<p>Avoid combinations of opioids and sedating medications whenever possible.</p>
-<p>19</p>
-<p>ch02.indd 19 18-11-2020 11:50:58</p>
-<h2>SECTION 1 | Bone and Joint Disorders</h2>
-<p>Patient requires</p>
-<p>pharmacologic treatmenta</p>
-<p>Is patient ≥75 years of</p>
-<p>age?</p>
-<p>No Yes</p>
-<p>First-line agents</p>
-<p>Oral NSAIDsb (if First-line agents</p>
-<p>low CV and GI risk) Topical NSAIDs</p>
-<p>Topical NSAIDs or</p>
-<p>or Topical capsaicin</p>
-<p>Topical capsaicin and/or</p>
-<p>and/or Tramadol</p>
-<p>Tramadol</p>
-<p>Is treatment Yes Yes Is treatment</p>
-<p>Continue treatment</p>
-<p>effective? effective?</p>
-<p>No No</p>
-<p>Alternative regimens</p>
-<p>Alternative regimens</p>
-<p>Combined therapy</p>
-<p>Combined therapy</p>
-<p>with two first-line</p>
-<p>agentsc with t</p>
-<p>a</p>
-<p>w</p>
-<p>g</p>
-<p>o</p>
-<p>e n</p>
-<p>fi</p>
-<p>t</p>
-<p>r</p>
-<p>s</p>
-<p>s</p>
-<p>c</p>
-<p>t-line</p>
-<p>(ie, oral NSAIDs</p>
-<p>(ie, topical NSAIDs</p>
-<p>and topical capsaicin</p>
-<p>and tramadol)</p>
-<p>or tramadol)</p>
-<p>aSelection of a medication should consider patient-specific characteristics.</p>
-<p>bWhen used for chronic management of OA, consider addition of a proton-pump inhibitor.</p>
-<p>cShould not combine topical NSAIDs and oral NSAIDs.</p>
-<p>(CV, cardiovascular; GI, gastrointestinal; NSAID, nonsteroidal anti-inflammatory drug.)</p>
-<p>FIGURE 2-2. Treatment recommendations for hand osteoarthritis.</p>
-<p>Inform patients on how to use, store, and dispose of opioid medications. Sustained-</p>
-<p>release compounds usually offer better pain control throughout the day. Common</p>
-<p>adverse effects include nausea, somnolence, constipation, dry mouth, and dizziness.</p>
-<p>Opioid dependence, addiction, tolerance, hyperalgesia, and issues surrounding drug</p>
-<p>diversion may be associated with long-term treatment. Assess opioid use at least</p>
-<pre><code>every 3 months, evaluating patient progression toward functional treatment goals,</code></pre>
-<p>risks of harm, and adverse effects.</p>
-<li>Duloxetine can be used as adjunctive treatment of knee (not hip) OA in patients</li>
-<p>with partial response to first-line analgesics (acetaminophen, oral NSAIDs). It may</p>
-<p>be a preferred second-line medication in patients with both neuropathic and muscu-</p>
-<p>loskeletal OA pain. Pain reduction occurs after about 4 weeks of therapy. Duloxetine</p>
-<p>may cause nausea, dry mouth, constipation, anorexia, fatigue, somnolence, and</p>
-<p>dizziness. Serious rare events include Stevens-Johnson syndrome and liver failure.</p>
-<p>Concomitant use with other medications that increase serotonin concentration</p>
-<p>(including tramadol) increases risk of serotonin syndrome.</p>
-<li>IA hyaluronic acid (sodium hyaluronate) is not routinely recommended because</li>
-<p>injections have shown limited benefit for knee OA and have not been shown to</p>
-<p>benefit hip OA. Injections are usually well tolerated, but acute joint swelling, effu-</p>
-<p>sion, stiffness, and local skin reactions (eg, rash, ecchymoses, or pruritus) have been</p>
-<p>reported. IA preparations and regimens for OA knee pain include:</p>
-<p>✓ Cross-linked hyaluronate 30 mg/3 mL (Gel-One) single injection</p>
-<p>✓ Hyaluronan 30 mg/2 mL (Orthovisc) once weekly for three injections</p>
-<p>✓ Hyaluronan 88 mg/4 mL (Monovisc) single injection</p>
-<p>20</p>
-<p>ch02.indd 20 18-11-2020 11:50:59</p>
-<h2>Osteoarthritis | CHAPTER 2</h2>
-<p>✓ Hylan polymers 16 mg/2 mL (Synvisc) once weekly for three injections</p>
-<p>✓ Hylan polymers 48 mg/6 mL (Synvisc-One) single injection</p>
-<p>✓ Sodium hyaluronate 20 mg/2 mL (Hyalgan) once weekly for five injections</p>
-<p>✓ Sodium hyaluronate 20 mg/2 mL (Euflexxa) once weekly for three injections</p>
-<p>✓ Sodium hyaluronate 25 mg/2.5 mL (Supartz FX) once weekly for five injections</p>
-<p>✓ Sodium hyaluronate 25 mg/2.5 mL (GenVisc 850) once weekly for five injections</p>
-<li>Glucosamine and/or chondroitin and topical rubefacients (eg, methyl salicylate,</li>
-<pre><code>trolamine salicylate) lack uniform improvement in pain control or functional status</code></pre>
-<p>for hip and knee pain and are not preferred treatment options. Glucosamine adverse</p>
-<p>effects are mild and include flatulence, bloating, and abdominal cramps. The most</p>
-<p>common adverse effect of chondroitin is nausea.</p>
-<p>Hand OA</p>
-<li>Topical NSAIDs are a first-line option for hand OA. Topical diclofenac has efficacy</li>
-<p>similar to oral NSAIDs with fewer adverse GI events, albeit with some local applica-</p>
-<p>tion site events. Efficacy with topical NSAIDs typically occurs with 1–2 weeks.</p>
-<li>Oral NSAIDs are an alternative first-line treatment for patients who cannot toler-</li>
-<p>ate the local skin reactions or who received inadequate relief from topical NSAIDs.</p>
-<li>Capsaicin cream is an alternative first-line treatment; small clinical trials have dem-</li>
-<p>onstrated about 50% reduction in pain scores. It is a reasonable option for patients</p>
-<p>unable to take oral NSAIDs. Capsaicin must be used regularly to be effective, and</p>
-<p>it may require up to 2 weeks to take effect. Adverse effects are primarily local and</p>
-<p>include burning, stinging, and/or erythema that usually subsides with repeated</p>
-<p>application. Warn patients not to get cream in their eyes or mouth and to wash hands</p>
-<p>after application. Application of the cream, gel, solution, or lotion is recommended</p>
-<p>four times daily.</p>
-<li>Tramadol is an alternative first-line treatment and is a reasonable option for patients</li>
-<p>who do not respond to topical therapy and are not candidates for oral NSAIDs</p>
-<p>because of high GI, CV, or renal risks. Tramadol may also be used in combination</p>
-<p>with partially effective acetaminophen, topical therapy, or oral NSAIDs.</p>
-<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
-<li>To monitor efficacy, assess baseline pain with a visual analog scale, and assess range</li>
-<p>of motion for affected joints with flexion, extension, abduction, or adduction.</p>
-<li>Depending on the joint(s) affected, measurement of grip strength and 50-ft walking</li>
-<p>time can help assess hand and hip/knee OA, respectively.</p>
-<li>Baseline radiographs can document extent of joint involvement and follow disease</li>
-<p>progression with therapy.</p>
-<li>Other measures include the clinician’s global assessment based on patient’s history of</li>
-<p>activities and limitations caused by OA, the Western Ontario and McMaster Univer-</p>
-<p>sities Arthrosis Index, Stanford Health Assessment Questionnaire, and documenta-</p>
-<p>tion of analgesic or NSAID use.</p>
-<li>Ask patients about adverse effects from medications. Monitor for signs of drug-</li>
-<p>related effects, such as skin rash, headaches, drowsiness, weight gain, or hypertension</p>
-<p>from NSAIDs.</p>
-<li>Obtain baseline serum creatinine, hematology profile, and serum transaminases with</li>
-<p>repeat levels at 6- to 12-month intervals to identify specific toxicities to the kidney,</p>
-<p>liver, GI tract, or bone marrow.</p>
-<p>See Chapter 106, Osteoarthritis, authored by Lucinda M. Buys and Sara A. Wiedenfeld,</p>
-<p>for a more detailed discussion of this topic.</p>
-<p>21</p>
-<p>ch02.indd 21 18-11-2020 11:50:59</p>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>التهاب المفاصل التنكسي</h1>
+            <div class="subtitle">Osteoarthritis (OA)</div>
+            <p>اضطراب تنكسي متقدم يصيب المفاصل الحاملة للوزن، يتميز بتلف الغضروف المفصلي وتشكل النبتات العظمية</p>
+            
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" id="arabic-btn">
+                    <i class="fas fa-language"></i> العربية
+                </button>
+                <button class="lang-btn" id="english-btn">
+                    <i class="fas fa-language"></i> English
+                </button>
+            </div>
+        </div>
+    </header>
 
-        </main>
-        <footer>
-            Converted with High Precision by Manus - &copy; 2026
-        </footer>
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" id="nav-tabs">
+            <button class="tab-btn active" data-target="section1">الفيزيولوجيا المرضية</button>
+            <button class="tab-btn" data-target="section2">العرض السريري</button>
+            <button class="tab-btn" data-target="section3">التشخيص</button>
+            <button class="tab-btn" data-target="section4">العلاج العام</button>
+            <button class="tab-btn" data-target="section5">العلاج الدوائي</button>
+            <button class="tab-btn" data-target="section6">التقييم والمتابعة</button>
+        </div>
+
+        <!-- Arabic Content -->
+        <div class="content-section active" id="arabic-content">
+            <div class="main-content">
+                <!-- Section 1: Pathophysiology -->
+                <section id="section1">
+                    <h2>الفيزيولوجيا المرضية (Pathophysiology)</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> ما هو التهاب المفاصل التنكسي؟</h4>
+                        <p>التهاب المفاصل التنكسي (Osteoarthritis - OA) هو اضطراب تنكسي مزمن وشائع يصيب بشكل رئيسي المفاصل الحاملة للوزن، يتميز بالتدمير التدريجي للغضروف المفصلي، تشكل النبتات العظمية (osteophytes)، الألم، محدودية الحركة، التشوه، والإعاقة.</p>
+                    </div>
+
+                    <h3>أنواع التهاب المفاصل التنكسي:</h3>
+                    <ul>
+                        <li><span class="english-term">Primary (Idiopathic) OA</span>: النوع الأكثر شيوعًا، بدون سبب معروف</li>
+                        <li><span class="english-term">Secondary OA</span>: مرتبط بأسباب معروفة مثل الالتهاب، الصدمة، الاضطرابات الاستقلابية أو الغدد الصماء، والعوامل الخلقية</li>
+                    </ul>
+
+                    <h3>آلية التطور:</h3>
+                    <ol>
+                        <li>يبدأ عادةً بتلف الغضروف المفصلي بسبب إصابة، أو تحميل مفرط على المفصل بسبب السمنة أو أسباب أخرى، أو عدم استقرار المفصل</li>
+                        <li>يزيد تلف الغضروف من نشاط الخلايا الغضروفية (<span class="english-term">chondrocytes</span>) في محاولة لإصلاح التلف، مما يؤدي إلى زيادة تصنيع مكونات المادة الأساسية (<span class="english-term">matrix</span>) مع تورم الغضروف</li>
+                        <li>يفقد التوازن الطبيعي بين تحطيم الغضروف وإعادة تصنيعه، مع زيادة التدمير وفقدان الغضروف</li>
+                        <li>العظم تحت الغضروف (<span class="english-term">subchondral bone</span>) المجاور للغضروف المفصلي يخضع لتغيرات مرضية ويطلق ببتيدات وعائية (<span class="english-term">vasoactive peptides</span>) وإنزيمات محللة للمادة الأساسية (<span class="english-term">matrix metalloproteinases</span>)</li>
+                        <li>يحدث تكوين أوعية دموية جديدة (<span class="english-term">neovascularization</span>) وزيادة نفاذية الغضروف المجاور، مما يساهم في فقدان الغضروف وموت الخلايا الغضروفية المبرمج (<span class="english-term">chondrocyte apoptosis</span>)</li>
+                        <li>يؤدي فقدان الغضروف إلى تضييق المسافة المفصلية ومفاصل مؤلمة ومشوهة</li>
+                        <li>يتليّن الغضروف المتبقي ويتطور إلى تليفات (<span class="english-term">fibrillations</span>)، يتبعها مزيد من فقدان الغضروف وكشف العظم الأساسي</li>
+                        <li>تتشكل نبتات عظمية جديدة (<span class="english-term">osteophytes</span>) عند حواف المفصل بعيدًا عن تدمير الغضروف للمساعدة في استقرار المفاصل المصابة</li>
+                    </ol>
+
+                    <h3>التغيرات الالتهابية:</h3>
+                    <ul>
+                        <li>يمكن أن تحدث تغيرات التهابية في محفظة المفصل والغشاء الزليلي (<span class="english-term">synovium</span>)</li>
+                        <li>البلورات أو شظايا الغضروف في السائل الزليلي قد تساهم في الالتهاب</li>
+                        <li>إنترلوكين-1 (<span class="english-term">interleukin-1</span>)، بروستاغلاندين E2 (<span class="english-term">prostaglandin E2</span>)، عامل نخر الورم-ألفا (<span class="english-term">tumor necrosis factor-α</span>)، وأكسيد النيتريك (<span class="english-term">nitric oxide</span>) في السائل الزليلي قد تلعب دورًا أيضًا</li>
+                        <li>تؤدي التغيرات الالتهابية إلى انصبابات زليلية (<span class="english-term">synovial effusions</span>) وزيادة سماكة الغشاء</li>
+                    </ul>
+
+                    <h3>مصادر الألم:</h3>
+                    <ul>
+                        <li>تمدّد المحفظة الزليلية بسبب زيادة السائل المفصلي</li>
+                        <li>كسور دقيقة (<span class="english-term">microfracture</span>)</li>
+                        <li>تهيج السمحاق (<span class="english-term">periosteal irritation</span>)</li>
+                        <li>تلف الأربطة، الغشاء الزليلي، أو الغضروف الهلالي (<span class="english-term">meniscus</span>)</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 2: Clinical Presentation -->
+                <section id="section2">
+                    <h2>العرض السريري (Clinical Presentation)</h2>
+                    
+                    <h3>عوامل الخطر (Risk Factors):</h3>
+                    <ul>
+                        <li>التقدم في العمر</li>
+                        <li>السمنة</li>
+                        <li>الجنس (النساء أكثر عرضة بعد سن اليأس)</li>
+                        <li>مهن وأنشطة رياضية معينة</li>
+                        <li>تاريخ إصابة أو جراحة في المفصل</li>
+                        <li>الاستعداد الوراثي</li>
+                    </ul>
+
+                    <h3>الأعراض الرئيسية:</h3>
+                    <ul>
+                        <li>العرض السائد هو ألم عميق وشاك (<span class="english-term">deep, aching pain</span>) في المفاصل المصابة</li>
+                        <li>يظهر الألم مع نشاط المفصل ويقل مع الراحة</li>
+                        <li>يستمر تصلب المفصل عادةً أقل من 30 دقيقة عند الاستيقاظ ويختفي مع الحركة</li>
+                        <li>محدودية الحركة، تصلب، طقطقة (<span class="english-term">crepitus</span>)، وتشوهات قد تحدث</li>
+                        <li>المرضى المصابين في الأطراف السفلية قد يبلغون عن ضعف أو عدم استقرار</li>
+                        <li>وجود مفاصل دافئة، حمراء، ومؤلمة يشير إلى التهاب زليلي التهابي (<span class="english-term">inflammatory synovitis</span>)</li>
+                    </ul>
+
+                    <h3>المفاصل الأكثر إصابة:</h3>
+                    <ul>
+                        <li>المفاصل بين السلامية البعيدة (<span class="english-term">distal interphalangeal - DIP</span>) والمفاصل بين السلامية القريبة (<span class="english-term">proximal interphalangeal - PIP</span>) في اليد</li>
+                        <li>المفصل الرسغي السنعي الأول (<span class="english-term">first carpometacarpal joint</span>)</li>
+                        <li>الركبتين</li>
+                        <li>الوركين</li>
+                        <li>العمود الفقري العنقي والقطني</li>
+                        <li>المفصل المشطي السلامي الأول (<span class="english-term">first metatarsophalangeal - MTP</span>) للإصبع</li>
+                    </ul>
+
+                    <h3>الفحص السريري:</h3>
+                    <ul>
+                        <li>يكشف الفحص السريري للمفاصل المصابة عن إيلام (<span class="english-term">tenderness</span>)، طقطقة (<span class="english-term">crepitus</span>)، وربما تضخم</li>
+                        <li>عقد هيبردين (<span class="english-term">Heberden nodes</span>) وعقد بوشار (<span class="english-term">Bouchard nodes</span>) هي تضخمات عظمية (نبتات عظمية) في مفاصل DIP و PIP على التوالي</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 3: Diagnosis -->
+                <section id="section3">
+                    <h2>التشخيص (Diagnosis)</h2>
+                    
+                    <p>يتم التشخيص من خلال تاريخ المريض، الفحص الطبي، النتائج الإشعاعية، والاختبارات المعملية.</p>
+
+                    <h3>معايير الكلية الأمريكية لأمراض الروماتيزم (ACR):</h3>
+                    
+                    <h4>التهاب مفصل الورك (Hip OA):</h4>
+                    <ul>
+                        <li>يجب أن يكون لدى المريض ألم في الورك واثنين من التالي:</li>
+                        <ol>
+                            <li>معدل ترسيب كريات الدم الحمراء (<span class="english-term">ESR</span>) أقل من 20 ملم/ساعة</li>
+                            <li>نبتات عظمية في الأشعة في عظم الفخذ أو الحُق</li>
+                            <li>تضيّق المسافة المفصلية في الأشعة</li>
+                        </ol>
+                    </ul>
+
+                    <h4>التهاب مفصل الركبة (Knee OA):</h4>
+                    <ul>
+                        <li>يجب أن يكون لدى المريض ألم في الركبة ونبتات عظمية في الأشعة بالإضافة إلى واحد أو أكثر من التالي:</li>
+                        <ol>
+                            <li>العمر أكبر من 50 سنة</li>
+                            <li>تيبّس صباحي يستمر ≤ 30 دقيقة</li>
+                            <li>طقطقة (<span class="english-term">crepitus</span>) عند الحركة</li>
+                            <li>تضخم عظمي</li>
+                            <li>إيلام عظمي</li>
+                            <li>دفء مفصلي محسوس</li>
+                        </ol>
+                    </ul>
+
+                    <h3>الفحوصات المعملية والإشعاعية:</h3>
+                    <ul>
+                        <li>قد يكون <span class="english-term">ESR</span> مرتفعًا قليلاً إذا كان هناك التهاب</li>
+                        <li>عامل الروماتويد (<span class="english-term">rheumatoid factor</span>) سلبي</li>
+                        <li>تحليل السائل الزليلي يكشف عن لزوجة عالية وزيادة طفيفة في خلايا الدم البيضاء (&lt;2000 خلية/مم³) مع غلبة الخلايا أحادية النواة</li>
+                        <li>الأشعة السينية تظهر النبتات العظمية أو تضيّق المسافة المفصلية</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 4: General Treatment -->
+                <section id="section4">
+                    <h2>العلاج العام (Treatment)</h2>
+                    
+                    <h3>أهداف العلاج:</h3>
+                    <ol>
+                        <li>تثقيف المريض وأفراد الأسرة ومقدمي الرعاية</li>
+                        <li>تخفيف الألم والتيبّس</li>
+                        <li>الحفاظ على حركة المفصل أو تحسينها</li>
+                        <li>الحد من الضعف الوظيفي</li>
+                        <li>الحفاظ على نوعية الحياة أو تحسينها</li>
+                    </ol>
+
+                    <h3>العلاج غير الدوائي (Nonpharmacologic Therapy):</h3>
+                    <ul>
+                        <li>تثقيف المريض حول عملية المرض ومداه، التشخيص، وخيارات العلاج</li>
+                        <li>تعزيز الاستشارة الغذائية، التمارين الرياضية، وبرنامج فقدان الوزن للمرضى الذين يعانون من زيادة الوزن</li>
+                        <li>العلاج الطبيعي - مع علاجات الحرارة أو البرودة وبرنامج تمارين - يساعد في الحفاظ على نطاق الحركة وتقليل الألم والحاجة للمسكنات</li>
+                        <li>يمكن استخدام الأجهزة المساعدة والتقويمية (العصي، المشايات، الدعامات، كؤوس الكعب، والنعل) أثناء التمارين أو الأنشطة اليومية</li>
+                        <li>الإجراءات الجراحية (مثل قطع العظم، استبدال المفصل، اندماج المفصل) موضحة للإعاقة الوظيفية و/أو الألم الشديد الذي لا يستجيب للعلاج التحفظي</li>
+                    </ul>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-bone"></i> خوارزمية علاج التهاب مفصل الورك والركبة
+                        </div>
+                        <ol>
+                            <li>الخط الأول: باراسيتامول (<span class="english-term">Acetaminophen</span>)</li>
+                            <li>إذا فشل الباراسيتامول: مضادات الالتهاب غير الستيرويدية الموضعية أو الفموية</li>
+                            <li>إذا لم تكن مضادات الالتهاب مناسبة: ترامادول (<span class="english-term">Tramadol</span>)</li>
+                            <li>للركبة فقط: دولوكسيتين (<span class="english-term">Duloxetine</span>) كعلاج مساعد</li>
+                            <li>للألم الشديد: حقن كورتيكوستيرويد داخل المفصل</li>
+                            <li>الخيار النهائي: المسكنات الأفيونية للمرضى غير المؤهلين للجراحة</li>
+                        </ol>
+                    </div>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-hand"></i> خوارزمية علاج التهاب مفصل اليد
+                        </div>
+                        <ol>
+                            <li>الخط الأول: مضادات الالتهاب غير الستيرويدية الموضعية</li>
+                            <li>بدائل الخط الأول:
+                                <ul>
+                                    <li>مضادات الالتهاب غير الستيرويدية الفموية</li>
+                                    <li>كريم كابسايسين (<span class="english-term">Capsaicin</span>)</li>
+                                    <li>ترامادول (<span class="english-term">Tramadol</span>)</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Pharmacologic Therapy -->
+                <section id="section5">
+                    <h2>العلاج الدوائي (Pharmacologic Therapy)</h2>
+                    
+                    <h3>نهج عام:</h3>
+                    <ul>
+                        <li>يستهدف العلاج الدوائي تخفيف الألم</li>
+                        <li>يُتّبع نهج تحفظي لأن التهاب المفاصل التنكسي غالبًا ما يحدث في الأفراد الأكبر سنًا الذين يعانون من حالات طبية أخرى</li>
+                        <li>يتم تطبيق نهج فردي</li>
+                        <li>يستمر العلاج غير الدوائي المناسب عند بدء العلاج الدوائي</li>
+                    </ul>
+
+                    <h3>باراسيتامول (Acetaminophen):</h3>
+                    <ul>
+                        <li>العلاج المفضل في الخط الأول لالتهاب مفصل الورك والركبة</li>
+                        <li>قد يكون أقل فعالية من مضادات الالتهاب غير الستيرويدية الفموية ولكن لديه خطر أقل لأحداث الجهاز الهضمي والقلب الوعائية الخطيرة</li>
+                        <li>عادة ما يكون جيد التحمل، ولكن السمية الكبدية المميتة محتملة مع الجرعة الزائدة موثقة جيدًا</li>
+                        <li>يجب تجنبه في متعاطي الكحول المزمن أو المرضى المصابين بأمراض الكبد</li>
+                    </ul>
+
+                    <h3>مضادات الالتهاب غير الستيرويدية (NSAIDs):</h3>
+                    <ul>
+                        <li>توصى إذا فشل المريض مع الباراسيتامول</li>
+                        <li>قد تسبب شكاوى هضمية طفيفة مثل الغثيان، عسر الهضم، فقدان الشهية، ألم البطن، والإسهال</li>
+                        <li>قد تسبب قرح المعدة والاثني عشر والنزيف من خلال آليات مباشرة (موضعية) أو غير مباشرة (جهازية)</li>
+                        <li>خيارات لتقليل خطر الجهاز الهضمي لمضادات الالتهاب غير الانتقائية تشمل:
+                            <ol>
+                                <li>استخدام أقل جرعة ممكنة وعند الحاجة فقط</li>
+                                <li>الميزوبروستول (<span class="english-term">misoprostol</span>) أربع مرات يوميًا مع مضادات الالتهاب</li>
+                                <li>مثبط مضخة البروتون (<span class="english-term">PPI</span>) أو مضاد مستقبلات H2 بجرعة كاملة يوميًا مع مضادات الالتهاب</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> تحذيرات هامة:</h4>
+                        <ul>
+                            <li>مثبطات COX-2 تشكل خطرًا أقل للأحداث الهضمية الضارة من مضادات الالتهاب غير الانتقائية، ولكن هذه الميزة تنخفض بشكل كبير للمرضى الذين يتناولون الأسبرين</li>
+                            <li>كل من مضادات الالتهاب غير الانتقائية والانتقائية ترتبط بزيادة خطر الأحداث القلبية الوعائية (ارتفاع ضغط الدم، السكتة الدماغية، احتشاء عضلة القلب، والوفاة)</li>
+                            <li>قد تسبب مضادات الالتهاب أيضًا أمراض الكلى، التهاب الكبد، ردود فعل تحسسية، طفح جلدي، وشكاوى في الجهاز العصبي المركزي من النعاس، الدوخة، الصداع، الاكتئاب، الارتباك، وطنين الأذن</li>
+                        </ul>
+                    </div>
+
+                    <h3>مضادات الالتهاب غير الستيرويدية الموضعية (Topical NSAIDs):</h3>
+                    <ul>
+                        <li>موصى بها لالتهاب مفصل الركبة إذا فشل الباراسيتامول</li>
+                        <li>مفضلة على مضادات الالتهاب الفموية في المرضى الأكبر من 75 عامًا</li>
+                        <li>توفر تخفيفًا مماثلًا للألم مع أحداث هضمية ضارة أقل من مضادات الالتهاب الفموية</li>
+                        <li>قد ترتبط بأحداث ضارة في موقع التطبيق (مثل جفاف الجلد، حكة، وطفح جلدي)</li>
+                        <li>يجب على المرضى الذين يستخدمون المنتجات الموضعية تجنب مضادات الالتهاب الفموية لتقليل احتمالية الآثار الجانبية التراكمية</li>
+                    </ul>
+
+                    <h3>حقن الكورتيكوستيرويد داخل المفصل (Intra-articular Corticosteroid Injections):</h3>
+                    <ul>
+                        <li>موصى بها لكل من التهاب مفصل الورك والركبة عندما يكون تسكين الألم بالباراسيتامول أو مضادات الالتهاب دون المستوى الأمثل</li>
+                        <li>يمكن أن توفر تخفيفًا ممتازًا للألم، خاصة عند وجود انصباب مفصلي</li>
+                        <li>المخدرات الموضعية مثل ليدوكائين أو بيوتيلوكائين تُدمج عادةً مع الكورتيكوستيرويدات لتوفير تخفيف سريع للألم</li>
+                        <li>يجب عدم إعطاء الحقن أكثر من مرة كل 3 أشهر لتقليل الآثار الضارة الجهازية</li>
+                    </ul>
+
+                    <h3>ترامادول (Tramadol):</h3>
+                    <ul>
+                        <li>موصى به لالتهاب مفصل الورك والركبة في المرضى الذين فشلوا مع الباراسيتامول بجرعة كاملة ومضادات الالتهاب الموضعية، والذين ليسوا مرشحين مناسبين لمضادات الالتهاب الفموية، والذين لا يستطيعون تلقي حقن الكورتيكوستيرويد داخل المفصل</li>
+                        <li>يمكن إضافته إلى العلاج بالباراسيتامول أو مضادات الالتهاب الفموية ذات الفعالية الجزئية</li>
+                        <li>مرتبط بآثار جانبية شبيهة بالأفيون مثل الغثيان، القيء، الدوخة، الإمساك، الصداع، والنعاس</li>
+                        <li>أخطر حدث ضار هو النوبات</li>
+                        <li>مصنف كمادة خاضعة للرقابة من الجدول الرابع بسبب احتمالية الاعتماد، الإدمان، والانحراف</li>
+                    </ul>
+
+                    <h3>دولوكسيتين (Duloxetine):</h3>
+                    <ul>
+                        <li>يمكن استخدامه كعلاج مساعد لالتهاب مفصل الركبة (وليس الورك) في المرضى الذين لديهم استجابة جزئية لمسكنات الخط الأول (باراسيتامول، مضادات الالتهاب الفموية)</li>
+                        <li>قد يكون دواء الخط الثاني المفضل في المرضى الذين يعانون من ألم التهاب المفاصل التنكسي العصبي والعضلي الهيكلي</li>
+                        <li>يحدث تخفيف الألم بعد حوالي 4 أسابيع من العلاج</li>
+                    </ul>
+
+                    <h3>حمض الهيالورونيك داخل المفصل (Intra-articular Hyaluronic Acid):</h3>
+                    <ul>
+                        <li>لا يوصى به بشكل روتيني لأن الحقن أظهرت فائدة محدودة لالتهاب مفصل الركبة ولم تظهر فائدة لالتهاب مفصل الورك</li>
+                        <li>الحقن عادة ما تكون جيدة التحمل، ولكن تم الإبلاغ عن تورم مفصلي حاد، انصباب، تيبّس، وردود فعل جلدية موضعية</li>
+                    </ul>
+
+                    <h3>جلوكوزامين وكوندرويتين (Glucosamine and Chondroitin):</h3>
+                    <ul>
+                        <li>تفتقر إلى تحسن موحد في التحكم في الألم أو الحالة الوظيفية لألم الورك والركبة وليست خيارات علاجية مفضلة</li>
+                        <li>الآثار الجانبية للجلوكوزامين خفيفة وتشمل انتفاخ البطن، الانتفاخ، وتشنجات البطن</li>
+                        <li>الآثار الجانبية الأكثر شيوعًا للكوندرويتين هي الغثيان</li>
+                    </ul>
+
+                    <h3>جدول أدوية علاج التهاب المفاصل التنكسي:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الدواء</th>
+                                    <th>الجرعة البدئية</th>
+                                    <th>المدى المعتاد</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>باراسيتامول (Acetaminophen)</td>
+                                    <td>325-500 مغ ثلاث مرات يوميًا</td>
+                                    <td>325-650 مغ كل 4-6 ساعات أو 1 غ 3-4 مرات/يوم</td>
+                                </tr>
+                                <tr>
+                                    <td>ترامادول (Tramadol)</td>
+                                    <td>25 مغ في الصباح</td>
+                                    <td>معايرة بزيادات 25 مغ للوصول لجرعة 50-100 مغ 3 مرات/يوم</td>
+                                </tr>
+                                <tr>
+                                    <td>ترامادول ممتد المفعول (Tramadol ER)</td>
+                                    <td>100 مغ يوميًا</td>
+                                    <td>معايرة إلى 200-300 مغ يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>هيدروكودون/باراسيتامول</td>
+                                    <td>5 مغ/325 مغ ثلاث مرات يوميًا</td>
+                                    <td>2.5-10 مغ/325-650 مغ 3-5 مرات يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>أوكسيكودون/باراسيتامول</td>
+                                    <td>5 مغ/325 مغ ثلاث مرات يوميًا</td>
+                                    <td>2.5-10 مغ/325-650 مغ 3-5 مرات يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>كابسايسين 0.025%-0.15% (موضعي)</td>
+                                    <td>يُطبق على المفصل المصاب 3-4 مرات يوميًا</td>
+                                    <td>يُطبق على المفصل المصاب 3-4 مرات يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>ديكلوفيناك 1% جل (موضعي)</td>
+                                    <td>يطبق 2 أو 4 غ لكل موقع 4 مرات يوميًا</td>
+                                    <td>يطبق 2 أو 4 غ لكل موقع 4 مرات يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>ديكلوفيناك 1.3% لصاقة (موضعي)</td>
+                                    <td>لصاقة واحدة مرتين يوميًا</td>
+                                    <td>لصاقة واحدة مرتين يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>سيليكوكسيب (Celecoxib)</td>
+                                    <td>100 مغ يوميًا</td>
+                                    <td>100 مغ مرتين يوميًا أو 200 مغ يوميًا</td>
+                                </tr>
+                                <tr>
+                                    <td>ديكلوفيناك فوري المفعول (Diclofenac IR)</td>
+                                    <td>50 مغ مرتين يوميًا</td>
+                                    <td>50-75 مغ مرتين يوميًا</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Section 6: Evaluation and Monitoring -->
+                <section id="section6">
+                    <h2>تقييم النتائج العلاجية (Evaluation of Therapeutic Outcomes)</h2>
+                    
+                    <h3>مراقبة الفعالية:</h3>
+                    <ul>
+                        <li>تقييم الألم الأساسي باستخدام مقياس تناظري بصري (<span class="english-term">visual analog scale</span>)</li>
+                        <li>تقييم نطاق الحركة للمفاصل المصابة مع الثني، المد، الاختطاف، أو التقريب</li>
+                        <li>اعتمادًا على المفصل المصاب، يمكن أن يساعد قياس قوة القبضة ووقت المشي 50 قدمًا في تقييم التهاب مفصل اليد والورك/الركبة على التوالي</li>
+                    </ul>
+
+                    <h3>التقييمات الإضافية:</h3>
+                    <ul>
+                        <li>الأشعة السينية الأساسية يمكنها توثيق مدى إصابة المفاصل ومتابعة تقدم المرض مع العلاج</li>
+                        <li>مقاييس أخرى تشمل التقييم العالمي للطبيب بناءً على تاريخ المريض من الأنشطة والقيود الناجمة عن التهاب المفاصل التنكسي</li>
+                        <li>مؤشر التهاب المفاصل لجامعة ويسترن أونتاريو وماكماستر (<span class="english-term">Western Ontario and McMaster Universities Arthritis Index</span>)</li>
+                        <li>استبيان تقييم صحة ستانفورد (<span class="english-term">Stanford Health Assessment Questionnaire</span>)</li>
+                        <li>توثيق استخدام المسكنات أو مضادات الالتهاب</li>
+                    </ul>
+
+                    <h3>مراقبة الآثار الجانبية:</h3>
+                    <ul>
+                        <li>اسأل المرضى عن الآثار الجانبية من الأدوية</li>
+                        <li>راقب علامات الآثار المرتبطة بالدواء، مثل الطفح الجلدي، الصداع، النعاس، زيادة الوزن، أو ارتفاع ضغط الدم من مضادات الالتهاب</li>
+                    </ul>
+
+                    <h3>الفحوصات المخبرية:</h3>
+                    <ul>
+                        <li>الحصول على خط أساس لكرياتينين المصل، صورة الدم، وإنزيمات الكبد</li>
+                        <li>إعادة الفحوصات على فترات 6-12 شهر لتحديد سميات محددة للكلى، الكبد، الجهاز الهضمي، أو نخاع العظم</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-stethoscope"></i> ملاحظة هامة:</h4>
+                        <p>بسبب ارتفاع معدلات الأمراض المصاحبة المرتبطة بالتهاب المفاصل التنكسي (مرض السكري، أمراض الكلى المزمنة، ارتفاع ضغط الدم، السمنة، احتشاء عضلة القلب، قصور القلب، والسكتة الدماغية)، يجب أن يؤدي التهاب المفاصل التنكسي إلى تقييم أمراض القلب والأوعية الدموية والحاجة إلى تدابير مناسبة لتقليل المخاطر.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="content-section" id="english-content">
+            <div class="main-content">
+                <!-- Section 1: Pathophysiology -->
+                <section id="section1-en">
+                    <h2>Pathophysiology</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> What is Osteoarthritis?</h4>
+                        <p>Osteoarthritis (OA) is a common, progressive disorder primarily affecting weight-bearing diarthrodial joints, characterized by progressive destruction of articular cartilage, osteophyte formation, pain, limitation of motion, deformity, and disability.</p>
+                    </div>
+
+                    <h3>Types of Osteoarthritis:</h3>
+                    <ul>
+                        <li><span class="english-term">Primary (Idiopathic) OA</span>: The more common type, with no known cause</li>
+                        <li><span class="english-term">Secondary OA</span>: Associated with a known cause such as inflammation, trauma, metabolic or endocrine disorders, and congenital factors</li>
+                    </ul>
+
+                    <h3>Development Mechanism:</h3>
+                    <ol>
+                        <li>Usually begins with damage to articular cartilage through injury, excessive joint loading from obesity or other reasons, or joint instability</li>
+                        <li>Cartilage damage increases activity of chondrocytes in attempt to repair damage, leading to increased synthesis of matrix constituents with cartilage swelling</li>
+                        <li>Normal balance between cartilage breakdown and resynthesis is lost, with increasing destruction and cartilage loss</li>
+                        <li>Subchondral bone adjacent to articular cartilage undergoes pathologic changes and releases vasoactive peptides and matrix metalloproteinases</li>
+                        <li>Neovascularization and increased permeability of adjacent cartilage occur, contributing to cartilage loss and chondrocyte apoptosis</li>
+                        <li>Cartilage loss causes joint space narrowing and painful, deformed joints</li>
+                        <li>Remaining cartilage softens and develops fibrillations, followed by further cartilage loss and exposure of underlying bone</li>
+                        <li>New bone formations (osteophytes) at joint margins distant from cartilage destruction are thought to help stabilize affected joints</li>
+                    </ol>
+
+                    <h3>Inflammatory Changes:</h3>
+                    <ul>
+                        <li>Inflammatory changes can occur in the joint capsule and synovium</li>
+                        <li>Crystals or cartilage shards in synovial fluid may contribute to inflammation</li>
+                        <li>Interleukin-1, prostaglandin E2, tumor necrosis factor-α, and nitric oxide in synovial fluid may also play a role</li>
+                        <li>Inflammatory changes result in synovial effusions and thickening</li>
+                    </ul>
+
+                    <h3>Sources of Pain:</h3>
+                    <ul>
+                        <li>Distention of the synovial capsule by increased joint fluid</li>
+                        <li>Microfracture</li>
+                        <li>Periosteal irritation</li>
+                        <li>Damage to ligaments, synovium, or the meniscus</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 2: Clinical Presentation -->
+                <section id="section2-en">
+                    <h2>Clinical Presentation</h2>
+                    
+                    <h3>Risk Factors:</h3>
+                    <ul>
+                        <li>Increasing age</li>
+                        <li>Obesity</li>
+                        <li>Sex (women more susceptible after menopause)</li>
+                        <li>Certain occupations and sports activities</li>
+                        <li>History of joint injury or surgery</li>
+                        <li>Genetic predisposition</li>
+                    </ul>
+
+                    <h3>Main Symptoms:</h3>
+                    <ul>
+                        <li>The predominant symptom is deep, aching pain in affected joints</li>
+                        <li>Pain accompanies joint activity and decreases with rest</li>
+                        <li>Joint stiffness typically lasts less than 30 minutes upon arising and resolves with motion</li>
+                        <li>Limitation of motion, stiffness, crepitus, and deformities may occur</li>
+                        <li>Patients with lower extremity involvement may report weakness or instability</li>
+                        <li>Presence of warm, red, and tender joints suggests inflammatory synovitis</li>
+                    </ul>
+
+                    <h3>Most Commonly Affected Joints:</h3>
+                    <ul>
+                        <li>Distal interphalangeal (DIP) and proximal interphalangeal (PIP) joints of the hand</li>
+                        <li>First carpometacarpal joint</li>
+                        <li>Knees</li>
+                        <li>Hips</li>
+                        <li>Cervical and lumbar spine</li>
+                        <li>First metatarsophalangeal (MTP) joint of the toe</li>
+                    </ul>
+
+                    <h3>Clinical Examination:</h3>
+                    <ul>
+                        <li>Physical examination of affected joints reveals tenderness, crepitus, and possibly enlargement</li>
+                        <li>Heberden and Bouchard nodes are bony enlargements (osteophytes) of the DIP and PIP joints, respectively</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 3: Diagnosis -->
+                <section id="section3-en">
+                    <h2>Diagnosis</h2>
+                    
+                    <p>Diagnosis is made through patient history, physician examination, radiologic findings, and laboratory testing.</p>
+
+                    <h3>American College of Rheumatology (ACR) Criteria:</h3>
+                    
+                    <h4>Hip OA:</h4>
+                    <ul>
+                        <li>Patients must have hip pain and two of the following:</li>
+                        <ol>
+                            <li>ESR <20 mm/hr</li>
+                            <li>Radiographic femoral or acetabular osteophytes</li>
+                            <li>Radiographic joint space narrowing</li>
+                        </ol>
+                    </ul>
+
+                    <h4>Knee OA:</h4>
+                    <ul>
+                        <li>Patients must have knee pain and radiographic osteophytes in addition to one or more of the following:</li>
+                        <ol>
+                            <li>Age >50 years</li>
+                            <li>Morning stiffness lasting ≤30 minutes</li>
+                            <li>Crepitus on motion</li>
+                            <li>Bony enlargement</li>
+                            <li>Bony tenderness</li>
+                            <li>Palpable joint warmth</li>
+                        </ol>
+                    </ul>
+
+                    <h3>Laboratory and Radiographic Tests:</h3>
+                    <ul>
+                        <li>ESR may be slightly elevated if inflammation is present</li>
+                        <li>Rheumatoid factor is negative</li>
+                        <li>Analysis of synovial fluid reveals high viscosity and mild leukocytosis (<2000 white blood cells/mm³) with predominantly mononuclear cells</li>
+                        <li>Radiographs show osteophytes or joint space narrowing</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 4: General Treatment -->
+                <section id="section4-en">
+                    <h2>General Treatment</h2>
+                    
+                    <h3>Goals of Treatment:</h3>
+                    <ol>
+                        <li>Educate the patient, family members, and caregivers</li>
+                        <li>Relieve pain and stiffness</li>
+                        <li>Maintain or improve joint mobility</li>
+                        <li>Limit functional impairment</li>
+                        <li>Maintain or improve quality of life</li>
+                    </ol>
+
+                    <h3>Nonpharmacologic Therapy:</h3>
+                    <ul>
+                        <li>Educate the patient about the disease process and extent, prognosis, and treatment options</li>
+                        <li>Promote dietary counseling, exercise, and a weight loss program for overweight patients</li>
+                        <li>Physical therapy—with heat or cold treatments and an exercise program—helps maintain range of motion and reduce pain and need for analgesics</li>
+                        <li>Assistive and orthotic devices (canes, walkers, braces, heel cups, and insoles) can be used during exercise or daily activities</li>
+                        <li>Surgical procedures (eg, osteotomy, arthroplasty, joint fusion) are indicated for functional disability and/or severe pain unresponsive to conservative therapy</li>
+                    </ul>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-bone"></i> Treatment Algorithm for Hip and Knee Osteoarthritis
+                        </div>
+                        <ol>
+                            <li>First line: Acetaminophen</li>
+                            <li>If acetaminophen fails: Topical or oral NSAIDs</li>
+                            <li>If NSAIDs not appropriate: Tramadol</li>
+                            <li>For knee only: Duloxetine as adjunctive treatment</li>
+                            <li>For severe pain: Intra-articular corticosteroid injections</li>
+                            <li>Last resort: Opioid analgesics for patients not eligible for surgery</li>
+                        </ol>
+                    </div>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-hand"></i> Treatment Algorithm for Hand Osteoarthritis
+                        </div>
+                        <ol>
+                            <li>First line: Topical NSAIDs</li>
+                            <li>Alternative first-line treatments:
+                                <ul>
+                                    <li>Oral NSAIDs</li>
+                                    <li>Capsaicin cream</li>
+                                    <li>Tramadol</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Pharmacologic Therapy -->
+                <section id="section5-en">
+                    <h2>Pharmacologic Therapy</h2>
+                    
+                    <h3>General Approach:</h3>
+                    <ul>
+                        <li>Drug therapy is targeted at relief of pain</li>
+                        <li>A conservative approach is warranted because OA often occurs in older individuals with other medical conditions</li>
+                        <li>Apply an individualized approach</li>
+                        <li>Continue appropriate nondrug therapies when initiating drug therapy</li>
+                    </ul>
+
+                    <h3>Acetaminophen:</h3>
+                    <ul>
+                        <li>Preferred first-line treatment for hip and knee OA</li>
+                        <li>May be less effective than oral NSAIDs but has a lower risk of serious gastrointestinal and cardiovascular events</li>
+                        <li>Usually well tolerated, but potentially fatal hepatotoxicity with overdose is well documented</li>
+                        <li>Should be avoided in chronic alcohol users or patients with liver disease</li>
+                    </ul>
+
+                    <h3>NSAIDs:</h3>
+                    <ul>
+                        <li>Recommended if a patient fails acetaminophen</li>
+                        <li>May cause minor GI complaints such as nausea, dyspepsia, anorexia, abdominal pain, and diarrhea</li>
+                        <li>May cause gastric and duodenal ulcers and bleeding through direct (topical) or indirect (systemic) mechanisms</li>
+                        <li>Options for reducing the GI risk of nonselective NSAIDs include:
+                            <ol>
+                                <li>Using the lowest dose possible and only when needed</li>
+                                <li>Misoprostol four times daily with the NSAID</li>
+                                <li>A PPI or full-dose H₂-receptor antagonist daily with the NSAID</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Warnings:</h4>
+                        <ul>
+                            <li>COX-2 inhibitors pose less risk for adverse GI events than nonselective NSAIDs, but this advantage is substantially reduced for patients taking aspirin</li>
+                            <li>Both nonselective and selective NSAIDs are associated with an increased risk for CV events (hypertension, stroke, myocardial infarction, and death)</li>
+                            <li>NSAIDs may also cause kidney diseases, hepatitis, hypersensitivity reactions, rash, and CNS complaints of drowsiness, dizziness, headaches, depression, confusion, and tinnitus</li>
+                        </ul>
+                    </div>
+
+                    <h3>Topical NSAIDs:</h3>
+                    <ul>
+                        <li>Recommended for knee OA if acetaminophen fails</li>
+                        <li>Preferred over oral NSAIDs in patients older than 75 years</li>
+                        <li>Provide similar pain relief with fewer adverse GI events than oral NSAIDs</li>
+                        <li>May be associated with adverse events at the application site (eg, dry skin, pruritus, and rash)</li>
+                        <li>Patients using topical products should avoid oral NSAIDs to minimize the potential for additive side effects</li>
+                    </ul>
+
+                    <h3>Intra-articular Corticosteroid Injections:</h3>
+                    <ul>
+                        <li>Recommended for both hip and knee OA when analgesia with acetaminophen or NSAIDs is suboptimal</li>
+                        <li>Can provide excellent pain relief, particularly when joint effusion is present</li>
+                        <li>Local anesthetics such as lidocaine or butylocaine are commonly combined with corticosteroids to provide rapid pain relief</li>
+                        <li>Do not administer injections more frequently than once every 3 months to minimize systemic adverse effects</li>
+                    </ul>
+
+                    <h3>Tramadol:</h3>
+                    <ul>
+                        <li>Recommended for hip and knee OA in patients who have failed scheduled full-dose acetaminophen and topical NSAIDs, who are not appropriate candidates for oral NSAIDs, and who are not able to receive IA corticosteroids</li>
+                        <li>Can be added to partially effective acetaminophen or oral NSAID therapy</li>
+                        <li>Associated with opioid-like adverse effects such as nausea, vomiting, dizziness, constipation, headache, and somnolence</li>
+                        <li>The most serious adverse event is seizures</li>
+                        <li>Classified as a Schedule IV controlled substance due to its potential for dependence, addiction, and diversion</li>
+                    </ul>
+
+                    <h3>Duloxetine:</h3>
+                    <ul>
+                        <li>Can be used as adjunctive treatment of knee (not hip) OA in patients with partial response to first-line analgesics (acetaminophen, oral NSAIDs)</li>
+                        <li>May be a preferred second-line medication in patients with both neuropathic and musculoskeletal OA pain</li>
+                        <li>Pain reduction occurs after about 4 weeks of therapy</li>
+                    </ul>
+
+                    <h3>Intra-articular Hyaluronic Acid:</h3>
+                    <ul>
+                        <li>Not routinely recommended because injections have shown limited benefit for knee OA and have not been shown to benefit hip OA</li>
+                        <li>Injections are usually well tolerated, but acute joint swelling, effusion, stiffness, and local skin reactions have been reported</li>
+                    </ul>
+
+                    <h3>Glucosamine and Chondroitin:</h3>
+                    <ul>
+                        <li>Lack uniform improvement in pain control or functional status for hip and knee pain and are not preferred treatment options</li>
+                        <li>Glucosamine adverse effects are mild and include flatulence, bloating, and abdominal cramps</li>
+                        <li>The most common adverse effect of chondroitin is nausea</li>
+                    </ul>
+
+                    <h3>Medications for Osteoarthritis Treatment:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Drug</th>
+                                    <th>Starting Dose</th>
+                                    <th>Usual Range</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Acetaminophen</td>
+                                    <td>325-500 mg three times a day</td>
+                                    <td>325-650 mg every 4-6 hours or 1 g three to four times/day</td>
+                                </tr>
+                                <tr>
+                                    <td>Tramadol</td>
+                                    <td>25 mg in the morning</td>
+                                    <td>Titrate dose in 25-mg increments to reach a maintenance dose of 50-100 mg three times a day</td>
+                                </tr>
+                                <tr>
+                                    <td>Tramadol ER</td>
+                                    <td>100 mg daily</td>
+                                    <td>Titrate to 200-300 mg daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Hydrocodone/acetaminophen</td>
+                                    <td>5 mg/325 mg three times daily</td>
+                                    <td>2.5-10 mg/325-650 mg three to five times daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Oxycodone/acetaminophen</td>
+                                    <td>5 mg/325 mg three times daily</td>
+                                    <td>2.5-10 mg/325-650 mg three to five times daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Capsaicin 0.025%-0.15% (topical)</td>
+                                    <td>Apply to affected joint three to four times per day</td>
+                                    <td>Apply to affected joint three to four times per day</td>
+                                </tr>
+                                <tr>
+                                    <td>Diclofenac 1% gel (topical)</td>
+                                    <td>Apply 2 or 4 g per site, four times daily</td>
+                                    <td>Apply 2 or 4 g per site, four times daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Diclofenac 1.3% patch (topical)</td>
+                                    <td>Apply one patch twice daily</td>
+                                    <td>Apply one patch twice daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Celecoxib</td>
+                                    <td>100 mg daily</td>
+                                    <td>100 mg twice daily or 200 mg daily</td>
+                                </tr>
+                                <tr>
+                                    <td>Diclofenac IR</td>
+                                    <td>50 mg twice a day</td>
+                                    <td>50-75 mg twice a day</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Section 6: Evaluation and Monitoring -->
+                <section id="section6-en">
+                    <h2>Evaluation of Therapeutic Outcomes</h2>
+                    
+                    <h3>Monitoring Efficacy:</h3>
+                    <ul>
+                        <li>Assess baseline pain with a visual analog scale</li>
+                        <li>Assess range of motion for affected joints with flexion, extension, abduction, or adduction</li>
+                        <li>Depending on the joint(s) affected, measurement of grip strength and 50-ft walking time can help assess hand and hip/knee OA, respectively</li>
+                    </ul>
+
+                    <h3>Additional Assessments:</h3>
+                    <ul>
+                        <li>Baseline radiographs can document extent of joint involvement and follow disease progression with therapy</li>
+                        <li>Other measures include the clinician's global assessment based on patient's history of activities and limitations caused by OA</li>
+                        <li>Western Ontario and McMaster Universities Arthritis Index</li>
+                        <li>Stanford Health Assessment Questionnaire</li>
+                        <li>Documentation of analgesic or NSAID use</li>
+                    </ul>
+
+                    <h3>Monitoring Side Effects:</h3>
+                    <ul>
+                        <li>Ask patients about adverse effects from medications</li>
+                        <li>Monitor for signs of drug-related effects, such as skin rash, headaches, drowsiness, weight gain, or hypertension from NSAIDs</li>
+                    </ul>
+
+                    <h3>Laboratory Tests:</h3>
+                    <ul>
+                        <li>Obtain baseline serum creatinine, hematology profile, and serum transaminases</li>
+                        <li>Repeat levels at 6- to 12-month intervals to identify specific toxicities to the kidney, liver, GI tract, or bone marrow</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-stethoscope"></i> Important Note:</h4>
+                        <p>Because of the high rates of comorbidities associated with osteoarthritis (diabetes, chronic kidney disease, hypertension, obesity, myocardial infarction, heart failure, and stroke), OA should prompt evaluation for cardiovascular disease and the need for appropriate risk reduction measures.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>مرجع التهاب المفاصل التنكسي - Osteoarthritis Reference</p>
+            <p>© 2023 - مصدر: قسم اضطرابات العظام والمفاصل</p>
+            <p>ملاحظة: هذه المعلومات للأغراض التعليمية فقط ولا تغني عن استشارة الطبيب</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        document.getElementById('arabic-btn').addEventListener('click', function() {
+            document.getElementById('arabic-content').classList.add('active');
+            document.getElementById('english-content').classList.remove('active');
+            document.getElementById('arabic-btn').classList.add('active');
+            document.getElementById('english-btn').classList.remove('active');
+            
+            // Update tab buttons text to Arabic
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const arabicLabels = ['الفيزيولوجيا المرضية', 'العرض السريري', 'التشخيص', 'العلاج العام', 'العلاج الدوائي', 'التقييم والمتابعة'];
+            
+            tabButtons.forEach((button, index) => {
+                button.textContent = arabicLabels[index];
+            });
+        });
+        
+        document.getElementById('english-btn').addEventListener('click', function() {
+            document.getElementById('english-content').classList.add('active');
+            document.getElementById('arabic-content').classList.remove('active');
+            document.getElementById('english-btn').classList.add('active');
+            document.getElementById('arabic-btn').classList.remove('active');
+            
+            // Update tab buttons text to English
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const englishLabels = ['Pathophysiology', 'Clinical Presentation', 'Diagnosis', 'General Treatment', 'Pharmacologic Therapy', 'Evaluation & Monitoring'];
+            
+            tabButtons.forEach((button, index) => {
+                button.textContent = englishLabels[index];
+            });
+        });
+        
+        // Tab Navigation Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const targetSectionId = this.getAttribute('data-target');
+                const isArabicActive = document.getElementById('arabic-content').classList.contains('active');
+                
+                if (isArabicActive) {
+                    // Scroll to section in Arabic content
+                    const targetSection = document.getElementById(targetSectionId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Scroll to section in English content
+                    const targetSection = document.getElementById(targetSectionId + '-en');
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Highlight English terms in Arabic content on hover
+        const englishTerms = document.querySelectorAll('.english-term');
+        englishTerms.forEach(term => {
+            term.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#e8f4e8';
+                this.style.padding = '3px 8px';
+                this.style.borderRadius = '4px';
+                this.style.transition = 'all 0.2s';
+                this.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+            });
+            
+            term.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#f0f7f2';
+                this.style.padding = '2px 6px';
+                this.style.boxShadow = 'none';
+            });
+        });
+        
+        // Initialize first section as active in navigation
+        document.querySelector('.tab-btn').click();
+        
+        // Scroll to top functionality
+        const scrollTopButton = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Print functionality
+        window.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
 </body>
 </html>
