@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42. Influenza</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>42. Influenza</h1>
+        </header>
+        <main>
+            <p>00</p>
+<li>Influenza is a viral illness associated with high mortality and high hospitalization</li>
+<p>rates. The highest rates of severe illness, hospitalization, and death occur among</p>
+<p>those older than age 65 years, young children (younger than 2 years old), and those</p>
+<p>who have underlying medical conditions, including pregnancy and cardiopulmonary</p>
+<p>disorders.</p>
+<li>The route of influenza transmission is person-to-person via inhalation of respiratory</li>
+<p>droplets, which can occur when an infected person coughs or sneezes. The incuba-</p>
+<p>tion period for influenza ranges between 1 and 7 days, with an average incubation of</p>
+<p>2 days. Adults are considered infectious from the day before their symptoms begin</p>
+<p>through 7 days after the onset of illness, whereas children can be infectious for longer</p>
+<p>than 10 days after the onset of illness. Viral shedding can persist for weeks to months</p>
+<p>in severely immunocompromised people.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The presentation of influenza is similar to a number of other respiratory illnesses.</li>
+<li>The clinical course and outcome are affected by age, immunocompetence, viral</li>
+<p>characteristics, smoking, comorbidities, pregnancy, and the degree of preexisting</p>
+<p>immunity.</p>
+<li>Complications of influenza may include exacerbation of underlying comorbidities,</li>
+<p>primary viral pneumonia, secondary bacterial pneumonia or other respiratory ill-</p>
+<p>nesses (eg, sinusitis, bronchitis, and otitis), encephalopathy, transverse myelitis,</p>
+<p>myositis, myocarditis, pericarditis, and Reye’s syndrome.</p>
+<h2>SIGNS AND SYMPTOMS</h2>
+<li>Classic signs and symptoms of influenza include rapid onset of fever, myalgia, head-</li>
+<p>ache, malaise, nonproductive cough, sore throat, and rhinitis.</p>
+<li>Nausea, vomiting, and otitis media are also commonly reported in children.</li>
+<li>Signs and symptoms typically resolve in 3–7 days, although cough and malaise may</li>
+<p>persist for more than 2 weeks.</p>
+<h2>LABORATORY TESTS</h2>
+<li>The gold standard for diagnosis of influenza is reverse-transcription polymerase</li>
+<p>chain reaction (RT-PCR) or viral culture.</p>
+<li>Rapid influenza diagnostic tests (RIDTs), also known as point-of-care (POC) tests,</li>
+<p>direct (DFA) or indirect (IFA) fluorescence antibody tests, and the RT-PCR assay may</p>
+<p>be used for rapid detection of virus.</p>
+<li>Chest radiograph should be obtained if pneumonia is suspected.</li>
+<h2>PREVENTION</h2>
+<li>The best means to decrease the morbidity and mortality associated with influenza</li>
+<p>is to prevent infection through vaccination. Appropriate infection control measures,</p>
+<p>such as hand hygiene, basic respiratory etiquette (cover your cough and throw tissues</p>
+<p>away), and contact avoidance, are also important in preventing the spread of influ-</p>
+<p>enza. Additionally, chemoprophylaxis is useful in certain situations.</p>
+<li>Annual vaccination is recommended for all persons age 6 months or older and</li>
+<p>caregivers (eg, parents, teachers, babysitters, nannies) of children less than 6 months</p>
+<p>of age.</p>
+<li>Vaccination is also recommended for those who live with and/or care for people who</li>
+<p>are at high risk, including household contacts and healthcare workers.</p>
+<p>440</p>
+<h2>RETPAHC</h2>
+<p>42</p>
+<p>Influenza</p>
+<h2>CH42.INDD 440 19-11-2020 15:26:27</h2>
+<div class="table-container"><table><tr><th>Influenza</th><th></th><th>42
+00</th><th>RETPAHC</th></tr></table></div><h2>Influenza | CHAPTER 42</h2>
+<li>The Advisory Committee on Immunization Practices (ACIP) has made the following</li>
+<p>recommendations regarding the vaccinations of persons with reports of egg allergy: (a)</p>
+<p>vaccination with any age appropriate IIV or RIV3 vaccine, for persons with a history of</p>
+<p>egg allergy that involves only hives; (b) Persons with severe allergic reactions (ie, symp-</p>
+<p>toms other than hives), such as angioedema, respiratory distress, light-headedness, or</p>
+<p>recurrent emesis or required epinephrine after an egg exposure may be immunized</p>
+<p>with any licensed IIV or RIV3 that is appropriate for age and health status; (c) Severe</p>
+<p>allergic reaction to influenza vaccine is a contraindication to receiving future vac-</p>
+<p>cinations; (d) Vaccine providers should consider observing all patients for 15 minutes</p>
+<p>after vaccination to decrease the risk for injury should a patient experiences syncope.</p>
+<p>✓ The ideal time for vaccination is October or November to allow for the develop-</p>
+<p>ment and maintenance of immunity during the peak of the influenza season.</p>
+<p>✓ The two vaccines currently available for prevention of influenza are the inactivated</p>
+<p>vaccine IIV and the LAIV. The specific strains included in the vaccine each year</p>
+<p>change based on antigenic drift.</p>
+<p>✓ IIV is FDA approved for use in people over 6 months of age, regardless of their</p>
+<p>immune status. Several commercial products are available and are approved for</p>
+<p>different age groups (Table 42-1). Because the vaccine content can change each</p>
+<p>year, vaccination providers should consult the most recent recommendations of</p>
+<p>the ACIP regarding use of seasonal influenza vaccines in the United States.</p>
+<p>✓ Adults older than 65 years benefit from influenza vaccination, including preven-</p>
+<p>tion of complications and decreased risk of influenza-related hospitalization and</p>
+<p>death. However, people in this population may not generate a strong antibody</p>
+<p>response to the vaccine and may remain susceptible to infection.</p>
+<p>✓ The most frequent adverse effect associated with IIV is soreness at the injection</p>
+<p>site that lasts for less than 48 hours. IIV may cause fever and malaise in those who</p>
+<p>have not previously been exposed to the viral antigens in the vaccine. Allergic-type</p>
+<p>reactions (hives and systemic anaphylaxis) rarely occur after influenza vaccination</p>
+<p>and are likely a result of a reaction to residual egg protein in the vaccine.</p>
+<p>✓ Vaccination should be avoided in persons who are not at high risk for influenza</p>
+<p>complications and who have experienced Guillain–Barré syndrome within 6 weeks</p>
+<p>of receiving a previous influenza vaccine.</p>
+<p>✓ LAIV is made with live, attenuated viruses and is approved for intranasal administra-</p>
+<p>tion in healthy people between 2 and 49 years of age (Table 42-2). Advantages of LAIV</p>
+<p>include its ease of administration, intranasal rather than intramuscular administra-</p>
+<p>tion, and the potential induction of broad mucosal and systemic immune response.</p>
+<p>✓ The adverse effects typically associated with LAIV administration include runny</p>
+<p>nose, congestion, sore throat, and headache.</p>
+<p>✓ LAIV should not be given to immunosuppressed patients or given by healthcare</p>
+<p>workers who are severely immunocompromised. LAIV is not recommended in</p>
+<p>several populations, including people older than 50 years and pregnant women.</p>
+<h2>POSTEXPOSURE PROPHYLAXIS</h2>
+<li>Antiviral drugs available for prophylaxis of influenza should be considered adjuncts</li>
+<p>but are not replacements for annual vaccination.</p>
+<li>Amantadine and rimantadine are currently not recommended for prophylaxis or</li>
+<p>treatment in the United States because of the rapid emergence of resistance.</p>
+<li>The neuraminidase inhibitors oseltamivir and zanamivir are effective prophylactic</li>
+<p>agents against influenza in terms of preventing laboratory-confirmed influenza</p>
+<p>when used for seasonal prophylaxis and preventing influenza illness among persons</p>
+<p>exposed to a household contact who were diagnosed with influenza. Table 42-3 gives</p>
+<p>dosing recommendations. Peramivir is not approved for chemoprophylaxis.</p>
+<li>In those patients who did not receive the influenza vaccination and are receiving an</li>
+<p>antiviral drug for prevention of disease during the influenza season, the medication</p>
+<p>should optimally be taken for the entire duration of influenza activity in the community.</p>
+<p>441</p>
+<h2>CH42.INDD 441 19-11-2020 15:26:27</h2>
+<h2>442 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 42-1 Approved Influenza Vaccines for Different Age Groups—United States, 2019–2020 Season</p>
+<p>Thimerosal Mercury</p>
+<p>Content (mcg</p>
+<p>Vaccine Trade Name Manufacturer Dose/Presentation Hg/0.5-mL dose) Age Group Number of Doses</p>
+<p>Trivalent IIV (IIV3s)—adjuvanted and high dose</p>
+<p>aIIV3 Fluad Seqirus 0.5-mL single dose prefilled 0 ≥65 years 1</p>
+<p>syringe</p>
+<p>IIV3 High dose Fluzone HD Sanofi Pasteur 0.5-mL prefilled syringe 0 ≥65 years 1</p>
+<p>Quadrivalent IIVs (IIV4s)</p>
+<p>IIV4 Afluria Seqirus 0.25-mL prefilled syringe 0 6–35 months 1 or 2a</p>
+<p>0.5-mL prefilled syringe 0 ≥3 years 1 or 2a</p>
+<p>5-mL multidose vial 24.5 ≥6 months via 1 or 2a</p>
+<p>needle/syringe or</p>
+<p>18–64 years via</p>
+<p>jet injector</p>
+<p>IIV4 Fluarix Quadrivalent GlaxoSmithKline 0.5-mL prefilled syringe 0 ≥6 months 1 or 2a</p>
+<p>IIV4 FluLaval Quadrivalent GlaxoSmithKline 0.5-mL prefilled syringe 0 ≥6 months 1 or 2a</p>
+<p>5-mL multidose vial &lt;25 ≥6 months</p>
+<p>IIV4 Fluzone Quadrivalentb Sanofi Pasteur 0.25-mL prefilled syringe 0 ≥6–35 months 1 or 2a</p>
+<p>0.5-mL prefilled syringe 0 ≥6 months 1 or 2a</p>
+<p>0.5-mL single-dose vial 0 ≥6 months 1 or 2a</p>
+<p>5-mL multidose vial 25 ≥6 months 1 or 2a</p>
+<h2>CH42.INDD</h2>
+<p>442</p>
+<p>19-11-2020</p>
+<p>15:26:28</p>
+<div class="table-container"><table><tr><th>Vaccine</th><th>Trade Name</th><th>Manufacturer</th><th>Dose/Presentation</th><th>Thimerosal Mercury
+Content (mcg
+Hg/0.5-mL dose)</th><th>Age Group</th><th>Number of Doses</th></tr><tr><td>Trivalent IIV (IIV3s)—adjuvanted and high dose</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>aIIV3</td><td>Fluad</td><td>Seqirus</td><td>0.5-mL single dose prefilled
+syringe</td><td>0</td><td>≥65 years</td><td>1</td></tr><tr><td>IIV3 High dose</td><td>Fluzone HD</td><td>Sanofi Pasteur</td><td>0.5-mL prefilled syringe</td><td>0</td><td>≥65 years</td><td>1</td></tr><tr><td>Quadrivalent IIVs (IIV4s)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>IIV4</td><td>Afluria</td><td>Seqirus</td><td>0.25-mL prefilled syringe</td><td>0</td><td>6–35 months</td><td>1 or 2a</td></tr><tr><td></td><td></td><td></td><td>0.5-mL prefilled syringe
+5-mL multidose vial</td><td>0
+24.5</td><td>≥3 years
+≥6 months via
+needle/syringe or
+18–64 years via
+jet injector</td><td>1 or 2a
+1 or 2a</td></tr><tr><td>IIV4</td><td>Fluarix Quadrivalent</td><td>GlaxoSmithKline</td><td>0.5-mL prefilled syringe</td><td>0</td><td>≥6 months</td><td>1 or 2a</td></tr><tr><td>IIV4</td><td>FluLaval Quadrivalent</td><td>GlaxoSmithKline</td><td>0.5-mL prefilled syringe
+5-mL multidose vial</td><td>0
+&lt;25</td><td>≥6 months
+≥6 months</td><td>1 or 2a</td></tr><tr><td>IIV4</td><td>Fluzone Quadrivalentb</td><td>Sanofi Pasteur</td><td>0.25-mL prefilled syringe
+0.5-mL prefilled syringe
+0.5-mL single-dose vial
+5-mL multidose vial</td><td>0
+0
+0
+25</td><td>≥6–35 months
+≥6 months
+≥6 months
+≥6 months</td><td>1 or 2a
+1 or 2a
+1 or 2a
+1 or 2a</td></tr></table></div><p>443</p>
+<p>Influenza</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>42</p>
+<p>Quadrivalent IIV high dose (IIV4-HD)</p>
+<p>IIV4 High dose Fluzone HD Sanofi Pasteur 0.7-mL prefilled syringe 0 ≥65 years 1</p>
+<p>Quadrivalent</p>
+<p>Cell culture–based quadrivalent IIVs (ccIIV4)</p>
+<p>ccIIV4 Flucelvax Quadrivalent Seqirus 0.5-mL prefilled syringe 0 ≥4 years 1 or 2a</p>
+<p>5-mL multidose vial 25 ≥4 years 1 or 2a</p>
+<p>Recombinant quadrivalent IIVs (RIV4)</p>
+<p>RIV4 Flublok Quadrivalent Sanofi Pasteur 0.5-mL prefilled syringe 0 ≥18 years 1</p>
+<p>LAIV quadrivalent (LAIV4)</p>
+<p>LAIV FluMist Quadrivalent AstraZeneca 0.2-mL sprayer 0 2–49 years 1 or 2c</p>
+<p>aTwo doses administered at least 4 weeks apart are recommended for children aged 6 months to less than 9 years who are receiving influenza vaccine for the first time or received one dose</p>
+<p>in first year of vaccination during the previous influenza season.</p>
+<p>bFluzone Quadrivalent may be given to children aged 6 through 35 months as either 0.25 mL per dose or 0.5 mL per dose. No preference is expressed for one or the other dose volume for</p>
+<p>this age group. Persons aged ≥3 years should receive 0.5-mL dose volume.</p>
+<p>cTwo doses administered.</p>
+<p>IIV, inactivated influenza vaccine; IIV3, inactivated influenza trivalent vaccine; aIIV3, adjuvanted inactivated influenza vaccine, trivalent, standard dose; IIV4, inactivated influenza quadrivalent</p>
+<p>vaccine; IIV4-HD, inactivated influenza quadrivalent vaccine—high dose; ccIIV3, cell culture-based trivalent influenza vaccine; RIV4, recombinant quadrivalent influenza vaccine; LAIV,</p>
+<p>live-attenuated influenza vaccine.</p>
+<p>Note: IIVs and RIV4 may be administered concomitantly or sequentially with other inactivated vaccines or live vaccines. LAIV4 may be administered simultaneously with other live or</p>
+<p>inactivated vaccines. However, after administration of a live vaccine (such as LAIV4), at least 4 weeks should elapse before another live vaccine is administered.</p>
+<p>Influenza antiviral medications might reduce the effectiveness of LAIV4 if given within 48 hours before, to 14 days after administration of LAIV4. Persons who receive influenza antiviral</p>
+<p>medications within this period of LAIV4 vaccination can be revaccinated with another appropriate influenza vaccine (eg, IIV or RIV4).</p>
+<h2>CH42.INDD</h2>
+<p>443</p>
+<p>19-11-2020</p>
+<p>15:26:28</p>
+<div class="table-container"><table><tr><th>Quadrivalent IIV high dose (IIV4-HD)</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>IIV4 High dose</td><td>Fluzone HD
+Quadrivalent</td><td>Sanofi Pasteur</td><td>0.7-mL prefilled syringe</td><td>0</td><td>≥65 years</td><td>1</td></tr><tr><td>Cell culture–based quadrivalent IIVs (ccIIV4)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>ccIIV4</td><td>Flucelvax Quadrivalent</td><td>Seqirus</td><td>0.5-mL prefilled syringe
+5-mL multidose vial</td><td>0
+25</td><td>≥4 years
+≥4 years</td><td>1 or 2a
+1 or 2a</td></tr><tr><td>Recombinant quadrivalent IIVs (RIV4)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>RIV4</td><td>Flublok Quadrivalent</td><td>Sanofi Pasteur</td><td>0.5-mL prefilled syringe</td><td>0</td><td>≥18 years</td><td>1</td></tr><tr><td>LAIV quadrivalent (LAIV4)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>LAIV</td><td>FluMist Quadrivalent</td><td>AstraZeneca</td><td>0.2-mL sprayer</td><td>0</td><td>2–49 years</td><td>1 or 2c</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 42-2 Comparison of Inactivated Influenza Vaccine (IIV) and Live-Attenuated</p>
+<p>Influenza Vaccine (LAIV)</p>
+<p>Characteristic IIV (IIV3/IIV4) LAIV</p>
+<p>Age groups approved for use ≥6 months 2–49 years</p>
+<p>Immune status requirements Immunocompetent or Immunocompetent</p>
+<p>immunocompromised</p>
+<p>Viral properties Inactivated (killed) influenza Live-attenuated influenza A</p>
+<p>A (H3N2), A (H1N1), and (H3N2), A (H1N1), and B</p>
+<p>B viruses viruses</p>
+<p>Route of administration Intramuscular Intranasal</p>
+<p>Immune system response High serum IgG antibody Lower IgG response and</p>
+<p>response high serum IgA mucosal</p>
+<p>response</p>
+<p>TABLE 42-3 Recommended Daily Dosage of Influenza Antiviral Medications for Treatment</p>
+<p>and Prophylaxis—United States</p>
+<p>Adult Adult Pediatric Pediatric</p>
+<p>Drug Treatment Prophylaxisa Treatment Prophylaxisa</p>
+<p>CAP-dependent endonuclease inhibitor</p>
+<p>Baloxavirbb,c 12 years and None FDA approved and None</p>
+<p>older: recommended</p>
+<p>40–&lt;80 kg: One for use in</p>
+<p>40 mg dose children 12</p>
+<p>&gt;80 kg: One 80 years or older</p>
+<p>mg dose weighing at</p>
+<p>least 40 kg; see</p>
+<p>adult dosage</p>
+<p>Neurominidase inhibitors</p>
+<p>Oseltamivird,e,f 75-mg capsule 75-mg capsule Term infants 0–8 Not recommended</p>
+<p>twice daily × daily × months: 3 mg/ if &lt;3 months</p>
+<p>5 days 10 days kg/dose twice 3–&lt;12 months:</p>
+<p>daily 3 mg/kg/dose</p>
+<p>9–11 monthsg: 3.5 daily</p>
+<p>mg/kg/dose 9–11 months:</p>
+<p>twice daily or 3.5 mg/kg/dose</p>
+<p>3 mg/kg/dose daily</p>
+<p>twice daily ≥1 year:</p>
+<p>≥1 year: ≤15 kg: 30 mg</p>
+<p>≤15 kg: 30 mg daily</p>
+<p>twice daily &gt;15–23 kg:</p>
+<p>&gt;15–23 kg: 45 45 mg daily</p>
+<p>mg twice daily &gt;23–40 kg:</p>
+<p>&gt;23–40 kg: 60 60 mg daily</p>
+<p>mg twice daily &gt;40 kg: 75 mg</p>
+<p>&gt;40 kg: 75 mg daily</p>
+<p>twice daily Duration: All for</p>
+<p>Duration: All for 10 days</p>
+<p>5 days</p>
+<p>(Continued )</p>
+<p>444</p>
+<h2>CH42.INDD 444 19-11-2020 15:26:28</h2>
+<div class="table-container"><table><tr><th>TABLE 42-2 Comparison of Inactivated Influenza Vaccine (IIV) and Live-Attenuated
+Influenza Vaccine (LAIV)</th><th></th><th></th></tr><tr><td>Characteristic</td><td>IIV (IIV3/IIV4)</td><td>LAIV</td></tr><tr><td>Age groups approved for use</td><td>≥6 months</td><td>2–49 years</td></tr><tr><td>Immune status requirements</td><td>Immunocompetent or
+immunocompromised</td><td>Immunocompetent</td></tr><tr><td>Viral properties</td><td>Inactivated (killed) influenza
+A (H3N2), A (H1N1), and
+B viruses</td><td>Live-attenuated influenza A
+(H3N2), A (H1N1), and B
+viruses</td></tr><tr><td>Route of administration</td><td>Intramuscular</td><td>Intranasal</td></tr><tr><td>Immune system response</td><td>High serum IgG antibody
+response</td><td>Lower IgG response and
+high serum IgA mucosal
+response</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 42-3 Recommended Daily Dosage of Influenza Antiviral Medications for Treatment
+and Prophylaxis—United States</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adult
+Treatment</td><td>Adult
+Prophylaxisa</td><td>Pediatric
+Treatment</td><td>Pediatric
+Prophylaxisa</td></tr><tr><td>CAP-dependent endonuclease inhibitor</td><td></td><td></td><td></td><td></td></tr><tr><td>Baloxavirbb,c</td><td>12 years and
+older:
+40–&lt;80 kg: One
+40 mg dose
+&gt;80 kg: One 80
+mg dose</td><td>None</td><td>FDA approved and
+recommended
+for use in
+children 12
+years or older
+weighing at
+least 40 kg; see
+adult dosage</td><td>None</td></tr><tr><td>Neurominidase inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td>Oseltamivird,e,f</td><td>75-mg capsule
+twice daily ×
+5 days</td><td>75-mg capsule
+daily ×
+10 days</td><td>Term infants 0–8
+months: 3 mg/
+kg/dose twice
+daily
+9–11 monthsg: 3.5
+mg/kg/dose
+twice daily or
+3 mg/kg/dose
+twice daily
+≥1 year:
+≤15 kg: 30 mg
+twice daily
+&gt;15–23 kg: 45
+mg twice daily
+&gt;23–40 kg: 60
+mg twice daily
+&gt;40 kg: 75 mg
+twice daily
+Duration: All for
+5 days</td><td>Not recommended
+if &lt;3 months
+3–&lt;12 months:
+3 mg/kg/dose
+daily
+9–11 months:
+3.5 mg/kg/dose
+daily
+≥1 year:
+≤15 kg: 30 mg
+daily
+&gt;15–23 kg:
+45 mg daily
+&gt;23–40 kg:
+60 mg daily
+&gt;40 kg: 75 mg
+daily
+Duration: All for
+10 days
+(Continued )</td></tr></table></div><h2>Influenza | CHAPTER 42</h2>
+<p>TABLE 42-3 Recommended Daily Dosage of Influenza Antiviral Medications for Treatment</p>
+<p>and Prophylaxis—United States(Continued )</p>
+<p>Adult Adult Pediatric Pediatric</p>
+<p>Drug Treatment Prophylaxisa Treatment Prophylaxisa</p>
+<p>Zanamivir 10 mg (2 10 mg (2 10 mg (2 of 5 mg 10 mg (2 of 5 mg</p>
+<p>of 5 mg of 5 mg inhalations) inhalations)</p>
+<p>inhalations) inhalations) twice daily × daily for ≥5</p>
+<p>twice daily × daily × 10 5 days for ≥7 years old ×</p>
+<p>5 days days years old 10 days</p>
+<p>Peramivirc,e 13 years and None 2–12 years of age: None</p>
+<p>older: One 12 mg/kg</p>
+<p>One 600 mg dose, up to 600</p>
+<p>dose via mg maximum,</p>
+<p>intravenous via intravenous</p>
+<p>infusion infusion for a</p>
+<p>for 15–30 minimum of</p>
+<p>minutes 15–30 minutes</p>
+<p>aIf influenza vaccine is administered, prophylaxis can generally be stopped 14 days after vaccination</p>
+<p>for noninstitutionalized persons. When prophylaxis is being administered following an exposure,</p>
+<p>prophylaxis should be continued for 10 days after the last exposure. In persons at high risk</p>
+<p>for complications from influenza for whom vaccination is contraindicated or expected to be</p>
+<p>ineffective, chemoprophylaxis should be continued for the duration that influenza viruses are</p>
+<p>circulating in the community during influenza season.</p>
+<p>bTime to peak = 4 hours. Food and cations (calcium, aluminum, magnesium, iron) can decrease</p>
+<p>peak concentration by 48%. Long half-life (79.1 hours) and is metabolized by UDP-</p>
+<p>glucuronosyltransferase (UGT1A3) and CYP3A4.</p>
+<p>cFor the treatment of uncomplicated influenza with oral baloxavir or intravenous peramivir, a single</p>
+<p>dose is recommended. Longer daily dosing (oral oseltamivir or intravenous peramivir) can be</p>
+<p>considered for patients who remain severely ill after 5 days of treatment.</p>
+<p>dOseltamivir dosing for preterm infants using their postmenstrual age (ie, gestational age +</p>
+<p>chronological age): &lt;38 weeks: 1.0 mg/kg/dose twice daily; 38–40 weeks: 1.5 mg/kg/dose twice</p>
+<p>daily; &gt;40 weeks: 3.0 mg/kg/dose twice daily.</p>
+<p>eIn patients with renal insufficiency, the dose should be adjusted on the basis of creatinine clearance.</p>
+<p>See https://www.cdc.gov/flu/professionals/antivirals/summary-clinicians.htm.</p>
+<p>fSome experts recommend 150 mg twice daily for severe illness in pregnant women. Optimal dosing</p>
+<p>for prophylaxis in pregnant women is unknown.</p>
+<p>gThe American Academy of Pediatrics recommends 3.5 mg/kg per dose twice daily; CDC and US Food</p>
+<p>and Drug Administration (FDA)–approved dosing is 3 mg/kg per dose twice daily for children</p>
+<p>aged 9–11 months.</p>
+<p>Note: Although amantadine and rimantadine have been used historically for the treatment and</p>
+<p>prophylaxis of influenza A viruses, due to high resistance, the CDC no longer recommends the use</p>
+<p>of these agents for the treatment and/or prophylaxis of influenza.</p>
+<li>Prophylaxis should be considered during influenza season for the following groups</li>
+<p>of patients:</p>
+<p>✓ Persons at high risk of serious illness and/or complications who cannot be</p>
+<p>vaccinated.</p>
+<p>✓ Persons at high risk of serious illness and/or complications who are vaccinated</p>
+<p>after influenza activity has begun in their community because the development of</p>
+<p>sufficient antibody titers after vaccination takes ~2 weeks.</p>
+<p>✓ Persons with severe immune deficiency or who may have an inadequate response to</p>
+<p>vaccination (eg, advanced human immunodeficiency virus [HIV] disease, persons</p>
+<p>receiving immunosuppressive medications), after exposure to an infectious person.</p>
+<p>✓ Long-term care facility residents, regardless of vaccination status, when an</p>
+<p>outbreak has occurred in the institution.</p>
+<p>445</p>
+<h2>CH42.INDD 445 19-11-2020 15:26:28</h2>
+<div class="table-container"><table><tr><th>TABLE 42-3 Recommended Daily Dosage of Influenza Antiviral Medications for Treatment
+and Prophylaxis—United States(Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adult
+Treatment</td><td>Adult
+Prophylaxisa</td><td>Pediatric
+Treatment</td><td>Pediatric
+Prophylaxisa</td></tr><tr><td>Zanamivir</td><td>10 mg (2
+of 5 mg
+inhalations)
+twice daily ×
+5 days</td><td>10 mg (2
+of 5 mg
+inhalations)
+daily × 10
+days</td><td>10 mg (2 of 5 mg
+inhalations)
+twice daily ×
+5 days for ≥7
+years old</td><td>10 mg (2 of 5 mg
+inhalations)
+daily for ≥5
+years old ×
+10 days</td></tr><tr><td>Peramivirc,e</td><td>13 years and
+older:
+One 600 mg
+dose via
+intravenous
+infusion
+for 15–30
+minutes</td><td>None</td><td>2–12 years of age:
+One 12 mg/kg
+dose, up to 600
+mg maximum,
+via intravenous
+infusion for a
+minimum of
+15–30 minutes</td><td>None</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>LAIV should not be administered until 48 hours after influenza antiviral therapy has</li>
+<p>stopped, and influenza antiviral drugs should not be administered for 2 weeks after the</p>
+<p>administration of LAIV because the antiviral drugs inhibit influenza virus replication.</p>
+<li>Pregnant women, regardless of trimester, should receive annual influenza vaccination</li>
+<p>with IIV but not with LAIV.</p>
+<li>The adamantanes and neuraminidase inhibitors are not recommended during preg-</li>
+<p>nancy because of concerns regarding the effects of the drugs on the fetus.</p>
+<li>Immunocompromised hosts should receive annual influenza vaccination with IIV</li>
+<p>but not LAIV.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Therapy: To shorten the duration of illness and provide symptom control.</li>
+<li>Antiviral drugs are most effective if started within 48 hours of the onset of illness.</li>
+<p>Adjunct agents, such as acetaminophen for fever or an antihistamine for rhinitis, may</p>
+<p>be used concomitantly with the antiviral drugs.</p>
+<li>Patients suffering from influenza should get adequate sleep and maintain a low level of</li>
+<p>activity. They should stay home from work and/or school in order to rest and prevent</p>
+<p>the spread of infection. Appropriate fluid intake should be maintained. Cough/throat</p>
+<p>lozenges, warm tea, or soup may help with symptom control (cough and sore throat).</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>The neuraminidase inhibitors (oseltamivir, zanamivir, and peramivir) are the only</li>
+<p>antiviral drugs available for treatment and prophylaxis of influenza. P eramivir is the only</p>
+<p>intravenous formulation commercially available. The adamantanes (a mantadine and</p>
+<p>rimantadine) are no longer recommended due to high resistance among influenza viruses.</p>
+<li>Oseltamivir, zanamivir, and peramivir have activity against both influenza A and</li>
+<p>influenza B viruses. When administered within 48 hours of the onset of illness, osel-</p>
+<p>tamivir and zanamivir may reduce the duration of illness by ~1 day versus placebo.</p>
+<p>Benefits are highly dependent on the timing of initiation of treatment, ideally being</p>
+<p>within 12 hours of illness onset, up to 48 hours after onset of illness.</p>
+<li>Oseltamivir is approved for treatment in those older than 14 days, zanamivir is</li>
+<p>approved for treatment in those older than 7 years, and peramivir for those 18 years</p>
+<p>and older. The recommended dosages vary by agent and age (see Table 42-3), and</p>
+<p>the recommended duration of treatment for both agents is 5 days for oseltamivir and</p>
+<p>zanamivir and one dose for 1 day for peramivir.</p>
+<li>Neuropsychiatric complications consisting of delirium, seizures, hallucinations,</li>
+<p>and self-injury in pediatric patients have been reported following treatment with</p>
+<p>oseltamivir and peramivir.</p>
+<li>Oseltamivir and zanamivir have been used in pregnancy, but solid clinical safety data</li>
+<p>are lacking. Oseltamivir is preferred for the treatment of pregnant women because of its</p>
+<p>systemic activity; however, the drug of choice for chemoprophylaxis is not yet defined.</p>
+<li>Both the adamantanes and the neuraminidase inhibitors are excreted in breast milk</li>
+<p>and should be avoided by mothers who are breast-feeding their infants.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Patients should be monitored daily for resolution of signs and symptoms associated</li>
+<p>with influenza, such as fever, myalgia, headache, malaise, nonproductive cough, sore</p>
+<p>throat, and rhinitis. These signs and symptoms will typically resolve within ~1 week.</p>
+<p>If the patient continues to exhibit signs and symptoms of illness beyond 10 days or a</p>
+<p>worsening of symptoms after 7 days, a physician visit is warranted, as this may be an</p>
+<p>indication of a secondary bacterial infection.</p>
+<p>See Chapter 127, Influenza, authored by Jessica C. Njoku, for a more detailed discussion</p>
+<p>of this topic.</p>
+<p>446</p>
+<h2>CH42.INDD 446 19-11-2020 15:26:28</h2>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

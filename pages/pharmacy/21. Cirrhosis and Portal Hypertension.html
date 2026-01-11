@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21. Cirrhosis and Portal Hypertension</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>21. Cirrhosis and Portal Hypertension</h1>
+        </header>
+        <main>
+            <h2>SECTION 5</h2>
+<h2>GASTROINTESTINAL DISORDERS</h2>
+<p>Edited by Joseph T. DiPiro and Terry L. Schwinghammer</p>
+<p>229</p>
+<h2>RETPAHC</h2>
+<p>21</p>
+<p>Cirrhosis and Portal</p>
+<p>Hypertension</p>
+<li>Chronic liver injury causes damage to normal liver tissue, resulting in development</li>
+<p>of regenerative nodules surrounded by dense fibrotic material, which are d iagnostic</p>
+<p>hallmarks of cirrhosis.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The distorted architecture of the cirrhotic liver impedes portal blood flow, inter-</li>
+<pre><code>feres with hepatocyte perfusion, and disrupts hepatic synthetic functions such as</code></pre>
+<p>the production of albumin. Clinical consequences of cirrhosis include increased</p>
+<p>intrahepatic resistance leading to portal hypertension, varices, and variceal</p>
+<p>bleeding; ascites; infection; hepatic encephalopathy (HE); and hepatocellular</p>
+<p>carcinoma.</p>
+<li>Primary causes of cirrhosis in developed countries include hepatitis C, excessive</li>
+<p>alcohol intake, and nonalcoholic fatty liver disease (Table 21-1).</p>
+<li>Cirrhosis causes changes to the splanchnic vasculature and circulation. Splanch-</li>
+<p>nic vasodilation and the formation of new blood vessels contribute to increased</p>
+<p>splanchnic blood flow, formation of gastroesophageal varices, and variceal bleeding.</p>
+<p>Additionally, splanchnic vasodilation leads to hypoperfusion of the renal system,</p>
+<p>which causes activation of the renin–angiotensin–aldosterone system and, subse-</p>
+<p>quently, significant fluid retention. The pathophysiologic abnormalities that cause it</p>
+<p>often result in ascites, portal hypertension and esophageal varices, HE, and coagula-</p>
+<p>tion disorders.</p>
+<h2>TABLE 21-1 Etiology of Cirrhosis</h2>
+<p>Alcoholism</p>
+<p>Chronic hepatitis C</p>
+<p>Metabolic liver disease</p>
+<p>Hemochromatosis</p>
+<p>Wilson’s disease</p>
+<p>Nonalcoholic fatty liver disease</p>
+<p>Immunologic disease</p>
+<p>Autoimmune hepatitis</p>
+<p>Primary biliary cirrhosis</p>
+<p>Primary biliary cholangitis</p>
+<p>Vascular disease</p>
+<p>Budd–Chiari</p>
+<p>Drugs</p>
+<p>Isoniazid, methyldopa, amiodarone, amoxicillin-clavulanate, nitrofurantoin, diclofenac,</p>
+<p>methotrexate, nevirapine, propylthiouracil, valproate</p>
+<p>ch21.indd 229 19-11-2020 11:19:52</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>2</th><th>1</th><th>Cirrhosis and Portal
+Hypertension</th></tr></table></div><div class="table-container"><table><tr><th>TABLE 21-1 Etiology of Cirrhosis</th></tr><tr><td>Alcoholism</td></tr><tr><td>Chronic hepatitis C</td></tr><tr><td>Metabolic liver disease
+Hemochromatosis
+Wilson’s disease
+Nonalcoholic fatty liver disease</td></tr><tr><td>Immunologic disease
+Autoimmune hepatitis
+Primary biliary cirrhosis</td></tr><tr><td>Primary biliary cholangitis</td></tr><tr><td>Vascular disease
+Budd–Chiari</td></tr><tr><td>Drugs
+Isoniazid, methyldopa, amiodarone, amoxicillin-clavulanate, nitrofurantoin, diclofenac,
+methotrexate, nevirapine, propylthiouracil, valproate</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<li>Portal hypertension is noted by elevated pressure gradient between the portal and</li>
+<p>central venous pressure and is characterized by hypervolemia, increased cardiac</p>
+<p>index, hypotension, and decreased systemic vascular resistance.</p>
+<li>Ascites is the pathologic accumulation of fluid within the peritoneal cavity. It is one</li>
+<p>of the earliest and most common presentations of cirrhosis.</p>
+<h2>PORTAL HYPERTENSION AND VARICES</h2>
+<li>The most important sequelae of portal hypertension are the development of</li>
+<p>varices and alternative routes of blood flow resulting in acute variceal bleeding.</p>
+<p>Portal hypertension is defined by the presence of a gradient of &gt;5 mm Hg (0.7 kPa)</p>
+<p>between the portal and central venous pressures.</p>
+<li>Progression to bleeding can be predicted by Child–Pugh score, size of varices, and the</li>
+<p>presence of red wale markings on the varices. First variceal hemorrhage occurs at an</p>
+<p>annual rate of about 15% and carries a mortality of 7%–15%.</p>
+<h2>HEPATIC ENCEPHALOPATHY</h2>
+<li>HE is a functional disturbance of the brain caused by liver insufficiency or portal</li>
+<p>systemic shunting that presents on a wide spectrum of symptom severity ranging</p>
+<p>from subclinical alterations to coma.</p>
+<li>The symptoms of HE are thought to result from an accumulation of gut-derived</li>
+<p>nitrogenous substances in the systemic circulation as a consequence of decreased</p>
+<pre><code>hepatic functioning and shunting through portosystemic collaterals bypassing the</code></pre>
+<p>liver. These substances then enter the central nervous system (CNS) and result in</p>
+<p>alterations of neurotransmission that affect consciousness and behavior.</p>
+<li>Altered ammonia, glutamate, benzodiazepine receptor agonists, aromatic amino</li>
+<p>acids, and manganese are potential causes of HE. An established correlation between</p>
+<p>blood ammonia levels and mental status does not exist.</p>
+<li>Type A HE is induced by acute liver failure, type B results from portal-systemic</li>
+<p>bypass without intrinsic liver disease, and type C occurs with cirrhosis. HE may be</p>
+<p>classified as episodic, persistent, or minimal.</p>
+<h2>COAGULATION DEFECTS</h2>
+<li>End-stage chronic liver disease is associated with decreased synthetic capability of the</li>
+<p>liver leading to decreased levels of most procoagulant factors as well as the naturally</p>
+<p>occurring anticoagulants antithrombin, protein C, and protein S.</p>
+<li>Antithrombin and protein C are decreased, but two procoagulant factors, factor VIII</li>
+<p>and von Willebrand factor, are actually elevated. The net effect of these events could</p>
+<p>be thrombosis or clinically significant bleeding.</p>
+<li>Both platelet number and function may be affected in cirrhosis. Thrombocytopenia,</li>
+<p>a common finding in cirrhosis, could promote bleeding.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Initial symptoms of cirrhosis may be nonspecific including fatigue, loss of appetite,</li>
+<p>and weight loss (Table 21-2). Patients may also present with much more significant</p>
+<p>symptoms secondary to decompensation related to cirrhosis complications such as</p>
+<p>ascites (abdominal distention), spontaneous bacterial peritonitis (SBP) (abdominal</p>
+<p>discomfort with fever), hepatopulmonary syndrome (clubbing), hepatorenal syn-</p>
+<p>drome (fluid overload, oliguria, renal failure), HE (confusion, lethargy), and/or vari-</p>
+<p>ceal bleeding (secondary to esophageal or g astric varices from portal hypertension).</p>
+<li>Muscle wasting, palmar erythema, spider angiomas, parotid gland enlargement,</li>
+<p>white nails, Dupuytren contracture, peripheral neuropathy, and metabolic complica-</p>
+<p>tions including gynecomastia, testicular atrophy, and axillary hair loss are all possibly</p>
+<p>related to cirrhosis.</p>
+<li>A thorough history including risk factors that predispose patients to cirrhosis should</li>
+<pre><code>be taken. Diagnostics for cirrhosis include liver function tests, coagulation tests,</code></pre>
+<p>complete blood count, and serologic tests for viral causes including hepatitis B and C.</p>
+<p>230</p>
+<p>ch21.indd 230 19-11-2020 11:19:53</p>
+<h2>Cirrhosis and Portal Hypertension | CHAPTER 21</h2>
+<h2>TABLE 21-2 Clinical Presentation of Cirrhosis</h2>
+<p>Signs and Symptoms</p>
+<li>Asymptomatic</li>
+<li>Hepatomegaly and splenomegaly</li>
+<li>Pruritus, jaundice, palmar erythema, spider angiomata, and hyperpigmentation</li>
+<li>Gynecomastia and reduced libido</li>
+<li>Ascites, edema, pleural effusion, and respiratory difficulties</li>
+<li>Malaise, anorexia, and weight loss</li>
+<li>Encephalopathy</li>
+<p>Laboratory Tests</p>
+<li>Hypoalbuminemia</li>
+<li>Elevated prothrombin time (PT)</li>
+<li>Thrombocytopenia</li>
+<li>Elevated alkaline phosphatase</li>
+<li>Elevated aspartate transaminase (AST), alanine transaminase (ALT), and γ-glutamyl</li>
+<p>transpeptidase (GGT)</p>
+<h2>LABORATORY ABNORMALITIES</h2>
+<li>There are no laboratory or radiographic tests of hepatic function that can accurately</li>
+<pre><code>diagnose cirrhosis. Serum or plasma chemistries called “liver function tests” can</code></pre>
+<p>be grouped into two broad categories: (1) markers of liver injury such as aspartate</p>
+<p>transaminase (AST), alanine aminotransferase (ALT), γ-glutamyl transpeptidase</p>
+<pre><code>(GGT), and alkaline phosphatase and (2) markers of hepatocellular function such as</code></pre>
+<p>prothrombin time (PT), bilirubin, and albumin.</p>
+<li>The aminotransferases, AST and ALT, are enzymes that have increased concentra-</li>
+<p>tions in plasma after acute or chronic hepatocellular injury. The highest elevations</p>
+<p>(&gt;10,000 units per liter) are most likely to occur in shock liver and drug- or</p>
+<p>toxin-induced hepatitis. The ratio of AST to ALT with AST&gt;ALT is more likely</p>
+<p>when cirrhosis of any etiology exists but also occurs in alcoholic and ischemic</p>
+<p>liver disease.</p>
+<li>Elevated serum alkaline phosphatase and GGT occur in cases of liver injury with a</li>
+<p>cholestatic pattern and therefore often accompany conditions such as primary bili-</p>
+<p>ary cirrhosis, primary sclerosing cholangitis, drug-induced cholestasis, and bile duct</p>
+<p>obstruction.</p>
+<li>Elevations in serum conjugated (or direct) bilirubin indicate hepatocellular dysfunc-</li>
+<p>tion or cholestasis. Indirect bilirubin elevations occur due to overproduction (as seen</p>
+<p>with hemolysis), decreased uptake, or decreased hepatic conjugation of bilirubin.</p>
+<li>Albumin and coagulation factors are markers of hepatic synthetic activity and are used</li>
+<pre><code>to estimate hepatocyte function in cirrhosis. Reduction in albumin usually indicates a</code></pre>
+<p>disease duration of more than 3 weeks whereas severe liver disease can cause PT elevation</p>
+<p>in less than 24 hours. Thrombocytopenia is a common feature in chronic liver disease.</p>
+<li>The Child–Pugh classification system uses a combination of physical and laboratory</li>
+<p>findings to assess and define the severity of cirrhosis and is a predictor of patient</p>
+<p>survival, surgical outcome, and risk of variceal bleeding (Table 21-3).</p>
+<li>The model for end-stage liver disease (MELD-Na) is a newer scoring system:</li>
+<p>MELDscore=9.57×log (serumcreatinine[mg/dL])+3.78</p>
+<p>e</p>
+<p>× log (billirubin[mg/dL])+11.20×log (INR)+6.43</p>
+<p>e e</p>
+<p>or using SI units:</p>
+<p>MELDscore=9.57×log (creatinine[µmol/L]×0.01131)+3.78</p>
+<p>e</p>
+<p>×log (bilirubin[µmol/L]×0.05848) + 11.20×log (INR)+6.43</p>
+<p>ee e</p>
+<p>231</p>
+<p>ch21.indd 231 19-11-2020 11:19:54</p>
+<div class="table-container"><table><tr><th>TABLE 21-2 Clinical Presentation of Cirrhosis</th></tr><tr><td>Signs and Symptoms
+• Asymptomatic
+• Hepatomegaly and splenomegaly
+• Pruritus, jaundice, palmar erythema, spider angiomata, and hyperpigmentation
+• Gynecomastia and reduced libido
+• Ascites, edema, pleural effusion, and respiratory difficulties
+• Malaise, anorexia, and weight loss
+• Encephalopathy</td></tr><tr><td>Laboratory Tests
+• Hypoalbuminemia
+• Elevated prothrombin time (PT)
+• Thrombocytopenia
+• Elevated alkaline phosphatase
+• Elevated aspartate transaminase (AST), alanine transaminase (ALT), and γ-glutamyl
+transpeptidase (GGT)</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 21-3 Criteria and Scoring for the Child–Pugh Grading of Chronic Liver Disease</p>
+<p>Score 1 2 3</p>
+<p>Total bilirubin &lt;2 (34.2 μmol/L) 2–3 (34.2–51.3 &gt;3 (51.3 μmol/L)</p>
+<p>(mg/dL) μmol/L)</p>
+<p>Albumin (g/dL) &gt;3.5 (35 g/L) 2.8–3.5 (28–35 g/L) &lt;2.8 (28 g/L)</p>
+<p>Ascites None Mild Moderate</p>
+<p>Encephalopathy None 1 and 2 3 and 4</p>
+<p>(grade)</p>
+<p>Prothrombin &lt;4 4-6 &gt;6</p>
+<p>time (seconds</p>
+<p>prolonged)</p>
+<p>Grade A, &lt;7 points; grade B, 7–9 points; grade C, 10–15 points.</p>
+<p>where international normalized ratio (INR) is TK.</p>
+<p>MELD-Nascore=MELD−(sodium[mEq/L])−(0.025×MELD</p>
+<p>×(140−sodium[mmEq/L]))+140</p>
+<p>or using SI units:</p>
+<p>MELD-Nascore=MELD−(sodium[mmol/L])−(0.025×MELD</p>
+<p>×(140−sodium[[mmol/L]))+140</p>
+<li>In MELD, laboratory values less than 1 are rounded up to 1. The formula’s score is</li>
+<p>multiplied by 10 and rounded to the nearest whole number.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Resolution of acute complications such as tamponade of bleeding</li>
+<p>and resolution of hemodynamic instability for an episode of acute variceal hemor-</p>
+<p>rhage and prevention of complications through lowering of portal pressure with</p>
+<p>medical therapy using non-selective β-adrenergic blocker therapy or supporting</p>
+<p>abstinence from alcohol.</p>
+<h2>GENERAL APPROACH TO TREATMENT</h2>
+<li>Approaches to treatment include the following:</li>
+<p>✓ Identify and eliminate the causes of cirrhosis (eg, alcohol abuse).</p>
+<p>✓ Assess the risk for variceal bleeding and begin pharmacologic prophylaxis where</p>
+<p>indicated, reserving endoscopic therapy for high-risk patients or acute bleeding</p>
+<p>episodes as well as patients with contraindications or intolerance to nonselective</p>
+<p>β-adrenergic blockers.</p>
+<p>✓ Evaluate the patient for clinical signs of ascites and manage with pharmacologic</p>
+<p>treatment (eg, diuretics) and paracentesis. SBP should be carefully monitored in</p>
+<p>patients with ascites who undergo acute deterioration.</p>
+<p>✓ HE is a common complication of cirrhosis and requires clinical vigilance and</p>
+<p>treatment with dietary restriction, elimination of CNS depressants, and therapy to</p>
+<p>lower ammonia levels.</p>
+<p>✓ Frequent monitoring for signs of hepatorenal syndrome, pulmonary insufficiency,</p>
+<pre><code>and endocrine dysfunction is necessary.</code></pre>
+<h2>MANAGEMENT OF PORTAL HYPERTENSION AND VARICEAL BLEEDING</h2>
+<li>The management of varices involves three strategies: (1) primary prophylaxis to pre-</li>
+<p>vent first bleeding episode, (2) treatment of variceal hemorrhage, and (3) secondary</p>
+<p>prophylaxis to prevent rebleeding in patients who have already bled.</p>
+<p>232</p>
+<p>ch21.indd 232 19-11-2020 11:20:06</p>
+<div class="table-container"><table><tr><th>TABLE 21-3 Criteria and Scoring for the Child–Pugh Grading of Chronic Liver Disease</th><th></th><th></th><th></th></tr><tr><td>Score</td><td>1</td><td>2</td><td>3</td></tr><tr><td>Total bilirubin
+(mg/dL)</td><td>&lt;2 (34.2 μmol/L)</td><td>2–3 (34.2–51.3
+μmol/L)</td><td>&gt;3 (51.3 μmol/L)</td></tr><tr><td>Albumin (g/dL)</td><td>&gt;3.5 (35 g/L)</td><td>2.8–3.5 (28–35 g/L)</td><td>&lt;2.8 (28 g/L)</td></tr><tr><td>Ascites</td><td>None</td><td>Mild</td><td>Moderate</td></tr><tr><td>Encephalopathy
+(grade)</td><td>None</td><td>1 and 2</td><td>3 and 4</td></tr><tr><td>Prothrombin
+time (seconds
+prolonged)</td><td>&lt;4</td><td>4-6</td><td>&gt;6</td></tr></table></div><h2>Cirrhosis and Portal Hypertension | CHAPTER 21</h2>
+<p>Primary Prophylaxis</p>
+<li>All patients with cirrhosis and portal hypertension should be screened for varices</li>
+<p>on diagnosis.</p>
+<li>The mainstay of primary prophylaxis is the use of a nonselective β-adrenergic block-</li>
+<p>ing agent such as propranolol, nadolol, or carvedilol. These agents reduce portal</p>
+<p>pressure by reducing portal venous inflow via two mechanisms: decrease in cardiac</p>
+<p>output and decrease in splanchnic blood flow.</p>
+<li>Patients with small varices plus risk factors for variceal hemorrhage including red</li>
+<p>wale marks or Child–Pugh grade C should receive prophylactic therapy with a non-</p>
+<p>selective β-adrenergic blocker.</p>
+<li>Therapy for medium or large varices that have not bled should be initiated with pro-</li>
+<p>pranolol 20 mg twice daily, nadolol 20–40 mg once daily and titrate every 2–3 days to</p>
+<p>maximal tolerated dose or to a heart rates of 55–60 beats/min, or, rather than propranolol</p>
+<p>or nadolol, carvedilol could be chosen and started at 3.125 mg twice daily with slow</p>
+<p>titration at intervals of 1–2 weeks. β-Adrenergic blocker therapy should be continued</p>
+<p>indefinitely. Endoscopic vein ligation (EVL) is an alternative to β-adrenergic blockers.</p>
+<p>If EVL is chosen, it will be performed every 2–4 weeks until the obliteration of varices.</p>
+<li>Monitor patients for development of contraindications to β-adrenergic blockers such</li>
+<p>as renal impairment and hypotension that may accompany end-stage liver disease.</p>
+<h2>ACUTE VARICEAL HEMORRHAGE</h2>
+<li>Figure 21-1 presents an algorithm for managing variceal hemorrhage. Evidence-based</li>
+<p>recommendations for select treatments are presented in Tables 21-4 and 21-5.</p>
+<p>Acute bleed</p>
+<p>Resuscitation</p>
+<p>ABCs</p>
+<p>sedation</p>
+<p>Octreotide</p>
+<p>prophylactic</p>
+<p>antibiotic therapy</p>
+<p>Endoscopy</p>
+<p>Diagnostic and</p>
+<p>therapeutic</p>
+<p>Esophageal</p>
+<p>Nonportal Portal Isolated gastric varices</p>
+<p>hypertension hypertension varices</p>
+<p>source gastropathy</p>
+<p>Endoscopic EVL</p>
+<p>therapy with N-</p>
+<p>Treat TIPS butyl-</p>
+<p>cyanoacrylate</p>
+<p>Re-bleeding No re-bleeding</p>
+<h2>TIPS</h2>
+<p>Within first</p>
+<p>Continue EVL</p>
+<p>5 days:</p>
+<p>β-blocker</p>
+<p>reattempt EVL</p>
+<p>Persistent</p>
+<p>bleeding: TIPS</p>
+<p>(ABCs, airway, breathing, and circulation; EVL, endoscopic vein ligation; TIPS, transjugular intrahepatic</p>
+<p>portosystemic shunt.)</p>
+<h2>FIGURE 21-1. Management of acute variceal hemorrhage.</h2>
+<p>233</p>
+<p>ch21.indd 233 19-11-2020 11:20:07</p>
+<div class="table-container"><table><tr><th>Resusc
+AB
+seda</th><th>itation
+Cs
+tion</th></tr></table></div><div class="table-container"><table><tr><th>Octre
+proph
+antibiotic</th><th>otide
+ylactic
+therapy</th></tr></table></div><div class="table-container"><table><tr><th>Non
+hyper
+so</th><th>portal
+tension
+urce</th></tr></table></div><div class="table-container"><table><tr><th>Po
+hypert
+gastro</th><th>rtal
+ension
+pathy</th></tr></table></div><div class="table-container"><table><tr><th>Endo
+therap
+b
+cyano</th><th>scopic
+y with N-
+utyl-
+acrylate</th></tr></table></div><div class="table-container"><table><tr><th>EV</th><th>L</th></tr></table></div><div class="table-container"><table><tr><th>Re-bl</th><th>eeding</th></tr></table></div><div class="table-container"><table><tr><th>No re-bl</th><th>eeding</th></tr></table></div><div class="table-container"><table><tr><th>Withi
+5 d
+reattem</th><th>n first
+ays:
+pt EVL</th></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 21-4 Evidence-Based Table of Select Treatment Recommendations: Variceal Bleeding</p>
+<p>in Portal Hypertension</p>
+<p>Recommendation Grade</p>
+<p>Prevention of variceal bleeding</p>
+<p>Nonselective β-blocker therapy should be initiated in:</p>
+<p>Patients with small varices and criteria for increased risk of 1b</p>
+<p>hemorrhage</p>
+<p>Patients with medium/large varices 1a</p>
+<p>EVL may be recommended for prevention in patients with 1a</p>
+<p>medium/large varices at high risk of hemorrhage instead of</p>
+<p>nonselective β-blocker therapy</p>
+<p>Treatment of variceal bleeding</p>
+<p>Short-term antibiotic prophylaxis should be instituted on 1a</p>
+<p>admission</p>
+<p>Vasoactive drugs should be started as soon as possible, prior to 1a</p>
+<p>endoscopy, and maintained for up to 5 days</p>
+<p>Endoscopy should be performed to diagnose variceal bleeding 1b</p>
+<p>and treat bleeding with EVL</p>
+<p>Endoscopy should be performed within 12 hours of presentation 5</p>
+<p>Unless contraindicated, erythromycin 250 mg IV should be 1b</p>
+<p>administered 30–120 minutes prior to endoscopy</p>
+<p>Secondary prophylaxis of variceal bleeding</p>
+<p>Nonselective β-blocker therapy plus EVL is the best therapeutic 1a</p>
+<p>option for prevention of recurrent variceal bleeding</p>
+<p>Recommendation grading:</p>
+<p>1a: Systematic review (with homogeneity) of randomized controlled trials.</p>
+<p>1b: Individual randomized controlled trial with narrow confidence interval.</p>
+<p>1c: All or none.</p>
+<p>2a: Systematic review (with homogeneity) of cohort studies.</p>
+<p>2b: Individual cohort study (including low-quality randomized controlled trial).</p>
+<p>2c: Outcomes research; ecological studies.</p>
+<p>3a: Systematic review (with homogeneity) of case-controlled studies.</p>
+<p>3b: Individual case-control study.</p>
+<p>4: Case-series (and poor quality cohort and case-control studies).</p>
+<p>5: Expert opinion.</p>
+<li>Treatment of acute variceal bleeding includes general stabilizing and assessment</li>
+<p>measures as well as specific measures to control the acute hemorrhage and prevent</p>
+<p>complications.</p>
+<li>Initial treatment goals include: (1) adequate blood volume resuscitation, (2) protec-</li>
+<p>tion of the airway from aspiration of blood, (3) prophylaxis against SBP and other</p>
+<p>infections, (4) control of bleeding, (5) prevention of rebleeding, (6) preservation of</p>
+<pre><code>liver function of HE, and (7) prevention of acute kidney injury.</code></pre>
+<li>Prompt stabilization of blood volume to maintain hemoglobin of 7 g/dL (70 g/L; 4.34</li>
+<p>mmol/L) to 8 g/dL (80 g/L; 4.97 mmol/L) is recommended.</p>
+<li>Combination pharmacologic therapy plus EVL (preferred) or sclerotherapy (when</li>
+<p>EVL is not technically feasible) is the most rational approach to treatment of acute</p>
+<p>variceal bleeding.</p>
+<li>Vasoactive drug therapy is used to stop or slow bleeding as soon as a diagnosis</li>
+<p>of variceal bleeding is suspected and is started before endoscopy. Treatment with</p>
+<p>234</p>
+<p>ch21.indd 234 19-11-2020 11:20:07</p>
+<div class="table-container"><table><tr><th>TABLE 21-4 Evidence-Based Table of Select Treatment Recommendations: Variceal Bleeding
+in Portal Hypertension</th><th></th></tr><tr><td>Recommendation</td><td>Grade</td></tr><tr><td>Prevention of variceal bleeding</td><td></td></tr><tr><td>Nonselective β-blocker therapy should be initiated in:</td><td></td></tr><tr><td>Patients with small varices and criteria for increased risk of
+hemorrhage</td><td>1b</td></tr><tr><td>Patients with medium/large varices</td><td>1a</td></tr><tr><td>EVL may be recommended for prevention in patients with
+medium/large varices at high risk of hemorrhage instead of
+nonselective β-blocker therapy</td><td>1a</td></tr><tr><td>Treatment of variceal bleeding</td><td></td></tr><tr><td>Short-term antibiotic prophylaxis should be instituted on
+admission</td><td>1a</td></tr><tr><td>Vasoactive drugs should be started as soon as possible, prior to
+endoscopy, and maintained for up to 5 days</td><td>1a</td></tr><tr><td>Endoscopy should be performed to diagnose variceal bleeding
+and treat bleeding with EVL</td><td>1b</td></tr><tr><td>Endoscopy should be performed within 12 hours of presentation</td><td>5</td></tr><tr><td>Unless contraindicated, erythromycin 250 mg IV should be
+administered 30–120 minutes prior to endoscopy</td><td>1b</td></tr><tr><td>Secondary prophylaxis of variceal bleeding</td><td></td></tr><tr><td>Nonselective β-blocker therapy plus EVL is the best therapeutic
+option for prevention of recurrent variceal bleeding</td><td>1a</td></tr></table></div><h2>Cirrhosis and Portal Hypertension | CHAPTER 21</h2>
+<p>TABLE 21-5 Evidence-Based Table of Selected Treatment Recommendations: Ascites and</p>
+<p>Spontaneous Bacterial Peritonitis</p>
+<p>Recommendation Grade</p>
+<p>Ascites</p>
+<p>Paracentesis should be performed in patients with apparent new-onset IC</p>
+<p>ascites</p>
+<p>Sodium restriction of 2000 mg/day should be instituted as well as oral IIaA</p>
+<p>diuretic therapy with spironolactone and furosemide</p>
+<p>Diuretic-sensitive patients should be treated with sodium restriction and IIaC</p>
+<p>diuretics rather than serial paracentesis</p>
+<p>Refractory ascites</p>
+<p>Serial therapeutic paracenteses may be performed IC</p>
+<p>Postparacentesis albumin infusion of 6–8 g/L of fluid removed can be IIaA</p>
+<p>considered if more than 5 L is removed during paracentesis</p>
+<p>Treatment of SBP</p>
+<p>If ascitic fluid PMN counts are &gt;250 cells/mm3 (0.25 × 109/L), empiric IA</p>
+<p>antibiotic therapy should be instituted (cefotaxime 2 g every 8 hours)</p>
+<p>If ascitic fluid PMN counts are &lt;250 cells/mm3 (0.25 × 109/L), but signs IB</p>
+<p>or symptoms of infection exist, empiric antibiotic therapy should be</p>
+<p>initiated while awaiting culture results</p>
+<p>Ofloxacin 400 mg twice daily may be substituted for cefotaxime in IIaB</p>
+<p>patients without vomiting, shock, grade II or higher encephalopathy,</p>
+<p>or serum creatinine &gt;3 mg/dL (265 μmol/L) and if there is no prior</p>
+<p>exposure to quinolones</p>
+<p>If ascitic fluid polymorphonuclear leukocyte counts are &gt;250 cells/mm3 IIaB</p>
+<p>(0.25 × 109/L), clinical suspicion of SBP is present, and the patient has</p>
+<p>a serum creatinine &gt;1 mg/dL (88 μmol/L), blood urea nitrogen &gt;30</p>
+<p>mg/dL (10.7 mmol/L), or total bilirubin over 4 mg/dL (68.4 μmol/L),</p>
+<p>1.5 g/kg albumin should be infused within 6 hours of detection and</p>
+<p>1 g/kg albumin infusion should also be given on day 3</p>
+<p>Prophylaxis against SBP</p>
+<p>Short-term antibiotic prophylaxis should be used for 7 days to prevent IA</p>
+<p>SBP in cirrhosis patients with GI hemorrhage</p>
+<p>Patients who survive an episode of SBP should receive long-term IA</p>
+<p>prophylaxis with either daily ciprofloxacin or trimethoprim–</p>
+<p>sulfamethoxazole</p>
+<p>Patients with low-protein ascites (&lt;1.5 g/dL [15 g/L]) plus at least one of IA</p>
+<p>the following: serum creatinine ≥1.2 mg/dL (106 μmol/L), blood urea</p>
+<p>nitrogen ≥25 mg/dL (8.9 mmol/L), serum sodium ≤130 mEq/L (mmol/L),</p>
+<p>or Child–Pugh score of ≥9 with bilirubin ≥3 mg/dL (51.3 μmol/L) may</p>
+<p>also justifiably receive long-term ciprofloxacin or sulfamethoxazole/</p>
+<p>trimethoprim as prophylaxis</p>
+<p>Recommendation grading: Class I—conditions for which there is evidence and/or general</p>
+<p>agreement; Class II—conditions for which there is conflicting evidence and/or a divergence of</p>
+<p>opinion; Class IIa—weight of evidence/opinion is in favor of efficacy; Class IIb—efficacy less well</p>
+<p>established; Class III—conditions for which there is evidence and/or general agreement that</p>
+<p>treatment is not effective and/or potentially harmful; Level A—data from multiple randomized</p>
+<p>trials or meta-analyses; Level B—data derived from single randomized trial or nonrandomized</p>
+<p>studies; Level C—only consensus opinion, case studies, or standard of care.</p>
+<p>235</p>
+<p>ch21.indd 235 19-11-2020 11:20:07</p>
+<div class="table-container"><table><tr><th>TABLE 21-5 Evidence-Based Table of Selected Treatment Recommendations: Ascites and
+Spontaneous Bacterial Peritonitis</th><th></th></tr><tr><td>Recommendation</td><td>Grade</td></tr><tr><td>Ascites</td><td></td></tr><tr><td>Paracentesis should be performed in patients with apparent new-onset
+ascites</td><td>IC</td></tr><tr><td>Sodium restriction of 2000 mg/day should be instituted as well as oral
+diuretic therapy with spironolactone and furosemide</td><td>IIaA</td></tr><tr><td>Diuretic-sensitive patients should be treated with sodium restriction and
+diuretics rather than serial paracentesis</td><td>IIaC</td></tr><tr><td>Refractory ascites</td><td></td></tr><tr><td>Serial therapeutic paracenteses may be performed</td><td>IC</td></tr><tr><td>Postparacentesis albumin infusion of 6–8 g/L of fluid removed can be
+considered if more than 5 L is removed during paracentesis</td><td>IIaA</td></tr><tr><td>Treatment of SBP</td><td></td></tr><tr><td>If ascitic fluid PMN counts are &gt;250 cells/mm3 (0.25 × 109/L), empiric
+antibiotic therapy should be instituted (cefotaxime 2 g every 8 hours)</td><td>IA</td></tr><tr><td>If ascitic fluid PMN counts are &lt;250 cells/mm3 (0.25 × 109/L), but signs
+or symptoms of infection exist, empiric antibiotic therapy should be
+initiated while awaiting culture results</td><td>IB</td></tr><tr><td>Ofloxacin 400 mg twice daily may be substituted for cefotaxime in
+patients without vomiting, shock, grade II or higher encephalopathy,
+or serum creatinine &gt;3 mg/dL (265 μmol/L) and if there is no prior
+exposure to quinolones</td><td>IIaB</td></tr><tr><td>If ascitic fluid polymorphonuclear leukocyte counts are &gt;250 cells/mm3
+(0.25 × 109/L), clinical suspicion of SBP is present, and the patient has
+a serum creatinine &gt;1 mg/dL (88 μmol/L), blood urea nitrogen &gt;30
+mg/dL (10.7 mmol/L), or total bilirubin over 4 mg/dL (68.4 μmol/L),
+1.5 g/kg albumin should be infused within 6 hours of detection and
+1 g/kg albumin infusion should also be given on day 3</td><td>IIaB</td></tr><tr><td>Prophylaxis against SBP</td><td></td></tr><tr><td>Short-term antibiotic prophylaxis should be used for 7 days to prevent
+SBP in cirrhosis patients with GI hemorrhage</td><td>IA</td></tr><tr><td>Patients who survive an episode of SBP should receive long-term
+prophylaxis with either daily ciprofloxacin or trimethoprim–
+sulfamethoxazole</td><td>IA</td></tr><tr><td>Patients with low-protein ascites (&lt;1.5 g/dL [15 g/L]) plus at least one of
+the following: serum creatinine ≥1.2 mg/dL (106 μmol/L), blood urea
+nitrogen ≥25 mg/dL (8.9 mmol/L), serum sodium ≤130 mEq/L (mmol/L),
+or Child–Pugh score of ≥9 with bilirubin ≥3 mg/dL (51.3 μmol/L) may
+also justifiably receive long-term ciprofloxacin or sulfamethoxazole/
+trimethoprim as prophylaxis</td><td>IA</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>octreotide should be initiated early to control bleeding and facilitate endoscopy.</p>
+<p>Octreotide is administered as an IV bolus of 50 mcg followed by a continuous infu-</p>
+<p>sion of 50 mcg/hr. It should be continued for 2–5 days after acute variceal bleeding.</p>
+<p>Vasoactive therapy discontinuation can be considered once the patient is free of</p>
+<p>bleeding for at least 24 hours.</p>
+<li>Prophylactic antibiotic therapy to prevent SBP and other infections should be imple-</li>
+<p>mented upon admission. For all patients with cirrhosis and acute variceal bleeding,</p>
+<p>intravenous ceftriaxone 1 g/24 hours is recommended or oral ciprofloxacin 500 mg</p>
+<p>twice daily, or trimethoprim–sulfamethoxazole one double-strength tablet twice</p>
+<p>daily. A 250-mg dose of erythromycin intravenously prior to endoscopy may be used</p>
+<p>to accelerate gastric emptying of clots and improve visibility during the endoscopic</p>
+<p>procedure.</p>
+<li>Child–Pugh Class C patients and those in Class B with active hemorrhage at the</li>
+<p>time of diagnostic endoscopy are at high risk for failing standard therapy with EVL</p>
+<p>plus octreotide. In these patients early transjugular intrahepatic portosystemic shunt</p>
+<p>(TIPS) may be considered instead of standard therapy. The TIPS procedure involves</p>
+<p>the placement of one or more stents between the hepatic vein and the portal vein.</p>
+<p>Prevention of Rebleeding</p>
+<li>A nonselective β-adrenergic blocker along with EVL is the best treatment option for</li>
+<p>prevention of rebleeding.</p>
+<li>Propranolol may be given at 20 mg twice daily (or nadolol 40 mg once daily) and</li>
+<p>titrated weekly to achieve a goal of heart rate 55–60 beats/min or the maximal toler-</p>
+<p>ated dose. Patients should be monitored for evidence of bradycardia, bronchospasm,</p>
+<p>and hypoglycemia, particularly in patients with insulin-dependent diabetes, as well as</p>
+<p>symptoms of heart failure and excessive sodium and water retention.</p>
+<li>Patients who cannot tolerate or who fail pharmacologic and endoscopic interventions</li>
+<p>can be considered for tips or surgical shunting to prevent bleeding.</p>
+<h2>ASCITES</h2>
+<li>The therapeutic goals for patients with ascites are to control the ascites, prevent or</li>
+<p>relieve ascites-related symptoms (dyspnea, abdominal pain, and distention), and</p>
+<p>prevent SBP and hepatorenal syndrome.</p>
+<li>For patients with ascites, a serum–ascites albumin gradient should be determined.</li>
+<p>If the gradient is ≥1.1 g/dL (11 g/L), the patient almost certainly has portal</p>
+<p>hypertension.</p>
+<li>The treatment of ascites secondary to portal hypertension includes abstinence from</li>
+<p>alcohol, sodium restriction (to 2 g/day), and diuretics. Fluid loss and weight change</p>
+<p>depend directly on sodium balance in these patients. A goal of therapy is to increase</p>
+<p>urinary excretion of sodium to &gt;78 mmol/day.</p>
+<li>Diuretic therapy should be initiated with single morning doses of spironolactone 100</li>
+<p>mg and furosemide 40 mg, titrated every 3–5 days (or spironolactone alone), using the</p>
+<p>100:40 mg dose ratio (spironolactone to furosemide) with a goal of 0.5 kg maximum</p>
+<p>daily weight loss. The dose of each can be increased together, maintaining the 100:40 mg</p>
+<p>ratio, to a maximum daily dose of 400 mg spironolactone and 160 mg furosemide.</p>
+<li>Diuretic therapy should be discontinued in patients who experience uncontrolled</li>
+<p>or recurrent encephalopathy, severe hyponatremia (serum sodium &lt;120 mEq/L</p>
+<p>[mmol/L]) despite fluid restriction, or renal insufficiency (serum creatinine &gt;2 mg/dL</p>
+<p>[177 μmol/L]).</p>
+<li>If tense ascites is present, paracentesis should be performed prior to institution of</li>
+<p>diuretic therapy and salt restriction.</p>
+<li>Liver transplant should be considered in patients with refractory ascites.</li>
+<h2>SPONTANEOUS BACTERIAL PERITONITIS</h2>
+<li>Patients with documented or suspected SBP should receive broad-spectrum anti-</li>
+<p>biotic therapy to cover Escherichia coli, Klebsiella pneumoniae, and Streptococcus</p>
+<p>pneumoniae.</p>
+<p>236</p>
+<p>ch21.indd 236 19-11-2020 11:20:07</p>
+<h2>Cirrhosis and Portal Hypertension | CHAPTER 21</h2>
+<li>Cefotaxime 2 g every 8 hours IV or a similar third-generation cephalosporin for</li>
+<p>5 days is considered the drug of choice. Oral ofloxacin 400 mg every 12 hours for</p>
+<p>8 days is an alternative for patients without vomiting, shock, significant HE, or</p>
+<p>serum creatinine &gt;3 mg/dL (265 μmol/L).</p>
+<li>Patients who survive an episode of SBP should receive long-term antibiotic prophylaxis</li>
+<p>with daily ciprofloxacin 500 mg or double-strength trimethoprim–sulfamethoxazole.</p>
+<h2>HEPATIC ENCEPHALOPATHY</h2>
+<li>The general approach to the management of HE is four pronged and includes the</li>
+<p>following: care for patients with altered consciousness, identify and treat any other</p>
+<p>causes besides HE for altered mental status, identify and treat any precipitating</p>
+<p>factors, and begin empirical HE treatment.</p>
+<h2>• The grading system for HE is shown in Table 21-6.</h2>
+<li>Treatment approaches include: (1) reduction in blood ammonia concentrations</li>
+<p>by dietary restrictions, with drug therapy aimed at inhibiting ammonia produc-</p>
+<p>tion or enhancing its removal (non-absorbable disaccharides such as lactulose and</p>
+<p>antibiotics); and (2) inhibition of γ-aminobutyric acid-benzodiazepine receptors by</p>
+<p>flumazenil.</p>
+<li>To reduce blood ammonia concentrations in patients with episodic HE, protein</li>
+<p>intake is limited or withheld (while maintaining caloric intake) until the clinical situ-</p>
+<p>ation improves. Protein intake can be titrated back up based on tolerance to a total</p>
+<p>of 1.2–1.5 g/kg/day. Vegetable-source and dairy-source protein may be preferable to</p>
+<p>meat-source protein because the latter contains a higher calorie-to-nitrogen ratio.</p>
+<li>To reduce blood ammonia concentrations in episodic HE, lactulose is initiated at a</li>
+<p>dose of 25 g (16.7 g) orally every 1–2 hours (or by retention enema: 300 mL lactulose</p>
+<p>syrup in 1 L water every 6–8 hours) until catharsis begins and the patient experi-</p>
+<p>ences one to two bowel movements. The dose is then decreased to 15–45 mL orally</p>
+<h2>TABLE 21-6 Grading System for Hepatic Encephalopathy</h2>
+<p>Level of Personality/ Neurologic</p>
+<p>Grade Consciousness Intellect Abnormalities</p>
+<p>Unimpaired Normal Normal Normal</p>
+<p>Minimal No clinical evidence of No clinical evidence of No clinical evidence</p>
+<p>change change/alterations of change</p>
+<p>identified on</p>
+<p>psychometric or</p>
+<p>neuropsychological</p>
+<p>testing</p>
+<p>I Trivial lack of Euphoria or anxiety; Altered sleep rhythm</p>
+<p>awareness; impairment</p>
+<p>shortened of addition or</p>
+<p>attention span subtraction</p>
+<p>II Lethargic Obvious personality Asterixis; dyspraxia;</p>
+<p>changes; disoriented</p>
+<p>inappropriate for time</p>
+<p>behavior; apathy</p>
+<p>III Somnolent but Bizarre behavior Responsive to stimuli;</p>
+<p>arousable confused; gross</p>
+<p>disorientation to</p>
+<p>time and space</p>
+<p>IV Coma/unarousable None Does not respond to</p>
+<p>stimuli</p>
+<p>237</p>
+<p>ch21.indd 237 19-11-2020 11:20:08</p>
+<div class="table-container"><table><tr><th>TABLE 21-6 Grading System for Hepatic Encephalopathy</th><th></th><th></th><th></th></tr><tr><td>Grade</td><td>Level of
+Consciousness</td><td>Personality/
+Intellect</td><td>Neurologic
+Abnormalities</td></tr><tr><td>Unimpaired</td><td>Normal</td><td>Normal</td><td>Normal</td></tr><tr><td>Minimal</td><td>No clinical evidence of
+change</td><td>No clinical evidence of
+change/alterations
+identified on
+psychometric or
+neuropsychological
+testing</td><td>No clinical evidence
+of change</td></tr><tr><td>I</td><td>Trivial lack of
+awareness;
+shortened
+attention span</td><td>Euphoria or anxiety;
+impairment
+of addition or
+subtraction</td><td>Altered sleep rhythm</td></tr><tr><td>II</td><td>Lethargic</td><td>Obvious personality
+changes;
+inappropriate
+behavior; apathy</td><td>Asterixis; dyspraxia;
+disoriented
+for time</td></tr><tr><td>III</td><td>Somnolent but
+arousable</td><td>Bizarre behavior</td><td>Responsive to stimuli;
+confused; gross
+disorientation to
+time and space</td></tr><tr><td>IV</td><td>Coma/unarousable</td><td>None</td><td>Does not respond to
+stimuli</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>every 8–12 hours and titrated to produce two to three soft stools per day for chronic</p>
+<p>therapy.</p>
+<li>Rifaximin 550 mg twice daily plus lactulose is superior to lactulose alone in patients</li>
+<p>with a history of recurrent HE. Rifaximin is now considered the next line of therapy</p>
+<p>for recurrent HE over either metronidazole or neomycin.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Table 21-7 summarizes the drug monitoring guidelines for patients with cir-</li>
+<p>rhosis and portal hypertension, including monitoring parameters and therapeutic</p>
+<p>outcomes.</p>
+<h2>TABLE 21-7 Drug Monitoring Guidelines</h2>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reaction Parameter Comments</p>
+<p>Nonselective Heart failure, BP, HR Nadolol, propranolol,</p>
+<p>β-adrenergic bronchospasm, Goal HR: 55–60 carvedilol</p>
+<p>blocker glucose beats/min</p>
+<p>intolerance or maximal</p>
+<p>tolerated dose</p>
+<p>Octreotide Bradycardia, BP, HR, EKG,</p>
+<p>hypertension, abdominal pain</p>
+<p>arrhythmia,</p>
+<p>abdominal pain</p>
+<p>Spironolactone/ Electrolyte Serum electrolytes Spot urine sodium</p>
+<p>furosemide disturbances, (especially concentration</p>
+<p>dehydration, renal potassium), greater than</p>
+<p>insufficiency, SCr, blood urea potassium</p>
+<p>hypotension nitrogen, BP concentration</p>
+<p>Goal sodium correlates well</p>
+<p>excretion: &gt;78 with daily sodium</p>
+<p>mmol/day excretion &gt;78</p>
+<p>mmol/day</p>
+<p>Lactulose Electrolyte Serum electrolytes</p>
+<p>disturbances Goal number of</p>
+<p>soft stools per</p>
+<p>day: 2–3</p>
+<p>Neomycin Ototoxicity, SCr, annual auditory</p>
+<p>nephrotoxicity monitoring</p>
+<p>Metronidazole Neurotoxicity Sensory and motor</p>
+<p>neuropathy</p>
+<p>Rifaximin Nausea, diarrhea</p>
+<p>BP, blood pressure; beats/min, beats per minute; EKG, electrocardiogram; HR, heart rate; SCr, serum</p>
+<p>creatinine; mmol, millimole.</p>
+<p>See Chapter 54, Portal Hypertension and Cirrhosis, authored by Julie M. Sease and</p>
+<p>Alyson G. Wilder, for a more detailed discussion of this topic.</p>
+<p>238</p>
+<p>ch21.indd 238 19-11-2020 11:20:08</p>
+<div class="table-container"><table><tr><th>TABLE 21-7 Drug Monitoring Guidelines</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameter</td><td>Comments</td></tr><tr><td>Nonselective
+β-adrenergic
+blocker</td><td>Heart failure,
+bronchospasm,
+glucose
+intolerance</td><td>BP, HR
+Goal HR: 55–60
+beats/min
+or maximal
+tolerated dose</td><td>Nadolol, propranolol,
+carvedilol</td></tr><tr><td>Octreotide</td><td>Bradycardia,
+hypertension,
+arrhythmia,
+abdominal pain</td><td>BP, HR, EKG,
+abdominal pain</td><td></td></tr><tr><td>Spironolactone/
+furosemide</td><td>Electrolyte
+disturbances,
+dehydration, renal
+insufficiency,
+hypotension</td><td>Serum electrolytes
+(especially
+potassium),
+SCr, blood urea
+nitrogen, BP
+Goal sodium
+excretion: &gt;78
+mmol/day</td><td>Spot urine sodium
+concentration
+greater than
+potassium
+concentration
+correlates well
+with daily sodium
+excretion &gt;78
+mmol/day</td></tr><tr><td>Lactulose</td><td>Electrolyte
+disturbances</td><td>Serum electrolytes
+Goal number of
+soft stools per
+day: 2–3</td><td></td></tr><tr><td>Neomycin</td><td>Ototoxicity,
+nephrotoxicity</td><td>SCr, annual auditory
+monitoring</td><td></td></tr><tr><td>Metronidazole</td><td>Neurotoxicity</td><td>Sensory and motor
+neuropathy</td><td></td></tr><tr><td>Rifaximin</td><td>Nausea, diarrhea</td><td></td><td></td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

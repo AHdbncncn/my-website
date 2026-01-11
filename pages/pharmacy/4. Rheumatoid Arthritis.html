@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Rheumatoid Arthritis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>4. Rheumatoid Arthritis</h1>
+        </header>
+        <main>
+            <p>35</p>
+<h2>RETPAHC</h2>
+<p>4</p>
+<p>Rheumatoid Arthritis</p>
+<li>Rheumatoid arthritis (RA) is a chronic, progressive autoimmune condition that</li>
+<p>primarily affects joints and the synovium but can also have systemic manifestations.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>RA results from a combination of genetic susceptibility, nongenetic factors, and a</li>
+<p>triggering event. An unknown infectious process is thought to be the primary trigger.</p>
+<li>Antigen-presenting cells process and present antigens to T cells; activated T cells</li>
+<p>stimulate B cells to produce autoantibodies that form large complexes that deposit</p>
+<p>throughout the body. Antibodies to immunoglobulin G (IgG) are known as rheuma-</p>
+<p>toid factor (RF) and have a strong correlation to the pathogenesis and poor prognosis</p>
+<p>of RA. B cells also produce proinflammatory cytokines, including tumor necrosis</p>
+<p>factor (TNF) and the interleukin (IL) system, which induce expression of adhesion</p>
+<p>molecules on the endothelium, further enhancing T-cell proliferation and differentia-</p>
+<p>tion, encouraging cell migration, and regulating matrix modeling.</p>
+<li>Overexpression of tumor suppressor gene p53 prevents normal DNA repair and inter-</li>
+<p>feres with appropriate cell apoptosis and increased anti-citrullinated protein antibodies</p>
+<p>(ACPA). ACPA positivity is associated with a worse prognosis in patients with RA.</p>
+<li>Migration of lymphocytes, macrophages, and mononuclear cells into the synovium</li>
+<p>and synovial cavity increases synovial mass, causing hypertrophy and angiogenesis.</p>
+<p>Angiogenesis is driven by IL-8, prostaglandins, vascular endothelial growth fac-</p>
+<p>tor, and macrophage angiogenic factor. As the vessels develop, cytokines stimulate</p>
+<p>further migration of cells into the synovium, causing inflammation. The inflamed,</p>
+<p>fibrotic synovium (pannus) invades cartilage and bone around it, promoting further</p>
+<p>destruction and dysregulation.</p>
+<li>Cytokines within cartilage cause generation of reactive nitrogen and oxygen species</li>
+<p>and increase chondrocyte catabolism, inhibit chondrocyte anabolism, and increase</p>
+<p>extracellular matrix destruction. Proinflammatory cytokines travel to bone, provide</p>
+<p>the source for receptor activator of NFkB ligand (RANKL), and enhance osteoclast</p>
+<p>activity, leading to bone matrix destruction.</p>
+<li>Chronic inflammation in vascular endothelial and visceral, cutaneous, and pleu-</li>
+<p>ral tissues leads to complications including vasculitis, fibrosis, anemia, and renal</p>
+<p>amyloidosis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Nonspecific prodromal symptoms developing over weeks to months include fatigue,</li>
+<p>weakness, low-grade fever, anorexia, and joint pain. Stiffness and myalgias may pre-</p>
+<p>cede development of synovitis.</p>
+<li>Joint involvement tends to be symmetric and affects small joints of the hands, feet,</li>
+<p>wrists, and ankles; elbows, knees, shoulders, hips, cervical spine, and temporoman-</p>
+<p>dibular joints may also be affected.</p>
+<li>Joint stiffness is typically worse in the morning, usually exceeds 30 minutes, and may</li>
+<p>persist all day.</p>
+<li>On examination, joint swelling may be visible or apparent only by palpation. Tissue</li>
+<p>is soft, spongy, warm, and may be erythematous. If left untreated, long-term joint</p>
+<p>inflammation may lead to bony erosions and subluxations of wrists, metacarpopha-</p>
+<p>langeal joints, and proximal interphalangeal joints (swan neck deformity, bouton-</p>
+<p>nière deformity, and ulnar deviation).</p>
+<li>Extra-articular involvement may include rheumatoid nodules, interstitial lung dis-</li>
+<p>ease, pleural effusions, vasculitis, ocular manifestations, pericarditis, cardiac conduc-</p>
+<p>tion abnormalities, bone marrow suppression, and lymphadenopathy.</p>
+<p>ch04.indd 35 18-11-2020 15:48:01</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>4</th><th>Rheumatoid Arthritis</th></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
+<li>RF is detected in 70%–80% of patients; higher titers generally reflect a more severe</li>
+<p>disease course. ACPA antibodies are more specific for RA and may be detectable</p>
+<p>very early in the disease; they generally predict a more aggressive disease course.</p>
+<p>Antinuclear antibodies (ANAs) are detected in 25% of patients with RA. Elevated</p>
+<p>erythrocyte sedimentation rate (ESR) and C-reactive protein (CRP) indicate the</p>
+<p>presence of a nonspecific inflammatory process. Normocytic anemia, thrombocyto-</p>
+<p>sis or thrombocytopenia, and leukopenia may also be present. Analysis of aspirated</p>
+<p>synovial fluid typically demonstrates a high white blood cell count without crystals</p>
+<p>or infection.</p>
+<li>Early radiologic findings include soft tissue swelling and periarticular osteoporosis.</li>
+<p>With disease progression, joint space narrowing, bony erosions, and joint sublux-</p>
+<p>ations and deviations may occur.</p>
+<h2>DIAGNOSIS</h2>
+<li>The American College of Rheumatology (ACR) and the European League Against</li>
+<p>Rheumatism (EULAR) revised criteria for diagnosis of RA in 2010. These criteria</p>
+<p>are intended for patients early in their disease to allow for earlier treatment targeted</p>
+<p>toward preventing structural joint damage. Patients with synovitis of at least one joint</p>
+<p>and no other explanation for the finding are candidates for assessment. The criteria</p>
+<p>use a scoring system with a combined score of 6 or more out of 10 indicating that the</p>
+<p>patient has definite RA.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The ultimate goal is to induce complete remission or low disease</li>
+<p>activity (referred to as “treat to target”). Additional goals are to reduce inflammation</p>
+<pre><code>and symptoms, maintain ability to function in daily activities, slow destructive joint</code></pre>
+<p>changes, and delay disability.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Patient education about the disease and medications (eg, potential adverse effects,</li>
+<h2>self-administration of injectable agents) is important.</h2>
+<li>Physical therapy can reduce pain and inflammation while preserving joint function.</li>
+<p>Exercise and physical activity (including aerobic activity and muscle-strengthening</p>
+<p>exercises) can improve disease outcomes.</p>
+<li>Assistive devices and orthoses such as braces and supports are useful to improve</li>
+<pre><code>pain and function. Occupational therapy can provide benefits such as appropriate</code></pre>
+<p>footwear and splinting.</p>
+<li>Weight loss can help decrease stress on joints.</li>
+<li>Surgical options (eg, joint replacements) are reserved for patients with more severe</li>
+<p>disease with significant cartilage loss.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>General Approach</p>
+<li>Therapies to treat RA and slow disease progression include conventional and biologic</li>
+<p>disease-modifying antirheumatic drugs (DMARDs) and the small-molecule oral</p>
+<p>Janus-kinase (JAK) inhibitors.</p>
+<p>✓ Conventional DMARDs include methotrexate, leflunomide, sulfasalazine, and</p>
+<p>hydroxychloroquine.</p>
+<p>✓ Biologic DMARDs include TNF inhibitors (adalimumab, certolizumab, etan-</p>
+<p>ercept, golimumab, and infliximab) and non-TNF biologics (abatacept, sari-</p>
+<p>lumab, tocilizumab, rituximab, and anakinra).</p>
+<p>✓ JAK inhibitors include baricitinib, tofacitinib, and upadacitinib.</p>
+<li>Current RA treatment guidelines recommend initiating conventional DMARDs irre-</li>
+<p>spective of disease activity in treatment-naive patients once a diagnosis is established</p>
+<p>(Fig. 4-1).</p>
+<p>36</p>
+<p>ch04.indd 36 18-11-2020 15:48:02</p>
+<h2>Rheumatoid Arthritis | CHAPTER 4</h2>
+<p>DMARD-Naïve RA</p>
+<p>with low to high</p>
+<p>disease activity</p>
+<p>DMARD +/– prednisone</p>
+<p>MTX preferred</p>
+<p>Moderate-high disease activity</p>
+<p>Combination DMARD or TNFi +/– MTX or non-TNF</p>
+<p>biologic +/– MTX or Tofacitinib +/– MTX</p>
+<p>Moderate-high disease activity</p>
+<p>Single TNFi Non-TNF biologic</p>
+<p>failure failure</p>
+<p>Non-TNF biologic +/– MTX or Another non-TNF</p>
+<p>TNFi +/– MTX biologic +/– MTX</p>
+<p>Moderate-high disease activity</p>
+<p>Non-TNF biologic or TNFi in TNFi treatment naïve or</p>
+<p>Tofacitinib +/– MTX Tofacitinib +/– MTX</p>
+<p>(DMARD, disease-modifying antirheumatic drug; MTX, methotrexate; TNFi, tumor necrosis factor inhibitor.)</p>
+<p>FIGURE 4-1. Algorithm for treatment of rheumatoid arthritis (RA) in early (&lt;6</p>
+<p>months) or established (≥6 months) RA with low to high disease activity.</p>
+<li>The preferred conventional DMARD is methotrexate unless a contraindication exists.</li>
+<p>However, choice of therapy may depend on the level of disease activity, comorbid</p>
+<p>conditions, patient preference, and insurance coverage.</p>
+<li>For patients with early RA (<6 months duration) and low disease activity, DMARD</li>
+<p>monotherapy is recommended. Double or triple DMARD therapy is recommended</p>
+<p>for moderate or high disease activity. A biologic agent can be used as monotherapy</p>
+<p>or with conventional DMARD(s) in patients with moderate or high disease activity.</p>
+<p>A JAK inhibitor is an alternate option if disease activity remains moderate or high</p>
+<p>with combination conventional DMARDs.</p>
+<li>If disease activity remains moderate or high despite conventional DMARDs or</li>
+<p>biologics, a low-dose glucocorticoid (prednisone ≤10 mg/day or equivalent) can be</p>
+<p>added for the shortest duration necessary. If patients achieve remission, DMARDs</p>
+<p>and biologic agents can be tapered, but patients should remain on DMARD therapy</p>
+<p>at some dosage level.</p>
+<li>For patients with established RA (duration ≥6 months), DMARD monotherapy is</li>
+<p>recommended despite disease activity in DMARD-naive patients. Combination con-</p>
+<p>ventional DMARDs, a biologic DMARD, or a JAK inhibitor can be used if disease</p>
+<p>activity remains moderate or high after an adequate trial with DMARD monotherapy.</p>
+<p>37</p>
+<p>ch04.indd 37 18-11-2020 15:48:03</p>
+<h2>SECTION 1 | Bone and Joint Disorders</h2>
+<p>In patients taking TNF inhibitor monotherapy with moderate or high disease activity,</p>
+<p>one or two conventional DMARDs can be added to the TNF inhibitor. A non-TNF</p>
+<p>biologic can be used in place of a TNF inhibitor if disease activity remains moderate</p>
+<p>or high on a TNF inhibitor and is recommended over a JAK inhibitor. Therapy can be</p>
+<p>switched to another non-TNF biologic if the first non-TNF agent cannot adequately</p>
+<p>control disease activity. A non-TNF biologic can also be started if separate courses of</p>
+<p>two different TNF inhibitors have not adequately controlled disease activity. A JAK</p>
+<p>inhibitor can be initiated if disease activity persists despite multiple TNF inhibitors</p>
+<p>in patients for whom non-TNF biologics are not an option. Dual biologic therapy</p>
+<p>should be avoided due to the risk of infection associated with immunosuppression. A</p>
+<p>glucocorticoid can be added if disease flares occur or disease activity is inadequately</p>
+<p>controlled despite DMARD, TNF inhibitor, or non-TNF biologic therapy.</p>
+<li>Because DMARDs can take weeks to months to take effect, nonsteroidal anti-</li>
+<p>inflammatory drugs (NSAIDs), glucocorticoids, and other analgesics (eg, acetamino-</p>
+<p>phen) can be used to provide more rapid symptomatic relief (“bridge therapy”).</p>
+<p>NSAIDs do not slow disease progression, and glucocorticoids can have serious side</p>
+<p>effects, making both drug classes less desirable for long-term use.</p>
+<li>See Tables 4-1 and 4-2 for usual dosages and monitoring parameters for NSAIDs,</li>
+<p>glucocorticoids, and conventional and biologic DMARDs.</p>
+<p>Conventional DMARDs</p>
+<li>Methotrexate inhibits dihydrofolate reductase, thereby inhibiting DNA synthesis and</li>
+<p>repair and cellular replication. Injectable (subcutaneous [SC], intramuscular [IM])</p>
+<p>methotrexate has higher bioavailability than oral methotrexate and thus provides</p>
+<p>superior clinical efficacy; it is typically better tolerated with less potential to cause</p>
+<p>gastrointestinal (GI) side effects as well. Oral methotrexate doses &gt;15 mg weekly may</p>
+<p>not have significant added clinical benefit; changing to SC methotrexate may increase</p>
+<p>bioavailability and clinical benefit in this situation. Clinical benefit can be seen 3–6</p>
+<p>weeks after starting therapy. Methotrexate has numerous adverse effects (Table 4-2);</p>
+<p>concomitant folic acid 1–5 mg/day may reduce some adverse effects without loss of</p>
+<p>efficacy. Methotrexate is teratogenic, and patients should use contraception and dis-</p>
+<p>continue the drug if conception is planned. Methotrexate is contraindicated in preg-</p>
+<p>nant and nursing women, chronic liver disease, immunodeficiency, and preexisting</p>
+<p>hematologic disorders (eg, leukopenia, thrombocytopenia). Methotrexate excretion</p>
+<p>is reduced in renal impairment and may require dose reduction or discontinuation</p>
+<p>in some cases.</p>
+<li>Leflunomide inhibits pyrimidine synthesis, which reduces lymphocyte proliferation</li>
+<p>and modulation of inflammation. It can be used as monotherapy or in combination</p>
+<p>with other DMARDs. Efficacy for RA is similar to that of methotrexate. A loading</p>
+<p>dose of 100 mg/day for 3 days may achieve steady state more rapidly but may increase</p>
+<p>the risk for toxicities. The usual maintenance dose of 20 mg/day may be lowered to</p>
+<p>10 mg/day in cases of GI intolerance, alopecia, or other dose-related toxicity. Adverse</p>
+<p>effects are listed in Table 4-2. Leflunomide is teratogenic and should not be used in</p>
+<p>pregnant or nursing mothers or in patients with severe hepatic impairment.</p>
+<li>Sulfasalazine can be used as monotherapy or in combination with other DMARDs.</li>
+<p>Clinical benefit usually occurs in 4 weeks, but some patients may require 12 weeks.</p>
+<p>Sulfasalazine use is limited by GI adverse effects (Table 4-2). Sulfasalazine crosses</p>
+<p>the placenta and is present in breast milk but can be used in pregnant and nursing</p>
+<p>mothers with caution.</p>
+<li>Hydroxychloroquine is typically used in combination with other DMARDs, but</li>
+<p>it can be used as monotherapy in mild cases. Clinical benefit is delayed and may</p>
+<p>take several weeks. Its main advantage is that it does not require frequent, routine</p>
+<p>laboratory monitoring because it is not generally associated with infection risk</p>
+<p>or hepatic, renal, or blood cell abnormalities. GI side effects can sometimes be</p>
+<p>mitigated by taking the medication with food or splitting the dose into two doses.</p>
+<p>Hydroxychloroquine can be continued during pregnancy because no studies have</p>
+<p>38</p>
+<p>ch04.indd 38 18-11-2020 15:48:03</p>
+<p>39</p>
+<p>Rheumatoid</p>
+<p>Arthritis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>4</p>
+<p>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs</p>
+<p>Routes of Usual Ranges or</p>
+<p>Drugs Brand Names Administration Starting Dose Maintenance Dose Comments</p>
+<p>Conventional DMARDs</p>
+<p>Methotrexate Rasuvo Oral, SC, IM Oral: 7.5 mg once weekly or 7.5–20 mg every week May be given with folic acid</p>
+<p>Trexall 2.5 mg every 12 hours 1–5 mg/day to reduce adverse</p>
+<p>for 3 doses once weekly effects</p>
+<p>Otrexup (SC)</p>
+<p>SC/IM: 7.5 mg once weekly</p>
+<p>Leflunomide Arava Oral Loading dose: 100 mg daily 10–20 mg daily Not recommended in liver disease (ALT</p>
+<p>for 3 days, then 20 mg daily &gt;3 times ULN)</p>
+<p>or 10–20 mg daily without</p>
+<p>loading dose</p>
+<p>Hydroxychloroquine Plaquenil Oral 200 mg twice daily or 200 mg twice daily or Take with food or milk; use with caution</p>
+<p>400 mg daily 400 mg daily in renal or hepatic impairment</p>
+<p>Sulfasalazine Azulfidine Oral 500 mg once or twice daily 1000 mg twice daily Not recommended in renal or hepatic</p>
+<p>(maximum dose impairment</p>
+<p>3000 mg/day if</p>
+<p>inadequate response</p>
+<p>after 12 weeks of</p>
+<p>2000 mg/day)</p>
+<p>Tumor Necrosis Factor (TNF) Inhibitors</p>
+<p>Adalimumab Humira SC 40 mg every 2 weeks 40 mg every 2 weeks</p>
+<p>(may increase</p>
+<p>to 40 mg once</p>
+<p>weekly if not taking</p>
+<p>methotrexate)</p>
+<p>(Continued)</p>
+<p>ch04.indd</p>
+<p>39</p>
+<p>18-11-2020</p>
+<p>15:48:03</p>
+<div class="table-container"><table><tr><th>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Routes of
+Administration</td><td>Starting Dose</td><td>Usual Ranges or
+Maintenance Dose</td><td>Comments</td></tr><tr><td>Conventional DMARDs</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Methotrexate</td><td>Rasuvo
+Trexall
+Otrexup (SC)</td><td>Oral, SC, IM</td><td>Oral: 7.5 mg once weekly or
+2.5 mg every 12 hours
+for 3 doses once weekly
+SC/IM: 7.5 mg once weekly</td><td>7.5–20 mg every week</td><td>May be given with folic acid
+1–5 mg/day to reduce adverse
+effects</td></tr><tr><td>Leflunomide</td><td>Arava</td><td>Oral</td><td>Loading dose: 100 mg daily
+for 3 days, then 20 mg daily
+or 10–20 mg daily without
+loading dose</td><td>10–20 mg daily</td><td>Not recommended in liver disease (ALT
+&gt;3 times ULN)</td></tr><tr><td>Hydroxychloroquine</td><td>Plaquenil</td><td>Oral</td><td>200 mg twice daily or
+400 mg daily</td><td>200 mg twice daily or
+400 mg daily</td><td>Take with food or milk; use with caution
+in renal or hepatic impairment</td></tr><tr><td>Sulfasalazine</td><td>Azulfidine</td><td>Oral</td><td>500 mg once or twice daily</td><td>1000 mg twice daily
+(maximum dose
+3000 mg/day if
+inadequate response
+after 12 weeks of
+2000 mg/day)</td><td>Not recommended in renal or hepatic
+impairment</td></tr><tr><td>Tumor Necrosis Factor (TNF) Inhibitors</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Adalimumab</td><td>Humira</td><td>SC</td><td>40 mg every 2 weeks</td><td>40 mg every 2 weeks
+(may increase
+to 40 mg once
+weekly if not taking
+methotrexate)</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>(Continued)</td></tr></table></div><h2>40 SECTION</h2>
+<p>1</p>
+<p>|</p>
+<p>Bone</p>
+<p>and</p>
+<p>Joint</p>
+<p>Disorders</p>
+<p>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs(Continued)</p>
+<p>Routes of Usual Ranges or</p>
+<p>Drugs Brand Names Administration Starting Dose Maintenance Dose Comments</p>
+<p>Certolizumab Cimzia SC 400 mg at 0, 2, 4 weeks 200 mg every other</p>
+<p>week or 400 mg every</p>
+<p>4 weeks</p>
+<p>Etanercept Enbrel SC 50 mg once weekly or 25 mg Same as starting dose</p>
+<p>twice weekly</p>
+<p>Golimumab Simponi SC 50 mg once monthly Same as starting dose</p>
+<p>Infliximab Remicade IV 3 mg/kg at 0, 2, 6 weeks, and 3–10 mg/kg every Given in combination with</p>
+<p>then every 8 weeks 4–8 weeks methotrexate; pretreat</p>
+<p>with methylprednisolone,</p>
+<p>acetaminophen, and antihistamine</p>
+<p>Costimulation Modulator</p>
+<p>Abatacept Orencia IV, SC IV: &lt;60 kg: 500 mg, 60–100 kg: IV: dose based on weight</p>
+<p>750 mg, &gt;100 kg: 1000 mg every 4 weeks</p>
+<p>at 0, 2, and 4 weeks or initial SC: 125 mg weekly</p>
+<p>IV dose followed by 125 mg</p>
+<p>SC within 24 hours</p>
+<p>SC: 125 mg weekly</p>
+<p>ch04.indd</p>
+<p>40</p>
+<p>18-11-2020</p>
+<p>15:48:04</p>
+<div class="table-container"><table><tr><th>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs(Continued)</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Routes of
+Administration</td><td>Starting Dose</td><td>Usual Ranges or
+Maintenance Dose</td><td>Comments</td></tr><tr><td>Certolizumab</td><td>Cimzia</td><td>SC</td><td>400 mg at 0, 2, 4 weeks</td><td>200 mg every other
+week or 400 mg every
+4 weeks</td><td></td></tr><tr><td>Etanercept</td><td>Enbrel</td><td>SC</td><td>50 mg once weekly or 25 mg
+twice weekly</td><td>Same as starting dose</td><td></td></tr><tr><td>Golimumab</td><td>Simponi</td><td>SC</td><td>50 mg once monthly</td><td>Same as starting dose</td><td></td></tr><tr><td>Infliximab</td><td>Remicade</td><td>IV</td><td>3 mg/kg at 0, 2, 6 weeks, and
+then every 8 weeks</td><td>3–10 mg/kg every
+4–8 weeks</td><td>Given in combination with
+methotrexate; pretreat
+with methylprednisolone,
+acetaminophen, and antihistamine</td></tr><tr><td>Costimulation Modulator</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Abatacept</td><td>Orencia</td><td>IV, SC</td><td>IV: &lt;60 kg: 500 mg, 60–100 kg:
+750 mg, &gt;100 kg: 1000 mg
+at 0, 2, and 4 weeks or initial
+IV dose followed by 125 mg
+SC within 24 hours
+SC: 125 mg weekly</td><td>IV: dose based on weight
+every 4 weeks
+SC: 125 mg weekly</td><td></td></tr></table></div><p>41</p>
+<p>Rheumatoid</p>
+<p>Arthritis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>4</p>
+<p>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs</p>
+<p>IL-6 Receptor Antagonists</p>
+<p>Sarilumab Kevzara SC 200 mg every 2 weeks Same as starting dose</p>
+<p>Tocilizumab Actemra IV, SC IV: 4 mg/kg every 4 weeks, IV: 4–8 mg/kg every 4 Can increase metabolism of CYP3A4</p>
+<p>SC: &lt;100 kg: 162 mg every weeks (maximum substrates</p>
+<p>other week, &gt;100 kg: 800 mg per infusion)</p>
+<p>162 mg weekly SC: &lt;100 kg: 162 mg</p>
+<p>every other week,</p>
+<p>followed by an</p>
+<p>increase to weekly</p>
+<p>injections if needed;</p>
+<p>&gt;100 kg: 162 mg</p>
+<p>weekly</p>
+<p>Janus Kinase (JAK) Inhibitors</p>
+<p>Baricitinib Olumiant Oral IR 2 mg once daily Same as starting dose 1 mg once daily in patients taking</p>
+<p>strong organic anion transporter 3</p>
+<p>(OAT3) inhibitors (eg, probenecid)</p>
+<p>Tofacitinib Xeljanz Oral IR: 5 mg twice daily Same as starting dose 5 mg once daily in moderate-to-severe</p>
+<p>ER: 11 mg daily renal insufficiency, moderate</p>
+<p>hepatic impairment, or concomitant</p>
+<p>CYP3A4 or CYP2C19 inhibitors</p>
+<p>Upadacitinib Rinvoq Oral ER 15 mg once daily Same as starting dose Use with caution with strong CYP3A4</p>
+<p>inhibitors; coadministration with</p>
+<p>strong CYP3A4 inducers is not</p>
+<p>recommended.</p>
+<p>(Continued)</p>
+<p>ch04.indd</p>
+<p>41</p>
+<p>18-11-2020</p>
+<p>15:48:04</p>
+<div class="table-container"><table><tr><th>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs</th><th></th></tr><tr><td></td><td>Rheumatoid
+Arthritis
+|
+CHAPTER
+4</td></tr></table></div><div class="table-container"><table><tr><th>IL-6 Receptor Antagonists</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Sarilumab</td><td>Kevzara</td><td>SC</td><td>200 mg every 2 weeks</td><td>Same as starting dose</td><td></td></tr><tr><td>Tocilizumab</td><td>Actemra</td><td>IV, SC</td><td>IV: 4 mg/kg every 4 weeks,
+SC: &lt;100 kg: 162 mg every
+other week, &gt;100 kg:
+162 mg weekly</td><td>IV: 4–8 mg/kg every 4
+weeks (maximum
+800 mg per infusion)
+SC: &lt;100 kg: 162 mg
+every other week,
+followed by an
+increase to weekly
+injections if needed;
+&gt;100 kg: 162 mg
+weekly</td><td>Can increase metabolism of CYP3A4
+substrates</td></tr><tr><td>Janus Kinase (JAK) Inhibitors</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Baricitinib</td><td>Olumiant</td><td>Oral IR</td><td>2 mg once daily</td><td>Same as starting dose</td><td>1 mg once daily in patients taking
+strong organic anion transporter 3
+(OAT3) inhibitors (eg, probenecid)</td></tr><tr><td>Tofacitinib</td><td>Xeljanz</td><td>Oral</td><td>IR: 5 mg twice daily
+ER: 11 mg daily</td><td>Same as starting dose</td><td>5 mg once daily in moderate-to-severe
+renal insufficiency, moderate
+hepatic impairment, or concomitant
+CYP3A4 or CYP2C19 inhibitors</td></tr><tr><td>Upadacitinib</td><td>Rinvoq</td><td>Oral ER</td><td>15 mg once daily</td><td>Same as starting dose</td><td>Use with caution with strong CYP3A4
+inhibitors; coadministration with
+strong CYP3A4 inducers is not
+recommended.</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>(Continued)</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div><h2>42 SECTION</h2>
+<p>1</p>
+<p>|</p>
+<p>Bone</p>
+<p>and</p>
+<p>Joint</p>
+<p>Disorders</p>
+<p>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs(Continued)</p>
+<p>Routes of Usual Ranges or</p>
+<p>Drugs Brand Names Administration Starting Dose Maintenance Dose Comments</p>
+<p>Anti-CD20 Monoclonal Antibody</p>
+<p>Rituximab Rituxan IV 1000 mg in 2 doses given 2 Initial dose may be Pretreat with methylprednisolone,</p>
+<p>weeks apart repeated every 16–24 acetaminophen, and antihistamine</p>
+<p>weeks based on</p>
+<p>response</p>
+<p>IL-1 Receptor Antagonist</p>
+<p>Anakinra Kineret SC 100 mg once daily Same as starting dose</p>
+<p>ALT, alanine transaminase; CYP, cytochrome P; ER, extended release; IM, intramuscular; IR, immediate release; IV, intravenous; SC, subcutaneous; ULN, upper limit of normal.</p>
+<p>ch04.indd</p>
+<p>42</p>
+<p>18-11-2020</p>
+<p>15:48:04</p>
+<div class="table-container"><table><tr><th>TABLE 4-1 Usual Doses for Disease-Modifying Antirheumatic Drugs(Continued)</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Routes of
+Administration</td><td>Starting Dose</td><td>Usual Ranges or
+Maintenance Dose</td><td>Comments</td></tr><tr><td>Anti-CD20 Monoclonal Antibody</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Rituximab</td><td>Rituxan</td><td>IV</td><td>1000 mg in 2 doses given 2
+weeks apart</td><td>Initial dose may be
+repeated every 16–24
+weeks based on
+response</td><td>Pretreat with methylprednisolone,
+acetaminophen, and antihistamine</td></tr><tr><td>IL-1 Receptor Antagonist</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Anakinra</td><td>Kineret</td><td>SC</td><td>100 mg once daily</td><td>Same as starting dose</td><td></td></tr></table></div><h2>Rheumatoid Arthritis | CHAPTER 4</h2>
+<p>shown an increased risk of birth defects or ocular toxicities. Hydroxychloroquine is</p>
+<p>excreted into breast milk, and caution should be used in nursing mothers. Periodic</p>
+<p>ophthalmologic examinations are necessary for early detection of irreversible retinal</p>
+<h2>toxicity (Table 4-2).</h2>
+<p>Biologic DMARDs</p>
+<li>Biologic agents are genetically engineered proteins that decrease inflammation by</li>
+<p>various mechanisms. They are categorized as either TNF inhibitors or non-TNF bio-</p>
+<p>logics. They may be effective when conventional DMARDs fail to achieve adequate</p>
+<p>disease control but are considerably more expensive.</p>
+<li>Biologic DMARDs are associated with an increased risk of infection due to immuno-</li>
+<p>suppressive effects. A tuberculin skin test or interferon gamma release assay (IGRA)</p>
+<p>blood test should be obtained before starting a biologic to detect and treat latent or</p>
+<p>active tuberculosis. Patients should also be screened for hepatitis B before starting</p>
+<p>biologic therapy because of the risk for reactivation.</p>
+<li>Biologics can be used in combination with conventional DMARDs, but multiple bio-</li>
+<p>logics should not be used concomitantly due to additive immunosuppressive effects.</p>
+<p>In general, if patients are switched from one biologic to another, the new agent should</p>
+<p>be initiated when the patient is due for a dose of the previous biologic. Because of</p>
+<p>immunosuppressive effects, patients taking biologics should notify their providers</p>
+<p>if they are being treated for an infection or plan to undergo major surgery. Treat-</p>
+<p>ment may need to be held until appropriate postsurgical healing and/or resolution</p>
+<p>of infection can be confirmed. Live vaccines should not be given to patients taking</p>
+<p>biologic agents.</p>
+<li>Biosimilars are biologic products that have been verified to have no clinically meaning-</li>
+<p>ful differences compared to an FDA-approved reference biologic product. These agents</p>
+<p>can increase access to RA treatment because their costs are lower than the originator</p>
+<p>products. However, concerns that limit their use include lack of regulatory guidelines</p>
+<p>about switching from the original biologic product to the biosimilar and uncertainty</p>
+<p>about extrapolation of indications for biosimilars from the original biologic product.</p>
+<p>TNF-α Inhibitors</p>
+<li>TNF inhibitors block the proinflammatory cytokine TNF-α. It may take several</li>
+<p>weeks for clinical benefit to be noted and up to 3 months to achieve full clinical</p>
+<p>benefit. These agents are typically used when disease activity remains moderate or</p>
+<p>high despite conventional DMARD therapy. TNF inhibitors are more expensive than</p>
+<p>conventional DMARDs.</p>
+<li>Selection of a particular TNF inhibitor depends on cost and patient preference for</li>
+<p>route and frequency of administration. They should not be used in patients with</p>
+<p>moderate-to-severe heart failure (New York Heart Association [NYHA] class III/IV)</p>
+<p>because new-onset and worsening heart failure have been reported. These agents</p>
+<p>increase the risk of serious infection and malignancies (eg, lymphoma, skin cancers),</p>
+<p>and new-onset or exacerbation of demyelinating disorders such as multiple sclerosis</p>
+<p>has been observed.</p>
+<li>See Tables 4-1 and 4-2 for dosing and monitoring information.</li>
+<p>✓ Adalimumab (Humira) binds to TNF-α and blocks its interaction with the p55</p>
+<p>and p75 cell surface TNF receptors. It is available as a prefilled syringe or pen for</p>
+<p>SC injection.</p>
+<p>✓ Certolizumab (Cimzia) is a pegylated humanized antibody Fab fragment of</p>
+<p>TNF-α monoclonal antibody. Because it lacks the Fc region, it does not induce</p>
+<p>complement activation, antibody-dependent cell-mediated cytotoxicity, or apop-</p>
+<p>tosis. Pegylation allows for delayed elimination and extended half-life. It is</p>
+<p>available as a prefilled syringe for SC injection.</p>
+<p>✓ Etanercept (Enbrel) is a recombinant DNA-derived protein composed of TNF</p>
+<p>receptor linked to the Fc fragment of human IgG1. It is available as a prefilled</p>
+<p>syringe or pen for SC injection.</p>
+<p>43</p>
+<p>ch04.indd 43 18-11-2020 15:48:05</p>
+<h2>44 SECTION</h2>
+<p>1</p>
+<p>|</p>
+<p>Bone</p>
+<p>and</p>
+<p>Joint</p>
+<p>Disorders</p>
+<p>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis</p>
+<p>Drugs Adverse Drug Reactions Initial Monitoring Maintenance Monitoring</p>
+<p>NSAIDs GI ulceration, bleeding, perforation; renal damage SCr, CBC every 2–4 weeks after Same as initial plus stool guaiac every 6–12 months</p>
+<p>starting therapy</p>
+<p>Corticosteroids Fluid retention, hyperglycemia, hypertension, Glucose, CBC periodically, BP Same as initial</p>
+<p>behavioral and mood changes, increased every 3–6 months</p>
+<p>appetite, weight gain, electrolyte imbalances,</p>
+<p>impaired healing, hirsutism, Cushing syndrome,</p>
+<p>HPA axis suppression, osteonecrosis of femoral</p>
+<p>and humeral heads, osteoporosis and fractures,</p>
+<p>myopathy, glaucoma, cataracts</p>
+<p>Methotrexate Infection, hepatic fibrosis, cirrhosis, interstitial SCr, CBC with differential, SCr, CBC with differential, AST, ALT, every 2–4 weeks for</p>
+<p>pneumonitis, stomatitis, rash, GI perforation, AST, ALT, hepatitis B and 3 months after starting or following a dose increase,</p>
+<p>diarrhea, thrombocytopenia, leukopenia C screening, tuberculosis then every 8–12 weeks during 3–6 months of therapy,</p>
+<p>screening and every 12 weeks after 6 months of therapy; signs of</p>
+<p>infection</p>
+<p>Leflunomide Hepatitis, diarrhea/nausea, alopecia, elevated BP CBC with differential, SCr, ALT, CBC with differential, SCr, ALT, AST every 2–4 weeks for 3</p>
+<p>AST, BP months after starting or following a dose increase, then</p>
+<p>every 8–12 weeks during 3–6 months of therapy, and</p>
+<p>every 12 weeks after 6 months of therapy; BP periodically</p>
+<p>Sulfasalazine Rash, nausea, vomiting, diarrhea, photosensitivity, CBC with differential, SCr, CBC with differential, SCr, ALT, AST every 2–4 weeks for 3</p>
+<p>alopecia ALT, AST months after starting or following a dose increase, then</p>
+<p>every 8–12 weeks during 3–6 months of therapy, and</p>
+<p>every 12 weeks after 6 months of therapy</p>
+<p>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis</p>
+<p>Drugs Adverse Drug Reactions Initial Monitoring Maintenance Monitoring</p>
+<p>Hydroxychloroquine Retinal damage, rash, diarrhea Ophthalmologic exam within 5 Ophthalmologic exam annually if risk factors for retinal</p>
+<p>years of starting therapy damage present or annually beginning after 5 years of</p>
+<p>use if no risk factors</p>
+<p>Etanercept, Local injection-site reactions, infection, malignancy Tuberculosis screening, hepatitis Periodic skin examination, signs/symptoms of infection</p>
+<p>adalimumab, B screening, CBC with and malignancy, CBC with differential periodically</p>
+<p>golimumab, differential</p>
+<p>certolizumab</p>
+<p>Infliximab Immune reactions, infection, malignancy Tuberculosis screening, hepatitis CBC with differential, LFTs, signs/symptoms of infection</p>
+<p>B screening, CBC with and malignancy</p>
+<p>differential, LFTs</p>
+<p>Abatacept Immune reactions, infection, malignancy Tuberculosis screening, hepatitis Signs/symptoms of infection and malignancy</p>
+<p>B screening</p>
+<p>Sarilumab Local injection-site reactions, infection, malignancy Tuberculosis screening, hepatitis CBC with differential and LFTs 4–8 weeks after starting</p>
+<p>B screening, CBC with and then every 3 months, FLP 4–8 weeks after starting</p>
+<p>differential, LFTs, lipid panel and every 6 months during therapy, signs/symptoms of</p>
+<p>infection and malignancy</p>
+<p>Tocilizumab Local injection-site reactions, infection, malignancy, Tuberculosis screening, hepatitis AST, ALT, CBC with differential every 4–8 weeks after</p>
+<p>GI perforation, neutropenia, thrombocytopenia B screening, CBC with starting then every 3 months; FLP after 4–8 weeks</p>
+<p>differential, AST, ALT, FLP of starting then every 6 months; signs/symptoms of</p>
+<p>infection and malignancy</p>
+<p>Baricitinib, tofacitinib, Infection, malignancy, GI perforations, upper Tuberculosis screening, hepatitis CBC with differential and Hgb after 4–8 weeks and every</p>
+<p>upadacitinib respiratory tract infections, headache, diarrhea, B screening, CBC with 3 months, FLP after 4–8 weeks and periodically, LFTs</p>
+<p>nasopharyngitis differential, Hgb, LFTs, FLP, periodically, periodic skin examinations, HR and BP,</p>
+<p>HR, and BP signs/symptoms of infection and malignancy</p>
+<p>ch04.indd</p>
+<p>44</p>
+<p>18-11-2020</p>
+<p>15:48:05</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<div class="table-container"><table><tr><th>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis
+Drugs Adverse Drug Reactions Initial Monitoring Maintenance Monitoring</th><th></th><th></th><th></th></tr><tr><td>NSAIDs</td><td>GI ulceration, bleeding, perforation; renal damage</td><td>SCr, CBC every 2–4 weeks after
+starting therapy</td><td>Same as initial plus stool guaiac every 6–12 months</td></tr><tr><td>Corticosteroids</td><td>Fluid retention, hyperglycemia, hypertension,
+behavioral and mood changes, increased
+appetite, weight gain, electrolyte imbalances,
+impaired healing, hirsutism, Cushing syndrome,
+HPA axis suppression, osteonecrosis of femoral
+and humeral heads, osteoporosis and fractures,
+myopathy, glaucoma, cataracts</td><td>Glucose, CBC periodically, BP
+every 3–6 months</td><td>Same as initial</td></tr><tr><td>Methotrexate</td><td>Infection, hepatic fibrosis, cirrhosis, interstitial
+pneumonitis, stomatitis, rash, GI perforation,
+diarrhea, thrombocytopenia, leukopenia</td><td>SCr, CBC with differential,
+AST, ALT, hepatitis B and
+C screening, tuberculosis
+screening</td><td>SCr, CBC with differential, AST, ALT, every 2–4 weeks for
+3 months after starting or following a dose increase,
+then every 8–12 weeks during 3–6 months of therapy,
+and every 12 weeks after 6 months of therapy; signs of
+infection</td></tr><tr><td>Leflunomide</td><td>Hepatitis, diarrhea/nausea, alopecia, elevated BP</td><td>CBC with differential, SCr, ALT,
+AST, BP</td><td>CBC with differential, SCr, ALT, AST every 2–4 weeks for 3
+months after starting or following a dose increase, then
+every 8–12 weeks during 3–6 months of therapy, and
+every 12 weeks after 6 months of therapy; BP periodically</td></tr><tr><td>Sulfasalazine</td><td>Rash, nausea, vomiting, diarrhea, photosensitivity,
+alopecia</td><td>CBC with differential, SCr,
+ALT, AST</td><td>CBC with differential, SCr, ALT, AST every 2–4 weeks for 3
+months after starting or following a dose increase, then
+every 8–12 weeks during 3–6 months of therapy, and
+every 12 weeks after 6 months of therapy</td></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><p>45</p>
+<p>Rheumatoid</p>
+<p>Arthritis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>4</p>
+<p>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis</p>
+<p>Drugs Adverse Drug Reactions Initial Monitoring Maintenance Monitoring</p>
+<p>Hydroxychloroquine Retinal damage, rash, diarrhea Ophthalmologic exam within 5 Ophthalmologic exam annually if risk factors for retinal</p>
+<p>years of starting therapy damage present or annually beginning after 5 years of</p>
+<p>use if no risk factors</p>
+<p>Etanercept, Local injection-site reactions, infection, malignancy Tuberculosis screening, hepatitis Periodic skin examination, signs/symptoms of infection</p>
+<p>adalimumab, B screening, CBC with and malignancy, CBC with differential periodically</p>
+<p>golimumab, differential</p>
+<p>certolizumab</p>
+<p>Infliximab Immune reactions, infection, malignancy Tuberculosis screening, hepatitis CBC with differential, LFTs, signs/symptoms of infection</p>
+<p>B screening, CBC with and malignancy</p>
+<p>differential, LFTs</p>
+<p>Abatacept Immune reactions, infection, malignancy Tuberculosis screening, hepatitis Signs/symptoms of infection and malignancy</p>
+<p>B screening</p>
+<p>Sarilumab Local injection-site reactions, infection, malignancy Tuberculosis screening, hepatitis CBC with differential and LFTs 4–8 weeks after starting</p>
+<p>B screening, CBC with and then every 3 months, FLP 4–8 weeks after starting</p>
+<p>differential, LFTs, lipid panel and every 6 months during therapy, signs/symptoms of</p>
+<p>infection and malignancy</p>
+<p>Tocilizumab Local injection-site reactions, infection, malignancy, Tuberculosis screening, hepatitis AST, ALT, CBC with differential every 4–8 weeks after</p>
+<p>GI perforation, neutropenia, thrombocytopenia B screening, CBC with starting then every 3 months; FLP after 4–8 weeks</p>
+<p>differential, AST, ALT, FLP of starting then every 6 months; signs/symptoms of</p>
+<p>infection and malignancy</p>
+<p>Baricitinib, tofacitinib, Infection, malignancy, GI perforations, upper Tuberculosis screening, hepatitis CBC with differential and Hgb after 4–8 weeks and every</p>
+<p>upadacitinib respiratory tract infections, headache, diarrhea, B screening, CBC with 3 months, FLP after 4–8 weeks and periodically, LFTs</p>
+<p>nasopharyngitis differential, Hgb, LFTs, FLP, periodically, periodic skin examinations, HR and BP,</p>
+<p>HR, and BP signs/symptoms of infection and malignancy</p>
+<p>(Continued)</p>
+<p>ch04.indd</p>
+<p>45</p>
+<p>18-11-2020</p>
+<p>15:48:05</p>
+<div class="table-container"><table><tr><th>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis</th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Adverse Drug Reactions</td><td>Initial Monitoring</td><td>Maintenance Monitoring</td></tr><tr><td>Hydroxychloroquine</td><td>Retinal damage, rash, diarrhea</td><td>Ophthalmologic exam within 5
+years of starting therapy</td><td>Ophthalmologic exam annually if risk factors for retinal
+damage present or annually beginning after 5 years of
+use if no risk factors</td></tr><tr><td>Etanercept,
+adalimumab,
+golimumab,
+certolizumab</td><td>Local injection-site reactions, infection, malignancy</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential</td><td>Periodic skin examination, signs/symptoms of infection
+and malignancy, CBC with differential periodically</td></tr><tr><td>Infliximab</td><td>Immune reactions, infection, malignancy</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential, LFTs</td><td>CBC with differential, LFTs, signs/symptoms of infection
+and malignancy</td></tr><tr><td>Abatacept</td><td>Immune reactions, infection, malignancy</td><td>Tuberculosis screening, hepatitis
+B screening</td><td>Signs/symptoms of infection and malignancy</td></tr><tr><td>Sarilumab</td><td>Local injection-site reactions, infection, malignancy</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential, LFTs, lipid panel</td><td>CBC with differential and LFTs 4–8 weeks after starting
+and then every 3 months, FLP 4–8 weeks after starting
+and every 6 months during therapy, signs/symptoms of
+infection and malignancy</td></tr><tr><td>Tocilizumab</td><td>Local injection-site reactions, infection, malignancy,
+GI perforation, neutropenia, thrombocytopenia</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential, AST, ALT, FLP</td><td>AST, ALT, CBC with differential every 4–8 weeks after
+starting then every 3 months; FLP after 4–8 weeks
+of starting then every 6 months; signs/symptoms of
+infection and malignancy</td></tr><tr><td>Baricitinib, tofacitinib,
+upadacitinib</td><td>Infection, malignancy, GI perforations, upper
+respiratory tract infections, headache, diarrhea,
+nasopharyngitis</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential, Hgb, LFTs, FLP,
+HR, and BP</td><td>CBC with differential and Hgb after 4–8 weeks and every
+3 months, FLP after 4–8 weeks and periodically, LFTs
+periodically, periodic skin examinations, HR and BP,
+signs/symptoms of infection and malignancy</td></tr><tr><td>(Continued)</td><td></td><td></td><td></td></tr></table></div><h2>46 SECTION</h2>
+<p>1</p>
+<p>|</p>
+<p>Bone</p>
+<p>and</p>
+<p>Joint</p>
+<p>Disorders</p>
+<p>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis(Continued)</p>
+<p>Drugs Adverse Drug Reactions Initial Monitoring Maintenance Monitoring</p>
+<p>Rituximab Immune reactions, infection, malignancy Tuberculosis screening, hepatitis CBC with differential prior to each treatment course and at</p>
+<p>B screening, CBC with 2- to 4-month intervals, signs/symptoms of infection</p>
+<p>differential</p>
+<p>Anakinra Local injection site reactions, infection, malignancy CBC with differential, CBC with differential every 3 months up to 1 year,</p>
+<p>tuberculosis screening, SCr, SCr periodically, signs/symptoms of infection and</p>
+<p>hepatitis B screening malignancy</p>
+<p>ALT, alanine transaminase; AST, aspartate transaminase; BP, blood pressure; CBC, complete blood count; FLP, fasting lipid panel; GI, gastrointestinal; Hgb, hemoglobin; HPA, hypothalamic–</p>
+<pre><code>pituitary–adrenal; HR, heart rate; LFTs, liver function tests; NSAIDs, nonsteroidal anti-inflammatory drugs; SCr, serum creatinine.</code></pre>
+<p>ch04.indd</p>
+<p>46</p>
+<p>18-11-2020</p>
+<p>15:48:05</p>
+<div class="table-container"><table><tr><th>TABLE 4-2 Clinical Monitoring of Drug Therapy in Rheumatoid Arthritis(Continued)</th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Adverse Drug Reactions</td><td>Initial Monitoring</td><td>Maintenance Monitoring</td></tr><tr><td>Rituximab</td><td>Immune reactions, infection, malignancy</td><td>Tuberculosis screening, hepatitis
+B screening, CBC with
+differential</td><td>CBC with differential prior to each treatment course and at
+2- to 4-month intervals, signs/symptoms of infection</td></tr><tr><td>Anakinra</td><td>Local injection site reactions, infection, malignancy</td><td>CBC with differential,
+tuberculosis screening, SCr,
+hepatitis B screening</td><td>CBC with differential every 3 months up to 1 year,
+SCr periodically, signs/symptoms of infection and
+malignancy</td></tr></table></div><h2>Rheumatoid Arthritis | CHAPTER 4</h2>
+<p>✓ Golimumab (Simponi) is a human monoclonal antibody that binds to human</p>
+<p>TNF-α. It is available as a prefilled syringe or pen for SC injection. It is also avail-</p>
+<p>able as an intravenous (IV) product.</p>
+<p>✓ Infliximab (Remicade) is a chimeric monoclonal antibody that binds to human</p>
+<p>TNF-α. It is administered as an IV infusion. To prevent formation of an antibody</p>
+<p>response to this foreign protein, methotrexate must be given orally in doses used</p>
+<p>to treat RA for as long as the patient continues infliximab. Premedication with an</p>
+<p>antihistamine, acetaminophen, and/or a glucocorticoid can decrease development</p>
+<p>of infusion-related reactions. Patients on infliximab plus methotrexate have been</p>
+<p>shown to have a better clinical response than patients treated with methotrexate</p>
+<p>alone.</p>
+<p>Costimulation Modulator</p>
+<li>Abatacept (Orencia) inhibits T-cell activation by binding to CD80 and CD86, which</li>
+<p>blocks the interaction between T cells CD28, thus inhibiting the activation of T cells.</p>
+<p>Abatacept is indicated for moderate-to-severe RA and can be used as monotherapy or</p>
+<p>in conjunction with conventional DMARDs. Abatacept is typically initiated if disease</p>
+<p>activity persists after conventional DMARD monotherapy and can be an alternative</p>
+<p>to TNF inhibitors with or without methotrexate. It can also be initiated in patients</p>
+<p>who have failed or have had an inadequate response to TNF inhibitors. Abatacept</p>
+<p>plus methotrexate has similar efficacy and incidence of adverse events as adalim-</p>
+<p>umab plus methotrexate in biologic-naive patients who had an incomplete response</p>
+<p>to methotrexate. Abatacept is available in a prefilled syringe or auto-injector for SC</p>
+<p>injection and as an IV infusion.</p>
+<p>IL-6 Receptor Antagonists</p>
+<li>Sarilumab (Kevzara) is indicated for treatment of patients with moderate-to-severe</li>
+<p>RA who have had an incomplete response or intolerance to one or more DMARDs.</p>
+<p>It can be used as monotherapy or with conventional DMARDs. It is available as</p>
+<p>prefilled syringes for SC injection.</p>
+<li>Tocilizumab (Actemra) can be used for patients with moderate-to-severe RA who</li>
+<p>have had an incomplete response to one or more DMARDs. It can be used alone or</p>
+<p>in combination with conventional DMARDs. It is available as prefilled syringes for</p>
+<p>SC injection and as an IV infusion.</p>
+<p>Anti-CD20 Monoclonal Antibody</p>
+<li>Rituximab (Rituxan) is a monoclonal antibody that binds the CD20 antigen on the</li>
+<p>surface of B cells. Binding of rituximab to B cells results in nearly complete deple-</p>
+<p>tion of peripheral B cells, with a gradual recovery over several months. Rituximab</p>
+<p>can be initiated in patients with moderate-to-severe RA who have had an incom-</p>
+<p>plete response to one or more TNF inhibitors. Methotrexate should be given con-</p>
+<p>currently in the usual doses for RA to achieve optimal outcomes. An observational</p>
+<p>cohort study showed that patients who failed one TNF inhibitor had greater reduc-</p>
+<p>tions in disease activity scores when treated with rituximab than with a second</p>
+<p>TNF inhibitor. Rituximab is given as two 1000-mg infusions separated by 2 weeks.</p>
+<p>Because recovery of B-cells can take several months, rituximab can be given every</p>
+<p>24 weeks. The decision to re-dose should be based on the return of RA symptoms.</p>
+<p>Methylprednisolone 100 mg IV is recommended 30 minutes before each infusion</p>
+<p>as well as acetaminophen and an antihistamine to reduce the incidence and severity</p>
+<p>of infusion reactions.</p>
+<p>IL-1 Receptor Antagonist</p>
+<li>Anakinra (Kineret) is an IL-1 receptor antagonist; it is less effective than other bio-</li>
+<p>logics, is used infrequently, and is not included in the current ACR treatment recom-</p>
+<p>mendations. However, it can be used in patients with moderate-to-severe RA who</p>
+<p>have failed one or more DMARDs. Anakinra can be used alone or in combination</p>
+<p>with DMARDs other than TNF-α inhibitors.</p>
+<p>47</p>
+<p>ch04.indd 47 18-11-2020 15:48:06</p>
+<h2>SECTION 1 | Bone and Joint Disorders</h2>
+<p>Janus-Kinase Inhibitors</p>
+<li>Baricitinib (Olumiant), tofacitinib (Xeljanz), and upadacitinib (Rinvoq) are oral,</li>
+<p>small-molecule, nonbiologic JAK inhibitors. Baricitinib is FDA approved for adults</p>
+<p>with moderately to severely active RA who have had an inadequate response to one</p>
+<p>or more TNF inhibitors; it may be used alone or in combination with methotrexate</p>
+<p>or other conventional DMARDs. Tofacitinib and upadacitinib have FDA approval</p>
+<p>for treatment of adults with moderately to severely active RA who have had an inad-</p>
+<p>equate response or intolerance to methotrexate; these drugs may be used as mono-</p>
+<p>therapy or in combination with methotrexate or other nonbiologic DMARDs. JAK</p>
+<p>inhibitors should not be given concomitantly with biologic agents.</p>
+<li>Labeling for all JAK inhibitors includes black-box warnings about serious infections,</li>
+<p>lymphomas, and other malignancies. Live vaccinations should not be given during treat-</p>
+<p>ment. Patients should be tested and treated for latent tuberculosis before starting therapy.</p>
+<p>Nonsteroidal Anti-inflammatory Drugs</p>
+<li>NSAIDs inhibit prostaglandin synthesis, which is a small portion of the inflammatory</li>
+<p>cascade. They possess both analgesic and anti-inflammatory properties and reduce</p>
+<p>stiffness, but they do not slow disease progression or prevent bony erosions or joint</p>
+<p>deformity and should not be used as monotherapy for RA treatment. They have a more</p>
+<p>rapid onset of action than DMARDs and may be beneficial to “bridge” patients while</p>
+<p>DMARDs take effect. Common NSAID dosage regimens are shown in Table 4-3.</p>
+<p>TABLE 4-3 Dosage Regimens for Nonsteroidal Anti-inflammatory Drugs</p>
+<p>Recommended Total Daily Anti-inflammatory Dosage</p>
+<p>Drug Adult Children Dosing Schedule</p>
+<p>Aspirin 2.6–5.2 g 60–100 mg/kg 4 times daily</p>
+<p>Celecoxib 200–400 mg – Once or twice daily</p>
+<p>Diclofenac 150–200 mg – 3 or 4 times daily; extended</p>
+<p>release: twice daily</p>
+<p>Diflunisal 0.5–1.5 g – Twice daily</p>
+<p>Etodolac 0.2–1.2 g (max. – 2–4 times daily</p>
+<p>20 mg/kg)</p>
+<p>Fenoprofen 0.9–3 g – 4 times daily</p>
+<p>Flurbiprofen 200–300 mg – 2–4 times daily</p>
+<p>Ibuprofen 1.2–3.2 g 20–40 mg/kg 3 or 4 times daily</p>
+<p>Indomethacin 50–200 mg 2–4 mg/kg (max. 2–4 times daily; extended</p>
+<p>200 mg) release: once daily</p>
+<p>Meclofenamate 200–400 mg – 3–4 times daily</p>
+<p>Meloxicam 7.5–15 mg – Once daily</p>
+<p>Nabumetone 1–2 g – Once or twice daily</p>
+<p>Naproxen 0.5–1 g 10 mg/kg Twice daily; extended</p>
+<p>release: once daily</p>
+<p>Naproxen sodium 0.55–1.1 g – Twice daily</p>
+<p>Nonacetylated 1.2–4.8 g – 2–6 times daily</p>
+<p>salicylates</p>
+<p>Oxaprozin 0.6–1.8 g (max. – 1–3 times daily</p>
+<p>26 mg/kg)</p>
+<p>Piroxicam 10–20 mg – Once daily</p>
+<p>Sulindac 300–400 mg – Twice daily</p>
+<p>Tolmetin 0.6–1.8 g 15–30 mg/kg 2–4 times daily</p>
+<p>48</p>
+<p>ch04.indd 48 18-11-2020 15:48:06</p>
+<div class="table-container"><table><tr><th>TABLE 4-3 Dosage Regimens for Nonsteroidal Anti-inflammatory Drugs</th><th></th><th></th><th></th></tr><tr><td></td><td>Recommended Total Daily Anti-inflammatory Dosage</td><td></td><td></td></tr><tr><td>Drug</td><td>Adult</td><td>Children</td><td>Dosing Schedule</td></tr><tr><td>Aspirin</td><td>2.6–5.2 g</td><td>60–100 mg/kg</td><td>4 times daily</td></tr><tr><td>Celecoxib</td><td>200–400 mg</td><td>–</td><td>Once or twice daily</td></tr><tr><td>Diclofenac</td><td>150–200 mg</td><td>–</td><td>3 or 4 times daily; extended
+release: twice daily</td></tr><tr><td>Diflunisal</td><td>0.5–1.5 g</td><td>–</td><td>Twice daily</td></tr><tr><td>Etodolac</td><td>0.2–1.2 g (max.
+20 mg/kg)</td><td>–</td><td>2–4 times daily</td></tr><tr><td>Fenoprofen</td><td>0.9–3 g</td><td>–</td><td>4 times daily</td></tr><tr><td>Flurbiprofen</td><td>200–300 mg</td><td>–</td><td>2–4 times daily</td></tr><tr><td>Ibuprofen</td><td>1.2–3.2 g</td><td>20–40 mg/kg</td><td>3 or 4 times daily</td></tr><tr><td>Indomethacin</td><td>50–200 mg</td><td>2–4 mg/kg (max.
+200 mg)</td><td>2–4 times daily; extended
+release: once daily</td></tr><tr><td>Meclofenamate</td><td>200–400 mg</td><td>–</td><td>3–4 times daily</td></tr><tr><td>Meloxicam</td><td>7.5–15 mg</td><td>–</td><td>Once daily</td></tr><tr><td>Nabumetone</td><td>1–2 g</td><td>–</td><td>Once or twice daily</td></tr><tr><td>Naproxen</td><td>0.5–1 g</td><td>10 mg/kg</td><td>Twice daily; extended
+release: once daily</td></tr><tr><td>Naproxen sodium</td><td>0.55–1.1 g</td><td>–</td><td>Twice daily</td></tr><tr><td>Nonacetylated
+salicylates</td><td>1.2–4.8 g</td><td>–</td><td>2–6 times daily</td></tr><tr><td>Oxaprozin</td><td>0.6–1.8 g (max.
+26 mg/kg)</td><td>–</td><td>1–3 times daily</td></tr><tr><td>Piroxicam</td><td>10–20 mg</td><td>–</td><td>Once daily</td></tr><tr><td>Sulindac</td><td>300–400 mg</td><td>–</td><td>Twice daily</td></tr><tr><td>Tolmetin</td><td>0.6–1.8 g</td><td>15–30 mg/kg</td><td>2–4 times daily</td></tr></table></div><h2>Rheumatoid Arthritis | CHAPTER 4</h2>
+<p>Glucocorticoids</p>
+<li>Glucocorticoids have anti-inflammatory and immunosuppressive properties; although</li>
+<p>they have been shown to slow RA progression, glucocorticoids should not be used</p>
+<p>as monotherapy for RA due to the potential for serious, long-term adverse effects</p>
+<p>(Table 4-2). They should be used at the lowest effective dose for the shortest period of</p>
+<p>time. According to the ACR, short-term glucocorticoid therapy is defined as &lt;3 months,</p>
+<p>and low-dose glucocorticoid is defined as prednisone ≤10 mg/day (or equivalent).</p>
+<li>Similar to NSAIDs, oral glucocorticoids (eg, prednisone, methylprednisolone) can</li>
+<p>be used to “bridge” patients while DMARDs take effect. They can also be used as</p>
+<p>adjuncts to DMARDs at the lowest dose possible in patients with refractory disease.</p>
+<p>High-dose, short-term bursts can be used as needed for acute flares of RA symptoms,</p>
+<p>followed by tapering to the lowest effective dose to control symptoms or until discon-</p>
+<p>tinued over several days.</p>
+<li>The IM route may be useful in nonadherent patients. Depot forms (triamcinolone</li>
+<p>acetonide, triamcinolone hexacetonide, and methylprednisolone acetate) provide 2–6</p>
+<p>weeks of symptom control. Onset of effect may be delayed for several days. The depot</p>
+<p>effect provides a physiologic taper, avoiding hypothalamic–pituitary axis suppression.</p>
+<li>Intra-articular injections may be useful when only a few joints are involved. Injec-</li>
+<p>tions should not be repeated more often than every 3 months because of the potential</p>
+<p>for accelerated loss of joint cartilage.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess disease activity at baseline and at each follow-up visit to evaluate therapeutic</li>
+<p>response. Clinical signs of improvement include reduction in joint pain, swelling, and</p>
+<p>tenderness; less morning stiffness; reduced fatigue; and improved ability to perform</p>
+<p>activities of daily living.</p>
+<li>Perform a physical examination at each visit to objectively evaluate the number of</li>
+<p>swollen and tender joints, joint mobility, and presence of deformity.</p>
+<li>Several assessment tools are available to measure RA disease activity, such as the</li>
+<p>Clinical Disease Activity Index (CDAI), Disease Activity Score (DAS28), Patient</p>
+<p>Activity Scale (PAS), Routine Assessment of Patient Index Data 3 (RAPID-3), and</p>
+<p>Simplified Disease Activity Index (SDAI).</p>
+<li>Laboratory monitoring of acute phase reactants such as CRP and ESR can be useful</li>
+<p>in assessing inflammation.</p>
+<li>Obtain plain radiographs of the hands, wrists, and forefeet at baseline and every</li>
+<p>2 years in patients with low disease activity or in remission. Little to no evidence of</p>
+<p>RA disease progression should be evident if drug therapy is effective. Imaging may</p>
+<p>be needed more frequently in patients with moderate or high disease activity. Drug</p>
+<p>therapy should be modified if patients have radiographic changes suggestive of dis-</p>
+<p>ease progression (eg, periarticular osteopenia, bone erosions, joint space narrowing).</p>
+<li>It is important to monitor and assess for clinical and laboratory adverse effects of the</li>
+<h2>medications used to treat RA (Table 4-2).</h2>
+<p>See Chapter 107, Rheumatoid Arthritis, authored by Stephanie Gruber, Bianca Lezcano,</p>
+<p>and Susan Hylland, for a detailed discussion of this topic.</p>
+<p>49</p>
+<p>ch04.indd 49 18-11-2020 15:48:07</p>
+<p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مكتبة الصيدلة الشاملة - دليل كامل للأدوية والعلاجات الصيدلانية">
+    <title>مكتبة الصيدلة الشاملة - دليل الأدوية والعلاجات</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #11998e;
+            --secondary-color: #38ef7d;
+            --accent-color: #4facfe;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f7f6;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-group {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .category-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            list-style: none;
+        }
+
+        .file-link {
+            display: block;
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            transition: var(--transition);
+            border-right: 5px solid transparent;
+        }
+
+        .file-link:hover {
+            background: #e9ecef;
+            border-right-color: var(--primary-color);
+            transform: translateX(-5px);
+            color: var(--primary-color);
+        }
+
+        .search-container {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        #pharmacy-search {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 2px solid #ddd;
+            font-size: 1.1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        #pharmacy-search:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(17, 153, 142, 0.2);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html"><span>🌐</span> الموقع المتعدد المجالات</a>
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                        <li><a href="programming.html" class="nav-link">البرمجة</a></li>
+                        <li><a href="health.html" class="nav-link">الطب والصحة</a></li>
+                        <li><a href="pharmacy.html" class="nav-link active">مكتبة الصيدلة</a></li>
+                        <li><a href="religion.html" class="nav-link">الدين</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">💊 مكتبة الصيدلة الشاملة</h1>
+            <p>دليل متكامل يضم أكثر من 80 مرجعاً طبياً وصيدلانياً متخصصاً</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="pharmacy-search" placeholder="ابحث عن موضوع طبي أو دواء..." onkeyup="filterFiles()">
+        </div>
+
+        <div id="pharmacy-content">
+            <!-- الروابط المولدة ستبدأ من هنا -->
+            <div class="category-group" id="cardiovascular">
+                <h2 class="category-title">❤️ Cardiovascular (أمراض القلب)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/10. Hypertension.html" class="file-link">10. Hypertension</a></li>
+                    <li><a href="pharmacy/11. Ischemic Heart Disease.html" class="file-link">11. Ischemic Heart Disease</a></li>
+                    <li><a href="pharmacy/12. Shock Syndromes.html" class="file-link">12. Shock Syndromes</a></li>
+                    <li><a href="pharmacy/13. Stroke.html" class="file-link">13. Stroke</a></li>
+                    <li><a href="pharmacy/14. Venous Thromboembolism.html" class="file-link">14. Venous Thromboembolism</a></li>
+                    <li><a href="pharmacy/21. Cirrhosis and Portal Hypertension.html" class="file-link">21. Cirrhosis and Portal Hypertension</a></li>
+                    <li><a href="pharmacy/46. Sepsis and Septic Shock.html" class="file-link">46. Sepsis and Septic Shock</a></li>
+                    <li><a href="pharmacy/6. Arrhythmias.html" class="file-link">6. Arrhythmias</a></li>
+                    <li><a href="pharmacy/7. Cardiac Arrest.html" class="file-link">7. Cardiac Arrest</a></li>
+                    <li><a href="pharmacy/8. Dyslipidemia.html" class="file-link">8. Dyslipidemia</a></li>
+                    <li><a href="pharmacy/9. Heart Failure.html" class="file-link">9. Heart Failure</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="infections">
+                <h2 class="category-title">🦠 Infections (العدوى والالتهابات)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/35. Antimicrobial Regimen Selection.html" class="file-link">35. Antimicrobial Regimen Selection</a></li>
+                    <li><a href="pharmacy/36. Central Nervous System Infections.html" class="file-link">36. Central Nervous System Infections</a></li>
+                    <li><a href="pharmacy/37. Endocarditis.html" class="file-link">37. Endocarditis</a></li>
+                    <li><a href="pharmacy/38. Fungal Infections, Invasive.html" class="file-link">38. Fungal Infections, Invasive</a></li>
+                    <li><a href="pharmacy/39. Fungal Infections, Superficial.html" class="file-link">39. Fungal Infections, Superficial</a></li>
+                    <li><a href="pharmacy/40. Gastrointestinal Infections.html" class="file-link">40. Gastrointestinal Infections</a></li>
+                    <li><a href="pharmacy/41. Human Immunodeficiency Virus Infection.html" class="file-link">41. Human Immunodeficiency Virus Infection</a></li>
+                    <li><a href="pharmacy/42. Influenza.html" class="file-link">42. Influenza</a></li>
+                    <li><a href="pharmacy/43. Intra-Abdominal Infections.html" class="file-link">43. Intra-Abdominal Infections</a></li>
+                    <li><a href="pharmacy/44. Respiratory Tract Infections, Lower.html" class="file-link">44. Respiratory Tract Infections, Lower</a></li>
+                    <li><a href="pharmacy/45. Respiratory Tract Infections, Upper.html" class="file-link">45. Respiratory Tract Infections, Upper</a></li>
+                    <li><a href="pharmacy/48. Skin and Soft-Tissue Infections.html" class="file-link">48. Skin and Soft-Tissue Infections</a></li>
+                    <li><a href="pharmacy/50. Tuberculosis.html" class="file-link">50. Tuberculosis</a></li>
+                    <li><a href="pharmacy/51. Urinary Tract Infections and Prostatitis.html" class="file-link">51. Urinary Tract Infections and Prostatitis</a></li>
+                    <li><a href="pharmacy/52. Vaccines, Toxoids, and Other Immunobiologics.html" class="file-link">52. Vaccines, Toxoids, and Other Immunobiologics</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="endocrine">
+                <h2 class="category-title">🩺 Endocrine & Metabolic (الغدد والتمثيل الغذائي)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/18. Adrenal Gland Disorders.html" class="file-link">18. Adrenal Gland Disorders</a></li>
+                    <li><a href="pharmacy/19. Diabetes Mellitus.html" class="file-link">19. Diabetes Mellitus</a></li>
+                    <li><a href="pharmacy/20. Thyroid Disorders.html" class="file-link">20. Thyroid Disorders</a></li>
+                    <li><a href="pharmacy/58. Obesity.html" class="file-link">58. Obesity</a></li>
+                    <li><a href="pharmacy/59. Nutrition Assessment and Support.html" class="file-link">59. Nutrition Assessment and Support</a></li>
+                    <li><a href="pharmacy/Appendix 1. Pediatric Pharmacotherapy, Nutrition, and Neonatal Critical Care.html" class="file-link">Appendix 1. Pediatric Pharmacotherapy, Nutrition, and Neonatal Critical Care</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="neurological">
+                <h2 class="category-title">🧠 Neurological & Psychiatric (الأعصاب والنفسية)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/53. Alzheimer Disease.html" class="file-link">53. Alzheimer Disease</a></li>
+                    <li><a href="pharmacy/54. Epilepsy and Status Epilepticus.html" class="file-link">54. Epilepsy and Status Epilepticus</a></li>
+                    <li><a href="pharmacy/55. Headache Migraine and Tension-Type.html" class="file-link">55. Headache Migraine and Tension-Type</a></li>
+                    <li><a href="pharmacy/56. Pain Management.html" class="file-link">56. Pain Management</a></li>
+                    <li><a href="pharmacy/57. Parkinson Disease.html" class="file-link">57. Parkinson Disease</a></li>
+                    <li><a href="pharmacy/66. Anxiety Disorders.html" class="file-link">66. Anxiety Disorders</a></li>
+                    <li><a href="pharmacy/67. Bipolar Disorder.html" class="file-link">67. Bipolar Disorder</a></li>
+                    <li><a href="pharmacy/68. Depressive Disorder.html" class="file-link">68. Depressive Disorder</a></li>
+                    <li><a href="pharmacy/69. Opioid Use Disorder.html" class="file-link">69. Opioid Use Disorder</a></li>
+                    <li><a href="pharmacy/70. Schizophrenia.html" class="file-link">70. Schizophrenia</a></li>
+                    <li><a href="pharmacy/71. Sleep–Wake Disorders.html" class="file-link">71. Sleep–Wake Disorders</a></li>
+                    <li><a href="pharmacy/72. Substance Use Disorders Alcohol, CNS Depressants, Stimulants, Nicotine.html" class="file-link">72. Substance Use Disorders Alcohol, CNS Depressants, Stimulants, Nicotine</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="oncology">
+                <h2 class="category-title">🔬 Oncology (الأورام)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/60. Breast Cancer.html" class="file-link">60. Breast Cancer</a></li>
+                    <li><a href="pharmacy/61. Colorectal Cancer.html" class="file-link">61. Colorectal Cancer</a></li>
+                    <li><a href="pharmacy/62. Lung Cancer.html" class="file-link">62. Lung Cancer</a></li>
+                    <li><a href="pharmacy/63. Lymphomas.html" class="file-link">63. Lymphomas</a></li>
+                    <li><a href="pharmacy/64. Prostate Cancer.html" class="file-link">64. Prostate Cancer</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="gastrointestinal">
+                <h2 class="category-title">🍽️ Gastrointestinal (الجهاز الهضمي)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/22. Constipation.html" class="file-link">22. Constipation</a></li>
+                    <li><a href="pharmacy/23. Diarrhea.html" class="file-link">23. Diarrhea</a></li>
+                    <li><a href="pharmacy/24. Gastroesophageal Reflux Disease.html" class="file-link">24. Gastroesophageal Reflux Disease</a></li>
+                    <li><a href="pharmacy/25. Hepatitis, Viral.html" class="file-link">25. Hepatitis, Viral</a></li>
+                    <li><a href="pharmacy/26. Inflammatory Bowel Disease.html" class="file-link">26. Inflammatory Bowel Disease</a></li>
+                    <li><a href="pharmacy/27. Nausea and Vomiting.html" class="file-link">27. Nausea and Vomiting</a></li>
+                    <li><a href="pharmacy/28. Pancreatitis.html" class="file-link">28. Pancreatitis</a></li>
+                    <li><a href="pharmacy/29. Peptic Ulcer Disease.html" class="file-link">29. Peptic Ulcer Disease</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="respiratory">
+                <h2 class="category-title">💨 Respiratory (الجهاز التنفسي)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/77. Allergic Rhinitis.html" class="file-link">77. Allergic Rhinitis</a></li>
+                    <li><a href="pharmacy/78. Asthma.html" class="file-link">78. Asthma</a></li>
+                    <li><a href="pharmacy/79. Chronic Obstructive Pulmonary Disease.html" class="file-link">79. Chronic Obstructive Pulmonary Disease</a></li>
+                    <li><a href="pharmacy/Appendix 7. Drug-Induced Pulmonary Disease.html" class="file-link">Appendix 7. Drug-Induced Pulmonary Disease</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="musculoskeletal">
+                <h2 class="category-title">🦴 Musculoskeletal & Skin (العظام والجلد)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/1. Gout and Hyperuricemia.html" class="file-link">1. Gout and Hyperuricemia</a></li>
+                    <li><a href="pharmacy/15. Acne Vulgaris.html" class="file-link">15. Acne Vulgaris</a></li>
+                    <li><a href="pharmacy/16. Dermatologic Drug Reactions and Common Skin Conditions.html" class="file-link">16. Dermatologic Drug Reactions and Common Skin Conditions</a></li>
+                    <li><a href="pharmacy/17. Psoriasis.html" class="file-link">17. Psoriasis</a></li>
+                    <li><a href="pharmacy/2. Osteoarthritis.html" class="file-link">2. Osteoarthritis</a></li>
+                    <li><a href="pharmacy/3. Osteoporosis.html" class="file-link">3. Osteoporosis</a></li>
+                    <li><a href="pharmacy/4. Rheumatoid Arthritis.html" class="file-link">4. Rheumatoid Arthritis</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="renal">
+                <h2 class="category-title">💧 Renal & Urology (الكلى والمسالك)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/73. Acid–Base Disorders.html" class="file-link">73. Acid–Base Disorders</a></li>
+                    <li><a href="pharmacy/74. Acute Kidney Injury.html" class="file-link">74. Acute Kidney Injury</a></li>
+                    <li><a href="pharmacy/75. Chronic Kidney Disease.html" class="file-link">75. Chronic Kidney Disease</a></li>
+                    <li><a href="pharmacy/76. Electrolyte Homeostasis.html" class="file-link">76. Electrolyte Homeostasis</a></li>
+                    <li><a href="pharmacy/80. Benign Prostatic Hyperplasia.html" class="file-link">80. Benign Prostatic Hyperplasia</a></li>
+                    <li><a href="pharmacy/81. Erectile Dysfunction.html" class="file-link">81. Erectile Dysfunction</a></li>
+                    <li><a href="pharmacy/82. Urinary Incontinence.html" class="file-link">82. Urinary Incontinence</a></li>
+                    <li><a href="pharmacy/Appendix 8. Drug-Induced Kidney Disease.html" class="file-link">Appendix 8. Drug-Induced Kidney Disease</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="womens">
+                <h2 class="category-title">👩‍⚕️ Women's Health (صحة المرأة)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/30. Contraception.html" class="file-link">30. Contraception</a></li>
+                    <li><a href="pharmacy/31. Hormone Therapy in Women.html" class="file-link">31. Hormone Therapy in Women</a></li>
+                    <li><a href="pharmacy/32. Pregnancy and Lactation.html" class="file-link">32. Pregnancy and Lactation</a></li>
+                </ul>
+            </div>
+            <div class="category-group" id="appendices">
+                <h2 class="category-title">📚 Appendices & Others (الملاحق وأخرى)</h2>
+                <ul class="file-list">
+                    <li><a href="pharmacy/33. Anemias.html" class="file-link">33. Anemias</a></li>
+                    <li><a href="pharmacy/34. Sickle Cell Disease.html" class="file-link">34. Sickle Cell Disease</a></li>
+                    <li><a href="pharmacy/47. Sexually Transmitted Diseases.html" class="file-link">47. Sexually Transmitted Diseases</a></li>
+                    <li><a href="pharmacy/49. Surgical Prophylaxis.html" class="file-link">49. Surgical Prophylaxis</a></li>
+                    <li><a href="pharmacy/5. Acute Coronary Syndromes.html" class="file-link">5. Acute Coronary Syndromes</a></li>
+                    <li><a href="pharmacy/65. Glaucoma.html" class="file-link">65. Glaucoma</a></li>
+                    <li><a href="pharmacy/Appendix 2. Geriatric Assessment and Pharmacotherapy.html" class="file-link">Appendix 2. Geriatric Assessment and Pharmacotherapy</a></li>
+                    <li><a href="pharmacy/Appendix 3. Critical Care Patient Assessment and Pharmacotherapy.html" class="file-link">Appendix 3. Critical Care Patient Assessment and Pharmacotherapy</a></li>
+                    <li><a href="pharmacy/Appendix 4. Drug Allergy.html" class="file-link">Appendix 4. Drug Allergy</a></li>
+                    <li><a href="pharmacy/Appendix 5. Drug-Induced Hematologic Disorders.html" class="file-link">Appendix 5. Drug-Induced Hematologic Disorders</a></li>
+                    <li><a href="pharmacy/Appendix 6. Drug-Induced Liver Disease.html" class="file-link">Appendix 6. Drug-Induced Liver Disease</a></li>
+                    <li><a href="pharmacy/Appendix 9. Drug-Induced Ophthalmic Disorders.html" class="file-link">Appendix 9. Drug-Induced Ophthalmic Disorders</a></li>
+                    <li><a href="pharmacy/The Patient Care Process.html" class="file-link">The Patient Care Process</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 الموقع المتعدد المجالات - جميع الحقوق محفوظة | تم تصميم الموقع بواسطة المطور والمهندس أحمد عمار العمري</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterFiles() {
+            const input = document.getElementById('pharmacy-search');
+            const filter = input.value.toLowerCase();
+            const links = document.getElementsByClassName('file-link');
+            const groups = document.getElementsByClassName('category-group');
+
+            for (let i = 0; i < links.length; i++) {
+                const text = links[i].textContent || links[i].innerText;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    links[i].parentElement.style.display = "";
+                } else {
+                    links[i].parentElement.style.display = "none";
+                }
+            }
+
+            // Hide empty categories
+            for (let i = 0; i < groups.length; i++) {
+                const listItems = groups[i].getElementsByTagName('li');
+                let hasVisible = false;
+                for (let j = 0; j < listItems.length; j++) {
+                    if (listItems[j].style.display !== "none") {
+                        hasVisible = true;
+                        break;
+                    }
+                }
+                groups[i].style.display = hasVisible ? "" : "none";
+            }
+        }
+    </script>
+</body>
+</html>

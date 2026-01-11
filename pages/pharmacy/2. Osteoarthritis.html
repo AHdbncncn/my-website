@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Osteoarthritis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2. Osteoarthritis</h1>
+        </header>
+        <main>
+            <p>15</p>
+<h2>RETPAHC</h2>
+<p>2</p>
+<p>Osteoarthritis</p>
+<li>Osteoarthritis (OA) is a common, progressive disorder affecting primarily weight-</li>
+<p>bearing diarthrodial joints, characterized by progressive destruction of articular</p>
+<p>cartilage, osteophyte formation, pain, limitation of motion, deformity, and disability.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Primary (idiopathic) OA, the more common type, has no known cause.</li>
+<li>Secondary OA is associated with a known cause such as inflammation, trauma, meta-</li>
+<p>bolic or endocrine disorders, and congenital factors.</p>
+<li>OA usually begins with damage to articular cartilage through injury, excessive</li>
+<p>joint loading from obesity or other reasons, or joint instability. Damage to car-</p>
+<p>tilage increases activity of chondrocytes in attempt to repair damage, leading to</p>
+<p>increased synthesis of matrix constituents with cartilage swelling. Normal balance</p>
+<p>between cartilage breakdown and resynthesis is lost, with increasing destruction and</p>
+<p>cartilage loss.</p>
+<li>Subchondral bone adjacent to articular cartilage undergoes pathologic changes and</li>
+<p>releases vasoactive peptides and matrix metalloproteinases. Neovascularization and</p>
+<p>increased permeability of adjacent cartilage occur, which contribute to cartilage loss</p>
+<p>and chondrocyte apoptosis.</p>
+<li>Cartilage loss causes joint space narrowing and painful, deformed joints. Remaining</li>
+<p>cartilage softens and develops fibrillations, followed by further cartilage loss and</p>
+<p>exposure of underlying bone. New bone formations (osteophytes) at joint margins</p>
+<p>distant from cartilage destruction are thought to help stabilize affected joints.</p>
+<li>Inflammatory changes can occur in the joint capsule and synovium. Crystals or</li>
+<p>cartilage shards in synovial fluid may contribute to inflammation. Interleukin-1,</p>
+<p>prostaglandin E, tumor necrosis factor-α, and nitric oxide in synovial fluid may also</p>
+<p>2</p>
+<p>play a role. Inflammatory changes result in synovial effusions and thickening.</p>
+<li>Pain may result from distention of the synovial capsule by increased joint fluid;</li>
+<p>microfracture; periosteal irritation; or damage to ligaments, synovium, or the</p>
+<p>meniscus.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Risk factors include increasing age, obesity, sex, certain occupations and sports activi-</li>
+<p>ties, history of joint injury or surgery, and genetic predisposition.</p>
+<li>The predominant symptom is deep, aching pain in affected joints. Pain accompanies</li>
+<p>joint activity and decreases with rest.</p>
+<li>Joints most commonly affected are the distal interphalangeal (DIP) and proximal</li>
+<p>interphalangeal (PIP) joints of the hand, first carpometacarpal joint, knees, hips,</p>
+<p>cervical and lumbar spine, and first metatarsophalangeal (MTP) joint of the toe.</p>
+<li>Limitation of motion, stiffness, crepitus, and deformities may occur. Patients with</li>
+<p>lower extremity involvement may report weakness or instability.</p>
+<li>Upon arising, joint stiffness typically lasts less than 30 minutes and resolves with</li>
+<p>motion.</p>
+<li>Presence of warm, red, and tender joints suggests inflammatory synovitis.</li>
+<li>Physical examination of affected joints reveals tenderness, crepitus, and possibly</li>
+<p>enlargement. Heberden and Bouchard nodes are bony enlargements (osteophytes) of</p>
+<p>the DIP and PIP joints, respectively.</p>
+<p>ch02.indd 15 18-11-2020 11:50:57</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>2</th><th>Osteoarthritis</th></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis is made through patient history, physician examination, radiologic find-</li>
+<p>ings, and laboratory testing.</p>
+<li>American College of Rheumatology criteria for classification of OA of the hips,</li>
+<p>knees, and hands include presence of pain, bony changes on examination, normal</p>
+<p>erythrocyte sedimentation rate (ESR), and radiographs showing osteophytes or joint</p>
+<p>space narrowing.</p>
+<li>For hip OA, patients must have hip pain and two of the following: (1) ESR <20 mm/hr</li>
+<p>(5.6 μm/sec), (2) radiographic femoral or acetabular osteophytes, and/or (3) radio-</p>
+<p>graphic joint space narrowing.</p>
+<li>For knee OA, patients must have knee pain and radiographic osteophytes in addition</li>
+<p>to one or more of the following: (1) age &gt;50 years, (2) morning stiffness lasting ≤30</p>
+<p>minutes, (3) crepitus on motion, (4) bony enlargement, (5) bony tenderness, and/or</p>
+<p>(6) palpable joint warmth.</p>
+<li>ESR may be slightly elevated if inflammation is present. Rheumatoid factor is nega-</li>
+<p>tive. Analysis of synovial fluid reveals high viscosity and mild leukocytosis (&lt;2000</p>
+<p>white blood cells/mm3 [2 × 109/L]) with predominantly mononuclear cells.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: (1) Educate the patient, family members, and caregivers; (2)</li>
+<pre><code>relieve pain and stiffness; (3) maintain or improve joint mobility; (4) limit functional</code></pre>
+<p>impairment; and (5) maintain or improve quality of life.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Educate the patient about the disease process and extent, prognosis, and treatment</li>
+<p>options. Promote dietary counseling, exercise, and a weight loss program for over-</p>
+<p>weight patients.</p>
+<li>Physical therapy—with heat or cold treatments and an exercise program—helps</li>
+<p>maintain range of motion and reduce pain and need for analgesics.</p>
+<li>Assistive and orthotic devices (canes, walkers, braces, heel cups, and insoles) can be</li>
+<p>used during exercise or daily activities.</p>
+<li>Surgical procedures (eg, osteotomy, arthroplasty, joint fusion) are indicated for func-</li>
+<p>tional disability and/or severe pain unresponsive to conservative therapy.</p>
+<h2>PHARMACOLOGIC THERAPY (TABLE 2-1)</h2>
+<p>General Approach</p>
+<li>Drug therapy is targeted at relief of pain. A conservative approach is warranted</li>
+<p>because OA often occurs in older individuals with other medical conditions.</p>
+<li>Apply an individualized approach (Figs. 2-1 and 2-2). Continue appropriate nondrug</li>
+<p>therapies when initiating drug therapy.</p>
+<p>Knee and Hip OA</p>
+<li>Acetaminophen is a preferred first-line treatment; it may be less effective than oral</li>
+<p>nonsteroidal anti-inflammatory drugs (NSAIDs) but has a lower risk of serious</p>
+<p>gastrointestinal (GI) and cardiovascular (CV) events. Acetaminophen is usually well</p>
+<p>tolerated, but potentially fatal hepatotoxicity with overdose is well documented. It</p>
+<p>should be avoided in chronic alcohol users or patients with liver disease.</p>
+<li>Nonselective NSAIDs or cyclooxygenase-2 (COX-2) selective inhibitors (eg,</li>
+<p>celecoxib) are recommended if a patient fails acetaminophen. Nonselective NSAIDs</p>
+<p>may cause minor GI complaints such as nausea, dyspepsia, anorexia, abdominal</p>
+<p>pain, and diarrhea. They may cause gastric and duodenal ulcers and bleeding</p>
+<p>through direct (topical) or indirect (systemic) mechanisms. Risk factors for NSAID-</p>
+<p>associated ulcers and ulcer complications (perforation, gastric outlet obstruction, and</p>
+<p>GI bleeding) include longer duration of NSAID use, higher dosage, age older than</p>
+<p>16</p>
+<p>ch02.indd 16 18-11-2020 11:50:57</p>
+<h2>Osteoarthritis | CHAPTER 2</h2>
+<h2>TABLE 2-1 Medications for the Treatment of Osteoarthritis</h2>
+<p>Drug Starting Dose Usual Range</p>
+<p>Oral analgesics</p>
+<p>Acetaminophen 325–500 mg three 325–650 mg every 4–6 hours or</p>
+<p>times a day 1 g three to four times/day</p>
+<p>Tramadol 25 mg in the morning Titrate dose in 25-mg increments</p>
+<p>to reach a maintenance</p>
+<p>dose of 50–100 mg three</p>
+<p>times a day</p>
+<p>Tramadol ER 100 mg daily Titrate to 200–300 mg daily</p>
+<p>Hydrocodone/ 5 mg/325 mg three 2.5–10 mg/325–650 mg three to</p>
+<p>acetaminophen times daily five times daily</p>
+<p>Oxycodone/acetaminophen 5 mg/325 mg three 2.5–10 mg/325–650 mg three to</p>
+<p>times daily five times daily</p>
+<p>Topical analgesics</p>
+<p>Capsaicin 0.025%–0.15% Apply to affected joint three to</p>
+<p>four times per day</p>
+<p>Diclofenac 1% gel Apply 2 or 4 g per site as</p>
+<p>prescribed, four times daily</p>
+<p>Diclofenac 1.3% patch Apply one patch twice daily</p>
+<p>to the site to be treated, as</p>
+<p>directed</p>
+<p>Diclofenac 1.5% solution Apply 40 drops to the affected</p>
+<p>knee, applying and rubbing in</p>
+<p>10 drops at a time. Repeat for</p>
+<p>a total of four times daily.</p>
+<p>Intra-articular</p>
+<p>corticosteroids</p>
+<p>Triamcinolone 5–15 mg per joint 10–40 mg per large joint (knee,</p>
+<p>hip, shoulder)</p>
+<p>Methylprednisolone acetate 10–20 mg per joint 20–80 mg per large joint (knee,</p>
+<p>hip, shoulder)</p>
+<p>NSAIDs</p>
+<p>Aspirin (plain, buffered, or 325 mg three 325–650 mg four times a day</p>
+<p>enteric-coated) times a day</p>
+<p>Celecoxib 100 mg daily 100 mg twice daily or</p>
+<p>200 mg daily</p>
+<p>Diclofenac IR 50 mg twice a day 50–75 mg twice a day</p>
+<p>Diclofenac XR 100 mg daily 100–200 mg daily</p>
+<p>Diflunisal 250 mg twice a day 500–750 mg twice a day</p>
+<p>Etodolac 300 mg twice a day 400–500 mg twice a day</p>
+<p>Fenoprofen 400 mg three 400–600 mg three to four</p>
+<p>times a day times a day</p>
+<p>Flurbiprofen 100 mg twice a day 200–300 mg/day in two to four</p>
+<p>divided doses</p>
+<p>(Continued)</p>
+<p>17</p>
+<p>ch02.indd 17 18-11-2020 11:50:58</p>
+<div class="table-container"><table><tr><th>TABLE 2-1 Medications for the Treatment of Osteoarthritis</th><th></th><th></th></tr><tr><td>Drug</td><td>Starting Dose</td><td>Usual Range</td></tr><tr><td>Oral analgesics</td><td></td><td></td></tr><tr><td>Acetaminophen</td><td>325–500 mg three
+times a day</td><td>325–650 mg every 4–6 hours or
+1 g three to four times/day</td></tr><tr><td>Tramadol</td><td>25 mg in the morning</td><td>Titrate dose in 25-mg increments
+to reach a maintenance
+dose of 50–100 mg three
+times a day</td></tr><tr><td>Tramadol ER</td><td>100 mg daily</td><td>Titrate to 200–300 mg daily</td></tr><tr><td>Hydrocodone/
+acetaminophen</td><td>5 mg/325 mg three
+times daily</td><td>2.5–10 mg/325–650 mg three to
+five times daily</td></tr><tr><td>Oxycodone/acetaminophen</td><td>5 mg/325 mg three
+times daily</td><td>2.5–10 mg/325–650 mg three to
+five times daily</td></tr><tr><td>Topical analgesics</td><td></td><td></td></tr><tr><td>Capsaicin 0.025%–0.15%</td><td></td><td>Apply to affected joint three to
+four times per day</td></tr><tr><td>Diclofenac 1% gel</td><td></td><td>Apply 2 or 4 g per site as
+prescribed, four times daily</td></tr><tr><td>Diclofenac 1.3% patch</td><td></td><td>Apply one patch twice daily
+to the site to be treated, as
+directed</td></tr><tr><td>Diclofenac 1.5% solution</td><td></td><td>Apply 40 drops to the affected
+knee, applying and rubbing in
+10 drops at a time. Repeat for
+a total of four times daily.</td></tr><tr><td>Intra-articular
+corticosteroids</td><td></td><td></td></tr><tr><td>Triamcinolone</td><td>5–15 mg per joint</td><td>10–40 mg per large joint (knee,
+hip, shoulder)</td></tr><tr><td>Methylprednisolone acetate</td><td>10–20 mg per joint</td><td>20–80 mg per large joint (knee,
+hip, shoulder)</td></tr><tr><td>NSAIDs</td><td></td><td></td></tr><tr><td>Aspirin (plain, buffered, or
+enteric-coated)</td><td>325 mg three
+times a day</td><td>325–650 mg four times a day</td></tr><tr><td>Celecoxib</td><td>100 mg daily</td><td>100 mg twice daily or
+200 mg daily</td></tr><tr><td>Diclofenac IR</td><td>50 mg twice a day</td><td>50–75 mg twice a day</td></tr><tr><td>Diclofenac XR</td><td>100 mg daily</td><td>100–200 mg daily</td></tr><tr><td>Diflunisal</td><td>250 mg twice a day</td><td>500–750 mg twice a day</td></tr><tr><td>Etodolac</td><td>300 mg twice a day</td><td>400–500 mg twice a day</td></tr><tr><td>Fenoprofen</td><td>400 mg three
+times a day</td><td>400–600 mg three to four
+times a day</td></tr><tr><td>Flurbiprofen</td><td>100 mg twice a day</td><td>200–300 mg/day in two to four
+divided doses
+(Continued)</td></tr></table></div><h2>SECTION 1 | Bone and Joint Disorders</h2>
+<p>TABLE 2-1 Medications for the Treatment of Osteoarthritis (Continued)</p>
+<p>Drug Starting Dose Usual Range</p>
+<p>Ibuprofen 200 mg three 1200–3200 mg/day in three to</p>
+<p>times a day four divided doses</p>
+<p>Indomethacin 25 mg twice a day Titrate dose by 25–50 mg/day</p>
+<p>until pain controlled or</p>
+<p>maximum dose of 50 mg</p>
+<p>three times a day</p>
+<p>Indomethacin SR 75 mg SR once daily Can titrate to 75 mg SR twice</p>
+<p>daily if needed</p>
+<p>Ketoprofen 50 mg three times a day 50–75 mg three to four</p>
+<p>times a day</p>
+<p>Meclofenamate 50 mg three times a day 50–100 mg three to four</p>
+<p>times a day</p>
+<p>Mefenamic acid 250 mg three 250 mg four times a day</p>
+<p>times a day</p>
+<p>Meloxicam 7.5 mg daily 15 mg daily</p>
+<p>Nabumetone 500 mg daily 500–1000 mg one to two</p>
+<p>times a day</p>
+<p>Naproxen 250 mg twice a day 500 mg twice a day</p>
+<p>Naproxen sodium 220 mg twice a day 220–550 mg twice a day</p>
+<p>Naproxen sodium CR 750–1000 mg 500–1500 mg once daily</p>
+<p>once daily</p>
+<p>Oxaprozin 600 mg daily 600–1200 mg daily</p>
+<p>Piroxicam 10 mg daily 20 mg daily</p>
+<p>Salsalate 500 mg twice a day 500–1000 mg two to three</p>
+<p>times a day</p>
+<p>CR, controlled-release; ER, extended-release; IR, immediate-release; SR, sustained-release;</p>
+<p>XR, extended-release.</p>
+<p>60 years, past history of peptic ulcer disease of any cause, history of alcohol use, and</p>
+<p>concomitant use of glucocorticoids or anticoagulants. Options for reducing the GI</p>
+<p>risk of nonselective NSAIDs include using (1) the lowest dose possible and only when</p>
+<p>needed, (2) misoprostol four times daily with the NSAID, and (3) a PPI or full-dose</p>
+<p>H-receptor antagonist daily with the NSAID.</p>
+<li>CO 2 X-2 inhibitors pose less risk for adverse GI events than nonselective NSAIDs, but</li>
+<p>this advantage is substantially reduced for patients taking aspirin. Both nonselective</p>
+<p>and selective NSAIDs are associated with an increased risk for CV events (hyperten-</p>
+<p>sion, stroke, myocardial infarction, and death).</p>
+<li>NSAIDs may also cause kidney diseases, hepatitis, hypersensitivity reactions, rash,</li>
+<p>and CNS complaints of drowsiness, dizziness, headaches, depression, confusion, and</p>
+<p>tinnitus. NSAIDs inhibit COX-1–dependent thromboxane production in platelets,</p>
+<p>thereby increasing bleeding risk. Unlike aspirin, celecoxib and nonspecific NSAIDs</p>
+<pre><code>inhibit thromboxane formation reversibly, with normalization of platelet function</code></pre>
+<p>1–3 days after drug discontinuation. Avoid NSAIDs in late pregnancy because of</p>
+<p>risk of premature closure of the ductus arteriosus. The most potentially serious</p>
+<p>drug interactions include use of NSAIDs with lithium, warfarin, oral hypoglyce-</p>
+<p>mics, methotrexate, antihypertensives, angiotensin-converting enzyme inhibitors,</p>
+<p>β-blockers, and diuretics.</p>
+<p>18</p>
+<p>ch02.indd 18 18-11-2020 11:50:58</p>
+<div class="table-container"><table><tr><th>TABLE 2-1 Medications for the Treatment of Osteoarthritis (Continued)</th><th></th><th></th></tr><tr><td>Drug</td><td>Starting Dose</td><td>Usual Range</td></tr><tr><td>Ibuprofen</td><td>200 mg three
+times a day</td><td>1200–3200 mg/day in three to
+four divided doses</td></tr><tr><td>Indomethacin</td><td>25 mg twice a day</td><td>Titrate dose by 25–50 mg/day
+until pain controlled or
+maximum dose of 50 mg
+three times a day</td></tr><tr><td>Indomethacin SR</td><td>75 mg SR once daily</td><td>Can titrate to 75 mg SR twice
+daily if needed</td></tr><tr><td>Ketoprofen</td><td>50 mg three times a day</td><td>50–75 mg three to four
+times a day</td></tr><tr><td>Meclofenamate</td><td>50 mg three times a day</td><td>50–100 mg three to four
+times a day</td></tr><tr><td>Mefenamic acid</td><td>250 mg three
+times a day</td><td>250 mg four times a day</td></tr><tr><td>Meloxicam</td><td>7.5 mg daily</td><td>15 mg daily</td></tr><tr><td>Nabumetone</td><td>500 mg daily</td><td>500–1000 mg one to two
+times a day</td></tr><tr><td>Naproxen</td><td>250 mg twice a day</td><td>500 mg twice a day</td></tr><tr><td>Naproxen sodium</td><td>220 mg twice a day</td><td>220–550 mg twice a day</td></tr><tr><td>Naproxen sodium CR</td><td>750–1000 mg
+once daily</td><td>500–1500 mg once daily</td></tr><tr><td>Oxaprozin</td><td>600 mg daily</td><td>600–1200 mg daily</td></tr><tr><td>Piroxicam</td><td>10 mg daily</td><td>20 mg daily</td></tr><tr><td>Salsalate</td><td>500 mg twice a day</td><td>500–1000 mg two to three
+times a day</td></tr></table></div><h2>Osteoarthritis | CHAPTER 2</h2>
+<p>Patient requires</p>
+<p>pharmacologic treatmenta</p>
+<p>Is acetaminophen</p>
+<p>contraindicated?</p>
+<p>No Yes</p>
+<p>Acetaminophenb Is treatment effective? Alternative first-line</p>
+<p>maximum 4 g/day agents</p>
+<p>Topical NSAIDs</p>
+<p>No Yes (knee only) and/or</p>
+<p>intra-articular</p>
+<p>Alternative second-line</p>
+<p>agents Continue treatment corticosteroids</p>
+<li>Opioid analgesics and/or tramadol</li>
+<li>Surgery and/or oral NSAIDs</li>
+<li>Duloxetine (knee only) (if <75 yo or low CV</li>
+<li>Intra-articular hyaluronates (knee only) and GI risk)c</li>
+<p>aSelection of a medication should consider patient-specific characteristics.</p>
+<p>bThe patient must be counseled regarding all acetaminophen-containing products.</p>
+<p>cWhen used for chronic management of OA, consider addition of a proton-pump inhibitor.</p>
+<p>(CV, cardiovascular; GI, gastrointestinal; NSAID, nonsteroidal anti-inflammatory drug.)</p>
+<p>FIGURE 2-1. Treatment recommendations for hip and knee osteoarthritis.</p>
+<li>Topical NSAIDs are recommended for knee OA if acetaminophen fails, and they are</li>
+<p>preferred over oral NSAIDs in patients older than 75 years. Topical NSAIDs provide</p>
+<p>similar pain relief with fewer adverse GI events than oral NSAIDs but may be associ-</p>
+<p>ated with adverse events at the application site (eg, dry skin, pruritus, and rash). Patients</p>
+<p>using topical products should avoid oral NSAIDs to minimize the potential for additive</p>
+<p>side effects. Use of topical NSAIDs has not been linked with increased risk of CV events.</p>
+<li>Intra-articular (IA) corticosteroid injections are recommended for both hip and</li>
+<p>knee OA when analgesia with acetaminophen or NSAIDs is suboptimal. They can</p>
+<p>provide excellent pain relief, particularly when joint effusion is present. Local anes-</p>
+<p>thetics such as lidocaine or bupivacaine are commonly combined with corticosteroids</p>
+<p>to provide rapid pain relief. Injections may also be given with concomitant oral</p>
+<p>analgesics for additional pain control. After aseptic aspiration of the effusion and</p>
+<p>corticosteroid injection, initial pain relief may occur within 24–72 hours, with peak</p>
+<p>relief occurring after 7–10 days and lasting for 4–8 weeks. Local adverse effects can</p>
+<p>include infection, osteonecrosis, tendon rupture, and skin atrophy at the injection</p>
+<p>site. Do not administer injections more frequently than once every 3 months to mini-</p>
+<p>mize systemic adverse effects. Systemic corticosteroid therapy is not recommended in</p>
+<p>OA, given lack of proven benefit and well-known adverse effects with long-term use.</p>
+<li>Tramadol is recommended for hip and knee OA in patients who have failed scheduled</li>
+<p>full-dose acetaminophen and topical NSAIDs, who are not appropriate candidates</p>
+<p>for oral NSAIDs, and who are not able to receive IA corticosteroids. Tramadol can be</p>
+<p>added to partially effective acetaminophen or oral NSAID therapy. Tramadol is associ-</p>
+<p>ated with opioid-like adverse effects such as nausea, vomiting, dizziness, constipation,</p>
+<p>headache, and somnolence. However, tramadol is not associated with life-threatening</p>
+<p>GI bleeding, CV events, or renal failure. The most serious adverse event is seizures.</p>
+<p>Tramadol is classified as a Schedule IV controlled substance due to its potential for</p>
+<p>dependence, addiction, and diversion. There is increased risk of serotonin syndrome</p>
+<p>when tramadol is used with other serotonergic medications, including duloxetine.</p>
+<li>Opioids should be considered in patients not responding adequately to nonphar-</li>
+<p>macologic and first-line pharmacologic therapies. Patients who are at high surgical</p>
+<p>risk and cannot undergo joint arthroplasty are also candidates for opioid therapy.</p>
+<p>Use opioid analgesics in the lowest effective dose and the smallest quantity needed.</p>
+<p>Avoid combinations of opioids and sedating medications whenever possible.</p>
+<p>19</p>
+<p>ch02.indd 19 18-11-2020 11:50:58</p>
+<h2>SECTION 1 | Bone and Joint Disorders</h2>
+<p>Patient requires</p>
+<p>pharmacologic treatmenta</p>
+<p>Is patient ≥75 years of</p>
+<p>age?</p>
+<p>No Yes</p>
+<p>First-line agents</p>
+<p>Oral NSAIDsb (if First-line agents</p>
+<p>low CV and GI risk) Topical NSAIDs</p>
+<p>Topical NSAIDs or</p>
+<p>or Topical capsaicin</p>
+<p>Topical capsaicin and/or</p>
+<p>and/or Tramadol</p>
+<p>Tramadol</p>
+<p>Is treatment Yes Yes Is treatment</p>
+<p>Continue treatment</p>
+<p>effective? effective?</p>
+<p>No No</p>
+<p>Alternative regimens</p>
+<p>Alternative regimens</p>
+<p>Combined therapy</p>
+<p>Combined therapy</p>
+<p>with two first-line</p>
+<p>agentsc with t</p>
+<p>a</p>
+<p>w</p>
+<p>g</p>
+<p>o</p>
+<p>e n</p>
+<p>fi</p>
+<p>t</p>
+<p>r</p>
+<p>s</p>
+<p>s</p>
+<p>c</p>
+<p>t-line</p>
+<p>(ie, oral NSAIDs</p>
+<p>(ie, topical NSAIDs</p>
+<p>and topical capsaicin</p>
+<p>and tramadol)</p>
+<p>or tramadol)</p>
+<p>aSelection of a medication should consider patient-specific characteristics.</p>
+<p>bWhen used for chronic management of OA, consider addition of a proton-pump inhibitor.</p>
+<p>cShould not combine topical NSAIDs and oral NSAIDs.</p>
+<p>(CV, cardiovascular; GI, gastrointestinal; NSAID, nonsteroidal anti-inflammatory drug.)</p>
+<p>FIGURE 2-2. Treatment recommendations for hand osteoarthritis.</p>
+<p>Inform patients on how to use, store, and dispose of opioid medications. Sustained-</p>
+<p>release compounds usually offer better pain control throughout the day. Common</p>
+<p>adverse effects include nausea, somnolence, constipation, dry mouth, and dizziness.</p>
+<p>Opioid dependence, addiction, tolerance, hyperalgesia, and issues surrounding drug</p>
+<p>diversion may be associated with long-term treatment. Assess opioid use at least</p>
+<pre><code>every 3 months, evaluating patient progression toward functional treatment goals,</code></pre>
+<p>risks of harm, and adverse effects.</p>
+<li>Duloxetine can be used as adjunctive treatment of knee (not hip) OA in patients</li>
+<p>with partial response to first-line analgesics (acetaminophen, oral NSAIDs). It may</p>
+<p>be a preferred second-line medication in patients with both neuropathic and muscu-</p>
+<p>loskeletal OA pain. Pain reduction occurs after about 4 weeks of therapy. Duloxetine</p>
+<p>may cause nausea, dry mouth, constipation, anorexia, fatigue, somnolence, and</p>
+<p>dizziness. Serious rare events include Stevens-Johnson syndrome and liver failure.</p>
+<p>Concomitant use with other medications that increase serotonin concentration</p>
+<p>(including tramadol) increases risk of serotonin syndrome.</p>
+<li>IA hyaluronic acid (sodium hyaluronate) is not routinely recommended because</li>
+<p>injections have shown limited benefit for knee OA and have not been shown to</p>
+<p>benefit hip OA. Injections are usually well tolerated, but acute joint swelling, effu-</p>
+<p>sion, stiffness, and local skin reactions (eg, rash, ecchymoses, or pruritus) have been</p>
+<p>reported. IA preparations and regimens for OA knee pain include:</p>
+<p>✓ Cross-linked hyaluronate 30 mg/3 mL (Gel-One) single injection</p>
+<p>✓ Hyaluronan 30 mg/2 mL (Orthovisc) once weekly for three injections</p>
+<p>✓ Hyaluronan 88 mg/4 mL (Monovisc) single injection</p>
+<p>20</p>
+<p>ch02.indd 20 18-11-2020 11:50:59</p>
+<h2>Osteoarthritis | CHAPTER 2</h2>
+<p>✓ Hylan polymers 16 mg/2 mL (Synvisc) once weekly for three injections</p>
+<p>✓ Hylan polymers 48 mg/6 mL (Synvisc-One) single injection</p>
+<p>✓ Sodium hyaluronate 20 mg/2 mL (Hyalgan) once weekly for five injections</p>
+<p>✓ Sodium hyaluronate 20 mg/2 mL (Euflexxa) once weekly for three injections</p>
+<p>✓ Sodium hyaluronate 25 mg/2.5 mL (Supartz FX) once weekly for five injections</p>
+<p>✓ Sodium hyaluronate 25 mg/2.5 mL (GenVisc 850) once weekly for five injections</p>
+<li>Glucosamine and/or chondroitin and topical rubefacients (eg, methyl salicylate,</li>
+<pre><code>trolamine salicylate) lack uniform improvement in pain control or functional status</code></pre>
+<p>for hip and knee pain and are not preferred treatment options. Glucosamine adverse</p>
+<p>effects are mild and include flatulence, bloating, and abdominal cramps. The most</p>
+<p>common adverse effect of chondroitin is nausea.</p>
+<p>Hand OA</p>
+<li>Topical NSAIDs are a first-line option for hand OA. Topical diclofenac has efficacy</li>
+<p>similar to oral NSAIDs with fewer adverse GI events, albeit with some local applica-</p>
+<p>tion site events. Efficacy with topical NSAIDs typically occurs with 1–2 weeks.</p>
+<li>Oral NSAIDs are an alternative first-line treatment for patients who cannot toler-</li>
+<p>ate the local skin reactions or who received inadequate relief from topical NSAIDs.</p>
+<li>Capsaicin cream is an alternative first-line treatment; small clinical trials have dem-</li>
+<p>onstrated about 50% reduction in pain scores. It is a reasonable option for patients</p>
+<p>unable to take oral NSAIDs. Capsaicin must be used regularly to be effective, and</p>
+<p>it may require up to 2 weeks to take effect. Adverse effects are primarily local and</p>
+<p>include burning, stinging, and/or erythema that usually subsides with repeated</p>
+<p>application. Warn patients not to get cream in their eyes or mouth and to wash hands</p>
+<p>after application. Application of the cream, gel, solution, or lotion is recommended</p>
+<p>four times daily.</p>
+<li>Tramadol is an alternative first-line treatment and is a reasonable option for patients</li>
+<p>who do not respond to topical therapy and are not candidates for oral NSAIDs</p>
+<p>because of high GI, CV, or renal risks. Tramadol may also be used in combination</p>
+<p>with partially effective acetaminophen, topical therapy, or oral NSAIDs.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>To monitor efficacy, assess baseline pain with a visual analog scale, and assess range</li>
+<p>of motion for affected joints with flexion, extension, abduction, or adduction.</p>
+<li>Depending on the joint(s) affected, measurement of grip strength and 50-ft walking</li>
+<p>time can help assess hand and hip/knee OA, respectively.</p>
+<li>Baseline radiographs can document extent of joint involvement and follow disease</li>
+<p>progression with therapy.</p>
+<li>Other measures include the clinician’s global assessment based on patient’s history of</li>
+<p>activities and limitations caused by OA, the Western Ontario and McMaster Univer-</p>
+<p>sities Arthrosis Index, Stanford Health Assessment Questionnaire, and documenta-</p>
+<p>tion of analgesic or NSAID use.</p>
+<li>Ask patients about adverse effects from medications. Monitor for signs of drug-</li>
+<p>related effects, such as skin rash, headaches, drowsiness, weight gain, or hypertension</p>
+<p>from NSAIDs.</p>
+<li>Obtain baseline serum creatinine, hematology profile, and serum transaminases with</li>
+<p>repeat levels at 6- to 12-month intervals to identify specific toxicities to the kidney,</p>
+<p>liver, GI tract, or bone marrow.</p>
+<p>See Chapter 106, Osteoarthritis, authored by Lucinda M. Buys and Sara A. Wiedenfeld,</p>
+<p>for a more detailed discussion of this topic.</p>
+<p>21</p>
+<p>ch02.indd 21 18-11-2020 11:50:59</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58. Obesity</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>58. Obesity</h1>
+        </header>
+        <main>
+            <h2>SECTION 10</h2>
+<h2>NUTRITION SUPPORT</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>58</p>
+<p>Obesity</p>
+<p>667</p>
+<h2>RETPAHC</h2>
+<li>Obesity occurs when there is an imbalance between energy intake and energy expen-</li>
+<p>diture over time, resulting in increased energy storage.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The etiology of obesity is usually unknown, but it is likely multifactorial and related</li>
+<p>to varying contributions from genetic, environmental, and physiologic factors.</p>
+<li>Genetic factors appear to be the primary determinants of obesity in some individuals,</li>
+<p>determining both obesity and distribution of fat, whereas environmental factors are</p>
+<p>more important in others. The total number and identity of contributing genes are</p>
+<p>still being determined.</p>
+<li>Environmental factors include reduced physical activity or work, abundant food sup-</li>
+<p>ply, relatively sedentary lifestyles, increased availability of high-fat foods, and cultural</p>
+<p>factors and religious beliefs.</p>
+<li>Medical conditions including Cushing disease, growth hormone deficiency, insuli-</li>
+<p>noma, leptin deficiency, and psychiatric disorders such as depression, binge-eating</p>
+<p>disorder, and schizophrenia and genetic syndromes such as Prader–Willi syndrome</p>
+<p>can be associated with weight gain.</p>
+<li>Medications associated with unintended weight gain include insulin, corticosteroids,</li>
+<p>some antidepressants, conventional antipsychotics, and several anticonvulsants.</p>
+<li>Many neurotransmitters and neuropeptides stimulate or depress the brain’s appetite</li>
+<p>network, impacting total calorie intake.</p>
+<li>The degree of obesity is determined by the net balance of energy ingested relative to</li>
+<p>energy expended over time. The single largest determinant of energy expenditure is</p>
+<p>metabolic rate, which is expressed as resting energy expenditure or basal metabolic</p>
+<p>rate. Physical activity is the other major factor that affects total energy expenditure</p>
+<p>and is the most variable component.</p>
+<li>Major types of adipose tissue are: (1) white adipose tissue, which manufactures,</li>
+<p>stores, and releases lipid; and (2) brown adipose tissue, which dissipates energy via</p>
+<p>uncoupled mitochondrial respiration. Adrenergic stimulation activates lipolysis in fat</p>
+<p>cells and increases energy expenditure in adipose tissue and skeletal muscle.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Obesity is associated with serious health risks and increased risk of all-cause mor-</li>
+<p>tality. Central obesity reflects high levels of intra-abdominal or visceral fat that is</p>
+<p>associated with the development of hypertension, dyslipidemia, type 2 diabetes, and</p>
+<p>cardiovascular disease (sometimes referred to as the “metabolic syndrome”).</p>
+<li>Body mass index (BMI) and waist circumference (WC) are recognized, acceptable</li>
+<p>markers of excess body fat that independently predict disease risk (Table 58-1).</p>
+<li>BMI is calculated as weight (kg) divided by the square of the height (m2).</li>
+<li>WC, the most practical method of characterizing central adiposity, is the narrowest</li>
+<p>circumference between the last rib and the top of the iliac crest.</p>
+<p>ch58.indd 667 19-11-2020 17:58:06</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>58</th><th>8</th><th>Obesity</th></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<p>TABLE 58-1 Classification of Overweight and Obesity by Body Mass Index, Comorbidity Risk,</p>
+<p>Waist Circumference, and Associated Disease Risk</p>
+<p>Disease Riska (Relative to</p>
+<p>Normal Weight and Waist</p>
+<p>Circumference)</p>
+<p>Men</p>
+<p>≤40 in. &gt;40 in.</p>
+<p>(102 cm) (102 cm)</p>
+<p>Women</p>
+<p>BMI Obesity Comorbidity ≤35 in. &gt;35 in.</p>
+<p>(kg/m2) Class Risk (89 cm) (89 cm)</p>
+<p>Underweight &lt;18.5 Low but other — —</p>
+<p>problems</p>
+<p>Normal 18.5–24.9 Average — High</p>
+<p>weightb</p>
+<p>Overweight 25.0–29.9 Increased Increased High</p>
+<p>Obesity 30.0–34.9 I Moderate High Very high</p>
+<p>35.0–39.9 II Severe Very high Very high</p>
+<p>Extreme ≥40 III Very severe Extremely Extremely</p>
+<p>obesity high high</p>
+<p>aDisease risk for type 2 diabetes, hypertension, and cardiovascular disease.</p>
+<p>bIncreased waist circumference can also be a marker for increased risk even in persons of normal</p>
+<p>weight.</p>
+<p>BMI, body mass index.</p>
+<p>Adapted from Preventing and Managing the Global Epidemic of Obesity. Report of the World Health</p>
+<p>Organization Consultation on Obesity. Geneva: World Health Organization, 1997. Reprinted with</p>
+<p>permission from National Institutes of Health, National Heart, Lung, and Blood Institutes. 1997, http://</p>
+<p>www.nhlbi.nih.gov/guidelines/obesity/ob_home.htm.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Current clinical practice guidelines recommend a “complication-</li>
+<p>centric approach” to assess for the presence and severity of weight-related complica-</p>
+<p>tions to determine appropriate treatment and intensity of weight loss therapy in</p>
+<p>individuals with overweight and obesity. The primary goal is to ameliorate weight-</p>
+<p>related complications and ultimately improve health and quality of life rather than a</p>
+<p>preset decrease in body weight.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Nonpharmacologic therapy, including reduced caloric intake, increased physical</li>
+<p>activity, and behavior modification, is the mainstay of obesity management. Set goals</p>
+<p>based on factors including initial body weight, patient motivation and desire, pres-</p>
+<p>ence of obesity-related comorbid conditions, and age.</p>
+<li>Current adult practice guidelines recommend reduced caloric intake through adher-</li>
+<p>ence to a low-calorie diet. Adherence to this type of diet with increased exercise, and</p>
+<p>in-person behavioral counseling sessions have been reported to result in an average</p>
+<p>weight loss of 8 kg (17.6 lb) over 6 months.</p>
+<li>Bariatric surgery, which reduces the stomach volume or absorptive surface of the</li>
+<p>alimentary tract, remains the most effective intervention for obesity. Surgery should</p>
+<p>668</p>
+<p>ch58.indd 668 19-11-2020 17:58:06</p>
+<div class="table-container"><table><tr><th>TABLE 58-1 Classification of Overweight and Obesity by Body Mass Index, Comorbidity Risk,
+Waist Circumference, and Associated Disease Risk</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td><td></td><td>Disease Riska (Relative to
+Normal Weight and Waist
+Circumference)</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>Men</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>≤40 in.
+(102 cm)</td><td>&gt;40 in.
+(102 cm)</td></tr><tr><td></td><td></td><td></td><td></td><td>Women</td><td></td></tr><tr><td></td><td>BMI
+(kg/m2)</td><td>Obesity
+Class</td><td>Comorbidity
+Risk</td><td>≤35 in.
+(89 cm)</td><td>&gt;35 in.
+(89 cm)</td></tr><tr><td>Underweight</td><td>&lt;18.5</td><td></td><td>Low but other
+problems</td><td>—</td><td>—</td></tr><tr><td>Normal
+weightb</td><td>18.5–24.9</td><td></td><td>Average</td><td>—</td><td>High</td></tr><tr><td>Overweight</td><td>25.0–29.9</td><td></td><td>Increased</td><td>Increased</td><td>High</td></tr><tr><td>Obesity</td><td>30.0–34.9</td><td>I</td><td>Moderate</td><td>High</td><td>Very high</td></tr><tr><td></td><td>35.0–39.9</td><td>II</td><td>Severe</td><td>Very high</td><td>Very high</td></tr><tr><td>Extreme
+obesity</td><td>≥40</td><td>III</td><td>Very severe</td><td>Extremely
+high</td><td>Extremely
+high</td></tr></table></div><h2>Obesity | CHAPTER 58</h2>
+<p>be reserved for those with extreme obesity (BMI ≥40 kg/m2) or BMI &gt;35 kg/m2</p>
+<p>with significant comorbidities such as hypertension, type 2 diabetes, or obstructive</p>
+<p>sleep apnea.</p>
+<li>Implantable medical devices are an option for individuals who do not qualify for</li>
+<p>bariatric surgery or choose to not undergo the procedure. These devices are designed</p>
+<p>to work in conjunction with prescribed diet and exercise programs.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Pharmacotherapy is an adjunct to comprehensive lifestyle intervention in adults who</li>
+<p>are motivated to lose weight, have failed to achieve or sustain weight loss with lifestyle</p>
+<p>change alone, and have a BMI ≥30 kg/m2 or BMI ≥27 kg/m2 with at least one weight-</p>
+<h2>related comorbidity (Table 58-2).</h2>
+<li>Long-term pharmacotherapy may have a role for patients who have no contraindica-</li>
+<h2>tions to approved drug therapy (Table 58-3).</h2>
+<li>Orlistat (180 or 360 mg in three divided doses/day) is a lipase inhibitor that induces</li>
+<p>weight loss by lowering dietary fat absorption; it also improves lipid profiles, glucose</p>
+<p>control, and other metabolic markers. Soft stools, abdominal pain or colic, flatulence,</p>
+<p>fecal urgency, and/or incontinence occur in 80% of individuals using prescription</p>
+<p>strength, are mild to moderate in severity, and improve after 1–2 months of therapy.</p>
+<p>Orlistat is approved for long-term use. It interferes with the absorption of fat-soluble</p>
+<p>vitamins, cyclosporine, levothyroxine, and oral contraceptives. A nonprescription</p>
+<p>formulation is also available.</p>
+<li>Phentermine in combination with topiramate extended release is indicated for</li>
+<p>chronic weight management. Doses are gradually titrated from phentermine 3.75 to</p>
+<p>15 mg and topiramate 23–92 mg over 4 months, but the drug should be stopped after</p>
+<p>12 weeks if 5% weight loss is not achieved. Common adverse effects include constipa-</p>
+<p>tion, dry mouth, paraesthesia, dysgeusia, and insomnia.</p>
+<li>Naltrexone in combination with bupropion extended release is indicated for</li>
+<p>chronic weight management. Doses are gradually increased over 4 weeks, starting</p>
+<p>with one tablet daily (8 mg naltrexone/90 mg bupropion) to a maintenance dose of</p>
+<p>two tablets twice daily. Patients should avoid taking their dose with a high-fat meal.</p>
+<p>Common adverse effects include nausea, constipation, headache, vomiting, dizziness,</p>
+<p>insomnia, dry mouth, and diarrhea. Discontinue treatment if 5% weight loss is not</p>
+<p>achieved after 12 weeks.</p>
+<li>Liraglutide is a glucagon-like peptide-1 receptor agonist indicated for chronic</li>
+<p>weight management at a dose of 3 mg daily. It is administered subcutaneously and is</p>
+<p>available in prefilled, multidose pens. A 5-week dose escalation schedule is recom-</p>
+<p>mended to improve tolerability of GI adverse events, beginning with 0.6 mg daily</p>
+<p>and increasing weekly by 0.6 mg increments to a maintenance dose of 3 mg daily.</p>
+<p>Common adverse effects include nausea, diarrhea, constipation, vomiting, dyspepsia,</p>
+<p>hypoglycemia, and abdominal pain. Discontinue liraglutide if weight loss of at least</p>
+<p>4% is not achieved after 16 weeks of therapy.</p>
+<li>Amphetamines should generally be avoided because of their powerful stimulant</li>
+<p>effects and addictive potential.</p>
+<li>Lorcaserin is a selective serotonin receptor agonist (5-HT ) that was removed from</li>
+<p>2c</p>
+<p>the market in February 2020.</p>
+<li>Many complementary and alternative therapy products are promoted for weight loss.</li>
+<p>Regulation of dietary supplements is less rigorous than that of prescription and over-</p>
+<p>the-counter drug products; manufacturers do not have to prove safety and effective-</p>
+<p>ness prior to marketing.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess progress once or twice monthly for 1–2 months, then monthly. Each encoun-</li>
+<p>ter should document weight, WC, BMI, blood pressure, medical history, and patient</p>
+<p>assessment of tolerability of drug therapy.</p>
+<p>669</p>
+<p>ch58.indd 669 19-11-2020 17:58:07</p>
+<h2>670 SECTION</h2>
+<p>10</p>
+<p>|</p>
+<p>Nutrition</p>
+<p>Support</p>
+<p>TABLE 58-2 FDA-Approved Pharmacotherapeutic Agents for Weight Loss</p>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comment</p>
+<p>Gastrointestinal lipase inhibitor</p>
+<p>Orlistat Xenical 120 mg three times daily with 120 mg three times daily Approved for long-term use</p>
+<p>each main meal containing fat with each main meal Take during or up to 1 hour after</p>
+<p>containing fat the meal</p>
+<p>Omit dose if meal is occasionally</p>
+<p>missed or contains no fat</p>
+<p>Orlistat Allia 60 mg three times daily with each 60 mg three times daily Same as Xenical</p>
+<p>main meal containing fat with each main meal</p>
+<p>containing fat</p>
+<p>Phentermine–topiramate combination</p>
+<p>Phentermine and Qsymia 3.75 mg of phentermine and 7.5 mg of phentermine Maximum dose for patients Approved for long-term use</p>
+<p>topiramate 23 mg of topiramate once daily and 46 mg of with moderate or severe Take dose in the morning to avoid</p>
+<p>extended-release for 14 days; then increase to topiramate once renal impairment or insomnia</p>
+<p>7.5 mg of phentermine and daily to a maximum patients with moderate</p>
+<p>46 mg of topiramate once daily dose of phentermine hepatic impairment is Controlled substance: C–IV</p>
+<p>15 mg and topiramate 7.5 mg of phentermine and</p>
+<p>92 mg once daily 46 mg of topiramate</p>
+<p>ch58.indd</p>
+<p>670</p>
+<p>19-11-2020</p>
+<p>17:58:07</p>
+<div class="table-container"><table><tr><th>TABLE 58-2 FDA-Approved Pharmacotherapeutic Agents for Weight Loss</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Range</td><td>Special Population Dose</td><td>Comment</td></tr><tr><td>Gastrointestinal lipase inhibitor</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Orlistat</td><td>Xenical</td><td>120 mg three times daily with
+each main meal containing fat</td><td>120 mg three times daily
+with each main meal
+containing fat</td><td></td><td>Approved for long-term use
+Take during or up to 1 hour after
+the meal
+Omit dose if meal is occasionally
+missed or contains no fat</td></tr><tr><td>Orlistat</td><td>Allia</td><td>60 mg three times daily with each
+main meal containing fat</td><td>60 mg three times daily
+with each main meal
+containing fat</td><td></td><td>Same as Xenical</td></tr><tr><td>Phentermine–topiramate combination</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Phentermine and
+topiramate
+extended-release</td><td>Qsymia</td><td>3.75 mg of phentermine and
+23 mg of topiramate once daily
+for 14 days; then increase to
+7.5 mg of phentermine and
+46 mg of topiramate once daily</td><td>7.5 mg of phentermine
+and 46 mg of
+topiramate once
+daily to a maximum
+dose of phentermine
+15 mg and topiramate
+92 mg once daily</td><td>Maximum dose for patients
+with moderate or severe
+renal impairment or
+patients with moderate
+hepatic impairment is
+7.5 mg of phentermine and
+46 mg of topiramate</td><td>Approved for long-term use
+Take dose in the morning to avoid
+insomnia
+Controlled substance: C–IV</td></tr></table></div><p>671</p>
+<p>Obesity</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>58</p>
+<p>Naltrexone–bupropion combination</p>
+<p>Bupropion and Contrave 8 mg naltrexone/90 mg 16 mg naltrexone and Maximum dose for patients Approved for long-term use</p>
+<p>naltrexone bupropion (1 tablet) once daily 180 mg bupropion with moderate or severe Do not take dose with</p>
+<p>extended-release in the morning for 1 week; (2 tablets) twice daily renal impairment is high-fat meal</p>
+<p>then 8 mg naltrexone/90 mg 8 mg naltrexone/90 mg</p>
+<h2>bupropion twice daily (morning bupropion (1 tablet)</h2>
+<p>and evening) for 1 week; then twice daily</p>
+<p>16 mg naltrexone/180 mg Maximum dose for patients</p>
+<p>bupropion in the morning with hepatic impairment</p>
+<p>and 8 mg naltrexone/90 mg is 8 mg naltrexone/90 mg</p>
+<h2>bupropion in the evening bupropion (1 tablet) once</h2>
+<p>for 1 week; then 16 mg daily in the morning</p>
+<p>naltrexone/180 mg bupropion</p>
+<p>twice daily (morning and</p>
+<p>evening)</p>
+<p>Glucagon-like peptide-1 agonist</p>
+<p>Liraglutide Saxenda 0.6 mg once daily for 1 week 3 mg once daily Use with caution in mild, Approved for long-term use</p>
+<p>1.2 mg once daily for 1 week moderate, and severe renal Inject subcutaneously in the</p>
+<p>1.8 mg once daily for 1 week and hepatic impairment abdomen, thigh, or upper arm</p>
+<p>2.4 mg once daily for 1 week Administer at any time of day</p>
+<p>3.0 mg once daily for 1 weeka without regard to the timing</p>
+<p>administered by subcutaneous of meals</p>
+<p>injection</p>
+<p>Noradrenergic agents</p>
+<p>Phendimetrazine Bontril PDM; Conventional tablet: start 70–105 mg/day Use caution in patients with Approved for short-term</p>
+<p>Bontril at 17.5 mg two or three renal impairment monotherapy</p>
+<p>slow-release times daily, given 1 hour Controlled substance: C–III</p>
+<p>before meals Prescriptions should be written</p>
+<p>Extended-release capsule: 105 mg for the smallest quantity to</p>
+<p>once daily 30–60 minutes minimize possibility of overdose</p>
+<p>before morning meal</p>
+<p>(Continued )</p>
+<p>ch58.indd</p>
+<p>671</p>
+<p>19-11-2020</p>
+<p>17:58:07</p>
+<div class="table-container"><table><tr><th>Bupropion and Contrave 8 mg naltrexone/90 mg 16 mg naltrexone and Maximum dose for patients Approved for long-term use
+naltrexone bupropion (1 tablet) once daily 180 mg bupropion with moderate or severe Do not take dose with
+extended-release in the morning for 1 week; (2 tablets) twice daily renal impairment is high-fat meal
+then 8 mg naltrexone/90 mg 8 mg naltrexone/90 mg
+bupropion twice daily (morning bupropion (1 tablet)
+and evening) for 1 week; then twice daily
+16 mg naltrexone/180 mg Maximum dose for patients
+bupropion in the morning with hepatic impairment
+and 8 mg naltrexone/90 mg is 8 mg naltrexone/90 mg
+bupropion in the evening bupropion (1 tablet) once
+for 1 week; then 16 mg daily in the morning
+naltrexone/180 mg bupropion
+twice daily (morning and
+evening)</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Glucagon-like peptide-1 agonist</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Liraglutide</td><td>Saxenda</td><td>0.6 mg once daily for 1 week
+1.2 mg once daily for 1 week
+1.8 mg once daily for 1 week
+2.4 mg once daily for 1 week
+3.0 mg once daily for 1 weeka
+administered by subcutaneous
+injection</td><td>3 mg once daily</td><td>Use with caution in mild,
+moderate, and severe renal
+and hepatic impairment</td><td>Approved for long-term use
+Inject subcutaneously in the
+abdomen, thigh, or upper arm
+Administer at any time of day
+without regard to the timing
+of meals</td></tr><tr><td>Noradrenergic agents</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Phendimetrazine</td><td>Bontril PDM;
+Bontril
+slow-release</td><td>Conventional tablet: start
+at 17.5 mg two or three
+times daily, given 1 hour
+before meals
+Extended-release capsule: 105 mg
+once daily 30–60 minutes
+before morning meal</td><td>70–105 mg/day</td><td>Use caution in patients with
+renal impairment</td><td>Approved for short-term
+monotherapy
+Controlled substance: C–III
+Prescriptions should be written
+for the smallest quantity to
+minimize possibility of overdose
+(Continued )</td></tr></table></div><h2>672 SECTION</h2>
+<p>10</p>
+<p>|</p>
+<p>Nutrition</p>
+<p>Support</p>
+<p>TABLE 58-2 FDA-Approved Pharmacotherapeutic Agents for Weight Loss (Continued )</p>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comment</p>
+<p>Phentermine Lomaira 8 mg three times daily, given half 8 mg three times daily, Use with caution in patients Approved for short-term</p>
+<p>Adipex-P hour before meal given half hour with renal impairment monotherapy</p>
+<p>Orally disintegrating tablet: 15 or before meal Controlled substance: C–IV</p>
+<p>30 mg once every morning Orally disintegrating Prescriptions should be written</p>
+<p>Phentermine hydrochloride: tablet: 15 or 30 mg for the smallest quantity to</p>
+<p>15–37.5 mg/day given in once every morning minimize possibility of overdose</p>
+<p>one or two divided doses; Phentermine Individualize to achieve adequate</p>
+<p>administer before breakfast or hydrochloride: response with lowest</p>
+<p>1–2 hours after breakfast 15–37.5 mg/day effective dose</p>
+<p>given in one or</p>
+<p>two divided doses;</p>
+<p>administer before</p>
+<p>breakfast or 1–2 hours</p>
+<p>after breakfast</p>
+<p>Diethylpropion Tenuate, Immediate release: 25 mg three 75 mg/day Use with caution in patients Approved for short-term</p>
+<p>Tenuate times daily administered 1 hour with renal impairment monotherapy</p>
+<p>Dospan before meals Dose should not be administered</p>
+<p>Controlled release: 75 mg in the evening or at bedtime</p>
+<p>once daily administered at Controlled substance: C–IV</p>
+<p>midmorning</p>
+<p>aAvailable without a prescription.</p>
+<p>ch58.indd</p>
+<p>672</p>
+<p>19-11-2020</p>
+<p>17:58:07</p>
+<div class="table-container"><table><tr><th>TABLE 58-2 FDA-Approved Pharmacotherapeutic Agents for Weight Loss (Continued )</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Range</td><td>Special Population Dose</td><td>Comment</td></tr><tr><td>Phentermine</td><td>Lomaira
+Adipex-P</td><td>8 mg three times daily, given half
+hour before meal
+Orally disintegrating tablet: 15 or
+30 mg once every morning
+Phentermine hydrochloride:
+15–37.5 mg/day given in
+one or two divided doses;
+administer before breakfast or
+1–2 hours after breakfast</td><td>8 mg three times daily,
+given half hour
+before meal
+Orally disintegrating
+tablet: 15 or 30 mg
+once every morning
+Phentermine
+hydrochloride:
+15–37.5 mg/day
+given in one or
+two divided doses;
+administer before
+breakfast or 1–2 hours
+after breakfast</td><td>Use with caution in patients
+with renal impairment</td><td>Approved for short-term
+monotherapy
+Controlled substance: C–IV
+Prescriptions should be written
+for the smallest quantity to
+minimize possibility of overdose
+Individualize to achieve adequate
+response with lowest
+effective dose</td></tr><tr><td>Diethylpropion</td><td>Tenuate,
+Tenuate
+Dospan</td><td>Immediate release: 25 mg three
+times daily administered 1 hour
+before meals
+Controlled release: 75 mg
+once daily administered at
+midmorning</td><td>75 mg/day</td><td>Use with caution in patients
+with renal impairment</td><td>Approved for short-term
+monotherapy
+Dose should not be administered
+in the evening or at bedtime
+Controlled substance: C–IV</td></tr></table></div><h2>Obesity | CHAPTER 58</h2>
+<p>TABLE 58-3 Clinical and Economic Considerations for Long-Term Pharmacotherapy Options</p>
+<p>Weight Loss</p>
+<p>Above Diet and Cost for</p>
+<p>Brand Exercise Alone 30 days of</p>
+<p>Drug Name (1 year) Therapya Comments</p>
+<p>Orlistat Xenical 2.9–3.4 kg $685.81 Use may be limited</p>
+<p>(6.5–7.5 lb) by GI intolerance</p>
+<p>Phentermine and Qsymia 6.6–8.6 kg $186.00, Limited distribution</p>
+<p>topiramate (14.5–18.9 lb) 7.5–46 mg under FDA</p>
+<p>extended- $199.50, Risk Evaluation</p>
+<p>release 15–92 mg Mitigation</p>
+<p>Strategy (REMS)</p>
+<p>Bupropion and Contrave 4.9 kg (10.8 lb) $277.99 Lowers seizure</p>
+<p>naltrexone threshold</p>
+<p>extended- (bupropion)</p>
+<p>release Rare reports of</p>
+<p>hepatotoxicity</p>
+<p>(naltrexone)</p>
+<p>Drug interactions</p>
+<p>with opioids,</p>
+<p>CYP2B6 inducers,</p>
+<p>and CYP2D6</p>
+<p>substrates</p>
+<h2>Liraglutide Saxenda 5.8 kg (12.8 lb) $1242.00 Injectable</h2>
+<p>Reduces A1C and</p>
+<p>fasting glucose</p>
+<p>Risk of medullary</p>
+<p>thyroid</p>
+<p>carcinoma</p>
+<p>and multiple</p>
+<p>endocrine</p>
+<p>neoplasia</p>
+<p>syndrome type 2</p>
+<p>Rare reports of</p>
+<p>pancreatitis, gall</p>
+<p>bladder disease,</p>
+<p>and suicidal</p>
+<p>ideation</p>
+<p>aCost of therapy based on maintenance dose using wholesaler acquisition cost (WAC) as of January</p>
+<p>9, 2018.</p>
+<li>Discontinue medication therapy after 3 months if the patient has failed to demon-</li>
+<p>strate weight loss or maintenance of prior weight.</p>
+<li>Diabetic patients require more intense medical monitoring and self-monitoring of</li>
+<p>blood glucose. Weekly healthcare visits for 1–2 months may be necessary until the</p>
+<p>effects of diet, exercise, and weight loss medication become more predictable.</p>
+<li>Monitor patients with hyperlipidemia or hypertension to assess effects of weight loss</li>
+<p>on appropriate end points.</p>
+<p>See Chapter 161, Obesity, authored by Amy Heck Sheehan, Judy T. Chen, and Jack A.</p>
+<p>Yanovski, for a more detailed discussion of this topic.</p>
+<p>673</p>
+<p>ch58.indd 673 19-11-2020 17:58:08</p>
+<div class="table-container"><table><tr><th>TABLE 58-3 Clinical and Economic Considerations for Long-Term Pharmacotherapy Options</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand
+Name</td><td>Weight Loss
+Above Diet and
+Exercise Alone
+(1 year)</td><td>Cost for
+30 days of
+Therapya</td><td>Comments</td></tr><tr><td>Orlistat</td><td>Xenical</td><td>2.9–3.4 kg
+(6.5–7.5 lb)</td><td>$685.81</td><td>Use may be limited
+by GI intolerance</td></tr><tr><td>Phentermine and
+topiramate
+extended-
+release</td><td>Qsymia</td><td>6.6–8.6 kg
+(14.5–18.9 lb)</td><td>$186.00,
+7.5–46 mg</td><td>Limited distribution
+under FDA
+Risk Evaluation
+Mitigation
+Strategy (REMS)</td></tr><tr><td></td><td></td><td></td><td>$199.50,
+15–92 mg</td><td></td></tr><tr><td>Bupropion and
+naltrexone
+extended-
+release</td><td>Contrave</td><td>4.9 kg (10.8 lb)</td><td>$277.99</td><td>Lowers seizure
+threshold
+(bupropion)
+Rare reports of
+hepatotoxicity
+(naltrexone)
+Drug interactions
+with opioids,
+CYP2B6 inducers,
+and CYP2D6
+substrates</td></tr><tr><td>Liraglutide</td><td>Saxenda</td><td>5.8 kg (12.8 lb)</td><td>$1242.00</td><td>Injectable
+Reduces A1C and
+fasting glucose
+Risk of medullary
+thyroid
+carcinoma
+and multiple
+endocrine
+neoplasia
+syndrome type 2
+Rare reports of
+pancreatitis, gall
+bladder disease,
+and suicidal
+ideation</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

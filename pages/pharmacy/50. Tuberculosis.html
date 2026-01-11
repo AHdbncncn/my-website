@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50. Tuberculosis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>50. Tuberculosis</h1>
+        </header>
+        <main>
+            <li>Tuberculosis (TB) is a communicable infectious disease caused by Mycobacterium</li>
+<p>tuberculosis. It can produce silent, latent infection, as well as progressive, active dis-</p>
+<p>ease. Globally, 2 billion people are infected and roughly 1.5 million people die from</p>
+<p>TB each year.</p>
+<h2>PATHOPHYSIOLOGY AND ETIOLOGY</h2>
+<li>M. tuberculosis is transmitted from person to person by coughing or other activities</li>
+<p>that cause the organism to be aerosolized. Close contacts of TB patients are most</p>
+<p>likely to become infected.</p>
+<li>Human immunodeficiency virus (HIV) is the most important risk factor for pro-</li>
+<p>gressing to active TB, especially among people 25–44 years of age. An HIV-infected</p>
+<p>individual with TB infection is over 100-fold more likely to develop active disease</p>
+<p>than an HIV-seronegative patient.</p>
+<li>Approximately 90% of patients who experience primary disease have no further clini-</li>
+<p>cal manifestations other than a positive skin test either alone or in combination with</p>
+<p>radiographic evidence of stable granulomas. Tissue necrosis and calcification of the</p>
+<p>originally infected site and regional lymph nodes may occur, resulting in the forma-</p>
+<p>tion of a radiodense area referred to as a Ghon complex.</p>
+<li>Approximately 5% of patients (usually children, the elderly, or the immunocompro-</li>
+<p>mised) experience progressive primary disease at the site of the primary infection</p>
+<p>(usually the lower lobes) and frequently by dissemination, leading to meningitis and</p>
+<p>often to involvement of the upper lobes of the lung as well.</p>
+<li>Approximately 10% of patients develop reactivation disease, which arises subsequent</li>
+<p>to the hematogenous spread of the organism. In the United States, most cases of TB</p>
+<p>are believed to result from reactivation.</p>
+<li>Occasionally, a massive inoculum of organisms may be introduced into the bloodstream,</li>
+<p>causing widely disseminated disease and granuloma formation known as miliary TB.</p>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Patients with TB typically present with cough, weight loss, fatigue, fever, and night</li>
+<p>sweats. Symptom onset may be gradual.</p>
+<li>Frank hemoptysis usually occurs late in the course of disease but may present earlier.</li>
+<li>On physical examination, the patient is usually thin with evidence or recent weight</li>
+<p>loss. Dullness to chest percussion, rales, and increased vocal fremitus are often pres-</p>
+<p>ent, but a normal lung examination is common compared to the degree of radiologi-</p>
+<p>cal lung involvement.</p>
+<li>The white blood cell (WBC) count is usually moderately elevated with lymphocyte</li>
+<p>predominance. A high platelet count (thrombocytosis) and mild-to-moderate ane-</p>
+<p>mia are common.</p>
+<li>Sputum smear is done to detect mycobacteria. A fiber-optic bronchoscopy is per-</li>
+<p>formed if sputum tests are inconclusive and suspicion is high.</p>
+<li>Chest radiograph shows patchy or nodular infiltrates in the apical areas of the upper</li>
+<p>lobes or the superior segment of the lower lobes. There may be cavitation that shows</p>
+<p>air–fluid levels as the infection progresses.</p>
+<li>Clinical features associated with extrapulmonary TB vary depending on the organ</li>
+<p>system(s) involved but typically consist of slowly progressive decline of organ</p>
+<pre><code>function with low-grade fever and other constitutional symptoms.</code></pre>
+<li>Patients with HIV may have atypical presentation. HIV-positive patients are less likely</li>
+<p>to have positive skin tests, cavitary lesions, or fever. They have a higher incidence of</p>
+<p>extrapulmonary TB and are more likely to present with progressive primary disease.</p>
+<p>541</p>
+<h2>RETPAHC</h2>
+<p>50</p>
+<p>Tuberculosis</p>
+<p>ch50.indd 541 19-11-2020 20:39:52</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>50</th><th>Tuberculosis</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>TB in older persons is easily confused with other respiratory diseases. It is far less</li>
+<p>likely to present with positive skin tests, fevers, night sweats, sputum production, or</p>
+<p>hemoptysis. TB in children may present as typical bacterial pneumonia and is called</p>
+<p>progressive primary TB.</p>
+<li>The most widely used screening method for tuberculous infection is the tuberculin</li>
+<p>skin test, which uses purified protein derivative (PPD). Populations most likely to</p>
+<p>benefit from skin testing are listed in Table 50-1. Testing for latent TB is summarized</p>
+<h2>in Figure 50-1.</h2>
+<li>The Mantoux method of PPD administration consists of the intracutaneous injection</li>
+<p>of PPD containing five tuberculin units. The test is read 48–72 hours after injection</p>
+<p>by measuring the diameter of the zone of induration.</p>
+<li>Some patients may exhibit a positive test 1 week after an initial negative test; this is</li>
+<p>referred to as a booster effect.</p>
+<li>Confirmatory diagnosis of a clinical suspicion of TB must be made via chest radio-</li>
+<p>graph and microbiologic examination of sputum or other infected material to rule</p>
+<p>out active disease.</p>
+<li>When active TB is suspected, attempts should be made to isolate M. tuberculosis from</li>
+<p>the infected site. Daily sputum collection over 3 consecutive days is recommended.</p>
+<li>Tests to measure release of interferon-γ in the patient’s blood in response to TB</li>
+<p>antigens may provide quick and specific results for identifying M. tuberculosis.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: (1) Rapid identification of a new TB case; (2) Initiation of spe-</li>
+<p>cific anti-TB treatment; (3) Eradicating M. tuberculosis infection; (4) Achievement of</p>
+<p>a noninfectious state in the patient, thus ending isolation; (5) Preventing the develop-</p>
+<p>ment of resistance; (6) Adherence to the treatment regimen by the patient; and (7)</p>
+<p>Cure of the patient as quickly as possible (generally at least 6 months of treatment).</p>
+<li>Drug treatment is the cornerstone of TB management. A minimum of two drugs,</li>
+<p>and generally three or four drugs, must be used simultaneously. Directly observed</p>
+<p>therapy (DOT) by a healthcare worker is a cost-effective way to ensure completion of</p>
+<p>treatment and is considered the standard of care.</p>
+<li>Drug treatment is continued for at least 6 months, and 18–24 months for cases of</li>
+<p>multidrug-resistant TB (MDR-TB).</p>
+<li>Debilitated patients may require therapy for other medical conditions, including sub-</li>
+<p>stance abuse and HIV infection, and some may need nutritional support.</p>
+<li>Surgery may be needed to remove destroyed lung tissue, space-occupying lesions,</li>
+<p>and some extrapulmonary lesions.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Latent Infection</p>
+<li>As described in Table 50-2, chemoprophylaxis should be initiated in patients to</li>
+<p>reduce the risk of progression to active disease.</p>
+<li>Isoniazid, 300 mg (5–10 mg/kg of body weight) daily in adults, is the preferred treat-</li>
+<p>ment for latent TB in the United States, generally given for 9 months.</p>
+<li>Rifampin, 600 mg daily for 4 months, can be used when isoniazid resistance is sus-</li>
+<p>pected or when the patient cannot tolerate isoniazid. Rifabutin, 300 mg daily, may be</p>
+<p>substituted for rifampin for patients at high risk of drug interactions.</p>
+<li>The CDC recommends the 12-week isoniazid/rifapentine regimen as an equal</li>
+<p>alternative to 9 months of daily isoniazid for treating latent tuberculosis infection</p>
+<p>(LTBI) in otherwise healthy patients aged 12 years or older who have a predictive</p>
+<p>factor for greater likelihood of TB developing, which included recent exposure to</p>
+<p>contagious TB, conversion from negative to positive on an indirect test for infection</p>
+<p>(ie, interferon-gamma release assays [IGRA] or tuberculin skin test), and radio-</p>
+<p>graphic findings of healed pulmonary TB.</p>
+<p>542</p>
+<p>ch50.indd 542 19-11-2020 20:39:52</p>
+<h2>Tuberculosis | CHAPTER 50</h2>
+<h2>TABLE 50-1 Criteria for Tuberculosis Positivity</h2>
+<p>Reaction</p>
+<p>Reaction ≥5 mm of ≥15 mm of</p>
+<p>induration Reaction ≥10 mm of induration induration</p>
+<p>HIV-infected persons Recent immigrants (ie, within the last 5 Persons with no</p>
+<p>years) from high-prevalence countries risk factors</p>
+<p>for TB</p>
+<p>A recent contact of a person Injection drug users</p>
+<p>with TB disease</p>
+<p>Fibrotic changes on chest Residents and employeesa of the</p>
+<p>radiograph consistent following high-risk congregate</p>
+<p>with prior TB settings: prisons and jails, nursing</p>
+<p>homes and other long-term facilities</p>
+<p>for the elderly, hospitals and other</p>
+<p>healthcare facilities, residential</p>
+<p>facilities for patients with AIDS, and</p>
+<p>homeless shelters</p>
+<p>Patients with organ Mycobacteriology laboratory personnel,</p>
+<p>transplants and other persons with the following clinical</p>
+<p>immunosuppressed conditions that place them at high</p>
+<p>patients (receiving the risk: silicosis, diabetes mellitus, chronic</p>
+<p>equivalent of 15 mg/day renal failure, some hematologic</p>
+<p>or more of prednisone for disorders, other specific malignancies,</p>
+<p>1 month or longer, taking gastrectomy, and jejunoileal bypass</p>
+<p>TNF-α antagonists)b Children younger than 5 years of age</p>
+<p>or infants, children, and adolescents</p>
+<p>exposed to adults at high risk</p>
+<p>Interpretation of Interferon Gamma Release Assay (IGRA) Results</p>
+<p>The interpretation of IGRAs is based on the amount of IFN-γ, in T-SPOT®.TB. An IGRA is</p>
+<p>recommended over a tuberculin skin test (TST) in persons at least 5 years of age who</p>
+<p>are likely to have M. tuberculosis infection; who are at low or moderate risk of the disease</p>
+<p>progressing; in whom it has been determined that latent tuberculosis infection (LTBI)</p>
+<p>testing is necessary; and who have been vaccinated against Calmette-Guerin or are</p>
+<p>not likely to return for follow up after a TST. The TST is a viable second option in certain</p>
+<p>circumstances, such as if an IGRA is unavailable. Laboratories should provide both the</p>
+<p>qualitative and quantitative results.</p>
+<p>Qualitative results are reported positive, negative, indeterminate, or borderline.</p>
+<p>Quantitative results are reported as numerical values that include a response to the TB</p>
+<p>antigen and two controls, nil and mitogen.</p>
+<p>Quantitative results may be useful for clinical decision making in individual cases, in</p>
+<p>combination with risk factors.</p>
+<p>aFor persons who are otherwise at low risk and who are tested at the start of employment, a reaction</p>
+<p>of ≥15 mm induration is considered positive.</p>
+<p>bRisk of TB for patients treated with corticosteroids increases with higher dose and longer duration.</p>
+<p>AIDS, acquired immunodeficiency syndrome; HIV, human immunodeficiency virus; TB, tuberculosis.</p>
+<p>Source: Centers for Disease Control and Prevention. Screening for tuberculosis and tuberculosis infection</p>
+<p>in high-risk populations: recommendations of the Advisory Council for the Elimination of Tuberculosis.</p>
+<p>M.M.W.R. 1995;44(No. RR-11):19–34.</p>
+<p>543</p>
+<p>ch50.indd 543 19-11-2020 20:39:52</p>
+<div class="table-container"><table><tr><th>TABLE 50-1 Criteria for Tuberculosis Positivity</th><th></th><th></th></tr><tr><td>Reaction ≥5 mm of
+induration</td><td>Reaction ≥10 mm of induration</td><td>Reaction
+≥15 mm of
+induration</td></tr><tr><td>HIV-infected persons</td><td>Recent immigrants (ie, within the last 5
+years) from high-prevalence countries</td><td>Persons with no
+risk factors
+for TB</td></tr><tr><td>A recent contact of a person
+with TB disease</td><td>Injection drug users</td><td></td></tr><tr><td>Fibrotic changes on chest
+radiograph consistent
+with prior TB</td><td>Residents and employeesa of the
+following high-risk congregate
+settings: prisons and jails, nursing
+homes and other long-term facilities
+for the elderly, hospitals and other
+healthcare facilities, residential
+facilities for patients with AIDS, and
+homeless shelters</td><td></td></tr><tr><td>Patients with organ
+transplants and other
+immunosuppressed
+patients (receiving the
+equivalent of 15 mg/day
+or more of prednisone for
+1 month or longer, taking
+TNF-α antagonists)b</td><td>Mycobacteriology laboratory personnel,
+persons with the following clinical
+conditions that place them at high
+risk: silicosis, diabetes mellitus, chronic
+renal failure, some hematologic
+disorders, other specific malignancies,
+gastrectomy, and jejunoileal bypass</td><td></td></tr><tr><td></td><td>Children younger than 5 years of age
+or infants, children, and adolescents
+exposed to adults at high risk</td><td></td></tr><tr><td>Interpretation of Interferon Gamma Release Assay (IGRA) Results</td><td></td><td></td></tr><tr><td>The interpretation of IGRAs is based on the amount of IFN-γ, in T-SPOT®.TB. An IGRA is
+recommended over a tuberculin skin test (TST) in persons at least 5 years of age who
+are likely to have M. tuberculosis infection; who are at low or moderate risk of the disease
+progressing; in whom it has been determined that latent tuberculosis infection (LTBI)
+testing is necessary; and who have been vaccinated against Calmette-Guerin or are
+not likely to return for follow up after a TST. The TST is a viable second option in certain
+circumstances, such as if an IGRA is unavailable. Laboratories should provide both the
+qualitative and quantitative results.
+Qualitative results are reported positive, negative, indeterminate, or borderline.
+Quantitative results are reported as numerical values that include a response to the TB
+antigen and two controls, nil and mitogen.
+Quantitative results may be useful for clinical decision making in individual cases, in
+combination with risk factors.</td><td></td><td></td></tr></table></div><h2>544 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>Group Testing Strategy Considerations</p>
+<p>Adults</p>
+<h2>Acceptable: IGRA OR TST</h2>
+<p>Consider dual testing where a positive result</p>
+<p>from either result would be considered positive</p>
+<p>Likely to be Infected</p>
+<p>High Risk of Progression Children ≤ 5 years of age</p>
+<h2>(TST ≥ 5 mM) Acceptable: TST</h2>
+<h2>Acceptable: IGRA OR TST</h2>
+<p>Consider dual testing where a positive result Prevalence of BCG vaccination</p>
+<p>from either result would be considered positive1 Expertise of staff and/or laboratory</p>
+<p>Test availability</p>
+<p>Likely to be Infected Preferred: IGRA where available Patient perceptions</p>
+<p>Low to Intermediate Risk of Progression (TST ≥ 10 mM) Acceptable: IGRA OR TST Staff perceptions</p>
+<p>Programmatic concerns</p>
+<p>Testing for LTBI is not recommended</p>
+<p>If necessary:</p>
+<p>Preferred: IGRA where available.</p>
+<h2>Unlikely to be Infected Acceptable: Either IGRA OR TST</h2>
+<p>(TST &gt; 15 mM) For serial testing:</p>
+<h2>Acceptable: Either IGRA OR TST</h2>
+<p>Consider repeat or dual testing where a negative</p>
+<p>result from either would be considered negative2</p>
+<p>Performing A Second Diagnostic Test When The Initial Test Is A Negative Is A Strategy To Increase Sensitivity. This May Reduce Specifically, But The Panel Decided That This Is An Acceptable Trade</p>
+<p>Off In Situations In Which The Consequences Of Missing Ltbi Exceed The Consequences Of Inappropriate Therapy. 2Performing A Confirmatory Test Following An Initial Positive Result Is Based Upon</p>
+<p>Both The Evidence That False-Positive Results Are Common Among Individuals Who Are Unlikely To Be Infected With Mycobacterium Tuberculosis And The Committee’s Presumption That Performing</p>
+<p>A Second Test On Those Patients Whose Initial Test Was Positive Will Help Identify Initial False-Positive Results.</p>
+<p>(Adapted from Jamil SM, et al. Diagnosis of tuberculosis in adults and children. Ann Am Thorac. 2017;14(2):275–278.)</p>
+<p>FIGURE 50-1. Summary of recommendations for testing for latent tuberculosis infection (LTBI).</p>
+<p>ch50.indd</p>
+<p>544</p>
+<p>19-11-2020</p>
+<p>20:39:54</p>
+<div class="table-container"><table><tr><th>Likely to be Infected
+High Risk of Progression
+(TST ≥ 5 mM)</th><th>Adults
+Acceptable: IGRA OR TST
+Consider dual testing where a positive result
+from either result would be considered positive
+Children ≤ 5 years of age
+Acceptable: TST
+Acceptable: IGRA OR TST
+Consider dual testing where a positive result
+from either result would be considered positive1</th><th>Prevalence of BCG vaccination
+Expertise of staff and/or laboratory
+Test availability
+Patient perceptions
+Staff perceptions
+Programmatic concerns</th></tr><tr><td>Likely to be Infected
+Low to Intermediate Risk of Progression (TST ≥ 10 mM)</td><td>Preferred: IGRA where available
+Acceptable: IGRA OR TST</td><td></td></tr><tr><td>Unlikely to be Infected
+(TST &gt; 15 mM)</td><td>Testing for LTBI is not recommended
+If necessary:
+Preferred: IGRA where available.
+Acceptable: Either IGRA OR TST
+For serial testing:
+Acceptable: Either IGRA OR TST
+Consider repeat or dual testing where a negative
+result from either would be considered negative2</td><td></td></tr></table></div><p>545</p>
+<p>Tuberculosis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>50</p>
+<h2>TABLE 50-2 Choosing the Most Effective Treatment of LTBI</h2>
+<p>Drug Duration Dose Frequency Comments</p>
+<p>Isoniazid 9 months Adult: 5 mg/kg Daily In HIV-infected patients, isoniazid may be administered concurrently with nucleoside reverse</p>
+<p>Children: 10–20 mg/kga transcriptase inhibitors (NRTIs), protease inhibitors, or non-NRTIs (NNRTIs)</p>
+<p>Preferred regimen in children 2–11 years</p>
+<p>9 months Adult: 15 mg/kg Twice weeklyc Directly observed treatment (DOT) must be used with twice-weekly dosing</p>
+<p>Children: 20–40 mg/kga</p>
+<p>6 months Adult: 5 mg/kg Daily Treatment for LTBI for 6 months rather than 9 months may be more cost-effective and result in</p>
+<p>Children: Not recommended greater adherence by patients</p>
+<p>6 months Adult: 15 mg/kg Twice weeklyc Directly observed treatment (DOT) must be used with twice-weekly dosing</p>
+<p>Children: Not recommended</p>
+<p>Isoniazid and 3 months Rifapentine Once weeklyc Equal alternative to 9 months of daily isoniazid for otherwise healthy patients age &gt;12 years DOT</p>
+<p>rifapentine 10.0–14.0 kg: 300 mg is recommended</p>
+<p>14.1–25.0 kg: 450 mg Not recommended for children &lt;2 years; HIV-infected patients taking antiretroviral therapy,</p>
+<p>presumed resistance, pregnant women or women expecting to become pregnant during the</p>
+<p>25.1–32.0 kg: 600 mg treatment period DOT must be used</p>
+<p>32.1–49.9 kg: 750 mg</p>
+<p>≥50.0 kg: 900 mg</p>
+<p>Rifampin 4 months Adult: 10 mg/kg Daily For persons who are contacts of patients with isoniazid-resistant rifampin-susceptible</p>
+<p>Children: 15–20 mg/kgb Can be considered for persons who cannot tolerate isoniazid or who have been exposed to</p>
+<p>isoniazid-resistant TB</p>
+<p>Rifampin should not be used to treat HIV-infected person taking some combinations of ART</p>
+<p>aThe American Academy of Pediatrics recommends an INH dosage of 10–15 mg/kg for the daily regiment and 20–30 mg/kg for twice-weekly regimen.</p>
+<p>bIn the United States, the recommended regimen for the treatment of LTBI in children is a 9-month course of isoniazid. For the treatment of LTBI in infants, children, and adolescents when</p>
+<p>isoniazid could not be tolerated or the child has had contact with a case patient infected with an isoniazid resistant but rifamycin susceptible organism, the American Academy of</p>
+<p>Pediatrics recommends 6 months of daily rifampin (180 doses) at a dosage of 10 mg/kg.</p>
+<p>cIntermittent regimens must be provided via directly observed therapy (DOT), that is, healthcare worker observes the ingestion of medication.</p>
+<p>Source: Adapted from Latent tuberculosis infection: A guide for primary health care providers. US Department of Health and Human Services/CDC. Atlanta, GA, 2013.</p>
+<p>ch50.indd</p>
+<p>545</p>
+<p>19-11-2020</p>
+<p>20:39:54</p>
+<div class="table-container"><table><tr><th>Drug</th><th>Duration</th><th>Dose</th><th>Frequency</th><th>Comments</th></tr><tr><td>Isoniazid</td><td>9 months</td><td>Adult: 5 mg/kg
+Children: 10–20 mg/kga</td><td>Daily</td><td>In HIV-infected patients, isoniazid may be administered concurrently with nucleoside reverse
+transcriptase inhibitors (NRTIs), protease inhibitors, or non-NRTIs (NNRTIs)
+Preferred regimen in children 2–11 years</td></tr><tr><td></td><td>9 months</td><td>Adult: 15 mg/kg
+Children: 20–40 mg/kga</td><td>Twice weeklyc</td><td>Directly observed treatment (DOT) must be used with twice-weekly dosing</td></tr><tr><td></td><td>6 months</td><td>Adult: 5 mg/kg
+Children: Not recommended</td><td>Daily</td><td>Treatment for LTBI for 6 months rather than 9 months may be more cost-effective and result in
+greater adherence by patients</td></tr><tr><td></td><td>6 months</td><td>Adult: 15 mg/kg
+Children: Not recommended</td><td>Twice weeklyc</td><td>Directly observed treatment (DOT) must be used with twice-weekly dosing</td></tr><tr><td>Isoniazid and
+rifapentine</td><td>3 months</td><td>Rifapentine
+10.0–14.0 kg: 300 mg
+14.1–25.0 kg: 450 mg
+25.1–32.0 kg: 600 mg
+32.1–49.9 kg: 750 mg
+≥50.0 kg: 900 mg</td><td>Once weeklyc</td><td>Equal alternative to 9 months of daily isoniazid for otherwise healthy patients age &gt;12 years DOT
+is recommended
+Not recommended for children &lt;2 years; HIV-infected patients taking antiretroviral therapy,
+presumed resistance, pregnant women or women expecting to become pregnant during the
+treatment period DOT must be used</td></tr><tr><td>Rifampin</td><td>4 months</td><td>Adult: 10 mg/kg
+Children: 15–20 mg/kgb</td><td>Daily</td><td>For persons who are contacts of patients with isoniazid-resistant rifampin-susceptible
+Can be considered for persons who cannot tolerate isoniazid or who have been exposed to
+isoniazid-resistant TB
+Rifampin should not be used to treat HIV-infected person taking some combinations of ART</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>Pregnant women, alcoholics, and patients with poor diets who are treated with iso-</li>
+<p>niazid should receive pyridoxine, 10–50 mg daily, to reduce the incidence of central</p>
+<p>nervous system (CNS) effects or peripheral neuropathies.</p>
+<p>Treating Active Disease</p>
+<li>Table 50-3 lists options for treatment of culture-positive pulmonary TB caused</li>
+<p>by drug-susceptible organisms. Doses of antituberculosis drugs are given in</p>
+<p>Table 50-4. Other sources should be consulted for treatment recommendations</p>
+<p>when TB is concurrent with HIV infection. The standard TB treatment regimen</p>
+<p>is isoniazid, rifampin, pyrazinamide, and ethambutol for 2 months, followed by</p>
+<p>isoniazid and rifampin for 4 months. Ethambutol can be stopped if susceptibility</p>
+<p>to isoniazid, rifampin, and pyrazinamide is shown.</p>
+<li>Appropriate samples should be sent for culture and susceptibility testing prior to</li>
+<p>initiating therapy for all patients with active TB. The data should guide the initial</p>
+<p>drug selection for the new patient. If susceptibility data are not available, the drug</p>
+<p>resistance pattern in the area where the patient likely acquired TB should be used.</p>
+<li>If the patient is being evaluated for the retreatment of TB, it is imperative to know</li>
+<p>what drugs were used previously and for how long.</p>
+<li>The standard TB treatment regimen is isoniazid, rifampin, pyrazinamide, and</li>
+<p>ethambutol for 2 months, followed by isoniazid and rifampin for 4 months, a total of</p>
+<p>6 months of treatment.</p>
+<li>Patients who are slow to respond, those who remain culture positive at 2 months of</li>
+<p>treatment, those with cavitary lesions on chest radiograph, and HIV-positive patients</p>
+<p>should be treated for 9 months and for at least 6 months from the time they convert</p>
+<p>to smear and culture negativity.</p>
+<p>Drug Resistance</p>
+<li>If the organism is drug resistant, the aim is to introduce two or more active agents</li>
+<p>that the patient has not received previously. With MDR-TB, no standard regimen</p>
+<p>can be proposed. It is critical to avoid monotherapy or adding only a single drug to</p>
+<p>a failing regimen.</p>
+<li>Drug resistance should be suspected in the following situations:</li>
+<p>✓ Patients who have received prior therapy for TB</p>
+<p>✓ Patients from geographic areas with a high prevalence of resistance (South Africa,</p>
+<p>Mexico, Southeast Asia, the Baltic countries, and the former Soviet states)</p>
+<p>✓ Patients who are homeless, institutionalized, IV drug abusers, and/or infected</p>
+<p>with HIV</p>
+<p>✓ Patients who still have acid-fast bacilli–positive sputum smears after 2 months of</p>
+<p>therapy</p>
+<p>✓ Patients who still have positive cultures after 2–4 months of therapy</p>
+<p>✓ Patients who fail therapy or relapse after retreatment</p>
+<p>✓ Patients known to be exposed to MDR-TB cases</p>
+<p>Special Populations</p>
+<p>Tuberculous Meningitis and Extrapulmonary Disease</p>
+<li>In general, isoniazid, pyrazinamide, ethionamide, and cycloserine penetrate the</li>
+<p>cerebrospinal fluid readily. Patients with CNS TB are often treated for longer periods</p>
+<p>(9–12 months). Extrapulmonary TB of the soft tissues can be treated with conven-</p>
+<p>tional regimens. TB of the bone is typically treated for 9 months, occasionally with</p>
+<p>surgical debridement.</p>
+<p>Children</p>
+<li>TB in children may be treated with regimens similar to those used in adults, although</li>
+<p>some physicians still prefer to extend treatment to 9 months. Pediatric doses of drugs</p>
+<p>should be used.</p>
+<p>546</p>
+<p>ch50.indd 546 19-11-2020 20:39:54</p>
+<p>547</p>
+<p>Tuberculosis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>50</p>
+<p>TABLE 50-3 Drug Regimens for Microbiologically Confirmed Pulmonary Tuberculosis Caused by Drug Susceptible Organisms</p>
+<p>Initial Phase Continuation Phase</p>
+<p>Interval and Dosesb Interval and Dosesc</p>
+<p>Regimen Drugsa (Minimal Duration) Drugs (Minimal Duration) Commentsc,e</p>
+<p>1 Isoniazid 7 days/week for 56 doses Isoniazid/ 7 days/week for 126 doses This is preferred regimen for patient</p>
+<p>Rifampin (8 weeks) or 5 days/week Rifampin (18 weeks) or 5 days/week for with newly diagnosed pulmonary</p>
+<p>for 40 doses (8 weeks)c 90 doses (18 weeks)c tuberculosis.</p>
+<p>Pyrazinamide</p>
+<p>Ethambutol</p>
+<p>2 Isoniazid 7 days/week for 56 doses or Isoniazid/ Three times weekly for 54 doses Preferred alternative regimen in situations</p>
+<p>Rifampin 5 days/week for 40 doses Rifampin (18 weeks)d in which more frequent DOT during</p>
+<p>(8 weeks) continuation phase is difficult to achieve.</p>
+<p>Pyrazinamide</p>
+<p>Ethambutol</p>
+<p>3 Isoniazid 3 times weekly for 24 doses Isoniazid/ Three times weekly for 54 doses Use regimen with caution in patients with</p>
+<p>Rifampin (8 weeks) Rifampin (18 weeks) HIV and/or cavitary disease. Missed</p>
+<p>doses can lead to treatment failure,</p>
+<p>Pyrazinamide relapse, and acquired drug resistance.</p>
+<p>Ethambutol</p>
+<p>(Continued )</p>
+<p>ch50.indd</p>
+<p>547</p>
+<p>19-11-2020</p>
+<p>20:39:54</p>
+<div class="table-container"><table><tr><th>TABLE 50-3 Drug Regimens for Microbiologically Confirmed Pulmonary Tuberculosis Caused by Drug Susceptible Organisms</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Initial Phase</td><td></td><td></td><td></td><td>Continuation Phase</td><td></td><td></td></tr><tr><td>Regimen</td><td>Drugsa</td><td>Interval and Dosesb
+(Minimal Duration)</td><td></td><td>Drugs</td><td>Interval and Dosesc
+(Minimal Duration)</td><td>Commentsc,e</td></tr><tr><td>1</td><td>Isoniazid
+Rifampin
+Pyrazinamide
+Ethambutol</td><td>7 days/week for 56 doses
+(8 weeks) or 5 days/week
+for 40 doses (8 weeks)c</td><td></td><td>Isoniazid/
+Rifampin</td><td>7 days/week for 126 doses
+(18 weeks) or 5 days/week for
+90 doses (18 weeks)c</td><td>This is preferred regimen for patient
+with newly diagnosed pulmonary
+tuberculosis.</td></tr><tr><td>2</td><td>Isoniazid
+Rifampin
+Pyrazinamide
+Ethambutol</td><td>7 days/week for 56 doses or
+5 days/week for 40 doses
+(8 weeks)</td><td></td><td>Isoniazid/
+Rifampin</td><td>Three times weekly for 54 doses
+(18 weeks)d</td><td>Preferred alternative regimen in situations
+in which more frequent DOT during
+continuation phase is difficult to achieve.</td></tr><tr><td>3</td><td>Isoniazid
+Rifampin
+Pyrazinamide
+Ethambutol</td><td>3 times weekly for 24 doses
+(8 weeks)</td><td></td><td>Isoniazid/
+Rifampin</td><td>Three times weekly for 54 doses
+(18 weeks)</td><td>Use regimen with caution in patients with
+HIV and/or cavitary disease. Missed
+doses can lead to treatment failure,
+relapse, and acquired drug resistance.
+(Continued )</td></tr></table></div><h2>548 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 50-3 Drug Regimens for Microbiologically Confirmed Pulmonary Tuberculosis Caused by Drug Susceptible Organisms(Continued )</p>
+<p>Initial Phase Continuation Phase</p>
+<p>Interval and Dosesb Interval and Dosesc</p>
+<p>Regimen Drugsa (Minimal Duration) Drugs (Minimal Duration) Commentsc,e</p>
+<p>4 Isoniazid 7 days/week for 14 doses, Isoniazid/ Twice weekly for 36 doses (18 weeks) Do not use twice weekly regimens in HIV-</p>
+<p>Rifampin then twice weekly for 12 Rifampin infected patients or patients with smear</p>
+<p>dosese positive and/or cavitary disease. If doses</p>
+<p>Ethambutol are missed, then therapy is equivalent to</p>
+<p>Pyrazinamide once weekly, which is inferior.</p>
+<p>aOther combinations may be appropriate in certain circumstances.</p>
+<p>bWhen DOT is used, drugs may be given 5 days/week and the necessary number of doses adjusted accordingly. Although there are no studies that compare 5 with 7 daily doses, extensive</p>
+<p>experience indicates this would be an effective practice. DOT should be used when drugs are administered &lt;7 days/week.</p>
+<p>cBased on expert opinion, patients with cavitation on initial chest radiograph and positive cultures at completion of 2 months of therapy should receive a 7-month (31-week) continuation</p>
+<p>phase.</p>
+<p>dPyridoxine (vitamin B), 25–50 mg/day, is given with INH to all persons at risk of neuropathy (eg, pregnant women; breastfeeding infants; persons with HIV; patients with diabetes,</p>
+<p>6</p>
+<p>alcoholism, malnutrition, or chronic renal failure; or patients with advanced age). For patients with peripheral neuropathy, experts recommend increasing pyridoxine dose to</p>
+<p>100 mg/day.</p>
+<p>eAlternatively, some US tuberculosis control programs have administered intensive-phase regimens 5 days/week for 15 doses (3 weeks), then twice weekly for 12 doses.</p>
+<p>DOT, directly observed therapy; EMB, ethambutol; HIV, human immunodeficiency virus; INH, isoniazid; PZA, pyrazinamide; RIF, rifampin.</p>
+<p>Source: Reprinted, with permission, from Nahid P, et al. Executive Summary: Official American Thoracic Society/Centers for Disease Control and Prevention/Infectious Diseases Society of America</p>
+<p>Clinical Practice Guidelines: Treatment of Drug-Susceptible Tuberculosis, Clinical Infectious Diseases, Volume 63, Issue 7, 1 October 2016, pp. 853–867.</p>
+<p>ch50.indd</p>
+<p>548</p>
+<p>19-11-2020</p>
+<p>20:39:54</p>
+<div class="table-container"><table><tr><th>TABLE 50-3 Drug Regimens for Microbiologically Confirmed Pulmonary Tuberculosis Caused by Drug Susceptible Organisms(Continued )
+Initial Phase Continuation Phase</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Regimen</td><td>Drugsa</td><td>Interval and Dosesb
+(Minimal Duration)</td><td></td><td>Drugs</td><td>Interval and Dosesc
+(Minimal Duration)</td><td>Commentsc,e</td></tr><tr><td>4</td><td>Isoniazid
+Rifampin
+Ethambutol
+Pyrazinamide</td><td>7 days/week for 14 doses,
+then twice weekly for 12
+dosese</td><td></td><td>Isoniazid/
+Rifampin</td><td>Twice weekly for 36 doses (18 weeks)</td><td>Do not use twice weekly regimens in HIV-
+infected patients or patients with smear
+positive and/or cavitary disease. If doses
+are missed, then therapy is equivalent to
+once weekly, which is inferior.</td></tr></table></div><p>549</p>
+<p>Tuberculosis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>50</p>
+<h2>TABLE 50-4 Antituberculosis Drugs for Adults and Children</h2>
+<p>Typical Dosesa</p>
+<p>Adults/</p>
+<p>Drug Preparation Children Daily 1× Per Week 2× Per Week 3× Per Week</p>
+<p>First-line drugs</p>
+<p>Isoniazid Tablets (50, 100, 300 mg); elixir Adults 5 mg/kg 15 mg/kg 15 mg/kg 15 mg/kg</p>
+<p>(50 mg/5 mL); aqueous Children 10–15 mg/kg — 20–30 mg/kg —</p>
+<p>solution (100 mg/mL) for IV or</p>
+<p>intramuscular injection</p>
+<p>Rifampinh Capsule (150, 300 mg); powder Adultsb 10 mg/kg — 10 mg/kg 10 mg/kg</p>
+<p>may be suspended for oral Children 10–20 mg/kg — 10–20 mg/kg —</p>
+<p>administration; aqueous</p>
+<p>solution for IV injection</p>
+<p>Rifabutin Capsule (150 mg) Adultsb 5 mg/kg — 5 mg/kg</p>
+<p>Children Appropriate dosing for</p>
+<p>children is unknown</p>
+<p>Rifapentineh Tablet (150 mg, film coated) Adults — 10–20 mg/kg — —</p>
+<p>Children The drug is not approved (continuation</p>
+<p>for use in children &lt;12 phase)</p>
+<p>years old</p>
+<p>Pyrazinamide Tablet (500 mg, scored) Adults 40–55 kg: 1000 mg — 40–55 kg: 2000 mg 40–55 kg: 1500 mg</p>
+<p>56–75 kg: 1500 mg — 56–75 kg: 3000 mg 56–75 kg: 2500 mg</p>
+<p>76–90 kg: 2000 mg — 76–90 kg: 4000 mg 76–90 kg: 3000 mg</p>
+<p>Children 30–40 mg/kg — 50 mg/kg —</p>
+<p>(Continued )</p>
+<p>ch50.indd</p>
+<p>549</p>
+<p>19-11-2020</p>
+<p>20:39:55</p>
+<div class="table-container"><table><tr><th>TABLE 50-4 Antituberculosis Drugs for Adults and Children</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Preparation</td><td>Adults/
+Children</td><td>Typical Dosesa</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>Daily</td><td>1× Per Week</td><td>2× Per Week</td><td>3× Per Week</td></tr><tr><td>First-line drugs</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Isoniazid</td><td>Tablets (50, 100, 300 mg); elixir
+(50 mg/5 mL); aqueous
+solution (100 mg/mL) for IV or
+intramuscular injection</td><td>Adults
+Children</td><td>5 mg/kg
+10–15 mg/kg</td><td>15 mg/kg
+—</td><td>15 mg/kg
+20–30 mg/kg</td><td>15 mg/kg
+—</td></tr><tr><td>Rifampinh</td><td>Capsule (150, 300 mg); powder
+may be suspended for oral
+administration; aqueous
+solution for IV injection</td><td>Adultsb
+Children</td><td>10 mg/kg
+10–20 mg/kg</td><td>—
+—</td><td>10 mg/kg
+10–20 mg/kg</td><td>10 mg/kg
+—</td></tr><tr><td>Rifabutin</td><td>Capsule (150 mg)</td><td>Adultsb
+Children</td><td>5 mg/kg
+Appropriate dosing for
+children is unknown</td><td>—</td><td></td><td>5 mg/kg</td></tr><tr><td>Rifapentineh</td><td>Tablet (150 mg, film coated)</td><td>Adults
+Children</td><td>—
+The drug is not approved
+for use in children &lt;12
+years old</td><td>10–20 mg/kg
+(continuation
+phase)</td><td>—</td><td>—</td></tr><tr><td>Pyrazinamide</td><td>Tablet (500 mg, scored)</td><td>Adults
+Children</td><td>40–55 kg: 1000 mg
+56–75 kg: 1500 mg
+76–90 kg: 2000 mg
+30–40 mg/kg</td><td>—
+—
+—
+—</td><td>40–55 kg: 2000 mg
+56–75 kg: 3000 mg
+76–90 kg: 4000 mg
+50 mg/kg</td><td>40–55 kg: 1500 mg
+56–75 kg: 2500 mg
+76–90 kg: 3000 mg
+—
+(Continued )</td></tr></table></div><h2>550 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 50-4 Antituberculosis Drugs for Adults and Children(Continued )</p>
+<p>Typical Dosesa</p>
+<p>Adults/</p>
+<p>Drug Preparation Children Daily 1× Per Week 2× Per Week 3× Per Week</p>
+<p>Ethambutol Tablet (100, 400 mg) Adults 40–55 kg: 800 mg — 40–55 kg: 2000 mg 40–55 kg: 1200 mg</p>
+<p>56–75 kg: 1200 mg — 56–75 kg: 2800 mg 56–75 kg: 2000 mg</p>
+<p>76–90 kg: 1600 mg — 76–90 kg: 4000 mg 76–90 kg: 2400 mg</p>
+<p>Childrenb 30–40 mg/kg — — 50 mg/kg</p>
+<p>Second-line drugs</p>
+<p>Cycloserine Capsule (250 mg) Adults 10–15 mg/kg/day, usually No data No data No data</p>
+<p>500–750 mg/day in</p>
+<p>two dosesc</p>
+<p>Children 10–15 mg/kg/day — — —</p>
+<p>Ethionamide Tablet (250 mg) Adultsd 15–20 mg/kg/day, usually No data No data No data</p>
+<p>500–750 mg/day in</p>
+<p>a single daily dose or</p>
+<p>two divided dosesf</p>
+<p>Children 15–20 mg/kg/day No data No data No data</p>
+<p>Streptomycin Aqueous solution (1-g vials) Adults 15 mg/kg/daye — — —</p>
+<p>for IV or intramuscular Childreni 15–20 mg/kg/day — 25–30 mg/kg 25 mg/kg</p>
+<p>administration</p>
+<p>ch50.indd</p>
+<p>550</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>TABLE 50-4 Antituberculosis Drugs for Adults and Children(Continued )
+Typical Dosesa
+Adults/
+Drug Preparation Children Daily 1× Per Week 2× Per Week 3× Per Week</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td><td>Daily</td><td>1× Per Week</td><td>2× Per Week</td><td></td><td>3× Per Week</td></tr><tr><td>Ethambutol</td><td>Tablet (100, 400 mg)</td><td>Adults
+Childrenb</td><td>40–55 kg: 800 mg
+56–75 kg: 1200 mg
+76–90 kg: 1600 mg
+30–40 mg/kg</td><td>—
+—
+—
+—</td><td></td><td>40–55 kg: 2000 mg
+56–75 kg: 2800 mg
+76–90 kg: 4000 mg
+—</td><td>40–55 kg: 1200 mg
+56–75 kg: 2000 mg
+76–90 kg: 2400 mg
+50 mg/kg</td></tr><tr><td>Second-line drugs</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Cycloserine</td><td>Capsule (250 mg)</td><td>Adults
+Children</td><td>10–15 mg/kg/day, usually
+500–750 mg/day in
+two dosesc
+10–15 mg/kg/day</td><td>No data
+—</td><td></td><td>No data
+—</td><td>No data
+—</td></tr><tr><td>Ethionamide</td><td>Tablet (250 mg)</td><td>Adultsd
+Children</td><td>15–20 mg/kg/day, usually
+500–750 mg/day in
+a single daily dose or
+two divided dosesf
+15–20 mg/kg/day</td><td>No data
+No data</td><td></td><td>No data
+No data</td><td>No data
+No data</td></tr><tr><td>Streptomycin</td><td>Aqueous solution (1-g vials)
+for IV or intramuscular
+administration</td><td>Adults
+Childreni</td><td>15 mg/kg/daye
+15–20 mg/kg/day</td><td>—
+—</td><td></td><td>—
+25–30 mg/kg</td><td>—
+25 mg/kg</td></tr></table></div><p>551</p>
+<p>Tuberculosis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>50</p>
+<p>Amikacin/ Aqueous solution (500-mg and Adults 15 mg/kg/daye — — 25 mg/kg</p>
+<p>Kanamycin 1-g vials) for IV or intramuscular Childreni 15–20 mg/kg/day IV or — 25–30 mg/kg —</p>
+<p>administration intramuscular as a</p>
+<p>single daily dose</p>
+<p>Capreomycin Aqueous solution (1-g vials) for IV Adults 15 mg/kg/dayg e 25–30 mg/kg 25 mg/kg</p>
+<p>or intramuscular administration Childreni 15–20 mg/kg/day as a — 25–30 mg/kg</p>
+<p>single daily dose</p>
+<p>p-Aminosalicylic Granules (4-g packets) can be Adults 8–12 g/day in two or No data No data No data</p>
+<h2>acid (PAS) mixed with food; tablets three doses</h2>
+<p>(500 mg) are still available in Children 200–300 mg/kg/day in No data No data No data</p>
+<p>some countries, but not in the two to four divided</p>
+<p>United States; a solution for IV doses</p>
+<p>administration is available in</p>
+<p>Europe</p>
+<p>Levofloxacin Tablets (250, 500, 750 mg); Adults 500–1000 mg daily No data No data No data</p>
+<p>aqueous solution (500-mg vials) Children f f f f</p>
+<p>for IV injection</p>
+<p>Moxifloxacin Tablets (400 mg); aqueous Adults 400 mg daily No data No data No data</p>
+<p>solution (400 mg/250 mL) for Children g g g g</p>
+<p>IV injection</p>
+<p>(Continued )</p>
+<p>ch50.indd</p>
+<p>551</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>Amikacin/
+Kanamycin</th><th>Aqueous solution (500-mg and
+1-g vials) for IV or intramuscular
+administration</th><th>Adults
+Childreni</th><th>15 mg/kg/daye
+15–20 mg/kg/day IV or
+intramuscular as a
+single daily dose</th><th>—
+—</th><th>—
+25–30 mg/kg</th><th>25 mg/kg
+—</th></tr><tr><td>Capreomycin</td><td>Aqueous solution (1-g vials) for IV
+or intramuscular administration</td><td>Adults
+Childreni</td><td>15 mg/kg/dayg
+15–20 mg/kg/day as a
+single daily dose</td><td>e
+—</td><td>25–30 mg/kg</td><td>25 mg/kg
+25–30 mg/kg</td></tr><tr><td>p-Aminosalicylic
+acid (PAS)</td><td>Granules (4-g packets) can be
+mixed with food; tablets
+(500 mg) are still available in
+some countries, but not in the
+United States; a solution for IV
+administration is available in
+Europe</td><td>Adults
+Children</td><td>8–12 g/day in two or
+three doses
+200–300 mg/kg/day in
+two to four divided
+doses</td><td>No data
+No data</td><td>No data
+No data</td><td>No data
+No data</td></tr><tr><td>Levofloxacin</td><td>Tablets (250, 500, 750 mg);
+aqueous solution (500-mg vials)
+for IV injection</td><td>Adults
+Children</td><td>500–1000 mg daily
+f</td><td>No data
+f</td><td>No data
+f</td><td>No data
+f</td></tr><tr><td>Moxifloxacin</td><td>Tablets (400 mg); aqueous
+solution (400 mg/250 mL) for
+IV injection</td><td>Adults
+Children</td><td>400 mg daily
+g</td><td>No data
+g</td><td>No data
+g</td><td>No data
+g
+(Continued )</td></tr></table></div><h2>552 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 50-4 Antituberculosis Drugs for Adults and Children(Continued )</p>
+<p>Adults/ Typical Dosesa</p>
+<p>Drug Preparation Children Daily 1× Per Week 2× Per Week 3× Per Week</p>
+<p>Bedaquiline Adults Weeks 1–2: 400 mg daily. No data No data No data</p>
+<p>Weeks 3–24: 200 mg</p>
+<p>three times weekly.</p>
+<p>Children The drug is not approved</p>
+<p>for use in children</p>
+<p>aThe authors of this chapter do not agree with the use of maximum doses, since this arbitrarily caps doses for patients who otherwise might need larger doses. These maximum doses were</p>
+<p>not based on prospective studies in large or overweight individuals, and do not consider patients with documented malabsorption of their medications. Clinical judgment should be</p>
+<p>used in such circumstances.</p>
+<p>bThe drug can likely be used safely in older children but should be used with caution in children younger than 5 years, in whom visual acuity cannot be monitored. In younger children,</p>
+<p>ethambutol at the dose of 15 mg/kg/day can be used if there is suspected or proven resistance to isoniazid or rifampin.</p>
+<p>cAlthough this is the dose recommended generally, most clinicians with experience using cycloserine indicate that it is unusual for patients to be able to tolerate this amount. Serum</p>
+<p>concentration measurements are often useful in determining the optimal dose for a given patient.</p>
+<p>dThe single daily dose can be given at bedtime or with the main meal to reduce nausea.</p>
+<p>eDose: 15 mg/kg/day (1 g), and 10 mg/kg in persons older than 59 years (750 mg). Usual dose: 750–1000 mg administered intramuscularly or IV, given as a single dose 5–7 days/week and</p>
+<p>reduced to two or three times per week after the first 2–4 months or after culture conversion, depending on the efficacy of the other drugs in the regimen.</p>
+<p>fThe long-term (more than several weeks) use of levofloxacin in children and adolescents has not been approved because of concerns about effects on bone and cartilage growth. However,</p>
+<p>most experts agree that the drug should be considered for children with tuberculosis caused by organisms resistant to both isoniazid and rifampin. The optimal dose is not known.</p>
+<p>gThe long-term (more than several weeks) use of moxifloxacin in children and adolescents has not been approved because of concerns about effects on bone and cartilage growth. The</p>
+<p>optimal dose is not known.</p>
+<p>hHigher doses of rifampin and rifapentine are being studied. Rifabutin dose may need to be adjusted when there is concomitant use of protease inhibitors or non-nucleoside reverse</p>
+<p>transcriptase inhibitors.</p>
+<p>iLarger total body water content and faster clearance of injectable drugs in most children. Dosing can be guided by serum concentrations.</p>
+<p>For purposes of this document, adult dosing begins at age 15 years.</p>
+<p>Source: Reprinted, with permission, from Nahid P, et al. Executive Summary: Official American Thoracic Society/Centers for Disease Control and Prevention/Infectious Diseases Society of America Clinical</p>
+<p>Practice Guidelines: Treatment of Drug-Susceptible Tuberculosis, Clinical Infectious Diseases, Volume 63, Issue 7, 1 October 2016, pp. 853–867.</p>
+<p>ch50.indd</p>
+<p>552</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>TABLE 50-4 Antituberculosis Drugs for Adults and Children(Continued )
+Adults/ Typical Dosesa
+Drug Preparation Children Daily 1× Per Week 2× Per Week 3× Per Week</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td><td>Daily</td><td>1× Per Week</td><td>2× Per Week</td><td></td><td>3× Per Week</td></tr><tr><td>Bedaquiline</td><td></td><td>Adults
+Children</td><td>Weeks 1–2: 400 mg daily.
+Weeks 3–24: 200 mg
+three times weekly.
+The drug is not approved
+for use in children</td><td>No data</td><td></td><td>No data</td><td>No data</td></tr></table></div><h2>Tuberculosis | CHAPTER 50</h2>
+<p>553</p>
+<p>atad</p>
+<p>oN</p>
+<p>atad oN</p>
+<p>atad</p>
+<p>oN</p>
+<p>.yliad gm 004 :2–1 skeeW</p>
+<p>stludA</p>
+<p>eniliuqadeB</p>
+<p>gm 002 :42–3 skeeW .ylkeew semit eerht devorppa ton si gurd ehT</p>
+<p>nerdlihC</p>
+<p>nerdlihc ni esu rof</p>
+<p>erew</p>
+<p>sesod</p>
+<p>mumixam</p>
+<p>esehT</p>
+<p>.sesod regral</p>
+<p>deen</p>
+<p>thgim esiwrehto</p>
+<p>ohw</p>
+<p>stneitap</p>
+<p>rof sesod spac ylirartibra siht</p>
+<p>ecnis ,sesod mumixam</p>
+<p>fo esu</p>
+<p>eht htiw eerga</p>
+<p>ton od retpahc</p>
+<p>siht fo srohtua</p>
+<p>ehTa</p>
+<p>eb dluohs</p>
+<p>tnemgduj</p>
+<p>lacinilC</p>
+<p>.snoitacidem</p>
+<p>rieht fo noitprosbalam</p>
+<p>detnemucod</p>
+<p>htiw stneitap redisnoc ton</p>
+<p>od dna ,slaudividni thgiewrevo</p>
+<p>ro egral</p>
+<p>ni seiduts</p>
+<p>evitcepsorp</p>
+<p>no desab ton</p>
+<p>.secnatsmucric</p>
+<p>hcus ni desu</p>
+<p>,nerdlihc</p>
+<p>regnuoy</p>
+<p>nI</p>
+<p>.derotinom</p>
+<p>eb tonnac</p>
+<p>ytiuca lausiv</p>
+<p>mohw</p>
+<p>ni</p>
+<p>,sraey</p>
+<p>5 naht regnuoy nerdlihc ni noituac</p>
+<p>htiw desu eb dluohs</p>
+<p>tub</p>
+<p>nerdlihc redlo</p>
+<p>ni</p>
+<p>ylefas desu</p>
+<p>eb ylekil nac gurd</p>
+<p>ehTb</p>
+<p>.nipmafir</p>
+<p>ro dizainosi ot ecnatsiser nevorp</p>
+<p>ro detcepsus si ereht fi</p>
+<p>desu</p>
+<p>eb nac yad/gk/gm</p>
+<p>51 fo esod</p>
+<p>eht ta lotubmahte</p>
+<p>mureS</p>
+<p>.tnuoma</p>
+<p>siht</p>
+<p>etarelot</p>
+<p>ot elba</p>
+<p>eb</p>
+<p>ot stneitap</p>
+<p>rof</p>
+<p>lausunu</p>
+<p>si ti</p>
+<p>taht etacidni eniresolcyc gnisu ecneirepxe</p>
+<p>htiw snaicinilc</p>
+<p>tsom</p>
+<p>,yllareneg dednemmocer</p>
+<p>esod</p>
+<p>eht si siht hguohtlAc</p>
+<p>.tneitap nevig a rof esod</p>
+<p>lamitpo eht gninimreted</p>
+<p>ni lufesu netfo</p>
+<p>era</p>
+<p>stnemerusaem</p>
+<p>noitartnecnoc</p>
+<p>.aesuan</p>
+<p>ecuder ot laem niam eht</p>
+<p>htiw</p>
+<p>ro emitdeb</p>
+<p>ta</p>
+<p>nevig eb nac</p>
+<p>esod yliad elgnis</p>
+<p>ehTd</p>
+<p>dna</p>
+<p>keew/syad</p>
+<p>7–5</p>
+<p>esod</p>
+<p>elgnis</p>
+<p>a sa nevig</p>
+<h2>,VI</h2>
+<p>ro ylralucsumartni</p>
+<p>deretsinimda</p>
+<p>gm 0001–057 :esod lausU .)gm</p>
+<p>057( sraey 95 naht redlo</p>
+<p>snosrep ni gk/gm</p>
+<p>01 dna ,)g</p>
+<p>1( yad/gk/gm 51 :esoDe</p>
+<p>.nemiger eht</p>
+<p>ni</p>
+<p>sgurd rehto</p>
+<p>eht</p>
+<p>fo</p>
+<p>ycacffie</p>
+<p>eht no gnidneped ,noisrevnoc erutluc</p>
+<p>retfa ro shtnom 4–2</p>
+<p>tsrfi</p>
+<p>eht retfa keew</p>
+<p>rep</p>
+<p>semit eerht</p>
+<p>ro owt ot decuder</p>
+<p>,revewoH</p>
+<p>.htworg</p>
+<p>egalitrac</p>
+<p>dna</p>
+<p>enob no stceffe</p>
+<p>tuoba snrecnoc</p>
+<p>fo esuaceb</p>
+<p>devorppa neeb ton sah stnecseloda</p>
+<p>dna nerdlihc ni nicaxoflovel</p>
+<p>fo esu )skeew</p>
+<p>lareves naht</p>
+<p>erom( mret-gnol</p>
+<p>ehTf</p>
+<p>.nwonk</p>
+<p>ton si esod</p>
+<p>lamitpo</p>
+<p>ehT .nipmafir</p>
+<p>dna dizainosi</p>
+<p>htob</p>
+<p>ot</p>
+<p>tnatsiser</p>
+<p>smsinagro yb desuac sisolucrebut</p>
+<p>htiw nerdlihc rof deredisnoc</p>
+<p>eb dluohs</p>
+<p>gurd</p>
+<p>eht taht</p>
+<p>eerga strepxe tsom</p>
+<p>ehT .htworg</p>
+<p>egalitrac</p>
+<p>dna</p>
+<p>enob no stceffe</p>
+<p>tuoba snrecnoc</p>
+<p>fo</p>
+<p>esuaceb</p>
+<p>devorppa neeb ton sah stnecseloda</p>
+<p>dna nerdlihc ni nicaxoflixom</p>
+<p>fo esu )skeew</p>
+<p>lareves naht</p>
+<p>erom( mret-gnol</p>
+<p>ehTg</p>
+<p>.nwonk</p>
+<p>ton si esod lamitpo</p>
+<p>esrever</p>
+<p>edisoelcun-non</p>
+<p>ro srotibihni</p>
+<p>esaetorp</p>
+<p>fo esu</p>
+<p>tnatimocnoc</p>
+<p>si ereht nehw detsujda eb ot deen</p>
+<p>yam esod nitubafiR .deiduts</p>
+<p>gnieb era enitnepafir</p>
+<p>dna nipmafir</p>
+<p>fo sesod rehgiHh</p>
+<p>.srotibihni</p>
+<p>esatpircsnart</p>
+<p>.snoitartnecnoc</p>
+<p>mures</p>
+<p>yb dediug eb nac gnisoD .nerdlihc</p>
+<p>tsom ni sgurd elbatcejni</p>
+<p>fo</p>
+<p>ecnaraelc retsaf</p>
+<p>dna</p>
+<p>tnetnoc</p>
+<p>retaw ydob latot regraLi</p>
+<p>.sraey 51 ega</p>
+<p>ta</p>
+<p>snigeb gnisod</p>
+<p>tluda</p>
+<p>,tnemucod</p>
+<p>siht fo sesoprup</p>
+<p>roF</p>
+<p>lacinilC</p>
+<p>aciremA</p>
+<p>fo yteicoS</p>
+<p>sesaesiD</p>
+<p>suoitcefnI/noitneverP</p>
+<p>dna</p>
+<p>lortnoC</p>
+<p>esaesiD</p>
+<p>rof sretneC/yteicoS cicarohT naciremA</p>
+<p>laicffiO :yrammuS evitucexE</p>
+<p>.la te ,P dihaN</p>
+<p>morf</p>
+<p>,noissimrep</p>
+<p>htiw ,detnirpeR :ecruoS</p>
+<p>.768–358</p>
+<p>.pp</p>
+<p>,6102</p>
+<p>rebotcO</p>
+<p>1 ,7 eussI ,36 emuloV ,sesaesiD</p>
+<p>suoitcefnI lacinilC ,sisolucrebuT</p>
+<p>elbitpecsuS-gurD</p>
+<p>fo tnemtaerT</p>
+<p>:senilediuG ecitcarP</p>
+<p>TABLE 50-5 Dosing Recommendations for Adults with Reduced Renal Function and for Adults</p>
+<p>Receiving Hemodialysis Recommended Dose and Frequency for</p>
+<p>Patients with Creatinine Clearance &lt;30</p>
+<p>Change in mL/min (0.50 mL/sec) or for Patients Drug Frequency? Receiving Hemodialysisa,b,c,d</p>
+<p>Isoniazid No change 300 mg once daily, or 900 mg three times per</p>
+<p>week</p>
+<p>Rifampin No change 600 mg once daily, or 600 mg three times per week Pyrazinamide Yes 25–35 mg/kg per dose three times per week</p>
+<p>(not daily)</p>
+<p>Ethambutol Yes 15–25 mg/kg per dose three times per week (not daily) Levofloxacin Yes 750–1000 mg per dose three times per week</p>
+<p>(not daily)</p>
+<p>Cycloserine Yes 250 mg once daily, or 500 mg/dose three times</p>
+<p>per weeke</p>
+<p>Ethionamide No change 250–500 mg/dose daily</p>
+<p>p-Aminosalicylic No change 4 g/dose, twice daily acid Streptomycin Yes 12–15 mg/kg per dose two or three times per week (not daily) Capreomycin Yes 12–15 mg/kg per dose two or three times per week (not daily) Kanamycin Yes 12–15 mg/kg per dose two or three times per week (not daily) Amikacin Yes 12–15 mg/kg per dose two or three times per</p>
+<p>week (not daily) aStandard doses are given unless there is intolerance. bThe medications should be given after hemodialysis on the day of hemodialysis. cMonitoring of serum drug concentrations should be considered to ensure adequate drug absorption, without excessive accumulation, and to assist in avoiding toxicity. dData currently are not available for patients receiving peritoneal dialysis. Until data become available, begin with doses recommended for patients receiving hemodialysis and verify adequacy of</p>
+<p>dosing, using serum concentration monitoring.</p>
+<p>eThe appropriateness of 250-mg daily doses has not been established. There should be careful monitoring for evidence of neurotoxicity. Source: Reprinted, with permission, from Nahid P, et al. Executive Summary: Official American Thoracic Society/Centers for Disease Control and Prevention/Infectious Diseases Society of America Clinical Practice Guidelines: Treatment of Drug-Susceptible Tuberculosis, Clinical Infectious Diseases, Volume 63,</p>
+<p>Issue 7, 1 October 2016, pp. 853–867.</p>
+<p>Pregnant Women • The usual treatment of pregnant women is isoniazid, rifampin, and ethambutol for 9 months. • Women with TB should be cautioned against becoming pregnant, as the disease poses a risk to the fetus as well as to the mother. Isoniazid or ethambutol is relatively safe when used during pregnancy. Supplementation with B vitamins is particularly important</p>
+<p>during pregnancy. Rifampin has been rarely associated with birth defects, but those</p>
+<p>ch50.indd 553 19-11-2020 20:39:56</p>
+<div class="table-container"><table><tr><th>TABLE 50-5 Dosing Recommendations for Adults with Reduced Renal Function and for Adults
+Receiving Hemodialysis</th><th></th><th></th></tr><tr><td>Drug</td><td>Change in
+Frequency?</td><td>Recommended Dose and Frequency for
+Patients with Creatinine Clearance &lt;30
+mL/min (0.50 mL/sec) or for Patients
+Receiving Hemodialysisa,b,c,d</td></tr><tr><td>Isoniazid</td><td>No change</td><td>300 mg once daily, or 900 mg three times per
+week</td></tr><tr><td>Rifampin</td><td>No change</td><td>600 mg once daily, or 600 mg three times per
+week</td></tr><tr><td>Pyrazinamide</td><td>Yes</td><td>25–35 mg/kg per dose three times per week
+(not daily)</td></tr><tr><td>Ethambutol</td><td>Yes</td><td>15–25 mg/kg per dose three times per week
+(not daily)</td></tr><tr><td>Levofloxacin</td><td>Yes</td><td>750–1000 mg per dose three times per week
+(not daily)</td></tr><tr><td>Cycloserine</td><td>Yes</td><td>250 mg once daily, or 500 mg/dose three times
+per weeke</td></tr><tr><td>Ethionamide</td><td>No change</td><td>250–500 mg/dose daily</td></tr><tr><td>p-Aminosalicylic
+acid</td><td>No change</td><td>4 g/dose, twice daily</td></tr><tr><td>Streptomycin</td><td>Yes</td><td>12–15 mg/kg per dose two or three times per
+week (not daily)</td></tr><tr><td>Capreomycin</td><td>Yes</td><td>12–15 mg/kg per dose two or three times per
+week (not daily)</td></tr><tr><td>Kanamycin</td><td>Yes</td><td>12–15 mg/kg per dose two or three times per
+week (not daily)</td></tr><tr><td>Amikacin</td><td>Yes</td><td>12–15 mg/kg per dose two or three times per
+week (not daily)</td></tr></table></div><h2>554 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 50-6 Recommended Regimens for the Concomitant Treatment of TB and HIV Infection in Adults</p>
+<p>Combined Regimen</p>
+<p>for Treatment of HIV Pharmacokinetic Effect Antiviral Activity when</p>
+<p>and TB of the Rifamycin Tolerability/Toxicity Used with Rifamycin Recommendations (Comments)</p>
+<p>Efavirenz-based Well-characterized, Low rates of discontinuation Excellent Preferred (efavirenz should not be used during the</p>
+<p>antiretroviral modest decrease in first trimester of pregnancy)</p>
+<p>therapya with concentrations in some</p>
+<p>rifampin-based patients</p>
+<p>TB treatment</p>
+<p>PI-based antiretroviral Little effect of rifabutin on Low rates of discontinuation Favorable, although Preferred for patients unable to take efavirenzb</p>
+<p>therapya with PI concentrations, but (if rifabutin is appropriately published clinical (caution to ensure patients who discontinue PI not</p>
+<p>rifabutin-based TB marked increases in dose-reduced) experience is not to continue to receive reduced rifabutin dose)</p>
+<p>treatment rifabutin concentrations extensive</p>
+<p>Nevirapine-based Moderate decrease in Concern about Suboptimal when Alternative for patients who cannot take efavirenz,</p>
+<p>antiretroviral therapy concentrations hepatotoxicity when used nevirapine is initiated though efavirenz is preferred (nevirapine should</p>
+<p>with rifampin-based with isoniazid, rifampin, using once-daily dosing not be initiated among women with CD4 &gt;250</p>
+<p>TB treatment and pyrazinamide largely favorable when [0.25 × 109/L] or men with CD4 &gt;400 cells/μL</p>
+<p>nevirapine is given [0.40 × 109/L])</p>
+<p>twice daily throughout</p>
+<p>cotreatment</p>
+<p>Raltegravir-based Significant decrease in Limited experience Limited published clinical Alternative at higher doses for patients who cannot</p>
+<p>antiretroviral therapy concentrations with experience take efavirenz and who have baseline viral load</p>
+<p>with rifampin-based standard dosing &lt;100,000 copies/mL (100 × 106/L)</p>
+<p>TB treatment</p>
+<p>(Continued )</p>
+<p>ch50.indd</p>
+<p>554</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>TABLE 50-6 Recommended Regimens for the Concomitant Treatment of TB and HIV Infection in Adults
+Combined Regimen
+for Treatment of HIV Pharmacokinetic Effect Antiviral Activity when
+and TB of the Rifamycin Tolerability/Toxicity Used with Rifamycin Recommendations (Comments)</th><th></th><th></th><th></th><th></th></tr><tr><td>Efavirenz-based
+antiretroviral
+therapya with
+rifampin-based
+TB treatment</td><td>Well-characterized,
+modest decrease in
+concentrations in some
+patients</td><td>Low rates of discontinuation</td><td>Excellent</td><td>Preferred (efavirenz should not be used during the
+first trimester of pregnancy)</td></tr><tr><td>PI-based antiretroviral
+therapya with
+rifabutin-based TB
+treatment</td><td>Little effect of rifabutin on
+PI concentrations, but
+marked increases in
+rifabutin concentrations</td><td>Low rates of discontinuation
+(if rifabutin is appropriately
+dose-reduced)</td><td>Favorable, although
+published clinical
+experience is not
+extensive</td><td>Preferred for patients unable to take efavirenzb
+(caution to ensure patients who discontinue PI not
+to continue to receive reduced rifabutin dose)</td></tr><tr><td>Nevirapine-based
+antiretroviral therapy
+with rifampin-based
+TB treatment</td><td>Moderate decrease in
+concentrations</td><td>Concern about
+hepatotoxicity when used
+with isoniazid, rifampin,
+and pyrazinamide</td><td>Suboptimal when
+nevirapine is initiated
+using once-daily dosing
+largely favorable when
+nevirapine is given
+twice daily throughout
+cotreatment</td><td>Alternative for patients who cannot take efavirenz,
+though efavirenz is preferred (nevirapine should
+not be initiated among women with CD4 &gt;250
+[0.25 × 109/L] or men with CD4 &gt;400 cells/μL
+[0.40 × 109/L])</td></tr><tr><td>Raltegravir-based
+antiretroviral therapy
+with rifampin-based
+TB treatment</td><td>Significant decrease in
+concentrations with
+standard dosing</td><td>Limited experience</td><td>Limited published clinical
+experience</td><td>Alternative at higher doses for patients who cannot
+take efavirenz and who have baseline viral load
+&lt;100,000 copies/mL (100 × 106/L)
+(Continued )</td></tr></table></div><p>555</p>
+<p>Tuberculosis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>50</p>
+<p>TABLE 50-6 Recommended Regimens for the Concomitant Treatment of TB and HIV Infection in Adults(Continued )</p>
+<p>Combined Regimen</p>
+<p>for Treatment of HIV Pharmacokinetic Effect Antiviral Activity when</p>
+<p>and TB of the Rifamycin Tolerability/Toxicity Used with Rifamycin Recommendations (Comments)</p>
+<p>Dolutegravir-based Coadministration with Limited experience Limited published clinical Alternative for patients who cannot take efavirenz</p>
+<p>antiretroviral therapy rifampicin results in experience</p>
+<p>with rifampin-based decreases in dolutegravir</p>
+<p>TB-treatment plasma exposure</p>
+<p>requiring increased dose</p>
+<p>of dolutegravir</p>
+<p>Zidovudine/ 50% decrease in zidovudine, Anemia No published clinical Alternative for patients who cannot take efavirenz or</p>
+<p>Lamivudine/ possible effect on experience, but this nevirapine and if rifabutin not available</p>
+<p>Abacavir/Tenofovir abacavir not evaluated regimen is less effective</p>
+<p>with rifampin-based than efavirenz- or</p>
+<p>TB treatment aatazanavir-based</p>
+<p>regimens in person not</p>
+<p>taking rifampin</p>
+<p>Zidovudine/ 50% decrease in zidovudine, Anemia Favorable, but not Alternative for patients who cannot take efavirenz and</p>
+<p>Lamivudine/ no other effects predicted evaluated in a abacavir and if rifabutin not available</p>
+<p>Tenofovir with randomized trial</p>
+<p>rifampin-based TB</p>
+<p>treatment</p>
+<p>Zidovudine/ 50% decrease in zidovudine, Anemia Early favorable experience, Alternative for patients who cannot take efavirenz and</p>
+<p>Lamivudine/Abacavir possible effect on but this combination tenofovir and if rifabutin not available</p>
+<p>with rifampin-based abacavir not evaluated is less effective</p>
+<p>TB treatment than efavirenz- or</p>
+<p>nevirapine-based</p>
+<p>regimens in persons not</p>
+<p>taking rifampin</p>
+<p>ch50.indd</p>
+<p>555</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>TABLE 50-6 Recommended Regimens for the Concomitant Treatment of TB and HIV Infection in Adults(Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Combined Regimen
+for Treatment of HIV
+and TB</td><td>Pharmacokinetic Effect
+of the Rifamycin</td><td>Tolerability/Toxicity</td><td>Antiviral Activity when
+Used with Rifamycin</td><td>Recommendations (Comments)</td></tr><tr><td>Dolutegravir-based
+antiretroviral therapy
+with rifampin-based
+TB-treatment</td><td>Coadministration with
+rifampicin results in
+decreases in dolutegravir
+plasma exposure
+requiring increased dose
+of dolutegravir</td><td>Limited experience</td><td>Limited published clinical
+experience</td><td>Alternative for patients who cannot take efavirenz</td></tr><tr><td>Zidovudine/
+Lamivudine/
+Abacavir/Tenofovir
+with rifampin-based
+TB treatment</td><td>50% decrease in zidovudine,
+possible effect on
+abacavir not evaluated</td><td>Anemia</td><td>No published clinical
+experience, but this
+regimen is less effective
+than efavirenz- or
+aatazanavir-based
+regimens in person not
+taking rifampin</td><td>Alternative for patients who cannot take efavirenz or
+nevirapine and if rifabutin not available</td></tr><tr><td>Zidovudine/
+Lamivudine/
+Tenofovir with
+rifampin-based TB
+treatment</td><td>50% decrease in zidovudine,
+no other effects predicted</td><td>Anemia</td><td>Favorable, but not
+evaluated in a
+randomized trial</td><td>Alternative for patients who cannot take efavirenz and
+abacavir and if rifabutin not available</td></tr><tr><td>Zidovudine/
+Lamivudine/Abacavir
+with rifampin-based
+TB treatment</td><td>50% decrease in zidovudine,
+possible effect on
+abacavir not evaluated</td><td>Anemia</td><td>Early favorable experience,
+but this combination
+is less effective
+than efavirenz- or
+nevirapine-based
+regimens in persons not
+taking rifampin</td><td>Alternative for patients who cannot take efavirenz and
+tenofovir and if rifabutin not available</td></tr></table></div><h2>556 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 50-6 Recommended Regimens for the Concomitant Treatment of TB and HIV Infection in Adults(Continued )</p>
+<p>Combined Regimen</p>
+<p>for Treatment of HIV Pharmacokinetic Effect Antiviral Activity when</p>
+<p>and TB of the Rifamycin Tolerability/Toxicity Used with Rifamycin Recommendations (Comments)</p>
+<p>Superboostedc Moderate decrease in Hepatitis Early favorable experience Alternative if rifabutin not available; double dose an</p>
+<p>lopinavir-based concentrations of superboosting option among adults already taking lopinavir-</p>
+<p>antiretroviral therapy among young children based antiretroviral therapy and virologically</p>
+<p>or double dose and double dose suppressed at the time of tuberculosis treatment</p>
+<p>lopinavir/ritonavir- among adults already initiation; superboosting has not been adequately</p>
+<p>based therapy with on antiretroviral drugs tested in adults but may be effective</p>
+<p>rifampin-based TB at the time of rifampin</p>
+<p>treatment initiation</p>
+<p>aWith two nucleoside analogues.</p>
+<p>bIncludes patients with NNRTI-resistant HIV, those unable to tolerate efavirenz, and women during the first one to two trimesters of pregnancy.</p>
+<p>cSuperboosting of lopinavir is achieved by giving lopinavir 400 mg together with 400 mg ritonavir twice daily. Double dose lopinavir/ritonavir is lopinavir 800 mg plus ritonavir 200 mg</p>
+<p>twice daily.</p>
+<p>ART, antiretroviral therapy; HIV, human immunodeficiency virus; TB, tuberculosis.</p>
+<p>Source: CDC. Managing Drug Interactions in the Treatment of HIV-Related Tuberculosis [online]. 2013. Available at: http://www.cdc.gov/tb/TB_HIV_Drugs/default.htm.</p>
+<p>ch50.indd</p>
+<p>556</p>
+<p>19-11-2020</p>
+<p>20:39:56</p>
+<div class="table-container"><table><tr><th>Combined Regimen
+for Treatment of HIV
+and TB</th><th>Pharmacokinetic Effect
+of the Rifamycin</th><th>Tolerability/Toxicity</th><th>Antiviral Activity when
+Used with Rifamycin</th><th>Recommendations (Comments)</th></tr><tr><td>Superboostedc
+lopinavir-based
+antiretroviral therapy
+or double dose
+lopinavir/ritonavir-
+based therapy with
+rifampin-based TB
+treatment</td><td>Moderate decrease in
+concentrations</td><td>Hepatitis</td><td>Early favorable experience
+of superboosting
+among young children
+and double dose
+among adults already
+on antiretroviral drugs
+at the time of rifampin
+initiation</td><td>Alternative if rifabutin not available; double dose an
+option among adults already taking lopinavir-
+based antiretroviral therapy and virologically
+suppressed at the time of tuberculosis treatment
+initiation; superboosting has not been adequately
+tested in adults but may be effective</td></tr></table></div><h2>Tuberculosis | CHAPTER 50</h2>
+<p>seen are occasionally severe, including limb reduction and CNS lesions. Pyrazinamide</p>
+<p>has not been studied in a large number of pregnant women, but anecdotal information</p>
+<p>suggests that it may be safe. Ethionamide may be associated with premature delivery,</p>
+<p>congenital deformities, and Down syndrome when used during pregnancy, so it can-</p>
+<p>not be recommended in pregnancy. Streptomycin has been associated with hearing</p>
+<p>impairment in the newborn, including complete deafness and must be reserved for crit-</p>
+<p>ical situations where alternatives do not exist. Cycloserine is not recommended during</p>
+<p>pregnancy. Fluoroquinolones should be avoided in pregnancy and during nursing.</p>
+<p>Renal Failure</p>
+<li>In nearly all patients, isoniazid and rifampin do not require dose modifications in</li>
+<p>renal failure. Pyrazinamide and ethambutol typically require a reduction in dosing</p>
+<h2>frequency from daily to three times weekly (Table 50-5).</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES AND PATIENT MONITORIG</h2>
+<li>The most serious problem with TB therapy is nonadherence to the prescribed</li>
+<p>regimen. The most effective way to ensure adherence is with DOT.</p>
+<li>Patients who are AFB smear positive should have sputum samples sent for acid-fast</li>
+<p>bacilli stains every 1–2 weeks until two consecutive smears are negative. Once on</p>
+<p>maintenance therapy, patients should have sputum cultures performed monthly until</p>
+<p>negative, which generally occurs over 2–3 months. If sputum cultures continue to be</p>
+<p>positive after 2 months, drug susceptibility testing should be repeated, and serum</p>
+<p>drug concentrations should be checked.</p>
+<li>Patients should have blood urea nitrogen, serum creatinine, aspartate transami-</li>
+<p>nase or alanine transaminase, and a complete blood count determined at baseline</p>
+<p>and p eriodically, depending on the presence of other factors that may increase</p>
+<p>the likelihood of toxicity (advanced age, alcohol abuse, and possibly pregnancy).</p>
+<p>Hepatotoxicity should be suspected in patients whose transaminases exceed five times</p>
+<p>the upper limit of normal or whose total bilirubin exceeds 3 mg/dL (51.3 µmol/L). At</p>
+<p>this point, the offending agent(s) should be discontinued and alternatives selected.</p>
+<h2>• See Table 50-6 for drug monitoring r ec om me nd at ions.</h2>
+<p>S ee Chapter 130, Tuberculosis, authored by Rocsanna Namdar and Charles A. Peloquin,</p>
+<p>for a more detailed discussion of this topic.</p>
+<p>557</p>
+<p>ch50.indd 557 19-11-2020 20:39:56</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

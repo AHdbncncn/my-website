@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37. Endocarditis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>37. Endocarditis</h1>
+        </header>
+        <main>
+            <p>386</p>
+<h2>RETPAHC</h2>
+<p>37</p>
+<p>Endocarditis</p>
+<li>Endocarditis is an inflammation of the endocardium, the membrane lining the cham-</li>
+<p>bers of the heart and covering the cusps of the heart valves. Infective endocarditis (IE)</p>
+<p>refers to infection of the heart valves by microorganisms, primarily bacteria.</p>
+<li>Endocarditis is often referred to as either acute or subacute depending on the clinical</li>
+<p>presentation. Acute bacterial endocarditis is a fulminating infection associated with</p>
+<p>high fevers, systemic toxicity, and death within days to weeks if untreated. Subacute</p>
+<p>infectious endocarditis is a more indolent infection, usually occurring in a setting of</p>
+<p>prior valvular heart disease.</p>
+<h2>ETIOLOGY</h2>
+<li>Most patients with IE have risk factors, such as preexisting cardiac valve abnormalities.</li>
+<p>Many types of structural heart disease resulting in turbulence of blood flow will</p>
+<p>increase the risk for IE. Some of the most important risk factors include the following:</p>
+<p>✓ Highest risk: presence of a prosthetic valve or previous IE</p>
+<p>✓ Congenital heart disease (CHD), chronic intravenous (IV) access, diabetes mel-</p>
+<pre><code>litus, acquired valvular dysfunction (eg, rheumatic heart disease), cardiac implant-</code></pre>
+<p>able device, chronic heart failure, mitral valve prolapse with regurgitation, IV drug</p>
+<p>abuse (IVDA), HIV infection, and poor dentition and/or oral hygiene.</p>
+<li>Three groups of organisms cause most cases of IE: staphylococci, streptococci, and</li>
+<p>enterococci (Table 37-1). Staphylococci (S. aureus and coagulase-negative staphylo-</p>
+<p>cocci) are the most common cause of prosthetic valve endocarditis (PVE) within the</p>
+<p>first year after valve surgery, and S. aureus is common in those with a history of IVDA.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The clinical presentation of patients with IE is highly variable and nonspecific. Fever</li>
+<p>is the most common finding (more than 90% of patients). The mitral and aortic</p>
+<p>valves are most often affected.</p>
+<li>IE usually begins insidiously and worsens gradually. Patients may present with non-</li>
+<p>specific findings such as fever, chills, weakness, dyspnea, cough, night sweats, weight</p>
+<p>loss, or malaise.</p>
+<li>Important clinical signs, especially prevalent in subacute illness, may include the fol-</li>
+<p>lowing peripheral manifestations (“stigmata”) of endocarditis: Osler nodes, Janeway</p>
+<p>lesions, splinter hemorrhages, petechiae, clubbing of the fingers, Roth spots, and</p>
+<p>emboli. The patient may also have a heart murmur (sometimes new or changing),</p>
+<p>congestive heart failure, cardiac conduction abnormalities, cerebral manifestations,</p>
+<p>embolic phenomenon, and splenomegaly.</p>
+<li>Without appropriate antimicrobial therapy and surgery, IE is usually fatal. With</li>
+<p>proper management, recovery can be expected in most patients.</p>
+<li>Factors associated with increased mortality include: congestive heart failure,</li>
+<p>culture-negative endocarditis, endocarditis caused by resistant organisms such as</p>
+<p>fungi and gram-negative bacteria, left-sided endocarditis caused by Staphylococcus</p>
+<p>aureus, PVE.</p>
+<li>Ninety to 95% of patients with IE have a positive blood culture. The hallmark labora-</li>
+<p>tory finding is continuous bacteremia; three sets of blood cultures should be collected</p>
+<p>over 24 hours. The patient’s white blood cell count may be normal or only slightly ele-</p>
+<p>vated. Anemia, leukocytosis, and thrombocytopenia may be present. The erythrocyte</p>
+<p>sedimentation rate (ESR) and C-reactive protein (CRP) may be elevated in approxi-</p>
+<p>mately 60% of patients. Urinalysis may reveal proteinuria and microscopic hematuria.</p>
+<p>ch37.indd 386 19-11-2020 15:01:51</p>
+<div class="table-container"><table><tr><th>Endocarditis</th><th>37</th><th>RETPAHC</th></tr></table></div><h2>Endocarditis | CHAPTER 37</h2>
+<h2>TABLE 37-1 Etiologic Organisms in Infective Endocarditisa</h2>
+<p>Agent Percentage of Cases</p>
+<p>Staphylococci 30–70</p>
+<p>Coagulase positive S. aureus 20–68</p>
+<p>Coagulase negative 3–26</p>
+<p>Streptococci 9–38</p>
+<p>Viridans streptococci 10–28</p>
+<p>Other streptococci 3–14</p>
+<p>Enterococci 5–18</p>
+<p>Gram-negative aerobic bacilli 1.5–13</p>
+<p>Fungi 1–9</p>
+<p>Miscellaneous bacteria &lt;5</p>
+<p>Polymicrobial infections 1–2</p>
+<p>Culture negative &lt;5–17</p>
+<p>aValues encompass community-acquired, healthcare-associated, native valve, and prosthetic valve</p>
+<p>infective endocarditis.</p>
+<li>Transesophageal echocardiography is important in identifying and localizing valvular</li>
+<p>lesions in patients suspected of having IE. It is more sensitive for detecting vegeta-</p>
+<p>tions (90%–100%), compared with transthoracic echocardiography (40%–65%).</p>
+<li>The Modified Duke criteria, encompassing major findings of persistent bacteremia</li>
+<p>and echocardiographic findings and other minor findings, are used to categorize</p>
+<p>patients as “definite IE” or “possible IE.”</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: relieve the signs and symptoms of disease. Decrease morbidity</li>
+<p>and mortality associated with infection. Eradicate the causative organism with mini-</p>
+<p>mal drug exposure. Provide cost-effective antimicrobial therapy. Prevent IE in high-</p>
+<p>risk patients with appropriate prophylactic antimicrobials.</p>
+<li>The most important approach to treatment of IE is isolation of the infecting pathogen</li>
+<p>and determination of antimicrobial susceptibilities, followed by high-dose, bactericidal</p>
+<p>antibiotics for an extended period.</p>
+<li>Treatment usually is started in the hospital, but in select patients, it may be completed</li>
+<p>in the outpatient setting as long as defervescence has occurred and follow-up blood</p>
+<p>cultures show no growth.</p>
+<li>Large doses of parenteral antimicrobials as opposed to oral antimicrobi-</li>
+<p>als are currently recommended to achieve bactericidal concentrations within</p>
+<p>vegetations. An extended duration of therapy is required, even for susceptible</p>
+<p>pathogens, because microorganisms are enclosed within valvular vegetations and</p>
+<p>fibrin deposits.</p>
+<li>Outpatient antimicrobial therapy should be considered early in the treatment of IE,</li>
+<p>after the patient is stable clinically and responds favorably to initial antibiotics.</p>
+<li>Drug dosing for treatment of IE is given in Table 37-2. β-Lactam antibiotics, such</li>
+<p>as penicillin G (or ceftriaxone), nafcillin (or oxacillin), and ampicillin, remain the</p>
+<p>drugs of choice for streptococcal, staphylococcal, and enterococcal endocarditis,</p>
+<p>respectively.</p>
+<p>387</p>
+<p>ch37.indd 387 19-11-2020 15:01:51</p>
+<div class="table-container"><table><tr><th>TABLE 37-1 Etiologic Organisms in Infective Endocarditisa</th><th></th></tr><tr><td>Agent</td><td>Percentage of Cases</td></tr><tr><td>Staphylococci</td><td>30–70</td></tr><tr><td>Coagulase positive S. aureus</td><td>20–68</td></tr><tr><td>Coagulase negative</td><td>3–26</td></tr><tr><td>Streptococci</td><td>9–38</td></tr><tr><td>Viridans streptococci</td><td>10–28</td></tr><tr><td>Other streptococci</td><td>3–14</td></tr><tr><td>Enterococci</td><td>5–18</td></tr><tr><td>Gram-negative aerobic bacilli</td><td>1.5–13</td></tr><tr><td>Fungi</td><td>1–9</td></tr><tr><td>Miscellaneous bacteria</td><td>&lt;5</td></tr><tr><td>Polymicrobial infections</td><td>1–2</td></tr><tr><td>Culture negative</td><td>&lt;5–17</td></tr></table></div><h2>388 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 37-2 Drug Dosing Table for Treatment of Infective Endocarditisa</p>
+<p>Drug Brand Name Recommended Dose Pediatric (Ped) Doseb Additional Information</p>
+<p>Ampicillin NA 2 g IV every 4 hours 50 mg/kg every 4 hours or 24-hour total dose may be administered as a continuous</p>
+<p>75 mg/kg every 6 hours infusion: 12 g IV every 24 hours</p>
+<p>Ampicillin–sulbactam Unasyn® 3 g IV every 6 hours 50 mg/kg every 4 hours or</p>
+<p>75 mg/kg every 6 hours</p>
+<p>Aqueous crystalline NA</p>
+<p>penicillin G sodium</p>
+<li>MIC <0.12 mcg/mL 3 million units IV every 50,000 units/kg IV every 24-hour total dose may be administered as a continuous</li>
+<p>(mg/L) (native valve only) 4 hours or every 6 hours 6 hours infusion: 12–18 million units IV every 24 hours (Ped:</p>
+<p>200,000 units/kg IV/24 hours)</p>
+<li>All other indications 4 million units IV every 50,000 units/kg IV every 24 million units IV every 24 hours (Ped: 300,000 units/kg IV</li>
+<p>4 hours or 6 million units 4 hours or 75,000 units/kg every 24 hours)</p>
+<p>IV every 6 hours IV every 6 hours</p>
+<p>Cefazolin N/A 2 g IV every 8 hours 33 mg/kg IV every 8 hours</p>
+<p>Cefepime Maxipime® 2 g IV every 8 hours 50 mg/kg IV every 8 hours</p>
+<p>Ceftriaxone sodium N/A 2 g IV or IM every 24 hours 100 mg/kg IV or IM every</p>
+<p>2 g IV or IM every 12 hours 24 hours</p>
+<p>(E. faecalis only)</p>
+<p>Ciprofloxacin Cipro® 400 mg IV every 12 hours 20–30 mg/kg IV or orally every Avoid use if possible in patients &lt;18 years of age</p>
+<p>or 500 mg orally every 12 hours</p>
+<p>12 hours</p>
+<p>ch37.indd</p>
+<p>388</p>
+<p>19-11-2020</p>
+<p>15:01:51</p>
+<div class="table-container"><table><tr><th>Drug Brand Name Recommended Dose Pediatric (Ped) Doseb Additional Information</th><th></th><th></th><th></th><th></th></tr><tr><td>Ampicillin</td><td>NA</td><td>2 g IV every 4 hours</td><td>50 mg/kg every 4 hours or
+75 mg/kg every 6 hours</td><td>24-hour total dose may be administered as a continuous
+infusion: 12 g IV every 24 hours</td></tr><tr><td>Ampicillin–sulbactam</td><td>Unasyn®</td><td>3 g IV every 6 hours</td><td>50 mg/kg every 4 hours or
+75 mg/kg every 6 hours</td><td></td></tr><tr><td>Aqueous crystalline
+penicillin G sodium</td><td>NA</td><td></td><td></td><td></td></tr><tr><td>• MIC &lt;0.12 mcg/mL
+(mg/L) (native valve only)</td><td></td><td>3 million units IV every
+4 hours or every 6 hours</td><td>50,000 units/kg IV every
+6 hours</td><td>24-hour total dose may be administered as a continuous
+infusion: 12–18 million units IV every 24 hours (Ped:
+200,000 units/kg IV/24 hours)</td></tr><tr><td>• All other indications</td><td></td><td>4 million units IV every
+4 hours or 6 million units
+IV every 6 hours</td><td>50,000 units/kg IV every
+4 hours or 75,000 units/kg
+IV every 6 hours</td><td>24 million units IV every 24 hours (Ped: 300,000 units/kg IV
+every 24 hours)</td></tr><tr><td>Cefazolin</td><td>N/A</td><td>2 g IV every 8 hours</td><td>33 mg/kg IV every 8 hours</td><td></td></tr><tr><td>Cefepime</td><td>Maxipime®</td><td>2 g IV every 8 hours</td><td>50 mg/kg IV every 8 hours</td><td></td></tr><tr><td>Ceftriaxone sodium</td><td>N/A</td><td>2 g IV or IM every 24 hours</td><td>100 mg/kg IV or IM every
+24 hours</td><td></td></tr><tr><td></td><td></td><td>2 g IV or IM every 12 hours
+(E. faecalis only)</td><td></td><td></td></tr><tr><td>Ciprofloxacin</td><td>Cipro®</td><td>400 mg IV every 12 hours
+or 500 mg orally every
+12 hours</td><td>20–30 mg/kg IV or orally every
+12 hours</td><td>Avoid use if possible in patients &lt;18 years of age</td></tr></table></div><p>389</p>
+<p>Endocarditis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>37</p>
+<p>Daptomycin Cubicin® ≥8 mg/kg IV every 6 mg/kg IV every 24 hours Doses as high as 10–12 mg/kg IV every 24 hours have been</p>
+<p>24 hours used in adults with enterococcus resistant to penicillin,</p>
+<p>aminoglycosides, and vancomycin; doses should be</p>
+<p>calculated using actual body weight</p>
+<p>Doxycycline Vibramycin® 100 mg IV or orally every 1–2 mg/kg IV or orally every</p>
+<p>12 hours 12 hours</p>
+<p>Gentamicin sulfate NA 3 mg/kg IV or IM every 1 mg/kg IV or IM every 8 hours Once-daily dosing is only recommended for treatment of</p>
+<p>24 hours or 1 mg/kg IV streptococcal infections</p>
+<p>or IM every 8 hoursc</p>
+<p>Linezolid Zyvox® 600 mg IV or orally every 10 mg/kg IV every 8 hours</p>
+<p>12 hours</p>
+<p>Nafcillin or oxacillin NA 2 g IV every 4 hours 50 mg/kg IV every 6 hours 24-hour total dose may be administered as a continuous</p>
+<p>infusion: 12 g IV every 24 hours</p>
+<p>Rifampin Rifadin® 300 mg IV or orally every 5–7 mg/kg IV or orally every</p>
+<p>8 hours 8 hours</p>
+<p>Streptomycin NA 7.5 mg/kg IV or IM every</p>
+<p>12 hours</p>
+<p>Vancomycin Vancocin® 15–20 mg/kg IV every 15 mg/kg IV every 6 hours A loading dose of 25–30 mg/kg may be administered in</p>
+<p>8 hours or every adults; doses should be calculated using actual body</p>
+<p>12 hours weight; single doses should not exceed 2 g</p>
+<pre><code>aAll doses assume normal renal function.</code></pre>
+<p>bShould not exceed adult dosage.</p>
+<p>cActual body weight should be used when the full aminoglycoside dose is administered once daily; when administered in three divided doses, use ideal body weight or adjusted body</p>
+<p>weight when actual body weight is &gt;120% ideal body weight.</p>
+<p>ch37.indd</p>
+<p>389</p>
+<p>19-11-2020</p>
+<p>15:01:51</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<div class="table-container"><table><tr><th>Daptomycin</th><th>Cubicin®</th><th>≥8 mg/kg IV every
+24 hours</th><th>6 mg/kg IV every 24 hours</th><th>Doses as high as 10–12 mg/kg IV every 24 hours have been
+used in adults with enterococcus resistant to penicillin,
+aminoglycosides, and vancomycin; doses should be
+calculated using actual body weight</th></tr><tr><td>Doxycycline</td><td>Vibramycin®</td><td>100 mg IV or orally every
+12 hours</td><td>1–2 mg/kg IV or orally every
+12 hours</td><td></td></tr><tr><td>Gentamicin sulfate</td><td>NA</td><td>3 mg/kg IV or IM every
+24 hours or 1 mg/kg IV
+or IM every 8 hoursc</td><td>1 mg/kg IV or IM every 8 hours</td><td>Once-daily dosing is only recommended for treatment of
+streptococcal infections</td></tr><tr><td>Linezolid</td><td>Zyvox®</td><td>600 mg IV or orally every
+12 hours</td><td>10 mg/kg IV every 8 hours</td><td></td></tr><tr><td>Nafcillin or oxacillin</td><td>NA</td><td>2 g IV every 4 hours</td><td>50 mg/kg IV every 6 hours</td><td>24-hour total dose may be administered as a continuous
+infusion: 12 g IV every 24 hours</td></tr><tr><td>Rifampin</td><td>Rifadin®</td><td>300 mg IV or orally every
+8 hours</td><td>5–7 mg/kg IV or orally every
+8 hours</td><td></td></tr><tr><td>Streptomycin</td><td>NA</td><td>7.5 mg/kg IV or IM every
+12 hours</td><td></td><td></td></tr><tr><td>Vancomycin</td><td>Vancocin®</td><td>15–20 mg/kg IV every
+8 hours or every
+12 hours</td><td>15 mg/kg IV every 6 hours</td><td>A loading dose of 25–30 mg/kg may be administered in
+adults; doses should be calculated using actual body
+weight; single doses should not exceed 2 g</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Surgical intervention to remove the infectious foci and repair valves and/or valvular</li>
+<p>structures is an important adjunct in the management of both NVE and PVE In most</p>
+<p>cases, valvectomy and valve replacement are performed to remove infected tissues</p>
+<pre><code>and restore hemodynamic function. Indications for surgery include heart failure,</code></pre>
+<p>persistent bacteremia, persistent vegetation, an increase in vegetation size, or recur-</p>
+<pre><code>rent emboli despite prolonged antibiotic treatment, valve dysfunction, paravalvular</code></pre>
+<p>extension (eg, abscess), or endocarditis caused by resistant organisms.</p>
+<h2>STREPTOCOCCAL ENDOCARDITIS</h2>
+<li>Streptococci are a common cause of IE, with most isolates being viridans group</li>
+<p>streptococci.</p>
+<li>Most viridans group streptococci are highly sensitive to penicillin G with minimum</li>
+<p>inhibitory concentrations (MICs) of 0.12 mcg/mL (mg/L) or less. The MIC should</p>
+<p>be determined for all viridans streptococci and the results used to guide ther-</p>
+<p>apy. Approximately 10%–20% are moderately susceptible (MIC 0.12–0.5 mcg/mL</p>
+<p>[mg/L]).</p>
+<li>Recommended therapy in the uncomplicated case caused by fully susceptible strains</li>
+<p>in native valves is 4 weeks of either high-dose penicillin G or ceftriaxone, or 2 weeks</p>
+<p>of combined penicillin G or ceftriaxone therapy plus gentamicin (Table 37-3).</p>
+<li>Shorter-course antimicrobial regimens are advocated when possible. With suscep-</li>
+<p>tible streptococcal endocarditis (MICs ≤0.12 mcg/mL [mg/L]), a 2-week regimen of</p>
+<p>high-dose parenteral penicillin G or ceftriaxone in combination with an aminogly-</p>
+<p>coside is as effective as 4 weeks of penicillin alone.</p>
+<li>When a patient has a history of an immediate-type hypersensitivity to penicillin,</li>
+<p>vancomycin should be chosen for IE caused by viridans group streptococci. When</p>
+<p>vancomycin is used, the addition of gentamicin is not recommended.</p>
+<li>For patients with complicated infection (eg, extracardiac foci) or when the organism</li>
+<p>is relatively resistant (MIC = 0.12–0.5 mcg/mL [mg/L]), combination therapy with</p>
+<p>an aminoglycoside and penicillin (higher dose) or ceftriaxone for the first 2 weeks is</p>
+<p>recommended followed by penicillin or ceftriaxone alone for an additional 2 weeks.</p>
+<li>In patients with endocarditis of prosthetic valves or other prosthetic material caused</li>
+<p>by viridans streptococci and Streptococcus bovis, treatment courses are extended to</p>
+<h2>6 weeks (Table 37-4).</h2>
+<h2>STAPHYLOCOCCAL ENDOCARDITIS</h2>
+<li>Endocarditis is most commonly caused by staphylococci, in particular S. aureus,</li>
+<p>mainly because of increased IVDA, more frequent use of peripheral and central</p>
+<p>venous catheters, and increased frequency of valve replacement surgery. Coagulase-</p>
+<p>negative staphylococci (usually S. epidermidis) are prominent causes of PVE.</p>
+<li>The recommended therapy for patients with left-sided IE caused by methicillin-</li>
+<p>susceptible S. aureus (MSSA) is 6 weeks of nafcillin or oxacillin (see Table 37-3).</p>
+<li>If a patient has a mild, delayed allergy to penicillin, first-generation cephalosporins</li>
+<p>(such as cefazolin) are effective alternatives but should be avoided in patients with</p>
+<p>an immediate-type hypersensitivity reaction.</p>
+<li>In a patient with a positive penicillin skin test or a history of immediate hypersen-</li>
+<p>sitivity to penicillin, vancomycin is an option. Vancomycin, however, kills S. aureus</p>
+<p>slowly and is generally regarded as inferior to penicillinase-resistant penicillins for</p>
+<p>MSSA. Penicillin-allergic patients who fail on vancomycin therapy should be con-</p>
+<p>sidered for penicillin desensitization. Daptomycin (at a dose of 6 mg/kg/day) is a</p>
+<p>recommended alternative.</p>
+<li>Vancomycin is the drug of choice for methicillin-resistant staphylococci because most</li>
+<p>methicillin-resistant S. aureus (MRSA) and most coagulase-negative staphylococci</p>
+<p>are susceptible. Reports of S. aureus strains resistant to vancomycin are increasing.</p>
+<p>Daptomycin (at a dose of 6 mg/kg/day) is now a recommended alternative.</p>
+<p>390</p>
+<p>ch37.indd 390 19-11-2020 15:01:52</p>
+<p>391</p>
+<p>Endocarditis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>37</p>
+<p>TABLE 37-3 Treatment Options for Native Valve Endocarditis by Causative Organism</p>
+<p>Agenta Duration Strength of Recommendation Comments</p>
+<p>Highly Penicillin-Susceptible (MIC ≤ 0.12 mcg/mL [mg/L]) Viridans Group Streptococci and S. gallolyticus</p>
+<p>Aqueous crystalline penicillin G sodiumb 4 weeks IIaB 2-week regimens are not intended for the following patients:</p>
+<p>Ceftriaxone 4 weeks IIaB • Most patients &gt;65 years of age</p>
+<li>Children</li>
+<pre><code>Aqueous crystalline penicillin G sodiumb plus 2 weeks IIaB • Impairment of the eighth cranial nerve function</code></pre>
+<pre><code>gentamicin • Renal function with a creatinine clearance &lt;20 mL/min</code></pre>
+<p>Ceftriaxone plus gentamicin 2 weeks IIaB (0.33 mL/sec)</p>
+<li>Known cardiac or extracardiac abscess</li>
+<li>Infection with Abiotrophia, Granulicatella, or Gemalla species</li>
+<p>Vancomycin 4 weeks IIaB Recommended only for patients unable to tolerate penicillin or</p>
+<p>ceftriaxone</p>
+<p>Viridans Group Streptococci and S. Gallolyticus Relatively Resistant to Penicillin (MIC &gt;0.12 to ≤0.5 mcg/mL [mg/L])</p>
+<p>Aqueous crystalline penicillin G sodiumb 4 weeks IIaB</p>
+<p>plus gentamicin 2 weeks</p>
+<p>Ceftriaxone 4 weeks IIbC</p>
+<p>plus gentamicin 2 weeks</p>
+<p>Vancomycin 4 weeks IIaB Recommended only for patients unable to tolerate penicillin or</p>
+<p>ceftriaxone</p>
+<p>Oxacillin-Susceptible Staphylococcic</p>
+<p>Nafcillin or oxacillin 6 weeks IC</p>
+<p>Cefazolin 6 weeks IB For use in patients with nonanaphylactoid-type penicillin allergies;</p>
+<p>patients with an unclear history of immediate-type hypersensitivity</p>
+<p>to penicillin should be considered for skin testing</p>
+<p>(Continued )</p>
+<p>ch37.indd</p>
+<p>391</p>
+<p>19-11-2020</p>
+<p>15:01:52</p>
+<div class="table-container"><table><tr><th>TABLE 37-3 Treatment Options for Native Valve Endocarditis by Causative Organism</th><th></th><th></th><th></th></tr><tr><td>Agenta</td><td>Duration</td><td>Strength of Recommendation</td><td>Comments</td></tr><tr><td>Highly Penicillin-Susceptible (MIC ≤ 0.12 mcg/mL [mg/L]) Viridans Group Streptococci and S. gallolyticus</td><td></td><td></td><td></td></tr><tr><td>Aqueous crystalline penicillin G sodiumb</td><td>4 weeks</td><td>IIaB</td><td>2-week regimens are not intended for the following patients:
+• Most patients &gt;65 years of age
+• Children
+• Impairment of the eighth cranial nerve function
+• Renal function with a creatinine clearance &lt;20 mL/min
+(0.33 mL/sec)
+• Known cardiac or extracardiac abscess
+• Infection with Abiotrophia, Granulicatella, or Gemalla species</td></tr><tr><td>Ceftriaxone</td><td>4 weeks</td><td>IIaB</td><td></td></tr><tr><td>Aqueous crystalline penicillin G sodiumb plus
+gentamicin</td><td>2 weeks</td><td>IIaB</td><td></td></tr><tr><td>Ceftriaxone plus gentamicin</td><td>2 weeks</td><td>IIaB</td><td></td></tr><tr><td>Vancomycin</td><td>4 weeks</td><td>IIaB</td><td>Recommended only for patients unable to tolerate penicillin or
+ceftriaxone</td></tr><tr><td>Viridans Group Streptococci and S. Gallolyticus Relatively Resistant to Penicillin (MIC &gt;0.12 to ≤0.5 mcg/mL [mg/L])</td><td></td><td></td><td></td></tr><tr><td>Aqueous crystalline penicillin G sodiumb
+plus gentamicin</td><td>4 weeks</td><td>IIaB</td><td></td></tr><tr><td></td><td>2 weeks
+4 weeks</td><td></td><td></td></tr><tr><td>Ceftriaxone
+plus gentamicin</td><td></td><td>IIbC</td><td></td></tr><tr><td></td><td>2 weeks</td><td></td><td></td></tr><tr><td>Vancomycin</td><td>4 weeks</td><td>IIaB</td><td>Recommended only for patients unable to tolerate penicillin or
+ceftriaxone</td></tr><tr><td>Oxacillin-Susceptible Staphylococcic</td><td></td><td></td><td></td></tr><tr><td>Nafcillin or oxacillin</td><td>6 weeks</td><td>IC</td><td></td></tr><tr><td>Cefazolin</td><td>6 weeks</td><td>IB</td><td>For use in patients with nonanaphylactoid-type penicillin allergies;
+patients with an unclear history of immediate-type hypersensitivity
+to penicillin should be considered for skin testing
+(Continued )</td></tr></table></div><h2>392 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 37-3 Treatment Options for Native Valve Endocarditis by Causative Organism(Continued )</p>
+<p>Agenta Duration Strength of Recommendation Comments</p>
+<p>Vancomycin 6 weeks IB For use in patients with anaphylactoid-type hypersensitivity to</p>
+<p>penicillin and/or cephalosporins</p>
+<p>Daptomycin 6 weeks IIaB For use in patients with immediate-type hypersensitivity reactions to</p>
+<p>penicillin</p>
+<p>Oxacillin-Resistant Staphylococci</p>
+<p>Vancomycin 6 weeks IB</p>
+<p>Daptomycin 6 weeks IIbB</p>
+<p>aSee Table 37-2 for appropriate dosing, administration, and monitoring information.</p>
+<p>bMay use ampicillin in the event of a penicillin shortage.</p>
+<p>cRegimens indicate treatment for left-sided endocarditis or complicated right-sided endocarditis; uncomplicated right-sided endocarditis may be treated for shorter durations and is</p>
+<p>described in the text.</p>
+<p>Please refer to Table 37-5 for treatment of NVE caused by enterococci.</p>
+<p>ch37.indd</p>
+<p>392</p>
+<p>19-11-2020</p>
+<p>15:01:52</p>
+<div class="table-container"><table><tr><th>TABLE 37-3 Treatment Options for Native Valve Endocarditis by Causative Organism(Continued )
+Agenta Duration Strength of Recommendation Comments</th><th></th><th></th><th></th></tr><tr><td>Vancomycin</td><td>6 weeks</td><td>IB</td><td>For use in patients with anaphylactoid-type hypersensitivity to
+penicillin and/or cephalosporins</td></tr><tr><td>Daptomycin</td><td>6 weeks</td><td>IIaB</td><td>For use in patients with immediate-type hypersensitivity reactions to
+penicillin</td></tr><tr><td>Oxacillin-Resistant Staphylococci</td><td></td><td></td><td></td></tr><tr><td>Vancomycin</td><td>6 weeks</td><td>IB</td><td></td></tr><tr><td>Daptomycin</td><td>6 weeks</td><td>IIbB</td><td></td></tr></table></div><h2>Endocarditis | CHAPTER 37</h2>
+<p>TABLE 37-4 Treatment Options for Prosthetic Valve Endocarditis (PVE) by Causative Organism</p>
+<p>Strength of</p>
+<p>Agenta Duration Recommendation Comments</p>
+<p>Highly Penicillin-Susceptible (MIC ≤0.12 mcg/mL [mg/L]) Viridans Group</p>
+<p>Streptococci and S. gallolyticus</p>
+<p>Aqueous 6 weeks IIaB Combination therapy with</p>
+<p>crystalline gentamicin has not</p>
+<p>penicillin G demonstrated superior</p>
+<p>sodiumb with cure rates compared with</p>
+<p>or without monotherapy with a penicillin</p>
+<p>gentamicin 2 weeks or cephalosporin and should</p>
+<p>be avoided in patients with</p>
+<p>CrCl &lt;30 mL/min (0.50</p>
+<p>mL/sec)</p>
+<p>Ceftriaxone with 6 weeks IIaB</p>
+<p>or without</p>
+<p>gentamicin 2 weeks</p>
+<p>Vancomycin 6 weeks IIaB Recommended only for patients</p>
+<p>unable to tolerate penicillin or</p>
+<p>ceftriaxone</p>
+<p>Relatively Resistant or Fully Resistant (MIC &gt;0.12 mcg/mL [mg/L]) Viridans Group</p>
+<p>Streptococci and S. gallolyticus</p>
+<p>Aqueous 6 weeks IIaB</p>
+<p>crystalline</p>
+<p>penicillin G</p>
+<p>sodiumb plus</p>
+<p>gentamicin</p>
+<p>Ceftriaxone plus 6 weeks IIaB</p>
+<p>gentamicin</p>
+<p>Vancomycinc 6 weeks IIaB Recommended only for patients</p>
+<p>unable to tolerate penicillin or</p>
+<p>ceftriaxone</p>
+<p>Oxacillin-Susceptible Staphylococci</p>
+<p>Nafcillin or oxacillin ≥6 weeks IB Cefazolin may be substituted for</p>
+<p>nafcillin or oxacillin in patients</p>
+<p>plus rifampin ≥6 weeks</p>
+<p>with nonimmediate-type</p>
+<p>plus gentamicin 2 weeks hypersensitivity</p>
+<p>Vancomycin ≥6 weeks IB Recommended only for patients</p>
+<p>with anaphylactoid-type</p>
+<p>plus rifampin ≥6 weeks</p>
+<p>hypersensitivity to penicillin</p>
+<p>plus gentamicin 2 weeks and/or cephalosporins</p>
+<p>Oxacillin-Resistant Staphylococci</p>
+<p>Vancomycin ≥6 weeks IB</p>
+<p>plus rifampin ≥6 weeks</p>
+<p>plus gentamicin 2 weeks</p>
+<p>aSee Table 37-2 for appropriate dosing, administration, and monitoring information.</p>
+<p>bMay use ampicillin in the event of a penicillin shortage.</p>
+<p>cThe ESC 2015 guidelines recommend gentamicin (3 mg/kg/day) be administered with vancomycin</p>
+<p>for the initial 2 weeks of therapy in patients with relatively resistant strains to penicillin.</p>
+<p>Please refer to Table 37-5 for treatment of PVE caused by enterococci.</p>
+<p>393</p>
+<p>ch37.indd 393 19-11-2020 15:01:52</p>
+<div class="table-container"><table><tr><th>TABLE 37-4 Treatment Options for Prosthetic Valve Endocarditis (PVE) by Causative Organism</th><th></th><th></th><th></th></tr><tr><td>Agenta</td><td>Duration</td><td>Strength of
+Recommendation</td><td>Comments</td></tr><tr><td>Highly Penicillin-Susceptible (MIC ≤0.12 mcg/mL [mg/L]) Viridans Group
+Streptococci and S. gallolyticus</td><td></td><td></td><td></td></tr><tr><td>Aqueous
+crystalline
+penicillin G
+sodiumb with
+or without
+gentamicin</td><td>6 weeks</td><td>IIaB</td><td>Combination therapy with
+gentamicin has not
+demonstrated superior
+cure rates compared with
+monotherapy with a penicillin
+or cephalosporin and should
+be avoided in patients with
+CrCl &lt;30 mL/min (0.50
+mL/sec)</td></tr><tr><td></td><td>2 weeks</td><td></td><td></td></tr><tr><td>Ceftriaxone with
+or without
+gentamicin</td><td>6 weeks</td><td>IIaB</td><td></td></tr><tr><td></td><td>2 weeks</td><td></td><td></td></tr><tr><td>Vancomycin</td><td>6 weeks</td><td>IIaB</td><td>Recommended only for patients
+unable to tolerate penicillin or
+ceftriaxone</td></tr><tr><td>Relatively Resistant or Fully Resistant (MIC &gt;0.12 mcg/mL [mg/L]) Viridans Group
+Streptococci and S. gallolyticus</td><td></td><td></td><td></td></tr><tr><td>Aqueous
+crystalline
+penicillin G
+sodiumb plus
+gentamicin</td><td>6 weeks</td><td>IIaB</td><td></td></tr><tr><td>Ceftriaxone plus
+gentamicin</td><td>6 weeks</td><td>IIaB</td><td></td></tr><tr><td>Vancomycinc</td><td>6 weeks</td><td>IIaB</td><td>Recommended only for patients
+unable to tolerate penicillin or
+ceftriaxone</td></tr><tr><td>Oxacillin-Susceptible Staphylococci</td><td></td><td></td><td></td></tr><tr><td>Nafcillin or oxacillin</td><td>≥6 weeks</td><td>IB</td><td>Cefazolin may be substituted for
+nafcillin or oxacillin in patients
+with nonimmediate-type
+hypersensitivity</td></tr><tr><td>plus rifampin</td><td>≥6 weeks</td><td></td><td></td></tr><tr><td>plus gentamicin</td><td>2 weeks</td><td></td><td></td></tr><tr><td>Vancomycin</td><td>≥6 weeks</td><td>IB</td><td>Recommended only for patients
+with anaphylactoid-type
+hypersensitivity to penicillin
+and/or cephalosporins</td></tr><tr><td>plus rifampin</td><td>≥6 weeks</td><td></td><td></td></tr><tr><td>plus gentamicin</td><td>2 weeks</td><td></td><td></td></tr><tr><td>Oxacillin-Resistant Staphylococci</td><td></td><td></td><td></td></tr><tr><td>Vancomycin</td><td>≥6 weeks</td><td>IB</td><td></td></tr><tr><td>plus rifampin</td><td>≥6 weeks</td><td></td><td></td></tr><tr><td>plus gentamicin</td><td>2 weeks</td><td></td><td></td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>Treatment of Staphylococcus Endocarditis in IV Drug Abusers</p>
+<li>IE in IV drug abusers is most frequently (60%–70%) caused by S. aureus, although</li>
+<p>other organisms may be more common in certain geographic locations.</p>
+<li>A 2-week course of nafcillin, oxacillin, or daptomycin without an aminoglycoside</li>
+<p>is recommended. If vancomycin is selected, the standard 6-week regimen should</p>
+<p>therefore be used.</p>
+<p>Treatment of Staphylococcal Prosthetic Valve Endocarditis</p>
+<li>PVE that occurs within 2 months of cardiac surgery is usually caused by staphylo-</li>
+<p>cocci implanted at the time of surgery. Methicillin-resistant organisms are common.</p>
+<p>Vancomycin is the cornerstone of therapy.</p>
+<li>Because of the high morbidity and mortality associated with PVE and refractoriness</li>
+<p>to therapy, combinations of antimicrobials are usually recommended.</p>
+<li>For methicillin-resistant staphylococci (both MRSA and coagulase-negative staphy-</li>
+<p>lococci), vancomycin is used with rifampin for 6 weeks or more (see Table 37-4).</p>
+<p>An aminoglycoside is added for the first 2 weeks if the organism is susceptible. Due</p>
+<p>to the risk of developing on therapy resistance, rifampin should not be started until</p>
+<p>blood cultures have cleared.</p>
+<li>For methicillin-susceptible staphylococci, a penicillinase-resistant penicillin is</li>
+<p>used in place of vancomycin. If an organism is identified other than staphylococci,</p>
+<p>the treatment regimen should be guided by susceptibilities and should be at least</p>
+<p>6 weeks in duration.</p>
+<h2>ENTEROCOCCAL ENDOCARDITIS</h2>
+<li>Enterococci are the third leading cause of endocarditis and are noteworthy for the</li>
+<p>following reasons: (1) no single antibiotic is bactericidal; (2) MICs to penicillin</p>
+<p>are relatively high (1–25 mcg/mL [mg/L]); (3) they are intrinsically resistant to all</p>
+<p>cephalosporins and relatively resistant to aminoglycosides (ie, “low-level” aminogly-</p>
+<p>coside resistance); (4) combinations of a cell wall–active agent, such as a penicillin or</p>
+<p>vancomycin, plus an aminoglycoside are necessary for killing; and (5) resistance to</p>
+<p>all available drugs is increasing.</p>
+<li>Enterococcal endocarditis ordinarily requires 4–6 weeks of high-dose penicillin G</li>
+<p>or ampicillin, plus gentamicin for cure (Table 37-5). Ampicillin plus ceftriaxone</p>
+<p>is as effective as ampicillin plus gentamicin and should be considered as a treat-</p>
+<p>ment option. A 6-week course is recommended for patients with symptoms lasting</p>
+<p>longer than 3 months and those with PVE. Relatively low serum concentrations of</p>
+<p>aminoglycosides appear adequate for successful therapy, such as a gentamicin peak</p>
+<p>concentration of approximately 3–4 mcg/mL (mg/L; 6.3–8.4 μmol/L).</p>
+<li>In addition to isolates with high-level aminoglycoside resistance, β-lactamase–</li>
+<p>producing enterococci (especially Enterococcus faecium) are increasingly reported.</p>
+<p>If these organisms are discovered, use of vancomycin or ampicillin–sulbactam in</p>
+<p>combination with gentamicin should be considered.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The evaluation of patients treated for IE includes assessment of signs and symptoms,</li>
+<p>blood cultures, microbiologic tests (eg, MIC, minimum bactericidal concentration</p>
+<p>[MBC], or serum bactericidal titers), serum drug concentrations, and other tests to</p>
+<pre><code>evaluate organ function.</code></pre>
+<li>Persistence of fever beyond 1 week may indicate ineffective antimicrobial therapy,</li>
+<p>emboli, infections of intravascular catheters, or drug reactions. In some patients,</p>
+<p>fever may persist even with appropriate antimicrobial therapy.</p>
+<li>With effective therapy, blood should sterilize with negative cultures within a few</li>
+<p>days, although microbiologic response to vancomycin may be unusually slower. After</p>
+<p>the initiation of therapy, blood cultures should be rechecked until they are negative.</p>
+<p>During the remainder of the therapy, frequent blood culturing is not necessary.</p>
+<p>394</p>
+<p>ch37.indd 394 19-11-2020 15:01:52</p>
+<h2>Endocarditis | CHAPTER 37</h2>
+<p>TABLE 37-5 Treatment Options for Native or Prosthetic Valve Endocarditis Caused by Enterococci</p>
+<p>Strength of</p>
+<p>Agenta Durationb Recommendation Comments</p>
+<p>Ampicillin-, Penicillin-, and Vancomycin-Susceptible Strains</p>
+<p>Ampicillin plus 4–6 weeks IIaB Native valve plus symptoms</p>
+<p>gentamicin present for &lt;3 months:</p>
+<p>use 4-week regimen</p>
+<p>Aqueous crystalline 4–6 weeks IIAB Prosthetic valve or native</p>
+<p>penicillin G valve plus symptoms</p>
+<p>sodium plus present for &gt;3 months:</p>
+<p>gentamicin use 6-week regimen</p>
+<p>Ampicillin plus 6 weeks IIaB Recommended regimen</p>
+<p>ceftriaxone if creatinine clearance</p>
+<p>is &lt;50 mL/min (0.83</p>
+<p>mL/sec; at baseline or</p>
+<p>due to therapy with a</p>
+<p>gentamicin-containing</p>
+<p>regimen)</p>
+<p>Vancomycin plus 6 weeks IIaB Recommended only for</p>
+<p>gentamicin patients unable to tolerate</p>
+<p>penicillin or ampicillin</p>
+<p>Gentamicin-Resistant Strains</p>
+<p>If susceptible, use streptomycin in place of gentamicin in the regimens listed above if</p>
+<pre><code>creatinine clearance is &gt;50 mL/min (0.83 mL/sec), cranial nerve VIII function is intact and</code></pre>
+<p>there is laboratory capability for rapid streptomycin serum concentrations.</p>
+<p>Penicillin-Resistant Strains</p>
+<p>Ampicillin– 6 weeks IIbC</p>
+<p>sulbactam plus</p>
+<p>gentamicin</p>
+<p>(β-lactamase–</p>
+<p>producing</p>
+<p>strain)</p>
+<p>Vancomycin plus 6 weeks IIbC May also use in patients with</p>
+<p>gentamicin β-lactamase–producing</p>
+<p>(intrinsic strains who have known</p>
+<p>penicillin intolerance to ampicillin–</p>
+<p>resistancec) sulbactam</p>
+<p>Enterococcus faecium Strains Resistant to Penicillin, Aminoglycosides, and</p>
+<p>Vancomycind</p>
+<p>Linezolid &gt;6 weeks IIbC Antimicrobial cure rates may</p>
+<p>be &lt;50%; bacteriologic</p>
+<p>cure may only be</p>
+<p>achieved with cardiac</p>
+<p>valve replacement</p>
+<p>Daptomycin &gt;6 weeks IIbC</p>
+<p>aSee Table 37-2 for appropriate dosing, administration, and monitoring information.</p>
+<p>bAll patients with prosthetic valves should be treated for at least 6 weeks.</p>
+<p>cInfectious diseases consult highly recommended.</p>
+<p>dPatients should be managed by a multidisciplinary team that includes specialists in cardiology,</p>
+<p>cardiovascular surgery, infectious diseases, and clinical pharmacy.</p>
+<p>395</p>
+<p>ch37.indd 395 19-11-2020 15:01:53</p>
+<div class="table-container"><table><tr><th>TABLE 37-5 Treatment Options for Native or Prosthetic Valve Endocarditis Caused by Enterococci</th><th></th><th></th><th></th></tr><tr><td>Agenta</td><td>Durationb</td><td>Strength of
+Recommendation</td><td>Comments</td></tr><tr><td>Ampicillin-, Penicillin-, and Vancomycin-Susceptible Strains</td><td></td><td></td><td></td></tr><tr><td>Ampicillin plus
+gentamicin</td><td>4–6 weeks</td><td>IIaB</td><td>Native valve plus symptoms
+present for &lt;3 months:
+use 4-week regimen</td></tr><tr><td>Aqueous crystalline
+penicillin G
+sodium plus
+gentamicin</td><td>4–6 weeks</td><td>IIAB</td><td>Prosthetic valve or native
+valve plus symptoms
+present for &gt;3 months:
+use 6-week regimen</td></tr><tr><td>Ampicillin plus
+ceftriaxone</td><td>6 weeks</td><td>IIaB</td><td>Recommended regimen
+if creatinine clearance
+is &lt;50 mL/min (0.83
+mL/sec; at baseline or
+due to therapy with a
+gentamicin-containing
+regimen)</td></tr><tr><td>Vancomycin plus
+gentamicin</td><td>6 weeks</td><td>IIaB</td><td>Recommended only for
+patients unable to tolerate
+penicillin or ampicillin</td></tr><tr><td>Gentamicin-Resistant Strains</td><td></td><td></td><td></td></tr><tr><td>If susceptible, use streptomycin in place of gentamicin in the regimens listed above if
+creatinine clearance is &gt;50 mL/min (0.83 mL/sec), cranial nerve VIII function is intact and
+there is laboratory capability for rapid streptomycin serum concentrations.</td><td></td><td></td><td></td></tr><tr><td>Penicillin-Resistant Strains</td><td></td><td></td><td></td></tr><tr><td>Ampicillin–
+sulbactam plus
+gentamicin
+(β-lactamase–
+producing
+strain)</td><td>6 weeks</td><td>IIbC</td><td></td></tr><tr><td>Vancomycin plus
+gentamicin
+(intrinsic
+penicillin
+resistancec)</td><td>6 weeks</td><td>IIbC</td><td>May also use in patients with
+β-lactamase–producing
+strains who have known
+intolerance to ampicillin–
+sulbactam</td></tr><tr><td>Enterococcus faecium Strains Resistant to Penicillin, Aminoglycosides, and
+Vancomycind</td><td></td><td></td><td></td></tr><tr><td>Linezolid</td><td>&gt;6 weeks</td><td>IIbC</td><td>Antimicrobial cure rates may
+be &lt;50%; bacteriologic
+cure may only be
+achieved with cardiac
+valve replacement</td></tr><tr><td>Daptomycin</td><td>&gt;6 weeks</td><td>IIbC</td><td></td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>If bacteria continue to be isolated from blood beyond the first few days of therapy,</li>
+<p>it may indicate that the antimicrobials are inactive against the pathogen or that the</p>
+<p>doses are not producing adequate concentrations at the site of infection.</p>
+<li>For all isolates from blood cultures, MICs (not MBCs) should be determined.</li>
+<h2>PREVENTION OF ENDOCARDITIS</h2>
+<li>Antimicrobial prophylaxis is used to prevent IE in patients believed to be at high risk.</li>
+<li>The use of antimicrobials for this purpose requires consideration of the types of</li>
+<p>patients who are at risk; the procedures causing bacteremia; the organisms that are</p>
+<p>likely to cause endocarditis; and the pharmacokinetics, spectrum, cost, and ease of</p>
+<p>administration of available agents. The objective of prophylaxis is to diminish the</p>
+<p>likelihood of IE in high-risk individuals who are undergoing procedures that cause</p>
+<p>transient bacteremia.</p>
+<li>The literature lacks adequate evidence to prove the effectiveness or ineffectiveness of</li>
+<p>antibiotic prophylaxis, and the common practice of using antimicrobial therapy in</p>
+<p>this setting remains controversial.</p>
+<h2>TABLE 37-6 Prophylaxis of Infective Endocarditis</h2>
+<p>Highest Risk Cardiac Presence of a prosthetic heart valve</p>
+<p>Conditions Prosthetic material used for cardiac valve repair</p>
+<p>Prior diagnosis of infective endocarditis</p>
+<p>Cardiac transplantation with subsequent valvulopathy</p>
+<p>Congenital heart disease (CHD)a</p>
+<p>Types of Procedures Dental procedures that require perforation of the oral</p>
+<p>mucosa or manipulation of the periapical region of the</p>
+<p>teeth of gingival tissue</p>
+<p>Invasive respiratory procedures involving an incision or</p>
+<p>biopsy</p>
+<p>Invasive procedures involving infected skin, skin structures,</p>
+<p>or musculoskeletal tissue</p>
+<p>Antimicrobial Options Adult Dosesb Pediatric Dosesb (mg/kg)</p>
+<p>Oral amoxicillin 2 g 50</p>
+<p>IM or IV ampicillinc 2 g 50</p>
+<p>IM or IV cefazolin or 1 g 50</p>
+<p>ceftriaxonec,d,e</p>
+<p>Oral cephalexind,e,f 2 g 50</p>
+<p>Oral clindamycine 600 mg 20</p>
+<p>Oral azithromycin or 500 mg 15</p>
+<p>clarithromycine</p>
+<p>IV or IM clindamycinc,e 600 mg 20</p>
+<p>aIncludes only the following: unrepaired cyanotic CHD, prophylaxis within the first 6 months of</p>
+<p>implanting prosthetic material to repair a congenital heart defect, and repaired CHD with residual</p>
+<p>defects at or adjacent to prosthetic material.</p>
+<p>bAll one-time doses administered 30–60 minutes prior to initiation of the procedure.</p>
+<p>cFor patients unable to tolerate oral medication.</p>
+<p>dShould be avoided in patients with immediate-type hypersensitivity reaction to penicillin or</p>
+<p>ampicillin (eg, anaphylaxis, urticaria, or angioedema).</p>
+<p>eOption for patients with nonimmediate hypersensitivity reaction to penicillin or ampicillin.</p>
+<p>fMay substitute with an alternative first- or second-generation cephalosporin at an equivalent dose.</p>
+<p>396</p>
+<p>ch37.indd 396 19-11-2020 15:01:53</p>
+<div class="table-container"><table><tr><th>TABLE 37-6 Prophylaxis of Infective Endocarditis</th><th></th><th></th></tr><tr><td>Highest Risk Cardiac
+Conditions</td><td>Presence of a prosthetic heart valve
+Prosthetic material used for cardiac valve repair
+Prior diagnosis of infective endocarditis
+Cardiac transplantation with subsequent valvulopathy
+Congenital heart disease (CHD)a</td><td></td></tr><tr><td>Types of Procedures</td><td>Dental procedures that require perforation of the oral
+mucosa or manipulation of the periapical region of the
+teeth of gingival tissue
+Invasive respiratory procedures involving an incision or
+biopsy
+Invasive procedures involving infected skin, skin structures,
+or musculoskeletal tissue</td><td></td></tr><tr><td>Antimicrobial Options</td><td>Adult Dosesb</td><td>Pediatric Dosesb (mg/kg)</td></tr><tr><td>Oral amoxicillin</td><td>2 g</td><td>50</td></tr><tr><td>IM or IV ampicillinc</td><td>2 g</td><td>50</td></tr><tr><td>IM or IV cefazolin or
+ceftriaxonec,d,e</td><td>1 g</td><td>50</td></tr><tr><td>Oral cephalexind,e,f</td><td>2 g</td><td>50</td></tr><tr><td>Oral clindamycine</td><td>600 mg</td><td>20</td></tr><tr><td>Oral azithromycin or
+clarithromycine</td><td>500 mg</td><td>15</td></tr><tr><td>IV or IM clindamycinc,e</td><td>600 mg</td><td>20</td></tr></table></div><h2>Endocarditis | CHAPTER 37</h2>
+<li>IE prophylaxis should be recommended only for patients with underlying cardiac</li>
+<p>conditions associated with the highest risk, which includes presence of a prosthetic</p>
+<p>heart valve, prosthetic material used for cardiac valve repair, prior diagnosis of IE,</p>
+<p>cardiac transplantation with subsequent valvulopathy, CHD, for dental procedures</p>
+<p>involving manipulation of gingival tissue or the periapical region of teeth or perfo-</p>
+<p>ration of the oral mucosa, invasive respiratory procedures involving an incision or</p>
+<p>biopsy, or invasive procedures involving infected skin, skin structures, or musculo-</p>
+<p>skeletal tissues.</p>
+<li>Antibiotic regimens for a dental procedure are given in Table 37-6.</li>
+<p>See Chapter 129, Infective Endocarditis, authored by Daniel B. Chastain and Angie</p>
+<p>Veverka, for a more detailed discussion of this topic.</p>
+<p>397</p>
+<p>ch37.indd 397 19-11-2020 15:01:53</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

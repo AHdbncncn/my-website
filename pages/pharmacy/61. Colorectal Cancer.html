@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>61. Colorectal Cancer</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>61. Colorectal Cancer</h1>
+        </header>
+        <main>
+            <p>699</p>
+<h2>RETPAHC</h2>
+<p>61</p>
+<p>Colorectal Cancer</p>
+<li>Colorectal cancer (CRC) is a malignant neoplasm involving the colon, rectum, and</li>
+<p>anal canal.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Development of a colorectal neoplasm is a multistep process of genetic and phe-</li>
+<pre><code>notypic alterations of normal bowel epithelium structure and function leading to</code></pre>
+<p>dysregulated cell growth, proliferation, and tumor development.</p>
+<li>Features of colorectal tumorigenesis include genomic instability, activation of onco-</li>
+<p>gene pathways, mutational inactivation or silencing of tumor-suppressor genes, DNA</p>
+<p>mismatch repairs, and activation of growth factor pathways.</p>
+<li>Adenocarcinomas account for about 92% of tumors of the large intestine.</li>
+<h2>PREVENTION AND SCREENING</h2>
+<li>Primary prevention is aimed at preventing CRC in an at-risk population. Trials with</li>
+<p>celecoxib in people with familial adenomatous polyposis (FAP) showed reduction</p>
+<p>in size and number of polyps after 6–9 months of treatment, but there is a lack of</p>
+<p>long-term benefit.</p>
+<li>Secondary prevention is aimed at preventing malignancy in a population that has</li>
+<p>already manifested an initial disease process. Secondary prevention includes proce-</p>
+<p>dures ranging from colonoscopic removal of precancerous polyps detected during</p>
+<p>screening colonoscopy to total colectomy for high-risk individuals (eg, FAP).</p>
+<li>Current US guidelines for average-risk individuals include annual occult fecal blood</li>
+<p>testing starting at age 50 years and examination of the colon every 5 or 10 years,</p>
+<p>depending on the procedure.</p>
+<h2>CLINICAL MANIFESTATIONS</h2>
+<li>Signs and symptoms of CRC can be extremely varied, subtle, and nonspecific. Early-</li>
+<p>stage CRC is often asymptomatic and detected by screening procedures.</p>
+<li>Blood in the stool is the most common sign; however, any change in bowel habits, vague</li>
+<p>abdominal discomfort, or abdominal distention may be a warning sign. Less common</p>
+<p>signs and symptoms include nausea, vomiting, and, if anemia is severe, fatigue.</p>
+<li>Twenty percent of patients present with metastatic disease most commonly in the</li>
+<p>liver, lung, and bones.</p>
+<h2>DIAGNOSIS</h2>
+<li>Perform a physical examination and obtain a careful personal and family history.</li>
+<p>Evaluate entire large bowel by colonoscopy.</p>
+<li>Obtain baseline laboratory tests: complete blood cell count, international normalized</li>
+<pre><code>ratio (INR), activated partial thromboplastin time, liver and renal function tests, and</code></pre>
+<p>serum carcinoembryonic antigen (CEA). Serum CEA serves as a marker for monitor-</p>
+<p>ing CRC response to treatment, but it is too insensitive and nonspecific to be used as</p>
+<p>a screening test for early-stage CRC.</p>
+<li>Radiographic imaging studies may include chest radiographs, bone scan, chest and</li>
+<p>abdominal computed tomography scans, positron emission tomography, ultrasonog-</p>
+<p>raphy, and magnetic resonance imaging.</p>
+<li>Determine CRC stage at diagnosis to predict prognosis and develop treatment</li>
+<p>options. Stage is based on size of the primary tumor (T ), presence and extent of</p>
+<p>1–4</p>
+<p>lymph node involvement (N ), and presence or absence of distant metastases (M).</p>
+<p>0–2</p>
+<p>CH61.indd 699 20-11-2020 09:37:33</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>61</th><th>Colorectal Cancer</th></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>✓ Stage I disease involves tumor invasion of the submucosa (T) or muscularis pro-</p>
+<p>1</p>
+<p>pria (T) and negative lymph nodes.</p>
+<p>✓ Stage I 2 I disease involves tumor invasion through the muscularis propria into</p>
+<p>pericolorectal tissues (T), or penetration to the surface of the visceral peritoneum</p>
+<p>3</p>
+<p>(T ), or directly invades or is adherent to other organs or structures (T ), and</p>
+<p>4a 4b</p>
+<p>negative lymph nodes.</p>
+<p>✓ Stage III disease includes T and positive regional lymph nodes.</p>
+<p>✓ Stage IV disease includes an 1– y 4 T, any N, and distant metastasis.</p>
+<h2>PROGNOSIS</h2>
+<li>Stage at diagnosis is the most important independent prognostic factor for survival</li>
+<p>and disease recurrence. Five-year relative survival is approximately 90% for those with</p>
+<p>localized tumor as compared with 14% for those with metastatic disease at diagnosis.</p>
+<li>Poor prognostic clinical factors at diagnosis include bowel obstruction or perfora-</li>
+<p>tion, high preoperative CEA level, distant metastases, and location of the primary</p>
+<p>tumor in the rectum or rectosigmoid area.</p>
+<li>Molecular markers, particularly MSI, 18q/DCC mutation or LOH, BRAF V600E</li>
+<p>mutation, and RAS mutations are also associated with CRC prognosis.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals include cure for stages I, II, and III; the intent is to</li>
+<p>eradicate micrometastatic disease after surgical resection. Most stage IV disease is</p>
+<p>incurable; palliative treatment is given to reduce symptoms, avoid disease-related</p>
+<p>complications, and prolong survival. Twenty to 30% of patients with metastatic dis-</p>
+<h2>ease may be cured if their metastases are resectable.</h2>
+<li>Treatment modalities are surgery, radiation therapy (RT), chemotherapy, and</li>
+<p>biomodulators.</p>
+<h2>OPERABLE DISEASE</h2>
+<p>Surgery</p>
+<li>Complete surgical resection of the primary tumor with regional lymphadenectomy is</li>
+<p>a curative approach for patients with operable CRC.</p>
+<li>The preferred surgical procedure for rectal cancer is a total excision of the mesorec-</li>
+<p>tum that includes tissue containing perirectal fat and draining lymph nodes.</p>
+<li>Common complications of colorectal surgery include infection, anastomotic leakage,</li>
+<pre><code>obstruction, adhesions, sexual dysfunction, and malabsorption syndromes.</code></pre>
+<p>Adjuvant Radiation Therapy</p>
+<li>Adjuvant RT has a limited role in colon cancer because most recurrences are extra-</li>
+<p>pelvic and occur in the abdomen.</p>
+<p>Adjuvant Chemotherapy for Colon Cancer</p>
+<li>Adjuvant therapy is administered after complete tumor resection to eliminate</li>
+<p>residual micrometastatic disease. Adjuvant therapy is not indicated for stage I CRC</p>
+<p>because more than 90% of patients are cured by surgical resection alone.</p>
+<li>Results of adjuvant chemotherapy studies in patients with stage II disease are con-</li>
+<p>flicting. Despite a lack of consensus among practitioners, the approach to treatment</p>
+<p>of high-risk stages II and III disease is similar.</p>
+<li>Adjuvant chemotherapy is the standard of care for stage III colon cancer.</li>
+<li>Standard adjuvant regimens include a fluoropyrimidine (fluorouracil [with leucovo-</li>
+<p>rin] or capecitabine) as a single agent or in combination with oxaliplatin. Leucovo-</p>
+<p>rin enhances cytotoxic activity of fluorouracil.</p>
+<p>700</p>
+<p>CH61.indd 700 20-11-2020 09:37:33</p>
+<h2>Colorectal Cancer | CHAPTER 61</h2>
+<li>Administration method affects clinical activity and toxicity. In most common com-</li>
+<p>bination regimens, fluorouracil is administered by both IV bolus injection and by</p>
+<p>continuous IV infusion. No one treatment schedule is superior for overall patient</p>
+<p>survival.</p>
+<li>Continuous IV infusion of fluorouracil is generally well tolerated but is associated</li>
+<p>with palmar-plantar erythrodysesthesia (hand–foot syndrome) and stomatitis. IV</p>
+<p>bolus administration is associated with leukopenia, which is dose limiting and can be</p>
+<p>life threatening. Both administration methods are associated with a similar incidence</p>
+<p>of mucositis, diarrhea, nausea and vomiting, and alopecia.</p>
+<li>In rare cases, patients deficient in dihydropyrimidine dehydrogenase, responsible for</li>
+<p>the catabolism of fluorouracil, develop severe toxicity, including death, after fluoro-</p>
+<p>uracil administration.</p>
+<li>National guidelines recommend oxaliplatin-based regimens as the first-line option</li>
+<p>for patients with stage III colon cancer who can tolerate combination therapy. It is</p>
+<p>commonly administered with fluorouracil/leucovorin. Oxaliplatin is associated with</p>
+<p>both acute and persistent neuropathies, including rare, acute pharyngolaryngeal</p>
+<p>dysesthesia, neutropenia, and gastrointestinal (GI) toxicity.</p>
+<li>Selection of an adjuvant regimen (Table 61-1) is based on patient-specific factors,</li>
+<p>including performance status, comorbid conditions, and patient preference based on</p>
+<p>lifestyle factors. Age should also be considered as subset analysis of large clinical trials</p>
+<p>has shown that patients older than 70 years may not benefit from adjuvant oxaliplatin.</p>
+<li>Fluorouracil/leucovorin regimens currently have limited use but are acceptable</li>
+<p>options in patients who cannot receive oxaliplatin and are unable to tolerate oral</p>
+<p>capecitabine.</p>
+<p>Adjuvant Therapy for Rectal Cancer</p>
+<li>Rectal cancer is more difficult to resect with wide margins, so local recurrences are</li>
+<p>more frequent than with colon cancer. Adjuvant RT plus chemotherapy is considered</p>
+<p>the standard of care for stages II and III rectal cancer.</p>
+<li>RT reduces the risk of local tumor recurrence in patients undergoing surgery for</li>
+<p>rectal cancer. RT is given prior to surgery to decrease tumor size, making it more</p>
+<h2>resectable.</h2>
+<li>Preoperative (neoadjuvant) chemoradiation shrinks rectal tumors prior to</li>
+<p>surgical resection, improving sphincter preservation. Preoperative infusional</p>
+<p>fluorouracil-based regimens or oral capecitabine plus RT are recommended.</p>
+<p>Patients should receive adjuvant chemotherapy following surgery to total</p>
+<p>6 months of chemotherapy.</p>
+<h2>METASTATIC DISEASE</h2>
+<li>Patients with metastatic colorectal cancer (MCRC) are considered to have resectable,</li>
+<p>potentially resectable, or unresectable metastatic disease. Surgery and RT are used to</p>
+<p>manage isolated sites of tumor. Chemotherapy is used for disseminated disease and</p>
+<h2>is the primary treatment modality for unresectable MCRC.</h2>
+<li>Tumor RAS (KRAS exon 2 and nonexon 2 and NRAS) and BRAF genotyping for</li>
+<p>mutation status and determination of tumor methylation or mismatch repair</p>
+<p>(MMR) or microsatellite instability (MSI) status (if not previously done) are</p>
+<p>recommended when metastatic disease is diagnosed to identify appropriate treat-</p>
+<p>ment options.</p>
+<h2>Resectable or Potentially Resectable MCRC</h2>
+<li>Surgical resection of metastases with curative intent is the primary goal.</li>
+<li>Neoadjuvant or conversional chemotherapy is administered to increase complete</li>
+<p>resection rates with resectable and potentially resectable liver or lung lesions</p>
+<p>701</p>
+<p>CH61.indd 701 20-11-2020 09:37:34</p>
+<h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 61-1 Chemotherapy Regimens for the Adjuvant Treatment of Colorectal Cancer</p>
+<p>Regimen Agents Comments</p>
+<p>FOLFOX Oxaliplatin 85 mg/m2 IV on day 1 Preferred regimen for stage III</p>
+<p>Leucovorin 400 mg/m2 IV on day 1 colon and rectal cancers;</p>
+<p>common toxicities: sensory</p>
+<p>Fluorouracil 400 mg/m2 IV bolus, neuropathy, neutropenia.</p>
+<p>after leucovorin on day 1, then</p>
+<p>1200 mg/m2/day × 2 days CIV</p>
+<p>(total 2400 mg/m2 over 46–48</p>
+<p>hours)</p>
+<p>Repeat every 2 weeks × 24 weeksa</p>
+<p>CapeOx Oxaliplatin 130 mg/m2 IV day 1 Improved DFS in patients with</p>
+<p>Capecitabine 1000 mg/m2 twice stage III colon cancer compared</p>
+<p>daily orally days 1 through 14 to capecitabine alone or</p>
+<p>Roswell Park Regimen; common</p>
+<p>Each cycle lasts 3 weeks × 24 dose-limiting toxicities:</p>
+<p>weeksb</p>
+<p>neuropathies and hand–foot</p>
+<p>syndrome. A preferred regimen</p>
+<p>for adjuvant rectal therapy.</p>
+<p>Capecitabine Capecitabine 1000 mg/m2–1250 Equivalent DFS as compared with</p>
+<p>mg/m2 PO twice daily on days 1 the Mayo Clinic regimen with</p>
+<p>through 14 improved tolerability; hand–</p>
+<p>Each cycle lasts 14 days and is foot syndrome common, useful</p>
+<p>repeated every 3 weeks × for patients without vascular</p>
+<p>24 weeks access or who have difficulties</p>
+<p>with travel to infusion center</p>
+<p>Roswell Park Leucovorin 500 mg/m2 IV day 1 Leukopenia common dose-limiting</p>
+<p>Regimen over 2 hours toxicity; diarrhea, and stomatitis</p>
+<p>Fluorouracil 500 mg/m2 IV bolus 1 common</p>
+<p>hour after leucovorin</p>
+<p>Repeat weekly for 6 of 8 weeks ×</p>
+<p>4 cycles</p>
+<p>Simplified Leucovorin 400 mg/m2 per day IV Hand–foot syndrome common</p>
+<p>Biweekly Fluorouracil 400 mg IV bolus, after</p>
+<p>leucovorin, then 1200 mg/m2/</p>
+<p>day days 1 and 2 (total 2400</p>
+<p>mg/m2 over 46–48 hours) for 2</p>
+<p>consecutive days</p>
+<p>Repeat every 2 weeks × 12 cycles</p>
+<p>aKnown as mFOLFOX6; survival benefit has not been demonstrated for patients 70 years and older.</p>
+<p>bIn patients with low-risk stage III (T1-3, any N), 3 months of CapeOX is noninferior to 6 months of</p>
+<p>CapeOX for DFS but this has not been proven for FOLFOX. In patients with high-risk stage III disease</p>
+<p>(T4, N1-2, or any T, N2), 3 months of FOLFOX is inferior to 6 months of FOLFOX for DFS, but this has</p>
+<p>not been proven with CapeOX. Grade 3 neuropathy is lower with 3 months of CapeOX or FOLFOX.</p>
+<p>CIV, continuous intravenous infusion; DFS, disease-free survival; OS, overall survival; PO, by mouth.</p>
+<p>(Table 61-2). Chemotherapy with or without biologic agents is given over 2–3</p>
+<p>months pre-op. Adjuvant (postoperative) chemotherapy is administered to complete</p>
+<p>a total of 6 months of chemotherapy.</p>
+<li>Consider hepatic-directed therapy in addition to or as an alternative to surgical resec-</li>
+<p>tion in patients with liver-only or liver-predominant MCRC. Hepatic artery infusion</p>
+<p>(HAI) delivers chemotherapy (eg, floxuridine and fluorouracil) through the hepatic</p>
+<p>702</p>
+<p>CH61.indd 702 20-11-2020 09:37:34</p>
+<div class="table-container"><table><tr><th>TABLE 61-1 Chemotherapy Regimens for the Adjuvant Treatment of Colorectal Cancer</th><th></th><th></th></tr><tr><td>Regimen</td><td>Agents</td><td>Comments</td></tr><tr><td>FOLFOX</td><td>Oxaliplatin 85 mg/m2 IV on day 1
+Leucovorin 400 mg/m2 IV on day 1
+Fluorouracil 400 mg/m2 IV bolus,
+after leucovorin on day 1, then
+1200 mg/m2/day × 2 days CIV
+(total 2400 mg/m2 over 46–48
+hours)
+Repeat every 2 weeks × 24 weeksa</td><td>Preferred regimen for stage III
+colon and rectal cancers;
+common toxicities: sensory
+neuropathy, neutropenia.</td></tr><tr><td>CapeOx</td><td>Oxaliplatin 130 mg/m2 IV day 1
+Capecitabine 1000 mg/m2 twice
+daily orally days 1 through 14
+Each cycle lasts 3 weeks × 24
+weeksb</td><td>Improved DFS in patients with
+stage III colon cancer compared
+to capecitabine alone or
+Roswell Park Regimen; common
+dose-limiting toxicities:
+neuropathies and hand–foot
+syndrome. A preferred regimen
+for adjuvant rectal therapy.</td></tr><tr><td>Capecitabine</td><td>Capecitabine 1000 mg/m2–1250
+mg/m2 PO twice daily on days 1
+through 14
+Each cycle lasts 14 days and is
+repeated every 3 weeks ×
+24 weeks</td><td>Equivalent DFS as compared with
+the Mayo Clinic regimen with
+improved tolerability; hand–
+foot syndrome common, useful
+for patients without vascular
+access or who have difficulties
+with travel to infusion center</td></tr><tr><td>Roswell Park
+Regimen</td><td>Leucovorin 500 mg/m2 IV day 1
+over 2 hours
+Fluorouracil 500 mg/m2 IV bolus 1
+hour after leucovorin
+Repeat weekly for 6 of 8 weeks ×
+4 cycles</td><td>Leukopenia common dose-limiting
+toxicity; diarrhea, and stomatitis
+common</td></tr><tr><td>Simplified
+Biweekly</td><td>Leucovorin 400 mg/m2 per day IV
+Fluorouracil 400 mg IV bolus, after
+leucovorin, then 1200 mg/m2/
+day days 1 and 2 (total 2400
+mg/m2 over 46–48 hours) for 2
+consecutive days
+Repeat every 2 weeks × 12 cycles</td><td>Hand–foot syndrome common</td></tr></table></div><h2>Colorectal Cancer | CHAPTER 61</h2>
+<p>artery directly into the liver. Tumor ablation uses radiofrequency ablation or micro-</p>
+<p>wave energy to generate heat to destroy tumor cells. Cryoablation is also used. These</p>
+<p>strategies are less successful than surgical interventions.</p>
+<h2>Unresectable MCRC</h2>
+<li>Systemic chemotherapy palliates symptoms and improves survival in patients with</li>
+<p>unresectable disease. RT may control localized symptoms. Most MCRCs are incur-</p>
+<p>able; however, randomized trials confirm that chemotherapy prolongs life and</p>
+<p>improves quality of life.</p>
+<li>Consider goals of therapy, history of prior chemotherapy, tumor RAS and MMR/MSI</li>
+<p>mutation status, performance status/comorbidities, and risk of drug-related toxicities</p>
+<p>to determine a management strategy. Regimens are the same for metastatic cancer of</p>
+<p>the colon and rectum.</p>
+<li>Accepted initial chemotherapy regimens incorporate a fluoropyrimidine. Addition</li>
+<p>of irinotecan or oxaliplatin significantly improves response rates, progression-free</p>
+<p>survival, and median survival. Addition of the targeted anti-angiogenesis agent</p>
+<p>bevacizumab further improves response rate and survival (see Table 61-2).</p>
+<li>Capecitabine monotherapy is suitable for first-line therapy in patients not likely to</li>
+<p>tolerate IV chemotherapy. Available for oral administration, it is converted to fluoro-</p>
+<p>uracil and is a suitable replacement for infusional fluorouracil in combination with</p>
+<p>oxaliplatin (CapeOx).</p>
+<li>Bevacizumab is a humanized monoclonal antibody directed against vascular endo-</li>
+<p>thelial growth factor (VEGF). Addition of bevacizumab to fluorouracil-based regi-</p>
+<p>mens modestly increases PFS and OS as compared to chemotherapy alone.</p>
+<p>✓ Hypertension is common with bevacizumab and easily managed with oral antihy-</p>
+<p>pertensive agents. Other safety concerns include bleeding, thrombocytopenia, and</p>
+<p>proteinuria. GI perforation is a rare but potentially fatal complication necessitating</p>
+<p>prompt evaluation of abdominal pain associated with vomiting or constipation.</p>
+<p>Bevacizumab can interfere with wound healing; schedule surgery at least 6 weeks</p>
+<p>after the last dose of bevacizumab and wait at least 6–8 weeks after surgery to restart.</p>
+<li>Cetuximab and panitumumab are EGFR inhibitors used in patients with wild-</li>
+<p>type RAS and wild-type BRAF tumors in combination with FOLFOX or FOLFIRI</p>
+<p>or administered alone (Table 61-2). Patients with left-sided primary tumors have</p>
+<p>improved overall survival when treated with EGFR inhibitors while those with right-</p>
+<p>sided tumors (cecum to hepatic flexure) do not. Severe infusion reactions, including</p>
+<p>anaphylaxis, can occur with cetuximab (3%) and panitumumab (1%). Skin toxicity is</p>
+<p>also commonly seen and is not part of the infusion reaction. The presence of papulo-</p>
+<p>pustular skin rash has been shown to correlate with response and survival and most</p>
+<p>commonly occurs within 2 to 4 weeks of therapy initiation.</p>
+<li>Patients may receive consecutive regimens; the sequence of drugs appears less impor-</li>
+<p>tant than exposure to all active agents in the course of chemotherapy treatments.</p>
+<h2>METASTATIC DISEASE: SECOND-LINE AND SUBSEQUENT THERAPY</h2>
+<li>The selection of second-line chemotherapy is primarily based on the type of and</li>
+<p>response to prior therapy received, site and extent of disease, and patient factors and</p>
+<p>treatment preferences. The optimal sequence of regimens has not been established</p>
+<h2>(Table 61-3).</h2>
+<li>Patients with wild-type RAS and wild-type BRAF tumors who experience progression</li>
+<p>on therapies that do not contain an EGFR inhibitor may benefit from the combina-</p>
+<p>tion of cetuximab or panitumumab and irinotecan or FOLFIRI.</p>
+<li>Patients with BRAF V600E mutations may benefit from a regimen containing iri-</li>
+<p>notecan and cetuximab with or without vemurafenib (a second-generation, select</p>
+<p>BRAF inhibitor) or a second regimen containing dabrafenib (a BRAF inhibitor),</p>
+<p>trametinib (a MEK inhibitor), and panitumumab (an EGFR inhibitor).</p>
+<li>Angiogenesis inhibitors including VEGF inhibitors bevacizumab, ramucircumab,</li>
+<p>and ziv-aflibercept and the oral multikinase inhibitor regorafenib may be used in</p>
+<p>patients with progressive disease.</p>
+<p>703</p>
+<p>CH61.indd 703 20-11-2020 09:37:34</p>
+<h2>704 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 61-2 Initial Chemotherapeutic Regimens for Metastatic Colorectal Cancera</p>
+<p>Regimen Agents Major Dose-Limiting Toxicities Comments</p>
+<p>Patients Appropriate for Intensive Therapy with RAS Mutations</p>
+<p>FOLFOX ± bevacizumab Oxaliplatin 85 mg/m2 IV day 1 FOLFOX: sensory neuropathy, Most commonly used first-line regimen</p>
+<p>Leucovorin 400 mg/m2 IV day 1 neutropenia</p>
+<p>Fluorouracil 400 mg/m2 IV bolus, after leucovorin Bevacizumab: hypertension,</p>
+<p>day 1, then 1200 mg/m2/day × 2 days CIV thrombosis, proteinuria</p>
+<p>(total 2400 mg/m2 over 46–48 hours)</p>
+<p>Repeat every 2 weeks</p>
+<p>± Bevacizumab 5 mg/kg IV day 1 before FOLFOX</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>CapeOx ± bevacizumab Oxaliplatin 130 mg/m2 IV day 1 CapeOx: diarrhea, hand–foot Reduced capecitabine dose better</p>
+<p>Capecitabine 1000 mg/m2 orally twice a day, syndrome, neuropathies tolerated; patient must be able to be</p>
+<p>days 1–14 Bevacizumab: hypertension, adherent and report side effects in a</p>
+<p>Repeat cycle every 3 weeks thrombosis, proteinuria timely fashion</p>
+<p>± Bevacizumab 7.5 mg/kg IV day 1</p>
+<p>Repeat cycle every 3 weeks</p>
+<p>FOLFIRI ± bevacizumab Irinotecan 180 mg/m2 IV day 1 FOLFIRI: diarrhea, mucositis, May be preferred in patients who have</p>
+<p>Leucovorin 400 mg/m2 IV day 1 neutropenia preexisting neuropathy or those in</p>
+<p>Flu d o a ro y u 1 r , a t c h il e 4 n 0 1 0 2 m 00 g m /m g 2 / I m V 2 b /d o a lu y s × , a f 2 te d r a le y u s c C o IV vo rin Bev th ac ro iz m um bo a s b is : , h p y r p o e te rt i e n n u s ri i a on, w to h t i h c e h i r n l e in u e ro o p f a w th o y r k m (e a g y , b m e u d s e ic b ia ili n ta ) ting</p>
+<p>(total 2400 mg/m2 over 46–48 hours)</p>
+<p>± Bevacizumab 5 mg/kg IV day prior to FOLFIRI</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>CH61.indd</p>
+<p>704</p>
+<p>20-11-2020</p>
+<p>09:37:35</p>
+<div class="table-container"><table><tr><th>TABLE 61-2 Initial Chemotherapeutic Regimens for Metastatic Colorectal Cancer
+Regimen Agents Major Dose-Limiting Toxicities Comments</th><th></th><th></th><th></th></tr><tr><td>Patients Appropriate for Intensive Therapy with RAS Mutations</td><td></td><td></td><td></td></tr><tr><td>FOLFOX ± bevacizumab</td><td>Oxaliplatin 85 mg/m2 IV day 1
+Leucovorin 400 mg/m2 IV day 1
+Fluorouracil 400 mg/m2 IV bolus, after leucovorin
+day 1, then 1200 mg/m2/day × 2 days CIV
+(total 2400 mg/m2 over 46–48 hours)
+Repeat every 2 weeks
+± Bevacizumab 5 mg/kg IV day 1 before FOLFOX
+Repeat cycle every 2 weeks</td><td>FOLFOX: sensory neuropathy,
+neutropenia
+Bevacizumab: hypertension,
+thrombosis, proteinuria</td><td>Most commonly used first-line regimen</td></tr><tr><td>CapeOx ± bevacizumab</td><td>Oxaliplatin 130 mg/m2 IV day 1
+Capecitabine 1000 mg/m2 orally twice a day,
+days 1–14
+Repeat cycle every 3 weeks
+± Bevacizumab 7.5 mg/kg IV day 1
+Repeat cycle every 3 weeks</td><td>CapeOx: diarrhea, hand–foot
+syndrome, neuropathies
+Bevacizumab: hypertension,
+thrombosis, proteinuria</td><td>Reduced capecitabine dose better
+tolerated; patient must be able to be
+adherent and report side effects in a
+timely fashion</td></tr><tr><td>FOLFIRI ± bevacizumab</td><td>Irinotecan 180 mg/m2 IV day 1
+Leucovorin 400 mg/m2 IV day 1
+Fluorouracil 400 mg/m2 IV bolus, after leucovorin
+day 1, then 1200 mg/m2/day × 2 days CIV
+(total 2400 mg/m2 over 46–48 hours)
+± Bevacizumab 5 mg/kg IV day prior to FOLFIRI
+Repeat cycle every 2 weeks</td><td>FOLFIRI: diarrhea, mucositis,
+neutropenia
+Bevacizumab: hypertension,
+thrombosis, proteinuria</td><td>May be preferred in patients who have
+preexisting neuropathy or those in
+which neuropathy may be debilitating
+to their line of work (eg, musician)</td></tr></table></div><p>705</p>
+<p>Colorectal</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>61</p>
+<p>Fluorouracil/Leucovorin ± See Table 61-1 for fluorouracil/leucovorin regimen Fluorouracil/Leucovorin: diarrhea, Infusional fluorouracil/leucovorin regimen</p>
+<p>bevacizumab options hand–foot syndrome, mucositis, preferred to bolus fluorouracil regimen.</p>
+<p>± Bevacizumab 5 mg/kg IV day prior to neutropenia Infusional regimens tend to have more</p>
+<p>fluorouracil and leucovorin Bevacizumab: hypertension, hand–foot syndrome and stomatitis</p>
+<p>Repeat cycle every 2 weeks thrombosis, proteinuria a w n e d e k b l o y l o u r s b re im gi o m n e t n h s ly m sc o h re e d n u e l u e t o ro f penia;</p>
+<p>leucovorin plus fluorouracil (either</p>
+<p>bolus or continuous infusion) may</p>
+<p>be more convenient for the patient</p>
+<p>in terms of fewer scheduled clinic</p>
+<p>appointments, less interference with</p>
+<p>work schedules, and ease of dose</p>
+<p>adjustments based on toxicity</p>
+<p>Capecitabine ± bevacizumab Capecitabine 850–1250 mg/m2 orally twice a day, Capecitabine: hand–foot syndrome, May be preferred in those without a port</p>
+<p>days 1–14 diarrhea, hyperbilirubinemia or limited venous access; patient must</p>
+<p>± Bevacizumab 7.5 mg/kg IV day 1 Bevacizumab: hypertension, be able to be adherent and report side</p>
+<p>Repeat cycle every 3 weeks thrombosis, proteinuria effects in a timely fashion</p>
+<p>FOLFOXIRI ± bevacizumab Irinotecan 165 mg/m2 IV day 1 prior to oxaliplatin FOLFOXFIRI: neutropenia, diarrhea, More neutropenia and peripheral</p>
+<p>Oxaliplatin 85 mg/m2 IV prior to leucovorin day 1 stomatitis, peripheral neurotoxicity, neurotoxicity compared to FOLFIRI;</p>
+<p>thrombocytopenia often used in medically fit individuals</p>
+<p>Leu fl c u o o v r o o r u in ra 4 c 0 il 0 mg/m2 IV day 1 prior to Bev th ac ro iz m um bo a s b is : , h p y r p o e te rt i e n n u s ri i a on, w pa it ll h ia d te iff s u y s m e p a t g o g m re s s a si n v d e a d s is p e o as te e n t t o ia l</p>
+<p>Fluorouracil 1200 mg/m2/day × 2 days CIV (total conversion therapy</p>
+<p>2400 mg/m2 over 48 hours)b</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>± Bevacizumab 5 mg/kg IV day 1 before</p>
+<h2>FOLFOXIRI</h2>
+<p>Repeat cycle every 2 weeks (Continued )</p>
+<p>CH61.indd</p>
+<p>705</p>
+<p>20-11-2020</p>
+<p>09:37:35</p>
+<div class="table-container"><table><tr><th>Capecitabine ± bevacizumab</th><th>Capecitabine 850–1250 mg/m2 orally twice a day,
+days 1–14
+± Bevacizumab 7.5 mg/kg IV day 1
+Repeat cycle every 3 weeks</th><th>Capecitabine: hand–foot syndrome,
+diarrhea, hyperbilirubinemia
+Bevacizumab: hypertension,
+thrombosis, proteinuria</th><th>May be preferred in those without a port
+or limited venous access; patient must
+be able to be adherent and report side
+effects in a timely fashion</th></tr><tr><td>FOLFOXIRI ± bevacizumab</td><td>Irinotecan 165 mg/m2 IV day 1 prior to oxaliplatin
+Oxaliplatin 85 mg/m2 IV prior to leucovorin day 1
+Leucovorin 400 mg/m2 IV day 1 prior to
+fluorouracil
+Fluorouracil 1200 mg/m2/day × 2 days CIV (total
+2400 mg/m2 over 48 hours)b
+Repeat cycle every 2 weeks
+± Bevacizumab 5 mg/kg IV day 1 before
+FOLFOXIRI
+Repeat cycle every 2 weeks</td><td>FOLFOXFIRI: neutropenia, diarrhea,
+stomatitis, peripheral neurotoxicity,
+thrombocytopenia
+Bevacizumab: hypertension,
+thrombosis, proteinuria</td><td>More neutropenia and peripheral
+neurotoxicity compared to FOLFIRI;
+often used in medically fit individuals
+with diffuse aggressive disease to
+palliate symptoms and as potential
+conversion therapy
+(Continued )</td></tr></table></div><h2>706 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 61-2 Initial Chemotherapeutic Regimens for Metastatic Colorectal Cancera (Continued)</p>
+<p>Regimen Agents Major Dose-Limiting Toxicities Comments</p>
+<p>Patients Appropriate for Intensive Therapy with RAS or BRAF Wild-Type and Left-Sided Tumors</p>
+<p>FOLFOX + cetuximab or FOLFOX regimen + cetuximab (400 mg/m2 IV FOLFOX: sensory neuropathy, Only RAS wild-type tumor</p>
+<p>panitumumab loading dose, then cetuximab 250 mg/m2 IV neutropenia</p>
+<p>weekly thereafter OR cetuximab 500 mg/m2 IV Cetuximab: papulopustular</p>
+<p>every 2 weeks) IV before FOLFOX and follicular rash, asthenia,</p>
+<p>OR constipation, diarrhea, allergic</p>
+<p>reactions, hypomagnesemia</p>
+<p>FOLFOX regimen + panitumumab 6 mg/kg IV</p>
+<p>day 1 before FOLFOX Panitumumab: rash, diarrhea,</p>
+<p>hypomagnesemia</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>FOLFIRI + cetuximab or FOLFIRI + cetuximab (400 mg/m2 IV loading FOLFIRI: diarrhea, mucositis, Only RAS wild-type tumor; preferred for</p>
+<p>panitumumab dose, then cetuximab 250 mg/m2 IV weekly neutropenia patients with preexisting neuropathy</p>
+<p>thereafter OR cetuximab 500 mg/m2 IV every Cetuximab: papulopustular or those in which neuropathy may be</p>
+<p>2 weeks) IV before FOLFIRI and follicular rash, asthenia, debilitating to their line of work (eg,</p>
+<p>OR constipation, diarrhea, allergic musician)</p>
+<p>reactions, hypomagnesemia</p>
+<p>FOLFIRI + panitumumab 6 mg/kg IV day 1 before</p>
+<p>FOLFIRI Panitumumab: rash, diarrhea,</p>
+<p>hypomagnesemia</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>CH61.indd</p>
+<p>706</p>
+<p>20-11-2020</p>
+<p>09:37:35</p>
+<div class="table-container"><table><tr><th>Regimen</th><th>Agents</th><th>Major Dose-Limiting Toxicities</th><th>Comments</th></tr><tr><td>Patients Appropriate for Intensive Therapy with RAS or BRAF Wild-Type and Left-Sided Tumors</td><td></td><td></td><td></td></tr><tr><td>FOLFOX + cetuximab or
+panitumumab</td><td>FOLFOX regimen + cetuximab (400 mg/m2 IV
+loading dose, then cetuximab 250 mg/m2 IV
+weekly thereafter OR cetuximab 500 mg/m2 IV
+every 2 weeks) IV before FOLFOX
+OR
+FOLFOX regimen + panitumumab 6 mg/kg IV
+day 1 before FOLFOX
+Repeat cycle every 2 weeks</td><td>FOLFOX: sensory neuropathy,
+neutropenia
+Cetuximab: papulopustular
+and follicular rash, asthenia,
+constipation, diarrhea, allergic
+reactions, hypomagnesemia
+Panitumumab: rash, diarrhea,
+hypomagnesemia</td><td>Only RAS wild-type tumor</td></tr><tr><td>FOLFIRI + cetuximab or
+panitumumab</td><td>FOLFIRI + cetuximab (400 mg/m2 IV loading
+dose, then cetuximab 250 mg/m2 IV weekly
+thereafter OR cetuximab 500 mg/m2 IV every
+2 weeks) IV before FOLFIRI
+OR
+FOLFIRI + panitumumab 6 mg/kg IV day 1 before
+FOLFIRI
+Repeat cycle every 2 weeks</td><td>FOLFIRI: diarrhea, mucositis,
+neutropenia
+Cetuximab: papulopustular
+and follicular rash, asthenia,
+constipation, diarrhea, allergic
+reactions, hypomagnesemia
+Panitumumab: rash, diarrhea,
+hypomagnesemia</td><td>Only RAS wild-type tumor; preferred for
+patients with preexisting neuropathy
+or those in which neuropathy may be
+debilitating to their line of work (eg,
+musician)</td></tr></table></div><p>707</p>
+<p>Colorectal</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>61</p>
+<p>Patients NOT Appropriate for Intensive Therapy with RAS Mutations</p>
+<p>Infusional fluorouracil + Fluorouracil 400 mg/m2 IV bolus, after leucovorin Infusional fluorouracil/leucovorin: Infusional fluorouracil/leucovorin regimen</p>
+<p>leucovorin ± bevacizumab on day 1, then 1200 mg/m2/day × 2 days CIV neutropenia, diarrhea preferred to bolus fluorouracil regimen</p>
+<p>(total 2400 mg/m2 over 46–48 hours) Bevacizumab: hypertension, bleeding,</p>
+<p>Repeat cycle every 2 weeks proteinuria</p>
+<p>± Bevacizumab 5 mg/kg IV day 1 prior to</p>
+<p>fluorouracil and leucovorin</p>
+<p>Repeat cycle every 2 weeks</p>
+<p>Capecitabine ± bevacizumab Capecitabine 850–1250 mg/m2 orally twice a day, Capecitabine: hand–foot syndrome,</p>
+<p>days 1–14 diarrhea, hyperbilirubinemia</p>
+<p>± Bevacizumab 7.5 mg/kg IV day 1 Bevacizumab: hypertension,</p>
+<p>Repeat cycle every 3 weeks thrombosis, proteinuria</p>
+<p>Patients NOT Appropriate for Intensive Therapy with RAS or BRAF Wild-Type and Left-Sided Tumors</p>
+<p>Cetuximabc Cetuximab 400 mg/m2 IV loading dose, then Papulopustular and follicular rash, Only RAS wild-type tumor</p>
+<p>cetuximab 250 mg/m2 IV weekly thereafter asthenia, constipation, diarrhea,</p>
+<p>OR allergic reactions, hypomagnesemia</p>
+<p>Cetuximab 500 mg/m2 IV every 2 weeks</p>
+<p>Panitumumabc 6 mg/kg IV over 60 minutes every 2 weeks Rash, hypomagnesemia, rare allergic Only RAS wild-type tumor</p>
+<p>reactions</p>
+<p>Patients NOT Appropriate for Intensive Therapy with dMMR or MSI-H</p>
+<p>Nivolumab 3 mg/kg IV every 2 weeks or 240 mg Immune-mediated side effects Only in dMMR or MSI-H tumors. Patients</p>
+<p>IV every 2 weeksd (most common: skin, liver, kidney, should be closely monitored for</p>
+<p>gastrointestinal tract, lung, and side effects and report any side</p>
+<p>endocrine systems) effects immediately as interruption</p>
+<p>of treatment or initiation of</p>
+<p>corticosteroids may be needed</p>
+<p>(Continued )</p>
+<p>CH61.indd</p>
+<p>707</p>
+<p>20-11-2020</p>
+<p>09:37:35</p>
+<div class="table-container"><table><tr><th>Infusional fluorouracil +
+leucovorin ± bevacizumab</th><th>Fluorouracil 400 mg/m2 IV bolus, after leucovorin
+on day 1, then 1200 mg/m2/day × 2 days CIV
+(total 2400 mg/m2 over 46–48 hours)
+Repeat cycle every 2 weeks
+± Bevacizumab 5 mg/kg IV day 1 prior to
+fluorouracil and leucovorin
+Repeat cycle every 2 weeks</th><th>Infusional fluorouracil/leucovorin:
+neutropenia, diarrhea
+Bevacizumab: hypertension, bleeding,
+proteinuria</th><th>Infusional fluorouracil/leucovorin regimen
+preferred to bolus fluorouracil regimen</th></tr><tr><td>Capecitabine ± bevacizumab</td><td>Capecitabine 850–1250 mg/m2 orally twice a day,
+days 1–14
+± Bevacizumab 7.5 mg/kg IV day 1
+Repeat cycle every 3 weeks</td><td>Capecitabine: hand–foot syndrome,
+diarrhea, hyperbilirubinemia
+Bevacizumab: hypertension,
+thrombosis, proteinuria</td><td></td></tr><tr><td>Patients NOT Appropriate for Intensive Therapy with RAS or BRAF Wild-Type and Left-Sided Tumors</td><td></td><td></td><td></td></tr><tr><td>Cetuximabc</td><td>Cetuximab 400 mg/m2 IV loading dose, then
+cetuximab 250 mg/m2 IV weekly thereafter
+OR
+Cetuximab 500 mg/m2 IV every 2 weeks</td><td>Papulopustular and follicular rash,
+asthenia, constipation, diarrhea,
+allergic reactions, hypomagnesemia</td><td>Only RAS wild-type tumor</td></tr><tr><td>Panitumumabc</td><td>6 mg/kg IV over 60 minutes every 2 weeks</td><td>Rash, hypomagnesemia, rare allergic
+reactions</td><td>Only RAS wild-type tumor</td></tr><tr><td>Patients NOT Appropriate for Intensive Therapy with dMMR or MSI-H</td><td></td><td></td><td></td></tr><tr><td>Nivolumab</td><td>3 mg/kg IV every 2 weeks or 240 mg
+IV every 2 weeksd</td><td>Immune-mediated side effects
+(most common: skin, liver, kidney,
+gastrointestinal tract, lung, and
+endocrine systems)</td><td>Only in dMMR or MSI-H tumors. Patients
+should be closely monitored for
+side effects and report any side
+effects immediately as interruption
+of treatment or initiation of
+corticosteroids may be needed
+(Continued )</td></tr></table></div><h2>708 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 61-2 Initial Chemotherapeutic Regimens for Metastatic Colorectal Cancera (Continued)</p>
+<p>Regimen Agents Major Dose-Limiting Toxicities Comments</p>
+<p>Pembrolizumab 2 mg/kg IV every 2 weeks or 200 mg Immune-mediated side effects Only in dMMR or MSI-H tumors. Patients</p>
+<p>IV every 3 weeksd (most common: skin, liver, kidney, should be closely monitored for</p>
+<p>gastrointestinal tract, lung, and side effects and report any side</p>
+<p>endocrine systems) effects immediately as interruption</p>
+<p>of treatment or initiation of</p>
+<p>corticosteroids may be needed</p>
+<p>Nivolumab + ipilimumabc Nivolumab 3 mg/kg IV over 30 minutes and Immune-mediated side effects Only in dMMR or MSI-H tumors. Patients</p>
+<p>ipilimumab 1 mg/kg IV over 30 minutes every (most common: skin, liver, kidney, should be closely monitored for</p>
+<p>3 weeks × 4 doses, then nivolumab 3 mg/kg IV gastrointestinal tract, lung, and side effects and report any side</p>
+<p>or nivolumab 240 mg IV every 2 weeksd endocrine systems) effects immediately as interruption</p>
+<p>of treatment or initiation of</p>
+<p>corticosteroids may be needed</p>
+<p>aNational Comprehensive Cancer Network (NCCN) Guideline recommendations for initial therapy. All recommendations are Category 2A unless otherwise noted. Category 2A: based upon</p>
+<p>lower-evidence, there is uniform NCCN consensus that the intervention is appropriate.</p>
+<p>bOriginal dosing was 1600 mg/m2/day but it is recommended that US patients use this dose as they don’t tolerate fluorouracil as well.</p>
+<p>cNCCN Category 2B: based upon lower-evidence, there is NCCN consensus that the intervention is appropriate.</p>
+<p>dFlat dosing is preferred.</p>
+<p>CH61.indd</p>
+<p>708</p>
+<p>20-11-2020</p>
+<p>09:37:35</p>
+<div class="table-container"><table><tr><th>TABLE 61-2 Initial Chemotherapeutic Regimens for Metastatic Colorectal Cancera (Continued)</th><th></th><th></th><th></th></tr><tr><td>Regimen</td><td>Agents</td><td>Major Dose-Limiting Toxicities</td><td>Comments</td></tr><tr><td>Pembrolizumab</td><td>2 mg/kg IV every 2 weeks or 200 mg
+IV every 3 weeksd</td><td>Immune-mediated side effects
+(most common: skin, liver, kidney,
+gastrointestinal tract, lung, and
+endocrine systems)</td><td>Only in dMMR or MSI-H tumors. Patients
+should be closely monitored for
+side effects and report any side
+effects immediately as interruption
+of treatment or initiation of
+corticosteroids may be needed</td></tr><tr><td>Nivolumab + ipilimumabc</td><td>Nivolumab 3 mg/kg IV over 30 minutes and
+ipilimumab 1 mg/kg IV over 30 minutes every
+3 weeks × 4 doses, then nivolumab 3 mg/kg IV
+or nivolumab 240 mg IV every 2 weeksd</td><td>Immune-mediated side effects
+(most common: skin, liver, kidney,
+gastrointestinal tract, lung, and
+endocrine systems)</td><td>Only in dMMR or MSI-H tumors. Patients
+should be closely monitored for
+side effects and report any side
+effects immediately as interruption
+of treatment or initiation of
+corticosteroids may be needed</td></tr></table></div><h2>Colorectal Cancer | CHAPTER 61</h2>
+<p>TABLE 61-3 Second-line and Salvage Chemotherapy Regimens for Metastatic</p>
+<p>Colorectal Cancera (Continued )</p>
+<p>Disease Progression with</p>
+<p>First-Line Regimen Comments</p>
+<p>First-Line Therapy: Oxaliplatin-Based Regimen +/- Bevacizumab (ie, FOLFOX, CapeOX)</p>
+<p>Second-line options</p>
+<p>1. FOLFIRI or irinotecan Use with caution in patients with elevated bilirubin</p>
+<p>2. FOLFIRI + bevacizumab or Use with caution in patients with elevated bilirubin;</p>
+<p>ziv-afilbercept or ramucirumab bevacizumab is preferred antiangiogenic agent</p>
+<p>based on toxicity and cost</p>
+<p>3. Irinotecan + bevacizumab or Use with caution in patients with elevated bilirubin;</p>
+<p>ziv-afilbercept or ramucirumab bevacizumab is preferred antiangiogenic agent</p>
+<p>based on toxicity and cost</p>
+<p>4. FOLFIRI + cetuximab or Only if RAS wild-type and BRAF wild-type; if</p>
+<p>panitumumab neither previously given; use with caution in</p>
+<p>patients with elevated bilirubin</p>
+<p>5. Irinotecan ± cetuximab or Only if RAS wild-type and BRAF wild-type; if</p>
+<p>panitumumab neither previously given; use with caution in</p>
+<p>patients with elevated bilirubin</p>
+<p>6. Irinotecan ± (cetuximab or Only if RAS wild-type and BRAF V600E mutation</p>
+<p>panitumumab) + vemurafenib positive; use with caution in patients with</p>
+<p>elevated bilirubin</p>
+<p>7. Dabrafenib + trametinib + Only if BRAF V600E mutation positive</p>
+<p>(cetuximab or panitumumab)</p>
+<p>8. Encorafenib + binimetinib + Only if BRAF V600E mutation positive</p>
+<p>(cetuximab or panitumumab)</p>
+<p>9. Nivolumab ± ipilimumab Only if dMMR/MSI-H</p>
+<p>10. Pembrolizumab Only if dMMR/MSI-H</p>
+<p>11. Trastuzumab + (pertuzumab or Only if HER2-amplified and RAS wild-type</p>
+<p>lapatinib)</p>
+<p>First-Line Therapy: Irinotecan-Based Regimen +/- Bevacizumab (ie, FOLFIRI)</p>
+<p>Second-line options</p>
+<p>1. FOLFOX or CapeOx ± bevacizumab Bevacizumab FDA-approved to continue with</p>
+<p>second-line options</p>
+<p>2. FOLFOX + cetuximab or Only if RAS wild-type and BRAF wild-type</p>
+<p>panitumumab</p>
+<p>3. Irinotecan + cetuximab or Only if RAS wild-type and BRAF wild-type; if</p>
+<p>panitumumab neither previously given; use with caution in</p>
+<p>patients with elevated bilirubin</p>
+<p>4. Irinotecan + (cetuximab or Only if RAS wild-type and BRAF V600E mutation</p>
+<p>panitumumab) + vemurafenib positive; use with caution in patients with</p>
+<p>elevated bilirubin</p>
+<p>5. Dabrafenib + trametinib + Only if BRAF V600E mutation positive</p>
+<p>(cetuximab or panitumumab)</p>
+<p>6. Encorafenib + binimetinib + Only if BRAF V600E mutation positive</p>
+<p>(cetuximab or panitumumab)</p>
+<p>7. Nivolumab ± ipilimumab Only if dMMR/MSI-H</p>
+<p>8. Pembrolizumab Only if dMMR/MSI-H</p>
+<p>(Continued )</p>
+<p>709</p>
+<p>CH61.indd 709 20-11-2020 09:37:36</p>
+<div class="table-container"><table><tr><th>TABLE 61-3 Second-line and Salvage Chemotherapy Regimens for Metastatic
+Colorectal Cancera (Continued )</th><th></th></tr><tr><td>Disease Progression with
+First-Line Regimen</td><td>Comments</td></tr><tr><td>First-Line Therapy: Oxaliplatin-Based Regimen +/- Bevacizumab (ie, FOLFOX, CapeOX)</td><td></td></tr><tr><td>Second-line options</td><td></td></tr><tr><td>1. FOLFIRI or irinotecan</td><td>Use with caution in patients with elevated bilirubin</td></tr><tr><td>2. FOLFIRI + bevacizumab or
+ziv-afilbercept or ramucirumab</td><td>Use with caution in patients with elevated bilirubin;
+bevacizumab is preferred antiangiogenic agent
+based on toxicity and cost</td></tr><tr><td>3. Irinotecan + bevacizumab or
+ziv-afilbercept or ramucirumab</td><td>Use with caution in patients with elevated bilirubin;
+bevacizumab is preferred antiangiogenic agent
+based on toxicity and cost</td></tr><tr><td>4. FOLFIRI + cetuximab or
+panitumumab</td><td>Only if RAS wild-type and BRAF wild-type; if
+neither previously given; use with caution in
+patients with elevated bilirubin</td></tr><tr><td>5. Irinotecan ± cetuximab or
+panitumumab</td><td>Only if RAS wild-type and BRAF wild-type; if
+neither previously given; use with caution in
+patients with elevated bilirubin</td></tr><tr><td>6. Irinotecan ± (cetuximab or
+panitumumab) + vemurafenib</td><td>Only if RAS wild-type and BRAF V600E mutation
+positive; use with caution in patients with
+elevated bilirubin</td></tr><tr><td>7. Dabrafenib + trametinib +
+(cetuximab or panitumumab)</td><td>Only if BRAF V600E mutation positive</td></tr><tr><td>8. Encorafenib + binimetinib +
+(cetuximab or panitumumab)</td><td>Only if BRAF V600E mutation positive</td></tr><tr><td>9. Nivolumab ± ipilimumab</td><td>Only if dMMR/MSI-H</td></tr><tr><td>10. Pembrolizumab</td><td>Only if dMMR/MSI-H</td></tr><tr><td>11. Trastuzumab + (pertuzumab or
+lapatinib)</td><td>Only if HER2-amplified and RAS wild-type</td></tr><tr><td>First-Line Therapy: Irinotecan-Based Regimen +/- Bevacizumab (ie, FOLFIRI)</td><td></td></tr><tr><td>Second-line options</td><td></td></tr><tr><td>1. FOLFOX or CapeOx ± bevacizumab</td><td>Bevacizumab FDA-approved to continue with
+second-line options</td></tr><tr><td>2. FOLFOX + cetuximab or
+panitumumab</td><td>Only if RAS wild-type and BRAF wild-type</td></tr><tr><td>3. Irinotecan + cetuximab or
+panitumumab</td><td>Only if RAS wild-type and BRAF wild-type; if
+neither previously given; use with caution in
+patients with elevated bilirubin</td></tr><tr><td>4. Irinotecan + (cetuximab or
+panitumumab) + vemurafenib</td><td>Only if RAS wild-type and BRAF V600E mutation
+positive; use with caution in patients with
+elevated bilirubin</td></tr><tr><td>5. Dabrafenib + trametinib +
+(cetuximab or panitumumab)</td><td>Only if BRAF V600E mutation positive</td></tr><tr><td>6. Encorafenib + binimetinib +
+(cetuximab or panitumumab)</td><td>Only if BRAF V600E mutation positive</td></tr><tr><td>7. Nivolumab ± ipilimumab</td><td>Only if dMMR/MSI-H</td></tr><tr><td>8. Pembrolizumab</td><td>Only if dMMR/MSI-H
+(Continued )</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 61-3 Second-line and Salvage Chemotherapy Regimens for Metastatic</p>
+<p>Colorectal Cancera (Continued )</p>
+<p>Disease Progression with</p>
+<p>First-Line Regimen Comments</p>
+<p>9. Trastuzumab + (pertuzumab or Only if HER2-amplified and RAS wild-type</p>
+<p>lapatinib)</p>
+<p>First-Line Therapy: Fluorouracil-Based Regimen +/- Bevacizumab (ie, Fluorouracil/</p>
+<p>Leucovorin, Capecitabine)</p>
+<p>Second-line options</p>
+<p>1. FOLFOX or CapeOx ± bevacizumab</p>
+<p>2. FOLFIRI or irinotecan ± Bevacizumab has least toxicity and lower cost of</p>
+<p>bevacizumab or ziv-afilbercept or antiangiogenic agents</p>
+<p>ramucirumab</p>
+<p>3. Irinotecan + oxaliplatin (IROX) ± Use with caution in patients with elevated bilirubin</p>
+<p>bevacizumab</p>
+<p>4. Nivolumab ± ipilimumab Only if dMMR/MSI-H</p>
+<p>5. Pembrolizumab Only if dMMR/MSI-H</p>
+<p>6. Trastuzumab + (pertuzumab or Only if HER2-amplified and RAS wild-type</p>
+<p>lapatinib)</p>
+<p>Therapy After Second Progression or Third Progression</p>
+<p>1. Regorafenib Used after progressed through all available</p>
+<p>regimens</p>
+<p>2. Irinotecan ± cetuximab or Only if RAS wild-type and neither previously given;</p>
+<p>panitumumab use with caution in patients with elevated</p>
+<p>bilirubin</p>
+<p>3. Trifluridine/Tipiracil Used after progressed through all available</p>
+<p>regimens</p>
+<p>4. Nivolumab ± ipilimumab Only if dMMR/MSI-H and not previously given</p>
+<p>5. Pembrolizumab Only if dMMR/MSI-H and not previously given</p>
+<p>6. Trastuzumab + (pertuzumab or Only if HER2-amplified and RAS wild-type</p>
+<p>lapatinib)</p>
+<p>7. Clinical trial If available and only if patient eligible</p>
+<p>8. Best supportive care Appropriate for patients who do not want to pursue</p>
+<p>treatment or quality of life is expected to decrease</p>
+<p>aNational Comprehensive Cancer Network (NCCN) Guideline recommendations for initial therapy.</p>
+<p>All recommendations are Category 2A unless otherwise noted. Category 2A: based upon</p>
+<p>lower-evidence, there is uniform NCCN consensus that the intervention is appropriate.</p>
+<p>CapeOx, capecitabine plus oxaliplatin; dMMR, DNA mismatch repair deficiency; FOLFIRI, fluorouracil</p>
+<p>plus leucovorin plus irinotecan; FOLFOX, fluorouracil plus leucovorin plus oxaliplatin; MSI-H, high</p>
+<p>microsatellite instability.</p>
+<li>HER2, a member of the same kinase family as EGFR, is rarely overexpressed in CRC;</li>
+<p>however, it is more common in those with RAS and BRAF wild-type tumors. HER2</p>
+<p>inhibitor therapy can be an option for those with HER2 overexpression when other</p>
+<p>options have failed.</p>
+<li>Pembrolizumab, a humanized, IgG4 monoclonal antibody that binds to PD-L1</li>
+<p>with high affinity, is effective in MCRC patients with dMMR who have progressed</p>
+<p>through 2–4 other regimens. Nivolumab, another humanized IgG4 monoclonal anti-</p>
+<p>body PD-1 inhibitor, has also been evaluated with or without ipilimumab in patients</p>
+<p>with MCRC who have dMMR/MSI-H tumors.</p>
+<p>710</p>
+<p>CH61.indd 710 20-11-2020 09:37:36</p>
+<div class="table-container"><table><tr><th>TABLE 61-3 Second-line and Salvage Chemotherapy Regimens for Metastatic
+Colorectal Cancera (Continued )</th><th></th></tr><tr><td>Disease Progression with
+First-Line Regimen</td><td>Comments</td></tr><tr><td>9. Trastuzumab + (pertuzumab or
+lapatinib)</td><td>Only if HER2-amplified and RAS wild-type</td></tr><tr><td>First-Line Therapy: Fluorouracil-Based Regimen +/- Bevacizumab (ie, Fluorouracil/
+Leucovorin, Capecitabine)</td><td></td></tr><tr><td>Second-line options</td><td></td></tr><tr><td>1. FOLFOX or CapeOx ± bevacizumab</td><td></td></tr><tr><td>2. FOLFIRI or irinotecan ±
+bevacizumab or ziv-afilbercept or
+ramucirumab</td><td>Bevacizumab has least toxicity and lower cost of
+antiangiogenic agents</td></tr><tr><td>3. Irinotecan + oxaliplatin (IROX) ±
+bevacizumab</td><td>Use with caution in patients with elevated bilirubin</td></tr><tr><td>4. Nivolumab ± ipilimumab</td><td>Only if dMMR/MSI-H</td></tr><tr><td>5. Pembrolizumab</td><td>Only if dMMR/MSI-H</td></tr><tr><td>6. Trastuzumab + (pertuzumab or
+lapatinib)</td><td>Only if HER2-amplified and RAS wild-type</td></tr><tr><td>Therapy After Second Progression or Third Progression</td><td></td></tr><tr><td>1. Regorafenib</td><td>Used after progressed through all available
+regimens</td></tr><tr><td>2. Irinotecan ± cetuximab or
+panitumumab</td><td>Only if RAS wild-type and neither previously given;
+use with caution in patients with elevated
+bilirubin</td></tr><tr><td>3. Trifluridine/Tipiracil</td><td>Used after progressed through all available
+regimens</td></tr><tr><td>4. Nivolumab ± ipilimumab</td><td>Only if dMMR/MSI-H and not previously given</td></tr><tr><td>5. Pembrolizumab</td><td>Only if dMMR/MSI-H and not previously given</td></tr><tr><td>6. Trastuzumab + (pertuzumab or
+lapatinib)</td><td>Only if HER2-amplified and RAS wild-type</td></tr><tr><td>7. Clinical trial</td><td>If available and only if patient eligible</td></tr><tr><td>8. Best supportive care</td><td>Appropriate for patients who do not want to pursue
+treatment or quality of life is expected to decrease</td></tr></table></div><h2>Colorectal Cancer | CHAPTER 61</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Goals of monitoring are to evaluate benefit of treatment and detect recurrence.</li>
+<li>Patients who undergo curative surgical resection, with or without adjuvant therapy,</li>
+<p>require routine follow-up. Consult practice guidelines for specifics.</p>
+<li>Evaluate patients for anticipated side effects such as loose stools or diarrhea, nausea</li>
+<p>or vomiting, mouth sores, fatigue, and fever.</p>
+<li>Patients should be closely monitored for side effects that require prompt interven-</li>
+<p>tion, such as irinotecan-induced diarrhea, bevacizumab-induced GI perforation,</p>
+<p>hypertension and proteinuria, oxaliplatin-induced neuropathy, and cetuximab- and</p>
+<p>panitumumab-induced skin rash.</p>
+<li>Less than one-half of patients develop symptoms of recurrence, such as pain syn-</li>
+<p>dromes, changes in bowel habits, rectal or vaginal bleeding, pelvic masses, anorexia,</p>
+<p>and weight loss. Recurrences in asymptomatic patients can be detected because of</p>
+<p>increased serum CEA levels.</p>
+<li>Monitor quality-of-life indices, especially in patients with metastatic disease.</li>
+<p>See Chapter 147, Colorectal Cancer, authored by Lisa M. Holle, Jessica M. Clement, and</p>
+<p>Lisa E. Davis, for a more detailed discussion of this topic.</p>
+<p>711</p>
+<p>CH61.indd 711 20-11-2020 09:37:36</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46. Sepsis and Septic Shock</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>46. Sepsis and Septic Shock</h1>
+        </header>
+        <main>
+            <p>482</p>
+<h2>RETPAHC</h2>
+<p>46</p>
+<p>Sepsis and Septic Shock</p>
+<li>The older and more recent definitions of terms related to sepsis are given in</li>
+<p>Table 46-1. Sepsis-3 redefined sepsis by combining sepsis and severe sepsis from the</p>
+<p>Sepsis-2 guideline.</p>
+<h2>ETIOLOGY AND PATHOPHYSIOLOGY</h2>
+<li>Patients at risk for infection who are predisposed to sepsis include advanced or very</li>
+<p>young age; preexisting conditions including heart failure, diabetes, chronic obstruc-</p>
+<p>tive pulmonary disease, cirrhosis, alcohol dependence, and end-stage renal disease;</p>
+<p>and other immunosuppressive diseases such as neoplasm and human immunodefi-</p>
+<p>ciency virus (HIV) disease.</p>
+<li>The most common anatomic source of infection that leads to sepsis is the lung</li>
+<p>(40%–42%), followed by intra-abdominal space (31%–34%) and genitourinary</p>
+<p>tract (11%–15%). The microorganisms isolated from blood cultures of patients</p>
+<p>with sepsis or septic shock include gram-negative organisms in 44%–59% of</p>
+<p>patients, gram-positive bacteria in 37%–52%, anaerobic organisms in 5%, and</p>
+<p>fungi in 4%–10%.</p>
+<li>Escherichia coli is by far the most commonly isolated gram-negative microorganism</li>
+<p>in sepsis (55%–60%), followed by Klebsiella species, Proteus species, Enterobacter spe-</p>
+<p>cies, and Pseudomonas aeruginosa. Mortality increases significantly with increasing</p>
+<p>severity of sepsis (3.5% for sepsis, 9.9% in severe sepsis, and 29% in septic shock),</p>
+<p>especially in presence of P. aeruginosa. The most common gram-positive organisms</p>
+<p>are Staphylococcus aureus, followed by coagulase-negative Staphylococci, Enterococcus</p>
+<p>species, and Streptococcus pneumoniae.</p>
+<li>Candida species (particularly Candida albicans) are common fungal etiologic agents of</li>
+<p>bloodstream infections. The 30-day mortality rate for sepsis due to candidemia is 54%.</p>
+<li>The pathophysiologic focus of gram-negative sepsis has been on the lipopolysac-</li>
+<p>charide (endotoxin) component of the gram-negative cell wall membrane. Lipid A is</p>
+<p>TABLE 46-1 Comparison of Definitions from Sepsis-2 and Sepsis-3 Guidelines</p>
+<p>Sepsis-2 Guideline (2012) Sepsis-3 Guideline (2016)</p>
+<p>Systemic inflammatory response syndrome Sepsis: Life-threatening organ</p>
+<pre><code>(SIRS) to infectious or noninfectious insults: dysfunction caused by a dysregulated</code></pre>
+<p>Two or more of the following: host response to infection</p>
+<li>Temperature >38°C or <36°C • Acute change in total SOFA score</li>
+<li>Heart rate >90 beats/minute ≥2 points</li>
+<li>Respiratory rate >20 breaths/minute Septic shock: Sepsis + persistent</li>
+<li>WBC >12,000/mm3 (12 × 109/L) or <4000 hypotension requiring vasopressor</li>
+<p>cells/mm3 (4 × 109/L) or &gt;10% (0.10) immature use and serum lactate &gt;2 mmol/L</p>
+<p>bands despite adequate fluid resuscitation</p>
+<p>Sepsis: SIRS + probable or documented</p>
+<p>infection</p>
+<p>Severe sepsis: Sepsis + one or more organ</p>
+<pre><code>dysfunction or hypoperfusion</code></pre>
+<p>Septic shock: Sepsis + refractory hypotension</p>
+<p>despite fluid resuscitation (30 mL/kg) or</p>
+<p>serum lactate &gt;1 mmol/L</p>
+<p>SOFA, sequential organ failure assessment; WBC, white blood cell.</p>
+<h2>CH46.INDD 482 19-11-2020 16:06:42</h2>
+<div class="table-container"><table><tr><th>TABLE 46-1 Comparison of Definitions from Sepsis-2 and Sepsis-3 Guidelines</th><th></th></tr><tr><td>Sepsis-2 Guideline (2012)</td><td>Sepsis-3 Guideline (2016)</td></tr><tr><td>Systemic inflammatory response syndrome
+(SIRS) to infectious or noninfectious insults:
+Two or more of the following:
+Temperature &gt;38°C or &lt;36°C
+Heart rate &gt;90 beats/minute
+Respiratory rate &gt;20 breaths/minute
+WBC &gt;12,000/mm3 (12 × 109/L) or &lt;4000
+cells/mm3 (4 × 109/L) or &gt;10% (0.10) immature
+bands
+Sepsis: SIRS + probable or documented
+infection
+Severe sepsis: Sepsis + one or more organ
+dysfunction or hypoperfusion
+Septic shock: Sepsis + refractory hypotension
+despite fluid resuscitation (30 mL/kg) or
+serum lactate &gt;1 mmol/L</td><td>Sepsis: Life-threatening organ
+dysfunction caused by a dysregulated
+host response to infection
+• Acute change in total SOFA score
+≥2 points
+Septic shock: Sepsis + persistent
+hypotension requiring vasopressor
+use and serum lactate &gt;2 mmol/L
+despite adequate fluid resuscitation</td></tr></table></div><h2>Sepsis and Septic Shock | CHAPTER 46</h2>
+<p>a part of the endotoxin molecule from the gram-negative bacterial cell wall that is</p>
+<p>highly immunoreactive and is responsible for most of the toxic effects. In gram-</p>
+<p>positive sepsis, the exotoxin peptidoglycan on the cell wall surface appears to exhibit</p>
+<p>proinflammatory activity.</p>
+<li>Sepsis involves a complex interaction of proinflammatory (eg, tumor necrosis</li>
+<p>factor-α [TNF-α]; interleukin [IL]-1, IL-6, IL-12) and anti-inflammatory mediators</p>
+<p>(eg, IL-1 receptor antagonist, IL-4, and IL-10).</p>
+<li>TNF-α concentrations are elevated early in the inflammatory response during sepsis.</li>
+<p>TNF-α also stimulates release of cyclooxygenase-derived arachidonic acid metabolites</p>
+<p>(thromboxane A2 and prostaglandins) that contribute to vascular endothelial damage.</p>
+<li>A primary mechanism of injury with sepsis is through endothelial cells. With inflam-</li>
+<p>mation, endothelial cells allow circulating cells (eg, granulocytes) and plasma con-</p>
+<p>stituents to enter inflamed tissues, which may result in organ damage.</p>
+<li>A key endogenous substance involved in inflammation of sepsis is activated p rotein C,</li>
+<p>which enhances fibrinolysis and inhibits inflammation. Levels of protein C are reduced</p>
+<p>in patients with sepsis.</p>
+<li>Shock is the most ominous complication associated with gram-negative sepsis and</li>
+<p>causes death in about one-half of patients. Another complication is disseminated</p>
+<p>intravascular coagulation (DIC). Simultaneous widespread microvascular thrombosis</p>
+<p>and profuse bleeding from various sites characterize DIC. DIC can produce acute renal</p>
+<p>failure, hemorrhagic necrosis of the gastrointestinal (GI) mucosa, liver failure, acute</p>
+<p>pancreatitis, acute respiratory distress syndrome (ARDS), and pulmonary failure.</p>
+<li>ARDS and acute kidney injury are other common complications of sepsis. ARDS can</li>
+<pre><code>result in loss of functional alveolar volume, impaired pulmonary compliance, and</code></pre>
+<p>profound hypoxemia.</p>
+<li>The hallmark of the hemodynamic effect of sepsis is the hyperdynamic state</li>
+<p>characterized by low systemic vascular resistance (SVR) and high cardiac output with</p>
+<p>tachycardia and arterial hypotension.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The clinical presentation of sepsis varies significantly depending on the site of the</li>
+<p>infection (ie, pulmonary versus urinary tract), host response to the infection based</p>
+<pre><code>on the patient’s underlying health status and risk factors, and organ dysfunction.</code></pre>
+<p>The initial presentations may include general malaise or myalgia and nonspecific</p>
+<p>signs such as fever (or hypothermia), chills, tachycardia, tachypnea, or change in</p>
+<p>mental status.</p>
+<li>Progression of uncontrolled sepsis leads to evidence of organ dysfunction, which may</li>
+<p>include oliguria, hemodynamic instability with hypotension or shock, lactic acido-</p>
+<p>sis, hyperglycemia or hypoglycemia, possibly leukopenia, DIC, thrombocytopenia,</p>
+<p>ARDS, GI hemorrhage, or coma.</p>
+<li>Sepsis-3 redefined sepsis to “life-threatening organ dysfunction caused by a dysregu-</li>
+<p>lated host response to infection.” Early recognition using a formal screening tool is</p>
+<p>critical, such as the SOFA scoring system. SOFA encompasses various organ systems</p>
+<p>such as pulmonary, hepatic, cardiovascular, renal, and neurological and gives a score</p>
+<p>ranging from 0 to 4 for each system. A SOFA score of 2 or more is associated with an</p>
+<p>increased risk of mortality by 10% in hospitalized patients with presumed infection.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The primary goals include: timely diagnosis and identification</li>
+<p>of the pathogen, prompt hemodynamic support, rapid identification of the pathogen</p>
+<p>and source control either medically and/or surgically, early initiation of appropriate</p>
+<p>broad-spectrum antimicrobial therapy, and avoidance complications such as organ</p>
+<p>failure and septic shock.</p>
+<li>Evidence-based treatment recommendations for sepsis and septic shock from the</li>
+<h2>Surviving Sepsis campaign are presented in Table 46-2.</h2>
+<p>483</p>
+<h2>CH46.INDD 483 19-11-2020 16:06:42</h2>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 46-2 Evidence-Based Treatment Recommendations and Best Practice</p>
+<p>Statements</p>
+<p>Recommendations Recommendation Grades</p>
+<p>Fluid therapy</p>
+<p>Initial resuscitation from sepsis-associated Strong recommendation, low evidence</p>
+<p>hypotension with at least 30 mL/kg of IV</p>
+<p>crystalloid fluid within 1 hour</p>
+<p>Either balanced crystalloids or saline for additional Weak recommendation, low evidence</p>
+<p>fluids guided by frequent assessment of</p>
+<p>dynamic variables</p>
+<p>Antimicrobial therapy</p>
+<p>IV broad-spectrum antibiotic within 1 hour of Strong recommendation, moderate</p>
+<p>diagnosis of sepsis and septic shock against evidence</p>
+<p>likely bacterial/fungal pathogens</p>
+<p>Reassess antibiotic therapy daily with BPS</p>
+<p>microbiology and clinical data to narrow</p>
+<p>coverage (de-escalation)</p>
+<p>Optimize dosing strategies based on BPS</p>
+<p>pharmacokinetics/pharmacodynamics</p>
+<p>parameters in patients with sepsis or septic</p>
+<p>shock</p>
+<p>Empiric combination therapy for patients with Weak recommendation, low evidence</p>
+<p>multidrug-resistant bacterial pathogens such</p>
+<p>as Acinetobacter and Pseudomonas species or</p>
+<p>septic shock</p>
+<p>Treatment duration of 7–10 days for most serious Weak recommendation, low evidence</p>
+<p>infections</p>
+<p>Vasopressors</p>
+<p>Initiate vasopressor therapy to maintain MAP Strong recommendation, moderate</p>
+<p>≥65 mm Hg evidence</p>
+<p>Norepinephrine as the first-choice vasopressor Strong recommendation, moderate</p>
+<p>evidence</p>
+<p>Add vasopressin or epinephrine to Weak recommendation, moderate</p>
+<p>norepinephrine to maintain adequate blood evidence</p>
+<p>pressure</p>
+<p>Add vasopressin to norepinephrine to decrease Weak recommendation, moderate</p>
+<p>norepinephrine dosage evidence</p>
+<p>Corticosteroids</p>
+<p>Hydrocortisone 200 mg IV per day for septic shock Weak recommendation, low evidence</p>
+<h2>only when hemodynamically unstable after</h2>
+<p>adequate fluid resuscitation and vasopressors</p>
+<p>Hydrocortisone should be tapered when Weak recommendation, low evidence</p>
+<p>vasopressors are no longer required</p>
+<p>Glucose control</p>
+<p>Use insulin dosing protocol when two Strong recommendation, high-level</p>
+<p>consecutive blood glucose levels are &gt;180 evidence</p>
+<p>mg/dL (10 mmol/L), targeting an upper blood</p>
+<p>glucose &lt;180 mg/dL (10 mmol/L)</p>
+<p>(Continued )</p>
+<p>484</p>
+<h2>CH46.INDD 484 19-11-2020 16:06:42</h2>
+<div class="table-container"><table><tr><th>TABLE 46-2 Evidence-Based Treatment Recommendations and Best Practice
+Statements</th><th></th></tr><tr><td>Recommendations</td><td>Recommendation Grades</td></tr><tr><td>Fluid therapy</td><td></td></tr><tr><td>Initial resuscitation from sepsis-associated
+hypotension with at least 30 mL/kg of IV
+crystalloid fluid within 1 hour</td><td>Strong recommendation, low evidence</td></tr><tr><td>Either balanced crystalloids or saline for additional
+fluids guided by frequent assessment of
+dynamic variables</td><td>Weak recommendation, low evidence</td></tr><tr><td>Antimicrobial therapy</td><td></td></tr><tr><td>IV broad-spectrum antibiotic within 1 hour of
+diagnosis of sepsis and septic shock against
+likely bacterial/fungal pathogens</td><td>Strong recommendation, moderate
+evidence</td></tr><tr><td>Reassess antibiotic therapy daily with
+microbiology and clinical data to narrow
+coverage (de-escalation)</td><td>BPS</td></tr><tr><td>Optimize dosing strategies based on
+pharmacokinetics/pharmacodynamics
+parameters in patients with sepsis or septic
+shock</td><td>BPS</td></tr><tr><td>Empiric combination therapy for patients with
+multidrug-resistant bacterial pathogens such
+as Acinetobacter and Pseudomonas species or
+septic shock</td><td>Weak recommendation, low evidence</td></tr><tr><td>Treatment duration of 7–10 days for most serious
+infections</td><td>Weak recommendation, low evidence</td></tr><tr><td>Vasopressors</td><td></td></tr><tr><td>Initiate vasopressor therapy to maintain MAP
+≥65 mm Hg</td><td>Strong recommendation, moderate
+evidence</td></tr><tr><td>Norepinephrine as the first-choice vasopressor</td><td>Strong recommendation, moderate
+evidence</td></tr><tr><td>Add vasopressin or epinephrine to
+norepinephrine to maintain adequate blood
+pressure</td><td>Weak recommendation, moderate
+evidence</td></tr><tr><td>Add vasopressin to norepinephrine to decrease
+norepinephrine dosage</td><td>Weak recommendation, moderate
+evidence</td></tr><tr><td>Corticosteroids</td><td></td></tr><tr><td>Hydrocortisone 200 mg IV per day for septic shock
+only when hemodynamically unstable after
+adequate fluid resuscitation and vasopressors</td><td>Weak recommendation, low evidence</td></tr><tr><td>Hydrocortisone should be tapered when
+vasopressors are no longer required</td><td>Weak recommendation, low evidence</td></tr><tr><td>Glucose control</td><td></td></tr><tr><td>Use insulin dosing protocol when two
+consecutive blood glucose levels are &gt;180
+mg/dL (10 mmol/L), targeting an upper blood
+glucose &lt;180 mg/dL (10 mmol/L)</td><td>Strong recommendation, high-level
+evidence
+(Continued )</td></tr></table></div><h2>Sepsis and Septic Shock | CHAPTER 46</h2>
+<p>TABLE 46-2 Evidence-Based Treatment Recommendations and Best Practice</p>
+<p>Statements (Continued )</p>
+<p>Recommendations Recommendation Grades</p>
+<p>Monitor blood glucose every 1–2 hours until BPS</p>
+<h2>insulin infusion rates are stable, then every</h2>
+<p>4 hours thereafter</p>
+<p>Venous thomboembolism prophylaxis</p>
+<p>Use daily low-molecular-weight heparin (LMWH) Strong recommendation, moderate</p>
+<p>over unfractionated heparin evidence</p>
+<p>Combination of LMWH and intermittent Weak recommendation, low evidence</p>
+<p>pneumatic compression, whenever possible</p>
+<p>If creatinine clearance is &lt;30 mL/min (0.5 mL/ Weak recommendation, low evidence</p>
+<p>sec), use unfractionated heparin or dalteparin</p>
+<p>Stress ulcer prophylaxis</p>
+<p>Stress ulcer prophylaxis should be given to Strong recommendation, low evidence</p>
+<p>patients who have bleeding risk factors</p>
+<p>Either proton pump inhibitors or H2 receptor Weak recommendation, low evidence</p>
+<p>blockers</p>
+<p>BPS, best practice statement; MAP, mean arterial pressure.</p>
+<h2>ANTIMICROBIAL THERAPY</h2>
+<li>Once the source of infection is identified, prompt efforts to eradicate that source</li>
+<p>should be made as progression of sepsis can occur despite rapid initial resuscitation</p>
+<p>including fluid and appropriate antimicrobials in the absence of adequate source</p>
+<p>control.</p>
+<li>The Sepsis-3 guidelines recommend administration of empiric broad-spectrum</li>
+<p>therapy with one or more IV antimicrobials within 1 hour of recognition of sepsis</p>
+<p>or septic shock to treat most likely pathogens. Rapid identification of candidemia is</p>
+<p>critical in prompt initiation of appropriate therapy.</p>
+<li>The regimen selected should be based on the type or anatomic site of infection, the</li>
+<p>most likely pathogens, acquisition of the organism from the community or healthcare</p>
+<p>institution, and the usual antibiotic susceptibility and resistance profile of the preva-</p>
+<p>lent pathogens at the institution.</p>
+<li>The antibiotics that may be used for empiric treatment of sepsis based on site of</li>
+<h2>infection are listed in Table 46-3.</h2>
+<li>Patients with nosocomial infections are at risk for sepsis with MRSA, and an anti-</li>
+<p>MRSA agent such as vancomycin should be initiated empirically in most cases.</p>
+<li>If P. aeruginosa is suspected, or with sepsis from hospital-acquired infections,</li>
+<p>an antipseudomonal cephalosporin (ceftazidime or cefepime), antipseudomonal</p>
+<p>fluoroquinolone (ciprofloxacin or levofloxacin), or an aminoglycoside should be</p>
+<p>included in the regimen.</p>
+<li>When S. aureus is likely to be methicillin-resistant, linezolid may be preferred to</li>
+<p>vancomycin because of the poor penetration of vancomycin into the lungs, as well as</p>
+<p>the worldwide emergence of glycopeptide intermediately resistant S. aureus.</p>
+<li>The average duration of antimicrobial therapy in a patient with sepsis is 7–10</li>
+<p>days in the absence of source control issues, and fungal infections can require</p>
+<p>10–14 days. The Surgical Infection Society recommends no more than 4 full</p>
+<p>days of antimicrobial therapy for patients with adequate source control and no</p>
+<p>more than 5–7 days in patients in whom a definitive source control was not</p>
+<p>performed.</p>
+<p>485</p>
+<h2>CH46.INDD 485 19-11-2020 16:06:42</h2>
+<div class="table-container"><table><tr><th>TABLE 46-2 Evidence-Based Treatment Recommendations and Best Practice
+Statements (Continued )</th><th></th></tr><tr><td>Recommendations</td><td>Recommendation Grades</td></tr><tr><td>Monitor blood glucose every 1–2 hours until
+insulin infusion rates are stable, then every
+4 hours thereafter</td><td>BPS</td></tr><tr><td>Venous thomboembolism prophylaxis</td><td></td></tr><tr><td>Use daily low-molecular-weight heparin (LMWH)
+over unfractionated heparin</td><td>Strong recommendation, moderate
+evidence</td></tr><tr><td>Combination of LMWH and intermittent
+pneumatic compression, whenever possible</td><td>Weak recommendation, low evidence</td></tr><tr><td>If creatinine clearance is &lt;30 mL/min (0.5 mL/
+sec), use unfractionated heparin or dalteparin</td><td>Weak recommendation, low evidence</td></tr><tr><td>Stress ulcer prophylaxis</td><td></td></tr><tr><td>Stress ulcer prophylaxis should be given to
+patients who have bleeding risk factors</td><td>Strong recommendation, low evidence</td></tr><tr><td>Either proton pump inhibitors or H2 receptor
+blockers</td><td>Weak recommendation, low evidence</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 46-3 Empiric Antimicrobial Regimens in Sepsis</h2>
+<p>Antimicrobial Regimen</p>
+<p>Infection (Site Community-</p>
+<p>or Type) Acquired Hospital-Acquired</p>
+<p>Urinary tract Ceftriaxone or Ceftriaxone/ceftazidime or</p>
+<p>ciprofloxacin/ ciprofloxacin/levofloxacin</p>
+<p>levofloxacin</p>
+<p>Respiratory tract Levofloxacina/ Piperacillin/tazobactam or ±Vancomycin or</p>
+<p>moxifloxacin or ceftazidime or cefepime linezolid</p>
+<p>ceftriaxone + or carbapenemb +</p>
+<p>clarithromycin/ levofloxacin/ciprofloxacin</p>
+<p>azithromycin or aminoglycoside</p>
+<p>Intra-abdominal Ertapenem or Carbapenemb or piperacillin/</p>
+<p>ciprofloxacin/ tazobactam or</p>
+<p>levofloxacin + ceftazidime/cefepime +</p>
+<p>metronidazole metronidazole</p>
+<p>or ceftriaxone +</p>
+<p>metronidazole</p>
+<p>Skin/Soft tissue Vancomycin or Vancomycin + piperacillin/</p>
+<p>linezolid or tazobactam</p>
+<p>daptomycin</p>
+<p>Catheter-related Vancomycin</p>
+<p>Unknown Piperacillin/ Carbapenemb</p>
+<p>Tazobactam or</p>
+<p>carbapenemb</p>
+<p>a750 mg once daily.</p>
+<p>bImipenem, meropenem, and doripenem.</p>
+<li>Empiric treatment of invasive candidiasis based on clinical assessment of risk</li>
+<p>factors, surrogate markers such as beta-d-glucan for invasive candidiasis, or culture</p>
+<p>includes echinocandins, triazoles, or a formulation of amphotericin B. The choice</p>
+<p>depends on the clinical status of the patient, the local susceptibility of the most</p>
+<p>prevalent Candida species, recent exposure to antifungal agents, relative drug</p>
+<pre><code>toxicity, and the presence of organ dysfunction or shock that would affect drug</code></pre>
+<p>clearance. Preferred empiric therapy for suspected invasive candidiasis in non-</p>
+<p>neutropenic patients in the ICU is an echinocandin (anidulafungin, micafungin,</p>
+<p>or caspofungin).</p>
+<li>Triazoles (fluconazole, voriconazole) are recommended in hemodynamically stable</li>
+<p>patients who have not had previous triazole exposure and not known to be colonized</p>
+<p>with azole-resistant Candida species.</p>
+<li>Broad-spectrum-antibiotics should be initiated empirically due to the serious nature</li>
+<p>of the disease, but the antimicrobial regimen should be reassessed daily based on the</p>
+<p>microbiological and clinical data.</p>
+<h2>FLUID AND HEMODYNAMIC SUPPORT</h2>
+<li>Early effective fluid resuscitation is crucial for preventing further sepsis-induced</li>
+<p>tissue hypoperfusion or septic shock. The Sepsis-3 guidelines recommend treating</p>
+<p>486</p>
+<h2>CH46.INDD 486 19-11-2020 16:06:42</h2>
+<div class="table-container"><table><tr><th>TABLE 46-3 Empiric Antimicrobial Regimens in Sepsis</th><th></th><th></th><th></th></tr><tr><td>Infection (Site
+or Type)</td><td>Antimicrobial Regimen</td><td></td><td></td></tr><tr><td></td><td>Community-
+Acquired</td><td>Hospital-Acquired</td><td></td></tr><tr><td>Urinary tract</td><td>Ceftriaxone or
+ciprofloxacin/
+levofloxacin</td><td>Ceftriaxone/ceftazidime or
+ciprofloxacin/levofloxacin</td><td></td></tr><tr><td>Respiratory tract</td><td>Levofloxacina/
+moxifloxacin or
+ceftriaxone +
+clarithromycin/
+azithromycin</td><td>Piperacillin/tazobactam or
+ceftazidime or cefepime
+or carbapenemb +
+levofloxacin/ciprofloxacin
+or aminoglycoside</td><td>±Vancomycin or
+linezolid</td></tr><tr><td>Intra-abdominal</td><td>Ertapenem or
+ciprofloxacin/
+levofloxacin +
+metronidazole
+or ceftriaxone +
+metronidazole</td><td>Carbapenemb or piperacillin/
+tazobactam or
+ceftazidime/cefepime +
+metronidazole</td><td></td></tr><tr><td>Skin/Soft tissue</td><td>Vancomycin or
+linezolid or
+daptomycin</td><td>Vancomycin + piperacillin/
+tazobactam</td><td></td></tr><tr><td>Catheter-related</td><td></td><td>Vancomycin</td><td></td></tr><tr><td>Unknown</td><td>Piperacillin/
+Tazobactam or
+carbapenemb</td><td>Carbapenemb</td><td></td></tr></table></div><h2>Sepsis and Septic Shock | CHAPTER 46</h2>
+<p>and resuscitating from sepsis-induced hypoperfusion immediately with at least</p>
+<p>30 mL/kg of IV crystalloid fluid given judiciously within the first 3 hours. Target</p>
+<p>MAP is 65 mm Hg (8.6 kPa) to assess the need for vasopressors. Lactate should be</p>
+<p>normalized in patients with elevated lactate levels as a marker of tissue hypoperfusion.</p>
+<li>Fluid therapy guided by dynamic assessment of fluid responsiveness by exam-</li>
+<p>ining cardiac output was associated with decreased mortality compared to</p>
+<p>standard care.</p>
+<li>The Sepsis-3 guidelines recommend a crystalloid product (balanced solution such as</li>
+<p>lactated Ringers and Plasma-Lyte or normal saline) based on accessibility and cost.</p>
+<p>Colloid (ie, albumin) can be used in patients who have already received considerable</p>
+<p>amount of crystalloids and continue to require fluid.</p>
+<li>Hetastarch products should be avoided at all times because they increased the risk</li>
+<p>of renal failure, need for renal replacement therapy, and death in multiple studies.</p>
+<li>Fluid therapy is based on the four phases of septic shock: ROSE—resuscitation,</li>
+<p>optimization, stabilization, and evacuation. Resuscitation phase occurs within</p>
+<p>minutes, and the patient will most likely have a positive fluid balance especially after the</p>
+<p>30 mL/kg bolus. During the Optimization phase, within hours, the goal is to keep</p>
+<p>a neutral fluid balance between intake and output. During the Stabilization phase,</p>
+<p>which usually occurs in days, the focus should be on organ support and keeping fluid</p>
+<p>balance neutral to net negative with maintenance doses (30 mL/kg/day) of fluid only.</p>
+<p>Lastly, the Evacuation phase occurs in days to weeks, and it is suggested to keep fluid</p>
+<p>balance negative.</p>
+<h2>INOTROPE AND VASOACTIVE DRUG SUPPORT</h2>
+<li>Vasopressors should be used to achieve and maintain MAP goal in fluid-</li>
+<p>resuscitation refractory shock, and they are titrated up carefully to an end point</p>
+<p>of adequate organ perfusion. Selection and dosage are based on the pharmaco-</p>
+<p>logic properties of various catecholamines and how they influence hemodynamic</p>
+<h2>parameters (Table 46-4).</h2>
+<li>For septic patients with clinical signs of shock and significant hypotension</li>
+<p>unresponsive to aggressive fluid therapy, norepinephrine is the preferred agent</p>
+<p>for increasing MAP. In comparison to dopamine, it is less arrhythmogenic and</p>
+<p>was associated with lower risk of mortality. Epinephrine is an alternative to nor-</p>
+<p>epinephrine for refractory hypotension. Phenylephrine is only recommended</p>
+<p>as a salvage therapy only if tachycardia or arrhythmia makes norepinephrine</p>
+<p>intolerable.</p>
+<h2>PERFORMANCE IMPROVEMENT BUNDLE</h2>
+<li>The Sepsis-3 guidelines recommend the 3-hour bundle with the use of a 1-hour</li>
+<p>care, putting the importance of beginning the initial treatment immediately</p>
+<h2>(Table 46-5).</h2>
+<h2>ADJUNCTIVE THERAPY</h2>
+<li>Recommended blood glucose levels to initiate an insulin protocol are more than 180</li>
+<p>mg/dL (&gt;10 mmol/L) with an upper target blood glucose level &lt;180 dL (10 mmol/L)</p>
+<p>for the majority of critically ill patients to improve the outcome while reducing the</p>
+<p>risk of hypoglycemia.</p>
+<li>Hydrocortisone 200 mg IV per day should be administered only if hemody-</li>
+<p>namic stability is not achieved after adequate fluid resuscitation and vasopressor</p>
+<p>therapy, regardless of the state of adrenal insufficiency. Hydrocortisone should</p>
+<p>be tapered when vasopressors are no longer required because hemodynamic</p>
+<p>and immunologic rebound effects have been reported with abrupt cessation of</p>
+<p>corticosteroids.</p>
+<li>Venous thromboembolism (VTE) prophylaxis with daily subcutaneous low-</li>
+<p>molecular-weight heparin should be initiated in all patients admitted to the ICU with</p>
+<p>sepsis and septic shock along with mechanical prophylaxis (intermittent pneumatic</p>
+<p>compression or graduated compression stockings) unless contraindicated.</p>
+<p>487</p>
+<h2>CH46.INDD 487 19-11-2020 16:06:43</h2>
+<h2>488 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 46-4 Mechanism of Action and Hemodynamic Effects of Vasopressors in Septic Shock</p>
+<p>Receptor Affinity Physiologic Outcome</p>
+<p>Drug Dopamine Alpha-1 Beta-1 Beta-2 HR SV SVR CO</p>
+<p>Dopamine +++ – + – ↔↑ ↑ ↔ or ↑ ↑</p>
+<p>(0.5–2)a</p>
+<p>Dopamine ++ + +++ + ↑ ↑ ↔ or ↑ ↑↑</p>
+<p>(5–10)a</p>
+<p>Dopamine ++ +++ ++ – ↑ ↑ ↑↑ ↑</p>
+<p>(10–20)a</p>
+<p>Epinephrine – ++++ ++++ +++ ↑ ↑ ↑↑ ↑↑</p>
+<p>Norepinephrine – ++++ ++ + ↔ or ↑ ↔ ↑↑ ↑</p>
+<p>Phenylephrine – +++ – – ↔ or ↓ – ↑↑ ↔</p>
+<p>Vasopressin V1 receptor ↔ or ↓ – ↑↑ ↔ or ↓</p>
+<p>Angiotensin II AT receptor ↑ – ↑ ↑</p>
+<p>amcg/kg/min.</p>
+<p>CO, cardiac output; HR, heart rate; SV, stroke volume; SVR, systemic vascular resistance; V1, vasopressin receptor 1; V2, vasopressin receptor 2.</p>
+<h2>CH46.INDD</h2>
+<p>488</p>
+<p>19-11-2020</p>
+<p>16:06:43</p>
+<div class="table-container"><table><tr><th>Drug</th><th>Receptor Affinity</th><th></th><th></th><th></th><th>Physiologic Outcome</th><th></th><th></th><th></th></tr><tr><td></td><td>Dopamine</td><td>Alpha-1</td><td>Beta-1</td><td>Beta-2</td><td>HR</td><td>SV</td><td>SVR</td><td>CO</td></tr><tr><td>Dopamine
+(0.5–2)a</td><td>+++</td><td>–</td><td>+</td><td>–</td><td>↔↑</td><td>↑</td><td>↔ or ↑</td><td>↑</td></tr><tr><td>Dopamine
+(5–10)a</td><td>++</td><td>+</td><td>+++</td><td>+</td><td>↑</td><td>↑</td><td>↔ or ↑</td><td>↑↑</td></tr><tr><td>Dopamine
+(10–20)a</td><td>++</td><td>+++</td><td>++</td><td>–</td><td>↑</td><td>↑</td><td>↑↑</td><td>↑</td></tr><tr><td>Epinephrine</td><td>–</td><td>++++</td><td>++++</td><td>+++</td><td>↑</td><td>↑</td><td>↑↑</td><td>↑↑</td></tr><tr><td>Norepinephrine</td><td>–</td><td>++++</td><td>++</td><td>+</td><td>↔ or ↑</td><td>↔</td><td>↑↑</td><td>↑</td></tr><tr><td>Phenylephrine</td><td>–</td><td>+++</td><td>–</td><td>–</td><td>↔ or ↓</td><td>–</td><td>↑↑</td><td>↔</td></tr><tr><td>Vasopressin</td><td>V1 receptor</td><td></td><td></td><td></td><td>↔ or ↓</td><td>–</td><td>↑↑</td><td>↔ or ↓</td></tr><tr><td>Angiotensin II</td><td>AT receptor</td><td></td><td></td><td></td><td>↑</td><td>–</td><td>↑</td><td>↑</td></tr></table></div><h2>Sepsis and Septic Shock | CHAPTER 46</h2>
+<p>TABLE 46-5 Sepsis-3 (2016) Performance Improvement Checklist for Bundle-Care Compliance</p>
+<p>One-hour bundle</p>
+<li>Measure initial lactate</li>
+<li>Repeat in 2 hours if initial lactate >2 mmol/L</li>
+<li>Obtain cultures (blood, urine, sputum, etc.) prior to administration of antibiotics</li>
+<li>Administer broad-spectrum IV antibiotics within 1 hour</li>
+<li>Initial fluid resuscitation of 30 mL/kg crystalloid for hypotension or lactate ≥4 mmol/L</li>
+<li>Vasopressors if MAP <65 mm Hg during or after completion of fluid resuscitation</li>
+<p>Outcome measurements</p>
+<li>Length of stay in ICU and hospital</li>
+<li>Rate of organ dysfunction</li>
+<li>Mortality rate</li>
+<p>CVP, central venous pressure; MAP, mean arterial pressure; ScvO, central venous oxygen saturation.</p>
+<p>2</p>
+<li>Stress ulcer prophylaxis should be initiated in all patients with sepsis and septic shock</li>
+<p>who have risk factors for GI bleeding.</p>
+<p>See Chapter 137, Severe Sepsis and Septic Shock, authored by S. Lena Kang-Birken and</p>
+<p>Sul R. Jung, for a more detailed discussion of this topic.</p>
+<h2>ALGRAWANY</h2>
+<p>489</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<h2>CH46.INDD 489 19-11-2020 16:06:43</h2>
+<div class="table-container"><table><tr><th>TABLE 46-5 Sepsis-3 (2016) Performance Improvement Checklist for Bundle-Care Compliance</th></tr><tr><td>One-hour bundle
+• Measure initial lactate
+• Repeat in 2 hours if initial lactate &gt;2 mmol/L
+• Obtain cultures (blood, urine, sputum, etc.) prior to administration of antibiotics
+• Administer broad-spectrum IV antibiotics within 1 hour
+• Initial fluid resuscitation of 30 mL/kg crystalloid for hypotension or lactate ≥4 mmol/L
+• Vasopressors if MAP &lt;65 mm Hg during or after completion of fluid resuscitation</td></tr><tr><td>Outcome measurements
+• Length of stay in ICU and hospital
+• Rate of organ dysfunction
+• Mortality rate</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

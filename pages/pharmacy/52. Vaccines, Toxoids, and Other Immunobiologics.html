@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52. Vaccines, Toxoids, and Other Immunobiologics</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>52. Vaccines, Toxoids, and Other Immunobiologics</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>568</p>
+<h2>RETPAHC</h2>
+<p>52</p>
+<p>Vaccines, Toxoids, and Other</p>
+<p>Immunobiologics</p>
+<li>Vaccines are substances administered to generate a protective immune response.</li>
+<p>They can be live attenuated or killed.</p>
+<li>Toxoids are inactivated bacterial toxins. They retain the ability to stimulate the</li>
+<p>formation of antitoxins, which are antibodies directed against the bacterial toxin.</p>
+<li>Adjuvants are inert substances, such as aluminum salts (ie, alum), which enhance</li>
+<p>vaccine antigenicity by prolonging antigen absorption.</p>
+<li>Immune sera are sterile solutions containing antibody derived from human</li>
+<p>(immunoglobulin [Ig]) or equine (antitoxin) sources.</p>
+<h2>VACCINE AND TOXOID RECOMMENDATIONS</h2>
+<li>The childhood, adolescent, and adult immunization schedules are updated frequently</li>
+<p>and published annually. Recommendations for the use of influenza vaccine are issued</p>
+<p>annually. Healthcare providers involved in primary care and immunization delivery</p>
+<p>must keep themselves abreast of these changes in a systematic way. Electronic news-</p>
+<p>letters and browsing reliable websites are efficient methods for obtaining information</p>
+<h2>(Table 52-1).</h2>
+<li>In general, killed vaccines can be administered simultaneously at separate sites. Killed</li>
+<p>and live-attenuated vaccines may be administered simultaneously at separate sites. If</p>
+<p>they cannot be administered simultaneously, they can be administered at any interval</p>
+<p>between doses with the exception of cholera (killed) and yellow fever (live) vaccines,</p>
+<p>which should be given at least 3 weeks apart. If live vaccines are not administered</p>
+<p>simultaneously, their administration should be separated by at least 4 weeks.</p>
+<h2>TABLE 52-1 Web Resources for Vaccine Information</h2>
+<p>Recommended Internet sites for vaccine information</p>
+<p>http://www.cdc.gov/vaccines/ Vaccines and Immunizations</p>
+<p>Centers for Disease Control and Prevention</p>
+<p>www.immunize.org Immunization Action Coalition</p>
+<p>www.nfid.org/ National Foundation for Infectious Diseases</p>
+<p>www.cdc.gov/mmwr/ Morbidity and Mortality Weekly Report</p>
+<p>http://www.nationalacademies.org/ The National Academies of Sciences,</p>
+<p>hmd/ Engineering, and Medicine. Health and</p>
+<p>Medicine Division</p>
+<p>http://www.hrsa.gov/ Vaccine Injury Compensation Program</p>
+<p>vaccinecompensation/</p>
+<p>http://www.chop.edu/centers-programs/ Vaccine Education Center</p>
+<p>vaccine-education-center/ Children’s Hospital of Philadelphia</p>
+<p>https://vaers.hhs.gov/index.html Vaccine Adverse Event Reporting System</p>
+<p>Recommended electronic newsletters</p>
+<p>www.immunize.org/express The Immunization Action Coalition’s newsletter</p>
+<p>www.cdc.gov/mmwr/ Morbidity and Mortality Weekly Report</p>
+<p>ch52.indd 568 19-11-2020 16:52:05</p>
+<div class="table-container"><table><tr><th>Vaccines, Toxoids, and Other
+Immunobiologics</th><th>52
+00</th><th>RETPAHC</th></tr></table></div><div class="table-container"><table><tr><th>TABLE 52-1 Web Resources for Vaccine Information</th><th></th></tr><tr><td>Recommended Internet sites for vaccine information</td><td></td></tr><tr><td>http://www.cdc.gov/vaccines/</td><td>Vaccines and Immunizations</td></tr><tr><td></td><td>Centers for Disease Control and Prevention</td></tr><tr><td>www.immunize.org</td><td>Immunization Action Coalition</td></tr><tr><td>www.nfid.org/</td><td>National Foundation for Infectious Diseases</td></tr><tr><td>www.cdc.gov/mmwr/</td><td>Morbidity and Mortality Weekly Report</td></tr><tr><td>http://www.nationalacademies.org/
+hmd/</td><td>The National Academies of Sciences,
+Engineering, and Medicine. Health and
+Medicine Division</td></tr><tr><td>http://www.hrsa.gov/
+vaccinecompensation/</td><td>Vaccine Injury Compensation Program</td></tr><tr><td>http://www.chop.edu/centers-programs/
+vaccine-education-center/</td><td>Vaccine Education Center</td></tr><tr><td></td><td>Children’s Hospital of Philadelphia</td></tr><tr><td>https://vaers.hhs.gov/index.html</td><td>Vaccine Adverse Event Reporting System</td></tr><tr><td>Recommended electronic newsletters</td><td></td></tr><tr><td>www.immunize.org/express</td><td>The Immunization Action Coalition’s newsletter</td></tr><tr><td>www.cdc.gov/mmwr/</td><td>Morbidity and Mortality Weekly Report</td></tr></table></div><h2>Vaccines, Toxoids, and Other Immunobiologics | CHAPTER 52</h2>
+<li>Administration of live vaccines, such as rubella or varicella, are deferred until post-</li>
+<p>partum and are routinely recommended for new mothers who do not have evidence</p>
+<p>of immunity prior to hospital discharge. These live vaccines can be administered</p>
+<p>without regard to administration of Rho(D) Ig (RDIg) in the postpartum period.</p>
+<p>Pregnant women should receive Tdap during the late second trimester or third</p>
+<p>trimester of pregnancy. Additionally, Tdap is recommended for all new mothers who</p>
+<p>have not received a Tdap before because household contacts are frequently implicated</p>
+<p>as the source of pertussis infection in a young infant.</p>
+<li>In general, severely immunocompromised individuals should not receive live</li>
+<p>vaccines.</p>
+<li>Patients with chronic conditions that cause limited immunodeficiency (eg, renal</li>
+<p>disease, diabetes, liver disease, and asplenia) and who are not receiving immunosup-</p>
+<p>pressants may receive live-attenuated and killed vaccines, as well as toxoids.</p>
+<li>Patients with active malignant disease may receive killed vaccines or toxoids but</li>
+<p>should not be given live vaccines. Live virus vaccines may be administered to persons</p>
+<p>with leukemia who have not received chemotherapy for at least 3 months.</p>
+<li>If a person has been receiving high-dose corticosteroids or has had a course lasting</li>
+<p>longer than 2 weeks, then at least 1 month should pass before immunization with</p>
+<p>live virus vaccines.</p>
+<li>Responses to live and killed vaccines generally are suboptimal for human immune</li>
+<p>deficiency virus (HIV)–infected patients and decrease as the disease progresses.</p>
+<li>Whenever possible, transplant patients should be immunized before transplantation.</li>
+<p>Live vaccines generally are not given after transplantation.</p>
+<h2>DIPHTHERIA TOXOID ADSORBED AND DIPHTHERIA ANTITOXIN</h2>
+<li>Two strengths of diphtheria toxoid are available: pediatric strength (D) and adult</li>
+<p>strength (d), which contain less antigen. Primary immunization with D is indicated</p>
+<p>for children older than 6 weeks. Generally, D is given along with tetanus and acellular</p>
+<p>pertussis (DTaP) vaccines at 2, 4, and 6 months of age, and then at 15–18 months and</p>
+<p>4–6 years of age.</p>
+<li>For nonimmunized adults, a complete three-dose series of diphtheria toxoid should</li>
+<p>be administered, with the first two doses given at least 4 weeks apart and the</p>
+<p>third dose 6–12 months after the second. One dose in the series should be Tdap.</p>
+<p>The combined preparation, tetanus–diphtheria (Td), is recommended in adults</p>
+<p>because it contains less diphtheria toxoid than DTaP, with fewer reactions seen from</p>
+<p>the diphtheria preparation. Booster doses are given every 10 years.</p>
+<li>Adverse effects to diphtheria toxoid include mild to moderate tenderness, erythema,</li>
+<p>and induration at the injection site.</p>
+<h2>TETANUS TOXOID, TETANUS TOXOID ADSORBED, AND TETANUS</h2>
+<h2>IMMUNOGLOBULIN</h2>
+<li>In children, primary immunization against tetanus is usually done in conjunction with</li>
+<p>diphtheria and pertussis vaccination using DTaP or a combination vaccine that includes</p>
+<p>other antigens. A 0.5-mL dose is recommended at 2, 4, 6, and 15–18 months of age.</p>
+<li>In children 7 years and older and in adults who have not been previously immunized,</li>
+<p>a series of three 0.5-mL doses of Td is administered intramuscularly (IM) initially.</p>
+<p>The first two doses are given 1–2 months apart and the third dose 6–12 months later.</p>
+<p>Boosters are recommended every 10 years.</p>
+<li>Tetanus toxoid may be given to immunosuppressed patients if indicated.</li>
+<li>Tetanus Ig (TIg) is used to provide passive tetanus immunization after the occurrence</li>
+<p>of traumatic wounds in nonimmunized or suboptimally immunized persons</p>
+<p>(Table 52-2). A dose of 250–500 units is administered IM. When administered with</p>
+<p>tetanus toxoid, separate sites for administration should be used.</p>
+<li>TIg is also used for the treatment of tetanus. In this setting, a single dose of</li>
+<p>3000–6000 units is administered IM.</p>
+<p>569</p>
+<p>ch52.indd 569 19-11-2020 16:52:05</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 52-2 Tetanus Prophylaxis</h2>
+<p>Vaccination History Clean, Minor Wounds All Other Wounds</p>
+<p>Tda TIG Tda TIG</p>
+<p>Unknown or fewer than three doses Yes No Yes Yes</p>
+<p>Three or more doses Noa,b No Noa,c No</p>
+<p>aA single dose of Tdap should be used for the next dose of tetanus–diphtheria toxoid for individuals</p>
+<p>aged &gt;10 years.</p>
+<p>bYes, if more than 10 years since last dose.</p>
+<p>cYes, if more than 5 years since last dose.</p>
+<h2>HAEMOPHILUS INFLUENZAE TYPE B VACCINES</h2>
+<li>Haemophilus influenzae type b (Hib) vaccines currently in use are conjugate</li>
+<p>products, consisting of either a polysaccharide or oligosaccharide of polyribosylribitol</p>
+<p>phosphate (PRP) covalently linked to a protein carrier.</p>
+<li>Hib conjugate vaccines are indicated for routine use in all infants and children</li>
+<p>younger than 5 years.</p>
+<li>The primary series of Hib vaccination consists of 0.5-mL IM doses at 2, 4, and 6</li>
+<p>months of age. If PRP-OMP (PRP conjugated to an outer membrane protein) is used,</p>
+<p>it should be given at ages 2 and 4 months. A booster dose is recommended at age</p>
+<p>12–15 months.</p>
+<li>For infants 7–11 months of age who have not been vaccinated, three doses of Hib</li>
+<p>vaccine should be given: two doses spaced 4 weeks apart and then a booster dose</p>
+<p>at age 12–15 months (but at least 8 weeks since the second dose). For unvaccinated</p>
+<p>children ages 12–14 months, two doses should be given, with an interval of 2 months</p>
+<p>between doses. In a child older than 15 months, a single dose of any of the four</p>
+<p>conjugate vaccines is indicated.</p>
+<h2>HEPATITIS VACCINES</h2>
+<li>Information on hepatitis vaccines can be found in Chapter 25.</li>
+<h2>HUMAN PAPILLOMAVIRUS VACCINE</h2>
+<li>ACIP recommends HPV vaccine for the prevention of HPV-related disease in individ-</li>
+<p>uals aged 9–26 years. Individuals who start the HPV series between the ages of 9 and</p>
+<p>14 years should receive two doses separated by 6 months. This vaccine is administered</p>
+<p>as a three-dose series using a schedule of 0, 1–2, and 6 months for individuals who</p>
+<p>start the series at age 15 years or older. The vaccines are recommended for adolescents</p>
+<p>aged 11–12 years and catch-up immunization for individuals aged 13–26 years.</p>
+<li>The ACIP recommended shared clinical decision-making for HPV vaccine for indi-</li>
+<p>viduals aged 27–45 years. The vaccine is administered as a three-dose series (0, 1–2,</p>
+<p>and 6 months).</p>
+<li>The vaccine is well tolerated, with injection site reactions and headache and fatigue</li>
+<p>occurring as commonly as in placebo groups.</p>
+<h2>INFLUENZA VIRUS VACCINE</h2>
+<li>See Chapter 41 for information regarding influenza vaccination.</li>
+<h2>MEASLES VACCINE</h2>
+<li>Measles vaccine is a live-attenuated vaccine that is administered for primary immuni-</li>
+<p>zation to persons 12–15 months of age or older, usually as a combination of measles,</p>
+<p>mumps, and rubella (MMR). A second dose is recommended at 4–6 years of age.</p>
+<p>570</p>
+<p>ch52.indd 570 19-11-2020 16:52:05</p>
+<div class="table-container"><table><tr><th>TABLE 52-2 Tetanus Prophylaxis</th><th></th><th></th><th></th><th></th></tr><tr><td>Vaccination History</td><td>Clean, Minor Wounds</td><td></td><td>All Other Wounds</td><td></td></tr><tr><td></td><td>Tda</td><td>TIG</td><td>Tda</td><td>TIG</td></tr><tr><td>Unknown or fewer than three doses</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Three or more doses</td><td>Noa,b</td><td>No</td><td>Noa,c</td><td>No</td></tr></table></div><h2>Vaccines, Toxoids, and Other Immunobiologics | CHAPTER 52</h2>
+<li>Measles-containing vaccine should not be given to pregnant women or immunosup-</li>
+<p>pressed patients. An exception is HIV-infected patients, who are at very high risk for</p>
+<p>severe complications if they develop measles.</p>
+<li>The vaccine should not be given within 1 month of any other live vaccine unless the</li>
+<p>vaccine is given on the same day (as with the MMR vaccine).</p>
+<li>Measles vaccine is indicated in all persons born after 1956 or in those who lack docu-</li>
+<p>mentation of wild virus infection by either history or antibody titers.</p>
+<h2>MENINGOCOCCAL VACCINES</h2>
+<li>There are two meningococcal conjugate vaccines: Menactra is licensed for</li>
+<p>individuals 9 months–55 years old and Menveo for those 2 months–55 years old.</p>
+<p>They are recommended for all children 11–12 years old with a second dose at</p>
+<p>16 years of age.</p>
+<li>The vaccine is indicated in high-risk populations such as those exposed to the dis-</li>
+<p>ease, those in the midst of uncontrolled outbreaks, travelers to an area with epidemic</p>
+<p>hyperendemic meningococcal disease, and individuals who have terminal comple-</p>
+<p>ment deficiencies or asplenia. Reimmunization at 5-year intervals is recommended</p>
+<p>for individuals who are at high risk. The polysaccharide vaccine should be reserved</p>
+<p>for those older than 55 years who require immunization.</p>
+<li>Also, there are two meningococcal serogroup B vaccines (Trumenba and Bexsero),</li>
+<p>and are licensed for individuals 10–25 years of age. Either vaccine is recommended</p>
+<p>for individuals at high risk for invasive meningococcal disease.</p>
+<h2>MUMPS VACCINE</h2>
+<li>The vaccine (usually given in conjunction with measles and rubella, MMR) is given</li>
+<p>beginning at age 12–15 months, with a second dose prior to entry into elementary</p>
+<p>school.</p>
+<li>Two doses of mumps vaccine are recommended for school-age children, interna-</li>
+<p>tional travelers, college students, and healthcare workers born after 1956.</p>
+<li>Postexposure vaccination is of no benefit.</li>
+<li>Mumps vaccine should not be given to pregnant women or immunosuppressed</li>
+<p>patients. The vaccine should not be given within 6 weeks (preferably 3 months) of</p>
+<p>administration of Ig.</p>
+<h2>PERTUSSIS VACCINE</h2>
+<li>Acellular pertussis vaccine is usually administered in combination with diphtheria</li>
+<p>and tetanus toxoids (as DTaP).</p>
+<li>The primary immunization series for pertussis vaccine consists of four doses given</li>
+<p>at ages 2, 4, 6, and 15–18 months. A booster dose is recommended at age 4–6 years.</p>
+<p>Pertussis vaccine is administered in combination with diphtheria and tetanus (DTaP).</p>
+<p>Administration of an acellular pertussis-containing vaccine is also recommended for</p>
+<p>adolescents once between ages 11 and 18 years and a single dose of Tdap should be</p>
+<p>administered to all adults.</p>
+<li>Tdap should be administered to females in their late second or third trimester of</li>
+<p>pregnancy. Tdap should also be administered to all close contacts, including house-</p>
+<p>hold contacts and out of home care providers.</p>
+<li>Systemic reactions, such as moderate fever, occur in 3%–5% of those receiving vac-</li>
+<p>cines. Very rarely, high fever, febrile seizures, persistent crying spells, and hypotonic</p>
+<p>hyporesponsive episodes occur after vaccination.</p>
+<li>There are only two contraindications to pertussis administration: (1) an immediate</li>
+<p>anaphylactic reaction to a previous dose and (2) encephalopathy within 7 days of a</p>
+<p>previous dose, with no evidence of other cause.</p>
+<p>571</p>
+<p>ch52.indd 571 19-11-2020 16:52:05</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<h2>PNEUMOCOCCAL VACCINES</h2>
+<li>Pneumococcal polysaccharide vaccine is a mixture of capsular polysaccharides from</li>
+<p>23 of the most prevalent types of Streptococcus pneumoniae seen in the United States</p>
+<p>(PPV23). The vaccine is administered IM or subcutaneously as a single 0.5 mL dose.</p>
+<li>Pneumococcal vaccine (PPV23) is recommended for the following immunocompetent</li>
+<p>persons:</p>
+<p>✓ Persons 65 years or older. If an individual received vaccine more than 5 years earlier</p>
+<p>and was younger than 65 at the time of administration, revaccination should be</p>
+<p>given.</p>
+<p>✓ Persons ages 2–64 years with chronic illness.</p>
+<pre><code>✓ Persons ages 2–64 years with functional or anatomical asplenia. When splenec-</code></pre>
+<p>tomy is planned, pneumococcal vaccine should be given at least 2 weeks before</p>
+<p>surgery. A single revaccination is recommended at 5 years in subjects older than</p>
+<p>10 years and at 3 years in subjects younger than 10 years).</p>
+<p>✓ Persons aged 19–64 years who smoke cigarettes or have asthma.</p>
+<p>✓ Persons with cochlear implants.</p>
+<li>Pneumococcal vaccination (PPV23) is recommended for immunocompromised</li>
+<p>persons 2 years of age or older with:</p>
+<p>✓ HIV infection</p>
+<p>✓ Leukemia, lymphoma, Hodgkin disease, or multiple myeloma</p>
+<p>✓ Generalized malignancy</p>
+<p>✓ Chronic renal failure of nephritic syndrome</p>
+<p>✓ Patients receiving immunosuppressive therapy</p>
+<p>✓ Organ or bone marrow transplant recipients</p>
+<li>Because children younger than 2 years do not respond adequately to the pneumococcal</li>
+<p>polysaccharide vaccine, a pneumococcal conjugate vaccine was created (PCV13).</p>
+<li>PCV 13 valent (Prevnar-13) is administered as a 0.5-mL IM injection at 2, 4, and 6</li>
+<p>months of age and between 12 and 15 months of age. A single dose of PCV13 should be</p>
+<pre><code>administered to children aged 6–18 years with sickle cell disease or splenic dysfunction,</code></pre>
+<p>HIV infection, immunocompromising conditions, cochlear implant, or cerebral spinal</p>
+<p>fluid leak should be immunized. It is also licensed for individuals aged 50 years and older.</p>
+<h2>POLIOVIRUS VACCINES</h2>
+<li>Two types of trivalent poliovirus vaccines are currently licensed for distribution</li>
+<p>in the United States: an enhanced inactivated poliovirus vaccine (IPV) and a live-</p>
+<p>attenuated, oral poliovirus vaccine (OPV). IPV is the recommended vaccine for the</p>
+<p>primary series and booster dose for children in the United States, whereas OPV is</p>
+<p>recommended in areas of the world that have circulating poliovirus.</p>
+<li>IPV is given to children ages 2, 4, and 6–18 months and 4–6 years. Primary polio-</li>
+<p>myelitis immunization is recommended for all children and young adults up to age</p>
+<p>18 years. Allergies to any component of IPV, including streptomycin, polymyxin B,</p>
+<p>and neomycin, are contraindications to vaccine use.</p>
+<li>The routine use of OPV in the United States has been discontinued.</li>
+<h2>RUBELLA VACCINE</h2>
+<li>The vaccine is given with measles and mumps vaccines (MMR) at 12–15 months of</li>
+<p>age, then at 4–6 years.</p>
+<li>The vaccine should not be given to immunosuppressed individuals, although MMR</li>
+<p>vaccine should be administered to young children with HIV without severe immu-</p>
+<p>nosuppression as soon as possible after their first birthday. The vaccine should not be</p>
+<p>given to individuals with anaphylactic reaction to neomycin.</p>
+<p>572</p>
+<p>ch52.indd 572 19-11-2020 16:52:05</p>
+<h2>Vaccines, Toxoids, and Other Immunobiologics | CHAPTER 52</h2>
+<li>Although the vaccine has not been associated with congenital rubella syndrome, its</li>
+<p>use in pregnancy is contraindicated. Women should be counseled not to become</p>
+<p>pregnant for 4 weeks after vaccination.</p>
+<h2>VARICELLA VACCINE</h2>
+<li>Varicella virus vaccine is recommended for all children 12–18 months of age, with a</li>
+<p>second dose prior to entering school between 4 and 6 years of age. It is also recom-</p>
+<p>mended for persons above this age if they have not had chickenpox. Persons ages</p>
+<p>13 years and older should receive two doses separated by 4–8 weeks.</p>
+<p>✓ The vaccine is contraindicated in immunosuppressed or pregnant patients.</p>
+<p>✓ Children with asymptomatic or mildly symptomatic HIV should receive two doses</p>
+<p>of varicella vaccine 3 months apart.</p>
+<h2>ZOSTER VACCINE</h2>
+<li>Two vaccines for the prevention of zoster are available, a live-attenuated vaccine</li>
+<p>(Zostavax) and a recombinant zoster vaccine (Shingrix). The recombinant zoster</p>
+<p>vaccine is 91% effective for preventing zoster and is currently the preferred product</p>
+<p>for use as recommended by the ACIP for use in immunocompetent individuals aged</p>
+<p>50 years and older as a two-dose series at 0 and 2–6 months.</p>
+<li>Almost 80% of those who receive the recombinant vaccine report injection site pain</li>
+<p>with 9% of those reporting injection site reactions that interfere with their normal</p>
+<p>activities.</p>
+<h2>IMMUNOGLOBULIN</h2>
+<li>Ig is available as both IM (IGIM) and IV (IGIV) preparations.</li>
+<li>Table 52-3 lists the suggested dosages for IGIM in various disease states.</li>
+<li>The uses for IGIV are as follows:</li>
+<p>✓ Primary immunodeficiency states, including both antibody deficiencies and</p>
+<p>combined deficiencies</p>
+<p>✓ Idiopathic thrombocytopenia</p>
+<p>✓ Chronic lymphocytic leukemia in patients who have had a serious bacterial</p>
+<p>infection</p>
+<p>✓ Kawasaki disease (mucocutaneous lymph node syndrome)</p>
+<p>✓ Pediatric HIV infection</p>
+<p>✓ Allogeneic bone marrow transplant</p>
+<p>✓ Chronic inflammatory demyelinating polyneuropathy and multifocal motor</p>
+<p>neuropathy</p>
+<p>✓ Multifocal motor neuropathy</p>
+<p>✓ Kidney transplantation involving a recipient with high antibody concentrations or</p>
+<p>an ABO incompatible donor</p>
+<p>TABLE 52-3 Indications and Dosage of Intramuscular Immunoglobulin in Infectious Diseases</p>
+<p>Primary immunodeficiency states 1.2 mL/kg IM then 0.6 mL/kg every 2–4 weeks</p>
+<p>Hepatitis A exposure 0.02 mL/kg IM within 2 weeks if &lt;1 year or</p>
+<p>&gt;39 years of age</p>
+<p>Hepatitis A prophylaxis 0.02 mL/kg IM for exposure &lt;3 months’ duration</p>
+<p>0.06 mL/kg IM for exposure up to 5 months’ duration</p>
+<p>Hepatitis B exposure 0.06 mL/kg (HBIG preferred in known exposures)</p>
+<p>Measles exposure 0.5 mL/kg (maximum dose 15 mL) as soon as</p>
+<p>possible</p>
+<p>573</p>
+<p>ch52.indd 573 19-11-2020 16:52:05</p>
+<div class="table-container"><table><tr><th>TABLE 52-3 Indications and Dosage of Intramuscular Immunoglobulin in Infectious Diseases</th><th></th></tr><tr><td>Primary immunodeficiency states</td><td>1.2 mL/kg IM then 0.6 mL/kg every 2–4 weeks</td></tr><tr><td>Hepatitis A exposure</td><td>0.02 mL/kg IM within 2 weeks if &lt;1 year or
+&gt;39 years of age</td></tr><tr><td>Hepatitis A prophylaxis</td><td>0.02 mL/kg IM for exposure &lt;3 months’ duration</td></tr><tr><td></td><td>0.06 mL/kg IM for exposure up to 5 months’ duration</td></tr><tr><td>Hepatitis B exposure</td><td>0.06 mL/kg (HBIG preferred in known exposures)</td></tr><tr><td>Measles exposure</td><td>0.5 mL/kg (maximum dose 15 mL) as soon as
+possible</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>RHO(D) IMMUNOGLOBULIN</h2>
+<li>Rho(D) Ig (RDIg) suppresses the antibody response and formation of anti-Rho(D)</li>
+<p>in Rho(D)-negative, Du-negative women exposed to Rho(D)-positive blood and</p>
+<p>prevents the future chance of erythroblastosis fetalis in subsequent pregnancies with</p>
+<p>a Rho(D)-positive fetus.</p>
+<li>RDIg, when administered IM within 72 hours of delivery of a full-term infant,</li>
+<p>reduces active antibody formation from 1% to 0.2%.</p>
+<li>RDIg is also used in the case of a premenopausal woman who is Rho(D) negative and</li>
+<p>has inadvertently received Rho(D)-positive blood or blood products.</p>
+<li>RDIg may be used after abortion, miscarriage, amniocentesis, or abdominal trauma.</li>
+<p>See Chapter 142, Vaccines, Toxoids, and Other Immunobiologics, authored by Mary</p>
+<p>S. Hayney, for a more detailed discussion of this topic.</p>
+<p>574</p>
+<p>ch52.indd 574 19-11-2020 16:52:05</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

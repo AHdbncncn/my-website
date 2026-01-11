@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>65. Glaucoma</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>65. Glaucoma</h1>
+        </header>
+        <main>
+            <h2>SECTION 12</h2>
+<h2>OPHTHALMIC DISORDERS</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>741</p>
+<h2>RETPAHC</h2>
+<p>65</p>
+<p>Glaucoma</p>
+<li>Glaucomas are ocular disorders that lead to an optic neuropathy characterized by</li>
+<p>changes in the optic nerve head (optic disc) that is associated with loss of visual</p>
+<p>sensitivity and field.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>There are two major types of glaucoma: primary open-angle glaucoma (POAG) or</li>
+<p>ocular hypertension, which accounts for most cases and is therefore the focus of this</p>
+<p>chapter, and primary angle closure glaucoma (PACG). Either type can be a primary</p>
+<p>inherited disorder, congenital, or secondary to disease, trauma, or drugs.</p>
+<li>In POAG, the specific cause of optic nerve damage is unknown. Increased intraocular</li>
+<p>pressure (IOP) was historically considered to be the sole cause. Additional contributing</p>
+<p>factors include increased susceptibility of the optic nerve to ischemia, excitotoxicity,</p>
+<p>autoimmune reactions, and other abnormal physiologic processes.</p>
+<li>Although IOP is a poor predictor of which patients will have visual field loss, the risk</li>
+<p>of visual field loss increases with increasing IOP. IOP is not constant; it changes with</p>
+<p>pulse, blood pressure, forced expiration or coughing, neck compression, and posture.</p>
+<p>IOP demonstrates diurnal variation with a minimum pressure around 6 pm and a</p>
+<p>maximum pressure upon awakening.</p>
+<li>The balance between the inflow and outflow of aqueous humor determines IOP.</li>
+<p>Inflow is increased by β-adrenergic agents and decreased by α- and β-adrenergic</p>
+<p>2</p>
+<p>blockers, dopamine blockers, carbonic anhydrase inhibitors (CAIs), meltatonin-1</p>
+<p>agonists, and adenylate cyclase stimulators. Outflow is increased by cholinergic</p>
+<p>agents (eg, pilocarpine), which contract the ciliary muscle and open the trabecular</p>
+<p>meshwork, and by prostaglandin analogues and β- and α-adrenergic agonists, which</p>
+<p>2</p>
+<p>affect uveoscleral outflow.</p>
+<li>Secondary OAG has many causes, including exfoliation syndrome, pigmentary glau-</li>
+<p>coma, systemic diseases, trauma, surgery, ocular inflammatory diseases, and drugs.</p>
+<p>Secondary glaucoma can be classified as pretrabecular (normal meshwork is covered</p>
+<p>and prevents outflow of aqueous humor), trabecular (meshwork is altered or material</p>
+<p>accumulates in the intertrabecular spaces), or posttrabecular (episcleral venous blood</p>
+<p>pressure is increased).</p>
+<li>Many drugs can increase IOP (Table 65-1). The potential to induce or worsen glau-</li>
+<p>coma depends on the type of glaucoma and on whether it is adequately controlled.</p>
+<li>PACG occurs when there is a physical blockage of the trabecular meshwork, resulting</li>
+<p>in increased IOP.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>POAG is bilateral, often asymmetric, progresses slowly, and is usually asymptomatic</li>
+<p>until onset of substantial visual field loss. Central visual acuity is maintained, even</p>
+<p>in late stages.</p>
+<li>Patients with PACG typically experience intermittent prodromal symptoms</li>
+<p>(eg, blurred or hazy vision with halos around lights and, occasionally, headache).</p>
+<p>Acute episodes produce symptoms associated with a cloudy, edematous cornea; ocular</p>
+<p>pain; nausea, vomiting, and abdominal pain; and diaphoresis.</p>
+<p>CH65.indd 741 20-11-2020 14:18:09</p>
+<div class="table-container"><table><tr><th>SECTION 12
+OPHTHALMIC DISORDERS
+Edited by Cecily V. DiPiro</th><th></th><th></th><th></th></tr><tr><td>RETPAHC</td><td>6</td><td>5</td><td>Glaucoma</td></tr></table></div><h2>SECTION 12 | Ophthalmic Disorders</h2>
+<p>TABLE 65-1 Drugs That May Induce or Potentiate Increased Intraocular Pressure</p>
+<p>Open-angle glaucoma</p>
+<p>Ophthalmic corticosteroids (high risk)</p>
+<p>Systemic corticosteroids</p>
+<p>Nasal/Inhaled corticosteroids</p>
+<p>Fenoldopam</p>
+<p>Ophthalmic anticholinergics</p>
+<p>Succinylcholine</p>
+<p>Vasodilators (low risk)</p>
+<p>Cimetidine (low risk)</p>
+<p>Closed-angle glaucoma</p>
+<p>Topical anticholinergics</p>
+<p>Topical sympathomimetics</p>
+<p>Systemic anticholinergics</p>
+<p>Heterocyclic antidepressants</p>
+<p>Low-potency phenothiazines</p>
+<p>Antihistamines</p>
+<p>Ipratropium</p>
+<p>Benzodiazepines (low risk)</p>
+<p>Theophylline (low risk)</p>
+<p>Vasodilators (low risk)</p>
+<p>Systemic sympathomimetics (low risk)</p>
+<p>CNS stimulants (low risk)</p>
+<p>Serotonin-selective reuptake inhibitors</p>
+<p>Imipramine</p>
+<p>Venlafaxine</p>
+<p>Topiramate</p>
+<p>Tetracyclines (low risk)</p>
+<p>Carbonic anhydrase inhibitors (low risk)</p>
+<p>Monoamine oxidase inhibitors (low risk)</p>
+<p>Topical cholinergics (low risk)</p>
+<h2>DIAGNOSIS</h2>
+<li>POAG is confirmed by the presence of characteristic optic disc changes and visual</li>
+<p>field loss, with or without increased IOP. Normal tension glaucoma refers to disc</p>
+<p>changes, visual field loss, and IOP less than 21 mm Hg (2.8 kPa). Ocular hypertension</p>
+<p>refers to IOP greater than 21 mm Hg (2.8 kPa) without disc changes or visual</p>
+<p>field loss.</p>
+<li>PACG is usually visualized by gonioscopy. IOP is generally markedly elevated</li>
+<p>(eg, 40–90 mm Hg [5.3–12 kPa]) when symptoms are present. Additional signs</p>
+<p>include hyperemic conjunctiva, cloudy cornea, shallow anterior chamber, and occa-</p>
+<p>sionally edematous and hyperemic optic disc.</p>
+<p>742</p>
+<p>CH65.indd 742 20-11-2020 14:18:09</p>
+<div class="table-container"><table><tr><th>TABLE 65-1 Drugs That May Induce or Potentiate Increased Intraocular Pressure</th></tr><tr><td>Open-angle glaucoma
+Ophthalmic corticosteroids (high risk)
+Systemic corticosteroids
+Nasal/Inhaled corticosteroids
+Fenoldopam
+Ophthalmic anticholinergics
+Succinylcholine
+Vasodilators (low risk)
+Cimetidine (low risk)</td></tr><tr><td>Closed-angle glaucoma
+Topical anticholinergics
+Topical sympathomimetics
+Systemic anticholinergics
+Heterocyclic antidepressants
+Low-potency phenothiazines
+Antihistamines
+Ipratropium
+Benzodiazepines (low risk)
+Theophylline (low risk)
+Vasodilators (low risk)
+Systemic sympathomimetics (low risk)
+CNS stimulants (low risk)
+Serotonin-selective reuptake inhibitors
+Imipramine
+Venlafaxine
+Topiramate
+Tetracyclines (low risk)
+Carbonic anhydrase inhibitors (low risk)
+Monoamine oxidase inhibitors (low risk)
+Topical cholinergics (low risk)</td></tr></table></div><h2>Glaucoma | CHAPTER 65</h2>
+<h2>TREATMENT OF OCULAR HYPERTENSION AND</h2>
+<h2>OPEN-ANGLE GLAUCOMA</h2>
+<li>Goal of Treatment: The goal is to preserve visual function by reducing IOP to a level</li>
+<p>at which no further optic nerve damage occurs.</p>
+<li>Treat ocular hypertension if the patient has a significant risk factor such as IOP</li>
+<p>greater than 25 mm Hg (3.3 kPa), vertical cup:disc ratio greater than 0.5, or central</p>
+<p>corneal thickness less than 555 μm. Additional risk factors to be considered include</p>
+<p>family history of glaucoma, black, Latino/Hispanic ethnicity, severe myopia, and</p>
+<p>presence of only one eye. The goal of therapy is to lower IOP by 20%–30% from</p>
+<p>baseline to decrease the risk of optic nerve damage.</p>
+<li>Treat all patients with elevated IOP and characteristic optic disc changes or visual</li>
+<p>field defects. An initial target IOP reduction of 25%–30% is desired in patients</p>
+<p>with POAG.</p>
+<li>Initiate drug therapy in a stepwise manner (Figure 65-1), starting with lower concen-</li>
+<p>trations of a single well-tolerated topical agent (Table 65-2). Historically, β-blockers</p>
+<p>(eg, timolol) were the treatment of choice provided no contraindications existed.</p>
+<li>Newer agents are also suitable for first-line therapy. Prostaglandin analogs (eg,</li>
+<p>latanoprost, bimatoprost, and travoprost) offer once-daily dosing, better IOP</p>
+<p>reduction, good tolerance, and availability of lower-cost generics. Brimonidine and</p>
+<h2>topical CAIs are also suitable for first-line therapy.</h2>
+<li>If more than one agent is needed, fixed combination products reduce the number of</li>
+<p>daily doses, which might improve adherence and prevent washout effect seen when</p>
+<p>a second medication is administered too soon after the initial medication. They also</p>
+<p>reduce exposure to ophthalmic preservatives.</p>
+<li>Pilocarpine is used as third-line therapy because of adverse events or reduced</li>
+<p>efficacy as compared with newer agents.</p>
+<li>Carbachol, dipivefrin, topical cholinesterase inhibitors, and oral CAIs (eg, acetazol-</li>
+<p>amide) are used as last-resort options after failure of less toxic combination options.</p>
+<li>Netarsudil is the first approved Rho kinase inhibitor. Efficacy appears to be similar</li>
+<p>to that of β-blockers. It may be used in combination therapy.</p>
+<li>Surgical procedures such as laser trabeculoplasty or surgical trabeculectomy can be</li>
+<p>considered when drug therapy fails, is not tolerated, or is excessively complicated.</p>
+<p>Antiproliferative agents such as fluorouracil and mitomycin C are used to modify</p>
+<p>the healing process and maintain patency.</p>
+<h2>TREATMENT OF CLOSED-ANGLE GLAUCOMA</h2>
+<li>Acute angle-closure crisis (AACC) with high IOP requires rapid reduction in IOP.</li>
+<p>Iridectomy is the definitive treatment producing a hole in the iris that permits aque-</p>
+<p>ous humor flow to move directly from the posterior to the anterior chamber.</p>
+<li>Drug therapy of an acute attack typically consists of a miotic (eg, pilocarpine),</li>
+<p>secretory inhibitor (eg, β-blocker, α-agonist, latanoprost, or CAI), or prostaglandin</p>
+<p>2</p>
+<p>agonist.</p>
+<li>Osmotic agents are used to rapidly decrease IOP. Examples include oral glycerin,</li>
+<p>1–2 g/kg, and mannitol, 1–2 g/kg IV.</p>
+<li>Topical corticosteroids can be used to reduce ocular inflammation and synechiae.</li>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Successful outcomes require identifying an effective, well-tolerated regimen; closely</li>
+<p>monitoring therapy; and patient adherence. Whenever possible, therapy for open-</p>
+<p>angle glaucoma should be started as a single agent in one eye to facilitate evaluation of</p>
+<p>drug efficacy and tolerance. Many drugs or combinations may need to be tried before</p>
+<p>the optimal regimen is identified.</p>
+<p>743</p>
+<p>CH65.indd 743 20-11-2020 14:18:10</p>
+<h2>SECTION 12 | Ophthalmic Disorders</h2>
+<p>Alternative first-line</p>
+<p>Contraindications? agent: brimonidine</p>
+<p>Start therapy with a prostaglandin</p>
+<p>analogue or possibly a beta-blocker</p>
+<p>If contraindication to</p>
+<p>first-line agents, use</p>
+<p>topical CAI</p>
+<p>Assess response in 2–4 weeks</p>
+<p>Inadequate response Intolerance</p>
+<li>Ensure compliance • Reduce concentration</li>
+<li>Instruct patient on nasolacrimal occlusion if not if possible</li>
+<p>currently used OR</p>
+<li>Increase concentration (if possible), or • Change formulations</li>
+<p>increase dose frequency OR</p>
+<li>Switch to alternative first-line agent if no • Switch to class alternative</li>
+<p>response, add second first-line agent if partial OR</p>
+<p>response • Switch to alternative</p>
+<p>first-line agent</p>
+<p>Assess response in 2–4 weeks</p>
+<p>Inadequate response to monotherapy Intolerance</p>
+<li>Ensure compliance • Reduce dose/concentration if</li>
+<li>If no response, sequentially try alternative first-line possible OR</li>
+<p>topical agents OR • Change formulations OR</p>
+<li>If partial response, add second or third first-line • Switch to class alternatives</li>
+<p>agent or topical CAI (multidrug regimens containing OR</p>
+<p>2–4 agents may be required) • Switch to alternative</p>
+<p>combination</p>
+<p>Assess response in 2–4 weeks</p>
+<p>Intolerance</p>
+<p>Inadequate response to first- and second-line • Reduce dose/concentration if</p>
+<p>topical combination therapy possible</p>
+<li>Ensure compliance • Change formulations</li>
+<li>Consider adding direct-acting cholinergic agent • Switch to class alternatives</li>
+<p>(4th linea), and if necessary, replace with a • Switch to alternative</p>
+<p>cholinesterase inhibitor combination</p>
+<li>Consider adding oral carbonic anhydrase inhibitor</li>
+<p>in place of topical carbonic anhydrase inhibitor</p>
+<li>Multiple topical therapies plus oral carbonic</li>
+<p>anhydrase inhibitor may be necessary</p>
+<p>Assess response in 2–4 weeks</p>
+<p>Intolerance or inadequate response to</p>
+<p>maximally tolerated combination</p>
+<p>drug therapy</p>
+<p>Laser or surgical procedureb</p>
+<p>aFourth-line agents are not commonly used any longer or are commercially unavailable.</p>
+<p>bMost clinicians believe the laser procedure should be performed earlier (eg, after three-drug maximum or</p>
+<p>with a poorly adherent patient).</p>
+<p>(CAI, carbonic anhydrase inhibitor.)</p>
+<p>FIGURE 65-1. Algorithm for the pharmacotherapy of open-angle glaucoma.</p>
+<p>744</p>
+<p>CH65.indd 744 20-11-2020 14:18:10</p>
+<p>745</p>
+<p>Glaucoma</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>65</p>
+<p>TABLE 65-2 Topical Drugs Used in the Treatment of Open-Angle Glaucoma</p>
+<p>Pharmacologic Common Brand</p>
+<p>Drug Properties Names/Generic Dose Form Strength (%) Usual Dosea Mechanism of Action</p>
+<p>β-Adrenergic blocking agents</p>
+<p>Betaxolol Relative β selective Generic Solution 0.5 One drop twice a day All reduce aqueous</p>
+<p>1</p>
+<p>production of ciliary body</p>
+<p>Betoptic-S Suspension 0.25 One drop twice a day</p>
+<p>Carteolol Nonselective, intrinsic Generic Solution 1 One drop twice a day</p>
+<p>sympathomimetic</p>
+<p>activity</p>
+<p>Levobunolol Nonselective Betagan/Generic Solution 0.25, 0.5 One drop twice a day</p>
+<p>Metipranolol Nonselective OptiPranolol Solution 0.3 One drop twice a day</p>
+<p>Timolol Nonselective Timoptic, Betimol, Solution 0.25, 0.5 One drop every</p>
+<p>Istalol/Generic day—one to two</p>
+<p>times a day</p>
+<p>Timoptic-XE/Generic Gelling 0.25, 0.5 One drop every daya</p>
+<p>solution</p>
+<p>Adrenergic agonists</p>
+<p>α-Adrenergic agonists</p>
+<p>2</p>
+<p>Apraclonidine Specific α-agonists Iopidine Solution 0.5, 1 One drop two to three Both reduce aqueous humor</p>
+<p>2</p>
+<p>times a day production; brimonidine</p>
+<p>known to also increase</p>
+<p>uveoscleral outflow; only</p>
+<p>brimonidine has primary</p>
+<p>indication</p>
+<p>(Continued )</p>
+<p>CH65.indd</p>
+<p>745</p>
+<p>20-11-2020</p>
+<p>14:18:10</p>
+<div class="table-container"><table><tr><th>TABLE 65-2 Topical Drugs Used in the Treatment of Open-Angle Glaucoma</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Pharmacologic
+Properties</td><td>Common Brand
+Names/Generic</td><td>Dose Form</td><td>Strength (%)</td><td>Usual Dosea</td><td>Mechanism of Action</td></tr><tr><td>β-Adrenergic blocking agents</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Betaxolol</td><td>Relative β selective
+1</td><td>Generic</td><td>Solution</td><td>0.5</td><td>One drop twice a day</td><td>All reduce aqueous
+production of ciliary body</td></tr><tr><td></td><td></td><td>Betoptic-S</td><td>Suspension</td><td>0.25</td><td>One drop twice a day</td><td></td></tr><tr><td>Carteolol</td><td>Nonselective, intrinsic
+sympathomimetic
+activity</td><td>Generic</td><td>Solution</td><td>1</td><td>One drop twice a day</td><td></td></tr><tr><td>Levobunolol</td><td>Nonselective</td><td>Betagan/Generic</td><td>Solution</td><td>0.25, 0.5</td><td>One drop twice a day</td><td></td></tr><tr><td>Metipranolol</td><td>Nonselective</td><td>OptiPranolol</td><td>Solution</td><td>0.3</td><td>One drop twice a day</td><td></td></tr><tr><td>Timolol</td><td>Nonselective</td><td>Timoptic, Betimol,
+Istalol/Generic</td><td>Solution</td><td>0.25, 0.5</td><td>One drop every
+day—one to two
+times a day</td><td></td></tr><tr><td></td><td></td><td>Timoptic-XE/Generic</td><td>Gelling
+solution</td><td>0.25, 0.5</td><td>One drop every daya</td><td></td></tr><tr><td>Adrenergic agonists</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>α-Adrenergic agonists
+2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Apraclonidine</td><td>Specific α-agonists
+2</td><td>Iopidine</td><td>Solution</td><td>0.5, 1</td><td>One drop two to three
+times a day</td><td>Both reduce aqueous humor
+production; brimonidine
+known to also increase
+uveoscleral outflow; only
+brimonidine has primary
+indication
+(Continued )</td></tr></table></div><h2>746 SECTION</h2>
+<p>12</p>
+<p>|</p>
+<p>Ophthalmic</p>
+<p>Disorders</p>
+<p>TABLE 65-2 Topical Drugs Used in the Treatment of Open-Angle Glaucoma (Continued )</p>
+<p>Pharmacologic Common Brand</p>
+<p>Drug Properties Names/Generic Dose Form Strength (%) Usual Dosea Mechanism of Action</p>
+<p>Brimonidine Alphagan P 0.1/Generic Solution 0.2, 0.15, 0.1 One drop two to three</p>
+<p>0.2, 0.15 times a day</p>
+<p>Cholinergic agonists direct acting</p>
+<p>Carbachol Direct and indirect acting Carboptic, Isopto Solution 1.5, 3 One drop two to three All increase aqueous</p>
+<p>Carbachol times a daya humor outflow through</p>
+<p>trabecular meshwork</p>
+<p>Pilocarpine Direct acting Isopto Carpine, Pilocar/ Solution 1, 2, 4 One drop two to three</p>
+<p>Generic times a daya</p>
+<p>One drop four</p>
+<p>times a day</p>
+<p>Cholinesterase inhibitor</p>
+<p>Echothiophate Indirect acting Phospholine Iodide Solution 0.125 Once or twice a day</p>
+<p>cholinesterase</p>
+<p>inhibitor</p>
+<p>Carbonic anhydrase inhibitors</p>
+<p>Topical</p>
+<p>Brinzolamide Carbonic anhydrase type Azopt Suspension 1 Two to three All reduce aqueous humor</p>
+<p>II inhibition times a day production of ciliary body</p>
+<p>Dorzolamide Trusopt/Generic Solution 2 Two to three</p>
+<p>times a day</p>
+<p>Systemic</p>
+<p>Acetazolamide Generic Tablet 125 mg, 250 mg 125–250 mg two to</p>
+<p>four times a day</p>
+<p>Injection 500 mg/vial 250–500 mg</p>
+<p>Diamox Sequels Capsule 500 mg 500 mg twice a day</p>
+<p>CH65.indd</p>
+<p>746</p>
+<p>20-11-2020</p>
+<p>14:18:11</p>
+<div class="table-container"><table><tr><th>Pharmacologic Common Brand
+Drug Properties Names/Generic Dose Form Strength (%) Usual Dosea Mechanism of Action</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Brimonidine</td><td></td><td>Alphagan P 0.1/Generic
+0.2, 0.15</td><td>Solution</td><td>0.2, 0.15, 0.1</td><td>One drop two to three
+times a day</td><td></td></tr><tr><td>Cholinergic agonists direct acting</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Carbachol</td><td>Direct and indirect acting</td><td>Carboptic, Isopto
+Carbachol</td><td>Solution</td><td>1.5, 3</td><td>One drop two to three
+times a daya</td><td>All increase aqueous
+humor outflow through
+trabecular meshwork</td></tr><tr><td>Pilocarpine</td><td>Direct acting</td><td>Isopto Carpine, Pilocar/
+Generic</td><td>Solution</td><td>1, 2, 4</td><td>One drop two to three
+times a daya</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>One drop four
+times a day</td><td></td></tr><tr><td>Cholinesterase inhibitor</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Echothiophate</td><td>Indirect acting
+cholinesterase
+inhibitor</td><td>Phospholine Iodide</td><td>Solution</td><td>0.125</td><td>Once or twice a day</td><td></td></tr><tr><td>Carbonic anhydrase inhibitors</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Topical</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Brinzolamide</td><td>Carbonic anhydrase type
+II inhibition</td><td>Azopt</td><td>Suspension</td><td>1</td><td>Two to three
+times a day</td><td>All reduce aqueous humor
+production of ciliary body</td></tr><tr><td>Dorzolamide</td><td></td><td>Trusopt/Generic</td><td>Solution</td><td>2</td><td>Two to three
+times a day</td><td></td></tr><tr><td>Systemic</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Acetazolamide</td><td></td><td>Generic</td><td>Tablet</td><td>125 mg, 250 mg</td><td>125–250 mg two to
+four times a day</td><td></td></tr><tr><td></td><td></td><td>Injection</td><td>500 mg/vial</td><td>250–500 mg</td><td></td><td></td></tr><tr><td></td><td></td><td>Diamox Sequels</td><td>Capsule</td><td>500 mg</td><td>500 mg twice a day</td><td></td></tr></table></div><p>747</p>
+<p>Glaucoma</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>65</p>
+<h2>Methazolamide Generic Tablet 25 mg, 50 mg 25–50 mg two to</h2>
+<p>three times a day</p>
+<p>Prostaglandin analogs</p>
+<p>Latanoprost Prostanoid agonist Xalatan/Generic Solution 0.005 One drop every night Increases aqueous</p>
+<p>uveoscleral outflow</p>
+<p>and to a lesser extent</p>
+<p>trabecular outflow</p>
+<p>Latanoprostene Bunod Prostanoid agonist Vyzulta Solution 0.024 One drop every night</p>
+<p>Bimatoprost Prostamide agonist Lumigan 0.01/ Solution 0.01, 0.03 One drop every night</p>
+<p>Generic 0.03</p>
+<p>Travoprost Prostanoid agonist Travatan Z/ Solution 0.004 One drop every night</p>
+<p>GenericTravoprost</p>
+<p>Tafluprost Prostanoid agonist Zioptan Preservative 0.0015 One drop every night</p>
+<p>free</p>
+<p>solution</p>
+<p>Rho kinase inhibitor</p>
+<p>Netarsudil Rho kinase inhibitor Rhopressa Solution 0.02 One drop every night</p>
+<p>Combinations</p>
+<p>Timolol−dorzolamide Cosopt Generic Solution Timolol 0.5/ One drop twice daily</p>
+<p>Dorzolamide 2</p>
+<p>Timolol−brimonidine Combigan Solution Timolol 0.5/ One drop twice daily</p>
+<p>Brimonidine 0.2</p>
+<p>Brinzolamide− Simbrinza Suspension Brinzolamide 1/ One drop three</p>
+<p>brimonidine Brimonidine 0.2 times daily</p>
+<p>Netarsudil-latanoprost Rocklatan Solution Netarsudil 0.02/ One drop every night</p>
+<p>Latanoprost 0.005</p>
+<p>aUse of nasolacrimal occlusion will increase the number of patients successfully treated with longer dosage intervals.</p>
+<p>CH65.indd</p>
+<p>747</p>
+<p>20-11-2020</p>
+<p>14:18:11</p>
+<div class="table-container"><table><tr><th>Methazolamide</th><th></th><th>Generic</th><th>Tablet</th><th>25 mg, 50 mg</th><th>25–50 mg two to
+three times a day</th><th></th></tr><tr><td>Prostaglandin analogs</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Latanoprost</td><td>Prostanoid agonist</td><td>Xalatan/Generic</td><td>Solution</td><td>0.005</td><td>One drop every night</td><td>Increases aqueous
+uveoscleral outflow
+and to a lesser extent
+trabecular outflow</td></tr><tr><td>Latanoprostene Bunod</td><td>Prostanoid agonist</td><td>Vyzulta</td><td>Solution</td><td>0.024</td><td>One drop every night</td><td></td></tr><tr><td>Bimatoprost</td><td>Prostamide agonist</td><td>Lumigan 0.01/
+Generic 0.03</td><td>Solution</td><td>0.01, 0.03</td><td>One drop every night</td><td></td></tr><tr><td>Travoprost</td><td>Prostanoid agonist</td><td>Travatan Z/
+GenericTravoprost</td><td>Solution</td><td>0.004</td><td>One drop every night</td><td></td></tr><tr><td>Tafluprost</td><td>Prostanoid agonist</td><td>Zioptan</td><td>Preservative
+free
+solution</td><td>0.0015</td><td>One drop every night</td><td></td></tr><tr><td>Rho kinase inhibitor</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Netarsudil</td><td>Rho kinase inhibitor</td><td>Rhopressa</td><td>Solution</td><td>0.02</td><td>One drop every night</td><td></td></tr><tr><td>Combinations</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Timolol−dorzolamide</td><td></td><td>Cosopt Generic</td><td>Solution</td><td>Timolol 0.5/
+Dorzolamide 2</td><td>One drop twice daily</td><td></td></tr><tr><td>Timolol−brimonidine</td><td></td><td>Combigan</td><td>Solution</td><td>Timolol 0.5/
+Brimonidine 0.2</td><td>One drop twice daily</td><td></td></tr><tr><td>Brinzolamide−
+brimonidine</td><td></td><td>Simbrinza</td><td>Suspension</td><td>Brinzolamide 1/
+Brimonidine 0.2</td><td>One drop three
+times daily</td><td></td></tr><tr><td>Netarsudil-latanoprost</td><td></td><td>Rocklatan</td><td>Solution</td><td>Netarsudil 0.02/
+Latanoprost 0.005</td><td>One drop every night</td><td></td></tr></table></div><h2>SECTION 12 | Ophthalmic Disorders</h2>
+<li>Monitoring therapy for POAG should be individualized. Assess IOP response every</li>
+<p>4–6 weeks initially, every 3–4 months after IOPs become acceptable, and more</p>
+<p>frequently if therapy is changed. Visual field and disc changes are monitored annu-</p>
+<h2>ally, unless glaucoma is unstable or worsening.</h2>
+<li>There is no specific target IOP because the correlation between IOP and optic nerve</li>
+<p>damage is poor. Typically, a reduction of 25%–30% is desired.</p>
+<li>The target IOP also depends on disease severity and is generally less than 21</li>
+<p>mm Hg (2.8 kPa) for early visual field loss or optic disc changes, with progressively</p>
+<p>lower targets for greater levels of glaucomatous damage. Targets as low as less than</p>
+<p>10 mm Hg (1.3 kPa) are desired for very advanced disease, continued damage at</p>
+<p>higher IOPs, normal-tension glaucoma, and pretreatment pressures in the low to</p>
+<p>middle teens.</p>
+<li>Monitor medication adherence because it is commonly inadequate and a cause of</li>
+<p>therapy failure.</p>
+<p>See Chapter 110, Glaucoma, authored by Richard G. Fiscella, Timothy S. Lesar, Ohoud A.</p>
+<p>Owaidhah, and Deepak P. Edward, for a more detailed discussion of this topic.</p>
+<p>748</p>
+<p>CH65.indd 748 20-11-2020 14:18:11</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>79. Chronic Obstructive Pulmonary Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>79. Chronic Obstructive Pulmonary Disease</h1>
+        </header>
+        <main>
+            <p>00</p>
+<li>Chronic obstructive pulmonary disease (COPD) is characterized by progressive</li>
+<p>airflow limitation that is not fully reversible. Two principal conditions (referred to</p>
+<p>as phenotypes) include:</p>
+<p>✓ Chronic bronchitis: Chronic or recurrent excess mucus secretion with cough that</p>
+<p>occurs on most days for at least 3 months of the year for at least 2 consecutive</p>
+<p>years.</p>
+<p>✓ Emphysema: Abnormal, permanent enlargement of the airspaces distal to the</p>
+<p>terminal bronchioles, accompanied by destruction of their walls, without fibrosis.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The most common cause of COPD is exposure to tobacco smoke. Inhalation of noxious</li>
+<p>particles and gases activates neutrophils, macrophages, and CD8+ lymphocytes,</p>
+<p>which release chemical mediators, including tumor necrosis factor-α, interleukin-8,</p>
+<p>and leukotriene B. Inflammatory cells and mediators lead to w idespread destruc-</p>
+<p>4</p>
+<p>tive changes in airways, pulmonary vasculature, and lung parenchyma, resulting in</p>
+<p>chronic airflow limitation.</p>
+<li>Oxidative stress and imbalance between aggressive and protective defense systems in</li>
+<p>the lungs (proteases and antiproteases) may also occur. Oxidants generated by ciga-</p>
+<p>rette smoke react with and damage proteins and lipids, contributing to cell and tissue</p>
+<p>damage. Oxidants also promote inflammation and exacerbate protease–antiprotease</p>
+<p>imbalance by inhibiting antiprotease activity.</p>
+<li>The protective antiprotease α-antitrypsin (AAT) inhibits protease enzymes, includ-</li>
+<p>1</p>
+<p>ing neutrophil elastase. AAT deficiency increases risk for premature emphysema.</p>
+<li>Inflammatory exudate in airways leads to increased number and size of goblet cells</li>
+<p>and mucus glands. Mucus secretion increases and ciliary motility is impaired. There</p>
+<p>is thickening of the smooth muscle and connective tissue in airways. Chronic inflam-</p>
+<p>mation leads to scarring, fibrosis, and airflow obstruction.</p>
+<li>Arterial blood gas (ABG) abnormalities result from impaired gas transfer due to</li>
+<p>parenchymal damage and loss of alveolar-capillary networks. Significant ABG</p>
+<p>changes are usually not present until airflow limitation is very severe. In such</p>
+<p>patients, hypoxemia (low arterial oxygen tension—PaO 45–60 mm Hg [6.0–8.0 kPa])</p>
+<p>2</p>
+<p>and hypercapnia (elevated arterial carbon dioxide tension—PaCO 50–60 mm Hg</p>
+<p>2</p>
+<p>[6.7–8.0 kPa]) can become chronic problems. Hypoxemia is initially associated</p>
+<p>with exertion but develops at rest as the disease progresses. Hypoxemia results from</p>
+<p>hypoventilation (V) of lung tissue relative to perfusion (Q) of the area. This low V/Q</p>
+<p>ratio progresses over several years, resulting in a consistent decline in PaO. As gas</p>
+<p>2</p>
+<p>exchange worsens with disease progression, patients may exhibit chronic hypercapnia</p>
+<p>and are referred to as CO retainers. In such patients, central respiratory response to</p>
+<p>2</p>
+<p>chronically increased PaCO is blunted. Serum pH is usually near normal because the</p>
+<p>2</p>
+<p>kidneys compensate by retaining bicarbonate. If acute respiratory distress develops</p>
+<p>(eg, as with pneumonia or COPD exacerbation with respiratory failure) PaCO may</p>
+<p>2</p>
+<p>rise sharply, resulting in worsening respiratory acidosis.</p>
+<li>Chronic hypoxemia and changes in pulmonary vasculature lead to increases in</li>
+<p>pulmonary pressures, especially during exercise. Sustained elevated pulmonary pres-</p>
+<p>sures can lead to right-sided heart failure (cor pulmonale) characterized by right</p>
+<p>ventricle hypertrophy in response to increased pulmonary vascular resistance.</p>
+<li>Chronic airflow obstruction leads to air trapping, resulting in thoracic hyperinflation</li>
+<p>and flattening of diaphragmatic muscles, making them less efficient muscles of ven-</p>
+<p>tilation and predisposing patients to muscle fatigue, especially during exacerbations.</p>
+<pre><code>Patients with thoracic hyperinflation have increased functional residual capacity</code></pre>
+<p>928</p>
+<h2>RETPAHC</h2>
+<p>79</p>
+<p>Chronic Obstructive</p>
+<p>Pulmonary Disease</p>
+<p>CH79.indd 928 20-11-2020 18:02:45</p>
+<div class="table-container"><table><tr><th>Chronic Obstructive
+Pulmonary Disease</th><th></th><th>79
+00</th><th>RETPAHC</th></tr></table></div><h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<p>(FRC), which is the amount of air left in the lungs after exhalation. Increased FRC</p>
+<p>limits the amount of air the patient can inhale to fill the lungs and shortens the inha-</p>
+<p>lation time, which may increase complaints of dyspnea.</p>
+<li>Loss of skeletal muscle mass and decline in overall health status can lead to isch-</li>
+<p>emic cardiovascular events, cachexia, weight loss, osteoporosis, anemia, and muscle</p>
+<p>wasting.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Initial symptoms include chronic cough and sputum production; patients may</li>
+<p>experience cough for several years before dyspnea develops. Dyspnea is worse with</p>
+<p>exercise and progressive over time, with decreased exercise tolerance or decline in</p>
+<p>physical activity. Chest tightness or wheezing may be present.</p>
+<li>Physical examination may be normal in milder stages. When airflow limitation</li>
+<p>progresses, patients may have shallow breathing, increased resting respiratory rate,</p>
+<p>“ barrel chest” due to lung hyperinflation, pursed lips during expiration, use of acces-</p>
+<p>sory respiratory muscles, and cyanosis of mucosal membranes.</p>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis is based on patient symptoms, history of exposure to risk factors such as</li>
+<p>tobacco smoke and occupational substances, and confirmation by pulmonary func-</p>
+<p>tion testing, such as spirometry.</p>
+<li>Spirometry assesses lung volumes and capacities. Forced vital capacity (FVC) is the</li>
+<p>total volume of air exhaled after maximal inhalation, and FEV is the total volume</p>
+<p>1</p>
+<p>of air exhaled in 1 second. Postbronchodilator spirometry results should be used to</p>
+<pre><code>assess lung function in patients with COPD. FEV is measured 10–15 minutes after</code></pre>
+<p>1</p>
+<p>inhalation of a short-acting β-agonist or 30–45 minutes after a short-acting anti-</p>
+<p>2</p>
+<p>cholinergic or a combination of the two agents. Airflow limitation is confirmed by a</p>
+<p>postbronchodilator FEV/FVC &lt;70% (0.70).</p>
+<li>The Global Initiative for 1 Chronic Obstructive Lung Disease (GOLD) guidelines sug-</li>
+<p>gest a four-grade classification of airflow limitation based on the FEV/FVC &lt;70%</p>
+<p>1</p>
+<p>(0.70), measured FEV compared to predicted FEV (%), and presence of symptoms:</p>
+<p>1 1</p>
+<p>(1) mild, (2) moderate, (3), severe, or (4) very severe.</p>
+<li>Recommended patient assessment questionnaires to assess dyspnea and other</li>
+<p>measures of health status include the COPD Assessment Test (CAT), modified</p>
+<p>Medical Research Council (mMRC) Dyspnea Questionnaire, and the COPD Control</p>
+<p>Questionnaire (CCQ).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Prevent or slow disease progression, relieve symptoms, improve</li>
+<p>exercise tolerance, improve overall health status, prevent and treat exacerbations,</p>
+<p>prevent and treat complications, and reduce morbidity and mortality.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Educate patients about their disease, treatment plans, and strategies to slow progres-</li>
+<p>sion and prevent complications.</p>
+<li>Smoking cessation is the most important intervention to prevent development and</li>
+<p>progression of COPD. Reducing exposure to occupational dust and fumes as well as</p>
+<p>other environmental toxins is also important.</p>
+<li>Pulmonary rehabilitation programs include exercise training, breathing exercises,</li>
+<p>optimal medical treatment, psychosocial support, and health education.</p>
+<li>Administer the influenza vaccine annually during each influenza season. The CDC</li>
+<p>recommends giving the 23-valent pneumococcal polysaccharide vaccine (PPSV23)</p>
+<p>for people from ages 2 to 64 who have chronic lung disease, smokers over the age</p>
+<p>929</p>
+<p>CH79.indd 929 20-11-2020 18:02:45</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<p>of 18, and all people older than 65 years. The GOLD guidelines recommend the</p>
+<p>pneumococcal vaccine for COPD patients age ≥65 years of age and for patients</p>
+<p>&lt;65 years old with comorbidities or FEV &lt;40% predicted.</p>
+<li>Once patients are stabilized as outpati 1 ents and pharmacotherapy is optimized,</li>
+<p>institute long-term oxygen therapy if either of the following conditions is docu-</p>
+<p>mented twice in a 3-week period: (1) resting PaO &lt;5 mm Hg (7.3 kPa) or SaO &lt;88%</p>
+<p>2 2</p>
+<p>(0.88) with or without hypercapnia, or (2) resting PaO 55–60 mm Hg (7.3–8.0 kPa)</p>
+<p>2</p>
+<p>or SaO &lt;88% (0.88) with evidence of right-sided heart failure, polycythemia, or</p>
+<p>2</p>
+<p>pulmonary hypertension. Oxygen can be delivered by nasal cannula at 1–2 L/min,</p>
+<p>providing 24%–28% (0.24–0.28) fraction of inspired oxygen (FiO) with a goal to</p>
+<p>2</p>
+<p>raise PaO above 60 mm Hg (8.0 kPa).</p>
+<p>2</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>No COPD medication has been conclusively shown to slow lung function decline</li>
+<p>or prolong survival. The GOLD guidelines recommend that a combined “ABCD”</p>
+<p>classification system based on symptom severity and risk of future exacerbations</p>
+<p>be used as a stepwise approach to pharmacotherapy rather than FEV measure-</p>
+<p>1</p>
+<p>ments (Table 79-1). Symptom assessment should be measured at baseline and then</p>
+<p>during routine visits using CAT or mMRC. Defined cut points for patients exhibit-</p>
+<p>ing “more symptoms” and “less symptoms” have been established for CAT and</p>
+<p>mMRC. Frequency of exacerbations is assessed by reviewing exacerbation history</p>
+<p>for the past 12 months. Patients are assigned to an ABCD category based on these</p>
+<p>two assessments. Patients with at least two exacerbations in the last 12 months,</p>
+<p>or one exacerbation requiring hospitalization, are considered high risk for future</p>
+<p>TABLE 79-1 Recommended Initial and Escalation Pharmacotherapy for Stable COPD</p>
+<p>Patient Category Initial Therapy Escalation Therapy</p>
+<p>A (less symptoms, Offer either short- Continue therapy if beneficial or if</p>
+<p>less exacerbation or long-acting re-education needed</p>
+<p>risk) bronchodilator, Stop therapy if intolerable adverse effects</p>
+<p>depending on and switch to alternate class for symptom</p>
+<p>symptoms control</p>
+<p>Combine bronchodilator classes for additional</p>
+<p>symptom control</p>
+<p>If patient experiences exacerbations, reassess</p>
+<p>goals (ie, low vs. high risk for exacerbation)</p>
+<p>and follow escalation therapy as outlined</p>
+<p>in category C</p>
+<p>B (more symptoms, Start LAMA or LABA Continue therapy if beneficial or if</p>
+<p>less exacerbation for symptom re-education needed</p>
+<p>risk) control Add long-acting bronchodilator if persistent</p>
+<p>symptoms on monotherapy (LAMA/LABA)</p>
+<p>If dual bronchodilators do not improve</p>
+<p>symptoms, consider stepping back to</p>
+<p>monotherapy AFTER assessing adherence</p>
+<p>and inhaler technique</p>
+<p>If patient experiences exacerbations, reassess</p>
+<p>goals (ie, low vs. high risk for exacerbation)</p>
+<p>and follow escalation therapy as outlined</p>
+<p>in category C</p>
+<p>(Continued )</p>
+<p>930</p>
+<p>CH79.indd 930 20-11-2020 18:02:45</p>
+<div class="table-container"><table><tr><th>TABLE 79-1 Recommended Initial and Escalation Pharmacotherapy for Stable COPD</th><th></th><th></th></tr><tr><td>Patient Category</td><td>Initial Therapy</td><td>Escalation Therapy</td></tr><tr><td>A (less symptoms,
+less exacerbation
+risk)</td><td>Offer either short-
+or long-acting
+bronchodilator,
+depending on
+symptoms</td><td>Continue therapy if beneficial or if
+re-education needed
+Stop therapy if intolerable adverse effects
+and switch to alternate class for symptom
+control
+Combine bronchodilator classes for additional
+symptom control
+If patient experiences exacerbations, reassess
+goals (ie, low vs. high risk for exacerbation)
+and follow escalation therapy as outlined
+in category C</td></tr><tr><td>B (more symptoms,
+less exacerbation
+risk)</td><td>Start LAMA or LABA
+for symptom
+control</td><td>Continue therapy if beneficial or if
+re-education needed
+Add long-acting bronchodilator if persistent
+symptoms on monotherapy (LAMA/LABA)
+If dual bronchodilators do not improve
+symptoms, consider stepping back to
+monotherapy AFTER assessing adherence
+and inhaler technique
+If patient experiences exacerbations, reassess
+goals (ie, low vs. high risk for exacerbation)
+and follow escalation therapy as outlined
+in category C
+(Continued )</td></tr></table></div><h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<p>TABLE 79-1 Recommended Initial and Escalation Pharmacotherapy for Stable COPD(Continued )</p>
+<p>Patient Category Initial Therapy Escalation Therapy</p>
+<p>C (less symptoms, Start long-acting Continue therapy if beneficial or if re-</p>
+<p>more bronchodilator education needed</p>
+<p>exacerbation for exacerbation Add long-acting bronchodilator if persistent</p>
+<p>risk) prevention; LAMA is symptoms on monotherapy (LAMA/LABA)</p>
+<p>preferred over LABA</p>
+<p>for initial therapy If persistent exacerbations on long-acting</p>
+<p>bronchodilator monotherapy and eosinophil</p>
+<p>count &lt;300/µL (0.3 × 109/L), add additional</p>
+<p>long-acting bronchodilator (LAMA/LABA);</p>
+<p>dual bronchodilators are preferred due to</p>
+<p>better efficacy and lower risk of pneumonia</p>
+<p>If persistent exacerbations on long-acting</p>
+<p>bronchodilator monotherapy and eosinophil</p>
+<p>count ≥300/µL (0.3 × 109/L), consider</p>
+<p>starting ICS/LABA instead of LAMA/LABA</p>
+<p>If persistent exacerbations on dual LAMA/</p>
+<p>LABA and eosinophil count ≥100/µL</p>
+<p>(0.1 × 109/L), consider adding ICS</p>
+<p>If persistent exacerbations on dual LAMA/</p>
+<p>LABA and eosinophil count &lt;100/µL</p>
+<p>(0.1 × 109/L), consider roflumilast for</p>
+<p>patients with FEV &lt;50% (0.50) or</p>
+<p>1</p>
+<p>azithromycin daily (nonsmokers or former</p>
+<p>smokers only)</p>
+<p>If persistent exacerbations on triple therapy</p>
+<p>(LAMA/LABA/ICS), consider roflumilast</p>
+<p>for patients with FEV&lt;50% (0.50) or</p>
+<p>1</p>
+<p>azithromycin daily (nonsmokers or former</p>
+<p>smokers only)</p>
+<p>If recurrent exacerbations or pneumonia,</p>
+<p>consider withdrawal of ICS over 12 weeks</p>
+<p>D (more Start long-acting Continue therapy if beneficial or if</p>
+<p>symptoms, bronchodilator re-education needed</p>
+<p>more for exacerbation If persistent exacerbations, follow escalation</p>
+<p>exacerbation prevention; LAMA is therapy as outlined in category C</p>
+<p>risk) preferred over LABA</p>
+<p>for initial therapy If recurrent exacerbations or pneumonia,</p>
+<p>consider withdrawal of ICS over 12 weeks</p>
+<p>If highly symptomatic</p>
+<p>(ie, CAT &gt;20),</p>
+<p>consider dual</p>
+<p>long-acting</p>
+<p>bronchodilators</p>
+<h2>(LAMA/LABA)</h2>
+<p>If blood eosinophil</p>
+<p>count ≥300/µL</p>
+<p>(0.3 × 109/L), consider</p>
+<p>starting ICS/LABA</p>
+<p>instead of LAMA/LABA</p>
+<p>CAT, COPD Assessment Test; FEV, forced expiratory volume in 1 second; ICS, inhaled corticosteroid; LABA,</p>
+<p>1</p>
+<p>long-acting β-agonist; LAMA, long-acting muscarinic antagonist; mMRC, modified Medical Research</p>
+<p>Council questionnaire; SABA, short-acting β-agonist; SAMA, short-acting muscarinic antagonist.</p>
+<p>931</p>
+<p>CH79.indd 931 20-11-2020 18:02:46</p>
+<div class="table-container"><table><tr><th>TABLE 79-1 Recommended Initial and Escalation Pharmacotherapy for Stable COPD(Continued )</th><th></th><th></th></tr><tr><td>Patient Category</td><td>Initial Therapy</td><td>Escalation Therapy</td></tr><tr><td>C (less symptoms,
+more
+exacerbation
+risk)</td><td>Start long-acting
+bronchodilator
+for exacerbation
+prevention; LAMA is
+preferred over LABA
+for initial therapy</td><td>Continue therapy if beneficial or if re-
+education needed
+Add long-acting bronchodilator if persistent
+symptoms on monotherapy (LAMA/LABA)
+If persistent exacerbations on long-acting
+bronchodilator monotherapy and eosinophil
+count &lt;300/µL (0.3 × 109/L), add additional
+long-acting bronchodilator (LAMA/LABA);
+dual bronchodilators are preferred due to
+better efficacy and lower risk of pneumonia
+If persistent exacerbations on long-acting
+bronchodilator monotherapy and eosinophil
+count ≥300/µL (0.3 × 109/L), consider
+starting ICS/LABA instead of LAMA/LABA
+If persistent exacerbations on dual LAMA/
+LABA and eosinophil count ≥100/µL
+(0.1 × 109/L), consider adding ICS
+If persistent exacerbations on dual LAMA/
+LABA and eosinophil count &lt;100/µL
+(0.1 × 109/L), consider roflumilast for
+patients with FEV &lt;50% (0.50) or
+1
+azithromycin daily (nonsmokers or former
+smokers only)
+If persistent exacerbations on triple therapy
+(LAMA/LABA/ICS), consider roflumilast
+for patients with FEV&lt;50% (0.50) or
+1
+azithromycin daily (nonsmokers or former
+smokers only)
+If recurrent exacerbations or pneumonia,
+consider withdrawal of ICS over 12 weeks</td></tr><tr><td>D (more
+symptoms,
+more
+exacerbation
+risk)</td><td>Start long-acting
+bronchodilator
+for exacerbation
+prevention; LAMA is
+preferred over LABA
+for initial therapy
+If highly symptomatic
+(ie, CAT &gt;20),
+consider dual
+long-acting
+bronchodilators
+(LAMA/LABA)
+If blood eosinophil
+count ≥300/µL
+(0.3 × 109/L), consider
+starting ICS/LABA
+instead of LAMA/LABA</td><td>Continue therapy if beneficial or if
+re-education needed
+If persistent exacerbations, follow escalation
+therapy as outlined in category C
+If recurrent exacerbations or pneumonia,
+consider withdrawal of ICS over 12 weeks</td></tr><tr><td>CAT, COPD Assessment Test; FEV, forced expiratory volume in 1 second; ICS, inhaled corticosteroid; LABA,
+1
+long-acting β-agonist; LAMA, long-acting muscarinic antagonist; mMRC, modified Medical Research
+Council questionnaire; SABA, short-acting β-agonist; SAMA, short-acting muscarinic antagonist.</td><td></td><td></td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>exacerbations (category C or D). Guidelines recommend that initial and escalation</p>
+<p>therapy be based on ABCD category classification.</p>
+<li>Bronchodilators are the mainstay of drug therapy; classes include short- and long-</li>
+<p>acting β-agonists, short- and long-acting muscarinic antagonists (anticholinergics), and</p>
+<p>2</p>
+<p>methylxanthines. Short-acting inhaled bronchodilators relieve symptoms (eg, dyspnea)</p>
+<p>and increase exercise tolerance. Long-acting inhaled bronchodilators relieve symptoms,</p>
+<p>reduce exacerbation frequency, and improve quality of life and health status. Broncho-</p>
+<p>dilators do not significantly improve measurements of expiratory airflow such as FEV.</p>
+<p>1</p>
+<p>Short-Acting Bronchodilators</p>
+<li>Either a short- or long-acting bronchodilator is recommended initially for patients</li>
+<p>with occasional symptoms (Table 79-1, category A). Short-acting bronchodilators are</p>
+<p>also recommended for all patients (categories A–D) as rescue or as-needed therapy</p>
+<p>to manage symptoms. Choices among short-acting bronchodilators include short-</p>
+<p>acting β-agonists (SABAs) or short-acting muscarinic antagonists (SAMAs). Both</p>
+<p>2</p>
+<p>drug classes have a relatively rapid onset of action, relieve symptoms to a similar</p>
+<pre><code>degree, and improve exercise tolerance and lung function. Short-acting bronchodila-</code></pre>
+<p>tors do not reduce the frequency or severity of COPD exacerbations. If a patient does</p>
+<p>not achieve adequate symptom control with one agent, combining a SABA with a</p>
+<p>SAMA is reasonable.</p>
+<li>Short-acting β-agonists (SABAs) stimulate adenyl cyclase to increase formation of</li>
+<p>2</p>
+<p>cyclic adenosine monophosphate (cAMP), which mediates relaxation of bronchial</p>
+<p>smooth muscle. They may also improve mucociliary clearance. SABAs have a rapid</p>
+<p>onset of effect; they cause only a small improvement in FEV acutely but may still</p>
+<p>1</p>
+<p>improve symptoms and exercise tolerance. The SABA choices include albuterol and</p>
+<p>levalbuterol (Table 79-2). Albuterol is most frequently used and is a racemic mixture</p>
+<h2>TABLE 79-2 Select Medications Used for Treatment of COPDa</h2>
+<p>Generic (Brand) Name Dosage Form Dosage Frequencyb</p>
+<p>Short-acting β-agonists</p>
+<p>2</p>
+<p>Albuterol sulfate (Proventil HFA, Ventolin HFA, MDI Every 4–6 hrs PRN</p>
+<p>Proair HFA)</p>
+<p>Albuterol sulfate (Proair RespiClick) DPI Every 4–6 hrs PRN</p>
+<p>Levalbuterol hydrochloride (Xopenex, generic) NEB solution Every 6–8 hrs PRN</p>
+<p>Levalbuterol tartrate (Xopenex HFA) MDI Every 4–6 hrs PRN</p>
+<p>Short-acting muscarinic antagonists (SAMAs)</p>
+<p>Ipratropium bromide (Atrovent HFA) MDI 4 times/day PRN</p>
+<p>Ipratropium bromide (generic) NEB solution 3–4 times/day PRN</p>
+<p>Long-acting β-agonists (LABAs)</p>
+<p>2</p>
+<p>Arformoterol tartrate (Brovana) NEB solution Every 12 hrs</p>
+<p>Formoterol fumarate (Perforomist) NEB solution Every 12 hrs</p>
+<p>Indacaterol maleate (Arcapta Neohaler) DPI Once daily</p>
+<p>Olodaterol hydrochloride (Striverdi Respimat) SMI Once daily</p>
+<p>Salmeterol xinafoate (Serevent Diskus) DPI Twice daily</p>
+<p>Long-acting muscarinic antagonists (LAMAs)</p>
+<p>Aclidinium bromide (Tudorza Pressair) DPI Twice daily</p>
+<p>Tiotropium bromide (Spiriva Respimat) SMI Once daily</p>
+<p>Tiotropium bromide (Spiriva Handihaler) DPI Once daily</p>
+<p>(Continued )</p>
+<p>932</p>
+<p>CH79.indd 932 20-11-2020 18:02:46</p>
+<div class="table-container"><table><tr><th>TABLE 79-2 Select Medications Used for Treatment of COPDa</th><th></th><th></th></tr><tr><td>Generic (Brand) Name</td><td>Dosage Form</td><td>Dosage Frequencyb</td></tr><tr><td>Short-acting β-agonists
+2</td><td></td><td></td></tr><tr><td>Albuterol sulfate (Proventil HFA, Ventolin HFA,
+Proair HFA)</td><td>MDI</td><td>Every 4–6 hrs PRN</td></tr><tr><td>Albuterol sulfate (Proair RespiClick)</td><td>DPI</td><td>Every 4–6 hrs PRN</td></tr><tr><td>Levalbuterol hydrochloride (Xopenex, generic)</td><td>NEB solution</td><td>Every 6–8 hrs PRN</td></tr><tr><td>Levalbuterol tartrate (Xopenex HFA)</td><td>MDI</td><td>Every 4–6 hrs PRN</td></tr><tr><td>Short-acting muscarinic antagonists (SAMAs)</td><td></td><td></td></tr><tr><td>Ipratropium bromide (Atrovent HFA)</td><td>MDI</td><td>4 times/day PRN</td></tr><tr><td>Ipratropium bromide (generic)</td><td>NEB solution</td><td>3–4 times/day PRN</td></tr><tr><td>Long-acting β-agonists (LABAs)
+2</td><td></td><td></td></tr><tr><td>Arformoterol tartrate (Brovana)</td><td>NEB solution</td><td>Every 12 hrs</td></tr><tr><td>Formoterol fumarate (Perforomist)</td><td>NEB solution</td><td>Every 12 hrs</td></tr><tr><td>Indacaterol maleate (Arcapta Neohaler)</td><td>DPI</td><td>Once daily</td></tr><tr><td>Olodaterol hydrochloride (Striverdi Respimat)</td><td>SMI</td><td>Once daily</td></tr><tr><td>Salmeterol xinafoate (Serevent Diskus)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>Long-acting muscarinic antagonists (LAMAs)</td><td></td><td></td></tr><tr><td>Aclidinium bromide (Tudorza Pressair)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>Tiotropium bromide (Spiriva Respimat)</td><td>SMI</td><td>Once daily</td></tr><tr><td>Tiotropium bromide (Spiriva Handihaler)</td><td>DPI</td><td>Once daily
+(Continued )</td></tr></table></div><h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<p>TABLE 79-2 Select Medications Used for Treatment of COPDa(Continued )</p>
+<p>Generic (Brand) Name Dosage Form Dosage Frequencyb</p>
+<p>Glycopyrrolate (Lonhala Magnair) NEB solution Twice daily</p>
+<p>Glycopyrrolate (Seebri Neohaler) DPI Twice daily</p>
+<p>Umeclidinium bromide (Incruse Ellipta) DPI Once daily</p>
+<p>Inhaled corticosteroids</p>
+<pre><code>Beclomethasone dipropionate (Qvar 40, 80) MDI Twice daily</code></pre>
+<p>Budesonide (Pulmicort Flexhaler) DPI Twice daily</p>
+<p>Flunisolide (Aerospan HFA) MDI Twice daily</p>
+<p>Fluticasone propionate (Flovent HFA) MDI Twice daily</p>
+<p>Mometasone furoate (Asmanex Twisthaler) DPI Twice daily</p>
+<p>Combination inhalers</p>
+<p>SABA/SAMA: albuterol sulfate + ipratropium NEB solution 4–6 times/day PRN</p>
+<p>bromide (Duoneb, generic)</p>
+<p>SABA/SAMA: albuterol sulfate + ipratropium SMI 4–6 times/day PRN</p>
+<p>bromide (Combivent Respimat)</p>
+<p>LAMA/LABA: umeclidinium bromide + DPI Once daily</p>
+<p>vilanterol trifenatate (Anoro Ellipta)</p>
+<p>LAMA/LABA: tiotropium bromide + olodaterol SMI Once daily</p>
+<p>hydrochloride (Stiolto Respimat)</p>
+<p>LAMA/LABA: glycopyrrolate + indacaterol DPI Twice daily</p>
+<p>maleate (Utibron Neohaler)</p>
+<p>LAMA/LABA: glycopyrrolate + formoterol MDI Twice daily</p>
+<p>fumarate (Bevespi Aerosphere)</p>
+<p>ICS/LABA: budesonide + formoterol fumarate MDI Twice daily</p>
+<p>dehydrate (Symbicort)</p>
+<p>ICS/LABA: fluticasone furoate + vilanterol DPI Once daily</p>
+<p>trifenatate (Breo Ellipta)</p>
+<p>ICS/LABA: fluticasone propionate + salmeterol DPI Twice daily</p>
+<p>xinafoate (Advair Diskus, Airduo RespiClick)</p>
+<p>ICS/LABA: fluticasone propionate + salmeterol MDI Twice daily</p>
+<p>xinafoate (Advair HFA)</p>
+<p>ICS/LABA: mometasone furoate + formoterol MDI Twice daily</p>
+<p>fumarate (Dulera)</p>
+<p>ICS/LAMA/LABA: fluticasone furoate + DPI Once daily</p>
+<p>umeclidinium bromide +vilanterol</p>
+<p>trifenatate (Trelegy Ellipta)</p>
+<p>Oral medications</p>
+<h2>Roflumilast (Daliresp) Oral tablets Once daily</h2>
+<p>Theophylline (Theo-24, generic) Oral tablets, Once or twice daily</p>
+<p>capsules (extended release)</p>
+<p>aNot all medications are FDA-approved for treatment of COPD.</p>
+<p>bConsult official product labeling or the medical literature for dosages used for COPD treatment.</p>
+<p>DPI, dry power inhaler; hrs, hours; ICS, inhaled corticosteroid; inh, inhalations; LABA, long-acting</p>
+<p>β-agonist; LAMA, long-acting muscarinic antagonist; MDI, metered-dose inhaler; NEB, nebulized;</p>
+<p>2</p>
+<p>PRN, as needed; SABA, short-acting β-agonist; SAMA, short-acting muscarinic antagonist; SMI,</p>
+<p>2</p>
+<p>soft mist inhaler.</p>
+<p>933</p>
+<p>CH79.indd 933 20-11-2020 18:02:46</p>
+<div class="table-container"><table><tr><th>TABLE 79-2 Select Medications Used for Treatment of COPDa(Continued )</th><th></th><th></th></tr><tr><td>Generic (Brand) Name</td><td>Dosage Form</td><td>Dosage Frequencyb</td></tr><tr><td>Glycopyrrolate (Lonhala Magnair)</td><td>NEB solution</td><td>Twice daily</td></tr><tr><td>Glycopyrrolate (Seebri Neohaler)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>Umeclidinium bromide (Incruse Ellipta)</td><td>DPI</td><td>Once daily</td></tr><tr><td>Inhaled corticosteroids</td><td></td><td></td></tr><tr><td>Beclomethasone dipropionate (Qvar 40, 80)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>Budesonide (Pulmicort Flexhaler)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>Flunisolide (Aerospan HFA)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>Fluticasone propionate (Flovent HFA)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>Mometasone furoate (Asmanex Twisthaler)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>Combination inhalers</td><td></td><td></td></tr><tr><td>SABA/SAMA: albuterol sulfate + ipratropium
+bromide (Duoneb, generic)</td><td>NEB solution</td><td>4–6 times/day PRN</td></tr><tr><td>SABA/SAMA: albuterol sulfate + ipratropium
+bromide (Combivent Respimat)</td><td>SMI</td><td>4–6 times/day PRN</td></tr><tr><td>LAMA/LABA: umeclidinium bromide +
+vilanterol trifenatate (Anoro Ellipta)</td><td>DPI</td><td>Once daily</td></tr><tr><td>LAMA/LABA: tiotropium bromide + olodaterol
+hydrochloride (Stiolto Respimat)</td><td>SMI</td><td>Once daily</td></tr><tr><td>LAMA/LABA: glycopyrrolate + indacaterol
+maleate (Utibron Neohaler)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>LAMA/LABA: glycopyrrolate + formoterol
+fumarate (Bevespi Aerosphere)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>ICS/LABA: budesonide + formoterol fumarate
+dehydrate (Symbicort)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>ICS/LABA: fluticasone furoate + vilanterol
+trifenatate (Breo Ellipta)</td><td>DPI</td><td>Once daily</td></tr><tr><td>ICS/LABA: fluticasone propionate + salmeterol
+xinafoate (Advair Diskus, Airduo RespiClick)</td><td>DPI</td><td>Twice daily</td></tr><tr><td>ICS/LABA: fluticasone propionate + salmeterol
+xinafoate (Advair HFA)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>ICS/LABA: mometasone furoate + formoterol
+fumarate (Dulera)</td><td>MDI</td><td>Twice daily</td></tr><tr><td>ICS/LAMA/LABA: fluticasone furoate +
+umeclidinium bromide +vilanterol
+trifenatate (Trelegy Ellipta)</td><td>DPI</td><td>Once daily</td></tr><tr><td>Oral medications</td><td></td><td></td></tr><tr><td>Roflumilast (Daliresp)</td><td>Oral tablets</td><td>Once daily</td></tr><tr><td>Theophylline (Theo-24, generic)</td><td>Oral tablets,
+capsules</td><td>Once or twice daily
+(extended release)</td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>of (R)-albuterol (responsible for bronchodilation) and (S)-albuterol (which has no</p>
+<p>therapeutic effect). Levalbuterol is a single-isomer formulation of (R)-albuterol that</p>
+<p>offers no clear efficacy or safety advantages over albuterol, and it is more expensive.</p>
+<p>Inhalation is the preferred route for SABAs, and administration via metered-dose or</p>
+<p>dry powder inhalers (MDIs, DPIs) is at least as effective as nebulization therapy and</p>
+<p>is more convenient and less costly. Inhaled SABAs are generally well tolerated; they</p>
+<p>can cause sinus tachycardia and rhythm disturbances rarely in predisposed patients.</p>
+<p>Skeletal muscle tremors can occur initially but generally subside as tolerance devel-</p>
+<p>ops. Older patients may be more sensitive and experience palpitations, tremors, and</p>
+<p>“jittery” feelings.</p>
+<li>Short-acting muscarinic antagonists (SAMAs) produce bronchodilation by inhibit-</li>
+<p>ing muscarinic receptor subtypes M, M, and M in bronchial smooth muscle and</p>
+<p>1 2 3</p>
+<p>mucus glands. This blocks acetylcholine, reducing cyclic guanosine monophosphate</p>
+<p>(cGMP), which normally acts to constrict bronchial smooth muscle, and decreasing</p>
+<p>mucus secretion. Ipratropium bromide is the most commonly prescribed SAMA in</p>
+<pre><code>the United States (Table 79-2). Improvements in pulmonary function are similar to</code></pre>
+<p>inhaled SABAs, although ipratropium has a slower onset of action (15–20 m inutes</p>
+<p>vs. 5 minutes for albuterol) and more prolonged effect. Because of its slower onset,</p>
+<p>ipratropium may be less suitable for as-needed use but is often prescribed in this</p>
+<p>manner. In contrast to albuterol, patients may experience additional symptom</p>
+<p>improvement with a larger number of inhalations (eg, 6 puffs every 6 hours, maximum</p>
+<p>24 puffs/day), whereas no additional improvement occurs with more f requent</p>
+<p>use than every 6 hours. The most frequent patient complaints are dry mouth,</p>
+<p>nausea, and occasionally metallic taste. Because it is poorly absorbed systemically,</p>
+<p>anticholinergic side effects are uncommon (eg, blurred vision, constipation, urinary</p>
+<p>retention, n ausea, and tachycardia). Inhaled anticholinergics may rarely precipitate</p>
+<p>narrow-angle glaucoma symptoms.</p>
+<p>Long-Acting Bronchodilators</p>
+<li>Long-acting bronchodilators are recommended for patients with persistent symptoms</li>
+<p>or in whom short-acting therapies do not provide adequate relief (Table 79-1, category</p>
+<p>B). Long-acting agents are also recommended for patients at high risk for exacerba-</p>
+<p>tion (categories C and D). Therapy can be administered as an inhaled long-acting</p>
+<p>β-agonist (LABA) or muscarinic antagonist (LAMA). Compared with short-acting</p>
+<p>2</p>
+<p>agents, long-acting bronchodilators are more convenient for patients with persistent</p>
+<pre><code>symptoms and are superior in improving lung function, relieving symptoms, reduc-</code></pre>
+<p>ing exacerbation frequency and need for hospitalization, and improving quality of</p>
+<p>life. LABAs and LAMAs are equally effective in managing symptoms, but LAMAs</p>
+<p>are more effective for preventing exacerbations and should be considered first-line</p>
+<p>monotherapy for patients at high risk for exacerbation. Treatment selection should</p>
+<p>consider individual patient response, tolerability, adherence, and economic factors.</p>
+<li>The available LABAs differ primarily by dosing frequency and device type</li>
+<p>(Table 79-2). Arformoterol, formoterol, indacaterol, and olodaterol have an onset</p>
+<p>of action similar to albuterol (&lt;5 minutes), whereas salmeterol has a slower onset</p>
+<p>(15–20 minutes); however, none of these agents are recommended for acute relief of</p>
+<p>COPD symptoms. Vilanterol is available in the United States only in combination</p>
+<p>with an inhaled corticosteroid (fluticasone) or LAMA (umeclidinium). There is no</p>
+<p>dose titration for any of these agents; the starting dose is the effective and recom-</p>
+<p>mended dose for all patients.</p>
+<li>The available LAMAs differ in dosing frequency and device type (Table 79-2). They</li>
+<p>are more selective than ipratropium at blocking muscarinic receptors and dissoci-</p>
+<p>ate slowly from M receptors, resulting in prolonged bronchodilation. Aclidinium,</p>
+<p>3</p>
+<p>glycopyrrolate, and umeclidinium have a faster onset of action (5–15 minutes) than</p>
+<p>tiotropium (80 minutes); however, none of these agents are recommended for acute</p>
+<p>relief of symptoms. There is no dose titration for any of these agents; the starting dose</p>
+<p>is the effective and recommended dose for all patients.</p>
+<p>934</p>
+<p>CH79.indd 934 20-11-2020 18:02:46</p>
+<h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<p>Combination Muscarinic Antagonists and β-Agonists</p>
+<p>2</p>
+<li>Combination bronchodilator regimens are often used as symptoms worsen over time.</li>
+<p>Combining bronchodilators with different mechanisms of action allows use of the</p>
+<p>lowest possible effective doses and reduces potential adverse effects from individual</p>
+<p>agents. Short-acting bronchodilators may be combined for patients experiencing</p>
+<p>persistent symptoms, although step-up to long-acting bronchodilator monotherapy</p>
+<h2>is usually preferred (Table 79-1).</h2>
+<li>Guidelines recommend combining long-acting bronchodilators (LAMA/LABA) for</li>
+<p>patients who have persistent symptoms or recurrent exacerbations on bronchodilator</p>
+<pre><code>monotherapy. The combination provides significant improvement in lung function,</code></pre>
+<p>symptoms, and quality-of-life measures compared with LABA or LAMA monother-</p>
+<p>apy. In addition, dual long-acting bronchodilator therapy decreases the frequency of</p>
+<p>moderate-to-severe exacerbations compared to either LAMA or LABA monotherapy.</p>
+<p>Methylxanthines</p>
+<li>Theophylline and aminophylline may produce bronchodilation by several mecha-</li>
+<p>nisms, including inhibition of phosphodiesterase, thereby increasing cAMP levels.</p>
+<li>Chronic theophylline use in COPD may improve lung function and gas exchange.</li>
+<p>Subjectively, theophylline reduces dyspnea, increases exercise tolerance, and improves</p>
+<p>respiratory drive.</p>
+<li>Methylxanthines have a limited role in COPD therapy because of the availability</li>
+<p>of LABAs and LAMAs as well as significant methylxanthine drug interactions and</p>
+<p>interpatient variability in dosage requirements. Theophylline may be considered in</p>
+<p>patients intolerant of or unable to use inhaled bronchodilators.</p>
+<li>Sustained-release theophylline preparations are most appropriate for long-term</li>
+<p>COPD management; they improve adherence and achieve more consistent serum</p>
+<p>concentrations than rapid-release products. Caution should be used in switching</p>
+<p>from one sustained-release preparation to another because of variability in sustained-</p>
+<p>release characteristics.</p>
+<li>Initiate theophylline therapy with 200 mg twice daily and titrate upward every 3–5</li>
+<p>days to the target dose; most patients require 400–900 mg daily. Make dose adjust-</p>
+<p>ments based on trough serum concentrations. A therapeutic range of 8–15 mcg/mL</p>
+<p>(44–83 μmol/L) is targeted to minimize risk of toxicity. Once a dose is established,</p>
+<p>monitor concentrations once or twice a year unless the disease worsens, medications</p>
+<p>that interfere with theophylline metabolism are added, or toxicity is suspected.</p>
+<li>Common theophylline side effects include dyspepsia, nausea, vomiting, diarrhea,</li>
+<p>headache, dizziness, and tachycardia. Arrhythmias and seizures may occur, especially</p>
+<p>at toxic concentrations.</p>
+<li>Factors that decrease theophylline clearance and lead to reduced dosage require-</li>
+<p>ments include advanced age, bacterial or viral pneumonia, heart failure, liver dys-</p>
+<pre><code>function, hypoxemia from acute decompensation, and drugs such as cimetidine,</code></pre>
+<p>macrolides, and fluoroquinolone antibiotics.</p>
+<li>Factors that may enhance theophylline clearance and result in need for higher</li>
+<p>doses include tobacco and marijuana smoking, hyperthyroidism, and drugs such as</p>
+<p>phenytoin, phenobarbital, and rifampin.</p>
+<p>Corticosteroids</p>
+<li>Anti-inflammatory mechanisms of corticosteroids in COPD include reducing capil-</li>
+<p>lary permeability to decrease mucus, inhibiting release of proteolytic enzymes from</p>
+<p>leukocytes, and inhibiting prostaglandins.</p>
+<li>The recommended role of inhaled corticosteroid (ICS) therapy is for patients at high</li>
+<p>risk of exacerbation (Table 79-1, categories C and D) who have recurrent exacerba-</p>
+<p>tions despite optimal therapy with inhaled bronchodilators. In order to best target</p>
+<p>therapy, consensus guidelines propose using blood eosinophil counts to identify</p>
+<p>patients with COPD who might benefit from chronic ICS treatment.</p>
+<p>935</p>
+<p>CH79.indd 935 20-11-2020 18:02:46</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<li>The clinical benefits of ICS therapy (including decreased exacerbation frequency and</li>
+<pre><code>improved lung function and health status) have been observed with combination</code></pre>
+<p>therapy, primarily as an addition to LABA monotherapy. Given lack of supporting</p>
+<p>evidence, ICS monotherapy is not recommended for patients with COPD.</p>
+<li>For patients with recurrent exacerbations despite optimal long-acting bronchodilator</li>
+<p>monotherapy, combination therapy with dual long-acting bronchodilators (LAMA/</p>
+<p>LABA) is preferred over combination therapy with ICS/LABA (Table 79-1). Dual</p>
+<p>therapy with ICS/LABA may be considered instead of LAMA/LABA for patients with</p>
+<p>blood eosinophil counts ≥300 cells/μL (0.3 × 109/L).</p>
+<li>For patients with persistent symptoms and recurrent exacerbations on dual inhaled</li>
+<p>therapy, triple therapy with LAMA/LABA/ICS is recommended as initial escalation</p>
+<p>therapy (Table 79-1). Given the risk of adverse ICS effects, some clinicians avoid</p>
+<p>triple inhalation therapy for patients with persistent exacerbations and lower blood</p>
+<p>eosinophil counts (&lt;100 cells/μL [0.1 × 109/L]) in favor of oral alternatives such as</p>
+<p>roflumilast or azithromycin.</p>
+<li>Short-term systemic corticosteroids may also be considered for acute exacerbations.</li>
+<p>Chronic systemic corticosteroids should be avoided in COPD because of question-</p>
+<p>able benefits and high risk of toxicity.</p>
+<li>The moderate-to-high ICS doses used in clinical trials of COPD have been associated</li>
+<p>with an increased risk of pneumonia and mycobacterial pulmonary infections. Other</p>
+<p>adverse effects include hoarseness, sore throat, oral candidiasis, and skin bruising.</p>
+<p>Severe side effects such as adrenal suppression, osteoporosis, and cataract forma-</p>
+<p>tion occur less frequently than with systemic corticosteroids, but clinicians should</p>
+<p>monitor patients receiving high-dose chronic inhaled therapy. Treat patients with the</p>
+<p>lowest effective ICS dose to minimize risk of fracture.</p>
+<p>Roflumilast</p>
+<li>Roflumilast is a phosphodiesterase 4 (PDE4) inhibitor that relaxes airway smooth</li>
+<p>muscle and decreases activity of inflammatory cells and mediators such as TNF-α</p>
+<p>and IL-8. Roflumilast is recommended for patients with recurrent exacerbations</p>
+<p>despite treatment with triple inhalation therapy (LAMA/LABA/ICS; Table 79-1). It</p>
+<p>may also be considered as escalation therapy for patients with recurrent exacerba-</p>
+<p>tions on dual long-acting bronchodilators (LAMA/LABA) who are not candidates</p>
+<p>for ICS, such as those with low blood eosinophil count (&lt;100 cells/μL [0.1 × 109/L])</p>
+<p>or who are at higher risk of adverse effects associated with ICS. Because theophylline</p>
+<p>and roflumilast have similar mechanisms of action, they should not be used together.</p>
+<li>Major adverse effects include diarrhea, nausea, decreased appetite, weight loss, head-</li>
+<p>ache and neuropsychiatric effects such as suicidal thoughts, insomnia, anxiety, and</p>
+<p>new or worsened depression. Although most symptoms usually resolve over time, a</p>
+<p>low starting dose (250 mcg orally once daily) is recommended for the first 4 weeks</p>
+<p>before increasing to the maintenance dose (500 mcg once daily). Caution is advised</p>
+<p>in patients with a history of depression or suicidality.</p>
+<li>Roflumilast is metabolized by CYP3A4 and 1A2; coadministration with strong</li>
+<p>CYP P450 inducers is not recommended due to potential for subtherapeutic plasma</p>
+<p>concentrations. Use caution when administering roflumilast with strong CYP P450</p>
+<p>inhibitors due to potential for adverse effects.</p>
+<p>Azithromycin</p>
+<li>Chronic azithromycin was associated with a lower rate of COPD exacerbation and</li>
+<p>improved quality-of-life scores in one study, but more patients in the azithromycin</p>
+<p>group reported hearing deficits (25% vs. 20% in the placebo group), and patients</p>
+<p>who continued to smoke did not achieve reduction in exacerbation frequency with</p>
+<p>azithromycin. Azithromycin was also associated with a higher rate of colonization</p>
+<p>with macrolide-resistant bacteria. In addition, the azithromycin product labeling</p>
+<p>includes a precaution about QT prolongation after a retrospective study reported</p>
+<p>increased cardiac events with short courses of azithromycin.</p>
+<p>936</p>
+<p>CH79.indd 936 20-11-2020 18:02:46</p>
+<h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<li>Based on limited evidence supporting long-term treatment (beyond 1 year), current</li>
+<p>guidelines recommend to consider adding chronic azithromycin only for patients</p>
+<p>with recurrent exacerbations despite optimal therapy and who are not active smokers</p>
+<p>(Table 79-1). Clinicians may consider azithromycin for individual patients at high</p>
+<p>risk for exacerbations but must carefully weigh the risks and benefits of therapy.</p>
+<p>α1-Antitrypsin Replacement Therapy</p>
+<li>For patients with inherited AAT deficiency-associated emphysema, treatment</li>
+<p>focuses on reduction of risk factors such as smoking, symptomatic treatment with</p>
+<p>bronchodilators, and augmentation therapy with replacement AAT.</p>
+<li>Several proprietary alpha-proteinase inhibitors are available: Glassia, Prolastin-C,</li>
+<p>1</p>
+<p>Aralast, Aralast-NP, and Zemaira. Augmentation therapy is intended to maintain</p>
+<p>serum concentrations above the protective threshold of 10 μmol/L throughout the</p>
+<p>dosing interval. The recommended dosing regimen is 60 mg/kg IV given once</p>
+<p>weekly, usually at a rate of 0.08 mL/kg/min (consult individual product labeling),</p>
+<p>adjusted to patient tolerance. Augmentation therapy can cost over $50,000</p>
+<p>annually.</p>
+<h2>COPD EXACERBATIONS</h2>
+<li>A COPD exacerbation is defined as a change in the patient’s baseline symptoms</li>
+<p>(dyspnea, cough, or sputum production) beyond day-to-day variability sufficient to</p>
+<p>warrant a change in management.</p>
+<li>The primary physiologic change is often a worsening of ABG values due to poor gas</li>
+<p>exchange and increased muscle fatigue. With severe exacerbations, profound hypox-</p>
+<p>emia and hypercapnia can be accompanied by respiratory acidosis and respiratory</p>
+<p>failure.</p>
+<li>Although criteria used to define acute exacerbations vary, most rely on a change in</li>
+<p>one or more of the following clinical findings: worsening dyspnea, increased sputum</p>
+<h2>volume, or increased sputum purulence (Table 79-3).</h2>
+<li>Additional symptoms may include chest tightness, increased need for bronchodila-</li>
+<p>tors, malaise, fatigue, and decreased exercise tolerance. Physical exam may reveal</p>
+<p>fever, wheezing, and decreased breath sounds. Obtain a sputum sample for Gram</p>
+<p>stain and culture and a chest x-ray to evaluate for new infiltrates.</p>
+<li>The diagnosis of acute respiratory failure is made based on an acute change in ABGs:</li>
+<p>an acute drop in PaO of 10–15 mm Hg (1.3–2.0 kPa) or any acute increase in PaCO</p>
+<p>2 2</p>
+<p>that decreases the serum pH to 7.3 or less. Additional indications of respiratory fail-</p>
+<p>ure include restlessness, confusion, tachycardia, diaphoresis, cyanosis, hypotension,</p>
+<p>irregular breathing, miosis, and unconsciousness.</p>
+<li>Goals of Treatment: (1) Minimize the negative consequences of the acute exacerba-</li>
+<p>tion (ie, reduce symptoms, prevent hospitalization, shorten hospital stay, prevent</p>
+<p>acute respiratory failure or death) and (2) prevent future exacerbations.</p>
+<h2>TABLE 79-3 Staging Acute Exacerbations of COPD</h2>
+<p>Mild (type 1) One cardinal symptoma plus at least one of the following: upper</p>
+<p>respiratory tract infection within 5 days, fever without other</p>
+<p>explanation, increased wheezing, increased cough, increase in</p>
+<p>respiratory or heart rate &gt;20% above baseline</p>
+<p>Moderate (type 2) Two cardinal symptoms</p>
+<p>Severe (type 3) Three cardinal symptoms</p>
+<p>aCardinal symptoms include worsening of dyspnea, increase in sputum volume, and increase in</p>
+<p>sputum purulence.</p>
+<p>937</p>
+<p>CH79.indd 937 20-11-2020 18:02:46</p>
+<div class="table-container"><table><tr><th>TABLE 79-3 Staging Acute Exacerbations of COPD</th><th></th></tr><tr><td>Mild (type 1)</td><td>One cardinal symptoma plus at least one of the following: upper
+respiratory tract infection within 5 days, fever without other
+explanation, increased wheezing, increased cough, increase in
+respiratory or heart rate &gt;20% above baseline</td></tr><tr><td>Moderate (type 2)</td><td>Two cardinal symptoms</td></tr><tr><td>Severe (type 3)</td><td>Three cardinal symptoms</td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Provide oxygen therapy for patients with significant hypoxemia (eg, oxygen</li>
+<p>saturation &lt;90% [0.90]). Use caution because many COPD patients rely on mild</p>
+<p>hypoxemia to trigger their drive to breathe. Overly aggressive oxygen administra-</p>
+<p>tion to patients with chronic hypercapnia may result in respiratory depression and</p>
+<p>respiratory failure. Adjust oxygen to achieve PaO &gt;60 mm Hg (8.0 kPa) or oxygen</p>
+<p>2</p>
+<p>saturation (SaO) &gt;90% (0.90). Obtain ABG after oxygen initiation to monitor CO</p>
+<p>2 2</p>
+<p>retention resulting from hypoventilation.</p>
+<li>Noninvasive positive-pressure ventilation (NPPV) provides ventilatory support with</li>
+<p>oxygen and pressurized airflow using a face or nasal mask without endotracheal</p>
+<p>intubation. NPPV is not appropriate for patients with altered mental status, severe</p>
+<p>acidosis, respiratory arrest, or cardiovascular instability. Intubation and mechanical</p>
+<p>ventilation may be needed in patients failing NPPV or who are poor candidates for</p>
+<h2>NPPV.</h2>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Bronchodilators</p>
+<li>Dose and frequency of bronchodilators are increased during acute exacerbations to</li>
+<p>provide symptomatic relief. SABAs are preferred because of rapid onset of action.</p>
+<p>Muscarinic antagonists may be added if symptoms persist despite increased doses of</p>
+<p>β-agonists. LABAs or LAMAs should not be used for quick relief of symptoms or on</p>
+<p>2</p>
+<p>an as-needed basis.</p>
+<li>Bronchodilators may be administered via MDI, DPI, or nebulization with equal</li>
+<p>efficacy. Nebulization may be considered for patients with severe dyspnea who are</p>
+<p>unable to hold their breath after actuation of an MDI.</p>
+<li>Theophylline should generally be avoided due to lack of evidence documenting</li>
+<p>benefit and the concern for adverse effects.</p>
+<p>Corticosteroids</p>
+<li>Treatment with systemic corticosteroids in acute exacerbations improves oxygen-</li>
+<p>ation and recovery time, shortens hospitalization, and reduces risk of relapse.</p>
+<li>Although the optimal corticosteroid dose and duration are unknown, prednisone</li>
+<p>40 mg orally daily (or equivalent) for 5 days is effective for many patients. If treat-</p>
+<p>ment is continued for longer than 2 weeks, employ a tapering oral schedule to avoid</p>
+<p>hypothalamic–pituitary–adrenal axis suppression.</p>
+<p>Antimicrobial Therapy</p>
+<li>In order to limit unnecessary use, antibiotics should be initiated in any of these clini-</li>
+<p>cal situations: (1) patients presenting with three cardinal symptoms of acute exacer-</p>
+<p>bation, (2) patients presenting with two cardinal symptoms as long as one is increased</p>
+<p>sputum purulence, and (3) patients requiring mechanical ventilation regardless of</p>
+<p>symptoms. Utility of sputum Gram stain and culture is questionable because some</p>
+<p>patients have chronic bacterial colonization of the bronchial tree between exacerba-</p>
+<p>tions. Use of C-reactive protein (CRP) as a biomarker to guide antimicrobial therapy</p>
+<p>decisions may be reasonable.</p>
+<li>Selection of empiric antimicrobial therapy should be based on the most likely organ-</li>
+<p>isms: Haemophilus influenzae, Moraxella catarrhalis, Streptococcus pneumoniae, and</p>
+<p>Haemophilus parainfluenzae. Drug-resistant pneumococci, β-lactamase–producing</p>
+<p>H. influenzae and M. catarrhalis, and enteric gram-negative organisms, including</p>
+<p>Pseudomonas aeruginosa, may be present in complicated acute exacerbations.</p>
+<li>Table 79-4 summarizes the most common organisms based on patient presentation</li>
+<p>and recommended antimicrobial therapy. Continue antimicrobial therapy for at least</p>
+<p>5–7 days. If the patient deteriorates or does not improve as anticipated, hospitaliza-</p>
+<p>tion may be necessary, and more aggressive attempts should be made to identify</p>
+<p>potential pathogens responsible for the exacerbation.</p>
+<p>938</p>
+<p>CH79.indd 938 20-11-2020 18:02:46</p>
+<h2>Chronic Obstructive Pulmonary Disease | CHAPTER 79</h2>
+<p>TABLE 79-4 Recommended Antimicrobial Therapy for Acute Exacerbations of COPD</p>
+<p>Patient Characteristics Likely Pathogens Recommended Therapy</p>
+<p>Uncomplicated exacerbations S. pneumoniae Macrolide (azithromycin,</p>
+<p>(&lt;4 exacerbations per year, H. influenzae clarithromycin)</p>
+<p>no comorbid illness) M. catarrhalis Second- or third-generation</p>
+<p>cephalosporin</p>
+<p>H. parainfluenzae</p>
+<p>Doxycycline</p>
+<p>Resistance</p>
+<p>uncommon Therapies not recommendeda:</p>
+<p>TMP/SMX, amoxicillin, first-</p>
+<p>generation cephalosporins,</p>
+<p>erythromycin</p>
+<p>Complicated exacerbations (Age As above plus Amoxicillin/Clavulanate</p>
+<p>≥65 and &gt;4 exacerbations drug-resistant Fluoroquinolone with</p>
+<p>per year, presence of comorbid pneumococci, enhanced pneumococcal</p>
+<p>illness) β-lactamase– activity (levofloxacin,</p>
+<p>producing gemifloxacin, moxifloxacin)</p>
+<p>H. influenzae and</p>
+<p>M. catarrhalis</p>
+<p>Presence of risk factors for Some enteric gram- Fluoroquinolone with</p>
+<p>colonization and infection with negatives enhanced pneumococcal</p>
+<p>multi-drug resistant pathogens: As above plus and P. aeruginosa activity</p>
+<p>✓ Need for chronic corticosteroid P. aeruginosa (levofloxacin)</p>
+<p>therapy IV therapy if required:</p>
+<p>✓ Recent hospitalization (90 days) β-lactamase–resistant</p>
+<p>penicillin with</p>
+<p>✓ Recent antibiotic therapy antipseudomonal activity,</p>
+<p>(90 days) third- or fourth-generation</p>
+<p>✓ Resident of long-term care cephalosporin with</p>
+<p>facility antipseudomonal activity</p>
+<p>aTMP/SMX should not be used due to increasing pneumococcal resistance; amoxicillin and</p>
+<p>first-generation cephalosporins are not recommended due to β-lactamase susceptibility; and</p>
+<p>erythromycin is not recommended due to insufficient activity against H. influenzae.</p>
+<p>TMP-SMX, trimethoprim-sulfamethoxazole.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>In chronic stable COPD, assess pulmonary function tests annually and with any</li>
+<p>treatment additions or discontinuations. Other outcome measures are symptom</p>
+<p>scores, quality-of-life assessments, exacerbation rates, emergency department visits,</p>
+<p>and hospitalizations.</p>
+<li>In acute exacerbations of COPD, assess white blood cell count, vital signs, chest x-ray,</li>
+<p>and changes in frequency of dyspnea, sputum volume, and sputum purulence at the</p>
+<p>onset and throughout treatment of the exacerbation. In more severe exacerbations,</p>
+<p>ABG and SaO should also be monitored.</p>
+<li>Evaluate patien 2 t medication adherence, side effects, and potential drug interactions</li>
+<p>at every encounter.</p>
+<p>See Chapter 44, Chronic Obstructive Pulmonary Disease, authored by Sharya V. Bourdet</p>
+<p>and Dennis M. Williams, for a more detailed discussion of this topic.</p>
+<p>939</p>
+<p>CH79.indd 939 20-11-2020 18:02:46</p>
+<div class="table-container"><table><tr><th>TABLE 79-4 Recommended Antimicrobial Therapy for Acute Exacerbations of COPD</th><th></th><th></th></tr><tr><td>Patient Characteristics</td><td>Likely Pathogens</td><td>Recommended Therapy</td></tr><tr><td>Uncomplicated exacerbations
+(&lt;4 exacerbations per year,
+no comorbid illness)</td><td>S. pneumoniae
+H. influenzae
+M. catarrhalis
+H. parainfluenzae
+Resistance
+uncommon</td><td>Macrolide (azithromycin,
+clarithromycin)
+Second- or third-generation
+cephalosporin
+Doxycycline
+Therapies not recommendeda:
+TMP/SMX, amoxicillin, first-
+generation cephalosporins,
+erythromycin</td></tr><tr><td>Complicated exacerbations (Age
+≥65 and &gt;4 exacerbations
+per year, presence of comorbid
+illness)</td><td>As above plus
+drug-resistant
+pneumococci,
+β-lactamase–
+producing
+H. influenzae and
+M. catarrhalis</td><td>Amoxicillin/Clavulanate
+Fluoroquinolone with
+enhanced pneumococcal
+activity (levofloxacin,
+gemifloxacin, moxifloxacin)</td></tr><tr><td>Presence of risk factors for
+colonization and infection with
+multi-drug resistant pathogens:
+✓ Need for chronic corticosteroid
+therapy
+✓ Recent hospitalization (90 days)
+✓ Recent antibiotic therapy
+(90 days)
+✓ Resident of long-term care
+facility</td><td>Some enteric gram-
+negatives
+As above plus
+P. aeruginosa</td><td>Fluoroquinolone with
+enhanced pneumococcal
+and P. aeruginosa activity
+(levofloxacin)
+IV therapy if required:
+β-lactamase–resistant
+penicillin with
+antipseudomonal activity,
+third- or fourth-generation
+cephalosporin with
+antipseudomonal activity</td></tr></table></div><p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

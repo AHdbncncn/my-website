@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29. Peptic Ulcer Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>29. Peptic Ulcer Disease</h1>
+        </header>
+        <main>
+            <p>302</p>
+<h2>RETPAHC</h2>
+<p>29</p>
+<p>Peptic Ulcer Disease</p>
+<li>Peptic ulcer disease (PUD) refers to ulcerative disorders of the upper gastrointestinal</li>
+<p>(GI) tract that require acid and pepsin for their formation. The three common</p>
+<p>etiologies include (1) Helicobacter pylori infection, (2) nonsteroidal anti-inflammatory</p>
+<p>drug (NSAID) use, and (3) stress-related mucosal damage (SRMD).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Benign gastric ulcers, erosions, and gastritis can occur anywhere in the stomach, but</li>
+<p>the antrum and lesser curvature are the most common locations. Most duodenal</p>
+<p>ulcers occur in the first part of the duodenum (duodenal bulb).</p>
+<li>Pathophysiology is determined by the balance between aggressive factors (gastric</li>
+<p>acid and pepsin) and protective factors (mucosal defense and repair). Gastric acid,</p>
+<p>H. pylori infection, and NSAID use are independent factors that contribute to</p>
+<p>disruption of mucosal integrity. Increased acid secretion may be involved in duo-</p>
+<p>denal ulcers, but patients with gastric ulcers usually have normal or reduced acid</p>
+<p>secretion (hypochlorhydria).</p>
+<li>Mucus and bicarbonate secretion, intrinsic epithelial cell defense, and mucosal blood</li>
+<p>flow normally protect the gastroduodenal mucosa from noxious endogenous and</p>
+<p>exogenous substances. Endogenous prostaglandins (PGs) facilitate mucosal integrity</p>
+<p>and repair. Disruptions in normal mucosal defense and healing mechanisms allow</p>
+<p>acid and pepsin to reach the gastric epithelium.</p>
+<li>H. pylori infection causes gastric mucosal inflammation in all infected individuals,</li>
+<p>but only a minority develops an ulcer or gastric cancer. Bacterial enzymes (urease,</p>
+<p>lipases, and proteases), bacterial adherence, and H. pylori virulence factors produce</p>
+<p>gastric mucosal injury. H. pylori induces gastric inflammation by altering the host</p>
+<p>inflammatory response and damaging epithelial cells.</p>
+<li>Nonselective NSAIDs (including aspirin) cause gastric mucosal damage by two</li>
+<p>mechanisms: (1) direct or topical irritation of the gastric epithelium, and (2) systemic</p>
+<p>inhibition of endogenous mucosal PG synthesis (the primary mechanism). COX-2</p>
+<p>selective inhibitors have a lower risk of ulcers and related GI complications than</p>
+<p>nonselective NSAIDs. Addition of aspirin to a selective COX-2 inhibitor reduces its</p>
+<p>ulcer-sparing benefit and increases ulcer risk.</p>
+<li>Use of corticosteroids alone does not increase risk of ulcer or complications, but ulcer</li>
+<p>risk is doubled in corticosteroid users taking NSAIDs concurrently.</p>
+<li>Cigarette smoking has been linked to PUD, impaired ulcer healing, and ulcer recur-</li>
+<p>rence. Risk is proportional to amount smoked per day.</p>
+<li>Psychological stress has not been shown to cause PUD, but ulcer patients may be</li>
+<p>adversely affected by stressful life events.</p>
+<li>Carbonated beverages, coffee, tea, beer, milk, and spices may cause dyspepsia but do</li>
+<p>not appear to increase PUD risk. Ethanol ingestion in high concentrations is associ-</p>
+<p>ated with acute gastric mucosal damage and upper GI bleeding but is not clearly the</p>
+<p>cause of ulcers.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Abdominal pain is the most frequent PUD symptom. Pain is often epigastric and</li>
+<p>described as burning but can present as vague discomfort, abdominal fullness, or</p>
+<p>cramping. Nocturnal pain may awaken patients from sleep, especially between 12 am</p>
+<p>and 3 am.</p>
+<li>Pain from duodenal ulcers often occurs 1–3 hours after meals and is usually relieved</li>
+<p>by food, whereas food may precipitate or accentuate ulcer pain in gastric ulcers.</p>
+<p>Antacids provide rapid pain relief in most ulcer patients.</p>
+<p>ch29.indd 302 19-11-2020 14:09:50</p>
+<div class="table-container"><table><tr><th>Peptic Ulcer Disease</th><th>29</th><th>RETPAHC</th></tr></table></div><h2>Peptic Ulcer Disease | CHAPTER 29</h2>
+<li>Heartburn, belching, and bloating often accompany pain. Nausea, vomiting, and</li>
+<p>anorexia are more common in gastric than duodenal ulcers and may be signs of an</p>
+<p>ulcer-related complication.</p>
+<li>Severity of symptoms varies among patients and may be seasonal, occurring more</li>
+<p>frequently in spring or fall.</p>
+<li>Presence or absence of epigastric pain does not define an ulcer, and ulcer healing</li>
+<p>does not necessarily render the patient asymptomatic. Conversely, absence of pain</p>
+<p>does not preclude an ulcer diagnosis, especially in older persons, who may present</p>
+<p>with a “silent” ulcer complication.</p>
+<li>Ulcer complications include upper GI bleeding, perforation into the peritoneal cavity,</li>
+<p>penetration into an adjacent structure (eg, pancreas, biliary tract, or liver), and gastric</p>
+<p>outlet obstruction. Bleeding may be occult or present as melena or hematemesis.</p>
+<p>Perforation is associated with sudden, sharp, severe pain, beginning first in the epi-</p>
+<p>gastrium but quickly spreading over the entire abdomen. Symptoms of gastric outlet</p>
+<p>obstruction typically occur over several months and include early satiety, bloating,</p>
+<p>anorexia, nausea, vomiting, and weight loss.</p>
+<h2>DIAGNOSIS</h2>
+<li>Physical examination may reveal epigastric tenderness between the umbilicus and the</li>
+<p>xiphoid process that sometimes radiates to the back.</p>
+<li>Routine blood tests are not helpful in establishing a diagnosis of PUD. Hematocrit,</li>
+<p>hemoglobin, and stool guaiac tests are used to detect bleeding.</p>
+<li>Diagnosis of PUD depends on visualizing the ulcer crater; upper GI endoscopy has</li>
+<p>replaced radiography as the procedure of choice because it provides a more accurate</p>
+<p>diagnosis and permits direct visualization of the ulcer and implementation of maneu-</p>
+<p>vers to control bleeding.</p>
+<li>Diagnosis of H. pylori infection can be made using endoscopic or nonendoscopic</li>
+<p>(urea breath test [UBT], serologic antibody detection, and fecal antigen) tests. Testing</p>
+<p>for H. pylori is only recommended if eradication therapy is planned. If endoscopy is</p>
+<p>not planned, serologic antibody testing is reasonable to determine H. pylori status.</p>
+<p>Endoscopic biopsy-based tests, UBT, and fecal antigen tests are the recommended</p>
+<p>tests to verify H. pylori eradication but must be delayed until at least 4 weeks after</p>
+<p>completion of antibiotic treatment and after proton pump inhibitor (PPI) therapy</p>
+<p>has been discontinued for 2 weeks to avoid confusing bacterial suppression with</p>
+<p>eradication.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Overall goals are to relieve ulcer pain, heal the ulcer, prevent</li>
+<p>ulcer recurrence, and reduce ulcer-related complications. In H. pylori-positive</p>
+<p>patients with an active ulcer, previously documented ulcer, or history of an ulcer-</p>
+<p>related complication, goals are to eradicate H. pylori, heal the ulcer, and cure the</p>
+<p>disease with a cost-effective drug regimen. The primary goal for a patient with an</p>
+<p>NSAID-induced ulcer is to heal the ulcer as rapidly as possible.</p>
+<h2>NONPHARMACOLOGIC TREATMENT</h2>
+<li>Lifestyle modifications including stress reduction and smoking cessation should be</li>
+<p>implemented. NSAIDs should be avoided if possible, and alternative agents such as</p>
+<p>acetaminophen or a nonacetylated salicylate (eg, salsalate) should be used for pain</p>
+<p>relief when feasible.</p>
+<li>There is no specific recommended diet, but patients should avoid foods and bever-</li>
+<p>ages that cause dyspepsia or exacerbate ulcer symptoms (eg, spicy foods, caffeine,</p>
+<p>and alcohol).</p>
+<li>Elective surgery is rarely performed because of highly effective medical management.</li>
+<p>Emergency surgery may be required for bleeding, perforation, or obstruction.</p>
+<p>303</p>
+<p>ch29.indd 303 19-11-2020 14:09:51</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>Patient presents with ulcer-like symptoms</p>
+<p>Alarm symptoms present, eg,</p>
+<p>Dyspepsia, no alarm symptoms</p>
+<p>bleeding, anemia, weight loss</p>
+<p>On NSAID? Endoscopy to assess</p>
+<p>ulcer status</p>
+<p>Yes No</p>
+<p>Ulcer present Ulcer absent</p>
+<p>Stop NSAID: if not Previously</p>
+<p>possible, decrease treated for</p>
+<p>dose H. pylori? Test for H. pylori Consider other</p>
+<p>etiologies for</p>
+<p>symptoms, eg,</p>
+<p>No Yes Positive Negative GERD, NUD</p>
+<p>Symptoms Symptoms</p>
+<p>resolve persist Perform Treat with PPI- On NSAID? Continue</p>
+<p>serology</p>
+<p>based H. pylori NSAID or</p>
+<p>eradication switch to</p>
+<p>No further In H i 2 ti R a A te regimen Dis N c S on A t I i D nue C in O h X ib - i 2 tor,</p>
+<p>treatment or PPI Negative if</p>
+<p>available</p>
+<p>Positive Treat with PPI</p>
+<p>No further Signs/symptoms 1–2</p>
+<p>No Treat ulcer</p>
+<p>treatment weeks posttreatment?</p>
+<p>with PPI</p>
+<p>followed</p>
+<p>Symptoms Symptoms</p>
+<p>resolve persist Yes by</p>
+<p>cotherapy</p>
+<p>with PPI</p>
+<p>Consider NSAID use, or</p>
+<p>Consider continuation antibiotic resistance, misoprostol</p>
+<p>of PPI or H2RA nonadherence, other</p>
+<p>diagnosis</p>
+<p>(COX-2, cyclooxygenase-2; GERD, gastroesophageal reflux disease; H. pylori, Helicobacter pylori; H2RA,</p>
+<p>histamine2-receptor antagonist; NSAID, nonsteroidal anti-inflammatory drug; NUD, nonulcer dyspepsia;</p>
+<p>PPI, proton pump inhibitor.)</p>
+<p>FIGURE 29-1. Guidelines for the evaluation and management of a patient who</p>
+<p>presents with dyspeptic or ulcer-like symptoms.</p>
+<h2>PHARMACOLOGIC TREATMENT</h2>
+<li>Figure 29-1 depicts an algorithm for evaluation and management of a patient with</li>
+<p>dyspeptic or ulcer-like symptoms.</p>
+<li>Established indications for treatment of H. pylori infection include active PUD, past</li>
+<p>history of PUD (unless eradication was previously documented), mucosa-associated</p>
+<p>lymphoid tissue (MALT) lymphoma, and postendoscopic resection of gastric cancer.</p>
+<p>Treatment should be effective, well tolerated, convenient, and cost-effective. Drug</p>
+<h2>regimens to eradicate H. pylori are shown in Table 29-1.</h2>
+<li>Clarithromycin triple therapy (PPI, clarithromycin, amoxicillin) is no longer rec-</li>
+<p>ommended in areas where H. pylori resistance exceeds 15%, which includes all of</p>
+<p>North America. This regimen given for 14 days remains an option in regions where</p>
+<p>clarithromycin resistance is &lt;15% and no prior macrolide exposure is documented.</p>
+<p>304</p>
+<p>ch29.indd 304 19-11-2020 14:09:52</p>
+<div class="table-container"><table><tr><th></th><th></th><th>No further
+treatment</th></tr><tr><td>Symptoms
+resolve</td><td>Symptoms
+persist</td><td></td></tr></table></div><p>305</p>
+<p>Peptic</p>
+<p>Ulcer</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>29</p>
+<p>TABLE 29-1 Drug Regimens Used to Eradicate Helicobacter pylori</p>
+<p>Regimen Duration Drug #1 Drug #2 Drug #3 Drug #4</p>
+<p>Proton pump inhibitor– 14 days PPI once or twice dailyb Clarithromycin 500 mg Amoxicillin 1 g twice daily</p>
+<p>based triple therapya twice daily or metronidazole 500 mg</p>
+<p>twice daily</p>
+<p>Bismuth quadruple therapya 10−14 days PPI or H2RA once or twice Bismuth subsalicylated Metronidazole 250−500 mg Tetracycline 500 mg four</p>
+<p>dailyb,c 525 mg four times daily four times daily times daily</p>
+<p>Non-bismuth quadruple or 10−14 days PPI once or twice daily on Clarithromycin 250–500 Amoxicillin 1 g twice daily Metronidazole</p>
+<p>“concomitant” therapye days 1−10b mg twice daily on on days 1−10 250−500 mg twice daily</p>
+<p>days 1−10 on days 1−10</p>
+<p>Sequential therapye 10 days PPI once or twice daily on Amoxicillin 1 g twice daily Metronidazole 250–500 mg Clarithromycin</p>
+<p>days 1−10b on days 1−5 twice daily on days 6−10 250−500 mg twice daily</p>
+<p>on days 6−10</p>
+<p>Hybrid therapye 14 days PPI once or twice daily on Amoxicillin 1 g twice daily Metronidazole 250–500 mg Clarithromycin</p>
+<p>days 1−14b on days 1−14 twice daily on days 7−14 250−500 mg twice daily</p>
+<p>on days 7−14</p>
+<p>Levofloxacin triple 10−14 days PPI twice daily Levofloxacin 500 mg daily Amoxacillin 1 g twice daily</p>
+<p>Levofloxacin sequential 10 days PPI twice daily on Amoxicillin 1 g twice daily Levofloxacin 500 mg once Metronidazole</p>
+<p>days 1−10 on days 1−10 daily on days 6−10 500 mg twice daily on</p>
+<p>days 6−10</p>
+<p>LOAD 7−10 days Levofloxacin 250 mg Omeprazole (or other PPI) Nitazoxanide (Alinia) 500 mg Doxycycline 100 mg</p>
+<p>once daily at high dose once daily twice daily once daily</p>
+<p>aAlthough treatment is minimally effective if used for 7 days, 10−14 days is recommended. The antisecretory drug may be continued beyond antimicrobial treatment for patients with a</p>
+<p>history of a complicated ulcer, for example, bleeding, or in heavy smokers.</p>
+<p>bStandard PPI peptic ulcer healing dosages given once or twice daily.</p>
+<p>cStandard H2RA peptic ulcer healing dosages may be used in place of a PPI.</p>
+<p>dBismuth subcitrate potassium (biskalcitrate) 140 mg, as the bismuth salt, is contained in a prepackaged capsule (Pylera), along with metronidazole 125 mg and tetracycline 125 mg; three</p>
+<p>capsules are taken with each meal and at bedtime; a standard PPI dosage is added to the regimen and taken twice daily. All medications are taken for 10 days.</p>
+<p>eRequires validation as first-line therapy in the United States.</p>
+<p>H2RA, H&gt;-receptor antagonist; PPI, proton pump inhibitor.</p>
+<p>2</p>
+<p>ch29.indd</p>
+<p>305</p>
+<p>19-11-2020</p>
+<p>14:09:52</p>
+<div class="table-container"><table><tr><th>TABLE 29-1 Drug Regimens Used to Eradicate Helicobacter pylori</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Regimen</td><td>Duration</td><td>Drug #1</td><td>Drug #2</td><td>Drug #3</td><td>Drug #4</td></tr><tr><td>Proton pump inhibitor–
+based triple therapya</td><td>14 days</td><td>PPI once or twice dailyb</td><td>Clarithromycin 500 mg
+twice daily</td><td>Amoxicillin 1 g twice daily
+or metronidazole 500 mg
+twice daily</td><td></td></tr><tr><td>Bismuth quadruple therapya</td><td>10−14 days</td><td>PPI or H2RA once or twice
+dailyb,c</td><td>Bismuth subsalicylated
+525 mg four times daily</td><td>Metronidazole 250−500 mg
+four times daily</td><td>Tetracycline 500 mg four
+times daily</td></tr><tr><td>Non-bismuth quadruple or
+“concomitant” therapye</td><td>10−14 days</td><td>PPI once or twice daily on
+days 1−10b</td><td>Clarithromycin 250–500
+mg twice daily on
+days 1−10</td><td>Amoxicillin 1 g twice daily
+on days 1−10</td><td>Metronidazole
+250−500 mg twice daily
+on days 1−10</td></tr><tr><td>Sequential therapye</td><td>10 days</td><td>PPI once or twice daily on
+days 1−10b</td><td>Amoxicillin 1 g twice daily
+on days 1−5</td><td>Metronidazole 250–500 mg
+twice daily on days 6−10</td><td>Clarithromycin
+250−500 mg twice daily
+on days 6−10</td></tr><tr><td>Hybrid therapye</td><td>14 days</td><td>PPI once or twice daily on
+days 1−14b</td><td>Amoxicillin 1 g twice daily
+on days 1−14</td><td>Metronidazole 250–500 mg
+twice daily on days 7−14</td><td>Clarithromycin
+250−500 mg twice daily
+on days 7−14</td></tr><tr><td>Levofloxacin triple</td><td>10−14 days</td><td>PPI twice daily</td><td>Levofloxacin 500 mg daily</td><td>Amoxacillin 1 g twice daily</td><td></td></tr><tr><td>Levofloxacin sequential</td><td>10 days</td><td>PPI twice daily on
+days 1−10</td><td>Amoxicillin 1 g twice daily
+on days 1−10</td><td>Levofloxacin 500 mg once
+daily on days 6−10</td><td>Metronidazole
+500 mg twice daily on
+days 6−10</td></tr><tr><td>LOAD</td><td>7−10 days</td><td>Levofloxacin 250 mg
+once daily</td><td>Omeprazole (or other PPI)
+at high dose once daily</td><td>Nitazoxanide (Alinia) 500 mg
+twice daily</td><td>Doxycycline 100 mg
+once daily</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<li>Bismuth quadruple therapy (PPI or H2RA, bismuth subsalicylate, metronidazole,</li>
+<p>tetracycline) for 10–14 days is the preferred first-line therapy to eradicate H. pylori</p>
+<p>infection. PPIs generally produce higher H. pylori eradication rates and are preferred</p>
+<p>over H2RA. All medications except the PPI should be taken with meals and at bed-</p>
+<p>time. The PPI should be taken 30–60 minutes before a meal. The mean eradication</p>
+<p>rate for a 10-day course is ~90%, but limitations include the need for four-times-daily</p>
+<p>therapy (which can impair adherence), and frequent minor side effects.</p>
+<li>Non-bismuth quadruple (or “concomitant”) therapy (PPI, clarithromycin, amoxicillin,</li>
+<p>metronidazole) for 10–14 days is another recommended first-line therapy. “Con-</p>
+<p>comitant” therapy means that all four drugs are given at the same time twice daily</p>
+<p>for the entire duration of therapy. There is lack of evidence in North America for</p>
+<p>this regimen.</p>
+<li>Sequential therapy involves a PPI plus antibiotics given in sequence rather than</li>
+<p>together. The rationale is to treat initially with antibiotics that rarely promote resis-</p>
+<p>tance (eg, amoxicillin) to reduce bacterial load and preexisting resistant organisms</p>
+<p>and then to follow with different antibiotics (eg, clarithromycin and metronidazole)</p>
+<p>to kill any remaining organisms. The potential advantage of high eradication rates</p>
+<p>requires validation in the United States before this regimen can be recommended as</p>
+<p>first-line H. pylori eradication therapy.</p>
+<li>Hybrid therapy combines the strategies of concomitant and sequential therapy; it</li>
+<p>involves 7 days of dual therapy (PPI and amoxicillin) followed by 7 days of quadruple</p>
+<p>therapy (PPI, amoxicillin, clarithromycin, metronidazole). There is lack of evidence</p>
+<p>in North America with this regimen.</p>
+<li>Levofloxacin-based regimens include (1) triple therapy with amoxicillin and a PPI,</li>
+<p>(2) modified sequential therapy with 5–7 days of amoxicillin plus a PPI followed by</p>
+<p>5–7 days of levofloxacin, and (3) quadruple therapy with levofloxacin, omeprazole or</p>
+<p>another PPI, nitazoxanide (Alinia), and doxycycline (“LOAD” therapy). The LOAD</p>
+<p>regimen is not currently recommended due to high cost and lack of efficacy data. In</p>
+<p>addition, concerns with fluoroquinolone use include development of resistance and</p>
+<p>adverse effects (eg, tendonitis, hepatotoxicity).</p>
+<li>If initial treatment fails to eradicate H. pylori, second-line (salvage) treatment should:</li>
+<p>(1) use antibiotics that were not included in the initial regimen, (2) be guided by</p>
+<p>region-specific or individual antibiotic resistance testing, and (3) use an extended</p>
+<p>treatment duration of 10–14 days. Patients failing clarithromycin triple therapy can</p>
+<p>be treated with either bismuth quadruple therapy or the levofloxacin triple regimen</p>
+<p>for 14 days. Other salvage regimens may also be successful. Penicillin allergy testing</p>
+<p>is recommended for patients who report penicillin allergy because many patients are</p>
+<p>not truly allergic.</p>
+<li>Patients with NSAID-induced ulcers should be tested to determine H. pylori status.</li>
+<p>If they are H. pylori positive, start treatment with a recommended first-line regimen</p>
+<p>(Table 29-1). If patients are H. pylori negative, discontinue the NSAID and treat with</p>
+<p>a PPI, H2RA, or sucralfate (Table 29-2). PPIs are generally preferred due to more</p>
+<p>rapid symptom relief and ulcer healing. If the NSAID must be continued, implement</p>
+<p>cotherapy with a PPI or misoprostol. Patients at highest risk of recurrent ulcers or</p>
+<p>ulcer-related complications should be switched to a COX-2 inhibitor.</p>
+<li>Limit maintenance therapy with a PPI or H2RA to high-risk patients with ulcer compli-</li>
+<p>cations, patients who fail H. pylori eradication, and those with H. pylori-negative ulcers.</p>
+<li>Patients with ulcers refractory to treatment should undergo upper endoscopy</li>
+<p>to confirm a nonhealing ulcer, exclude malignancy, and assess H. pylori status.</p>
+<p>H. pylori-positive patients should receive eradication therapy. Refractory ulcers</p>
+<p>despite a complete standard PPI course should be retreated with double-dose of PPI,</p>
+<p>or consideration can be given to using a different PPI.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor patients for symptomatic relief of ulcer pain, potential adverse drug effects,</li>
+<p>and drug interactions.</p>
+<p>306</p>
+<p>ch29.indd 306 19-11-2020 14:09:52</p>
+<h2>Peptic Ulcer Disease | CHAPTER 29</h2>
+<h2>TABLE 29-2 Drug Dosing Table</h2>
+<p>Drug Brand Name Initial Dose Usual Range</p>
+<p>Proton pump inhibitors</p>
+<p>Omeprazole Prilosec, various 40 mg daily 20–40 mg/day</p>
+<p>Omeprazole Zegerid 40 mg daily 20–40 mg/day</p>
+<p>+ sodium</p>
+<p>bicarbonate</p>
+<p>Lansoprazole Prevacid, various 30 mg daily 15–30 mg/day</p>
+<p>Rabeprazole Aciphex 20 mg daily 20–40 mg/day</p>
+<p>Pantoprazole Protonix, various 40 mg daily 40–80 mg/day</p>
+<p>Esomeprazole Nexium 40 mg daily 20–40 mg/day</p>
+<p>Dexlansoprazole Dexilant 30–60 mg daily 30–60 mg/day</p>
+<p>H-receptor antagonists</p>
+<p>2</p>
+<p>Cimetidine Tagamet, various 300 mg four times daily, 800–1600 mg/day</p>
+<p>400 mg twice daily, or in divided doses</p>
+<p>800 mg at bedtime</p>
+<p>Famotidine Pepcid, various 20 mg twice daily, or 20–40 mg/day</p>
+<p>40 mg at bedtime</p>
+<p>Nizatidine Axid, various 150 mg twice daily, or 150–300 mg/day</p>
+<p>300 mg at bedtime</p>
+<p>Ranitidinea Zantac, various 150 mg twice daily, or 150–300 mg/day</p>
+<p>300 mg at bedtime</p>
+<p>Mucosal protectants</p>
+<p>Sucralfate Carafate, various 1 g four times daily, or 2–4 g/day</p>
+<p>2 g twice daily</p>
+<p>Misoprostol Cytotec 100–200 mcg four 400–800 mcg/day</p>
+<p>times daily</p>
+<p>a In April 2020, the U.S. FDA asked manufacturers to withdraw all ranitidine products from the market.</p>
+<p>A contaminant known as N-Nitrosodimethylamine (NDMA) in some ranitidine products increases</p>
+<p>over time and when stored at higher than room temperatures and may result in exposure to</p>
+<p>unacceptable levels of NDMA, which is a probable human carcinogen.</p>
+<li>Ulcer pain typically resolves in a few days when NSAIDs are discontinued and</li>
+<p>within 7 days upon initiation of antiulcer therapy. Patients with uncomplicated PUD</p>
+<p>are usually symptom free after treatment with any of the recommended antiulcer</p>
+<p>regimens.</p>
+<li>Persistent or recurrent symptoms within 14 days after the end of treatment suggests</li>
+<p>failure of ulcer healing or H. pylori eradication or presence of an alternative diagnosis</p>
+<p>such as gastroesophageal reflux disease.</p>
+<li>Eradication of H. pylori should be confirmed after treatment in all patients, particu-</li>
+<p>larly those who are at risk for complications.</p>
+<li>Monitor patients taking NSAIDs closely for signs and symptoms of bleeding,</li>
+<p>obstruction, penetration, and perforation.</p>
+<li>Follow-up endoscopy is justified in patients with frequent symptomatic recurrence,</li>
+<p>refractory disease, complications, or suspected hypersecretory states.</p>
+<p>See Chapter 50, Peptic Ulcer Disease and Related Disorders, authored by Bryan L. Love</p>
+<p>and Phillip L. Mohorn, for a more detailed discussion of this topic.</p>
+<p>307</p>
+<p>ch29.indd 307 19-11-2020 14:09:53</p>
+<div class="table-container"><table><tr><th>TABLE 29-2 Drug Dosing Table</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Range</td></tr><tr><td>Proton pump inhibitors</td><td></td><td></td><td></td></tr><tr><td>Omeprazole</td><td>Prilosec, various</td><td>40 mg daily</td><td>20–40 mg/day</td></tr><tr><td>Omeprazole
++ sodium
+bicarbonate</td><td>Zegerid</td><td>40 mg daily</td><td>20–40 mg/day</td></tr><tr><td>Lansoprazole</td><td>Prevacid, various</td><td>30 mg daily</td><td>15–30 mg/day</td></tr><tr><td>Rabeprazole</td><td>Aciphex</td><td>20 mg daily</td><td>20–40 mg/day</td></tr><tr><td>Pantoprazole</td><td>Protonix, various</td><td>40 mg daily</td><td>40–80 mg/day</td></tr><tr><td>Esomeprazole</td><td>Nexium</td><td>40 mg daily</td><td>20–40 mg/day</td></tr><tr><td>Dexlansoprazole</td><td>Dexilant</td><td>30–60 mg daily</td><td>30–60 mg/day</td></tr><tr><td>H-receptor antagonists
+2</td><td></td><td></td><td></td></tr><tr><td>Cimetidine</td><td>Tagamet, various</td><td>300 mg four times daily,
+400 mg twice daily, or
+800 mg at bedtime</td><td>800–1600 mg/day
+in divided doses</td></tr><tr><td>Famotidine</td><td>Pepcid, various</td><td>20 mg twice daily, or
+40 mg at bedtime</td><td>20–40 mg/day</td></tr><tr><td>Nizatidine</td><td>Axid, various</td><td>150 mg twice daily, or
+300 mg at bedtime</td><td>150–300 mg/day</td></tr><tr><td>Ranitidinea</td><td>Zantac, various</td><td>150 mg twice daily, or
+300 mg at bedtime</td><td>150–300 mg/day</td></tr><tr><td>Mucosal protectants</td><td></td><td></td><td></td></tr><tr><td>Sucralfate</td><td>Carafate, various</td><td>1 g four times daily, or
+2 g twice daily</td><td>2–4 g/day</td></tr><tr><td>Misoprostol</td><td>Cytotec</td><td>100–200 mcg four
+times daily</td><td>400–800 mcg/day</td></tr><tr><td>a In April 2020, the U.S. FDA asked manufacturers to withdraw all ranitidine products from the market.
+A contaminant known as N-Nitrosodimethylamine (NDMA) in some ranitidine products increases
+over time and when stored at higher than room temperatures and may result in exposure to
+unacceptable levels of NDMA, which is a probable human carcinogen.</td><td></td><td></td><td></td></tr></table></div><p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

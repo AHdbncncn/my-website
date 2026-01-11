@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40. Gastrointestinal Infections</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>40. Gastrointestinal Infections</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>422</p>
+<h2>RETPAHC</h2>
+<p>40</p>
+<p>Gastrointestinal Infections</p>
+<li>Gastrointestinal (GI) infections are among the more common causes of morbidity</li>
+<p>and mortality around the world. Most are caused by viruses, and some are caused</p>
+<p>by bacteria or other organisms. In underdeveloped and developing countries, acute</p>
+<p>gastroenteritis involving diarrhea is the leading cause of mortality in infants and</p>
+<p>children younger than 5 years of age. In the United States, there are 179 million</p>
+<p>episodes of acute gastroenteritis each year, causing nearly 500,000 hospitalizations</p>
+<p>and over 5000 deaths.</p>
+<li>Viruses are now the leading global cause of infectious diarrhea. Noroviruses, previ-</li>
+<p>ously known as Norwalk-like viruses, account for greater than 90% of viral gastroen-</p>
+<p>teritis among all age groups, and 50% of outbreaks worldwide.</p>
+<li>Public health measures such as clean water supply and sanitation facilities, as well as</li>
+<p>quality control of commercial products, are important for the control of most enteric</p>
+<p>infections. Sanitary food handling and preparation practices significantly decrease</p>
+<p>the incidence of enteric infections.</p>
+<p>Rehydration, Antimotility, And Probiotic Therapy</p>
+<li>The cornerstone of management for all GI infections and enterotoxigenic poisonings</li>
+<p>is to prevent dehydration by correcting fluid and electrolyte imbalances. In mild, self-</p>
+<p>limiting acute gastroenteritis, a diet of oral fluids and easily digestible foods is recom-</p>
+<p>mended. In patients with severe dehydrating watery diarrhea and dysenteric diarrhea,</p>
+<p>IV rehydration therapy, antibiotics, and/or antimotility treatments are needed.</p>
+<li>Initial assessment of fluid loss is essential for rehydration. Weight loss is the most reli-</li>
+<p>able means of determining the extent of water loss. Clinical signs such as changes in</p>
+<p>skin turgor, sunken eyes, dry mucous membranes, decreased tearing, decreased urine</p>
+<p>output, altered mentation, and changes in vital signs can be helpful in determining</p>
+<h2>approximate deficits (Table 40-1).</h2>
+<p>TABLE 40-1 Clinical Assessment of Degree of Dehydration in Children Based on Percentage</p>
+<p>of Body Weight Lossa</p>
+<p>Minimal or No</p>
+<p>Dehydration Mild-to-Moderate</p>
+<p>(&lt;3% Loss of Body (3%-9% Loss of Severe (≥10% Loss</p>
+<p>Variable Weight) Body Weight) of Body Weight)</p>
+<p>Blood pressure Normal Normal Normal to reduced</p>
+<p>Quality of pulses Normal Normal or slightly Weak, thready, or not</p>
+<p>decreased palpable</p>
+<p>Heart rate Normal Normal to increased Increased (bradycardia in</p>
+<p>severe cases)</p>
+<p>Breathing Normal Normal to fast Deep</p>
+<p>Mental status Normal Normal to listless Apathetic, lethargic, or</p>
+<p>comatose</p>
+<p>Eyes Normal Sunken orbits/ Deeply sunken orbits/</p>
+<p>decreased tears absent tears</p>
+<p>Mouth and Moist Dry Parched</p>
+<p>tongue</p>
+<p>(Continued )</p>
+<h2>CH40.INDD 422 19-11-2020 15:44:45</h2>
+<div class="table-container"><table><tr><th>Gastrointestinal Infections</th><th></th><th>40
+00</th><th>RETPAHC</th></tr></table></div><div class="table-container"><table><tr><th>TABLE 40-1 Clinical Assessment of Degree of Dehydration in Children Based on Percentage
+of Body Weight Lossa</th><th></th><th></th><th></th></tr><tr><td>Variable</td><td>Minimal or No
+Dehydration
+(&lt;3% Loss of Body
+Weight)</td><td>Mild-to-Moderate
+(3%-9% Loss of
+Body Weight)</td><td>Severe (≥10% Loss
+of Body Weight)</td></tr><tr><td>Blood pressure</td><td>Normal</td><td>Normal</td><td>Normal to reduced</td></tr><tr><td>Quality of pulses</td><td>Normal</td><td>Normal or slightly
+decreased</td><td>Weak, thready, or not
+palpable</td></tr><tr><td>Heart rate</td><td>Normal</td><td>Normal to increased</td><td>Increased (bradycardia in
+severe cases)</td></tr><tr><td>Breathing</td><td>Normal</td><td>Normal to fast</td><td>Deep</td></tr><tr><td>Mental status</td><td>Normal</td><td>Normal to listless</td><td>Apathetic, lethargic, or
+comatose</td></tr><tr><td>Eyes</td><td>Normal</td><td>Sunken orbits/
+decreased tears</td><td>Deeply sunken orbits/
+absent tears</td></tr><tr><td>Mouth and
+tongue</td><td>Moist</td><td>Dry</td><td>Parched
+(Continued )</td></tr></table></div><h2>Gastrointestinal Infections | CHAPTER 40</h2>
+<p>TABLE 40-1 Clinical Assessment of Degree of Dehydration in Children Based on Percentage</p>
+<p>of Body Weight Lossa(Continued )</p>
+<p>Minimal or No</p>
+<p>Dehydration Mild-to-Moderate</p>
+<p>(&lt;3% Loss of Body (3%-9% Loss of Severe (≥10% Loss</p>
+<p>Variable Weight) Body Weight) of Body Weight)</p>
+<p>Thirst Normal Eager to drink Drinks poorly; too lethargic</p>
+<p>to drink</p>
+<p>Skin fold Normal Recoil in &lt;2 Recoil in &gt;2 seconds</p>
+<p>seconds</p>
+<p>Extremities Warm, normal Cool, prolonged Cold, mottled, cyanotic,</p>
+<p>capillary refill capillary refill prolonged capillary refill</p>
+<p>Urine output Normal to decreased Decreased Minimal</p>
+<p>Hydration None ORS 50–100 mL/kg Lactated Ringer’s solution</p>
+<p>therapy over 3–4 hours or normal saline 20 mL/</p>
+<p>kg over 15–30 minutes</p>
+<p>IV until mental status or</p>
+<p>perfusion improves</p>
+<p>Followed by 5%</p>
+<p>dextrose/0.45% sodium</p>
+<p>chloride IV at higher</p>
+<p>maintenance rates or ORS</p>
+<p>100 mL/kg over 4 hours</p>
+<p>Replacement For each diarrheal Same as minimal If unable to tolerate ORS,</p>
+<p>of ongoing stool or emesis dehydration administer through</p>
+<p>losses nasogastric tube</p>
+<p>&lt;10 kg body</p>
+<p>or administer 5%</p>
+<p>weight: 60–120</p>
+<p>dextrose/0.45% sodium</p>
+<p>mL ORS</p>
+<p>chloride with 20 mEq/L</p>
+<p>&gt;10 kg body (mmol/L) potassium</p>
+<p>weight: 120–240 chloride IV</p>
+<p>mL ORS</p>
+<p>aPercentages vary among patients for each dehydration category; hemodynamic and perfusion status</p>
+<p>is most important; when unsure of category, therapy for more severe category is recommended.</p>
+<p>ORS, oral rehydration solution.</p>
+<li>The necessary components of oral rehydration solution (ORS) include glucose,</li>
+<p>sodium, potassium chloride, and water (Table 40-2). ORS should be given in small</p>
+<p>frequent volumes (5 mL every 2–3 minutes) in a teaspoon or oral syringe.</p>
+<li>Severely dehydrated patients should be resuscitated initially with lactated Ringer’s solu-</li>
+<p>tion or normal intravenous (IV) saline. Guidelines for rehydration therapy based on the</p>
+<p>degree of dehydration and replacement of ongoing losses are outlined in Table 40-1.</p>
+<p>After rehydration, maintenance fluid is given based on accurate recording of intake and</p>
+<p>output volumes. ORS should be instituted as soon as it can be tolerated.</p>
+<li>Early refeeding with age-appropriate unrestricted diet is recommended in children</li>
+<p>and shortens the course of diarrhea. Initially, easily digested foods, such as bananas,</p>
+<p>applesauce, and cereal may be added as tolerated. Foods high in fiber, sodium, and</p>
+<p>sugar should be avoided.</p>
+<li>Antimotility drugs such as diphenoxylate and loperamide offer symptomatic relief</li>
+<p>in patients with watery diarrhea by reducing the number of stools. Antimotility</p>
+<p>drugs should be avoided if possible and are not recommended in patients with many</p>
+<p>toxin-mediated dysenteric diarrheas (ie, enterohemorrhagic Escherichia coli [EHEC],</p>
+<p>pseudomembranous colitis, shigellosis).</p>
+<p>423</p>
+<h2>CH40.INDD 423 19-11-2020 15:44:45</h2>
+<div class="table-container"><table><tr><th>TABLE 40-1 Clinical Assessment of Degree of Dehydration in Children Based on Percentage
+of Body Weight Lossa(Continued )</th><th></th><th></th><th></th></tr><tr><td>Variable</td><td>Minimal or No
+Dehydration
+(&lt;3% Loss of Body
+Weight)</td><td>Mild-to-Moderate
+(3%-9% Loss of
+Body Weight)</td><td>Severe (≥10% Loss
+of Body Weight)</td></tr><tr><td>Thirst</td><td>Normal</td><td>Eager to drink</td><td>Drinks poorly; too lethargic
+to drink</td></tr><tr><td>Skin fold</td><td>Normal</td><td>Recoil in &lt;2
+seconds</td><td>Recoil in &gt;2 seconds</td></tr><tr><td>Extremities</td><td>Warm, normal
+capillary refill</td><td>Cool, prolonged
+capillary refill</td><td>Cold, mottled, cyanotic,
+prolonged capillary refill</td></tr><tr><td>Urine output</td><td>Normal to decreased</td><td>Decreased</td><td>Minimal</td></tr><tr><td>Hydration
+therapy</td><td>None</td><td>ORS 50–100 mL/kg
+over 3–4 hours</td><td>Lactated Ringer’s solution
+or normal saline 20 mL/
+kg over 15–30 minutes
+IV until mental status or
+perfusion improves
+Followed by 5%
+dextrose/0.45% sodium
+chloride IV at higher
+maintenance rates or ORS
+100 mL/kg over 4 hours</td></tr><tr><td>Replacement
+of ongoing
+losses</td><td>For each diarrheal
+stool or emesis</td><td>Same as minimal
+dehydration</td><td>If unable to tolerate ORS,
+administer through
+nasogastric tube
+or administer 5%
+dextrose/0.45% sodium
+chloride with 20 mEq/L
+(mmol/L) potassium
+chloride IV</td></tr><tr><td></td><td>&lt;10 kg body
+weight: 60–120
+mL ORS</td><td></td><td></td></tr><tr><td></td><td>&gt;10 kg body
+weight: 120–240
+mL ORS</td><td></td><td></td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 40-2 Comparison of Common Solutions Used in Oral Rehydration and Maintenance</p>
+<p>Base Carbohydrate Osmolarity</p>
+<p>Product Na (mEq/L)b K (mEq/L)b (mEq/L) (mmol/L) (mOsm/L)</p>
+<h2>WHO/ 75 20 30 75 245</h2>
+<h2>UNICEF</h2>
+<p>(2002)</p>
+<p>Pedialyte 45 20 30 140 250</p>
+<p>Infalyte 50 25 30 70 200</p>
+<p>Oralyte 60 20 0 90 260</p>
+<p>Rehydralyte 75 20 30 140 250</p>
+<p>Colaa 2 0 13 700 750</p>
+<p>Apple juicea 5 32 0 690 730</p>
+<p>Chicken 250 8 0 0 500</p>
+<p>brotha</p>
+<p>Sports 20 3 3 255 330</p>
+<p>beveragea</p>
+<p>aThese solutions should be avoided in dehydration.</p>
+<p>bConcentration of monovalent ions expressed in mEq/L is numerically equivalent to mmol/L</p>
+<p>concentration.</p>
+<li>Individual studies have not shown significant benefit from probiotics, and meta-</li>
+<p>analyses have shown conflicting results. Probiotics should not be recommended for</p>
+<p>prophylaxis or treatment of initial antibiotic-associated diarrhea.</p>
+<p>Bacterial Infections</p>
+<li>Antibiotic therapy is recommended in severe cases of diarrhea, moderate-to-severe</li>
+<p>cases of traveler’s diarrhea, most cases of febrile dysenteric diarrhea, and culture-</p>
+<p>proven bacterial diarrhea. Antibiotics are not essential in the treatment of most mild</p>
+<p>diarrheas, and empirical therapy for acute GI infections may result in unnecessary</p>
+<p>antibiotic courses. Antibiotic choices for bacterial infections are given in Table 40-3.</p>
+<p>Antimicrobial therapy is not recommended in EHEC diarrhea as it may increase risk</p>
+<p>of hemolytic-uremic syndrome.</p>
+<li>Common pathogens responsible for watery diarrhea in the United States are norovirus</li>
+<p>and enterotoxigenic Escherichia coli (ETEC), while those most commonly associated</p>
+<p>with dysentery diarrhea are Campylobacter spp., EHEC, Salmonella spp., and Shigella</p>
+<p>spp. ETEC is also the most common cause of traveler’s diarrhea and a common cause</p>
+<p>of food- and water-associated outbreaks. Cholera is caused by toxigenic V. cholera.</p>
+<h2>TRAVELER’S DIARRHEA</h2>
+<li>Traveler’s diarrhea describes the clinical syndrome caused by contaminated food or</li>
+<p>water that is manifested by malaise, anorexia, and abdominal cramps followed by the</p>
+<p>sudden onset of diarrhea that incapacitates many travelers.</p>
+<li>The most common pathogens are bacterial in nature and include ETEC, Shigella,</li>
+<p>Campylobacter, and Salmonella. Viruses are also potential causes.</p>
+<li>Patient education in avoiding high-risk food and beverages should be the best</li>
+<p>method for minimizing the risk. High-risk foods and beverages include raw or</p>
+<p>undercooked meat and seafood, moist foods served at room temperature, fruits that</p>
+<p>cannot be peeled, vegetables, milk from a questionable source, hot sauces on the</p>
+<p>table, tap water, unsealed bottled water, iced drinks, and food from street vendors.</p>
+<p>424</p>
+<h2>CH40.INDD 424 19-11-2020 15:44:45</h2>
+<div class="table-container"><table><tr><th>TABLE 40-2 Comparison of Common Solutions Used in Oral Rehydration and Maintenance</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Product</td><td>Na (mEq/L)b</td><td>K (mEq/L)b</td><td>Base
+(mEq/L)</td><td>Carbohydrate
+(mmol/L)</td><td>Osmolarity
+(mOsm/L)</td></tr><tr><td>WHO/
+UNICEF
+(2002)</td><td>75</td><td>20</td><td>30</td><td>75</td><td>245</td></tr><tr><td>Pedialyte</td><td>45</td><td>20</td><td>30</td><td>140</td><td>250</td></tr><tr><td>Infalyte</td><td>50</td><td>25</td><td>30</td><td>70</td><td>200</td></tr><tr><td>Oralyte</td><td>60</td><td>20</td><td>0</td><td>90</td><td>260</td></tr><tr><td>Rehydralyte</td><td>75</td><td>20</td><td>30</td><td>140</td><td>250</td></tr><tr><td>Colaa</td><td>2</td><td>0</td><td>13</td><td>700</td><td>750</td></tr><tr><td>Apple juicea</td><td>5</td><td>32</td><td>0</td><td>690</td><td>730</td></tr><tr><td>Chicken
+brotha</td><td>250</td><td>8</td><td>0</td><td>0</td><td>500</td></tr><tr><td>Sports
+beveragea</td><td>20</td><td>3</td><td>3</td><td>255</td><td>330</td></tr></table></div><h2>Gastrointestinal Infections | CHAPTER 40</h2>
+<h2>TABLE 40-3 Recommendations for Antibiotic Therapy</h2>
+<p>Pathogen Children Adults</p>
+<p>Watery Diarrhea</p>
+<p>Enterotoxigenic Azithromycin 10 mg/kg/day Ciprofloxacin 750 mg orally once</p>
+<p>Escherichia coli given orally once daily × daily × 1–3 days; alternatives:</p>
+<p>3 days; ceftriaxone 50 mg/ rifaximin 200 mg orally</p>
+<p>kg/day given IV once daily three times daily × 3 days;</p>
+<p>× 3 days azithromycin 1000 mg orally</p>
+<p>× 1 day or 500 mg orally daily</p>
+<p>× 3 days</p>
+<p>Vibrio cholerae O1 Erythromycin 30 mg/kg/ Doxycycline 300 mg orally ×</p>
+<p>day divided every 8 1 day</p>
+<p>hours orally × 3 days; Alternatives: azithromycin 500</p>
+<p>azithromycin 10 mg/kg/ mg orally once daily × 3</p>
+<p>day given orally once daily days; ciprofloxacin 750 mg</p>
+<p>× 3 days orally once daily × 3 days;</p>
+<p>ceftriaxone IV</p>
+<p>Dysenteric Diarrhea</p>
+<p>Campylobacter speciesa Azithromycin 10 mg/kg/day Azithromycin 500 mg orally once</p>
+<p>given orally once daily × daily × 3 days</p>
+<p>3–5 days; erythromycin 30 Alternatives: ciprofloxacin 750 mg</p>
+<p>mg/kg/day divided into orally once daily × 7 days</p>
+<p>two to four doses orally ×</p>
+<p>3–5 days</p>
+<p>Salmonella Ceftriaxone 100 mg/kg/ Ceftriaxone 2 g IV/IM once;</p>
+<p>Nontyphoidala day divided IV every ciprofloxacin 750 mg orally</p>
+<p>12 hours × 7–10 days; once daily × 7–10 days</p>
+<p>azithromycin 20 mg/kg/ Alternatives: ampicillin 250–500</p>
+<p>day orally once daily × mg orally every 6 hours</p>
+<p>7 days × 7 days; azithromycin</p>
+<p>500 mg orally once daily</p>
+<p>× 7 days; trimethoprim-</p>
+<p>sulfamethoxazole 160/800 mg</p>
+<p>twice daily × 7 days</p>
+<p>For immunocompromised</p>
+<p>patients, duration should</p>
+<p>be increased to 14 days for</p>
+<p>both fluoroquinolones and</p>
+<p>azithromycin</p>
+<p>Shigella speciesa Azithromycin 10 mg/kg/day Azithromycin 500 mg orally once</p>
+<p>given orally once daily × daily × 3 days; ceftriaxone 2 g</p>
+<p>3 days; ceftriaxone 50 mg/ IV/IM once; ciprofloxacin 750</p>
+<p>kg/day given IV once daily mg orally once daily × 3 days</p>
+<p>× 3 days Alternatives: ampicillin 250–500</p>
+<p>mg orally every 6 hours</p>
+<p>× 7 days; trimethoprim–</p>
+<p>sulfamethoxazole 160/800 mg</p>
+<p>twice daily × 7 days</p>
+<p>(Continued )</p>
+<p>425</p>
+<h2>CH40.INDD 425 19-11-2020 15:44:45</h2>
+<div class="table-container"><table><tr><th>TABLE 40-3 Recommendations for Antibiotic Therapy</th><th></th><th></th></tr><tr><td>Pathogen</td><td>Children</td><td>Adults</td></tr><tr><td>Watery Diarrhea</td><td></td><td></td></tr><tr><td>Enterotoxigenic
+Escherichia coli</td><td>Azithromycin 10 mg/kg/day
+given orally once daily ×
+3 days; ceftriaxone 50 mg/
+kg/day given IV once daily
+× 3 days</td><td>Ciprofloxacin 750 mg orally once
+daily × 1–3 days; alternatives:
+rifaximin 200 mg orally
+three times daily × 3 days;
+azithromycin 1000 mg orally
+× 1 day or 500 mg orally daily
+× 3 days</td></tr><tr><td>Vibrio cholerae O1</td><td>Erythromycin 30 mg/kg/
+day divided every 8
+hours orally × 3 days;
+azithromycin 10 mg/kg/
+day given orally once daily
+× 3 days</td><td>Doxycycline 300 mg orally ×
+1 day
+Alternatives: azithromycin 500
+mg orally once daily × 3
+days; ciprofloxacin 750 mg
+orally once daily × 3 days;
+ceftriaxone IV</td></tr><tr><td>Dysenteric Diarrhea</td><td></td><td></td></tr><tr><td>Campylobacter speciesa</td><td>Azithromycin 10 mg/kg/day
+given orally once daily ×
+3–5 days; erythromycin 30
+mg/kg/day divided into
+two to four doses orally ×
+3–5 days</td><td>Azithromycin 500 mg orally once
+daily × 3 days
+Alternatives: ciprofloxacin 750 mg
+orally once daily × 7 days</td></tr><tr><td>Salmonella
+Nontyphoidala</td><td>Ceftriaxone 100 mg/kg/
+day divided IV every
+12 hours × 7–10 days;
+azithromycin 20 mg/kg/
+day orally once daily ×
+7 days</td><td>Ceftriaxone 2 g IV/IM once;
+ciprofloxacin 750 mg orally
+once daily × 7–10 days
+Alternatives: ampicillin 250–500
+mg orally every 6 hours
+× 7 days; azithromycin
+500 mg orally once daily
+× 7 days; trimethoprim-
+sulfamethoxazole 160/800 mg
+twice daily × 7 days
+For immunocompromised
+patients, duration should
+be increased to 14 days for
+both fluoroquinolones and
+azithromycin</td></tr><tr><td>Shigella speciesa</td><td>Azithromycin 10 mg/kg/day
+given orally once daily ×
+3 days; ceftriaxone 50 mg/
+kg/day given IV once daily
+× 3 days</td><td>Azithromycin 500 mg orally once
+daily × 3 days; ceftriaxone 2 g
+IV/IM once; ciprofloxacin 750
+mg orally once daily × 3 days
+Alternatives: ampicillin 250–500
+mg orally every 6 hours
+× 7 days; trimethoprim–
+sulfamethoxazole 160/800 mg
+twice daily × 7 days
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 40-3 Recommendations for Antibiotic Therapy (Continued )</p>
+<p>Pathogen Children Adults</p>
+<p>Yersinia speciesa Treat as children with Trimethoprim-</p>
+<p>shigellosis sulfamethoxazole160/800 mg</p>
+<p>twice daily × 7 days</p>
+<p>Alternatives: cefotaxime IV or</p>
+<p>ciprofloxacin 750 mg orally</p>
+<p>once daily × 7 days</p>
+<p>Traveler’s Diarrhea</p>
+<p>Prophylaxisa Norfloxacin 400 mg or</p>
+<p>ciprofloxacin 750 mg orally</p>
+<p>daily; rifaximin 200 mg one to</p>
+<p>three times daily up to 2 weeks</p>
+<p>Treatment Ciprofloxacin 750 mg orally × 1</p>
+<p>day or 500 mg orally every 12</p>
+<p>hours × 3 days; levofloxacin</p>
+<p>1000 mg orally × 1 day or</p>
+<p>500 mg orally daily × 3 days;</p>
+<p>rifaximin 200 mg three times</p>
+<p>daily × 3 days; azithromycin</p>
+<p>1000 mg orally × 1 day or 500</p>
+<p>mg orally daily × 3 days</p>
+<p>aFor high-risk patients only. See the preceding text for the high-risk patients in each infection.</p>
+<li>Prophylactic antibiotic use is not recommended for most travelers due to the potential</li>
+<p>side effects of antibiotics, predisposition to other infections such as Clostridioides dif-</p>
+<p>ficile infection or vaginal candidiasis, the increased risk of selection of drug-r esistant</p>
+<p>organisms, cost, lack of data on the safety and efficacy of antibiotics given for more</p>
+<p>than 2 or 3 weeks, and availability of rapidly effective antibiotics for treatment.</p>
+<li>Prophylactic antibiotics are recommended only in high-risk individuals or in situa-</li>
+<p>tions in which short-term illness could ruin the purpose of the trip, such as a military</p>
+<p>mission. A fluoroquinolone is the drug of choice when traveling to most areas of the</p>
+<p>world. Azithromycin can be considered when traveling to South and Southeast Asia.</p>
+<h2>TREATMENT</h2>
+<li>The goals of treatment of traveler’s diarrhea are to avoid dehydration, reduce the</li>
+<p>severity and duration of symptoms, and prevent interruption to planned activities.</p>
+<li>Fluid and electrolyte replacement should be initiated at the onset of diarrhea.</li>
+<h2>• Antibiotics used for treatment are found in Table 40-3.</h2>
+<li>For symptom relief, loperamide (preferred because of its quicker onset and longer</li>
+<p>duration of relief relative to bismuth) may be taken (4 mg orally initially and then</p>
+<p>2 mg with each subsequent loose stool to a maximum of 16 mg/day in patients</p>
+<p>without bloody diarrhea and fever). Loperamide should be discontinued if symptoms</p>
+<p>persist for more than 48 hours.</p>
+<h2>CLOSTRIOIDES DIFFICILE</h2>
+<li>C. difficile is the most commonly recognized cause of infectious diarrhea in healthcare</li>
+<p>settings with high rates of disease in the elderly and those exposed to antibiotic agents.</p>
+<p>The antibiotics most commonly associated with C. difficile infection (CDI) include fluo-</p>
+<p>roquinolones, clindamycin, carbapenems, and third-/fourth-generation cephalosporins.</p>
+<li>Other risk factors for acquisition of C. difficile include recent healthcare exposure,</li>
+<p>chemotherapy, patients undergoing GI surgery or receiving tube feeding, and poten-</p>
+<p>tially those receiving acid suppressive medications.</p>
+<p>426</p>
+<h2>CH40.INDD 426 19-11-2020 15:44:46</h2>
+<div class="table-container"><table><tr><th>TABLE 40-3 Recommendations for Antibiotic Therapy (Continued )</th><th></th><th></th></tr><tr><td>Pathogen</td><td>Children</td><td>Adults</td></tr><tr><td>Yersinia speciesa</td><td>Treat as children with
+shigellosis</td><td>Trimethoprim-
+sulfamethoxazole160/800 mg
+twice daily × 7 days
+Alternatives: cefotaxime IV or
+ciprofloxacin 750 mg orally
+once daily × 7 days</td></tr><tr><td>Traveler’s Diarrhea</td><td></td><td></td></tr><tr><td>Prophylaxisa</td><td></td><td>Norfloxacin 400 mg or
+ciprofloxacin 750 mg orally
+daily; rifaximin 200 mg one to
+three times daily up to 2 weeks</td></tr><tr><td>Treatment</td><td></td><td>Ciprofloxacin 750 mg orally × 1
+day or 500 mg orally every 12
+hours × 3 days; levofloxacin
+1000 mg orally × 1 day or
+500 mg orally daily × 3 days;
+rifaximin 200 mg three times
+daily × 3 days; azithromycin
+1000 mg orally × 1 day or 500
+mg orally daily × 3 days</td></tr></table></div><h2>Gastrointestinal Infections | CHAPTER 40</h2>
+<li>The spectrum of disease ranges from mild diarrhea to life-threatening toxic. The</li>
+<p>diarrhea is typically watery and nonbloody, and is often associated with abdominal</p>
+<p>discomfort, fever, and leukocytosis.</p>
+<li>Diagnosis of CDI is confirmed by identification of C. difficile organisms/toxin in</li>
+<p>stool or pseudomembranous colitis visualized during endoscopy.</p>
+<li>Supportive care of CDI includes fluid and electrolyte replacement therapy, in addi-</li>
+<p>tion to discontinuation of the offending antimicrobial if possible.</p>
+<h2>TREATMENT</h2>
+<li>Once determination of disease severity has been made, treatment should be initiated</li>
+<p>with an antibiotic effective against C. difficile. Metronidazole, vancomycin, and</p>
+<p>fidaxomicin are the most commonly prescribed agents. Initial therapy should also</p>
+<p>include discontinuation of the offending agent. The patient should be supported with</p>
+<p>fluid and electrolyte replacement.</p>
+<li>Classification of CDI severity and recommended treatment for adults is given in</li>
+<p>Table 40-4. In patients with severe/complicated or fulminant CDI the preferred regi-</p>
+<p>men is combination therapy with IV metronidazole and vancomycin.</p>
+<li>Recurrence of CDI can occur in 25%–35% of patients. If metronidazole was used</li>
+<p>initially, then a standard vancomycin course can be utilized for the first recurrence. If</p>
+<p>vancomycin was used initially, then fidaxomicin can be used for the first recurrence.</p>
+<p>Alternatively, a tapered and pulsed dose of vancomycin can be used for the first recur-</p>
+<p>rence and is the recommended treatment strategy for second or subsequent recurrences.</p>
+<li>Treatment with fecal microbiota transplant (FMT) has gained popularity among</li>
+<p>many practitioners. Multiple randomized controlled trials have shown efficacy of</p>
+<p>FMT with resolution rates of 80%–90% in most studies, yet the specific preparation</p>
+<p>and route of administration are not well established.</p>
+<h2>VIRAL INFECTIONS</h2>
+<li>Viruses are now recognized as the leading cause of diarrhea in the world.</li>
+<li>In infants and children rotavirus, a double-stranded, wheel-shaped RNA virus is the</li>
+<p>most common cause of diarrhea worldwide, and 1 million people die annually from</p>
+<p>the infection.</p>
+<p>TABLE 40-4 Clostridioides difficile Infection Severity and Treatment</p>
+<p>Markers of Disease</p>
+<p>Severity Severity Recommended Treatment</p>
+<p>Nonsevere WBC ≤15,000 cells/mm3 (15 Vancomycin 125 mg orally 4 times daily</p>
+<p>× 109/L) for 10 days, OR fidaxomicin 200 mg</p>
+<p>orally twice daily for 10 days, OR</p>
+<p>SCr &lt;1.5 mg/dL (133</p>
+<p>metronidazole 500 mg orally every 8</p>
+<p>µmol/L)</p>
+<p>hours for 10 daysa</p>
+<p>Severe WBC &gt;15,000 cells/mm3 Vancomycin 125 mg orally 4 times daily</p>
+<p>(15 × 109/L) for 10 days, OR fidaxomicin 200 mg</p>
+<p>orally twice daily for 10 days</p>
+<p>SCr &gt;1.5 mg/dL (133</p>
+<p>µmol/L)</p>
+<p>Fulminant Hypotension or shock Metronidazole 500 mg IV every 8 hours</p>
+<p>Ileus and/or megacolon PLUS vancomycin 500 mg every 6</p>
+<p>hours via NG or orally (if ileus present</p>
+<p>use rectally)</p>
+<p>aMetronidazole is an alternative therapy if other agents are unavailable or too costly.</p>
+<p>NG, nasogastric; SCr, serum creatinine; WBC, white blood cell.</p>
+<p>427</p>
+<h2>CH40.INDD 427 19-11-2020 15:44:46</h2>
+<div class="table-container"><table><tr><th>TABLE 40-4 Clostridioides difficile Infection Severity and Treatment</th><th></th><th></th></tr><tr><td>Severity</td><td>Markers of Disease
+Severity</td><td>Recommended Treatment</td></tr><tr><td>Nonsevere</td><td>WBC ≤15,000 cells/mm3 (15
+× 109/L)
+SCr &lt;1.5 mg/dL (133
+µmol/L)</td><td>Vancomycin 125 mg orally 4 times daily
+for 10 days, OR fidaxomicin 200 mg
+orally twice daily for 10 days, OR
+metronidazole 500 mg orally every 8
+hours for 10 daysa</td></tr><tr><td>Severe</td><td>WBC &gt;15,000 cells/mm3
+(15 × 109/L)
+SCr &gt;1.5 mg/dL (133
+µmol/L)</td><td>Vancomycin 125 mg orally 4 times daily
+for 10 days, OR fidaxomicin 200 mg
+orally twice daily for 10 days</td></tr><tr><td>Fulminant</td><td>Hypotension or shock
+Ileus and/or megacolon</td><td>Metronidazole 500 mg IV every 8 hours
+PLUS vancomycin 500 mg every 6
+hours via NG or orally (if ileus present
+use rectally)</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 40-5 Characteristics of Agents Responsible for Acute Viral Gastroenteritis</p>
+<p>Peak Age Time of Mode of Common</p>
+<p>Virus of Onset Year Duration Transmission Symptoms</p>
+<p>Rotavirus 6 months–2 October– 3–7 days Fecal–oral, Nausea,</p>
+<p>years April water, food vomiting,</p>
+<p>diarrhea,</p>
+<p>fever,</p>
+<p>abdominal</p>
+<p>pain, lactose</p>
+<p>intolerance</p>
+<p>Norovirus All age Peak in 2–3 days Fecal–oral, Nausea,</p>
+<p>groups winter food, water, vomiting,</p>
+<p>environment diarrhea,</p>
+<p>abdominal</p>
+<p>cramps,</p>
+<p>myalgia</p>
+<p>Astrovirus &lt;7 years Winter 1–4 days Fecal–oral, Diarrhea,</p>
+<p>water, headache,</p>
+<p>shellfish malaise,</p>
+<p>nausea</p>
+<p>Enteric &lt;2 years Year-round 7–9 days Fecal–oral Diarrhea,</p>
+<p>adenovirus respiratory</p>
+<p>symptoms,</p>
+<p>vomiting,</p>
+<p>fever</p>
+<p>Pestivirus &lt;2 years NR 3 days NR Mild</p>
+<p>Coronavirus- &lt;2 years Fall and 7 days NR Respiratory</p>
+<p>like early disease</p>
+<p>particles winter</p>
+<p>Enterovirus NR NR NR NR Mild diarrhea,</p>
+<p>secondary</p>
+<p>organ</p>
+<p>damage</p>
+<p>NR, not reported.</p>
+<li>In the United States, routine rotavirus vaccination is recommended for all infants</li>
+<p>beginning at age 2 months. There are two vaccines, RotaTeq (RV5) and Rotarix</p>
+<p>(RV1), available for reducing rotaviral gastroenteritis.</p>
+<li>Characteristics of agents responsible for viral gastroenteritis are given in Table 40-5.</li>
+<p>See Chapter 131, Gastrointestinal Infections and Enterotoxigenic Poisonings, authored by</p>
+<p>Andrew Roecker and Brittany Bates, for a more detailed discussion of this topic.</p>
+<p>428</p>
+<h2>CH40.INDD 428 19-11-2020 15:44:46</h2>
+<div class="table-container"><table><tr><th>TABLE 40-5 Characteristics of Agents Responsible for Acute Viral Gastroenteritis</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Virus</td><td>Peak Age
+of Onset</td><td>Time of
+Year</td><td>Duration</td><td>Mode of
+Transmission</td><td>Common
+Symptoms</td></tr><tr><td>Rotavirus</td><td>6 months–2
+years</td><td>October–
+April</td><td>3–7 days</td><td>Fecal–oral,
+water, food</td><td>Nausea,
+vomiting,
+diarrhea,
+fever,
+abdominal
+pain, lactose
+intolerance</td></tr><tr><td>Norovirus</td><td>All age
+groups</td><td>Peak in
+winter</td><td>2–3 days</td><td>Fecal–oral,
+food, water,
+environment</td><td>Nausea,
+vomiting,
+diarrhea,
+abdominal
+cramps,
+myalgia</td></tr><tr><td>Astrovirus</td><td>&lt;7 years</td><td>Winter</td><td>1–4 days</td><td>Fecal–oral,
+water,
+shellfish</td><td>Diarrhea,
+headache,
+malaise,
+nausea</td></tr><tr><td>Enteric
+adenovirus</td><td>&lt;2 years</td><td>Year-round</td><td>7–9 days</td><td>Fecal–oral</td><td>Diarrhea,
+respiratory
+symptoms,
+vomiting,
+fever</td></tr><tr><td>Pestivirus</td><td>&lt;2 years</td><td>NR</td><td>3 days</td><td>NR</td><td>Mild</td></tr><tr><td>Coronavirus-
+like
+particles</td><td>&lt;2 years</td><td>Fall and
+early
+winter</td><td>7 days</td><td>NR</td><td>Respiratory
+disease</td></tr><tr><td>Enterovirus</td><td>NR</td><td>NR</td><td>NR</td><td>NR</td><td>Mild diarrhea,
+secondary
+organ
+damage</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

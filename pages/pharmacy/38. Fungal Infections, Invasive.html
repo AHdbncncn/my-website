@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38. Fungal Infections, Invasive</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>38. Fungal Infections, Invasive</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>398</p>
+<h2>RETPAHC</h2>
+<h2>Chapter_Title</h2>
+<h2>RETPAHC</h2>
+<p>38</p>
+<p>Fungal Infections, Invasive</p>
+<p>Histoplasmosis</p>
+<li>Histoplasmosis is caused by inhalation of dust-borne microconidia of the dimorphic</li>
+<p>fungus Histoplasma capsulatum. In the United States, most disease is localized along</p>
+<p>the Ohio and Mississippi river valleys.</p>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>In the vast majority of patients, low-inoculum exposure to H. capsulatum results in</li>
+<p>mild or asymptomatic pulmonary histoplasmosis. The course of disease is generally</p>
+<p>benign, and symptoms usually abate within a few weeks of onset. Patients exposed</p>
+<p>to a higher inoculum during a primary infection or reinfection may experience an</p>
+<p>acute, self-limited illness with flu-like pulmonary symptoms, including fever, chills,</p>
+<p>headache, myalgia, and nonproductive cough.</p>
+<li>Chronic pulmonary histoplasmosis generally presents as an opportunistic infection</li>
+<p>imposed on a preexisting structural abnormality, such as lesions resulting from</p>
+<p>emphysema. Patients demonstrate chronic pulmonary symptoms and apical lung</p>
+<p>lesions that progress with inflammation, calcified granulomas, and fibrosis. Progres-</p>
+<p>sion of disease over a period of years, seen in 25%–30% of patients, is associated</p>
+<p>with cavitation, bronchopleural fistulas, extension to the other lung, pulmonary</p>
+<p>insufficiency, and often death.</p>
+<li>In patients exposed to a large inoculum and in immunocompromised hosts, progres-</li>
+<p>sive illness, disseminated histoplasmosis, occurs. The clinical severity of the diverse</p>
+<p>forms of disseminated histoplasmosis (Table 38-1) generally parallels the degree of</p>
+<p>macrophage parasitization observed.</p>
+<li>Acute (infantile) disseminated histoplasmosis is seen in infants and young children</li>
+<p>and (rarely) in adults with Hodgkin disease or other lymphoproliferative disorders.</p>
+<p>It is characterized by unrelenting fever; anemia; leukopenia or thrombocytopenia;</p>
+<p>enlargement of the liver, spleen, and visceral lymph nodes; and GI symptoms,</p>
+<p>particularly nausea, vomiting, and diarrhea.</p>
+<li>If untreated it is uniformly fatal in 1-2 months. A less severe “subacute” form of the</li>
+<p>disease, which occurs in both infants and immunocompetent adults, is character-</p>
+<p>ized by focal destructive lesions in various organs, weight loss, weakness, fever, and</p>
+<p>malaise.</p>
+<li>Most adults with disseminated histoplasmosis demonstrate a mild, chronic form of</li>
+<p>the disease. Untreated patients are often ill for 10–20 years, with long asymptomatic</p>
+<p>periods interrupted by relapses characterized by weight loss, weakness, and fatigue.</p>
+<li>Adult patients with acquired immunodeficiency syndrome (AIDS) demonstrate an</li>
+<p>acute form of disseminated disease that resembles the syndrome seen in infants and</p>
+<p>children. Progressive disseminated histoplasmosis can occur as the direct result of</p>
+<p>initial infection or because of reactivation of dormant foci.</p>
+<li>In most patients, serologic evidence (complement fixation test or immunodiffusion</li>
+<p>testing) remains the primary method in the diagnosis of histoplasmosis. Detection</p>
+<p>of histoplasma antigen by enzyme immunoassay (EIA) in the urine, blood, or bron-</p>
+<p>choalveolar lavage fluid of infected patients provides rapid diagnostic information</p>
+<p>and is particularly useful in patients who are severely ill.</p>
+<h2>TREATMENT</h2>
+<li>The goals of therapy are resolution of clinical abnormalities, prevention of relapse,</li>
+<p>and eradication of infection whenever possible, although chronic suppression of</p>
+<p>infection can be adequate in immunosuppressed patients, including those with HIV</p>
+<p>disease.</p>
+<p>ch38.indd 398 19-11-2020 15:09:52</p>
+<div class="table-container"><table><tr><th>FungalC Ihnafepctteiro_nTsi,t lIenvasive</th><th>38
+00</th><th>RREETTPPAAHHCC</th></tr></table></div><h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<p>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis</p>
+<p>Type of Disease</p>
+<p>and Common</p>
+<p>Clinical Approximate</p>
+<p>Manifestations Frequency (%)a Therapy/Comments</p>
+<p>Nonimmunosuppressed Host</p>
+<p>Acute pulmonary histoplasmosis</p>
+<p>Asymptomatic or 50–99 Asymptomatic, mild, or symptoms &lt;4 weeks:</p>
+<p>mild-to-moderate No therapy generally required; itraconazole</p>
+<p>disease (200 mg three times daily for 3 days and then</p>
+<p>200 mg once or twice daily for 6–12 weeks)</p>
+<p>is recommended for patients who continue</p>
+<p>to have symptoms for 11 months</p>
+<p>Symptoms &gt;4 weeks: Itraconazole 200 mg once</p>
+<p>daily × 6–12 weeksb</p>
+<p>Self-limited disease 1–50 Amphotericin Bc 0.3–0.5 mg/kg/day IV × 2–4</p>
+<p>weeks (total dose 500 mg) or ketoconazole</p>
+<p>400 mg orally daily × 3–6 months can be</p>
+<p>beneficial in patients with severe hypoxia</p>
+<p>following inhalation of large inocula;</p>
+<p>antifungal therapy generally not useful</p>
+<p>for arthritis or pericarditis; NSAIDs or</p>
+<p>corticosteroids can be useful in some cases</p>
+<p>Mediastinal 1–50 Most lesions resolve spontaneously; surgery</p>
+<p>granulomas or antifungal therapy with amphotericin</p>
+<p>B 40–50 mg/day IV × 2–3 weeks or</p>
+<p>itraconazole 400 mg/day orally × 6–12</p>
+<p>months can be beneficial in some severe</p>
+<p>cases; mild-to-moderate disease can be</p>
+<p>treated with itraconazole for 6–12 months</p>
+<p>Moderately severe Lipid amphotericin B 3–5 mg/kg/day IV followed</p>
+<p>to severe diffuse by itraconazole 200 mg twice daily for 3 days</p>
+<p>pulmonary disease then twice daily for a total of 12 weeks of</p>
+<p>therapy; alternatively, in patients at low risk for</p>
+<p>nephrotoxicity, amphotericin B deoxycholate</p>
+<p>0.7–1 mg/kg/day IV can be utilized;</p>
+<p>methylprednisolone (0.5–1 mg/kg daily IV)</p>
+<p>during the first 1–2 weeks of antifungal therapy</p>
+<p>is recommended for patients who develop</p>
+<p>respiratory complications, including hypoxemia</p>
+<p>or significant respiratory distress</p>
+<p>Inflammatory/fibrotic 0.02 Fibrosing mediastinitis: The benefit of antifungal</p>
+<p>disease therapy (itraconazole 200 mg orally twice</p>
+<p>daily × 3 months) is controversial but should</p>
+<p>be considered, especially in patients with</p>
+<p>elevated ESR or CF titers ≤1:32; surgery can</p>
+<p>be of benefit if disease is detected early; late</p>
+<p>disease cannot respond to therapy</p>
+<p>Sarcoid-like: NSAIDs or corticosteroidsd can be of</p>
+<p>benefit for some patients</p>
+<p>Pericarditis: Severe disease: Prednisone (0.5–1.0</p>
+<p>mg/kg daily [maximum, 80 mg daily] in</p>
+<p>tapering doses over 1–2 weeks) or pericardial</p>
+<p>drainage procedure</p>
+<p>(Continued )</p>
+<p>399</p>
+<p>ch38.indd 399 19-11-2020 15:09:52</p>
+<div class="table-container"><table><tr><th>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis</th><th></th><th></th></tr><tr><td>Type of Disease
+and Common
+Clinical
+Manifestations</td><td>Approximate
+Frequency (%)a</td><td>Therapy/Comments</td></tr><tr><td>Nonimmunosuppressed Host</td><td></td><td></td></tr><tr><td>Acute pulmonary histoplasmosis</td><td></td><td></td></tr><tr><td>Asymptomatic or
+mild-to-moderate
+disease</td><td>50–99</td><td>Asymptomatic, mild, or symptoms &lt;4 weeks:
+No therapy generally required; itraconazole
+(200 mg three times daily for 3 days and then
+200 mg once or twice daily for 6–12 weeks)
+is recommended for patients who continue
+to have symptoms for 11 months
+Symptoms &gt;4 weeks: Itraconazole 200 mg once
+daily × 6–12 weeksb</td></tr><tr><td>Self-limited disease</td><td>1–50</td><td>Amphotericin Bc 0.3–0.5 mg/kg/day IV × 2–4
+weeks (total dose 500 mg) or ketoconazole
+400 mg orally daily × 3–6 months can be
+beneficial in patients with severe hypoxia
+following inhalation of large inocula;
+antifungal therapy generally not useful
+for arthritis or pericarditis; NSAIDs or
+corticosteroids can be useful in some cases</td></tr><tr><td>Mediastinal
+granulomas</td><td>1–50</td><td>Most lesions resolve spontaneously; surgery
+or antifungal therapy with amphotericin
+B 40–50 mg/day IV × 2–3 weeks or
+itraconazole 400 mg/day orally × 6–12
+months can be beneficial in some severe
+cases; mild-to-moderate disease can be
+treated with itraconazole for 6–12 months</td></tr><tr><td>Moderately severe
+to severe diffuse
+pulmonary disease</td><td></td><td>Lipid amphotericin B 3–5 mg/kg/day IV followed
+by itraconazole 200 mg twice daily for 3 days
+then twice daily for a total of 12 weeks of
+therapy; alternatively, in patients at low risk for
+nephrotoxicity, amphotericin B deoxycholate
+0.7–1 mg/kg/day IV can be utilized;
+methylprednisolone (0.5–1 mg/kg daily IV)
+during the first 1–2 weeks of antifungal therapy
+is recommended for patients who develop
+respiratory complications, including hypoxemia
+or significant respiratory distress</td></tr><tr><td>Inflammatory/fibrotic
+disease</td><td>0.02</td><td>Fibrosing mediastinitis: The benefit of antifungal
+therapy (itraconazole 200 mg orally twice
+daily × 3 months) is controversial but should
+be considered, especially in patients with
+elevated ESR or CF titers ≤1:32; surgery can
+be of benefit if disease is detected early; late
+disease cannot respond to therapy
+Sarcoid-like: NSAIDs or corticosteroidsd can be of
+benefit for some patients
+Pericarditis: Severe disease: Prednisone (0.5–1.0
+mg/kg daily [maximum, 80 mg daily] in
+tapering doses over 1–2 weeks) or pericardial
+drainage procedure
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis (Continued )</p>
+<p>Type of Disease</p>
+<p>and Common</p>
+<p>Clinical Approximate</p>
+<p>Manifestations Frequency (%)a Therapy/Comments</p>
+<p>Chronic cavitary 0.05 Antifungal therapy generally recommended for</p>
+<p>pulmonary all patients to halt further lung destruction</p>
+<p>histoplasmosis and reduce mortality</p>
+<p>Mild–moderate disease: Itraconazole 200 mg</p>
+<p>three times daily for 3 days and then one</p>
+<p>or two times daily for at least 1 year; some</p>
+<p>clinicians recommend therapy for 18–24</p>
+<p>months due to the high rate of relapse;</p>
+<p>itraconazole plasma concentrations should</p>
+<p>be obtained after the patient has been</p>
+<p>receiving this agent for at least 2 weeks</p>
+<p>Severe disease: Amphotericin B 0.7 mg/kg/day</p>
+<p>for a minimum total dose of 25–35 mg/</p>
+<p>kg is effective in 59%–100% of cases and</p>
+<p>should be used in patients who require</p>
+<p>hospitalization or are unable to take</p>
+<p>itraconazole because of drug interactions,</p>
+<p>allergies, failure to absorb drug, or failure to</p>
+<p>improve clinically after a minimum of</p>
+<p>12 weeks of itraconazole therapy</p>
+<p>Histoplasma Amphotericin B (lipid formulations may</p>
+<p>endocarditis be preferred, due to their lower rate of</p>
+<p>renal toxicity) plus a valve replacement</p>
+<p>is recommended; if the valve cannot</p>
+<p>be replaced, lifelong suppression with</p>
+<p>itraconazole is recommended</p>
+<p>CNS histoplasmosis Amphotericin B should be used as initial therapy</p>
+<p>(lipid formulations at 5 mg/kg/day IV, for a</p>
+<p>total dosage of 175 mg/kg may be preferred,</p>
+<p>due to their lower rate of renal toxicity) for 4–6</p>
+<p>weeks, followed by an oral azole (fluconazole</p>
+<p>or itraconazole 200 mg two or three times</p>
+<p>daily) for at least a year; some patients may</p>
+<p>require lifelong therapy; response to therapy</p>
+<p>should be monitored by repeat lumbar</p>
+<p>punctures to assess Histoplasma antigen</p>
+<p>levels, WBC, and CF antibody titers; blood</p>
+<p>levels of itraconazole should be obtained to</p>
+<p>ensure adequate drug exposure</p>
+<p>Immunosuppressed Host</p>
+<p>Disseminated 0.02–0.05 Untreated mortality 83%–93%; relapse</p>
+<p>histoplasmosis 5%–23% in non-AIDS patients; therapy is</p>
+<p>recommended for all patients</p>
+<p>(Continued )</p>
+<p>400</p>
+<p>ch38.indd 400 19-11-2020 15:09:53</p>
+<div class="table-container"><table><tr><th>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis (Continued )</th><th></th><th></th></tr><tr><td>Type of Disease
+and Common
+Clinical
+Manifestations</td><td>Approximate
+Frequency (%)a</td><td>Therapy/Comments</td></tr><tr><td>Chronic cavitary
+pulmonary
+histoplasmosis</td><td>0.05</td><td>Antifungal therapy generally recommended for
+all patients to halt further lung destruction
+and reduce mortality
+Mild–moderate disease: Itraconazole 200 mg
+three times daily for 3 days and then one
+or two times daily for at least 1 year; some
+clinicians recommend therapy for 18–24
+months due to the high rate of relapse;
+itraconazole plasma concentrations should
+be obtained after the patient has been
+receiving this agent for at least 2 weeks
+Severe disease: Amphotericin B 0.7 mg/kg/day
+for a minimum total dose of 25–35 mg/
+kg is effective in 59%–100% of cases and
+should be used in patients who require
+hospitalization or are unable to take
+itraconazole because of drug interactions,
+allergies, failure to absorb drug, or failure to
+improve clinically after a minimum of
+12 weeks of itraconazole therapy</td></tr><tr><td>Histoplasma
+endocarditis</td><td></td><td>Amphotericin B (lipid formulations may
+be preferred, due to their lower rate of
+renal toxicity) plus a valve replacement
+is recommended; if the valve cannot
+be replaced, lifelong suppression with
+itraconazole is recommended</td></tr><tr><td>CNS histoplasmosis</td><td></td><td>Amphotericin B should be used as initial therapy
+(lipid formulations at 5 mg/kg/day IV, for a
+total dosage of 175 mg/kg may be preferred,
+due to their lower rate of renal toxicity) for 4–6
+weeks, followed by an oral azole (fluconazole
+or itraconazole 200 mg two or three times
+daily) for at least a year; some patients may
+require lifelong therapy; response to therapy
+should be monitored by repeat lumbar
+punctures to assess Histoplasma antigen
+levels, WBC, and CF antibody titers; blood
+levels of itraconazole should be obtained to
+ensure adequate drug exposure</td></tr><tr><td>Immunosuppressed Host</td><td></td><td></td></tr><tr><td>Disseminated
+histoplasmosis</td><td>0.02–0.05</td><td>Untreated mortality 83%–93%; relapse
+5%–23% in non-AIDS patients; therapy is
+recommended for all patients
+(Continued )</td></tr></table></div><h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<p>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis (Continued )</p>
+<p>Type of Disease</p>
+<p>and Common</p>
+<p>Clinical Approximate</p>
+<p>Manifestations Frequency (%)a Therapy/Comments</p>
+<p>Acute (infantile) Nonimmunosuppressed patients: Ketoconazole</p>
+<p>400 mg/day orally or deoxycholate</p>
+<p>amphotericin B &gt;35 mg/day IV × 6–12 months</p>
+<p>Subacute Immunosuppressed patients (non-AIDS) or</p>
+<p>endocarditis or CNS disease: Deoxycholate</p>
+<p>amphotericin B &gt;35 mg/day IV × 3 months</p>
+<p>followed by fluconazole or itraconazole</p>
+<p>200 mg orally twice daily × 12 months</p>
+<p>Progressive Mild to moderate: Itraconazole (200 mg orally</p>
+<p>histoplasmosis twice daily for at least 12 months)</p>
+<p>(immuno - Moderately severe to severe: Liposomal</p>
+<p>competent amphotericin B (3 mg/kg daily) IV, amphotericin</p>
+<p>patients and B lipid complex (ABLC, 5 mg/kg daily) IV, or</p>
+<p>immuno- deoxycholate amphotericin B (0.7–1 mg/kg</p>
+<p>suppressed daily) for 1–2 weeks IV, followed by itraconazole</p>
+<p>patients (200 mg twice daily for at least 12 months)</p>
+<p>without AIDS)</p>
+<p>Progressive 25–50e Deoxycholate amphotericin B 15–30 mg/day</p>
+<p>disease of AIDS IV (1–2 g over 4–10 weeks)f or itraconazole</p>
+<p>200 mg orally three times daily for 3 days</p>
+<p>then twice daily for 12 weeks, followed by</p>
+<p>lifelong suppressive therapy with itraconazole</p>
+<p>200–400 mg orally daily; although patients</p>
+<p>receiving secondary prophylaxis (chronic</p>
+<p>maintenance therapy) might be at low risk</p>
+<p>for recurrence of systemic mycosis when</p>
+<p>their CD4+ T-lymphocyte counts increase to</p>
+<p>&gt;100 cells/μL (0.1 × 109/L) in response to</p>
+<p>HAART, the number of patients who have</p>
+<p>been evaluated is insufficient to warrant a</p>
+<p>recommendation to discontinue prophylaxis</p>
+<p>aAs a percentage of all patients presenting with histoplasmosis.</p>
+<p>bItraconazole plasma concentrations should be measured during the second week of therapy to</p>
+<p>ensure that detectable concentrations have been achieved. If the concentration is below</p>
+<p>1 mcg/mL (mg/L; 1.4 μmol/L), the dose may be insufficient or drug interactions can be impairing</p>
+<p>absorption or accelerating metabolism, requiring a change in dosage. If plasma concentrations are</p>
+<p>greater than 10 mcg/mL (mg/L; 14 μmol/L), the dosage can be reduced.</p>
+<p>cDeoxycholate amphotericin B.</p>
+<p>dEffectiveness of corticosteroids is controversial.</p>
+<p>eAs a percentage of AIDS patients presenting with histoplasmosis as the initial manifestation of their disease.</p>
+<p>fLiposomal amphotericin B (AmBisome) may be more appropriate for disseminated disease.</p>
+<p>AIDS, acquired immunodeficiency syndrome; CF, complement fixation; ESR, erythrocyte sedimentation rate;</p>
+<p>HAART, highly active antiretroviral therapy; NSAIDs, nonsteroidal anti-inflammatory drugs; PO, orally.</p>
+<li>Recommended therapy for the treatment of histoplasmosis is summarized in Table 38-1.</li>
+<li>Patients with mild, self-limited disease, chronic disseminated disease, or chronic</li>
+<p>pulmonary histoplasmosis who have no underlying immunosuppression usually can</p>
+<p>be treated with either oral itraconazole or IV amphotericin B.</p>
+<li>In AIDS patients, intensive 12-week primary antifungal therapy (induction and con-</li>
+<p>solidation therapy) is followed by lifelong suppressive (maintenance) therapy with</p>
+<p>itraconazole. Amphotericin B dosages of 50 mg/day (up to 1 mg/kg per day) should</p>
+<p>401</p>
+<p>ch38.indd 401 19-11-2020 15:09:53</p>
+<div class="table-container"><table><tr><th>TABLE 38-1 Clinical Manifestations and Therapy of Histoplasmosis (Continued )</th><th></th><th></th></tr><tr><td>Type of Disease
+and Common
+Clinical
+Manifestations</td><td>Approximate
+Frequency (%)a</td><td>Therapy/Comments</td></tr><tr><td>Acute (infantile)</td><td></td><td>Nonimmunosuppressed patients: Ketoconazole
+400 mg/day orally or deoxycholate
+amphotericin B &gt;35 mg/day IV × 6–12 months</td></tr><tr><td>Subacute</td><td></td><td>Immunosuppressed patients (non-AIDS) or
+endocarditis or CNS disease: Deoxycholate
+amphotericin B &gt;35 mg/day IV × 3 months
+followed by fluconazole or itraconazole
+200 mg orally twice daily × 12 months</td></tr><tr><td>Progressive
+histoplasmosis
+(immuno -
+competent
+patients and
+immuno-
+suppressed
+patients
+without AIDS)</td><td></td><td>Mild to moderate: Itraconazole (200 mg orally
+twice daily for at least 12 months)
+Moderately severe to severe: Liposomal
+amphotericin B (3 mg/kg daily) IV, amphotericin
+B lipid complex (ABLC, 5 mg/kg daily) IV, or
+deoxycholate amphotericin B (0.7–1 mg/kg
+daily) for 1–2 weeks IV, followed by itraconazole
+(200 mg twice daily for at least 12 months)</td></tr><tr><td>Progressive
+disease of AIDS</td><td>25–50e</td><td>Deoxycholate amphotericin B 15–30 mg/day
+IV (1–2 g over 4–10 weeks)f or itraconazole
+200 mg orally three times daily for 3 days
+then twice daily for 12 weeks, followed by
+lifelong suppressive therapy with itraconazole
+200–400 mg orally daily; although patients
+receiving secondary prophylaxis (chronic
+maintenance therapy) might be at low risk
+for recurrence of systemic mycosis when
+their CD4+ T-lymphocyte counts increase to
+&gt;100 cells/μL (0.1 × 109/L) in response to
+HAART, the number of patients who have
+been evaluated is insufficient to warrant a
+recommendation to discontinue prophylaxis</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>be administered IV to a cumulative dose of 15–35 mg/kg (1–2 g) in patients who</p>
+<p>require hospitalization.</p>
+<li>Amphotericin B can be replaced with itraconazole 200 mg orally twice daily when the</li>
+<p>patient no longer requires hospitalization or IV therapy to complete a 12-week total</p>
+<p>course of induction therapy. In patients who do not require hospitalization, itracon-</p>
+<p>azole therapy for 12 weeks can be used.</p>
+<li>Response to therapy should be measured by resolution of radiologic, serologic, and</li>
+<p>microbiologic parameters and improvement in signs and symptoms of infection.</p>
+<li>After the initial course of therapy for histoplasmosis is completed, lifelong suppres-</li>
+<p>sive therapy with oral azoles or amphotericin B (1–1.5 mg/kg weekly or biweekly) is</p>
+<p>recommended, because of the frequent recurrence of infection.</p>
+<li>Relapse rates in AIDS patients not receiving preventive maintenance are 50%–90%.</li>
+<p>Blastomycosis</p>
+<li>North American blastomycosis is a systemic fungal infection caused by Blastomyces</li>
+<p>dermatitidis. Pulmonary disease can be acute or chronic and can mimic infection</p>
+<p>with tuberculosis, pyogenic bacteria, other fungi, or malignancy.</p>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Acute pulmonary blastomycosis is generally an asymptomatic or self-limited disease</li>
+<p>characterized by fever, shaking chills, and a productive, purulent cough, with or</p>
+<p>without hemoptysis in immunocompetent individuals.</p>
+<li>Sporadic pulmonary blastomycosis may present as a more chronic or subacute disease,</li>
+<p>with low-grade fever, night sweats, weight loss, and a productive cough resembling that</p>
+<p>of TB rather than bacterial pneumonia. Chronic pulmonary blastomycosis is charac-</p>
+<p>terized by fever, malaise, weight loss, night sweats, chest pain, and productive cough.</p>
+<li>The simplest and most successful method of diagnosing blastomycosis is by direct</li>
+<p>microscopic visualization of the large, multinucleated yeast with single, broad-based</p>
+<p>buds in sputum or other respiratory specimens, following digestion of cells and debris</p>
+<p>with 10% potassium hydroxide. Histopathologic examination of tissue biopsies and</p>
+<p>culture of secretions should be used to identify B. dermatitidis, although it can require</p>
+<p>up to 30 days to isolate and identify a small inoculum.</p>
+<h2>TREATMENT</h2>
+<li>In the immunocompetent host, acute pulmonary blastomycosis can be mild and</li>
+<p>self-limited and may not require treatment. However, consideration should be</p>
+<p>given to treating all infected individuals to prevent extrapulmonary dissemina-</p>
+<p>tion. All individuals with moderate-to-severe pneumonia, disseminated infection,</p>
+<p>or those who are immunocompromised require antifungal therapy (Table 38-2).</p>
+<li>Some authors recommend azole therapy for the treatment of self-limited pulmonary</li>
+<p>disease, with the hope of preventing late extrapulmonary disease.</p>
+<li>Itraconazole, 200–400 mg/day, demonstrated 90% efficacy as a first-line agent in the</li>
+<p>treatment of non-life-threatening, non-CNS blastomycosis and 95% success rate for</p>
+<p>compliant patients who completed at least 2 months of therapy.</p>
+<li>All patients with disseminated blastomycosis, as well as those with extrapulmonary</li>
+<p>disease, require therapy.</p>
+<p>Coccidioidomycosis</p>
+<li>Coccidioidomycosis is caused by infection with Coccidioides immitis. The endemic</li>
+<p>regions encompass the semiarid areas of the southwestern United States from Cali-</p>
+<p>fornia to Texas, known as the Lower Sonoran Zone. It encompasses a spectrum of ill-</p>
+<p>nesses ranging from primary uncomplicated respiratory tract infection that resolves</p>
+<p>spontaneously to progressive pulmonary or disseminated infection.</p>
+<p>402</p>
+<p>ch38.indd 402 19-11-2020 15:09:53</p>
+<h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<h2>TABLE 38-2 Therapy of Blastomycosis</h2>
+<p>Type of Disease Preferred Treatment</p>
+<p>Pulmonarya</p>
+<p>Moderately severe to Lipid formulation of amphotericin B 3–5 mg/kg IV daily or</p>
+<p>severe disease amphotericin Bb 0.7–1 mg/kg IV daily (total dose 1.5–2.5 g)</p>
+<p>× 1–2 weeks or until improvement is noted, followed by</p>
+<p>itraconazolec,d 200 mg orally three times daily for 3 days,</p>
+<p>then 200 mg twice daily, × total of 6–12 months</p>
+<p>Mild-to-moderate disease Itraconazoleb,d 200 mg orally three times daily for 3 days, then</p>
+<p>200 mg twice daily, for a total of 6 monthsb</p>
+<p>CNS Disease Induction: Lipid formulation of amphotericin B 5 mg/kg IV daily</p>
+<p>× 4–6 weeks, followed by an oral azole as consolidation</p>
+<p>therapy</p>
+<p>Consolidation: Fluconazoled 800 mg orally daily, or</p>
+<p>itraconazoled 200 mg two or three times orally daily, or</p>
+<p>voriconazoled 200–400 mg orally twice daily, for ≥12</p>
+<p>months and until resolution of CSF abnormalities</p>
+<p>Disseminated or Extrapulmonary Disease</p>
+<p>Moderately severe to Lipid formulation of amphotericin B 3–5 mg/kg IV daily or</p>
+<p>severe disease amphotericin Bb 0.7–1 mg/kg IV daily × 1–2 weeks or until</p>
+<p>improvement is noted, followed by itraconazolec,d 200 mg</p>
+<p>orally three times daily for 3 days, then 200 mg twice</p>
+<p>daily × 6–12 months; treat osteoarticular disease with 12</p>
+<p>months of antifungal therapy</p>
+<p>Most clinicians prefer to step-down to itraconazoled therapy</p>
+<p>once the patient’s condition improves</p>
+<p>Mild to moderate Itraconazolec,d 200 mg orally three times daily for 3 days,</p>
+<p>then 200 mg once or twice daily × ≥12 months; treat</p>
+<p>osteoarticular disease with 12 months of antifungal therapy</p>
+<p>Immunocompromised Host (Including Patients with AIDS, Transplants, or Receiving</p>
+<p>Chronic Glucocorticoid Therapy)</p>
+<p>Acute disease Lipid formulation of amphotericin B 3–5 mg/kg IV daily or</p>
+<p>amphotericin Ba 0.7–1 mg/kg IV daily × 1–2 weeks or until</p>
+<p>improvement is noted, then give suppressive therapy for a</p>
+<p>total of at least 12 months of therapy</p>
+<p>Suppressive therapy Itraconazolec,d 200 mg orally three times daily for 3 days, then</p>
+<p>200 mg twice daily for a total of at least 12 months of</p>
+<p>therapy; lifelong suppressive therapy with oral itraconazoled</p>
+<p>200 mg daily may be required for immunosuppressed</p>
+<p>patients in whom immunosuppression cannot be reversed,</p>
+<p>and in patients who experience relapse despite appropriate</p>
+<p>therapy</p>
+<p>aIn the immunocompetent host, acute pulmonary blastomycosis can be mild and self-limited and</p>
+<p>may not require treatment.</p>
+<p>bDesoxycholate amphotericin B.</p>
+<p>cSerum levels of itraconazole should be determined after the patient has received itraconazole for</p>
+<p>≥2 weeks to ensure adequate drug exposure.</p>
+<p>dAzoles should not be used during pregnancy.</p>
+<p>AIDS, acquired immunodeficiency syndrome.</p>
+<p>403</p>
+<p>ch38.indd 403 19-11-2020 15:09:54</p>
+<div class="table-container"><table><tr><th>TABLE 38-2 Therapy of Blastomycosis</th><th></th></tr><tr><td>Type of Disease</td><td>Preferred Treatment</td></tr><tr><td>Pulmonarya</td><td></td></tr><tr><td>Moderately severe to
+severe disease</td><td>Lipid formulation of amphotericin B 3–5 mg/kg IV daily or
+amphotericin Bb 0.7–1 mg/kg IV daily (total dose 1.5–2.5 g)
+× 1–2 weeks or until improvement is noted, followed by
+itraconazolec,d 200 mg orally three times daily for 3 days,
+then 200 mg twice daily, × total of 6–12 months</td></tr><tr><td>Mild-to-moderate disease</td><td>Itraconazoleb,d 200 mg orally three times daily for 3 days, then
+200 mg twice daily, for a total of 6 monthsb</td></tr><tr><td>CNS Disease</td><td>Induction: Lipid formulation of amphotericin B 5 mg/kg IV daily
+× 4–6 weeks, followed by an oral azole as consolidation
+therapy
+Consolidation: Fluconazoled 800 mg orally daily, or
+itraconazoled 200 mg two or three times orally daily, or
+voriconazoled 200–400 mg orally twice daily, for ≥12
+months and until resolution of CSF abnormalities</td></tr><tr><td>Disseminated or Extrapulmonary Disease</td><td></td></tr><tr><td>Moderately severe to
+severe disease</td><td>Lipid formulation of amphotericin B 3–5 mg/kg IV daily or
+amphotericin Bb 0.7–1 mg/kg IV daily × 1–2 weeks or until
+improvement is noted, followed by itraconazolec,d 200 mg
+orally three times daily for 3 days, then 200 mg twice
+daily × 6–12 months; treat osteoarticular disease with 12
+months of antifungal therapy
+Most clinicians prefer to step-down to itraconazoled therapy
+once the patient’s condition improves</td></tr><tr><td>Mild to moderate</td><td>Itraconazolec,d 200 mg orally three times daily for 3 days,
+then 200 mg once or twice daily × ≥12 months; treat
+osteoarticular disease with 12 months of antifungal therapy</td></tr><tr><td>Immunocompromised Host (Including Patients with AIDS, Transplants, or Receiving
+Chronic Glucocorticoid Therapy)</td><td></td></tr><tr><td>Acute disease</td><td>Lipid formulation of amphotericin B 3–5 mg/kg IV daily or
+amphotericin Ba 0.7–1 mg/kg IV daily × 1–2 weeks or until
+improvement is noted, then give suppressive therapy for a
+total of at least 12 months of therapy</td></tr><tr><td>Suppressive therapy</td><td>Itraconazolec,d 200 mg orally three times daily for 3 days, then
+200 mg twice daily for a total of at least 12 months of
+therapy; lifelong suppressive therapy with oral itraconazoled
+200 mg daily may be required for immunosuppressed
+patients in whom immunosuppression cannot be reversed,
+and in patients who experience relapse despite appropriate
+therapy</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Approximately 60% of infected patients have an asymptomatic, self-limited infection</li>
+<p>without clinical or radiological manifestations. The remaining 40% of patients exhibit</p>
+<p>nonspecific symptoms that are often indistinguishable from ordinary upper respira-</p>
+<p>tory infections, including fever, cough, headache, sore throat, myalgias, and fatigue</p>
+<p>that occur 1–3 weeks after exposure to the pathogen. A fine, diffuse rash may appear</p>
+<p>during the first few days of illness.</p>
+<li>Chronic, persistent pneumonia or persistent pulmonary coccidioidomycosis</li>
+<p>(primary disease lasting &gt;6 weeks) is complicated by hemoptysis, pulmonary scar-</p>
+<p>ring, and the formation of cavities or bronchopleural fistulas.</p>
+<li>Disseminated infection occurs in less than 1% of infected patients. Dissemination</li>
+<p>may occur to the skin, lymph nodes, bone, meninges, spleen, liver, kidney, and adre-</p>
+<p>nal gland. CNS infection occurs in ~16% of patients with disseminated infection.</p>
+<li>The diagnoses of coccidioidomycosis generally includes identification or recovery of</li>
+<p>Coccidioides spp. from clinical specimens and detection of specific anticoccidioidal</p>
+<p>antibodies in serum or other body fluids.</p>
+<h2>TREATMENT</h2>
+<li>Desired outcomes of treatment are resolution of signs and symptoms of infection,</li>
+<p>reduction of serum concentrations of anticoccidioidal antibodies, and return of func-</p>
+<p>tion of involved organs.</p>
+<li>Therapy of coccidioidomycosis is difficult, and the results are unpredictable. Only 5%</li>
+<p>of infected persons require therapy.</p>
+<li>Azole antifungals, primarily fluconazole and itraconazole, have replaced amphotericin</li>
+<p>B as initial therapy for most chronic pulmonary or disseminated infections. Specific</p>
+<p>antifungals (and their usual dosages) for the treatment of coccidioidomycosis include</p>
+<p>amphotericin B IV (0.5–1.5 mg/kg/day), ketoconazole (400 mg orally daily), IV or</p>
+<p>oral fluconazole (usually 400–800 mg daily, although dosages as high as 1200 mg/day</p>
+<p>have been used without complications), and itraconazole (200–300 mg orally twice</p>
+<p>daily as either capsules or solution). If itraconazole is used, measurement of serum</p>
+<p>concentrations may be helpful to ascertain whether oral bioavailability is adequate.</p>
+<li>Therapy often ranges from many months to years in duration, and in some patients,</li>
+<p>lifelong suppressive therapy is needed to prevent relapses.</p>
+<li>Amphotericin B is generally preferred as initial therapy in patients with rapidly progres-</li>
+<p>sive disease, whereas azoles are generally preferred in patients with subacute or chronic</p>
+<p>presentations. Lipid formulations of amphotericin B have not been extensively studied</p>
+<p>for coccidioidomycosis but can offer a means of giving more drugs with less toxicity.</p>
+<li>Patients with disease outside the lungs should be treated with 400 mg/day of an oral</li>
+<p>azole. For meningeal disease, fluconazole 400 mg/day orally should be used; however,</p>
+<p>some clinicians initiate therapy with 800 or 1000 mg/day, and itraconazole doses of</p>
+<p>400–600 mg/day are comparable.</p>
+<p>Cryptococcosis</p>
+<li>Cryptococcosis is a noncontagious, systemic mycotic infection caused by the ubiqui-</li>
+<p>tous encapsulated soil yeast Cryptococcus neoformans.</p>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Primary cryptococcosis in humans almost always occurs in the lungs. Symptomatic</li>
+<p>infections are usually manifested by cough, rales, and shortness of breath that gener-</p>
+<p>ally resolve spontaneously. Infection is acquired by inhalation of the organism.</p>
+<li>Disease may remain localized in the lungs or disseminate to other tissues, particularly</li>
+<p>the CNS, although the skin can also be affected.</p>
+<p>404</p>
+<p>ch38.indd 404 19-11-2020 15:09:54</p>
+<h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<li>In the non-AIDS patient, the symptoms of cryptococcal meningitis are nonspecific.</li>
+<p>Symptomatic infections usually are manifested by cough, rales, and shortness of</p>
+<p>breath that generally resolve spontaneously. Headache, fever, nausea, vomiting,</p>
+<p>mental status changes, and neck stiffness are generally observed. In AIDS patients,</p>
+<p>fever and headache are common, but meningismus and photophobia are much less</p>
+<p>common than in non-AIDS patients.</p>
+<li>Examination of cerebrospinal fluid (CSF) in patients with cryptococcal meningitis</li>
+<p>generally reveals an elevated opening pressure, CSF pleocytosis (usually lympho-</p>
+<p>cytes), leukocytosis, a decreased CSF glucose, an elevated CSF protein, and a positive</p>
+<p>cryptococcal antigen by latex agglutination.</p>
+<li>C. neoformans can be detected in ~60% of patients by India ink smear of CSF and</li>
+<p>cultured in more than 96% of patients.</p>
+<h2>TREATMENT</h2>
+<li>Treatment of cryptococcosis is detailed in Table 38-3. For asymptomatic, immuno-</li>
+<p>competent persons with isolated pulmonary disease and no evidence of CNS disease,</p>
+<p>careful observation may be warranted. With symptomatic infection, fluconazole for</p>
+<p>6–12 months is warranted.</p>
+<li>The use of intrathecal amphotericin B is not recommended for the treatment of cryp-</li>
+<p>tococcal meningitis except in very ill patients or in those with recurrent or progressive</p>
+<p>disease despite aggressive IV amphotericin B therapy. The dosage of amphotericin B</p>
+<p>employed is usually 0.5 mg administered via the lumbar, cisternal, or intraventricular</p>
+<p>(via an Ommaya reservoir) route two or three times weekly.</p>
+<li>Amphotericin B with flucytosine is the initial treatment of choice for acute therapy</li>
+<p>of cryptococcal meningitis in AIDS patients, although 1 week of amphotericin B plus</p>
+<p>flucytosine and 2 weeks of fluconazole plus flucytosine were effective as induction</p>
+<p>therapy for cryptococcal meningitis in resource limited settings. After the initially</p>
+<p>successful 2-week induction period, consolidation therapy with fluconazole can be</p>
+<p>administered for 8 weeks or until CSF cultures are negative.</p>
+<li>Immunocompromised patients with CNS infection require more prolonged therapy;</li>
+<p>treatment regimens are based on those used in the HIV-infected population and</p>
+<p>follow induction therapy with amphotericin B and consolidation therapy with 6–12</p>
+<p>months of suppressive therapy with fluconazole.</p>
+<li>Relapse of C. neoformans meningitis occurs in ~50% of AIDS patients after comple-</li>
+<p>tion of primary therapy. After the completion of induction/consolidation phases of</p>
+<p>therapy, long-term chronic suppression with fluconazole (200 mg orally daily) should</p>
+<p>be continued for a minimum of 1 year.</p>
+<p>Candida Infections</p>
+<li>Eight species of Candida are regarded as clinically important pathogens in human</li>
+<p>disease: C. albicans, C. tropicalis, C. parapsilosis, C. krusei, C. stellatoidea, C. guillier-</p>
+<p>mondii, C. lusitaniae, and C. glabrata. C. albicans is a normal commensal of the skin,</p>
+<p>female genital tract, and entire GI tract of humans.</p>
+<h2>HEMATOGENOUS CANDIDIASIS</h2>
+<li>Dissemination of C. albicans can result in infection in single or multiple organs, par-</li>
+<p>ticularly the kidney, brain, myocardium, skin, eye, bone, and joints.</p>
+<li>Candida is generally acquired via the gastrointestinal (GI) tract, although organisms</li>
+<p>may also enter the bloodstream via indwelling IV catheters.</p>
+<li>Immunosuppressed patients, including those with lymphoreticular or hematologic</li>
+<p>malignancies, diabetes, immunodeficiency diseases, or those receiving immunosup-</p>
+<p>pressive therapy with high-dose corticosteroids, immunosuppressants, antineoplastic</p>
+<p>agents, or broad-spectrum antimicrobial agents are at high risk for invasive fungal</p>
+<p>infections.</p>
+<p>405</p>
+<p>ch38.indd 405 19-11-2020 15:09:54</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 38-3 Therapy of Cryptococcosisa,b</h2>
+<p>Type of Disease and</p>
+<p>Common Clinical</p>
+<p>Manifestations Therapy/Comments</p>
+<p>Nonimmunocompromised Patients (Non–HIV-Infected, Nontransplant)</p>
+<p>Meningoencephalitis without Induction: Amphotericin Bc IV 0.7–1 mg/kg/day plus flucytosine</p>
+<p>neurological complications, 100 mg/kg/day orally in four divided doses × ≥4 weeks</p>
+<p>in patients in whom CSF A lipid formulation of amphotericin B may be substituted</p>
+<p>yeast cultures are negative for amphotericin B in the second 2 weeks</p>
+<p>after 2 weeks of therapy</p>
+<p>Follow all regimens with Consolidation: Fluconazole 400–800 mg orally daily × 8 weeks</p>
+<p>suppressive therapy Maintenance: Fluconazole 200 mg orally daily × 6–12 months</p>
+<p>Meningoencephalitis with Induction: Same as for patients without neurologic</p>
+<p>neurological complications complications, but consider extending the induction</p>
+<p>therapy for a total of 6 weeks; a lipid formulation of</p>
+<p>amphotericin B may be given for the last 4 weeks of the</p>
+<p>prolonged induction period</p>
+<p>Consolidation: Fluconazole 400 mg orally daily × 8 weeks</p>
+<p>Mild-to-moderate pulmonary Fluconazole 400 mg orally daily × 6–12 months</p>
+<p>disease (nonmeningeal</p>
+<p>disease)</p>
+<p>Severe pulmonary Same as CNS disease × 12 months</p>
+<p>cryptococcosis</p>
+<p>Cryptococcemia Same as CNS disease × 12 months</p>
+<p>(nonmeningeal,</p>
+<p>nonpulmonary disease)</p>
+<p>Immunocompromised Patients</p>
+<p>Severe pulmonary Same as CNS disease × 12 months</p>
+<p>cryptococcosis</p>
+<p>HIV-Infected Patients</p>
+<p>Primary therapy; induction Preferred regimen:</p>
+<p>and consolidationd Induction: Amphotericin Be IV 0.7–1 mg/kg IV daily plus</p>
+<p>flucytosine 100 mg/kg/day orally in four divided doses</p>
+<p>for ≥2 weeks</p>
+<p>Follow all regimens with Consolidation: Fluconazole 400 mg (6 mg/kg) orally daily</p>
+<p>suppressive therapy × ≥8 weeks</p>
+<p>Liposomal amphotericin B 3–4 mg/kg IV daily, or</p>
+<p>amphotericin B lipid complex (ABLC) 5 mg/kg IV daily,</p>
+<p>for ≥2 weeks can be substituted for amphotericin Be in</p>
+<pre><code>patients with or at risk for renal dysfunction</code></pre>
+<p>Alternative regimens, in order of preference:</p>
+<p>Amphotericin Be IV 0.7–1 mg/kg IV daily × 4–6 weeks or</p>
+<p>liposomal amphotericin B 3–4 mg/kg IV dailyf × 4–6</p>
+<p>weeks or ABLC 5 mg/kg IV daily × 4–6 weeks</p>
+<p>or</p>
+<p>Amphotericin Be IV 0.7 mg/kg IV daily, plus fluconazole</p>
+<p>800 mg (12 mg/kg) orally daily × 2 weeks, followed by</p>
+<p>fluconazole 800 mg (12 mg/kg) orally daily × ≥8weeks</p>
+<p>or</p>
+<p>Fluconazole ≥800 mg (1200 mg/day is preferred) orally</p>
+<p>daily plus flucytosine 100 mg/kg/day orally in four</p>
+<p>divided doses × 6 weeks</p>
+<p>(Continued )</p>
+<p>406</p>
+<p>ch38.indd 406 19-11-2020 15:09:54</p>
+<div class="table-container"><table><tr><th>TABLE 38-3 Therapy of Cryptococcosisa,b</th><th></th></tr><tr><td>Type of Disease and
+Common Clinical
+Manifestations</td><td>Therapy/Comments</td></tr><tr><td>Nonimmunocompromised Patients (Non–HIV-Infected, Nontransplant)</td><td></td></tr><tr><td>Meningoencephalitis without
+neurological complications,
+in patients in whom CSF
+yeast cultures are negative
+after 2 weeks of therapy</td><td>Induction: Amphotericin Bc IV 0.7–1 mg/kg/day plus flucytosine
+100 mg/kg/day orally in four divided doses × ≥4 weeks
+A lipid formulation of amphotericin B may be substituted
+for amphotericin B in the second 2 weeks</td></tr><tr><td>Follow all regimens with
+suppressive therapy</td><td>Consolidation: Fluconazole 400–800 mg orally daily × 8 weeks
+Maintenance: Fluconazole 200 mg orally daily × 6–12 months</td></tr><tr><td>Meningoencephalitis with
+neurological complications</td><td>Induction: Same as for patients without neurologic
+complications, but consider extending the induction
+therapy for a total of 6 weeks; a lipid formulation of
+amphotericin B may be given for the last 4 weeks of the
+prolonged induction period
+Consolidation: Fluconazole 400 mg orally daily × 8 weeks</td></tr><tr><td>Mild-to-moderate pulmonary
+disease (nonmeningeal
+disease)</td><td>Fluconazole 400 mg orally daily × 6–12 months</td></tr><tr><td>Severe pulmonary
+cryptococcosis</td><td>Same as CNS disease × 12 months</td></tr><tr><td>Cryptococcemia
+(nonmeningeal,
+nonpulmonary disease)</td><td>Same as CNS disease × 12 months</td></tr><tr><td>Immunocompromised Patients</td><td></td></tr><tr><td>Severe pulmonary
+cryptococcosis</td><td>Same as CNS disease × 12 months</td></tr><tr><td>HIV-Infected Patients</td><td></td></tr><tr><td>Primary therapy; induction
+and consolidationd</td><td>Preferred regimen:
+Induction: Amphotericin Be IV 0.7–1 mg/kg IV daily plus
+flucytosine 100 mg/kg/day orally in four divided doses
+for ≥2 weeks</td></tr><tr><td>Follow all regimens with
+suppressive therapy</td><td>Consolidation: Fluconazole 400 mg (6 mg/kg) orally daily
+× ≥8 weeks
+Liposomal amphotericin B 3–4 mg/kg IV daily, or
+amphotericin B lipid complex (ABLC) 5 mg/kg IV daily,
+for ≥2 weeks can be substituted for amphotericin Be in
+patients with or at risk for renal dysfunction
+Alternative regimens, in order of preference:
+Amphotericin Be IV 0.7–1 mg/kg IV daily × 4–6 weeks or
+liposomal amphotericin B 3–4 mg/kg IV dailyf × 4–6
+weeks or ABLC 5 mg/kg IV daily × 4–6 weeks
+or
+Amphotericin Be IV 0.7 mg/kg IV daily, plus fluconazole
+800 mg (12 mg/kg) orally daily × 2 weeks, followed by
+fluconazole 800 mg (12 mg/kg) orally daily × ≥8weeks
+or
+Fluconazole ≥800 mg (1200 mg/day is preferred) orally
+daily plus flucytosine 100 mg/kg/day orally in four
+divided doses × 6 weeks
+(Continued )</td></tr></table></div><h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<h2>TABLE 38-3 Therapy of Cryptococcosisa,b(Continued )</h2>
+<p>Type of Disease and</p>
+<p>Common Clinical</p>
+<p>Manifestations Therapy/Comments</p>
+<p>or</p>
+<p>Fluconazole 800–1200 mg/day orally daily × 10–12 weeks</p>
+<p>(a dosage ≥1200 mg/day is preferred when fluconazole</p>
+<p>is used alone)g</p>
+<p>or</p>
+<p>Itraconazole 200 mg orally twice daily × 10–12 weeks (use</p>
+<p>of itraconazole, which produces minimal concentrations</p>
+<p>of active drug in the CSF, is discouraged)h</p>
+<p>Suppressive/Maintenance Preferred: Fluconazole 200 mg orally daily × ≥1 year</p>
+<p>therapyi</p>
+<p>or</p>
+<p>Itraconazoleh 200 mg orally twice daily × ≥1 year</p>
+<p>or</p>
+<p>Amphotericin Bi IV 1 mg/kg weekly × ≥1 year</p>
+<p>Organ Transplant Recipients</p>
+<p>Mild-to-moderate Fluconazole 400 mg (6 mg/kg) orally daily × 6–12 months</p>
+<p>non-CNS disease or</p>
+<p>mild-to-moderate</p>
+<p>symptoms without diffuse</p>
+<p>pulmonary infiltrates</p>
+<p>CNS disease, moderately Induction: Liposomal amphotericin B 3–4 mg/kg IV daily,f or</p>
+<p>severe or severe CNS ABLC 5 mg/kg IV daily plus flucytosine 100 mg/kg/day</p>
+<p>disease or disseminated orally in four divided doses × ≥2 weeks</p>
+<p>disease without CNS If induction therapy does not include flucytosine, consider</p>
+<p>disease, or severe a lipid formulation of amphotericin B for ≥4–6 weeks of</p>
+<p>pulmonary disease induction therapy; consider the use of a lipid formulation</p>
+<p>without evidence of of amphotericin Bj lipid formulation (6 mg/kg IV daily) in</p>
+<p>extrapulmonary or patients with a high-fungal burden disease or relapse of</p>
+<p>disseminated disease disease</p>
+<p>Consolidation: Fluconazole 400–800 mg (6–12 mg/kg) per</p>
+<p>day orally for 8 weeks</p>
+<p>Maintenance: Fluconazole 200–400 mg per day orally for</p>
+<p>6–12 months</p>
+<p>aWhen more than one therapy is listed, they are listed in order of preference.</p>
+<p>bSee the text for definitions of induction, consolidation, suppressive/maintenance therapy, and</p>
+<p>prophylactic therapy.</p>
+<p>cDeoxycholate amphotericin B.</p>
+<p>dInitiate HAART therapy 2–10 weeks after commencement of initial antifungal treatment.</p>
+<p>eIn patients with significant renal disease, lipid formulations of amphotericin B can be substituted for</p>
+<p>deoxycholate amphotericin B during the induction.</p>
+<p>fLiposomal amphotericin B has been given safely up to 6 mg/kg daily; could be considered in</p>
+<p>treatment failure or in patients with a high-fungal burden.</p>
+<p>gOr until cerebrospinal fluid (CSF) cultures are negative.</p>
+<p>hDrug level monitoring is strongly advised.</p>
+<p>iConsider discontinuing suppressive therapy during HAART in patients with a CD4 cell count ≥100</p>
+<p>cells/μL (0.1 × 109/L) and an undetectable or very low HIV RNA level sustained for ≥3months</p>
+<p>(with a minimum of 12 months of antifungal therapy). Consider reinstitution of maintenance</p>
+<p>therapy if the CD4 cell count decreases to &lt;100 cells/μL (0.1 × 109/L).</p>
+<p>jUse is discouraged except in azole intolerant patients, since it is less effective than azole therapy, and</p>
+<p>is associated with a risk of IV catheter-related infections.</p>
+<p>HIV, human immunodeficiency virus; IT, intrathecal.</p>
+<p>407</p>
+<p>ch38.indd 407 19-11-2020 15:09:55</p>
+<div class="table-container"><table><tr><th>TABLE 38-3 Therapy of Cryptococcosisa,b(Continued )</th><th></th></tr><tr><td>Type of Disease and
+Common Clinical
+Manifestations</td><td>Therapy/Comments</td></tr><tr><td></td><td>or
+Fluconazole 800–1200 mg/day orally daily × 10–12 weeks
+(a dosage ≥1200 mg/day is preferred when fluconazole
+is used alone)g
+or
+Itraconazole 200 mg orally twice daily × 10–12 weeks (use
+of itraconazole, which produces minimal concentrations
+of active drug in the CSF, is discouraged)h</td></tr><tr><td>Suppressive/Maintenance
+therapyi</td><td>Preferred: Fluconazole 200 mg orally daily × ≥1 year
+or
+Itraconazoleh 200 mg orally twice daily × ≥1 year
+or
+Amphotericin Bi IV 1 mg/kg weekly × ≥1 year</td></tr><tr><td>Organ Transplant Recipients</td><td></td></tr><tr><td>Mild-to-moderate
+non-CNS disease or
+mild-to-moderate
+symptoms without diffuse
+pulmonary infiltrates</td><td>Fluconazole 400 mg (6 mg/kg) orally daily × 6–12 months</td></tr><tr><td>CNS disease, moderately
+severe or severe CNS
+disease or disseminated
+disease without CNS
+disease, or severe
+pulmonary disease
+without evidence of
+extrapulmonary or
+disseminated disease</td><td>Induction: Liposomal amphotericin B 3–4 mg/kg IV daily,f or
+ABLC 5 mg/kg IV daily plus flucytosine 100 mg/kg/day
+orally in four divided doses × ≥2 weeks
+If induction therapy does not include flucytosine, consider
+a lipid formulation of amphotericin B for ≥4–6 weeks of
+induction therapy; consider the use of a lipid formulation
+of amphotericin Bj lipid formulation (6 mg/kg IV daily) in
+patients with a high-fungal burden disease or relapse of
+disease
+Consolidation: Fluconazole 400–800 mg (6–12 mg/kg) per
+day orally for 8 weeks
+Maintenance: Fluconazole 200–400 mg per day orally for
+6–12 months</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis</h2>
+<p>Type of Disease and Common</p>
+<p>Clinical Manifestations Therapy/Comments</p>
+<p>Prophylaxis of Candidemia</p>
+<p>Non-neutropenic patientsa Not recommended except for severely ill/</p>
+<p>high-risk patients in whom fluconazole IV/oral</p>
+<p>400 mg daily should be used</p>
+<p>Neutropenic patientsa The optimal duration of therapy is unclear but at</p>
+<p>a minimum should include the period at risk</p>
+<p>for neutropenia: fluconazole IV/oral 400 mg</p>
+<p>daily or itraconazole solution 2.5 mg/kg every</p>
+<p>12 hours orally or micafungin 50 mg (1 mg/kg</p>
+<p>in patients under 50 kg) IV daily</p>
+<p>Solid-organ transplantation, liver Patients with two or more key risk factorsb:</p>
+<p>transplantation Amphotericin B IV 10–20 mg daily or liposomal</p>
+<p>amphotericin B (AmBisome) 1 mg/kg/day or</p>
+<p>fluconazole 400 mg orally daily</p>
+<p>Empirical (Preemptive) Antifungal Therapy</p>
+<p>Suspected disseminated candidiasis in None recommended; data are lacking defining</p>
+<p>febrile non-neutropenic patients subsets of patients who are appropriate for</p>
+<p>therapy</p>
+<p>Initial Antifungal Therapy (Documented Candidemia with Unknown Candida</p>
+<p>Species)</p>
+<p>Febrile neutropenic patients with Treatment duration: Until resolution of</p>
+<p>prolonged fever despite 4–6 days of neutropenia</p>
+<p>empirical antibacterial therapy An echinocandinc is a reasonable alternative;</p>
+<p>voriconazole can be used in selected</p>
+<p>situations (see the text)</p>
+<p>Less critically ill patients with no recent An echinocandinc or fluconazole (loading</p>
+<p>azole exposure dose of 800 mg [12 mg/kg], then 400 mg</p>
+<p>[6 mg/kg] daily)</p>
+<p>Additional mold coverage is desired Voriconazole</p>
+<p>Antifungal Therapy of Documented Candidemia and Acute Hematogenously</p>
+<p>Disseminated Candidiasis, Unknown Species</p>
+<p>Nonimmunocompromised hostd Treatment duration: 2 weeks after the last positive</p>
+<p>blood culture and resolution of signs and</p>
+<p>symptoms of infection</p>
+<p>Remove existing central venous catheters when</p>
+<p>feasible plus fluconazole (loading dose of</p>
+<p>800 mg [12 mg/kg], then 400 mg [6 mg/kg]</p>
+<p>daily) or an echinocandind</p>
+<p>Patients with recent azole exposure, An echinocandinc</p>
+<p>moderately severe or severe illness, or Transition from an echinocandin to fluconazole is</p>
+<p>who are at high risk of infection due recommended for patients who are clinically</p>
+<p>to C. glabrata or C. krusei stable and have isolates (eg, C. albicans) likely</p>
+<p>to be susceptible to fluconazole</p>
+<p>Patients who are less critically ill and who Fluconazole</p>
+<p>have had no recent azole exposure</p>
+<p>(Continued )</p>
+<p>408</p>
+<p>ch38.indd 408 19-11-2020 15:09:55</p>
+<div class="table-container"><table><tr><th>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis</th><th></th></tr><tr><td>Type of Disease and Common
+Clinical Manifestations</td><td>Therapy/Comments</td></tr><tr><td>Prophylaxis of Candidemia</td><td></td></tr><tr><td>Non-neutropenic patientsa</td><td>Not recommended except for severely ill/
+high-risk patients in whom fluconazole IV/oral
+400 mg daily should be used</td></tr><tr><td>Neutropenic patientsa</td><td>The optimal duration of therapy is unclear but at
+a minimum should include the period at risk
+for neutropenia: fluconazole IV/oral 400 mg
+daily or itraconazole solution 2.5 mg/kg every
+12 hours orally or micafungin 50 mg (1 mg/kg
+in patients under 50 kg) IV daily</td></tr><tr><td>Solid-organ transplantation, liver
+transplantation</td><td>Patients with two or more key risk factorsb:
+Amphotericin B IV 10–20 mg daily or liposomal
+amphotericin B (AmBisome) 1 mg/kg/day or
+fluconazole 400 mg orally daily</td></tr><tr><td>Empirical (Preemptive) Antifungal Therapy</td><td></td></tr><tr><td>Suspected disseminated candidiasis in
+febrile non-neutropenic patients</td><td>None recommended; data are lacking defining
+subsets of patients who are appropriate for
+therapy</td></tr><tr><td>Initial Antifungal Therapy (Documented Candidemia with Unknown Candida
+Species)</td><td></td></tr><tr><td>Febrile neutropenic patients with
+prolonged fever despite 4–6 days of
+empirical antibacterial therapy</td><td>Treatment duration: Until resolution of
+neutropenia
+An echinocandinc is a reasonable alternative;
+voriconazole can be used in selected
+situations (see the text)</td></tr><tr><td>Less critically ill patients with no recent
+azole exposure</td><td>An echinocandinc or fluconazole (loading
+dose of 800 mg [12 mg/kg], then 400 mg
+[6 mg/kg] daily)</td></tr><tr><td>Additional mold coverage is desired</td><td>Voriconazole</td></tr><tr><td>Antifungal Therapy of Documented Candidemia and Acute Hematogenously
+Disseminated Candidiasis, Unknown Species</td><td></td></tr><tr><td>Nonimmunocompromised hostd</td><td>Treatment duration: 2 weeks after the last positive
+blood culture and resolution of signs and
+symptoms of infection
+Remove existing central venous catheters when
+feasible plus fluconazole (loading dose of
+800 mg [12 mg/kg], then 400 mg [6 mg/kg]
+daily) or an echinocandind</td></tr><tr><td>Patients with recent azole exposure,
+moderately severe or severe illness, or
+who are at high risk of infection due
+to C. glabrata or C. krusei</td><td>An echinocandinc
+Transition from an echinocandin to fluconazole is
+recommended for patients who are clinically
+stable and have isolates (eg, C. albicans) likely
+to be susceptible to fluconazole</td></tr><tr><td>Patients who are less critically ill and who
+have had no recent azole exposure</td><td>Fluconazole
+(Continued )</td></tr></table></div><h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<p>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis (Continued )</p>
+<p>Type of Disease and Common</p>
+<p>Clinical Manifestations Therapy/Comments</p>
+<p>Antifungal Therapy of Specific Pathogens</p>
+<p>C. albicans, C. tropicalis, and Fluconazole IV/oral 6 mg/kg/day or an</p>
+<p>C. parapsilosis echinocandinc or amphotericin B IV 0.7 mg/</p>
+<p>kg/day plus fluconazole IV/orally 800 mg/day;</p>
+<p>amphotericin B deoxycholate 0.5–1 mg/kg</p>
+<p>daily or a lipid formulation of amphotericin B</p>
+<p>(3–5 mg/kg daily) are alternatives in patients</p>
+<p>who are intolerant to other antifungals;</p>
+<p>transition from amphotericin B deoxycholate</p>
+<p>or a lipid formulation of amphotericin B to</p>
+<p>fluconazole is recommended in patients who</p>
+<h2>are clinically stable and whose isolates are</h2>
+<p>likely to be susceptible to fluconazole (eg,</p>
+<p>C. albicans); voriconazole (400 mg [6 mg/kg]</p>
+<p>twice daily × two doses then 200 mg [3 mg/kg]</p>
+<p>twice daily thereafter) is efficacious, but</p>
+<p>offers little advantage over fluconazole; it</p>
+<p>may be utilized as step-down oral therapy for</p>
+<p>selected cases of candidiasis due to C. krusei or</p>
+<p>voriconazole-susceptible C. glabrata</p>
+<p>Patients intolerant or refractory to other therapye:</p>
+<p>Amphotericin B lipid complex IV 5 mg/kg/day</p>
+<p>Liposomal amphotericin B IV 3–5 mg/kg/day</p>
+<p>Amphotericin B colloid dispersion IV 2–6 mg/</p>
+<p>kg/day</p>
+<p>C. krusei Amphotericin B IV ≤1 mg/kg/day or an</p>
+<p>echinocandinc</p>
+<p>C. lusitaniae Fluconazole IV/orally 6 mg/kg/day</p>
+<p>C. glabrata An echinocandinc (transition to fluconazole or</p>
+<p>voriconazole therapy is not recommended</p>
+<p>without confirmation of isolate susceptibility)</p>
+<p>Neutropenic hostf Treatment duration: Until resolution of</p>
+<p>neutropenia</p>
+<p>Remove existing central venous catheters when</p>
+<p>feasible, plus:</p>
+<p>Amphotericin B IV 0.7–1 mg/kg/day (total</p>
+<p>dosages 0.5–1 g)</p>
+<p>or patients failing therapy with traditional</p>
+<p>amphotericin B: Lipid formulation of</p>
+<p>amphotericin B IV 3–5 mg/kg/day</p>
+<p>Chronic disseminated candidiasis Treatment duration: Until calcification or</p>
+<p>(hepatosplenic candidiasis) resolution of lesions</p>
+<h2>Stable patients: Fluconazole IV/orally 6 mg/</h2>
+<p>kg/day</p>
+<p>Acutely ill or refractory patients: Amphotericin B IV</p>
+<p>0.6–0.7 mg/kg/day</p>
+<p>(Continued )</p>
+<p>409</p>
+<p>ch38.indd 409 19-11-2020 15:09:55</p>
+<div class="table-container"><table><tr><th>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis (Continued )</th><th></th></tr><tr><td>Type of Disease and Common
+Clinical Manifestations</td><td>Therapy/Comments</td></tr><tr><td>Antifungal Therapy of Specific Pathogens</td><td></td></tr><tr><td>C. albicans, C. tropicalis, and
+C. parapsilosis</td><td>Fluconazole IV/oral 6 mg/kg/day or an
+echinocandinc or amphotericin B IV 0.7 mg/
+kg/day plus fluconazole IV/orally 800 mg/day;
+amphotericin B deoxycholate 0.5–1 mg/kg
+daily or a lipid formulation of amphotericin B
+(3–5 mg/kg daily) are alternatives in patients
+who are intolerant to other antifungals;
+transition from amphotericin B deoxycholate
+or a lipid formulation of amphotericin B to
+fluconazole is recommended in patients who
+are clinically stable and whose isolates are
+likely to be susceptible to fluconazole (eg,
+C. albicans); voriconazole (400 mg [6 mg/kg]
+twice daily × two doses then 200 mg [3 mg/kg]
+twice daily thereafter) is efficacious, but
+offers little advantage over fluconazole; it
+may be utilized as step-down oral therapy for
+selected cases of candidiasis due to C. krusei or
+voriconazole-susceptible C. glabrata
+Patients intolerant or refractory to other therapye:
+Amphotericin B lipid complex IV 5 mg/kg/day
+Liposomal amphotericin B IV 3–5 mg/kg/day
+Amphotericin B colloid dispersion IV 2–6 mg/
+kg/day</td></tr><tr><td>C. krusei</td><td>Amphotericin B IV ≤1 mg/kg/day or an
+echinocandinc</td></tr><tr><td>C. lusitaniae</td><td>Fluconazole IV/orally 6 mg/kg/day</td></tr><tr><td>C. glabrata</td><td>An echinocandinc (transition to fluconazole or
+voriconazole therapy is not recommended
+without confirmation of isolate susceptibility)</td></tr><tr><td>Neutropenic hostf</td><td>Treatment duration: Until resolution of
+neutropenia
+Remove existing central venous catheters when
+feasible, plus:
+Amphotericin B IV 0.7–1 mg/kg/day (total
+dosages 0.5–1 g)
+or patients failing therapy with traditional
+amphotericin B: Lipid formulation of
+amphotericin B IV 3–5 mg/kg/day</td></tr><tr><td>Chronic disseminated candidiasis
+(hepatosplenic candidiasis)</td><td>Treatment duration: Until calcification or
+resolution of lesions
+Stable patients: Fluconazole IV/orally 6 mg/
+kg/day
+Acutely ill or refractory patients: Amphotericin B IV
+0.6–0.7 mg/kg/day
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis (Continued )</p>
+<p>Type of Disease and Common</p>
+<p>Clinical Manifestations Therapy/Comments</p>
+<p>Urinary candidiasis Asymptomatic disease: Generally no therapy is</p>
+<p>required</p>
+<p>Symptomatic or high-risk patientsg: Removal</p>
+<p>of urinary tract instruments, stents, and</p>
+<p>Foley catheters, +7–14 days therapy</p>
+<p>with fluconazole 200 mg orally daily or</p>
+<p>amphotericin B IV 0.3–1 mg/kg/day</p>
+<p>aPatients at significant risk for invasive candidiasis include those receiving standard chemotherapy</p>
+<p>for acute myelogenous leukemia, allogeneic bone marrow transplants, or high-risk autologous</p>
+<p>bone marrow transplants. However, among these populations, chemotherapy or bone marrow</p>
+<p>transplant protocols do not all produce equivalent risk, and local experience should be used to</p>
+<p>determine the relevance of prophylaxis.</p>
+<p>bRisk factors include retransplantation, creatinine of more than 2 mg/dL (177 μmol/L),</p>
+<p>choledochojejunostomy, intraoperative use of 40 units or more of blood products, and fungal</p>
+<p>colonization detected within the first 3 days after transplantation.</p>
+<p>cEchinocandin = caspofungin 70 mg loading dose, then 50 mg IV daily maintenance dose,</p>
+<p>or micafungin 100 mg daily, or anidulafungin 200 mg loading dose, then 100 mg daily</p>
+<p>maintenance dose.</p>
+<p>dTherapy is generally the same for acquired immunodeficiency syndrome (AIDS)/non-AIDS patients</p>
+<p>except where indicated and should be continued for 2 weeks after the last positive blood culture</p>
+<p>and resolution of signs and symptoms of infection. All patients should receive an ophthalmologic</p>
+<p>examination. Amphotericin B can be switched to fluconazole (IV or oral) for the completion of</p>
+<p>therapy. Susceptibility testing of the infecting isolate is a useful adjunct to species identification</p>
+<p>during selection of a therapeutic approach because it can be used to identify isolates that are</p>
+<p>unlikely to respond to fluconazole or amphotericin B. However, this is not currently available at</p>
+<p>most institutions.</p>
+<p>eOften defined as failure of ≥500 mg amphotericin B, initial renal insufficiency (creatinine ≥2.5 mg/dL</p>
+<p>[221 μmol/L] or creatinine clearance &lt;25 mL/min [0.42 mL/sec]), a significant increase in</p>
+<p>creatinine (to 2.5 mg/dL [221 μmol/L] for adults or 1.5 mg/dL [133 μmol/L] for children), or severe</p>
+<p>acute administration-related toxicity.</p>
+<p>fPatients who are neutropenic at the time of developing candidemia should receive a recombinant</p>
+<p>cytokine (granulocyte colony–stimulating factor or granulocyte–monocyte colony-stimulating</p>
+<p>factor) that accelerates recovery from neutropenia.</p>
+<p>gPatients at high risk for dissemination include neutropenic patients, low-birth-weight infants,</p>
+<p>patients with renal allografts, and patients who will undergo urologic manipulation.</p>
+<li>Major risk factors for hematogenous candidiasis include the use of central venous cathe-</li>
+<p>ters, total parenteral nutrition, receipt of multiple antibiotics, extensive surgery and burns,</p>
+<p>renal failure and hemodialysis, mechanical ventilation, and prior fungal colonization.</p>
+<h2>• Treatment of candidiasis is presented in Table 38-4.</h2>
+<p>Aspergillus Infections</p>
+<li>Aspergillus fumigatus is the most commonly observed pathogen, followed by Asper-</li>
+<p>gillus flavus.</p>
+<li>Invasive aspergillosis commonly affects immunocompromised patients and patients</li>
+<p>with acute myeloid leukemia (AML) and those who undergo allogeneic HSCT who</p>
+<p>have prolonged durations (more than 10 days) of neutropenia. Aspergillosis is gener-</p>
+<p>ally acquired by inhalation of airborne conidia that are small enough (2.5–3 mm) to</p>
+<p>reach the alveoli or the paranasal sinuses.</p>
+<li>Superficial or locally invasive infections of the ear, skin, or appendages can often be</li>
+<p>managed with topical antifungal therapy.</p>
+<p>410</p>
+<p>ch38.indd 410 19-11-2020 15:09:56</p>
+<div class="table-container"><table><tr><th>TABLE 38-4 Antifungal Therapy of Invasive Candidiasis (Continued )</th><th></th></tr><tr><td>Type of Disease and Common
+Clinical Manifestations</td><td>Therapy/Comments</td></tr><tr><td>Urinary candidiasis</td><td>Asymptomatic disease: Generally no therapy is
+required
+Symptomatic or high-risk patientsg: Removal
+of urinary tract instruments, stents, and
+Foley catheters, +7–14 days therapy
+with fluconazole 200 mg orally daily or
+amphotericin B IV 0.3–1 mg/kg/day</td></tr></table></div><h2>Fungal Infections, Invasive | CHAPTER 38</h2>
+<h2>ALLERGIC BRONCHOPULMONARY ASPERGILLOSIS</h2>
+<li>Allergic manifestations of Aspergillus range in severity from mild asthma to allergic</li>
+<p>bronchopulmonary aspergillosis characterized by severe asthma with wheezing,</p>
+<p>fever, malaise, weight loss, chest pain, and a cough productive of blood-streaked</p>
+<p>sputum.</p>
+<li>Therapy is aimed at minimizing the quantity of antigenic material released in the</li>
+<p>tracheobronchial tree.</p>
+<li>Antifungal therapy is generally not indicated in the management of allergic manifes-</li>
+<p>tations of aspergillosis, although some patients have demonstrated a decrease in their</p>
+<p>glucocorticoid dose following therapy with itraconazole.</p>
+<h2>ASPERGILLOMA</h2>
+<li>In the nonimmunocompromised host, Aspergillus infections of the sinuses most</li>
+<p>commonly occur as saprophytic colonization (aspergillomas, or “fungus balls”) of</p>
+<p>previously abnormal sinus tissue. Treatment consists of removal of the aspergilloma.</p>
+<p>Therapy with glucocorticoids and surgery is generally successful.</p>
+<li>Although IV amphotericin B is generally not useful in eradicating aspergillomas,</li>
+<p>intracavitary instillation of amphotericin B has been used successfully in a limited</p>
+<p>number of patients.</p>
+<h2>INVASIVE ASPERGILLOSIS</h2>
+<li>Patients with invasive aspergillosis generally have blunted or nonspecific signs and</li>
+<p>symptoms of infection due to impaired inflammatory responses. Patients often pres-</p>
+<p>ent with classic signs and symptoms of acute pulmonary embolus: pleuritic chest</p>
+<p>pain, fever, hemoptysis, and friction rubs.</p>
+<li>Demonstration of Aspergillus by repeated culture and microscopic examination of</li>
+<p>tissue provides the most firm diagnosis.</p>
+<h2>TREATMENT</h2>
+<li>Voriconazole is the drug of choice for primary therapy of most patients with invasive</li>
+<p>aspergillosis as it provided improved survival and fewer side effects.</p>
+<li>In patients who cannot tolerate voriconazole, amphotericin B can be used. Full doses</li>
+<p>(1–1.5 mg/kg/day) are generally recommended, with response measured by deferves-</p>
+<p>cence and radiographic clearing. The lipid-based formulations may be preferred as</p>
+<pre><code>initial therapy in patients with marginal renal function or in patients receiving other</code></pre>
+<p>nephrotoxic drugs. The optimal duration of treatment is unknown.</p>
+<li>Caspofungin is indicated for treatment of invasive aspergillosis in patients who are</li>
+<p>refractory to or intolerant of other therapies such as amphotericin B.</p>
+<li>The use of prophylactic antifungal therapy to prevent primary infection or reactiva-</li>
+<p>tion of aspergillosis during subsequent courses of chemotherapy is controversial.</p>
+<p>See Chapter 139, Invasive Fungal Infections, authored by Peggy L. Carver, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>411</p>
+<p>ch38.indd 411 19-11-2020 15:09:56</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

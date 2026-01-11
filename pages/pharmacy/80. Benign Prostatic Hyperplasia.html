@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80. Benign Prostatic Hyperplasia</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>80. Benign Prostatic Hyperplasia</h1>
+        </header>
+        <main>
+            <h2>SECTION 16</h2>
+<h2>UROLOGIC DISORDERS</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>80</p>
+<p>Benign Prostatic Hyperplasia</p>
+<p>941</p>
+<h2>RETPAHC</h2>
+<li>Benign prostatic hyperplasia (BPH), is a non-cancerous condition in which an</li>
+<p>enlarged prostate compresses the urethra, blocking the outflow of urine.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Three types of prostate gland tissue are epithelial or glandular, stromal or</li>
+<p>smooth muscle, and capsule. Both stromal tissue and capsule are embedded with</p>
+<p>α-adrenergic receptors.</p>
+<li>Th 1 e precise pathophysiologic mechanisms that cause BPH are not clear. Both intra-</li>
+<p>prostatic dihydrotestosterone (DHT) and type II 5α-reductase are thought to be</p>
+<p>involved.</p>
+<li>BPH commonly results from both static (gradual enlargement of the prostate) and</li>
+<p>dynamic (agents or situations that increase α-adrenergic tone and constrict the</p>
+<p>gland’s smooth muscle) factors. Examples of drugs that can exacerbate symptoms</p>
+<p>include testosterone, α-adrenergic agonists (eg, decongestants), and those with</p>
+<p>significant anticholinergic effects (eg, antihistamines, phenothiazines, tricyclic</p>
+<p>antidepressants, antispasmodics, and antiparkinsonian agents).</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients present with a variety of signs and symptoms categorized as obstructive or</li>
+<p>irritative. Symptoms vary over time.</p>
+<li>Obstructive signs and symptoms result when dynamic and/or static factors reduce</li>
+<p>bladder emptying. Patients experience urinary hesitancy, urine dribbles out of the</p>
+<p>penis, and the bladder feels full even after voiding.</p>
+<li>Irritative signs and symptoms are common and result from long-standing obstruction</li>
+<p>at the bladder neck. Patients experience urinary frequency, urgency, and nocturia.</p>
+<li>Obstructive and irritative voiding symptoms are referred to as lower urinary tract</li>
+<p>symptoms (LUTS) which is not limited to BPH but may also be caused by neurogenic</p>
+<p>bladder or urinary tract infections.</p>
+<li>BPH progression may produce complications including chronic kidney disease, gross</li>
+<p>hematuria, urinary incontinence, recurrent urinary tract infection, bladder diver-</p>
+<p>ticula, and bladder stones.</p>
+<h2>DIAGNOSIS</h2>
+<li>Includes careful medical history, physical examination, objective measures of bladder</li>
+<p>emptying (eg, peak and average urinary flow rate and postvoid residual [PVR] urine</p>
+<p>volume), and laboratory tests (eg, urinalysis and prostate-specific antigen [PSA]).</p>
+<li>On digital rectal examination, the prostate is usually but not always enlarged (>20 g),</li>
+<p>soft, smooth, and symmetric.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to control symptoms, prevent progression of</li>
+<p>complications, and delay need for surgical intervention.</p>
+<p>ch80.indd 941 20-11-2020 15:36:20</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>80</th><th>Benign Prostatic Hyperplasia</th></tr></table></div><h2>SECTION 16 | Urologic Disorders</h2>
+<li>Management options include watchful waiting, drug therapy, and surgical</li>
+<p>intervention. The choice depends on severity of signs and symptoms (Table 80-1).</p>
+<li>Watchful waiting is appropriate for patients with mild disease (Figure 80-1). Patients</li>
+<p>are reassessed at 6–12 month intervals and educated about behavior modification,</p>
+<p>such as fluid restriction before bedtime, minimizing caffeine and alcohol intake,</p>
+<p>frequent emptying of the bladder, and avoiding drugs that exacerbate voiding</p>
+<p>symptoms.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Pharmacologic therapy is appropriate for patients with moderate BPH symptoms and</li>
+<p>as an interim measure for patients with severe BPH.</p>
+<li>Pharmacologic therapy interferes with the stimulatory effect of testosterone on pros-</li>
+<p>tate gland enlargement (reduces the static factor), relaxes prostatic smooth muscle</p>
+<p>(reduces the dynamic factor), or relaxes bladder detrusor muscle (Table 80-2).</p>
+<li>Initiate therapy with an α-adrenergic antagonist for faster onset of symptom relief.</li>
+<p>1</p>
+<p>Select a 5α-reductase inhibitor in patients with a prostate gland more than 40 g who</p>
+<p>cannot tolerate the cardiovascular adverse effects of α-adrenergic antagonists. Con-</p>
+<p>1</p>
+<p>sider combination therapy for symptomatic patients with a prostate gland more than</p>
+<p>40 g and PSA of 1.4 ng/mL (1.4 mcg/L) or more.</p>
+<li>Consider monotherapy with a phosphodiesterase inhibitor (PI) or use in combina-</li>
+<pre><code>tion with an α-adrenergic antagonist when erectile dysfunction and BPH are present.</code></pre>
+<li>Combination therapy may reduce bothersome symptoms but may also result in</li>
+<p>increased risk of adverse effects and drug interactions, higher cost of treatment, and</p>
+<p>lower rates of adherence.</p>
+<p>α-Adrenergic Antagonists</p>
+<li>α-Adrenergic antagonists relax smooth muscle in the prostate and bladder neck,</li>
+<p>increasing urinary flow rates by 2–3 mL/sec in 60%–70% of patients and reducing</p>
+<p>PVR urine volumes. These agents do not decrease prostate volume or PSA levels.</p>
+<li>Prazosin, terazosin, doxazosin, and alfuzosin are second-generation α-adrenergic</li>
+<p>1</p>
+<p>antagonists. They antagonize peripheral vascular α-adrenergic receptors in addi-</p>
+<p>1</p>
+<p>tion to those in the prostate. Adverse effects include first-dose syncope, orthostatic</p>
+<p>hypotension, and dizziness. Current practice guidelines do not recommend prazosin</p>
+<p>due to multiple doses/day and significant cardiovascular adverse effects. Alfuzosin is</p>
+<p>less likely to cause cardiovascular adverse effects than other second-generation agents</p>
+<pre><code>and is considered functionally and clinically uroselective.</code></pre>
+<li>Tamsulosin and silodosin, third-generation α-adrenergic antagonists, are selective</li>
+<p>1</p>
+<p>for prostatic α -receptors. Therefore, they do not cause peripheral vascular smooth</p>
+<h2>1A</h2>
+<p>TABLE 80-1 Categories of BPH Disease Severity Based on Symptoms and Signs</p>
+<p>Disease AUA</p>
+<p>Severity Symptom Score Typical Symptoms and Signs</p>
+<p>Mild ≤7 Asymptomatic</p>
+<p>Peak urinary flow rate &lt;10 mL/sec</p>
+<p>PVR urine volume &gt;25–50 mL</p>
+<p>Moderate 8–19 All of the above signs plus obstructive voiding</p>
+<p>symptoms and irritative voiding symptoms</p>
+<p>(signs of detrusor instability)</p>
+<p>Severe ≥20 All of the above plus one or more complications</p>
+<p>of BPH</p>
+<p>AUA, American Urological Association; BPH, benign prostatic hyperplasia; PVR, postvoid residual</p>
+<p>volume.</p>
+<p>942</p>
+<p>ch80.indd 942 20-11-2020 15:36:20</p>
+<div class="table-container"><table><tr><th>TABLE 80-1 Categories of BPH Disease Severity Based on Symptoms and Signs</th><th></th><th></th></tr><tr><td>Disease
+Severity</td><td>AUA
+Symptom Score</td><td>Typical Symptoms and Signs</td></tr><tr><td>Mild</td><td>≤7</td><td>Asymptomatic</td></tr><tr><td></td><td></td><td>Peak urinary flow rate &lt;10 mL/sec</td></tr><tr><td></td><td></td><td>PVR urine volume &gt;25–50 mL</td></tr><tr><td>Moderate</td><td>8–19</td><td>All of the above signs plus obstructive voiding
+symptoms and irritative voiding symptoms
+(signs of detrusor instability)</td></tr><tr><td>Severe</td><td>≥20</td><td>All of the above plus one or more complications
+of BPH</td></tr></table></div><p>943</p>
+<p>Benign</p>
+<p>Prostatic</p>
+<p>Hyperplasia</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>80</p>
+<p>Mild</p>
+<p>Watchful waiting</p>
+<p>symptoms</p>
+<p>With erectile α-adrenergic antagonist, phosphodiesterase</p>
+<pre><code>dysfunction inhibitor, or both</code></pre>
+<p>Small prostate</p>
+<p>Moderate α-adrenergic antagonist</p>
+<p>BPH BPE BPO and low PSA</p>
+<p>symptoms</p>
+<p>Large prostate and 5α-reductase inhibitor</p>
+<p>increased PSA + α-adrenergic antagonist</p>
+<p>Predominant irritative α-adrenergic antagonist + anticholinergic agent</p>
+<p>voiding symptoms α-adrenergic antagonist + mirabegron</p>
+<p>Severe Complications of</p>
+<p>Minimally invasive surgery or prostatectomy</p>
+<p>symptoms BPH</p>
+<p>BPE, benign prostatic enlargement; BPH, benign prostatic hyperplasia; BPO, benign prostatic obstruction.</p>
+<p>FIGURE 80-1. Management algorithm for benign prostatic hyperplasia (BPH).</p>
+<p>ch80.indd</p>
+<p>943</p>
+<p>20-11-2020</p>
+<p>15:36:21</p>
+<h2>944 SECTION</h2>
+<p>16</p>
+<p>|</p>
+<p>Urologic</p>
+<p>Disorders</p>
+<p>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</p>
+<p>Drug Brand Name Initial Dose Usual Dose Special Population Dose</p>
+<p>α-Adrenergic Antagonists</p>
+<p>Prazosin Minipress 0.5 mg twice a day 1–5 mg twice a day To uptitrate the dose, double the dose every 2 weeks.</p>
+<p>orally orally</p>
+<p>Terazosin Hytrin 1 mg at bedtime orally 10–20 mg daily To uptitrate the dose, increase slowly to 2 mg, 5 mg, and then 10 mg daily in a</p>
+<p>orally stepwise fashion. Take extra care if the patient is taking other drugs that lower</p>
+<p>blood pressure.</p>
+<p>Doxazosin Cardura 1 mg daily orally 8 mg daily orally For the immediate-release formulation, doses of 16 mg daily have been used for</p>
+<p>Cardura XL 4 mg daily orally 4–8 mg daily hypertension. For the XL formulation, increase from 4 to 8 mg daily after a 3- to</p>
+<p>4-week interval. When switching from the immediate- to the extended-release</p>
+<p>formulation, start with 4 mg of the extended-release formulation no matter what</p>
+<p>maintenance dose of immediate-release doxazosin the patient is taking.</p>
+<p>Alfuzosin Uroxatral 10 mg daily orally 10 mg daily orally This extended-release formulation should not be chewed or crushed. It should be</p>
+<p>(no dose titration) taken after meals and used cautiously in patients with creatinine clearance less</p>
+<p>than 30 mL/min (0.5 mL/sec).</p>
+<p>Tamsulosin Flomax 0.4 mg daily orally 0.4–0.8 mg daily This extended-release formulation should not be chewed or crushed. It should</p>
+<p>orally be taken after meals. No dosage adjustment is needed in patients with renal or</p>
+<pre><code>liver dysfunction. Allow several weeks after starting a dose before increasing to a</code></pre>
+<p>higher dose.</p>
+<p>Silodosin Rapaflo 8 mg daily orally 8 mg daily orally (no This drug is contraindicated when creatinine clearance is less than 30 mL/min</p>
+<p>dose titration) (0.5 mL/sec). If creatinine clearance is 30–50 mL/min (0.5–0.83 mL/sec), use 4 mg</p>
+<p>daily orally, preferably after the same meal each day. It should not be given to</p>
+<p>patients on potent CYP 3A4 inhibitors or with severe hepatic impairment.</p>
+<p>ch80.indd</p>
+<p>944</p>
+<p>20-11-2020</p>
+<p>15:36:21</p>
+<div class="table-container"><table><tr><th>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia</th><th></th><th></th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Dose</td><td></td><td>Special Population Dose</td><td></td></tr><tr><td>α-Adrenergic Antagonists</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Prazosin</td><td>Minipress</td><td>0.5 mg twice a day
+orally</td><td>1–5 mg twice a day
+orally</td><td></td><td>To uptitrate the dose, double the dose every 2 weeks.</td><td></td></tr><tr><td>Terazosin</td><td>Hytrin</td><td>1 mg at bedtime orally</td><td>10–20 mg daily
+orally</td><td></td><td>To uptitrate the dose, increase slowly to 2 mg, 5 mg, and then 10 mg daily in a
+stepwise fashion. Take extra care if the patient is taking other drugs that lower
+blood pressure.</td><td></td></tr><tr><td>Doxazosin</td><td>Cardura</td><td>1 mg daily orally</td><td>8 mg daily orally</td><td></td><td>For the immediate-release formulation, doses of 16 mg daily have been used for
+hypertension. For the XL formulation, increase from 4 to 8 mg daily after a 3- to
+4-week interval. When switching from the immediate- to the extended-release
+formulation, start with 4 mg of the extended-release formulation no matter what
+maintenance dose of immediate-release doxazosin the patient is taking.</td><td></td></tr><tr><td></td><td>Cardura XL</td><td>4 mg daily orally</td><td>4–8 mg daily</td><td></td><td></td><td></td></tr><tr><td>Alfuzosin</td><td>Uroxatral</td><td>10 mg daily orally</td><td>10 mg daily orally
+(no dose titration)</td><td></td><td>This extended-release formulation should not be chewed or crushed. It should be
+taken after meals and used cautiously in patients with creatinine clearance less
+than 30 mL/min (0.5 mL/sec).</td><td></td></tr><tr><td>Tamsulosin</td><td>Flomax</td><td>0.4 mg daily orally</td><td>0.4–0.8 mg daily
+orally</td><td></td><td>This extended-release formulation should not be chewed or crushed. It should
+be taken after meals. No dosage adjustment is needed in patients with renal or
+liver dysfunction. Allow several weeks after starting a dose before increasing to a
+higher dose.</td><td></td></tr><tr><td>Silodosin</td><td>Rapaflo</td><td>8 mg daily orally</td><td>8 mg daily orally (no
+dose titration)</td><td></td><td>This drug is contraindicated when creatinine clearance is less than 30 mL/min
+(0.5 mL/sec). If creatinine clearance is 30–50 mL/min (0.5–0.83 mL/sec), use 4 mg
+daily orally, preferably after the same meal each day. It should not be given to
+patients on potent CYP 3A4 inhibitors or with severe hepatic impairment.</td><td></td></tr></table></div><p>945</p>
+<p>Benign</p>
+<p>Prostatic</p>
+<p>Hyperplasia</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>80</p>
+<p>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</p>
+<p>5α-Reductase Inhibitors</p>
+<p>Finasteride Proscar 5 mg daily orally 5 mg daily orally No dosage adjustment in patients with renal impairment. Use cautiously in patients</p>
+<p>with hepatic impairment.</p>
+<p>Dutasteride Avodart 0.5 mg daily orally 0.5 mg daily orally No dosage adjustment in patients with renal impairment. Use cautiously in patients</p>
+<p>with hepatic impairment.</p>
+<p>Dutasteride + Jalyn 1 tablet (equivalent to 1 tablet daily orally No dosage adjustment needed in patients with renal or moderate hepatic</p>
+<p>tamsulosin 0.5 mg dutasteride impairment.</p>
+<p>+ 0.4 mg</p>
+<p>tamsulosin) daily</p>
+<p>orally</p>
+<p>Phosphodiesterase Inhibitor</p>
+<p>Tadalafil Cialis 5 mg daily orally 5 mg daily orally If creatinine clearance is 30–50 mL/min (0.5–0.83 mL/sec), use 2.5 mg daily orally. Do</p>
+<p>not use if creatinine clearance is less than 30 mL/min (0.5 mL/sec). Use cautiously</p>
+<p>in patients with mild-to-moderate hepatic impairment. Avoid in patients with</p>
+<p>severe hepatic impairment.</p>
+<p>Anticholinergic Agents</p>
+<p>Darifenacin Enablex 7.5 mg daily orally 7.5–15 mg daily This extended-release formulation should not be chewed or crushed. To uptitrate</p>
+<p>orally the dose, double the dose after 2 weeks. If the patient is taking a potent CYP3A4</p>
+<p>inhibitor (eg, ketoconazole, itraconazole, ritonavir, nelfinavir, and clarithromycin),</p>
+<p>do not exceed 7.5 mg daily orally. No dosage adjustment is needed for patients</p>
+<p>with renal impairment. Use a maximum dose of 7.5 mg daily for patients with</p>
+<p>moderate hepatic impairment. Do not use in patients with severe hepatic</p>
+<p>impairment.</p>
+<p>(Continued)</p>
+<p>ch80.indd</p>
+<p>945</p>
+<p>20-11-2020</p>
+<p>15:36:21</p>
+<div class="table-container"><table><tr><th></th><th>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>5α-Reductase Inhibitors</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Finasteride</td><td>Proscar</td><td>5 mg daily orally</td><td>5 mg daily orally</td><td>No dosage adjustment in patients with renal impairment. Use cautiously in patients
+with hepatic impairment.</td><td></td></tr><tr><td></td><td>Dutasteride</td><td>Avodart</td><td>0.5 mg daily orally</td><td>0.5 mg daily orally</td><td>No dosage adjustment in patients with renal impairment. Use cautiously in patients
+with hepatic impairment.</td><td></td></tr><tr><td></td><td>Dutasteride +
+tamsulosin</td><td>Jalyn</td><td>1 tablet (equivalent to
+0.5 mg dutasteride
++ 0.4 mg
+tamsulosin) daily
+orally</td><td>1 tablet daily orally</td><td>No dosage adjustment needed in patients with renal or moderate hepatic
+impairment.</td><td></td></tr><tr><td></td><td>Phosphodiesterase Inhibitor</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Tadalafil</td><td>Cialis</td><td>5 mg daily orally</td><td>5 mg daily orally</td><td>If creatinine clearance is 30–50 mL/min (0.5–0.83 mL/sec), use 2.5 mg daily orally. Do
+not use if creatinine clearance is less than 30 mL/min (0.5 mL/sec). Use cautiously
+in patients with mild-to-moderate hepatic impairment. Avoid in patients with
+severe hepatic impairment.</td><td></td></tr><tr><td></td><td>Anticholinergic Agents</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Darifenacin</td><td>Enablex</td><td>7.5 mg daily orally</td><td>7.5–15 mg daily
+orally</td><td>This extended-release formulation should not be chewed or crushed. To uptitrate
+the dose, double the dose after 2 weeks. If the patient is taking a potent CYP3A4
+inhibitor (eg, ketoconazole, itraconazole, ritonavir, nelfinavir, and clarithromycin),
+do not exceed 7.5 mg daily orally. No dosage adjustment is needed for patients
+with renal impairment. Use a maximum dose of 7.5 mg daily for patients with
+moderate hepatic impairment. Do not use in patients with severe hepatic
+impairment.
+(Continued)</td><td></td></tr></table></div><h2>946 SECTION</h2>
+<p>16</p>
+<p>|</p>
+<p>Urologic</p>
+<p>Disorders</p>
+<p>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</p>
+<p>Drug Brand Name Initial Dose Usual Dose Special Population Dose</p>
+<p>Fesoterodine Toviaz 4 mg daily orally 4–8 mg daily orally This extended-release formulation should not be chewed or crushed. If the patient</p>
+<p>is taking a potent CYP3A4 inhibitor (eg, ketoconazole, itraconazole, ritonavir,</p>
+<p>nelfinavir, and clarithromycin), do not exceed 4 mg daily orally. If the creatinine</p>
+<p>clearance is less than 30 mL/min (0.5 mL/sec), do not exceed 4 mg daily orally. Use</p>
+<p>is not recommended in patients with severe hepatic impairment.</p>
+<p>Oxybutynin Ditropan 5 mg two to three 5–10 mg two to Increase daily dose at 5 mg increments at weekly intervals. No specific dosing</p>
+<p>times a day orally three times a day modifications available for patients with renal or hepatic impairment; use</p>
+<p>orally cautiously in these patients.</p>
+<p>Ditropan XL 5 mg daily orally 5–30 mg daily orally This extended-release formulation should not be crushed or chewed. Increase daily</p>
+<p>dose at 5 mg increments at weekly intervals. No specific dosing modifications</p>
+<p>available for patients with renal impairment; use cautiously in these patients.</p>
+<p>Oxytrol TDS 1 patch (3.9 mg 1 patch (3.9 mg) Apply this transdermal patch to abdomen, hip, or buttock. Rotate application site. Do</p>
+<p>oxybutynin) twice twice weekly not expose patch to sunlight. No specific dosing modifications available for patients</p>
+<p>weekly with renal or hepatic impairment; however, use cautiously in these patients.</p>
+<p>Gelnique 1 g gel (100 mg 1 g gel (100 mg This is available as premeasured dose packets. Apply to abdomen, thighs, upper</p>
+<p>10% gel oxybutynin) daily oxybutynin) daily arms, or shoulders. Wash hands after application. Do not bathe, shower, or swim</p>
+<p>for 1 hour after application. Cover application site with clothing until medication</p>
+<p>dries on skin. Rotate application site daily. No specific dosing modifications</p>
+<p>available for patients with renal or hepatic impairment; use cautiously in these</p>
+<p>patients.</p>
+<p>Solifenacin VESIcare 5 mg daily orally 5–10 mg daily orally If the creatinine clearance is less than 30 mL/min (0.5 mL/sec) or the patient has</p>
+<p>moderate hepatic impairment, do not exceed 5 mg daily orally. Do not use if the</p>
+<p>patient has severe hepatic impairment. If the patient is taking a potent CYP3A4</p>
+<p>inhibitor (eg, ketoconazole, itraconazole, ritonavir, nelfinavir, and clarithromycin),</p>
+<p>do not exceed 5 mg daily orally</p>
+<p>ch80.indd</p>
+<p>946</p>
+<p>20-11-2020</p>
+<p>15:36:21</p>
+<div class="table-container"><table><tr><th>Drug Brand Name Initial Dose Usual Dose Special Population Dose</th><th></th><th></th><th></th><th></th></tr><tr><td>Fesoterodine</td><td>Toviaz</td><td>4 mg daily orally</td><td>4–8 mg daily orally</td><td>This extended-release formulation should not be chewed or crushed. If the patient
+is taking a potent CYP3A4 inhibitor (eg, ketoconazole, itraconazole, ritonavir,
+nelfinavir, and clarithromycin), do not exceed 4 mg daily orally. If the creatinine
+clearance is less than 30 mL/min (0.5 mL/sec), do not exceed 4 mg daily orally. Use
+is not recommended in patients with severe hepatic impairment.</td></tr><tr><td>Oxybutynin</td><td>Ditropan</td><td>5 mg two to three
+times a day orally</td><td>5–10 mg two to
+three times a day
+orally</td><td>Increase daily dose at 5 mg increments at weekly intervals. No specific dosing
+modifications available for patients with renal or hepatic impairment; use
+cautiously in these patients.</td></tr><tr><td></td><td>Ditropan XL</td><td>5 mg daily orally</td><td>5–30 mg daily orally</td><td>This extended-release formulation should not be crushed or chewed. Increase daily
+dose at 5 mg increments at weekly intervals. No specific dosing modifications
+available for patients with renal impairment; use cautiously in these patients.</td></tr><tr><td></td><td>Oxytrol TDS</td><td>1 patch (3.9 mg
+oxybutynin) twice
+weekly</td><td>1 patch (3.9 mg)
+twice weekly</td><td>Apply this transdermal patch to abdomen, hip, or buttock. Rotate application site. Do
+not expose patch to sunlight. No specific dosing modifications available for patients
+with renal or hepatic impairment; however, use cautiously in these patients.</td></tr><tr><td></td><td>Gelnique
+10% gel</td><td>1 g gel (100 mg
+oxybutynin) daily</td><td>1 g gel (100 mg
+oxybutynin) daily</td><td>This is available as premeasured dose packets. Apply to abdomen, thighs, upper
+arms, or shoulders. Wash hands after application. Do not bathe, shower, or swim
+for 1 hour after application. Cover application site with clothing until medication
+dries on skin. Rotate application site daily. No specific dosing modifications
+available for patients with renal or hepatic impairment; use cautiously in these
+patients.</td></tr><tr><td>Solifenacin</td><td>VESIcare</td><td>5 mg daily orally</td><td>5–10 mg daily orally</td><td>If the creatinine clearance is less than 30 mL/min (0.5 mL/sec) or the patient has
+moderate hepatic impairment, do not exceed 5 mg daily orally. Do not use if the
+patient has severe hepatic impairment. If the patient is taking a potent CYP3A4
+inhibitor (eg, ketoconazole, itraconazole, ritonavir, nelfinavir, and clarithromycin),
+do not exceed 5 mg daily orally</td></tr></table></div><p>947</p>
+<p>Benign</p>
+<p>Prostatic</p>
+<p>Hyperplasia</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>80</p>
+<p>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</p>
+<p>Tolterodine Detrol 2 mg twice daily orally 1–2 mg twice daily If the patient has significant renal impairment or severe hepatic impairment, limit</p>
+<p>orally dose to 1 mg twice a day.</p>
+<p>Detrol LA 4 mg daily orally 2–4 mg daily orally This extended-release formulation should not be chewed or crushed. If the creatinine</p>
+<p>clearance is 10–30 mL/min (0.17–0.5 mL/sec) or the patient has mild/moderate</p>
+<p>hepatic impairment, do not exceed 2 mg daily orally. If the creatinine clearance</p>
+<p>is less than 10 mL/min (0.17 mL/sec), do not use Detrol LA. If the patient has</p>
+<p>severe hepatic impairment, use of the extended-release formulation is not</p>
+<p>recommended.</p>
+<p>Trospium Sanctura 20 mg twice daily 20 mg twice daily Avoid alcohol ingestion for 2 hours after a dose. Use cautiously in patients with</p>
+<p>orally orally moderate or severe hepatic impairment. In patients older than 75 years, use the</p>
+<p>immediate-release formulation and start with 20 mg daily orally. If the creatinine</p>
+<p>clearance is less than 30 mL/min (0.5 mL/sec), use 20 mg immediate-release</p>
+<p>formulation.</p>
+<p>Sanctura XR 60 mg daily orally 60 mg daily orally This extended-release formulation should not be chewed or crushed. This product</p>
+<p>is not recommended in patients with creatinine clearance less than 30 mL/min</p>
+<p>(0.5 mL/sec). It should be used cautiously in patients with severe hepatic</p>
+<p>impairment.</p>
+<p>β-Adrenergic Agonist</p>
+<p>3</p>
+<p>Mirabegron Myrbetriq 25 mg daily orally 25–50 mg daily This is an extended-release formulation. Do not chew, crush, or divide tablet. In</p>
+<p>orally patients with a creatinine clearance of 15–29 mL/min (0.25–0.48 mL/sec) or those</p>
+<p>with moderate hepatic impairment, the maximum daily dose is 25 mg daily. This</p>
+<p>drug is not recommended in patients with creatinine clearance less than 15 mL/</p>
+<p>min (0.25 mL/sec) or those with severe hepatic impairment.</p>
+<p>ch80.indd</p>
+<p>947</p>
+<p>20-11-2020</p>
+<p>15:36:21</p>
+<div class="table-container"><table><tr><th></th><th>TABLE 80-2 Dosing of Drugs Used in Treatment of Benign Prostatic Hyperplasia (Continued )</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Tolterodine</td><td>Detrol</td><td>2 mg twice daily orally</td><td>1–2 mg twice daily
+orally</td><td>If the patient has significant renal impairment or severe hepatic impairment, limit
+dose to 1 mg twice a day.</td><td></td></tr><tr><td></td><td></td><td>Detrol LA</td><td>4 mg daily orally</td><td>2–4 mg daily orally</td><td>This extended-release formulation should not be chewed or crushed. If the creatinine
+clearance is 10–30 mL/min (0.17–0.5 mL/sec) or the patient has mild/moderate
+hepatic impairment, do not exceed 2 mg daily orally. If the creatinine clearance
+is less than 10 mL/min (0.17 mL/sec), do not use Detrol LA. If the patient has
+severe hepatic impairment, use of the extended-release formulation is not
+recommended.</td><td></td></tr><tr><td></td><td>Trospium</td><td>Sanctura</td><td>20 mg twice daily
+orally</td><td>20 mg twice daily
+orally</td><td>Avoid alcohol ingestion for 2 hours after a dose. Use cautiously in patients with
+moderate or severe hepatic impairment. In patients older than 75 years, use the
+immediate-release formulation and start with 20 mg daily orally. If the creatinine
+clearance is less than 30 mL/min (0.5 mL/sec), use 20 mg immediate-release
+formulation.</td><td></td></tr><tr><td></td><td></td><td>Sanctura XR</td><td>60 mg daily orally</td><td>60 mg daily orally</td><td>This extended-release formulation should not be chewed or crushed. This product
+is not recommended in patients with creatinine clearance less than 30 mL/min
+(0.5 mL/sec). It should be used cautiously in patients with severe hepatic
+impairment.</td><td></td></tr><tr><td></td><td>β-Adrenergic Agonist
+3</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Mirabegron</td><td>Myrbetriq</td><td>25 mg daily orally</td><td>25–50 mg daily
+orally</td><td>This is an extended-release formulation. Do not chew, crush, or divide tablet. In
+patients with a creatinine clearance of 15–29 mL/min (0.25–0.48 mL/sec) or those
+with moderate hepatic impairment, the maximum daily dose is 25 mg daily. This
+drug is not recommended in patients with creatinine clearance less than 15 mL/
+min (0.25 mL/sec) or those with severe hepatic impairment.</td><td></td></tr></table></div><h2>SECTION 16 | Urologic Disorders</h2>
+<p>muscle relaxation and associated hypotension. Dose titration is minimal and the</p>
+<p>onset of peak action is seen within a week.</p>
+<li>Potential drug interactions include decreased metabolism of α-adrenergic antago-</li>
+<p>1</p>
+<p>nists with CYP 3A4 inhibitors (eg, cimetidine and diltiazem) and increased catabo-</p>
+<p>lism of α-adrenergic antagonists with concurrent use of CYP 3A4 stimulators (eg,</p>
+<p>1</p>
+<p>carbamazepine and phenytoin).</p>
+<li>Reduce the dose of silodosin in patients with moderate renal impairment or hepatic</li>
+<pre><code>dysfunction.</code></pre>
+<p>5α-Reductase Inhibitors</p>
+<li>5α-Reductase inhibitors interfere with the stimulatory effect of testosterone. These</li>
+<p>agents slow disease progression and decrease the risk of complications.</p>
+<li>Compared with α-adrenergic antagonists, disadvantages of 5α-reductase inhibi-</li>
+<p>1</p>
+<p>tors include 6–12 months of use to maximally shrink the prostate, less likelihood of</p>
+<pre><code>inducing objective improvement, and more sexual dysfunction. They are considered</code></pre>
+<p>second-line therapy in sexually active males.</p>
+<li>Dutasteride inhibits types I and II 5α-reductase, whereas finasteride inhibits only</li>
+<p>type II.</p>
+<li>5α-Reductase inhibitors may be preferred in patients with uncontrolled arrhythmias,</li>
+<p>poorly controlled angina, requirement for multiple antihypertensives, or intolerance</p>
+<p>to the hypotensive effects of α-adrenergic antagonists.</p>
+<li>Measure PSA at baseline and 1 again after 6 months of therapy. If PSA does not</li>
+<p>decrease by 50% after 6 months of therapy in an adherent patient, evaluate the patient</p>
+<p>for prostate cancer.</p>
+<li>5α-Reductase inhibitors are in FDA pregnancy category X and are therefore con-</li>
+<p>traindicated in pregnant women. Women who are pregnant or seeking to become</p>
+<p>pregnant should not handle the tablets or have contact with semen from men taking</p>
+<p>5α-reductase inhibitors.</p>
+<p>Phosphodiesterase Inhibitors</p>
+<li>Increase in cyclic GMP by PIs relaxes smooth muscle in the prostate and</li>
+<p>bladder neck.</p>
+<li>Tadalafil 5 mg daily improves voiding symptoms but does not increase urinary flow</li>
+<p>rate or reduce PVR urine volume. Combination therapy with α-adrenergic antago-</p>
+<p>nist results in significant improvement in LUTS, increased urinary flow rates, and</p>
+<p>decreased PVR volume.</p>
+<p>Anticholinergic Agents</p>
+<li>Addition of oxybutynin and tolterodine to α-adrenergic antagonists relieves irrita-</li>
+<p>tive voiding symptoms including urinary frequency, urgency, and nocturia. Start with</p>
+<p>lowest effective dose to determine tolerance of CNS adverse effects and dry mouth.</p>
+<p>Measure PVR urine volume before initiating treatment (should be less than 150 mL).</p>
+<li>Consider transdermal (eg, oxybutynin) or extended-release formulations (eg,</li>
+<p>tolterodine) or uroselective agents (eg, darifenacin or solifenacin) if systemic anti-</p>
+<p>cholinergic adverse effects are poorly tolerated.</p>
+<p>B-Adrenergic Agonist</p>
+<p>3</p>
+<li>Mirabegron is a β-adrenergic agonist that relaxes the detrusor muscle reducing irri-</li>
+<p>3</p>
+<p>tative voiding systems, increases urinary bladder capacity, and increases the interval</p>
+<p>between voidings. It does not cause anticholinergic adverse effects and is an alterna-</p>
+<p>tive to anticholinergic agents in patients with LUTS.</p>
+<h2>SURGICAL INTERVENTION</h2>
+<li>Prostatectomy, performed transurethrally or suprapubically, is the gold standard for</li>
+<p>treatment of patients with moderate or severe symptoms of BPH and for all patients</p>
+<p>with complications.</p>
+<p>948</p>
+<p>ch80.indd 948 20-11-2020 15:36:21</p>
+<h2>Benign Prostatic Hyperplasia | CHAPTER 80</h2>
+<li>Retrograde ejaculation complicates up to 75% of transurethral prostatectomy proce-</li>
+<p>dures. Other complications seen in 2%–15% of patients are bleeding, urinary incon-</p>
+<pre><code>tinence, and erectile dysfunction.</code></pre>
+<h2>PHYTOTHERAPY</h2>
+<li>Although widely used in Europe for BPH, phytotherapy with products such as saw</li>
+<p>palmetto berry (Serenoa repens), stinging nettle (Urtica dioica), and African plum</p>
+<p>(Pygeum africanum) should be avoided. Studies are inconclusive, and these agents</p>
+<p>are not regulated by the FDA.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The primary therapeutic outcome of BPH therapy is restoring adequate urinary flow</li>
+<p>with minimal treatment-related adverse effects. Assess efficacy 6–12 weeks after</p>
+<p>starting treatment.</p>
+<li>Outcome depends on the patient’s perception of effectiveness and acceptability of</li>
+<p>therapy. The American Urological Association Symptom Score is a validated stan-</p>
+<p>dardized instrument that can be used to assess patient quality of life.</p>
+<li>Objective measures of bladder emptying (eg, urinary flow rate and PVR urine</li>
+<p>volume) are useful measures in patients considering surgery.</p>
+<li>Monitor laboratory tests (eg, blood urea nitrogen, creatinine, and PSA) and urinalysis</li>
+<p>regularly. An annual digital rectal examination is recommended if life expectancy is</p>
+<p>at least 10 years.</p>
+<p>See Chapter 100, Benign Prostatic Hyperplasia, authored by Mary Lee and Roohollah</p>
+<p>Sharifi, for a more detailed discussion of this topic.</p>
+<p>949</p>
+<p>ch80.indd 949 20-11-2020 15:36:22</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. Psoriasis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>17. Psoriasis</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>180</p>
+<h2>RREETTPPAAHHCC</h2>
+<p>17</p>
+<p>Psoriasis</p>
+<li>Psoriasis is a chronic T-lymphocyte–mediated systemic inflammatory disease char-</li>
+<p>acterized by recurrent exacerbations and remissions of thickened, erythematous, and</p>
+<p>scaling plaques and multiple comorbidities, including psoriatic arthritis.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Genetic predisposition coupled with an unknown precipitating factor triggers an</li>
+<p>abnormal immune response mediated via T-lymphocytes, resulting in keratinocyte</p>
+<p>proliferation and the initial psoriatic skin lesions. Precipitating factors implicated in</p>
+<p>the development of psoriasis include skin injury, infection, drugs, smoking, alcohol</p>
+<p>consumption, obesity, and psychogenic stress.</p>
+<li>Psoriasis susceptibility genes and variants reside on various chromosomes. The</li>
+<p>psoriasis susceptibility locus 1 (PSORS1) on chromosome 6p is a key gene locus,</p>
+<p>accounting for up to 50% of disease heritability. The major histocompatibility com-</p>
+<p>plex antigen HLA-Cw6 and tumor necrosis factor (TNF)-α are major psoriasis sus-</p>
+<p>ceptibility genes, along with interleukin (IL)-23 and many other loci. There appears</p>
+<p>to be a general role for T lymphocytes and a specific role for TH17 lymphocytes in</p>
+<p>psoriasis pathogenesis and as indicators of psoriasis risk.</p>
+<li>Interactions between dermal dendritic cells and activated Th-1 and Th-17 cells in con-</li>
+<p>cert with numerous growth factors and cytokines (eg, TNF-α, interferon gamma, IL-1)</p>
+<p>cause epidermal hyperplasia and dermal inflammation.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Skin lesions in plaque psoriasis (psoriasis vulgaris) are erythematous, red-violet in</li>
+<p>color, at least 0.5 cm in diameter, well demarcated, and typically covered with silver</p>
+<p>flaking scales. They may appear as single lesions on predisposed areas (eg, knees and</p>
+<p>elbows) or generalized over a wide body surface area (BSA).</p>
+<li>Pruritus may be severe and require treatment to minimize excoriations from frequent</li>
+<p>scratching. Lesions may be physically debilitating or socially isolating.</p>
+<li>Preexisting psoriasis can be exacerbated by drugs (eg, lithium, nonsteroidal anti-</li>
+<p>inflammatory drugs [NSAIDs], antimalarials, β-adrenergic blockers, fluoxetine, and</p>
+<p>withdrawal of corticosteroids), times of stress, and seasonal changes.</p>
+<li>Potential comorbidities include psoriatic arthritis, depression, anxiety, hypertension,</li>
+<p>obesity, diabetes mellitus, Crohn disease, and alcoholism.</p>
+<li>Psoriatic arthritis develops in about 30% of patients with plaque psoriasis. It most</li>
+<p>commonly presents as polyarticular peripheral arthritis but can vary widely with</p>
+<p>peripheral and/or axial, monoarticular, or polyarticular patterns.</p>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis is based on physical examination findings of characteristic lesions. Skin</li>
+<p>biopsies are not diagnostic of psoriasis.</p>
+<li>Classification of psoriasis as mild, moderate, or severe is based on BSA and Psoriasis</li>
+<p>Area and Severity Index (PASI) measurements. A 2011 European classification sys-</p>
+<p>tem defines severity of plaque psoriasis as either mild or moderate-to-severe.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Minimize or eliminate skin lesions, alleviate pruritus, reduce</li>
+<p>frequency of flare-ups, treat comorbid conditions, screen for and manage lifestyle</p>
+<p>factors that may trigger exacerbations, avoid adverse treatment effects, provide</p>
+<p>ch17.indd 180 18-11-2020 17:43:29</p>
+<div class="table-container"><table><tr><th>Psoriasis</th><th>17
+00</th><th>RREETTPPAAHHCC</th></tr></table></div><h2>Psoriasis | CHAPTER 17</h2>
+<p>Topical agents</p>
+<p>If inadequate/ineffective + Moisturizers ad lib.</p>
+<p>Continue if controlled.</p>
+<p>Topical agents Step down to lowest</p>
+<p>+ phototherapy doses or potencies that</p>
+<p>maintain control</p>
+<p>of disease.</p>
+<p>If inadequate/ineffective</p>
+<p>Topical agents</p>
+<p>+ systemic agent</p>
+<p>FIGURE 17-1. Treatment algorithm for mild-to-moderate psoriasis.</p>
+<p>cost-effective treatment, provide appropriate counseling (eg, stress reduction), and</p>
+<p>maintain or improve quality of life.</p>
+<li>See Figures 17-1 and 17-2 for psoriasis treatment algorithms based on disease</li>
+<p>severity.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Nonmedicated moisturizers help maintain skin moisture, reduce skin shedding, control</li>
+<p>scaling, and reduce pruritus.</p>
+<li>Oatmeal baths further reduce pruritus, and regular use may decrease need for sys-</li>
+<p>temic antipruritic drugs. Harsh soaps and detergents should be avoided. Cleansing</p>
+<p>should involve tepid water, preferably with lipid- and fragrance-free cleansers.</p>
+<li>Sunscreens (preferably sun protection factor [SPF] 30 or higher) should be used</li>
+<p>when outdoors.</p>
+<li>Stress management can improve extent and severity of psoriasis.</li>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Topical Therapies</p>
+<li>Corticosteroids (Table 17-1) have anti-inflammatory, antiproliferative, immuno-</li>
+<p>suppressive, and vasoconstrictive effects. They are recommended in U.S. treatment</p>
+<p>guidelines as first-line treatment for limited psoriasis either as monotherapy or with</p>
+<p>nonsteroidal topical agents; potency can be enhanced with different vehicles, and as</p>
+<p>needed by occlusion.</p>
+<p>✓ Lower-potency products should be used for infants and for lesions on the face,</p>
+<p>intertriginous areas, and areas with thin skin. Mid- to high-potency agents are</p>
+<p>recommended as initial therapy for other body areas in adults. Reserve the highest</p>
+<p>potency corticosteroids for patients with very thick plaques or recalcitrant disease,</p>
+<p>such as plaques on the palms and soles. Use potency class I corticosteroids for</p>
+<p>only 2–4 weeks.</p>
+<p>✓ Ointments are the most occlusive and most potent formulations because of</p>
+<p>enhanced penetration into the dermis. Patients may prefer the less greasy creams</p>
+<p>or lotions for daytime use.</p>
+<p>✓ Cutaneous adverse effects include skin atrophy, acne, contact dermatitis, hyper-</p>
+<p>trichosis, folliculitis, hypopigmentation, perioral dermatitis, striae, telangiectasias,</p>
+<p>and traumatic purpura. Systemic adverse effects may occur with superpotent</p>
+<p>agents or with extended or widespread use of midpotency agents. Such effects</p>
+<p>181</p>
+<p>ch17.indd 181 18-11-2020 17:43:30</p>
+<h2>SECTION 3 | Dermatologic Disorders</h2>
+<p>Systemic agent (eg, MTX)</p>
+<p>+/− Topical agent or phototherapy; consider</p>
+<p>biologic agent esp if comorbidities exist (eg, PsA)</p>
+<p>If inadequate/ineffective</p>
+<p>+ Moisturizers ad lib.</p>
+<p>Continue if controlled.</p>
+<p>More potent systemic agent or biologic agent</p>
+<p>Step down to lowest</p>
+<p>(or less commonly 2 or more systemic agents</p>
+<p>doses or potencies</p>
+<p>in rotation) +/− topical agent</p>
+<p>that maintain control</p>
+<p>of disease.</p>
+<p>If inadequate/ineffective</p>
+<p>Biologic agent (if not already used)</p>
+<p>+/− other agents</p>
+<p>(MTX, methotrexate; PsA, psoriatic arthritis.)</p>
+<p>FIGURE 17-2. Treatment algorithm for moderate-to-severe psoriasis.</p>
+<p>include hypothalamic–pituitary–adrenal axis suppression and less commonly</p>
+<p>Cushing syndrome, osteonecrosis of the femoral head, cataracts, and glaucoma.</p>
+<li>Calcipotriene (Dovonex) and calcitriol (Vectical) are vitamin D analogs that bind</li>
+<p>3</p>
+<p>to vitamin D receptors, which inhibit keratinocyte proliferation and enhance kerati-</p>
+<p>nocyte differentiation. They also inhibit T-lymphocyte activity. These agents can be</p>
+<p>used as first-line monotherapy or in combination with a topical corticosteroid for</p>
+<p>mild plaque psoriasis. Calcipotriene 0.005% cream, ointment, foam, or gel is applied</p>
+<p>to affected areas twice daily. Calcitriol ointment 3 mcg/g is applied to affected areas</p>
+<p>twice daily. Adverse effects include mild irritant contact dermatitis, burning, pruri-</p>
+<p>tus, edema, peeling, dryness, and erythema.</p>
+<li>Tazarotene (Tazorac) is a topical retinoid that normalizes keratinocyte differen-</li>
+<p>tiation, diminishes keratinocyte hyperproliferation, and clears the inflammatory</p>
+<p>infiltrate in psoriatic plaques. It is available as a 0.05% or 0.1% gel and cream and</p>
+<p>is applied once daily (usually in the evening). It may be combined with a topical</p>
+<p>corticosteroid to enhance efficacy and reduce irritation. Adverse effects of tazarotene</p>
+<p>include a high incidence of dose-dependent irritation at application sites, resulting</p>
+<p>in burning, stinging, and erythema. Irritation may be reduced by using the cream</p>
+<p>formulation, lower concentration, alternate-day applications, or short-contact (30–60</p>
+<p>minutes) treatment. Tazarotene is contraindicated in pregnancy and should not be</p>
+<p>used in women of childbearing potential unless effective contraception is being used.</p>
+<li>Anthralin has a direct antiproliferative effect on epidermal keratinocytes, normal-</li>
+<p>izing keratinocyte differentiation. Short-contact anthralin therapy (SCAT) is the</p>
+<p>preferred regimen, with ointment applied only to the thick plaque lesions for 2 hours</p>
+<p>or less and then wiped off. Zinc oxide ointment or nonmedicated stiff paste should</p>
+<p>be applied to the surrounding normal skin to protect it from irritation. Use anthralin</p>
+<p>with caution, if at all, on the face and intertriginous areas due to potential for severe</p>
+<p>irritation. Anthralin concentrations for SCAT range from 1% to 4% or as tolerated.</p>
+<p>Concentrations for continuous therapy vary from 0.05% to 0.4%. Anthralin may</p>
+<p>cause severe skin irritation, folliculitis, and allergic contact dermatitis.</p>
+<li>Coal tar is keratolytic and may have antiproliferative and anti-inflammatory effects.</li>
+<p>Formulations include crude coal tar and tar distillates (liquor carbonis detergens) in</p>
+<p>ointments, creams, and shampoos. Coal tar is used infrequently due to limited effi-</p>
+<p>cacy and poor patient adherence and acceptance. It has a slower onset of action than</p>
+<p>182</p>
+<p>ch17.indd 182 18-11-2020 17:43:32</p>
+<h2>Psoriasis | CHAPTER 17</h2>
+<h2>TABLE 17-1 Topical Corticosteroid Potency Chart</h2>
+<p>Potency Rating Topical Corticosteroid</p>
+<p>Class 1: Superpotent Betamethasone dipropionate 0.05% ointment (Diprolene and</p>
+<p>Diprosone ointment)</p>
+<p>Clobetasol propionate 0.05% lotion/spray/shampoo/foam (Clobex</p>
+<p>lotion/spray/shampoo, OLUX and OLUX-E foam)</p>
+<p>Clobetasol propionate 0.05% cream, gel, solution (scalp), ointment</p>
+<p>(Cormax, Temovate, Dermovate)</p>
+<p>Diflorasone diacetate 0.05% ointment (Florone, Psorcon, ApexiCon)</p>
+<p>Flurandrenolide tape 4 mcg/cm2 (Cordran)</p>
+<p>Halobetasol propionate 0.05% cream, lotion, ointment (Ultravate)</p>
+<p>Class 2: Potent Amcinonide 0.1% ointment (Cyclocort, Amcort)</p>
+<p>Betamethasone dipropionate 0.05% cream/gel (Diprolene cream, gel,</p>
+<p>and Diprosone cream)</p>
+<p>Desoximetasone 0.25% cream, gel, ointment (Topicort)</p>
+<p>Diflorasone diacetate 0.05% ointment (ApexiCon, Florone, Psorcon)</p>
+<p>Fluocinonide 0.05% cream, gel, ointment (Lidex)</p>
+<p>Halcinonide 0.1% cream (Halog)</p>
+<p>Class 3: Upper Amcinonide 0.1% cream (Cyclocort)</p>
+<p>mid-strength Betamethasone valerate 0.1% ointment (Betnovate/Valisone)</p>
+<p>Diflorasone diacetate 0.05% cream (Psorcon, Florone, ApexiCon)</p>
+<p>Fluticasone propionate 0.005% ointment (Cutivate)</p>
+<p>Mometasone furoate 0.1% ointment (Elocon)</p>
+<p>Triamcinolone acetonide 0.5% cream and ointment (Aristocort)</p>
+<p>Class 4: Mid-strength Betamethasone dipropionate 0.05% spray (Sernivo)</p>
+<p>Betamethasone valerate 0.12% foam (Luxiq)</p>
+<p>Clocortolone pivalate 0.1% cream (Cloderm)</p>
+<p>Desoximetasone 0.05% cream and gel (Topicort LP)</p>
+<p>Fluocinolone acetonide 0.025% ointment (Synalar)</p>
+<p>Fluocinolone acetonide 0.2% cream (Synalar-HP)</p>
+<p>Hydrocortisone valerate 0.2% ointment (Westcort)</p>
+<p>Mometasone furoate 0.1% cream, lotion, solution (Elocon)</p>
+<p>Triamcinolone acetonide 0.1% ointment (Kenalog)</p>
+<p>Class 5: Lower Betamethasone dipropionate 0.05% lotion (Diprosone)</p>
+<p>mid-strength Betamethasone valerate 0.1% cream and lotion (Betnovate/Valisone)</p>
+<p>Desonide 0.05% lotion, ointment, gel (DesOwen, Tridesilon)</p>
+<p>Fluocinolone acetonide 0.01% shampoo (Capex)</p>
+<p>Fluocinolone acetonide 0.01%, 0.025%, 0.03% cream (Synalar)</p>
+<p>Flurandrenolide 0.05% cream and lotion (Cordran)</p>
+<p>Fluticasone propionate 0.05% cream and lotion (Cutivate)</p>
+<p>Hydrocortisone butyrate 0.1% ointment, lotion, cream (Locoid, Locoid</p>
+<p>Lipocream)</p>
+<p>Hydrocortisone probutate 0.1% cream (Pandel)</p>
+<p>Hydrocortisone valerate 0.2% cream (Westcort)</p>
+<p>Prednicarbate 0.1% cream and ointment (Dermatop)</p>
+<p>Triamcinolone acetonide 0.1% cream, ointment and lotion (Kenalog)</p>
+<p>Class 6: Mild (low Alclometasone dipropionate 0.05% cream and ointment (Aclovate)</p>
+<p>potency) Betamethasone valerate 0.05% cream and ointment (Valisone)</p>
+<p>Desonide 0.05% cream, ointment, gel (DesOwen, Desonate, Tridesilon)</p>
+<p>Desonide 0.05% foam (Verdeso)</p>
+<p>Fluocinonide acetonide 0.01% cream and solution (Synalar)</p>
+<p>Fluocinonide acetonide 0.01% FS oil (Derma-Smoothe)</p>
+<p>Class 7: Least Potent Hydrocortisone 0.5%, 1%, 2%, 2.5% cream, lotion, spray, and ointment</p>
+<p>(various brands)</p>
+<p>183</p>
+<p>ch17.indd 183 18-11-2020 17:43:32</p>
+<div class="table-container"><table><tr><th>TABLE 17-1 Topical Corticosteroid Potency Chart</th><th></th></tr><tr><td>Potency Rating</td><td>Topical Corticosteroid</td></tr><tr><td>Class 1: Superpotent</td><td>Betamethasone dipropionate 0.05% ointment (Diprolene and
+Diprosone ointment)
+Clobetasol propionate 0.05% lotion/spray/shampoo/foam (Clobex
+lotion/spray/shampoo, OLUX and OLUX-E foam)
+Clobetasol propionate 0.05% cream, gel, solution (scalp), ointment
+(Cormax, Temovate, Dermovate)
+Diflorasone diacetate 0.05% ointment (Florone, Psorcon, ApexiCon)
+Flurandrenolide tape 4 mcg/cm2 (Cordran)
+Halobetasol propionate 0.05% cream, lotion, ointment (Ultravate)</td></tr><tr><td>Class 2: Potent</td><td>Amcinonide 0.1% ointment (Cyclocort, Amcort)
+Betamethasone dipropionate 0.05% cream/gel (Diprolene cream, gel,
+and Diprosone cream)
+Desoximetasone 0.25% cream, gel, ointment (Topicort)
+Diflorasone diacetate 0.05% ointment (ApexiCon, Florone, Psorcon)
+Fluocinonide 0.05% cream, gel, ointment (Lidex)
+Halcinonide 0.1% cream (Halog)</td></tr><tr><td>Class 3: Upper
+mid-strength</td><td>Amcinonide 0.1% cream (Cyclocort)
+Betamethasone valerate 0.1% ointment (Betnovate/Valisone)
+Diflorasone diacetate 0.05% cream (Psorcon, Florone, ApexiCon)
+Fluticasone propionate 0.005% ointment (Cutivate)
+Mometasone furoate 0.1% ointment (Elocon)
+Triamcinolone acetonide 0.5% cream and ointment (Aristocort)</td></tr><tr><td>Class 4: Mid-strength</td><td>Betamethasone dipropionate 0.05% spray (Sernivo)
+Betamethasone valerate 0.12% foam (Luxiq)
+Clocortolone pivalate 0.1% cream (Cloderm)
+Desoximetasone 0.05% cream and gel (Topicort LP)
+Fluocinolone acetonide 0.025% ointment (Synalar)
+Fluocinolone acetonide 0.2% cream (Synalar-HP)
+Hydrocortisone valerate 0.2% ointment (Westcort)
+Mometasone furoate 0.1% cream, lotion, solution (Elocon)
+Triamcinolone acetonide 0.1% ointment (Kenalog)</td></tr><tr><td>Class 5: Lower
+mid-strength</td><td>Betamethasone dipropionate 0.05% lotion (Diprosone)
+Betamethasone valerate 0.1% cream and lotion (Betnovate/Valisone)
+Desonide 0.05% lotion, ointment, gel (DesOwen, Tridesilon)
+Fluocinolone acetonide 0.01% shampoo (Capex)
+Fluocinolone acetonide 0.01%, 0.025%, 0.03% cream (Synalar)
+Flurandrenolide 0.05% cream and lotion (Cordran)
+Fluticasone propionate 0.05% cream and lotion (Cutivate)
+Hydrocortisone butyrate 0.1% ointment, lotion, cream (Locoid, Locoid
+Lipocream)
+Hydrocortisone probutate 0.1% cream (Pandel)
+Hydrocortisone valerate 0.2% cream (Westcort)
+Prednicarbate 0.1% cream and ointment (Dermatop)
+Triamcinolone acetonide 0.1% cream, ointment and lotion (Kenalog)</td></tr><tr><td>Class 6: Mild (low
+potency)</td><td>Alclometasone dipropionate 0.05% cream and ointment (Aclovate)
+Betamethasone valerate 0.05% cream and ointment (Valisone)
+Desonide 0.05% cream, ointment, gel (DesOwen, Desonate, Tridesilon)
+Desonide 0.05% foam (Verdeso)
+Fluocinonide acetonide 0.01% cream and solution (Synalar)
+Fluocinonide acetonide 0.01% FS oil (Derma-Smoothe)</td></tr><tr><td>Class 7: Least Potent</td><td>Hydrocortisone 0.5%, 1%, 2%, 2.5% cream, lotion, spray, and ointment
+(various brands)</td></tr></table></div><h2>SECTION 3 | Dermatologic Disorders</h2>
+<p>calcipotriene, has an unpleasant odor, and stains clothing. Adverse effects include</p>
+<p>folliculitis, acne, local irritation, and phototoxicity. Risk of teratogenicity is low when</p>
+<p>used in pregnancy.</p>
+<li>Salicylic acid has keratolytic properties and has been used in shampoos or bath</li>
+<p>oils for scalp psoriasis. It enhances penetration of topical corticosteroids, thereby</p>
+<p>increasing corticosteroid efficacy. Systemic absorption and toxicity can occur, espe-</p>
+<p>cially when applied to &gt;20% BSA or in patients with renal impairment. Salicylic</p>
+<p>acid should not be used in children. It may be used for limited and localized plaque</p>
+<p>psoriasis in pregnancy.</p>
+<li>Pimecrolimus 1% cream (Elidel) is a calcineurin inhibitor shown to be effective</li>
+<p>for plaque psoriasis when used under occlusion and for patients with moderate-to-</p>
+<p>severe inverse psoriasis (involving intertriginous areas). It may be a useful alterna-</p>
+<p>tive for patients with intertriginous or facial lesions because it is less irritating than</p>
+<p>calcipotriene and does not have the topical adverse effects of corticosteroids (eg, skin</p>
+<p>atrophy).</p>
+<p>Phototherapy and Photochemotherapy</p>
+<li>Phototherapy consists of nonionizing electromagnetic radiation, either ultravio-</li>
+<p>let A (UVA) or ultraviolet B (UVB), as light therapy for psoriatic lesions. UVB is</p>
+<p>given alone as either broadband or narrowband (NB-UVB). UVB is also given as</p>
+<p>photochemotherapy with topical agents such as crude coal tar (Goeckerman regi-</p>
+<p>men) or anthralin (Ingram regimen) for enhanced efficacy. UVA is generally given</p>
+<p>with a photosensitizer such as an oral psoralen to enhance efficacy; this regimen is</p>
+<p>called PUVA (psoralen + UVA treatment). Adverse effects of phototherapy include</p>
+<p>erythema, pruritus, xerosis, hyperpigmentation, and blistering. Patients must be</p>
+<p>provided with eye protection during and for 24 hours after PUVA treatments. PUVA</p>
+<p>therapy may also cause nausea or vomiting, which may be minimized by taking the</p>
+<p>oral psoralens with food or milk. Long-term PUVA use can lead to photoaging and</p>
+<p>cataracts. PUVA is also associated with a dose-related risk of carcinogenesis.</p>
+<p>Systemic Nonbiologic Agents</p>
+<li>Acitretin (Soriatane) is a retinoic acid derivative and the active metabolite of etretinate.</li>
+<p>Retinoids may be less effective than methotrexate or cyclosporine when used as</p>
+<p>monotherapy. Acitretin is more commonly used in combination with topical calci-</p>
+<p>potriene or phototherapy. Although low-dose acitretin (25 mg/day) is safer and better</p>
+<p>tolerated than higher-dose (50 mg/day) therapy, low-dose acitretin is not recom-</p>
+<p>mended as monotherapy. Therapy is continued until lesions have resolved. It is better</p>
+<p>tolerated when taken with meals. Adverse effects include hypertriglyceridemia and</p>
+<p>mucocutaneous effects such as dryness of the eyes, nasal and oral mucosa; chapped</p>
+<p>lips; cheilitis; epistaxis; xerosis; brittle nails; and burning skin. Ophthalmologic</p>
+<p>changes include photosensitivity, decreased color vision, and impaired night vision.</p>
+<p>Hepatitis and jaundice are rare and liver enzyme elevations are usually transient. All</p>
+<p>retinoids are teratogenic and are contraindicated in pregnancy. Acitretin should not</p>
+<p>be used in women of childbearing potential unless they use effective contraception</p>
+<p>for the duration of therapy and for at least 2 years after drug discontinuation. Blood</p>
+<p>donation (men and women) is not permitted during and for at least 1 year after</p>
+<p>treatment.</p>
+<li>Cyclosporine is a systemic calcineurin inhibitor that is effective for inducing remis-</li>
+<p>sion and for maintenance therapy of moderate-to-severe plaque psoriasis. Intermit-</p>
+<p>tent short-course therapy (&lt;12 weeks) is preferable to continuous therapy because</p>
+<p>it appears to reduce the risk of nephrotoxicity. Cyclosporine is significantly more</p>
+<p>effective than etretinate and has similar or slightly better efficacy than methotrexate.</p>
+<p>The usual oral dose is 2.5–5 mg/kg/day given in two divided doses. After inducing</p>
+<p>remission, maintenance therapy using low doses (1.25–3 mg/kg/day) may prevent</p>
+<p>relapse. When discontinuing cyclosporine, a gradual taper of 1 mg/kg/day each</p>
+<p>week may prolong the time before relapse compared to abrupt discontinuation.</p>
+<p>Because more than half of patients stopping cyclosporine relapse within 4 months,</p>
+<p>184</p>
+<p>ch17.indd 184 18-11-2020 17:43:33</p>
+<h2>Psoriasis | CHAPTER 17</h2>
+<p>patients should be given appropriate alternative treatments shortly before or after</p>
+<p>discontinuing cyclosporine. Adverse effects include nephrotoxicity, hypertension,</p>
+<p>hypomagnesemia, hyperkalemia, hypertriglyceridemia, hypertrichosis, and gingival</p>
+<p>hyperplasia. The risk of skin cancer increases with the duration of treatment and with</p>
+<p>prior PUVA treatments.</p>
+<li>Methotrexate has anti-inflammatory effects due to its effects on T-cell gene expres-</li>
+<p>sion and also has cytostatic effects. It is more effective than acitretin and has similar</p>
+<p>or slightly less efficacy than cyclosporine. Methotrexate can be administered orally,</p>
+<p>subcutaneously (SC), or intramuscularly. The starting dose is 7.5–15 mg once weekly,</p>
+<p>increased incrementally by 2.5 mg every 2–4 weeks until response; maximal doses</p>
+<p>are 25 mg weekly. Adverse effects include nausea, vomiting, stomatitis, macrocytic</p>
+<p>anemia, and hepatic and pulmonary toxicity. Nausea and macrocytic anemia may be</p>
+<p>reduced by giving oral folic acid 1–5 mg daily. It is an abortifacient and teratogenic</p>
+<p>and is contraindicated in pregnancy.</p>
+<li>Tofacitinib (Xeljanz, Xeljanz XR) is a small-molecule Janus Kinase (JAK) inhibitor</li>
+<p>that blocks signaling through common receptors for cytokines including IL-2, IL-4,</p>
+<p>IL-7, IL-9, IL-15, and IL-21. It is indicated for the treatment of adults with active</p>
+<p>psoriatic arthritis who have had an inadequate response or intolerance to methotrex-</p>
+<p>ate or other disease-modifying antirheumatic drugs (DMARDs). The recommended</p>
+<p>dose (in combination with nonbiologic DMARDs) is 5 mg orally twice daily or</p>
+<p>11 mg (extended-release) once daily. The recommended dose is 5 mg once daily in</p>
+<p>patients with moderate-to-severe renal impairment or moderate hepatic impairment.</p>
+<p>Tofacitinib should not be used in combination with biologic DMARDs or potent</p>
+<p>immunosuppressants such as azathioprine and cyclosporine.</p>
+<li>Apremilast (Otezla) is a small-molecule inhibitor of phosphodiesterase 4 (PDE4), which</li>
+<p>increases intracellular cyclic AMP (cAMP) and reduces production of proinflamma-</p>
+<p>tory mediators. It is indicated for treatment of adults with active psoriatic arthritis and</p>
+<p>patients with moderate-to-severe plaque psoriasis who are candidates for phototherapy</p>
+<p>or systemic therapy. Recommended dosing is 10 mg orally on day 1, 10 mg twice daily</p>
+<p>on day 2, 10 mg in the morning and 20 mg in the evening on day 3, 20 mg twice daily on</p>
+<p>day 4, 20 mg in the morning and 30 mg in the evening on day 5, then 30 mg twice daily</p>
+<p>thereafter. The dosage regimen should be reduced in severe renal impairment. The most</p>
+<p>common adverse reactions (≥5%) are diarrhea, nausea, and headache.</p>
+<p>Systemic Biologic Agents</p>
+<li>Biologic agents are considered for moderate-to-severe psoriasis when other systemic</li>
+<p>agents are inadequate or contraindicated or when comorbidities exist. Cost consider-</p>
+<p>ations tend to limit their use as first-line therapy.</p>
+<p>TNF Inhibitors</p>
+<li>Adalimumab (Humira) is a monoclonal TNF-α antibody that provides rapid con-</li>
+<p>trol of psoriasis. It is indicated for psoriatic arthritis and treatment of adults with</p>
+<p>moderate-to-severe chronic plaque psoriasis who are candidates for systemic therapy</p>
+<p>or phototherapy. The recommended dose for psoriatic arthritis is 40 mg SC every</p>
+<p>other week. The recommended dose for adults with plaque psoriasis is an initial dose</p>
+<p>of 80 mg SC, followed by 40 mg every other week starting 1 week after the initial</p>
+<p>dose. The most common adverse reactions are infections (eg, upper respiratory and</p>
+<p>sinusitis), injection site reactions, headache, and rash.</p>
+<li>Etanercept (Enbrel) is a fusion protein that binds TNF-α, competitively interfer-</li>
+<p>ing with its interaction with cell-bound receptors. Unlike the chimeric infliximab,</p>
+<p>etanercept is fully humanized, minimizing the risk of immunogenicity. Etanercept</p>
+<p>is FDA approved for reducing signs and symptoms and inhibiting the progression of</p>
+<p>joint damage in patients with psoriatic arthritis; it can be used alone or in combina-</p>
+<p>tion with methotrexate. It is also indicated for patients 4 years or older with chronic</p>
+<p>moderate-to-severe plaque psoriasis who are candidates for systemic therapy or pho-</p>
+<p>totherapy. The recommended dose for psoriatic arthritis is 50 mg SC once weekly. For</p>
+<p>plaque psoriasis, the dose is 50 mg SC twice weekly (administered 3 or 4 days apart)</p>
+<p>185</p>
+<p>ch17.indd 185 18-11-2020 17:43:33</p>
+<h2>SECTION 3 | Dermatologic Disorders</h2>
+<p>for 3 months, followed by a maintenance dose of 50 mg once weekly. Adverse effects</p>
+<p>include local reactions at the injection site (20% of patients), respiratory tract and GI</p>
+<p>infections, abdominal pain, nausea and vomiting, headaches, and rash.</p>
+<li>Infliximab (Remicade) is a chimeric monoclonal antibody directed against TNF-α.</li>
+<p>It is indicated for psoriatic arthritis and chronic severe plaque psoriasis. The recom-</p>
+<p>mended dose is 5 mg/kg by IV infusion at weeks 0, 2, and 6, then every 8 weeks</p>
+<p>thereafter. For psoriatic arthritis, it may be used with or without methotrexate.</p>
+<p>Adverse effects include headaches, fever, chills, fatigue, diarrhea, pharyngitis, and</p>
+<p>upper respiratory and urinary tract infections. Hypersensitivity reactions (urticaria,</p>
+<p>dyspnea, and hypotension) and lymphoproliferative disorders have been reported.</p>
+<li>Certolizumab pegol (Cimzia) is a humanized antigen-binding fragment of a mono-</li>
+<p>clonal antibody that is further conjugated with a polyethylene glycol moiety. This</p>
+<p>binds to TNF-α, blocking its interaction with TNF receptors. It is indicated for treat-</p>
+<p>ment of adults with psoriatic arthritis or moderate-to-severe plaque psoriasis who are</p>
+<p>candidates for systemic therapy or phototherapy. Recommended dosing is 400 mg (as</p>
+<p>2 × 200-mg SC injections) every 2 weeks, with a dose-reduced regimen for patients</p>
+<p>&lt;90 kg: 400 mg (as 2 × 200-mg SC injections) initially and at weeks 2 and 4, followed</p>
+<p>by 200 mg SC every other week.</p>
+<p>Interleukin-12/23 Inhibitors</p>
+<li>Ustekinumab (Stelara) is an IL-12/23 monoclonal antibody approved for the treat-</li>
+<p>ment of psoriasis in adults 18 years or older with moderate-to-severe plaque psoria-</p>
+<p>sis. The recommended dose for patients weighing ≤100 kg is 45 mg SC initially and</p>
+<p>4 weeks later, followed by 45 mg SC every 12 weeks. For patients weighing &gt;100 kg,</p>
+<p>the dose is 90 mg SC initially and 4 weeks later, followed by 90 mg SC every</p>
+<p>12 weeks. Common adverse effects include upper respiratory infections, headache,</p>
+<p>and tiredness. Serious adverse effects include those seen with other biologics, includ-</p>
+<p>ing tubercular, fungal, and viral infections and cancers. Reversible posterior leukoen-</p>
+<p>cephalopathy syndrome (RPLS) has also been reported.</p>
+<p>Interleukin-17A Inhibitors</p>
+<li>Secukinumab (Cosentyx), ixekizumab (Taltz), and brodalumab (Siliq) are mono-</li>
+<p>clonal antibodies that inhibit IL-17A, a proinflammatory cytokine that binds to</p>
+<p>receptors on keratinocytes, leading to inflammation and recruitment of inflamma-</p>
+<p>tory cell types, resulting in psoriatic plaques. These agents have comparable efficacy</p>
+<p>and similar adverse effects (eg, nasopharyngitis, upper respiratory tract infections,</p>
+<p>injection site reactions).</p>
+<p>✓ Secukinumab is a fully human IgG1κ monoclonal antibody that selectively binds</p>
+<p>and inhibits IL-17A. Recommended dosing for plaque psoriasis is 300 mg SC at</p>
+<p>weeks 0, 1, 2, 3, and 4 followed by 300 mg SC every 4 weeks.</p>
+<p>✓ Ixekizumab is a humanized IgG4 monoclonal antibody that neutralizes IL-17A.</p>
+<p>Recommended dosing is an initial dose of 160 mg SC followed by 80 mg every</p>
+<p>2 weeks until week 12, followed by a maintenance phase of 80 mg SC every 4 weeks</p>
+<p>thereafter. Neutralizing anti-ixekizumab antibodies develop over time and are</p>
+<p>associated with reduced drug concentrations and loss of efficacy.</p>
+<p>✓ Brodalumab is a fully human IgG2 anti-IL-17RA monoclonal antibody that binds</p>
+<p>to the IL-17 receptor A and blocks the biologic activities of multiple IL-17 sub-</p>
+<p>types. The recommended dose is 210 mg SC on weeks 0, 1, and 2, then 210 mg</p>
+<p>every 2 weeks thereafter.</p>
+<p>Interleukin-23 Inhibitors</p>
+<li>Guselkumab (Tremfya), tildrakizumab (Ilumya), and risankizumab (Skyrizi)</li>
+<p>inhibit IL-23, which induces a population of T-helper cells (TH17 cells) with a</p>
+<p>unique inflammatory gene signature important in the pathogenesis of psoriasis and</p>
+<p>other autoimmune diseases. Neutralizing antibodies to specific IL-17 inhibitors have</p>
+<p>been reported that may be associated with lower biologic serum concentrations and</p>
+<p>reduced efficacy.</p>
+<p>186</p>
+<p>ch17.indd 186 18-11-2020 17:43:34</p>
+<h2>Psoriasis | CHAPTER 17</h2>
+<p>✓ Guselkumab is a fully human IgG1 lambda monoclonal antibody that blocks the</p>
+<p>p19 subunit of IL-23. The recommended dose is 100 mg SC at weeks 0 and 4, and</p>
+<p>then every 8 weeks thereafter.</p>
+<p>✓ Tildrakizumab is a humanized IgG1 monoclonal antibody designed to selectively</p>
+<p>block IL-23 by binding to the p19 subunit. The recommended dose is 100 mg</p>
+<p>SC administered only by a healthcare provider at weeks 0 and 4, and then every</p>
+<p>12 weeks thereafter.</p>
+<p>✓ Risankizumab is a humanized IgG1 monoclonal antibody that selectively inhibits</p>
+<p>IL-23 by binding to the p19 subunit. The recommended dose is 150 mg (two</p>
+<p>75-mg SC injections) at weeks 0 and 4 and then every 12 weeks thereafter.</p>
+<p>Combination Therapies</p>
+<li>Combination therapy may be used to enhance efficacy or minimize toxicity. Combi-</li>
+<p>nations can include two topical agents, a topical agent plus phototherapy, a systemic</p>
+<p>agent plus topical therapy, a systemic agent plus phototherapy, two systemic agents</p>
+<p>used in rotation, or a biologic agent with either a nonbiologic systemic or topical</p>
+<p>agent (see Figs. 17-1 and 17-2).</p>
+<li>The combination of a topical corticosteroid and a topical vitamin D analogue is</li>
+<p>3</p>
+<p>effective and safe with less skin irritation than monotherapy with either agent. The</p>
+<p>combination product containing calcipotriene and betamethasone dipropionate</p>
+<p>ointment (Taclonex) is effective for relatively severe psoriasis and may also be steroid</p>
+<p>sparing.</p>
+<li>The combination of retinoids with phototherapy (eg, tazarotene plus broadband</li>
+<p>UVB, acitretin plus broadband UVB or NB-UVB) also increases efficacy. Because</p>
+<p>retinoids may be photosensitizing and increase the risk of burning after UV expo-</p>
+<p>sure, doses of phototherapy should be reduced to minimize adverse effects. The com-</p>
+<p>bination of acitretin and PUVA (RE-PUVA) may be more effective than monotherapy</p>
+<p>with either treatment.</p>
+<li>Phototherapy has also been used with other topical agents, such as UVB with coal</li>
+<p>tar (Goeckerman regimen) to increase treatment response, because coal tar is also</p>
+<p>photosensitizing.</p>
+<li>Cyclosporine in combination with calcipotriene/betamethasone dipropionate is</li>
+<p>superior to cyclosporine alone. Cyclosporine may also be used with SCAT, but it</p>
+<p>should not be used with PUVA due to reduced efficacy and an increased risk of</p>
+<p>cutaneous malignancies.</p>
+<li>The combination of methotrexate and UVB appears to be synergistic. Low-dose</li>
+<p>methotrexate (eg, 7.5–10 mg once weekly) in combination with a biologic agent may</p>
+<p>be beneficial.</p>
+<p>Alternative Drug Treatments</p>
+<li>Mycophenolate mofetil (CellCept) inhibits DNA and RNA synthesis and may have</li>
+<p>a lymphocyte antiproliferative effect. Although not FDA approved for psoriasis</p>
+<p>indications, oral mycophenolate mofetil may be effective in some cases of moderate-</p>
+<p>to-severe plaque psoriasis.</p>
+<li>Hydroxyurea inhibits cell synthesis in the S phase of the DNA cycle. It is occasionally</li>
+<p>used off-label for patients with recalcitrant severe psoriasis, but biologic agents may</p>
+<p>be a better option in these patients.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Help patients understand the general principles of therapy and the importance of</li>
+<p>medication adherence.</p>
+<li>A positive response involves normalization of involved areas of skin, as measured by</li>
+<p>reduced erythema and scaling, as well as reduction of plaque elevation.</p>
+<li>Successful management also includes control of itching and comorbid conditions</li>
+<p>such as dyslipidemia, hypertension, psoriatic arthritis, and depression.</p>
+<p>187</p>
+<p>ch17.indd 187 18-11-2020 17:43:34</p>
+<h2>SECTION 3 | Dermatologic Disorders</h2>
+<li>PASI is a uniform method to determine the extent of BSA affected, along with the</li>
+<p>degree of erythema, induration, and scaling. In the United States, severity of psoriasis</p>
+<p>is classified as mild, moderate, or severe:</p>
+<p>✓ Mild: ≤5% BSA involvement</p>
+<p>✓ Moderate: PASI ≥8 (higher in trials of biologics)</p>
+<p>✓ Severe: PASI ≥10 or Dermatology Life Quality Index (DLQI) ≥10 or BSA ≥10%</p>
+<li>The Physician Global Assessment can also be used to summarize erythema, indura-</li>
+<p>tion, scaling, and extent of plaques relative to baseline assessment.</p>
+<li>Achievement of efficacy by any therapeutic regimen requires days to weeks. Initial</li>
+<p>dramatic response may be achieved with some agents, such as corticosteroids. How-</p>
+<p>ever, sustained benefit with pharmacologically specific antipsoriatic therapy may</p>
+<p>require 2–8 weeks or longer for clinically meaningful response.</p>
+<p>See Chapter 114, Psoriasis, authored by Rebecca M. Law and Wayne P. Gulliver, for a</p>
+<p>more detailed discussion of this topic.</p>
+<h2>ALGRAWANY</h2>
+<p>188</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch17.indd 188 18-11-2020 17:43:34</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

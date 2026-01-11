@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45. Respiratory Tract Infections, Upper</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>45. Respiratory Tract Infections, Upper</h1>
+        </header>
+        <main>
+            <p>Acute Otitis Media</p>
+<li>Otitis media is an inflammation of the middle ear that is most common in infants</li>
+<p>and children. There are three subtypes of otitis media: acute otitis media, otitis media</p>
+<p>with effusion, and chronic otitis media. The three are differentiated by (a) acute signs</p>
+<p>of infection, (b) evidence of middle ear inflammation, and (c) presence of fluid in</p>
+<p>the middle ear.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Bacteria have been found in more than 90% of cases of otitis media. Common</li>
+<p>bacterial pathogens include Streptococcus pneumoniae, nontypeable Haemophilus</p>
+<p>influenzae, and Moraxella catarrhalis.</p>
+<li>Acute otitis media usually follows a viral upper respiratory tract infection that impairs</li>
+<pre><code>the mucociliary apparatus and causes eustachian tube dysfunction in the middle ear.</code></pre>
+<li>Many S. pneumoniae isolates in the United States are penicillin nonsusceptible, and</li>
+<p>most nonsusceptible strains have high-level penicillin resistance.</p>
+<li>Many H. influenzae isolates and nearly all M. catarrhalis isolates, from the upper</li>
+<p>respiratory tract, produce β-lactamases.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Acute otitis media is characterized as acute onset of otalgia (ear pain). Irritability and</li>
+<p>tugging on the ear are often the first clues that a child has acute otitis media.</p>
+<li>Children should be diagnosed with acute otitis media if they have middle ear effu-</li>
+<p>sion and either (1) moderate-to-severe bulging of the tympanic membrane or new</p>
+<p>onset otorrhea not due to acute otitis externa or (2) mild bulging of the tympanic</p>
+<p>membrane and onset of ear pain within the last 48 hours or intense erythema of the</p>
+<p>tympanic membrane.</p>
+<li>Nonverbal children with ear pain might hold, rub, or tug their ear. Very young chil-</li>
+<p>dren might cry, be irritable, and have difficulty sleeping. Signs and symptoms include</p>
+<p>bulging of the tympanic membrane, otorrhea, otalgia (considered to be moderate or</p>
+<p>severe if pain lasts at least 48 hours), and fever (considered to be severe if temperature</p>
+<p>is 39°C [102.2°F] or higher).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Pain management, prudent antibiotic use, and secondary disease</li>
+<p>prevention. Acute otitis media should first be differentiated from otitis media with</p>
+<p>effusion or chronic otitis media.</p>
+<li>Primary prevention of acute otitis media with pneumococcal conjugate vaccine and</li>
+<p>annual influenza vaccine are recommended for all children.</p>
+<li>Pain of otitis media should be addressed with oral analgesics. Acetaminophen or a</li>
+<p>nonsteroidal anti-inflammatory agent, such as ibuprofen, should be offered early to</p>
+<p>relieve pain of acute otitis media.</p>
+<li>Children 6 months–12 years of age, with moderate-to-severe ear pain or tempera-</li>
+<p>ture of 39°C (102.2°F) or higher should receive antibiotics. Children 6–23 months</p>
+<p>of age, with nonsevere bilateral acute otitis media should also receive antibiotics.</p>
+<p>Children 6–23 months, with nonsevere unilateral acute otitis media, and children</p>
+<p>24 months–12 years of age, with nonsevere acute otitis media, may receive initial</p>
+<p>antibiotics or initial observation without antibiotics.</p>
+<li>The central principle is to administer antibiotics quickly when the diagnosis is</li>
+<p>certain, but to withhold antibiotics, at least initially, when the diagnosis is uncertain.</p>
+<p>475</p>
+<h2>RETPAHC</h2>
+<p>45</p>
+<p>Respiratory Tract Infections,</p>
+<p>Upper</p>
+<h2>CH45.INDD 475 19-11-2020 20:21:20</h2>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>45</th><th>Respiratory Tract Infections,
+Upper</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>High-dose amoxicillin (80–90 mg/kg/day) is recommended for most children.</li>
+<p>Children who have received amoxicillin in the last 30 days, have concurrent purulent</p>
+<p>conjunctivitis, or have a history of recurrent infection unresponsive to amoxicillin</p>
+<p>should receive high-dose amoxicillin–clavulanate (90 mg/kg/day of amoxicillin,</p>
+<p>with 6.4 mg/kg/day of clavulanate, in two divided doses) instead of amoxicillin.</p>
+<li>Antibiotic treatment recommendations for acute otitis media are given in Table 45-1.</li>
+<li>If treatment failure occurs with amoxicillin, an agent should be chosen with activity</li>
+<p>against β-lactamase-producing H. influenzae and M. catarrhalis, as well as drug-</p>
+<p>resistant S. pneumoniae, such as high-dose amoxicillin–clavulanate (recommended)</p>
+<p>or cefuroxime, cefdinir, cefpodoxime, or intramuscular or intravenous ceftriaxone.</p>
+<li>Traditional recommendations call for 10 days of antibiotic therapy. In children at</li>
+<p>least 6 years old who have mild-to-moderate acute otitis media, a 5- to 7-day course</p>
+<h2>TABLE 45-1 Antibiotics and Doses for Acute Otitis Media</h2>
+<p>Antibiotic Brand Name Dose Commentsa</p>
+<p>Initial diagnosis</p>
+<p>Amoxicillin Amoxil® 80–90 mg/kg/day orally First line</p>
+<p>divided twice daily</p>
+<p>Amoxicillin– Augmentin® 90 mg/kg/day orally of First line if certain</p>
+<p>clavulanate amoxicillin plus 6.4 mg/kg/ criteria are</p>
+<p>day orally of clavulanate, presentb</p>
+<p>divided twice daily</p>
+<p>Cefdinir, cefuroxime, Omnicef ®, Cefdinir (14 mg/kg/day orally Second line or</p>
+<p>cefpodoxime Ceftin®, in 1–2 doses), cefuroxime nonsevere</p>
+<p>Vantin® (30 mg/kg/day orally penicillin allergy</p>
+<p>in two divided doses),</p>
+<p>cefpodoxime (10 mg/kg/</p>
+<p>day orally in two divided</p>
+<p>doses)</p>
+<p>Ceftriaxone (1–3 Rocephin® 50 mg/kg/day IM or IV for Second line or</p>
+<p>days) 3 days nonsevere</p>
+<p>penicillin allergy</p>
+<p>Failure at 48–72 hours</p>
+<p>Amoxicillin– Augmentin® 90 mg/kg/day orally of First line</p>
+<p>clavulanateb amoxicillin plus 6.4 mg/kg/</p>
+<p>day orally of clavulanate,</p>
+<p>divided twice daily</p>
+<p>Ceftriaxone (1–3 Rocephin® 50 mg/kg/day IM or IV for First line or</p>
+<p>days) 3 days nonsevere</p>
+<p>penicillin allergy</p>
+<p>Clindamycin Cleocin® 30–40 mg/kg/day orally Second line or</p>
+<p>in three divided doses nonsevere</p>
+<p>± second- or third- penicillin allergy</p>
+<p>generation cephalosporin</p>
+<p>aAmoxicillin–clavulanate 90:6.4 or 14:1 ratio is available in the United States; 7:1 ratio is available in</p>
+<p>Canada (use amoxicillin 45 mg/kg for one dose, amoxicillin 45 mg/kg with clavulanate 6.4 mg/kg</p>
+<p>for second dose).</p>
+<p>bIf a patient has received amoxicillin in the last 30 days, has concurrent purulent conjunctivitis, or has</p>
+<p>a history of recurrent infection unresponsive to amoxicillin.</p>
+<p>IM, intramuscular; IV, intravenous; po, orally.</p>
+<p>476</p>
+<h2>CH45.INDD 476 19-11-2020 20:21:20</h2>
+<div class="table-container"><table><tr><th>TABLE 45-1 Antibiotics and Doses for Acute Otitis Media</th><th></th><th></th><th></th></tr><tr><td>Antibiotic</td><td>Brand Name</td><td>Dose</td><td>Commentsa</td></tr><tr><td>Initial diagnosis</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin</td><td>Amoxil®</td><td>80–90 mg/kg/day orally
+divided twice daily</td><td>First line</td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin®</td><td>90 mg/kg/day orally of
+amoxicillin plus 6.4 mg/kg/
+day orally of clavulanate,
+divided twice daily</td><td>First line if certain
+criteria are
+presentb</td></tr><tr><td>Cefdinir, cefuroxime,
+cefpodoxime</td><td>Omnicef ®,
+Ceftin®,
+Vantin®</td><td>Cefdinir (14 mg/kg/day orally
+in 1–2 doses), cefuroxime
+(30 mg/kg/day orally
+in two divided doses),
+cefpodoxime (10 mg/kg/
+day orally in two divided
+doses)</td><td>Second line or
+nonsevere
+penicillin allergy</td></tr><tr><td>Ceftriaxone (1–3
+days)</td><td>Rocephin®</td><td>50 mg/kg/day IM or IV for
+3 days</td><td>Second line or
+nonsevere
+penicillin allergy</td></tr><tr><td>Failure at 48–72 hours</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanateb</td><td>Augmentin®</td><td>90 mg/kg/day orally of
+amoxicillin plus 6.4 mg/kg/
+day orally of clavulanate,
+divided twice daily</td><td>First line</td></tr><tr><td>Ceftriaxone (1–3
+days)</td><td>Rocephin®</td><td>50 mg/kg/day IM or IV for
+3 days</td><td>First line or
+nonsevere
+penicillin allergy</td></tr><tr><td>Clindamycin</td><td>Cleocin®</td><td>30–40 mg/kg/day orally
+in three divided doses
+± second- or third-
+generation cephalosporin</td><td>Second line or
+nonsevere
+penicillin allergy</td></tr></table></div><h2>Respiratory Tract Infections, Upper | CHAPTER 45</h2>
+<p>of antibiotics may be used. Short-course treatment is not recommended in children</p>
+<p>younger than 2 years of age.</p>
+<li>Surgical insertion of tympanostomy tubes (T tubes) is an effective method for pre-</li>
+<p>venting recurrent otitis media. Patients with acute otitis media should be reassessed</p>
+<p>after 48–72 hours, with most children being asymptomatic at 7 days.</p>
+<p>Pharyngitis</p>
+<li>Pharyngitis is an acute infection of the oropharynx or nasopharynx that is respon-</li>
+<p>sible for 6% of visits by children to their primary care provider annually. Although</p>
+<p>viral causes are most common, group A β-hemolytic Streptococcus (GABHS) is the</p>
+<p>primary bacterial cause.</p>
+<li>Viruses (eg, rhinovirus, coronavirus, and adenovirus) cause most of the cases of</li>
+<p>acute pharyngitis. A bacterial etiology for acute pharyngitis is far less likely. Of all</p>
+<p>of the bacterial causes, GABHS is the most common (10%–30% of cases in pediatric</p>
+<p>patients and 5%–15% in adults).</p>
+<li>Suppurative and nonsuppurative complications include acute rheumatic fever, acute</li>
+<p>glomerulonephritis, reactive arthritis, peritonsillar abscess, retropharyngeal abscess,</p>
+<p>cervical lymphadenitis, mastoiditis, otitis media, rhinosinusitis, and necrotizing</p>
+<p>fasciitis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The most common symptom of pharyngitis is sore throat of sudden onset that is</li>
+<p>mostly self-limited.</p>
+<li>Fever and constitutional symptoms resolve in about 3–5 days.</li>
+<li>Signs and symptoms of GABHS pharyngitis include sore throat; pain on swallow-</li>
+<p>ing; fever; headache; nausea; vomiting; and abdominal pain (especially in children);</p>
+<p>erythema/inflammation of the tonsils and pharynx with or without patchy exudates;</p>
+<p>enlarged; tender lymph nodes; red swollen uvula; petechiae on the soft palate; and a</p>
+<p>scarlatiniform rash.</p>
+<li>Signs suggestive of viral origin for pharyngitis include conjunctivitis, coryza, and cough.</li>
+<li>Diagnosis can be confirmed by throat swab and culture and a rapid antigen-detection</li>
+<p>test (RADT).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Improve clinical signs and symptoms, minimize adverse drug</li>
+<p>reactions, prevent transmission to close contacts, and prevent acute rheumatic fever</p>
+<p>and suppurative complications such as peritonsillar abscess, cervical lymphadenitis,</p>
+<p>and mastoiditis.</p>
+<li>Antimicrobial therapy should be limited to those who have clinical and epidemio-</li>
+<p>logic features of GABHS pharyngitis, preferably with a positive laboratory test.</p>
+<li>Because pain is often the primary reason for visiting a physician, emphasis on anal-</li>
+<p>gesics such as acetaminophen and nonsteroidal anti-inflammatory drugs (NSAIDs)</p>
+<p>to aid in pain relief is strongly recommended.</p>
+<li>Penicillin and amoxicillin are the treatments of choice. Antimicrobial treatment</li>
+<p>should be limited to those who have clinical and epidemiologic features of GABHS</p>
+<p>pharyngitis with a positive laboratory test (Table 45-2). Table 45-3 presents anti-</p>
+<p>biotics and doses for eradication of GABHS in chronic carriers. The duration</p>
+<p>of therapy for GABHS pharyngitis is 10 days, except for benzathine penicillin</p>
+<p>and azithromycin, to maximize bacterial eradication. However, 3–6 days of oral</p>
+<p>antibiotics has comparable efficacy to oral penicillin for 10 days.</p>
+<li>Amoxicillin–clavulanate, clindamycin, penicillin/rifampin combination, and</li>
+<p>benzathine penicillin G/rifampin combination may be considered for recurrent</p>
+<p>477</p>
+<h2>CH45.INDD 477 19-11-2020 20:21:20</h2>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>episodes of pharyngitis to maximize bacterial eradication in potential carriers and to</p>
+<p>counter copathogens that produce β-lactamases.</p>
+<li>Most cases of pharyngitis are self-limited; however, antimicrobial therapy will hasten</li>
+<p>resolution when given early to proven cases of GABHS. Symptoms generally resolve by</p>
+<p>3 or 4 days even without antibiotics; however, symptoms will improve 0.5–2.5 days ear-</p>
+<p>lier with antibiotic therapy. Follow-up testing is generally not necessary for index cases</p>
+<p>or in asymptomatic contacts of the index patient; however, throat cultures 2–7 days</p>
+<p>after completion of antibiotics are warranted for patients who remain symptomatic or</p>
+<p>when symptoms recur despite completion of treatment.</p>
+<p>TABLE 45-2 Antibiotics and Doses for Group A β-Hemolytic Streptococcal Pharyngitis</p>
+<p>Brand</p>
+<p>Antibiotic Name Dose Duration Rating</p>
+<p>Preferred antibiotics if no penicillin allergy</p>
+<p>Penicillin V Pen-V Children: 250 mg twice daily or 10 days IB</p>
+<p>three times daily orally; adult:</p>
+<p>250 mg four times daily or</p>
+<p>500 mg twice daily orally</p>
+<p>Penicillin G Bicillin L-A &lt;27 kg: 0.6 million units; 27 kg One dose IB</p>
+<p>benzathine or greater: 1.2 million units</p>
+<p>intramuscularly</p>
+<p>Amoxicillina Amoxil 50 mg/kg once daily (maximum 10 days IB</p>
+<p>1000 mg); 25 mg/kg</p>
+<p>(maximum 500 mg) twice daily</p>
+<p>Penicillin allergy</p>
+<p>Cephalexin Keflex 20 mg/kg/dose orally twice daily 10 days IB</p>
+<p>(maximum 500 mg/dose)</p>
+<p>Cefadroxil Duricef 30 mg/kg orally once daily 10 days IB</p>
+<p>(maximum 1 g)</p>
+<p>Clindamycin Cleocin 7 mg/kg/dose orally thrice daily 10 days IIaB</p>
+<p>(maximum 300 mg/dose)</p>
+<p>Azithromycinb Zithromax 12 mg/kg orally once daily 5 days IIaB</p>
+<p>(maximum 500 mg) for 1 day,</p>
+<p>then 6 mg/kg orally once</p>
+<p>daily (maximum 250 mg) for</p>
+<p>4 days</p>
+<p>Clarithromycinb Biaxin 15 mg/kg orally per day divided 10 days IIaB</p>
+<p>in two doses (maximum 250</p>
+<p>mg twice daily)</p>
+<p>aStandard formulation, not extended release.</p>
+<p>bResistance of group A β-hemolytic Streptococcus (GABHS) to these agents may vary and local</p>
+<p>susceptibilities should be considered with these agents.</p>
+<p>These guidelines provide a systematic weighting of the strength of the recommendation (Class I,</p>
+<p>conditions for which there is evidence and/or general agreement that a given procedure or</p>
+<p>treatment is beneficial, useful, and effective; Class II, conditions for which there is conflicting</p>
+<p>evidence and/or a divergence of opinion about the usefulness/efficacy of a procedure or</p>
+<p>treatment; Class IIa, weight of evidence/opinion is in favor of usefulness/efficacy; Class IIb,</p>
+<p>usefulness/efficacy is less well established by evidence/opinion; Class III, conditions for which</p>
+<p>there is evidence and/or general agreement that a procedure/treatment is not useful/effective</p>
+<p>and in some cases may be harmful) and quality of evidence (A, data derived from multiple</p>
+<p>randomized clinical trials or meta-analyses; B, data derived from a single-randomized trial or</p>
+<p>nonrandomized studies; C, only consensus opinion of experts, case studies, or standard of care).</p>
+<p>478</p>
+<h2>CH45.INDD 478 19-11-2020 20:21:20</h2>
+<div class="table-container"><table><tr><th>TABLE 45-2 Antibiotics and Doses for Group A β-Hemolytic Streptococcal Pharyngitis</th><th></th><th></th><th></th><th></th></tr><tr><td>Antibiotic</td><td>Brand
+Name</td><td>Dose</td><td>Duration</td><td>Rating</td></tr><tr><td>Preferred antibiotics if no penicillin allergy</td><td></td><td></td><td></td><td></td></tr><tr><td>Penicillin V</td><td>Pen-V</td><td>Children: 250 mg twice daily or
+three times daily orally; adult:
+250 mg four times daily or
+500 mg twice daily orally</td><td>10 days</td><td>IB</td></tr><tr><td>Penicillin G
+benzathine</td><td>Bicillin L-A</td><td>&lt;27 kg: 0.6 million units; 27 kg
+or greater: 1.2 million units
+intramuscularly</td><td>One dose</td><td>IB</td></tr><tr><td>Amoxicillina</td><td>Amoxil</td><td>50 mg/kg once daily (maximum
+1000 mg); 25 mg/kg
+(maximum 500 mg) twice daily</td><td>10 days</td><td>IB</td></tr><tr><td>Penicillin allergy</td><td></td><td></td><td></td><td></td></tr><tr><td>Cephalexin</td><td>Keflex</td><td>20 mg/kg/dose orally twice daily
+(maximum 500 mg/dose)</td><td>10 days</td><td>IB</td></tr><tr><td>Cefadroxil</td><td>Duricef</td><td>30 mg/kg orally once daily
+(maximum 1 g)</td><td>10 days</td><td>IB</td></tr><tr><td>Clindamycin</td><td>Cleocin</td><td>7 mg/kg/dose orally thrice daily
+(maximum 300 mg/dose)</td><td>10 days</td><td>IIaB</td></tr><tr><td>Azithromycinb</td><td>Zithromax</td><td>12 mg/kg orally once daily
+(maximum 500 mg) for 1 day,
+then 6 mg/kg orally once
+daily (maximum 250 mg) for
+4 days</td><td>5 days</td><td>IIaB</td></tr><tr><td>Clarithromycinb</td><td>Biaxin</td><td>15 mg/kg orally per day divided
+in two doses (maximum 250
+mg twice daily)</td><td>10 days</td><td>IIaB</td></tr></table></div><h2>Respiratory Tract Infections, Upper | CHAPTER 45</h2>
+<p>TABLE 45-3 Antibiotics and Doses for Eradication of Group A β-Hemolytic Streptococcal</p>
+<p>Pharyngitis in Chronic Carriers</p>
+<p>Antibiotic Brand Name Dose</p>
+<p>Clindamycin Cleocin 20–30 mg/kg/day orally in three divided doses</p>
+<p>(maximum 300 mg/dose)</p>
+<p>Amoxicillin– Augmentin 40 mg/kg/day orally in three divided doses (maximum</p>
+<p>clavulanate 2000 mg/day of amoxicillin)</p>
+<p>Penicillin V Pen-V, Rifadin Penicillin V: 50 mg/kg/day orally in four doses for 10 days</p>
+<p>and (maximum 2000 mg/day); and rifampin: 20 mg/kg/</p>
+<p>rifampin day orally in one dose for the last 4 days of treatment</p>
+<p>(maximum 600 mg/day)</p>
+<p>Penicillin G Bicillin L-A, Penicillin G benzathine: &lt;27 kg—0.6 million units;</p>
+<p>benzathine Rifadin 27 kg or greater: 1.2 million units intramuscularly; and</p>
+<p>and rifampin: 20 mg/kg/day orally in two doses during last</p>
+<p>rifampin 4 days of treatment with penicillin (maximum</p>
+<p>600 mg/day)</p>
+<p>Acute Bacterial Rhinosinusitis</p>
+<li>Sinusitis is an inflammation and/or infection of the paranasal sinuses, or membrane-</li>
+<p>lined air spaces, around the nose. The term rhinosinusitis is now preferred, because</p>
+<p>sinusitis typically also involves the nasal mucosa. The majority of these infections are</p>
+<p>viral in origin. It is important to differentiate between viral and bacterial sinusitis to</p>
+<p>aid in optimizing treatment decisions.</p>
+<li>Acute bacterial sinusitis is most often caused by the same bacteria implicated in acute</li>
+<p>otitis media: S. pneumoniae and H. influenzae. These organisms are responsible for</p>
+<p>~50%–70% of bacterial causes of acute sinusitis in both adults and children.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>There are three clinical presentations that are most consistent with acute bacterial vs</li>
+<p>viral rhinosinusitis: 1) Onset with persistent signs or symptoms compatible with acute</p>
+<p>rhinosinusitis, lasting for ≥10 days without any evidence of clinical improvement; 2)</p>
+<p>Onset with severe signs or symptoms of high fever (≥39°C [102.2°F]) and purulent</p>
+<p>nasal discharge or facial pain lasting for at least 3–4 consecutive days at the beginning</p>
+<p>of illness; 3) Onset with worsening signs or symptoms characterized by new-onset</p>
+<p>fever, headache, or increase in nasal discharge following a typical viral URI that lasted</p>
+<p>5–6 days and were initially improving (“double sickening”).</p>
+<li>Signs and symptoms of bacterial rhinosinusitis include purulent anterior nasal dis-</li>
+<p>charge, purulent or discolored posterior nasal discharge, nasal congestion or obstruc-</p>
+<p>tion, facial congestion or fullness, facial pain or pressure, fever, headache, ear pain/</p>
+<p>pressure/fullness, halitosis, dental pain, cough, and fatigue.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Reducing signs and symptoms, achieving and maintaining</li>
+<p>patency of the ostia, limiting antimicrobial treatment to those who may benefit,</p>
+<p>eradicating bacterial infection with appropriate antimicrobial therapy, minimizing</p>
+<p>the duration of illness, preventing complications, and preventing progression from</p>
+<p>acute disease to chronic disease.</p>
+<p>479</p>
+<h2>CH45.INDD 479 19-11-2020 20:21:20</h2>
+<div class="table-container"><table><tr><th>TABLE 45-3 Antibiotics and Doses for Eradication of Group A β-Hemolytic Streptococcal
+Pharyngitis in Chronic Carriers</th><th></th><th></th></tr><tr><td>Antibiotic</td><td>Brand Name</td><td>Dose</td></tr><tr><td>Clindamycin</td><td>Cleocin</td><td>20–30 mg/kg/day orally in three divided doses
+(maximum 300 mg/dose)</td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin</td><td>40 mg/kg/day orally in three divided doses (maximum
+2000 mg/day of amoxicillin)</td></tr><tr><td>Penicillin V
+and
+rifampin</td><td>Pen-V, Rifadin</td><td>Penicillin V: 50 mg/kg/day orally in four doses for 10 days
+(maximum 2000 mg/day); and rifampin: 20 mg/kg/
+day orally in one dose for the last 4 days of treatment
+(maximum 600 mg/day)</td></tr><tr><td>Penicillin G
+benzathine
+and
+rifampin</td><td>Bicillin L-A,
+Rifadin</td><td>Penicillin G benzathine: &lt;27 kg—0.6 million units;
+27 kg or greater: 1.2 million units intramuscularly; and
+rifampin: 20 mg/kg/day orally in two doses during last
+4 days of treatment with penicillin (maximum
+600 mg/day)</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 45-4 Antibiotics and Doses for Acute Bacterial Rhinosinusitis in Children</p>
+<p>Antibiotic Brand Name Dose Comments</p>
+<p>Initial empirical therapy</p>
+<p>Amoxicillin– Augmentin 45 mg/kg/day orally twice daily First line</p>
+<p>clavulanate</p>
+<p>Amoxicillin– Augmentin 90 mg/kg/day orally twice daily Second line</p>
+<p>clavulanate</p>
+<p>β-Lactam allergy</p>
+<p>Clindamycin plus Cleocin Clindamycin (30–40 mg/kg/day orally Non-type 1</p>
+<p>cefixime or Suprax, Vantin three times daily) plus cefixime (8 allergy</p>
+<p>cefpodoxime mg/kg/day orally twice daily) or</p>
+<p>cefpodoxime (10 mg/kg/day orally</p>
+<p>twice daily)</p>
+<p>Levofloxacin Levaquin 10–20 mg/kg/day orally every 12–24 Type 1 allergy</p>
+<p>hours</p>
+<p>Risk for antibiotic resistance or failed initial therapy</p>
+<p>Amoxicillin– Augmentin 90 mg/kg/day orally twice daily</p>
+<p>clavulanate</p>
+<p>Clindamycin plus Cleocin, Clindamycin (30–40 mg/kg/day orally</p>
+<p>cefixime or Suprax, three times daily) plus cefixime</p>
+<p>cefpodoxime Vantin (8 mg/kg/day orally twice daily) or</p>
+<p>cefpodoxime (10 mg/kg/day orally</p>
+<p>twice daily)</p>
+<p>Levofloxacin Levaquin 10–20 mg/kg/day orally every</p>
+<p>12–24 hours</p>
+<p>Severe infection requiring hospitalization</p>
+<p>Ampicillin– Unasyn 200–400 mg/kg/day IV every 6 hours</p>
+<p>sulbactam</p>
+<p>Ceftriaxone Rocephin 50 mg/kg/day IV every 12 hours</p>
+<p>Cefotaxime Claforan 100–200 mg/kg/day IV every 6 hours</p>
+<p>Levofloxacin Levaquin 10–20 mg/kg/day IV every 12–24 hours</p>
+<li>Nasal decongestant sprays such as phenylephrine and oxymetazoline that reduce</li>
+<p>inflammation by vasoconstriction are often used in nonbacterial rhinosinusitis. Use</p>
+<p>should be limited to the recommended duration of the product (no more than 3 days)</p>
+<p>to prevent development of tolerance and/or rebound congestion. Oral decongestants</p>
+<p>may also aid in nasal or sinus patency. Irrigation of the nasal cavity with saline and</p>
+<p>steam inhalation may be used to increase mucosal moisture, and mucolytics (eg, guai-</p>
+<p>fenesin) may be used to decrease the viscosity of nasal secretions. Antihistamines and</p>
+<p>oral decongestants should not be used for acute bacterial sinusitis in view of their anti-</p>
+<p>cholinergic effects that can dry mucosa and disturb clearance of mucosal secretions.</p>
+<li>Amoxicillin–clavulanate is first-line treatment for acute bacterial rhinosinusitis. The</li>
+<p>approach to treating acute bacterial rhinosinusitis in children and adults is given in</p>
+<h2>Tables 45-4 and 45-5.</h2>
+<li>High-dose amoxicillin–clavulanate is preferred in the following situations: (a)</li>
+<p>geographic regions with high endemic rates (10% or greater) of invasive penicillin-</p>
+<p>nonsusceptible S. pneumoniae, (b) severe infection, (c) attendance at daycare, (d) age</p>
+<p>480</p>
+<h2>CH45.INDD 480 19-11-2020 20:21:21</h2>
+<div class="table-container"><table><tr><th>TABLE 45-4 Antibiotics and Doses for Acute Bacterial Rhinosinusitis in Children</th><th></th><th></th><th></th></tr><tr><td>Antibiotic</td><td>Brand Name</td><td>Dose</td><td>Comments</td></tr><tr><td>Initial empirical therapy</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin</td><td>45 mg/kg/day orally twice daily</td><td>First line</td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin</td><td>90 mg/kg/day orally twice daily</td><td>Second line</td></tr><tr><td>β-Lactam allergy</td><td></td><td></td><td></td></tr><tr><td>Clindamycin plus
+cefixime or
+cefpodoxime</td><td>Cleocin
+Suprax, Vantin</td><td>Clindamycin (30–40 mg/kg/day orally
+three times daily) plus cefixime (8
+mg/kg/day orally twice daily) or
+cefpodoxime (10 mg/kg/day orally
+twice daily)</td><td>Non-type 1
+allergy</td></tr><tr><td>Levofloxacin</td><td>Levaquin</td><td>10–20 mg/kg/day orally every 12–24
+hours</td><td>Type 1 allergy</td></tr><tr><td>Risk for antibiotic resistance or failed initial therapy</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin</td><td>90 mg/kg/day orally twice daily</td><td></td></tr><tr><td>Clindamycin plus
+cefixime or
+cefpodoxime</td><td>Cleocin,
+Suprax,
+Vantin</td><td>Clindamycin (30–40 mg/kg/day orally
+three times daily) plus cefixime
+(8 mg/kg/day orally twice daily) or
+cefpodoxime (10 mg/kg/day orally
+twice daily)</td><td></td></tr><tr><td>Levofloxacin</td><td>Levaquin</td><td>10–20 mg/kg/day orally every
+12–24 hours</td><td></td></tr><tr><td>Severe infection requiring hospitalization</td><td></td><td></td><td></td></tr><tr><td>Ampicillin–
+sulbactam</td><td>Unasyn</td><td>200–400 mg/kg/day IV every 6 hours</td><td></td></tr><tr><td>Ceftriaxone</td><td>Rocephin</td><td>50 mg/kg/day IV every 12 hours</td><td></td></tr><tr><td>Cefotaxime</td><td>Claforan</td><td>100–200 mg/kg/day IV every 6 hours</td><td></td></tr><tr><td>Levofloxacin</td><td>Levaquin</td><td>10–20 mg/kg/day IV every 12–24 hours</td><td></td></tr></table></div><h2>Respiratory Tract Infections, Upper | CHAPTER 45</h2>
+<p>TABLE 45-5 Antibiotics and Doses for Acute Bacterial Rhinosinusitis in Adults</p>
+<p>Antibiotic Brand Name Dose Comments</p>
+<p>Initial empirical therapy</p>
+<p>Amoxicillin– Augmentin® 500 mg/125 mg orally three First line</p>
+<p>clavulanate times daily, or 875 mg/125</p>
+<p>mg orally twice daily</p>
+<p>Amoxicillin– Augmentin® 2000 mg/125 mg orally twice Second line</p>
+<p>clavulanate daily</p>
+<p>Doxycycline 100 mg orally twice daily or Second line</p>
+<p>200 mg orally once daily</p>
+<p>β-Lactam allergy</p>
+<p>Doxycycline 100 mg orally twice daily or</p>
+<p>200 mg orally once daily</p>
+<p>Levofloxacin Levaquin® 500 mg orally once daily</p>
+<p>Moxifloxacin Avelox® 400 mg orally once daily</p>
+<p>Risk for antibiotic resistance or failed initial therapy</p>
+<p>Amoxicillin– Augmentin® 2000 mg/125 mg orally twice</p>
+<p>clavulanate daily</p>
+<p>Levofloxacin Levaquin® 500 mg orally once daily</p>
+<p>Moxifloxacin Avelox® 400 mg orally once daily</p>
+<p>Severe infection requiring hospitalization</p>
+<p>Ampicillin– Unasyn® 1.5–3 g IV every 6 hours</p>
+<p>sulbactam</p>
+<p>Levofloxacin Levaquin® 500 mg orally once daily</p>
+<p>Moxifloxacin Avelox® 400 mg orally once daily</p>
+<p>Ceftriaxone Rocephin® 1–2 g IV every 12–24 hours</p>
+<p>Cefotaxime Claforan® 2 g IV every 4–6 hours</p>
+<p>less than 2 or greater than 65 years, (e) recent hospitalization, (f) antibiotic use within</p>
+<p>the last month, and (g) immunocompromised persons. Doxycycline is also second</p>
+<p>line for adults but should be avoided in children.</p>
+<li>The duration of antimicrobial therapy for acute bacterial rhinosinusitis is not well</li>
+<p>established. Most trials have used 10- to 14-day antibiotic courses for uncomplicated</p>
+<p>rhinosinusitis. For adults, the recommended duration is 5–7 days.</p>
+<li>If symptoms persist or worsen after 48–72 hours of appropriate antibiotic therapy,</li>
+<p>then the patient should be reevaluated and alternative antibiotics should be</p>
+<p>considered.</p>
+<p>See Chapter 126, Upper Respiratory Tract Infections, authored by Christopher Frei and</p>
+<p>Bradi Frei, for a more detailed discussion of this topic.</p>
+<p>481</p>
+<h2>CH45.INDD 481 19-11-2020 20:21:21</h2>
+<div class="table-container"><table><tr><th>TABLE 45-5 Antibiotics and Doses for Acute Bacterial Rhinosinusitis in Adults</th><th></th><th></th><th></th></tr><tr><td>Antibiotic</td><td>Brand Name</td><td>Dose</td><td>Comments</td></tr><tr><td>Initial empirical therapy</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin®</td><td>500 mg/125 mg orally three
+times daily, or 875 mg/125
+mg orally twice daily</td><td>First line</td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin®</td><td>2000 mg/125 mg orally twice
+daily</td><td>Second line</td></tr><tr><td>Doxycycline</td><td></td><td>100 mg orally twice daily or
+200 mg orally once daily</td><td>Second line</td></tr><tr><td>β-Lactam allergy</td><td></td><td></td><td></td></tr><tr><td>Doxycycline</td><td></td><td>100 mg orally twice daily or
+200 mg orally once daily</td><td></td></tr><tr><td>Levofloxacin</td><td>Levaquin®</td><td>500 mg orally once daily</td><td></td></tr><tr><td>Moxifloxacin</td><td>Avelox®</td><td>400 mg orally once daily</td><td></td></tr><tr><td>Risk for antibiotic resistance or failed initial therapy</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Augmentin®</td><td>2000 mg/125 mg orally twice
+daily</td><td></td></tr><tr><td>Levofloxacin</td><td>Levaquin®</td><td>500 mg orally once daily</td><td></td></tr><tr><td>Moxifloxacin</td><td>Avelox®</td><td>400 mg orally once daily</td><td></td></tr><tr><td>Severe infection requiring hospitalization</td><td></td><td></td><td></td></tr><tr><td>Ampicillin–
+sulbactam</td><td>Unasyn®</td><td>1.5–3 g IV every 6 hours</td><td></td></tr><tr><td>Levofloxacin</td><td>Levaquin®</td><td>500 mg orally once daily</td><td></td></tr><tr><td>Moxifloxacin</td><td>Avelox®</td><td>400 mg orally once daily</td><td></td></tr><tr><td>Ceftriaxone</td><td>Rocephin®</td><td>1–2 g IV every 12–24 hours</td><td></td></tr><tr><td>Cefotaxime</td><td>Claforan®</td><td>2 g IV every 4–6 hours</td><td></td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>82. Urinary Incontinence</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>82. Urinary Incontinence</h1>
+        </header>
+        <main>
+            <p>966</p>
+<h2>RETPAHC</h2>
+<p>82</p>
+<p>Urinary Incontinence</p>
+<li>Urinary incontinence (UI) is loss of bladder control, leading to involuntary leakage</li>
+<p>of urine.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The urethral sphincter, a combination of smooth and striated muscles within and</li>
+<p>external to the urethra, maintains adequate resistance to the flow of urine from the</p>
+<p>bladder until voluntary voiding is initiated.</p>
+<li>Volitional and involuntary bladder contractions are mediated by activation of post-</li>
+<p>synaptic muscarinic receptors by acetylcholine. Bladder smooth muscle cholinergic</p>
+<p>receptors are mainly of the M variety; however, M receptors are responsible for both</p>
+<p>2 3</p>
+<p>emptying contraction of normal micturition and involuntary bladder contractions,</p>
+<p>which can result in UI. Therefore, most pharmacologic antimuscarinic therapy is</p>
+<p>anti-M based.</p>
+<li>Stimula 3 tion of beta-3 adrenergic receptors in the detrusor results in smooth muscle</li>
+<p>relaxation. β-agonists attenuate bladder contractility, which is useful for treatment</p>
+<p>3</p>
+<p>of overactive bladder (OAB) and urgency incontinence.</p>
+<li>UI occurs as a result of overactivity or underactivity of the urethra, bladder, or both.</li>
+<li>Urethral underactivity is known as stress UI (SUI) and occurs during activities such as</li>
+<p>exercise, running, lifting, coughing, and sneezing. The urethral sphincter no longer</p>
+<p>resists the flow of urine from the bladder during periods of physical activity.</p>
+<li>Bladder overactivity is known as urgency UI (UUI) and is associated with increased</li>
+<p>urinary frequency and urgency, with or without urge incontinence. The detrusor</p>
+<p>muscle is overactive and contracts inappropriately during the filling phase.</p>
+<li>Urethral overactivity and/or bladder underactivity is known as overflow inconti-</li>
+<p>nence. The bladder is filled to capacity but is unable to empty, causing urine to leak</p>
+<p>from a distended bladder past a normal outlet and sphincter. Common causes of</p>
+<p>urethral overactivity include benign prostatic hyperplasia (see Chapter 80); prostate</p>
+<p>cancer (see Chapter 64); and, in women, cystocele formation or surgical overcorrec-</p>
+<p>tion after SUI surgery.</p>
+<li>Mixed incontinence includes the combination of bladder overactivity and urethral</li>
+<p>underactivity.</p>
+<li>Functional incontinence is not caused by bladder- or urethra-specific factors but</li>
+<p>rather occurs in patients with conditions such as dementia or cognitive or mobility</p>
+<p>deficits.</p>
+<li>Many medications may precipitate or aggravate voiding dysfunction and UI</li>
+<h2>(Table 82-1).</h2>
+<h2>CINICAL PRESENTATION</h2>
+<li>Signs and symptoms of UI depend on the underlying pathophysiology (Table 82-2).</li>
+<p>Patients with SUI generally complain of urine leakage with physical activity, whereas</p>
+<p>those with UUI complain of frequency, urgency, high-volume incontinence, and</p>
+<p>nocturia and nocturnal incontinence.</p>
+<li>Urethral overactivity and/or bladder underactivity is a rare but important cause</li>
+<p>of UI. Patients complain of lower abdominal fullness, hesitancy, straining to void,</p>
+<p>decreased force of stream, interrupted stream, and sense of incomplete bladder</p>
+<p>emptying. Patients can also have urinary frequency, urgency, and abdominal pain.</p>
+<h2>DIAGNOSIS</h2>
+<li>A complete medical history, physical examination (ie, abdominal examination to</li>
+<p>exclude distended bladder, pelvic examination in women looking for evidence of</p>
+<p>CH82.indd 966 20-11-2020 15:56:04</p>
+<h2>Urinary Incontinence | CHAPTER 82</h2>
+<p>TABLE 82-1 Medications That Influence Lower Urinary Tract Function</p>
+<p>Medications Effect</p>
+<p>Diuretics, acetylcholinesterase Polyuria resulting in urinary frequency, urgency</p>
+<p>inhibitors</p>
+<p>α-Receptor antagonists Urethral muscle relaxation and stress urinary incontinence</p>
+<p>α-Receptor agonists Urethral muscle contraction (increased urethral closure</p>
+<p>forces) resulting in urinary retention (more common</p>
+<p>in men)</p>
+<p>Calcium channel blockers Urinary retention due to reduced bladder contractility</p>
+<p>Opioid analgesics Urinary retention due to reduced bladder contractility</p>
+<p>Sedative hypnotics Functional incontinence caused by delirium, immobility</p>
+<p>Antipsychotic agents Anticholinergic effects resulting in reduced bladder</p>
+<p>contractility and urinary retention</p>
+<p>Anticholinergics Urinary retention due to reduced bladder contractility</p>
+<p>Antidepressants, tricyclic Anticholinergic effects resulting in reduced bladder</p>
+<p>contractility (urinary retention), and α-antagonist</p>
+<p>effects resulting in reduced urethral smooth muscle</p>
+<p>contraction (stress incontinence)</p>
+<p>Alcohol Polyuria resulting in urinary frequency, urgency</p>
+<p>ACEIs Cough as a result of ACEIs may aggravate stress urinary</p>
+<p>incontinence</p>
+<p>ACEIs, angiotensin-converting enzyme inhibitors.</p>
+<p>prolapse or hormonal deficiency, and genital and prostate examination in men), and</p>
+<p>brief neurologic assessment of the perineum and lower extremities are recommended.</p>
+<li>For SUI, the preferred diagnostic test is observation of urethral meatus while the</li>
+<p>patient coughs or strains.</p>
+<li>For UUI, the preferred diagnostic tests are urodynamic studies. Perform urinalysis</li>
+<p>and urine culture to rule out urinary tract infection.</p>
+<li>For urethral overactivity and/or bladder underactivity, perform digital rectal exami-</li>
+<p>nation or transrectal ultrasound to rule out prostate enlargement. Perform renal</p>
+<pre><code>function tests to rule out renal failure.</code></pre>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Restoration of continence, reduction in the number of UI epi-</li>
+<p>sodes, and prevention of complications while minimizing adverse treatment conse-</p>
+<p>quences and cost.</p>
+<h2>NONPHARMACOLOGIC TREATMENT</h2>
+<li>Nonpharmacologic, nonsurgical treatment options include behavioral interventions,</li>
+<p>external neuromodulation, anti-incontinence devices, and supportive interventions.</p>
+<p>Behavioral interventions (eg, lifestyle modifications, voiding schedule regimens, and</p>
+<p>pelvic floor muscle rehabilitation) are generally first-line treatment for SUI, UUI,</p>
+<p>and mixed UI.</p>
+<li>Surgery rarely plays a role in initial management of UI but can be required for sec-</li>
+<p>ondary complications (eg, skin breakdown or infection). The decision to surgically</p>
+<p>treat symptomatic UI requires that lifestyle compromise warrant an elective opera-</p>
+<p>tion and that nonsurgical therapy be proven undesirable or ineffective.</p>
+<p>967</p>
+<p>CH82.indd 967 20-11-2020 15:56:04</p>
+<div class="table-container"><table><tr><th>TABLE 82-1 Medications That Influence Lower Urinary Tract Function</th><th></th></tr><tr><td>Medications</td><td>Effect</td></tr><tr><td>Diuretics, acetylcholinesterase
+inhibitors</td><td>Polyuria resulting in urinary frequency, urgency</td></tr><tr><td>α-Receptor antagonists</td><td>Urethral muscle relaxation and stress urinary incontinence</td></tr><tr><td>α-Receptor agonists</td><td>Urethral muscle contraction (increased urethral closure
+forces) resulting in urinary retention (more common
+in men)</td></tr><tr><td>Calcium channel blockers</td><td>Urinary retention due to reduced bladder contractility</td></tr><tr><td>Opioid analgesics</td><td>Urinary retention due to reduced bladder contractility</td></tr><tr><td>Sedative hypnotics</td><td>Functional incontinence caused by delirium, immobility</td></tr><tr><td>Antipsychotic agents</td><td>Anticholinergic effects resulting in reduced bladder
+contractility and urinary retention</td></tr><tr><td>Anticholinergics</td><td>Urinary retention due to reduced bladder contractility</td></tr><tr><td>Antidepressants, tricyclic</td><td>Anticholinergic effects resulting in reduced bladder
+contractility (urinary retention), and α-antagonist
+effects resulting in reduced urethral smooth muscle
+contraction (stress incontinence)</td></tr><tr><td>Alcohol</td><td>Polyuria resulting in urinary frequency, urgency</td></tr><tr><td>ACEIs</td><td>Cough as a result of ACEIs may aggravate stress urinary
+incontinence</td></tr></table></div><h2>SECTION 16 | Urologic Disorders</h2>
+<p>TABLE 82-2 Differentiating Bladder Overactivity-Related UI (Urgency Urinary Incontinence)</p>
+<p>from Urethral Underactivity-Related UI (Stress Urinary Incontinence)</p>
+<p>Bladder Urethral</p>
+<p>Symptoms Overactivity (UUI) Underactivity (SUI)</p>
+<p>Urgency (strong, sudden desire Yes Not common</p>
+<p>to void)</p>
+<p>Frequency with urgency Yes Rarely</p>
+<p>Leaking during physical activity (eg, No Yes</p>
+<p>coughing, sneezing, lifting)</p>
+<p>Amount of urinary leakage with Large if present Usually small</p>
+<p>each episode of incontinence</p>
+<p>Ability to reach the toilet in time No or just barely Yes</p>
+<p>following an urge to void</p>
+<p>Nocturnal incontinence (presence Yes Rare</p>
+<p>of wet pads or undergarments</p>
+<p>in bed)</p>
+<p>Nocturia (waking to pass urine at Usually Seldom</p>
+<p>night)</p>
+<h2>PHARMACOLOGIC TREATMENT</h2>
+<p>Bladder Overactivity: Urgency Urinary Incontinence</p>
+<li>The pharmacotherapy of first choice for UUI includes antimuscarinic agents and</li>
+<p>β-adrenergic agonists drugs, which antagonize muscarinic cholinergic receptors</p>
+<p>3</p>
+<h2>(Table 82-3).</h2>
+<p>Oxybutynin</p>
+<li>Oxybutynin immediate-release (IR) is the oldest and least expensive treatment</li>
+<p>for UUI.</p>
+<li>Many patients discontinue oxybutynin IR because of adverse effects due to antimus-</li>
+<p>carinic effects (eg, dry mouth, constipation, vision impairment, confusion, cognitive</p>
+<pre><code>dysfunction, and tachycardia), α-adrenergic inhibition (eg, orthostatic hypotension),</code></pre>
+<p>and histamine H inhibition (eg, sedation and weight gain).</p>
+<li>Oxybutynin exte 1 nded-release (XL) is better tolerated than oxybutynin IR. Maxi-</li>
+<p>mum benefits may take up to 4 weeks after dose initiation or escalation.</p>
+<li>Oxybutynin transdermal system (TDS) has similar efficacy but is better tolerated</li>
+<p>than oxybutynin IR presumably because this route avoids first-pass metabolism in</p>
+<p>the liver, which generates the metabolite thought to cause adverse events, especially</p>
+<p>dry mouth.</p>
+<li>Oxybutynin gel causes significantly less dry mouth than oxybutynin IR, but patients</li>
+<p>must be monitored for anticholinergic affects during long-term therapy, particularly</p>
+<p>frail patients.</p>
+<p>Tolterodine</p>
+<li>Tolterodine, a competitive muscarinic receptor antagonist, is as effective as oxybu-</li>
+<p>tynin IR in efficacy outcomes with lower drug discontinuation rates.</p>
+<li>Tolterodine undergoes hepatic metabolism involving cytochrome (CYP) 2D6 and</li>
+<p>3A4 isoenzymes. Therefore, elimination may be impaired by CYP 3A4 inhibitors,</p>
+<p>including fluoxetine, sertraline, fluvoxamine, macrolide antibiotics, azole antifungals,</p>
+<p>and grapefruit juice.</p>
+<p>968</p>
+<p>CH82.indd 968 20-11-2020 15:56:05</p>
+<div class="table-container"><table><tr><th>TABLE 82-2 Differentiating Bladder Overactivity-Related UI (Urgency Urinary Incontinence)
+from Urethral Underactivity-Related UI (Stress Urinary Incontinence)</th><th></th><th></th></tr><tr><td>Symptoms</td><td>Bladder
+Overactivity (UUI)</td><td>Urethral
+Underactivity (SUI)</td></tr><tr><td>Urgency (strong, sudden desire
+to void)</td><td>Yes</td><td>Not common</td></tr><tr><td>Frequency with urgency</td><td>Yes</td><td>Rarely</td></tr><tr><td>Leaking during physical activity (eg,
+coughing, sneezing, lifting)</td><td>No</td><td>Yes</td></tr><tr><td>Amount of urinary leakage with
+each episode of incontinence</td><td>Large if present</td><td>Usually small</td></tr><tr><td>Ability to reach the toilet in time
+following an urge to void</td><td>No or just barely</td><td>Yes</td></tr><tr><td>Nocturnal incontinence (presence
+of wet pads or undergarments
+in bed)</td><td>Yes</td><td>Rare</td></tr><tr><td>Nocturia (waking to pass urine at
+night)</td><td>Usually</td><td>Seldom</td></tr></table></div><p>969</p>
+<p>Urinary</p>
+<p>Incontinence</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>82</p>
+<h2>TABLE 82-3 Dosing of Medications Approved for OAB or UUI</h2>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</p>
+<p>Anticholinergics/Antimuscarinics</p>
+<p>Oxybutynin IR Ditropan 2.5 mg twice daily 2.5–5 mg two to four Titrate in increments of 2.5 mg/day</p>
+<p>times daily every 1–2 months; available in</p>
+<p>oral solution</p>
+<p>Oxybutynin XL Ditropan XL 5–10 mg 5–30 mg once daily Adjust dose in 5-mg increments at</p>
+<p>once daily weekly intervals; swallow whole</p>
+<p>Oxybutynin TDS Oxytrol 3.9 mg/day apply one Apply every 3–4 days; rotate</p>
+<p>Oxytrol for patch twice weekly application site</p>
+<p>Women (OTC)</p>
+<p>Oxybutynin Gelnique One sachet (100 mg) Apply to clean and dry, intact skin</p>
+<p>gel 10% topically daily on abdomen, thighs, or upper</p>
+<p>arms/shoulders; contains alcohol</p>
+<p>Oxybutynin Gelnique 3% Three pumps (84 mg) Same as above</p>
+<p>gel 3% topically daily</p>
+<p>Tolterodine IR Detrol 1–2 mg twice daily 1 mg twice daily if patient is taking</p>
+<p>CYP3A4 inhibitors, or with renal/hepatic</p>
+<p>impairment</p>
+<p>Tolterodine LA Detrol LA 2–4 mg once daily 2 mg once daily in patients taking CYP3A4 Swallow whole; avoid in patients</p>
+<p>inhibitors or those with renal/hepatic with creatinine clearance ≤10</p>
+<p>impairment mL/min (0.17 mL/sec)</p>
+<p>Trospium Sanctura 20 mg twice daily 20 mg once daily in patients age ≥75 years Take 1 hour before meals or on</p>
+<p>chloride IR or creatinine clearance ≤30 mL/min empty stomach; patients age</p>
+<p>(0.5 mL/sec) ≥75 years should take at bedtime</p>
+<p>(Continued )</p>
+<p>CH82.indd</p>
+<p>969</p>
+<p>20-11-2020</p>
+<p>15:56:05</p>
+<div class="table-container"><table><tr><th>TABLE 82-3 Dosing of Medications Approved for OAB or UUI</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Range</td><td>Special Population Dose</td><td>Comments</td></tr><tr><td>Anticholinergics/Antimuscarinics</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Oxybutynin IR</td><td>Ditropan</td><td>2.5 mg twice daily</td><td>2.5–5 mg two to four
+times daily</td><td></td><td>Titrate in increments of 2.5 mg/day
+every 1–2 months; available in
+oral solution</td></tr><tr><td>Oxybutynin XL</td><td>Ditropan XL</td><td>5–10 mg
+once daily</td><td>5–30 mg once daily</td><td></td><td>Adjust dose in 5-mg increments at
+weekly intervals; swallow whole</td></tr><tr><td>Oxybutynin TDS</td><td>Oxytrol</td><td></td><td>3.9 mg/day apply one
+patch twice weekly</td><td></td><td>Apply every 3–4 days; rotate
+application site</td></tr><tr><td></td><td>Oxytrol for
+Women (OTC)</td><td></td><td></td><td></td><td></td></tr><tr><td>Oxybutynin
+gel 10%</td><td>Gelnique</td><td></td><td>One sachet (100 mg)
+topically daily</td><td></td><td>Apply to clean and dry, intact skin
+on abdomen, thighs, or upper
+arms/shoulders; contains alcohol</td></tr><tr><td>Oxybutynin
+gel 3%</td><td>Gelnique 3%</td><td></td><td>Three pumps (84 mg)
+topically daily</td><td></td><td>Same as above</td></tr><tr><td>Tolterodine IR</td><td>Detrol</td><td></td><td>1–2 mg twice daily</td><td>1 mg twice daily if patient is taking
+CYP3A4 inhibitors, or with renal/hepatic
+impairment</td><td></td></tr><tr><td>Tolterodine LA</td><td>Detrol LA</td><td></td><td>2–4 mg once daily</td><td>2 mg once daily in patients taking CYP3A4
+inhibitors or those with renal/hepatic
+impairment</td><td>Swallow whole; avoid in patients
+with creatinine clearance ≤10
+mL/min (0.17 mL/sec)</td></tr><tr><td>Trospium
+chloride IR</td><td>Sanctura</td><td></td><td>20 mg twice daily</td><td>20 mg once daily in patients age ≥75 years
+or creatinine clearance ≤30 mL/min
+(0.5 mL/sec)</td><td>Take 1 hour before meals or on
+empty stomach; patients age
+≥75 years should take at bedtime
+(Continued )</td></tr></table></div><h2>970 SECTION</h2>
+<p>16</p>
+<p>|</p>
+<p>Urologic</p>
+<p>Disorders</p>
+<p>TABLE 82-3 Dosing of Medications Approved for OAB or UUI (Continued )</p>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</p>
+<p>Trospium Sanctura XR 60 mg once daily Avoid in patients age ≥75 years or creatinine Take 1 hour before meals or on</p>
+<p>chloride ER clearance ≤30 mL/min (0.5 mL/sec) empty stomach; swallow whole</p>
+<p>Solifenacin VESIcare 5 mg daily 5–10 mg once daily 5 mg daily if patient is taking CYP3A4 Swallow whole</p>
+<p>inhibitors or with creatinine clearance ≤30</p>
+<p>mL/min (0.5 mL/sec) or moderate hepatic</p>
+<p>impairment; avoid in severe hepatic</p>
+<p>impairment</p>
+<p>Darifenacin ER Enablex 7.5 mg once daily 7.5–15 mg once daily 7.5 mg daily if patient is taking potent Titrate dose after at least 2 weeks;</p>
+<p>CYP3A4 inhibitors or with moderate swallow whole</p>
+<p>hepatic impairment; avoid in severe</p>
+<p>hepatic impairment</p>
+<p>Fesoterodine ER Toviaz 4 mg once daily 4–8 mg once daily 4 mg daily if patient is taking potent CYP3A4 Prodrug (metabolized to</p>
+<p>inhibitors or with creatinine clearance 5-hydroxymethyl tolterodine);</p>
+<p>≤30 mL/min (0.5 mL/sec); avoid in severe swallow whole</p>
+<p>hepatic impairment</p>
+<p>β-Adrenergic Agonist</p>
+<p>3</p>
+<p>Mirabegron ER Myrbetriq 25 mg once daily 25–50 mg once daily 25 mg once daily if creatinine clearance Swallow whole</p>
+<p>15–29 mL/min (0.25-0.49 mL/sec) or</p>
+<p>moderate hepatic impairment; avoid</p>
+<p>in patients with ESRD or severe hepatic</p>
+<p>impairment</p>
+<p>CYP, cytochrome P450 enzyme; ER, extended-release; ESRD, end-stage renal disease; IR, immediate release; LA, long acting; OAB, overactive bladder; OTC, over-the-counter; TDS,</p>
+<p>transdermal system; UUI, urge urinary incontinence; XL, extended-release.</p>
+<p>CH82.indd</p>
+<p>970</p>
+<p>20-11-2020</p>
+<p>15:56:05</p>
+<div class="table-container"><table><tr><th>Drug</th><th>Brand Name</th><th>Initial Dose</th><th>Usual Range</th><th>Special Population Dose</th><th>Comments</th></tr><tr><td>Trospium
+chloride ER</td><td>Sanctura XR</td><td></td><td>60 mg once daily</td><td>Avoid in patients age ≥75 years or creatinine
+clearance ≤30 mL/min (0.5 mL/sec)</td><td>Take 1 hour before meals or on
+empty stomach; swallow whole</td></tr><tr><td>Solifenacin</td><td>VESIcare</td><td>5 mg daily</td><td>5–10 mg once daily</td><td>5 mg daily if patient is taking CYP3A4
+inhibitors or with creatinine clearance ≤30
+mL/min (0.5 mL/sec) or moderate hepatic
+impairment; avoid in severe hepatic
+impairment</td><td>Swallow whole</td></tr><tr><td>Darifenacin ER</td><td>Enablex</td><td>7.5 mg once daily</td><td>7.5–15 mg once daily</td><td>7.5 mg daily if patient is taking potent
+CYP3A4 inhibitors or with moderate
+hepatic impairment; avoid in severe
+hepatic impairment</td><td>Titrate dose after at least 2 weeks;
+swallow whole</td></tr><tr><td>Fesoterodine ER</td><td>Toviaz</td><td>4 mg once daily</td><td>4–8 mg once daily</td><td>4 mg daily if patient is taking potent CYP3A4
+inhibitors or with creatinine clearance
+≤30 mL/min (0.5 mL/sec); avoid in severe
+hepatic impairment</td><td>Prodrug (metabolized to
+5-hydroxymethyl tolterodine);
+swallow whole</td></tr><tr><td>β-Adrenergic Agonist
+3</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Mirabegron ER</td><td>Myrbetriq</td><td>25 mg once daily</td><td>25–50 mg once daily</td><td>25 mg once daily if creatinine clearance
+15–29 mL/min (0.25-0.49 mL/sec) or
+moderate hepatic impairment; avoid
+in patients with ESRD or severe hepatic
+impairment</td><td>Swallow whole</td></tr></table></div><h2>Urinary Incontinence | CHAPTER 82</h2>
+<li>Tolterodine’s most common adverse effects include dry mouth, dyspepsia, headache,</li>
+<p>constipation, and dry eyes. The maximum benefit of tolterodine is not realized for up</p>
+<p>to 8 weeks after starting therapy or dose escalation.</p>
+<li>Tolterodine long acting (LA) offers once-daily dosing and may also take up to 8</li>
+<p>weeks after starting therapy or dose escalation to see maximum benefit.</p>
+<li>Fesoterodine fumarate is a prodrug for tolterodine and is considered an alterna-</li>
+<p>tive first-line therapy for UI in patients with urinary frequency, urgency, or urge</p>
+<p>incontinence.</p>
+<p>Other Pharmacologic Therapies for Urgency Urinary Incontinence</p>
+<li>Trospium chloride IR, a quaternary ammonium anticholinergic, was shown to be</li>
+<p>noninferior to oxybutynin IR but was associated with less dry mouth. It causes the</p>
+<p>expected anticholinergic adverse effects with increased frequency in patients age</p>
+<p>75 years or older. An extended-release product is also available.</p>
+<li>Solifenacin succinate and darifenacin are second-generation antimuscarinic agents.</li>
+<p>Both have been shown to improve urinary symptoms and quality-of-life. Drug inter-</p>
+<p>actions are possible if CYP 3A4 inhibitors are given with solifenacin succinate or CYP</p>
+<p>2D6 or 3A4 inhibitors with darifenacin.</p>
+<li>Mirabegron is a β-adrenergic agonist alternative to anticholinergic/antimuscarinic</li>
+<p>3</p>
+<p>drugs for managing UUI. It has modest efficacy as compared with placebo. Hyperten-</p>
+<p>sion, nasopharyngitis, urinary tract infection, and headache are the most common</p>
+<p>adverse effects. It is a moderate inhibitor of CYP2D6.</p>
+<li>Use of other agents, including tricyclic antidepressants, propantheline, flavoxate,</li>
+<p>hyoscyamine, and dicyclomine hydrochloride, is not recommended. They are less</p>
+<p>effective, not safer, or have not been adequately studied.</p>
+<li>A systematic review of 94 randomized controlled trials with antimuscarinic drugs</li>
+<p>for UUI showed similar, small benefits for all drugs studied. Selection of initial drug</p>
+<p>therapy depends on side-effect profile, comorbidities, concurrent drug therapy, and</p>
+<h2>patient preference in drug delivery methods (Table 82-4).</h2>
+<li>Botulinum toxin A temporarily paralyzes smooth or striated muscle. It is indicated</li>
+<p>for the treatment of detrusor overactivity associated with neurologic conditions</p>
+<p>and OAB.</p>
+<li>Adverse effects of botulinum toxin A include dysuria, hematuria, urinary tract infec-</li>
+<p>tion, and urinary retention (up to 20%). Therapeutic and adverse effects are seen 3–7</p>
+<p>days after injection and subside after 6–8 months.</p>
+<p>Urethral Underactivity: Stress Urinary Incontinence</p>
+<li>Treatment of SUI is aimed at improving urethral closure by stimulating α-adrenergic</li>
+<p>receptors in smooth muscle of the bladder neck and proximal urethra, enhancing</p>
+<p>supportive structures underlying the urethral epithelium, or enhancing serotonin</p>
+<p>and norepinephrine effects in the micturition reflex pathways.</p>
+<p>Estrogens</p>
+<li>Historically, local and systemic estrogens have been the mainstays of pharmacologic</li>
+<p>management of SUI.</p>
+<li>A meta-analysis of 34 trials evaluating the use of local or systemic estrogen therapy</li>
+<p>on UI in postmenopausal women found that systemic administration of estrogen</p>
+<p>alone or in combination with progesterone resulted in UI worsening. There was</p>
+<p>some evidence that vaginal estrogen may improve UI, and reduce urgency and</p>
+<p>frequency.</p>
+<li>A meta-analysis of 17 trials of local estrogen compared to placebo or no treatment</li>
+<p>found beneficial effects on UI and OAB symptoms and some urodynamic parameters.</p>
+<li>Based on the results of these analyses, only topical estrogen products should be used</li>
+<p>for treatment of UI or OAB in postmenopausal women.</p>
+<p>971</p>
+<p>CH82.indd 971 20-11-2020 15:56:05</p>
+<h2>SECTION 16 | Urologic Disorders</h2>
+<p>TABLE 82-4 Adverse Event Incidence Rates with Approved Drugs for Bladder Overactivitya</p>
+<p>Drug Dry Mouth Constipation Dizziness Vision Disturbance</p>
+<p>Oxybutynin IR 71 15 17 10</p>
+<p>Oxybutynin XL 61 13 6 14</p>
+<p>Oxybutynin TDS 7 3 NR 3</p>
+<p>Oxybutynin gel 10 1 3 3</p>
+<p>Tolterodine 35 7 5 3</p>
+<p>Tolterodine LA 23 6 2 4</p>
+<p>Trospium 20 10 NR 1</p>
+<p>chloride IR</p>
+<p>Trospium 11 9 NR 2</p>
+<p>chloride XR</p>
+<p>Solifenacin 20 9 2 5</p>
+<p>Darifenacin ER 24 18 2 2</p>
+<p>Fesoterodine ER 27 5 NR 3</p>
+<p>Mirabegron ER 3 3 3 NR</p>
+<p>aAll values constitute mean data, predominantly using product information from the manufacturers.</p>
+<p>IR, immediate release; LA, long acting; TDS, transdermal system; XL, extended-release; XR/ER,</p>
+<p>extended-release; NR, not reported.</p>
+<p>α-Adrenergic Receptor Agonists</p>
+<li>Many open trials support the use of a variety of α-adrenergic receptor agonists in</li>
+<p>SUI. Combining an α-adrenergic receptor agonist with an estrogen yields somewhat</p>
+<p>superior clinical and urodynamic responses compared with monotherapy.</p>
+<li>Contraindications to these agents include hypertension, tachyarrhythmias, coronary</li>
+<p>artery disease, myocardial infarction, cor pulmonale, hyperthyroidism, renal failure,</p>
+<p>and narrow-angle glaucoma.</p>
+<p>Duloxetine</p>
+<li>Duloxetine, a dual inhibitor of serotonin and norepinephrine reuptake indicated</li>
+<p>for depression and painful diabetic neuropathy, is approved in many countries for</p>
+<p>the treatment of SUI, but not in the United States. Duloxetine is thought to facilitate</p>
+<p>the bladder-to-sympathetic reflex pathway, increasing urethral and external urethral</p>
+<p>sphincter muscle tone during the storage phase.</p>
+<li>Six placebo-controlled studies showed that duloxetine reduces incontinent episode</li>
+<p>frequency and the number of daily micturitions, increases micturition interval, and</p>
+<p>improves quality-of-life scores. These benefits were statistically significant but clini-</p>
+<p>cally modest.</p>
+<li>Monitor patients taking concurrent CYP 2D6 and 1A2 substrates or inhibitors</li>
+<p>closely.</p>
+<li>The adverse event profile might make adherence problematic. Adverse events include</li>
+<p>nausea, headache, insomnia, dizziness, constipation, and dry mouth.</p>
+<p>Overflow Incontinence</p>
+<li>Overflow incontinence secondary to benign or malignant prostatic hyperplasia may</li>
+<h2>be amenable to pharmacotherapy (see Chapters 64 and 80).</h2>
+<p>972</p>
+<p>CH82.indd 972 20-11-2020 15:56:05</p>
+<div class="table-container"><table><tr><th>TABLE 82-4 Adverse Event Incidence Rates with Approved Drugs for Bladder Overactivitya</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Dry Mouth</td><td>Constipation</td><td>Dizziness</td><td>Vision Disturbance</td></tr><tr><td>Oxybutynin IR</td><td>71</td><td>15</td><td>17</td><td>10</td></tr><tr><td>Oxybutynin XL</td><td>61</td><td>13</td><td>6</td><td>14</td></tr><tr><td>Oxybutynin TDS</td><td>7</td><td>3</td><td>NR</td><td>3</td></tr><tr><td>Oxybutynin gel</td><td>10</td><td>1</td><td>3</td><td>3</td></tr><tr><td>Tolterodine</td><td>35</td><td>7</td><td>5</td><td>3</td></tr><tr><td>Tolterodine LA</td><td>23</td><td>6</td><td>2</td><td>4</td></tr><tr><td>Trospium
+chloride IR</td><td>20</td><td>10</td><td>NR</td><td>1</td></tr><tr><td>Trospium
+chloride XR</td><td>11</td><td>9</td><td>NR</td><td>2</td></tr><tr><td>Solifenacin</td><td>20</td><td>9</td><td>2</td><td>5</td></tr><tr><td>Darifenacin ER</td><td>24</td><td>18</td><td>2</td><td>2</td></tr><tr><td>Fesoterodine ER</td><td>27</td><td>5</td><td>NR</td><td>3</td></tr><tr><td>Mirabegron ER</td><td>3</td><td>3</td><td>3</td><td>NR</td></tr></table></div><h2>Urinary Incontinence | CHAPTER 82</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Total elimination of UI signs and symptoms may not be possible. Therefore, realistic</li>
+<p>goals should be established for therapy.</p>
+<li>In the long-term management of UI, the clinical symptoms of most distress to the</li>
+<p>individual patient need to be monitored.</p>
+<li>Survey instruments used in UI research along with quantitating the use of ancillary</li>
+<p>supplies (eg, pads) can be used in clinical monitoring.</p>
+<li>Therapies for UI frequently have nuisance adverse effects, which need to be carefully</li>
+<p>elicited. Adverse effects can necessitate drug dosage adjustments, use of alternative</p>
+<p>strategies (eg, chewing sugarless gum, sucking on hard sugarless candy, or use of</p>
+<p>saliva substitutes for xerostomia), or even drug discontinuation.</p>
+<p>See Chapter 101, Urinary Incontinence, authored by Eric S. Rovner, Jean Wyman, and</p>
+<p>Sum Lam, for a more detailed discussion of this topic.</p>
+<p>973</p>
+<p>CH82.indd 973 20-11-2020 15:56:06</p>
+<p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

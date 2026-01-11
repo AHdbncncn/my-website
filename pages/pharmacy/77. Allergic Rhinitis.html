@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77. Allergic Rhinitis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>77. Allergic Rhinitis</h1>
+        </header>
+        <main>
+            <h2>SECTION 15</h2>
+<h2>RESPIRATORY DISORDERS</h2>
+<p>Edited by Terry L. Schwinghammer</p>
+<p>77</p>
+<p>Allergic Rhinitis</p>
+<p>905</p>
+<h2>RETPAHC</h2>
+<li>Allergic rhinitis involves inflammation of nasal mucous membranes in sensitized</li>
+<p>individuals when inhaled allergenic particles contact mucous membranes and elicit</p>
+<p>a response mediated by immunoglobulin E (IgE). There are two types: seasonal and</p>
+<p>persistent (formerly called “perennial”) allergic rhinitis.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Airborne allergens enter the nose during inhalation and are processed by lympho-</li>
+<p>cytes, which produce antigen-specific IgE, sensitizing genetically predisposed hosts</p>
+<p>to those agents. On nasal reexposure, IgE bound to mast cells interacts with airborne</p>
+<p>allergens, triggering release of inflammatory mediators.</p>
+<li>An immediate reaction occurs within seconds to minutes, resulting in rapid release of</li>
+<p>preformed and newly generated mediators from the arachidonic acid cascade. Media-</p>
+<p>tors of immediate hypersensitivity include histamine, leukotrienes, prostaglandin,</p>
+<p>tryptase, and kinins. These mediators cause vasodilation, increased vascular perme-</p>
+<p>ability, and production of nasal secretions. Histamine produces rhinorrhea, itching,</p>
+<p>sneezing, and nasal obstruction.</p>
+<li>A late-phase reaction may occur 4–8 hours after initial allergen exposure due to cyto-</li>
+<p>kine release from mast cells and thymus-derived helper lymphocytes. This inflam-</p>
+<p>matory response causes persistent chronic symptoms, including nasal congestion.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Seasonal (hay fever) allergic rhinitis occurs in response to specific allergens (eg,</li>
+<p>pollen from trees, grasses, and weeds) present at predictable times of the year (spring</p>
+<p>and/or fall) and typically causes more acute symptoms.</p>
+<li>Persistent allergic rhinitis occurs year-round in response to nonseasonal allergens</li>
+<p>(eg, dust mites, animal dander, molds) and typically results in less variable, chronic</p>
+<p>symptoms.</p>
+<li>Many patients have a combination of both types, with symptoms year-round and</li>
+<p>seasonal exacerbations.</p>
+<li>Symptoms include clear rhinorrhea, sneezing, nasal congestion, postnasal drip, aller-</li>
+<p>gic conjunctivitis, and pruritic eyes, ears, or nose.</p>
+<li>In children, physical examination may reveal dark circles under the eyes (allergic</li>
+<p>shiners), a transverse nasal crease caused by repeated rubbing of the nose, adenoidal</p>
+<p>breathing, edematous nasal turbinates coated with clear secretions, tearing, and</p>
+<p>periorbital swelling.</p>
+<li>Patients may complain of loss of smell or taste, with sinusitis or polyps the underlying</li>
+<p>cause in many cases. Postnasal drip with cough or hoarseness can be bothersome.</p>
+<li>Untreated rhinitis symptoms may lead to disturbed sleep, malaise, fatigue, and poor</li>
+<p>work or school performance.</p>
+<li>Allergic rhinitis is associated with other conditions, including asthma, chronic</li>
+<p>rhinosinusitis, otitis media, nasal polyposis, respiratory infections, and dental</p>
+<p>malocclusions.</p>
+<li>Complications include recurrent and chronic sinusitis and epistaxis.</li>
+<p>CH77.indd 905 20-11-2020 14:35:49</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>77</th><th>7</th><th>Allergic Rhinitis</th></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<h2>DIAGNOSIS</h2>
+<li>Medical history includes careful description of symptoms, environmental factors and</li>
+<p>exposures, results of previous therapy, use of medications, previous nasal injury or</p>
+<p>surgery, and family history.</p>
+<li>Allergy testing can help determine whether rhinitis is caused by immune response</li>
+<p>to allergens. Immediate-type hypersensitivity skin tests are commonly used. Percu-</p>
+<p>taneous testing is safer and more generally accepted than intradermal testing, which</p>
+<p>is usually reserved for patients requiring confirmation. The radioallergosorbent test</p>
+<p>(RAST) can detect IgE antibodies in the blood that are highly specific for a given</p>
+<p>antigen, but it may be slightly less sensitive than percutaneous tests.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Minimize or prevent symptoms, prevent long-term complica-</li>
+<p>tions, avoid or minimize medication side effects, provide economical therapy, and</p>
+<p>maintain normal lifestyle.</p>
+<li>Figure 77-1 depicts a treatment algorithm for allergic rhinitis.</li>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Avoiding offending allergens is important but difficult to accomplish, especially for</li>
+<p>perennial allergens. Mold growth can be reduced by keeping household humidity</p>
+<p>below 50% and removing obvious growth with bleach or disinfectant.</p>
+<li>Patients sensitive to animals benefit most by removing pets from the home, if feasible.</li>
+<p>Reducing exposure to dust mites by washing bedding on a hot cycle, replacing carpets</p>
+<p>with hard flooring, and using vacuum cleaners with HEPA filters has not been shown</p>
+<p>to provide a clinical benefit. Only encasing bedding in impermeable covers has some</p>
+<p>clinical benefit in children but not adults.</p>
+<li>Steps to prevent poor air quality in homes include avoiding wall-to-wall carpeting,</li>
+<p>using moisture control to prevent mold accumulation, and controlling sources of</p>
+<p>pollution such as cigarette smoke.</p>
+<li>Patients with seasonal allergic rhinitis should keep windows closed and minimize</li>
+<p>time spent outdoors during pollen seasons. Filter masks can be worn while gardening</p>
+<p>or mowing the lawn.</p>
+<li>Nasal saline irrigations may improve nasal symptoms and reduce medicine consumption.</li>
+<p>Adhesive nasal strips can facilitate breathing and reduce nasal obstruction.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Antihistamines</p>
+<li>Histamine H-receptor antagonists bind to H receptors without activating them, pre-</li>
+<p>1 1</p>
+<p>venting histamine binding and action. They are effective in preventing the histamine</p>
+<p>response but not in reversing its effects after they have occurred. Antihistamines</p>
+<p>antagonize increased capillary permeability, wheal-and-flare formation, and itching.</p>
+<li>Oral antihistamines are divided into two categories: (1) nonselective (first-generation</li>
+<p>or sedating antihistamines) and (2) peripherally selective (second-generation or</p>
+<p>nonsedating antihistamines). However, individual agents should be judged on their</p>
+<p>specific sedating effects because variation exists among agents within these categories</p>
+<h2>(Table 77-1).</h2>
+<li>Antihistamines help control symptoms of sneezing, rhinorrhea, itching, and con-</li>
+<p>junctivitis. Symptom relief is caused in part by an anticholinergic drying effect that</p>
+<p>reduces nasal, salivary, and lacrimal gland hypersecretion.</p>
+<li>Antihistamines are only fully effective when taken 1–2 hours before anticipated expo-</li>
+<p>sure to the offending allergen. For seasonal allergic rhinitis, start treatment before</p>
+<p>the expected allergy season begins. Guidelines recommend that nonsedating agents</p>
+<p>be tried first, but tolerance to sedation from first-generation agents can develop</p>
+<p>after 4 days of treatment. If nonsedating agents are ineffective or too expensive,</p>
+<p>906</p>
+<p>CH77.indd 906 20-11-2020 14:35:50</p>
+<h2>Allergic Rhinitis | CHAPTER 77</h2>
+<p>Implement appropriate environmental controls.</p>
+<p>If not totally effective, select single-drug treatment based on symptoms:</p>
+<p>Antihistamines—sneezing, itching, rhinorrhea, and ocular symptoms</p>
+<p>Decongestants (systemic)—nasal congestion</p>
+<p>Intranasal steroids—sneezing, itching, rhinorrhea, and nasal congestion</p>
+<p>If symptoms controlled Assess efficacy. If symptoms are not controlled,</p>
+<p>but adverse effects are assess adherence.</p>
+<p>bothersome or intolerable,</p>
+<p>adjust dosage or switch</p>
+<p>to another agent within the If nonadherent, discuss If patient is adherent,</p>
+<p>same therapeutic category. reasons with patient. adjust dosage or if</p>
+<p>necessary, switch to</p>
+<p>another agent in a</p>
+<p>different therapeutic</p>
+<p>Symptoms controlled. category or add a</p>
+<p>second agent from a</p>
+<p>different therapeutic</p>
+<p>category.</p>
+<p>For persistent disease, once symptoms For seasonal disease, once symptoms</p>
+<p>are adequately controlled with minimal are adequately controlled with minimal</p>
+<p>adverse effects, continue therapy and adverse effects, continue therapy until</p>
+<p>reassess patient in 6–12 months. end of patient’s allergy season. Discuss</p>
+<p>when therapy should be reinitiated.</p>
+<p>If symptoms still not controlled, consider montelukast.</p>
+<p>Additional consideration: Assess patient for appropriateness of immunotherapy</p>
+<p>initially and again if pharmacotherapy options are not sufficiently effective.</p>
+<h2>FIGURE 77-1. Treatment algorithm for allergic rhinitis.</h2>
+<p>first-generation agents may be used. For persistent allergic rhinitis, use an intranasal</p>
+<p>corticosteroid as an alternative to or in combination with systemic antihistamines.</p>
+<li>Drowsiness is the most frequent antihistamine side effect, and it can interfere with</li>
+<pre><code>driving ability or adequate functioning. Sedative effects can be beneficial in patients</code></pre>
+<p>who have difficulty sleeping because of rhinitis symptoms.</p>
+<li>Adverse anticholinergic such as dry mouth, difficulty in voiding urine, constipation,</li>
+<p>and cardiovascular effects may occur (Table 77-1). Antihistamines should be used</p>
+<p>with caution in patients predisposed to urinary retention and in those with increased</p>
+<p>intraocular pressure, hyperthyroidism, and cardiovascular disease.</p>
+<li>Other side effects include loss of appetite, nausea, vomiting, and epigastric distress.</li>
+<p>Taking medication with meals or a full glass of water may prevent gastrointestinal</p>
+<p>(GI) side effects.</p>
+<h2>• Table 77-2 lists recommended doses of oral agents.</h2>
+<li>Intranasal antihistamines: Azelastine is a prescription-only intranasal antihistamine</li>
+<p>that relieves sneezing, rhinorrhea, and nasal pruritus of seasonal allergic rhinitis. The</p>
+<p>0.1% product can be used in children for seasonal allergies, whereas the 0.15% prod-</p>
+<p>uct is labeled only for adults with either type of allergic rhinitis. However, guidelines</p>
+<p>favor use of intranasal antihistamines for seasonal but not persistent allergic rhinitis.</p>
+<p>Caution patients about the potential for drowsiness because systemic availability is</p>
+<p>~40%. Patients may also experience drying effects, headache, and diminished effec-</p>
+<p>tiveness over time. Olopatadine is another intranasal antihistamine; it may cause less</p>
+<p>drowsiness because it is a selective H-receptor antagonist.</p>
+<p>1</p>
+<p>907</p>
+<p>CH77.indd 907 20-11-2020 14:35:50</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<p>TABLE 77-1 Relative Adverse-Effect Profiles of Antihistamines</p>
+<p>Relative</p>
+<p>Relative Sedative Anticholinergic</p>
+<p>Medications Effects Effects</p>
+<p>Alkylamine class, nonselective</p>
+<p>Brompheniramine maleate Low Moderate</p>
+<p>Chlorpheniramine maleate Low Moderate</p>
+<p>Dexchlorpheniramine maleate Low Moderate</p>
+<p>Ethanolamine class, nonselective</p>
+<p>Carbinoxamine maleate High High</p>
+<p>Clemastine fumarate Moderate High</p>
+<p>Diphenhydramine hydrochloride High High</p>
+<p>Phenothiazine class, nonselective</p>
+<p>Promethazine hydrochloride High High</p>
+<p>Piperidine class, nonselective</p>
+<p>Cyproheptadine hydrochloride Low Moderate</p>
+<p>Phthalazinone class, peripherally selective</p>
+<p>Azelastine (nasal only) Low to none Low to none</p>
+<p>Bepotastine (ophthalmic only) Low to none Low to none</p>
+<p>Piperazine class, peripherally selective</p>
+<p>Cetirizine Low to moderate Low to none</p>
+<p>Levocetirizine Low to moderate Low to none</p>
+<p>Piperidine class, peripherally selective</p>
+<p>Desloratadine Low to none Low to none</p>
+<p>Fexofenadine Low to none Low to none</p>
+<p>Loratadine Low to none Low to none</p>
+<p>Olopatadine (nasal only) Low to none Low to none</p>
+<li>Ophthalmic antihistamines: Levocabastine, olopatadine, and bepotastine are oph-</li>
+<p>thalmic antihistamines that can be used for conjunctivitis associated with allergic</p>
+<p>rhinitis. Systemic antihistamines are also usually effective for allergic conjunctivitis.</p>
+<p>Ophthalmic agents are a useful addition to nasal corticosteroids for ocular symptoms.</p>
+<p>Decongestants</p>
+<li>Topical and systemic decongestants are sympathomimetic agents that act on adren-</li>
+<p>ergic receptors in nasal mucosa to produce vasoconstriction, shrink swollen mucosa,</p>
+<p>and improve ventilation. They should only be used when nasal congestion is present.</p>
+<p>Decongestants work well in combination with antihistamines when nasal congestion</p>
+<p>is present.</p>
+<li>Topical decongestants are applied directly to swollen nasal mucosa via drops or</li>
+<p>sprays (Table 77-3). They result in little or no systemic absorption.</p>
+<li>Treatment should not exceed 3–5 days to avoid rhinitis medicamentosa (rebound</li>
+<p>vasodilation with congestion). Patients with this condition use more spray more often</p>
+<p>with less response. Abrupt cessation is an effective treatment, but rebound congestion</p>
+<p>may last for several days or weeks. Nasal corticosteroids have been used successfully</p>
+<p>908</p>
+<p>CH77.indd 908 20-11-2020 14:35:51</p>
+<div class="table-container"><table><tr><th>TABLE 77-1 Relative Adverse-Effect Profiles of Antihistamines</th><th></th><th></th></tr><tr><td>Medications</td><td>Relative Sedative
+Effects</td><td>Relative
+Anticholinergic
+Effects</td></tr><tr><td>Alkylamine class, nonselective</td><td></td><td></td></tr><tr><td>Brompheniramine maleate</td><td>Low</td><td>Moderate</td></tr><tr><td>Chlorpheniramine maleate</td><td>Low</td><td>Moderate</td></tr><tr><td>Dexchlorpheniramine maleate</td><td>Low</td><td>Moderate</td></tr><tr><td>Ethanolamine class, nonselective</td><td></td><td></td></tr><tr><td>Carbinoxamine maleate</td><td>High</td><td>High</td></tr><tr><td>Clemastine fumarate</td><td>Moderate</td><td>High</td></tr><tr><td>Diphenhydramine hydrochloride</td><td>High</td><td>High</td></tr><tr><td>Phenothiazine class, nonselective</td><td></td><td></td></tr><tr><td>Promethazine hydrochloride</td><td>High</td><td>High</td></tr><tr><td>Piperidine class, nonselective</td><td></td><td></td></tr><tr><td>Cyproheptadine hydrochloride</td><td>Low</td><td>Moderate</td></tr><tr><td>Phthalazinone class, peripherally selective</td><td></td><td></td></tr><tr><td>Azelastine (nasal only)</td><td>Low to none</td><td>Low to none</td></tr><tr><td>Bepotastine (ophthalmic only)</td><td>Low to none</td><td>Low to none</td></tr><tr><td>Piperazine class, peripherally selective</td><td></td><td></td></tr><tr><td>Cetirizine</td><td>Low to moderate</td><td>Low to none</td></tr><tr><td>Levocetirizine</td><td>Low to moderate</td><td>Low to none</td></tr><tr><td>Piperidine class, peripherally selective</td><td></td><td></td></tr><tr><td>Desloratadine</td><td>Low to none</td><td>Low to none</td></tr><tr><td>Fexofenadine</td><td>Low to none</td><td>Low to none</td></tr><tr><td>Loratadine</td><td>Low to none</td><td>Low to none</td></tr><tr><td>Olopatadine (nasal only)</td><td>Low to none</td><td>Low to none</td></tr></table></div><h2>Allergic Rhinitis | CHAPTER 77</h2>
+<h2>TABLE 77-2 Medication Dosing for Allergic Rhinitis</h2>
+<p>Dosage for</p>
+<p>Adolescentsa Recommended</p>
+<p>Drugs Brand Names and Adults Pediatric Doses</p>
+<p>Antihistamines</p>
+<p>Oral</p>
+<p>Nonselective</p>
+<p>Chlorpheniramine Various Plain: 4 mg every 6–11 years: 2 mg</p>
+<p>maleate 6 hours every 4–6 hours</p>
+<p>Extended release: 12 mg 2–5 years: 1 mg</p>
+<p>every 12 hours every 4–6 hours</p>
+<p>Clemastine fumarate Tavist 1.34 mg (1 mg base) 6–11 years: syrup</p>
+<p>twice daily, up to 0.67 mg (0.5 mg</p>
+<p>2.68 mg 3 times base) twice daily;</p>
+<p>daily; max. 8.04 mg/ max. 4.02 mg/day</p>
+<p>day (6 mg base/day) (3 mg base/day)</p>
+<p>Diphenhydramine HCl Benadryl, others 25–50 mg every 4–6 6–11 years: 12.5–25</p>
+<p>hours (max. 300 mg every 4–6</p>
+<p>mg/day) hours; max.</p>
+<p>150 mg/day</p>
+<p>Peripherally selective</p>
+<p>Loratadine Alavert, Claritin 10 mg once daily 6–12 years: 10 mg</p>
+<p>once daily or 5 mg</p>
+<p>twice daily</p>
+<p>2–5 years: 5 mg</p>
+<p>once daily</p>
+<p>Fexofenadine Allegra 60 mg every 2–11 years: 30 mg</p>
+<p>12 hours or 180 mg once daily</p>
+<p>once daily</p>
+<p>Cetirizine Zyrtec 5–10 mg once daily 6–11 years: 5–10 mg</p>
+<p>once daily</p>
+<p>6 mo. to 5 years:</p>
+<p>2.5 mg once daily</p>
+<p>Levocetirizine Xyzal 5 mg once daily (in the 6–11 years: 2.5 mg</p>
+<p>evening) once daily (in the</p>
+<p>evening)</p>
+<p>6 months–5 years:</p>
+<p>1.25 mg once</p>
+<p>daily (in the</p>
+<p>evening)</p>
+<p>Nasal</p>
+<p>Azelastine Astelin, Astepro 1–2 sprays per nostril 2–11 years: 1</p>
+<p>once or twice daily spray per nostril</p>
+<p>twice daily</p>
+<p>Olopatadine Patanase Two sprays per nostril 6–11: 1 spray per</p>
+<p>twice daily nostril twice daily</p>
+<p>(Continued )</p>
+<p>909</p>
+<p>CH77.indd 909 20-11-2020 14:35:51</p>
+<div class="table-container"><table><tr><th>TABLE 77-2 Medication Dosing for Allergic Rhinitis</th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Dosage for
+Adolescentsa
+and Adults</td><td>Recommended
+Pediatric Doses</td></tr><tr><td>Antihistamines</td><td></td><td></td><td></td></tr><tr><td>Oral</td><td></td><td></td><td></td></tr><tr><td>Nonselective</td><td></td><td></td><td></td></tr><tr><td>Chlorpheniramine
+maleate</td><td>Various</td><td>Plain: 4 mg every
+6 hours</td><td>6–11 years: 2 mg
+every 4–6 hours</td></tr><tr><td></td><td></td><td>Extended release: 12 mg
+every 12 hours</td><td>2–5 years: 1 mg
+every 4–6 hours</td></tr><tr><td>Clemastine fumarate</td><td>Tavist</td><td>1.34 mg (1 mg base)
+twice daily, up to
+2.68 mg 3 times
+daily; max. 8.04 mg/
+day (6 mg base/day)</td><td>6–11 years: syrup
+0.67 mg (0.5 mg
+base) twice daily;
+max. 4.02 mg/day
+(3 mg base/day)</td></tr><tr><td>Diphenhydramine HCl</td><td>Benadryl, others</td><td>25–50 mg every 4–6
+hours (max. 300
+mg/day)</td><td>6–11 years: 12.5–25
+mg every 4–6
+hours; max.
+150 mg/day</td></tr><tr><td>Peripherally selective</td><td></td><td></td><td></td></tr><tr><td>Loratadine</td><td>Alavert, Claritin</td><td>10 mg once daily</td><td>6–12 years: 10 mg
+once daily or 5 mg
+twice daily</td></tr><tr><td></td><td></td><td></td><td>2–5 years: 5 mg
+once daily</td></tr><tr><td>Fexofenadine</td><td>Allegra</td><td>60 mg every
+12 hours or 180 mg
+once daily</td><td>2–11 years: 30 mg
+once daily</td></tr><tr><td>Cetirizine</td><td>Zyrtec</td><td>5–10 mg once daily</td><td>6–11 years: 5–10 mg
+once daily</td></tr><tr><td></td><td></td><td></td><td>6 mo. to 5 years:
+2.5 mg once daily</td></tr><tr><td>Levocetirizine</td><td>Xyzal</td><td>5 mg once daily (in the
+evening)</td><td>6–11 years: 2.5 mg
+once daily (in the
+evening)</td></tr><tr><td></td><td></td><td></td><td>6 months–5 years:
+1.25 mg once
+daily (in the
+evening)</td></tr><tr><td>Nasal</td><td></td><td></td><td></td></tr><tr><td>Azelastine</td><td>Astelin, Astepro</td><td>1–2 sprays per nostril
+once or twice daily</td><td>2–11 years: 1
+spray per nostril
+twice daily</td></tr><tr><td>Olopatadine</td><td>Patanase</td><td>Two sprays per nostril
+twice daily</td><td>6–11: 1 spray per
+nostril twice daily
+(Continued )</td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>TABLE 77-2 Medication Dosing for Allergic Rhinitis (Continued )</p>
+<p>Dosage for</p>
+<p>Adolescentsa Recommended</p>
+<p>Drugs Brand Names and Adults Pediatric Doses</p>
+<p>Ophthalmic</p>
+<p>Bepotastine Bepreve 1 drop into the affected 2–11 years: 1 drop</p>
+<p>eye(s) twice daily into the affected</p>
+<p>eye(s) twice daily</p>
+<p>Levocabastine Livostin 1 drop into the affected (Safety and efficacy</p>
+<p>eye(s) 4 times daily not established)</p>
+<p>Olopatadine Patanol 1 drop into the affected 3–11 years: 1 drop</p>
+<p>eye(s) twice daily at into the affected</p>
+<p>intervals of 6–8 hours eye(s) twice daily</p>
+<p>at intervals of</p>
+<p>6–8 hours</p>
+<p>Decongestants</p>
+<p>Oral</p>
+<p>Pseudoephedrine Various 60 mg every 4–6 hours 6–11 years: 30 mg</p>
+<p>Sustained release: every 4–6 hours</p>
+<p>120 mg every 2–5 years: 15 mg</p>
+<p>12 hours every 4–6 hours</p>
+<p>Controlled release:</p>
+<p>240 mg once daily</p>
+<p>Phenylephrine Various 0–20 mg every 4 hours 6–11 years: 5 mg</p>
+<p>every 4 hours</p>
+<p>2–5 years: 2.5 mg</p>
+<p>every 4 hours</p>
+<p>Nasal</p>
+<p>Oxymetazoline Various 2–3 sprays twice daily 6–11 years: 2–3</p>
+<p>sprays twice daily</p>
+<p>Phenylephrine Various 2–3 sprays every 6–11 years: 2–3</p>
+<p>4 hours sprays every</p>
+<p>(0.25%–1%) 4 hours (0.25%)</p>
+<p>2–5 years: 2–3 sprays</p>
+<p>every 4 hours</p>
+<p>(0.125%)</p>
+<p>Nasal corticosteroids</p>
+<p>Beclomethasone Beconase AQ 1–2 sprays in 6–11 years: 1 spray</p>
+<p>each nostril in each nostril</p>
+<p>twice daily twice daily</p>
+<p>Qnasl 2 sprays in each nostril 4–11 years: 1 spray</p>
+<p>once daily in each nostril</p>
+<p>once daily</p>
+<p>Budesonide Rhinocort Aqua 1 spray in each nostril 6–11 years: 1 spray</p>
+<p>once daily in each nostril</p>
+<p>once daily</p>
+<p>Flunisolide Various Two sprays in each 6–14 years: 2 sprays</p>
+<p>nostril twice daily in each nostril</p>
+<p>twice daily</p>
+<p>(Continued )</p>
+<p>910</p>
+<p>CH77.indd 910 20-11-2020 14:35:51</p>
+<div class="table-container"><table><tr><th>TABLE 77-2 Medication Dosing for Allergic Rhinitis (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Dosage for
+Adolescentsa
+and Adults</td><td>Recommended
+Pediatric Doses</td></tr><tr><td>Ophthalmic</td><td></td><td></td><td></td></tr><tr><td>Bepotastine</td><td>Bepreve</td><td>1 drop into the affected
+eye(s) twice daily</td><td>2–11 years: 1 drop
+into the affected
+eye(s) twice daily</td></tr><tr><td>Levocabastine</td><td>Livostin</td><td>1 drop into the affected
+eye(s) 4 times daily</td><td>(Safety and efficacy
+not established)</td></tr><tr><td>Olopatadine</td><td>Patanol</td><td>1 drop into the affected
+eye(s) twice daily at
+intervals of 6–8 hours</td><td>3–11 years: 1 drop
+into the affected
+eye(s) twice daily
+at intervals of
+6–8 hours</td></tr><tr><td>Decongestants</td><td></td><td></td><td></td></tr><tr><td>Oral</td><td></td><td></td><td></td></tr><tr><td>Pseudoephedrine</td><td>Various</td><td>60 mg every 4–6 hours
+Sustained release:
+120 mg every
+12 hours</td><td>6–11 years: 30 mg
+every 4–6 hours</td></tr><tr><td></td><td></td><td></td><td>2–5 years: 15 mg
+every 4–6 hours</td></tr><tr><td></td><td></td><td>Controlled release:
+240 mg once daily</td><td></td></tr><tr><td>Phenylephrine</td><td>Various</td><td>0–20 mg every 4 hours</td><td>6–11 years: 5 mg
+every 4 hours</td></tr><tr><td></td><td></td><td></td><td>2–5 years: 2.5 mg
+every 4 hours</td></tr><tr><td>Nasal</td><td></td><td></td><td></td></tr><tr><td>Oxymetazoline</td><td>Various</td><td>2–3 sprays twice daily</td><td>6–11 years: 2–3
+sprays twice daily</td></tr><tr><td>Phenylephrine</td><td>Various</td><td>2–3 sprays every
+4 hours
+(0.25%–1%)</td><td>6–11 years: 2–3
+sprays every
+4 hours (0.25%)</td></tr><tr><td></td><td></td><td></td><td>2–5 years: 2–3 sprays
+every 4 hours
+(0.125%)</td></tr><tr><td>Nasal corticosteroids</td><td></td><td></td><td></td></tr><tr><td>Beclomethasone</td><td>Beconase AQ</td><td>1–2 sprays in
+each nostril
+twice daily</td><td>6–11 years: 1 spray
+in each nostril
+twice daily</td></tr><tr><td></td><td>Qnasl</td><td>2 sprays in each nostril
+once daily</td><td>4–11 years: 1 spray
+in each nostril
+once daily</td></tr><tr><td>Budesonide</td><td>Rhinocort Aqua</td><td>1 spray in each nostril
+once daily</td><td>6–11 years: 1 spray
+in each nostril
+once daily</td></tr><tr><td>Flunisolide</td><td>Various</td><td>Two sprays in each
+nostril twice daily</td><td>6–14 years: 2 sprays
+in each nostril
+twice daily
+(Continued )</td></tr></table></div><h2>Allergic Rhinitis | CHAPTER 77</h2>
+<p>TABLE 77-2 Medication Dosing for Allergic Rhinitis (Continued )</p>
+<p>Dosage for</p>
+<p>Adolescentsa Recommended</p>
+<p>Drugs Brand Names and Adults Pediatric Doses</p>
+<p>Fluticasone Flonase 1–2 sprays in each 2–11 years: 1 spray</p>
+<p>nostril daily in each nostril</p>
+<p>once daily once daily</p>
+<p>Mometasone Veramyst, 2 sprays in each nostril 2–11 years: 1 spray</p>
+<p>Nasonex, once daily in each nostril</p>
+<p>Nasacort once daily</p>
+<p>Triamcinolone Nasacort AQ 2 sprays in each 2–11 years: 1 spray</p>
+<p>nostril once daily in each nostril</p>
+<p>once daily</p>
+<p>Other nasal medications</p>
+<p>Cromolyn Nasalcrom 1 spray in each 2–11 years: 1 spray</p>
+<p>nostril 3–4 in each nostril 3–4</p>
+<p>times daily times daily</p>
+<p>Ipratropium Atrovent 2 sprays in each 5–11 years: 2 sprays</p>
+<p>nostril 4 times daily in each nostril 4</p>
+<p>times daily</p>
+<p>Leukotriene receptor antagonist</p>
+<p>Montelukast Singulair 10 mg orally once daily 6–14 years: 5 mg</p>
+<h2>chewable tablet</h2>
+<p>once daily</p>
+<p>2–5 years: 4 mg</p>
+<h2>chewable tablet</h2>
+<p>or oral granules</p>
+<p>once daily</p>
+<p>6–23 months: 4 mg</p>
+<p>oral granules</p>
+<p>once daily</p>
+<p>aAdolescent age is ≥12 years except for flunisolide and montelukast (≥15 years).</p>
+<h2>TABLE 77-3 Duration of Action of Topical Decongestants</h2>
+<p>Medications Durations of Action (hours)</p>
+<p>Short acting</p>
+<p>Phenylephrine hydrochloride Up to 4</p>
+<p>Intermediate acting</p>
+<p>Naphazoline hydrochloride 2–6</p>
+<p>Tetrahydrozoline hydrochloride</p>
+<p>Long acting</p>
+<p>Oxymetazoline hydrochloride Up to 12</p>
+<p>Xylometazoline hydrochloride</p>
+<p>911</p>
+<p>CH77.indd 911 20-11-2020 14:35:51</p>
+<div class="table-container"><table><tr><th>TABLE 77-2 Medication Dosing for Allergic Rhinitis (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drugs</td><td>Brand Names</td><td>Dosage for
+Adolescentsa
+and Adults</td><td>Recommended
+Pediatric Doses</td></tr><tr><td>Fluticasone</td><td>Flonase</td><td>1–2 sprays in each
+nostril daily
+once daily</td><td>2–11 years: 1 spray
+in each nostril
+once daily</td></tr><tr><td>Mometasone</td><td>Veramyst,
+Nasonex,
+Nasacort</td><td>2 sprays in each nostril
+once daily</td><td>2–11 years: 1 spray
+in each nostril
+once daily</td></tr><tr><td>Triamcinolone</td><td>Nasacort AQ</td><td>2 sprays in each
+nostril once daily</td><td>2–11 years: 1 spray
+in each nostril
+once daily</td></tr><tr><td>Other nasal medications</td><td></td><td></td><td></td></tr><tr><td>Cromolyn</td><td>Nasalcrom</td><td>1 spray in each
+nostril 3–4
+times daily</td><td>2–11 years: 1 spray
+in each nostril 3–4
+times daily</td></tr><tr><td>Ipratropium</td><td>Atrovent</td><td>2 sprays in each
+nostril 4 times daily</td><td>5–11 years: 2 sprays
+in each nostril 4
+times daily</td></tr><tr><td>Leukotriene receptor antagonist</td><td></td><td></td><td></td></tr><tr><td>Montelukast</td><td>Singulair</td><td>10 mg orally once daily</td><td>6–14 years: 5 mg
+chewable tablet
+once daily</td></tr><tr><td></td><td></td><td></td><td>2–5 years: 4 mg
+chewable tablet
+or oral granules
+once daily</td></tr><tr><td></td><td></td><td></td><td>6–23 months: 4 mg
+oral granules
+once daily</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 77-3 Duration of Action of Topical Decongestants</th><th></th></tr><tr><td>Medications</td><td>Durations of Action (hours)</td></tr><tr><td>Short acting</td><td></td></tr><tr><td>Phenylephrine hydrochloride</td><td>Up to 4</td></tr><tr><td>Intermediate acting</td><td></td></tr><tr><td>Naphazoline hydrochloride</td><td>2–6</td></tr><tr><td>Tetrahydrozoline hydrochloride</td><td></td></tr><tr><td>Long acting</td><td></td></tr><tr><td>Oxymetazoline hydrochloride</td><td>Up to 12</td></tr><tr><td>Xylometazoline hydrochloride</td><td></td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>but take several days to work. Weaning off the topical decongestant can be accom-</p>
+<p>plished by decreasing dosing frequency or concentration over several weeks. Com-</p>
+<p>bining the weaning process with nasal corticosteroids may be helpful.</p>
+<li>Other adverse effects of topical decongestants are burning, stinging, sneezing, and</li>
+<p>dryness of the nasal mucosa.</p>
+<li>These products should be used only when absolutely necessary (eg, at bedtime) and</li>
+<p>in doses that are as small and infrequent as possible. Duration of therapy should be</p>
+<p>limited to 3 days or less.</p>
+<li>Pseudoephedrine (Table 77-2) is an oral decongestant that has a slower onset of</li>
+<p>action than topical agents but may last longer and cause less local irritation. Rhinitis</p>
+<p>medicamentosa does not occur with oral decongestants. Doses up to 180 mg pro-</p>
+<p>duce no measurable change in blood pressure or heart rate. However, higher doses</p>
+<p>(210–240 mg) may raise both blood pressure and heart rate. Systemic decongestants</p>
+<p>should be avoided in hypertensive patients unless absolutely necessary. Severe hyper-</p>
+<p>tensive reactions can occur when pseudoephedrine is given with monoamine oxidase</p>
+<p>inhibitors. Pseudoephedrine can cause mild CNS stimulation, even at therapeutic</p>
+<p>doses. Because of misuse as a component in the illegal manufacture of metham-</p>
+<p>phetamine, pseudoephedrine is restricted to behind-the-counter sale with a limit on</p>
+<p>monthly purchases.</p>
+<li>Phenylephrine has replaced pseudoephedrine in many nonprescription antihista-</li>
+<p>mine–decongestant combination products because of legal restrictions on pseudo-</p>
+<p>ephedrine sales.</p>
+<li>Combination oral products containing a decongestant and antihistamine are rational</li>
+<p>because of different mechanisms of action. However, antihistamines must be taken</p>
+<p>on a regular schedule, but decongestants should only be used when needed. Con-</p>
+<p>sumers should read product labels carefully to avoid therapeutic duplication and use</p>
+<p>combination products only for short courses.</p>
+<p>Nasal Corticosteroids</p>
+<li>Intranasal corticosteroids reduce inflammation by reducing mediator release, sup-</li>
+<p>pressing neutrophil chemotaxis, reducing intracellular edema, causing mild vasocon-</p>
+<p>striction, and inhibiting mast cell–mediated, late-phase reactions.</p>
+<li>They relieve sneezing, rhinorrhea, itching, and nasal congestion (Table 77-2).</li>
+<p>Blocked nasal passages should be cleared with a decongestant or saline irrigation</p>
+<p>before administration to ensure adequate penetration of the spray. Advise patients</p>
+<p>to avoid sneezing or blowing their nose for at least 10 minutes after administration.</p>
+<p>Some patients improve within a few days, but peak response may require 2–3 weeks.</p>
+<p>The dosage may be reduced once a response is achieved.</p>
+<li>These agents are an excellent choice for persistent rhinitis and can also be excellent</li>
+<p>for seasonal rhinitis, especially if begun before exposure and the onset of symptoms.</p>
+<p>Recent guidelines suggest that nasal corticosteroids should be recommended as</p>
+<p>initial therapy for allergic rhinitis.</p>
+<li>Side effects are minimal and include sneezing, stinging, headache, epistaxis, and rare</li>
+<p>infections with Candida albicans.</p>
+<p>Cromolyn Sodium</p>
+<li>Cromolyn sodium, a mast cell stabilizer, is available as a nonprescription nasal spray</li>
+<p>for symptomatic prevention and treatment of allergic rhinitis. It prevents antigen-</p>
+<p>triggered mast cell degranulation and release of mediators, including histamine. The</p>
+<p>most common side effect is local irritation (sneezing and nasal stinging).</p>
+<li>Nasal passages should be cleared before administration, and inhaling gently through</li>
+<p>the nose during administration enhances distribution to the entire nasal lining. Dos-</p>
+<p>ing must be repeated at 6-hour intervals to maintain the effect (Table 77-2).</p>
+<li>For seasonal rhinitis, treatment should be initiated just before the start of the offend-</li>
+<p>ing allergen’s season and continue throughout the season.</p>
+<p>912</p>
+<p>CH77.indd 912 20-11-2020 14:35:52</p>
+<h2>Allergic Rhinitis | CHAPTER 77</h2>
+<li>In persistent rhinitis, improvement may not be seen for 2–4 weeks; antihistamines or</li>
+<p>decongestants may be needed during this initial phase of therapy.</p>
+<p>Ipratropium Bromide</p>
+<li>Ipratropium bromide nasal spray is an anticholinergic agent that exhibits antisecre-</li>
+<p>tory properties when applied locally. It provides symptomatic relief of rhinorrhea</p>
+<p>associated with allergic and other forms of chronic rhinitis.</p>
+<li>It is not included in current treatment guidelines for allergic rhinitis and should be</li>
+<p>reserved for patients who fail or cannot tolerate other therapies. The optimal dose</p>
+<p>should be determined based on the specific patient’s symptoms and response.</p>
+<li>Adverse effects are mild and include headache, epistaxis, and nasal dryness.</li>
+<p>Montelukast</p>
+<li>Montelukast is a leukotriene receptor antagonist approved for treatment of persistent</li>
+<p>allergic rhinitis in children as young as 6 months and for seasonal allergic rhinitis in</p>
+<h2>children as young as 2 years (Table 77-2).</h2>
+<li>Montelukast is a third-line choice after antihistamines and nasal corticosteroids.</li>
+<p>Monotherapy is no more effective than peripherally selective antihistamines and is</p>
+<p>less effective than intranasal corticosteroids; however, the combination of montelu-</p>
+<p>kast and an antihistamine is more effective than an antihistamine alone. Montelukast</p>
+<p>monotherapy has been recommended for children with mild persistent asthma and</p>
+<p>coexisting allergic rhinitis.</p>
+<p>Immunotherapy</p>
+<li>Immunotherapy is the process of administering doses of antigens responsible for</li>
+<p>eliciting allergic symptoms into a patient with the intent of inducing tolerance to</p>
+<p>the allergen when natural exposure occurs. Until recently, immunotherapy was only</p>
+<p>available for subcutaneous injection; sublingual dosage forms are now available for a</p>
+<p>limited number of allergens.</p>
+<li>Beneficial effects of immunotherapy may result from induction of IgG-blocking</li>
+<p>antibodies, reduction in specific IgE (long-term), reduced recruitment of effector</p>
+<p>cells, altered T-cell cytokine balance, T-cell anergy, and alteration of regulatory T</p>
+<p>cell activity.</p>
+<li>Good candidates for immunotherapy include patients with a strong history of severe</li>
+<p>symptoms unsuccessfully controlled by avoidance and pharmacotherapy and patients</p>
+<p>unable to tolerate adverse effects of drug therapy. Poor candidates include patients with</p>
+<p>medical conditions that compromise the ability to tolerate an anaphylactic-type reaction,</p>
+<p>patients with impaired immune systems, and patients with a history of nonadherence.</p>
+<li>For subcutaneous immunotherapy, very dilute solutions are given initially once or</li>
+<p>twice weekly. The concentration is increased until the maximum tolerated dose or</p>
+<p>highest planned dose is achieved. This maintenance dose is continued in slowly</p>
+<p>increasing intervals over several years, depending on clinical response. Better results</p>
+<p>are obtained with year-round rather than seasonal injections.</p>
+<li>Sublingual immunotherapy is available for ragweed, certain grasses, and house dust</li>
+<p>mite allergen. Ragweed and grass allergens are started 12 weeks before the allergen</p>
+<p>season and continued throughout the season. Because house dust mites cause persis-</p>
+<p>tent allergic rhinitis, this treatment is given year-round. The first dose is administered</p>
+<p>in the physician’s office to allow observation of the patient for 30 minutes for hyper-</p>
+<p>sensitivity reactions. The patient places the tablet under the tongue where it dissolves;</p>
+<p>patients should not swallow for at least 1 minute. After the first dose is administered</p>
+<p>without incident, patients can take sublingual immunotherapy at home, but an auto-</p>
+<p>injectable epinephrine must be prescribed and available for immediate use.</p>
+<li>Adverse reactions with subcutaneous immunotherapy include mild induration and</li>
+<p>swelling at the injection site. More severe reactions (generalized urticaria, broncho-</p>
+<p>spasm, laryngospasm, vascular collapse, and death from anaphylaxis) occur rarely.</p>
+<p>913</p>
+<p>CH77.indd 913 20-11-2020 14:35:52</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<p>Severe reactions are treated with epinephrine, antihistamines, and systemic</p>
+<p>corticosteroids. The most common reactions with sublingual immunotherapy</p>
+<p>are pruritus of the mouth, ears, and tongue; throat irritation; and mouth edema.</p>
+<p>Sublingual immunotherapy is only approved for persons age 18 year and older.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor patients regularly for reduction in severity of identified target symptoms and</li>
+<p>presence of side effects.</p>
+<li>Ask patients about their satisfaction with the management of their allergic rhinitis.</li>
+<p>Management should result in minimal disruption to their normal lifestyle.</p>
+<li>The Medical Outcomes Study 36-Item Short Form Health Survey and the Rhino-</li>
+<p>conjunctivitis Quality of Life Questionnaire measure symptom improvement and</p>
+<p>parameters such as sleep quality, nonallergic symptoms (eg, fatigue and poor concen-</p>
+<p>tration), emotions, and participation in a variety of activities.</p>
+<p>See Chapter e13, Allergic Rhinitis, authored by J. Russell May, for a more detailed discus-</p>
+<p>sion of this topic.</p>
+<p>914</p>
+<p>CH77.indd 914 20-11-2020 14:35:52</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

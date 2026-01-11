@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>74. Acute Kidney Injury</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>74. Acute Kidney Injury</h1>
+        </header>
+        <main>
+            <p>864</p>
+<h2>RETPAHC</h2>
+<p>74</p>
+<p>Acute Kidney Injury</p>
+<li>Acute kidney injury (AKI) is a clinical syndrome generally defined by an abrupt</li>
+<pre><code>reduction in kidney function as evidenced by changes in serum creatinine (Scr),</code></pre>
+<p>blood urea nitrogen (BUN), and urine output.</p>
+<li>RIFLE (Risk, Injury, Failure, Loss of Kidney Function, and End-Stage Renal Dis-</li>
+<p>ease), AKIN (Acute Kidney Injury Network), and the Kidney Disease: Improving</p>
+<p>Global Outcomes (KDIGO) clinical practice guidelines are three criteria-based</p>
+<p>classification systems developed to define and stage AKI in different patient popula-</p>
+<h2>tions (Table 74-1).</h2>
+<li>All three staging systems have been validated across different patient popula-</li>
+<p>tions, and their staging correlates closely with hospital mortality, cost, and length</p>
+<p>of stay.</p>
+<li>Scr and urine output are the main diagnostic criteria for each staging system.</li>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>AKI can be categorized as prerenal (resulting from decreased renal perfusion in the</li>
+<p>setting of undamaged parenchymal tissue), intrinsic (resulting from structural dam-</p>
+<p>age to the kidney, most commonly the tubule from an ischemic or toxic insult), and</p>
+<p>postrenal (resulting from obstruction of urine flow downstream from the kidney)</p>
+<h2>(Figure 74-1).</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patient presentation varies widely and depends on the underlying cause. Early rec-</li>
+<p>ognition and cause identification are critical, as they directly affect the outcome of</p>
+<p>AKI. Outpatients often are not in acute distress; hospitalized patients may develop</p>
+<p>AKI after a catastrophic event.</p>
+<li>Symptoms in the outpatient setting include acute change in urinary habits, sud-</li>
+<p>den weight gain, or severe abdominal or flank pain. Signs include edema, colored</p>
+<p>or foamy urine, and, in volume-depleted patients, postural hypotension, decreased</p>
+<p>jugular venous pressure, and dry mucous membranes.</p>
+<h2>DIAGNOSIS</h2>
+<li>Thorough medical and medication histories, physical examination, assessment of</li>
+<p>laboratory values, and, if needed, imaging studies are important in the diagnosis</p>
+<p>of AKI.</p>
+<li>Scr cannot be used alone to diagnose AKI because it is insensitive to rapid changes in</li>
+<p>glomerular filtration rate (GFR). Scr lag behind the GFR’s decline by 1-2 days, leading</p>
+<p>to a significant overestimation of GFR in the early stages of AKI and a potential delay</p>
+<p>in diagnosis of the syndrome. The use of BUN in AKI is very limited because urea</p>
+<p>production and renal clearance are heavily influenced by extrarenal factors such as</p>
+<p>critical illness, volume status, protein intake, and medications.</p>
+<li>Urine output measured over a specified period of time allows for short-term assess-</li>
+<pre><code>ment of renal function, but its utility is limited to cases in which it is significantly</code></pre>
+<p>decreased.</p>
+<li>In addition to BUN and Scr, selected blood and urine tests, and urinary sediment are</li>
+<p>used to differentiate the cause of AKI and guide patient management (Tables 74-2</p>
+<p>and 74-3).</p>
+<li>Simultaneous measurement of urine and serum electrolytes and calculation of the</li>
+<p>fractional excretion of sodium (FE ) can help determine the etiology of AKI (see</p>
+<p>Na</p>
+<h2>Table 74-2).</h2>
+<p>CH74.indd 864 20-11-2020 13:02:30</p>
+<div class="table-container"><table><tr><th>Acute Kidney Injury</th><th>74</th><th>RETPAHC</th></tr></table></div><h2>Acute Kidney Injury | CHAPTER 74</h2>
+<p>TABLE 74-1 RIFLE, AKIN, and KDIGO Classification Schemes for AKIa</p>
+<p>Urine Output</p>
+<p>RIFLE Category Scr and GFRb Criteria Criteria</p>
+<p>Risk Scr increase to 1.5-fold or GFR decrease &lt;0.5 mL/kg/hr</p>
+<p>&gt;25% from baseline for ≥6 hr</p>
+<p>Injury Scr increase to 2-fold or GFR decrease &lt;0.5 mL/kg/hr for</p>
+<p>&gt;50% from baseline ≥12 hr</p>
+<p>Failure Scr increase to 3-fold or GFR decrease Anuria for ≥12 hr</p>
+<p>&gt;75% from baseline, or Scr ≥4 mg/dL</p>
+<p>(354 μmol/L) with an acute increase of</p>
+<p>at least 0.5 mg/dL (44 μmol/L)</p>
+<pre><code>Loss Complete loss of function (RRT) for &gt;4 weeks</code></pre>
+<p>ESKD RRT &gt;3 months</p>
+<p>Urine Output</p>
+<p>AKIN Criteria Scr Criteria Criteria</p>
+<p>Stage 1 Scr increase ≥0.3 mg/dL (27 μmol/L) &lt;0.5 mL/kg/hr</p>
+<p>or 1.5- to 2-fold from baseline for ≥6 hr</p>
+<p>Stage 2 Scr increase &gt;2- to 3-fold from baseline &lt;0.5 mL/kg/hr for</p>
+<p>≥12 hr</p>
+<p>Stage 3 Scr increase &gt;3-fold from baseline, or Scr ≥4 &lt;0.3 mL/kg/hr for</p>
+<p>mg/dL (354 μmol/L) with an acute increase ≥24 hr or anuria</p>
+<p>of at least 0.5 mg/dL (44 μmol/L), or need for ≥12 hr</p>
+<p>for RRT</p>
+<p>Urine Output</p>
+<p>KDIGO Criteria Scr Criteria Criteria</p>
+<p>Stage 1 Scr increase ≥0.3 mg/dL (27 μmol/L) &lt;0.5 mL/kg/hr for</p>
+<p>or 1.5–1.9 times from baseline 6–12 hr</p>
+<p>Stage 2 Scr increase 2–2.9 times from baseline &lt;0.5 mL/kg/hr for</p>
+<p>≥12 hr</p>
+<p>Stage 3 Scr increase three times from baseline, or Scr Anuria for ≥12 hr</p>
+<p>≥4 mg/dL (354 μmol/L), or need for RRT, or</p>
+<p>eGFRc &lt;35 mL/min/1.73 m2 (0.34 mL/sec/</p>
+<p>m2) in patients &lt;18 years</p>
+<p>aFor all staging systems, the criterion that leads to worst possible diagnosis should be used.</p>
+<p>bGFR calculated using the Modification of Diet in Renal Disease (MDRD) equation.</p>
+<p>cGFR calculated using the Schwartz formula.</p>
+<p>AKI, acute kidney injury; AKIN, Acute Kidney Injury Network; ESKD, end-stage kidney disease; eGFR,</p>
+<p>estimated glomerular filtration rate; h, hours; KDIGO, Kidney Disease: Improving Global Outcomes;</p>
+<p>RIFLE, Risk, Injury, Failure, Loss of Kidney Function, and End-Stage Kidney Disease; RRT, renal</p>
+<p>replacement therapy; Scr, serum creatinine.</p>
+<li>The FE is one of the better diagnostic parameters to differentiate the cause of AKI</li>
+<p>Na</p>
+<p>and is calculated as:</p>
+<p>FE =(U ×Scr×100)/(U ×S )</p>
+<p>Na Na Cr Na</p>
+<p>where U = urine sodium, Scr = serum creatinine, U = urine creatinine, and S</p>
+<p>Na Cr Na</p>
+<p>= serum sodium.</p>
+<li>A number of new serum and urinary biomarkers have been investigated to detect and</li>
+<p>predict the clinical outcomes of AKI, including tissue inhibitor of metalloproteinases</p>
+<p>2 (TIMP-2) and insulin-like growth factor binding protein 7 (IGFBP7).</p>
+<p>865</p>
+<p>CH74.indd 865 20-11-2020 13:02:35</p>
+<div class="table-container"><table><tr><th>TABLE 74-1 RIFLE, AKIN, and KDIGO Classification Schemes for AKIa</th><th></th><th></th></tr><tr><td>RIFLE Category</td><td>Scr and GFRb Criteria</td><td>Urine Output
+Criteria</td></tr><tr><td>Risk</td><td>Scr increase to 1.5-fold or GFR decrease
+&gt;25% from baseline</td><td>&lt;0.5 mL/kg/hr
+for ≥6 hr</td></tr><tr><td>Injury</td><td>Scr increase to 2-fold or GFR decrease
+&gt;50% from baseline</td><td>&lt;0.5 mL/kg/hr for
+≥12 hr</td></tr><tr><td>Failure</td><td>Scr increase to 3-fold or GFR decrease
+&gt;75% from baseline, or Scr ≥4 mg/dL
+(354 μmol/L) with an acute increase of
+at least 0.5 mg/dL (44 μmol/L)</td><td>Anuria for ≥12 hr</td></tr><tr><td>Loss</td><td>Complete loss of function (RRT) for &gt;4 weeks</td><td></td></tr><tr><td>ESKD</td><td>RRT &gt;3 months</td><td></td></tr><tr><td>AKIN Criteria</td><td>Scr Criteria</td><td>Urine Output
+Criteria</td></tr><tr><td>Stage 1</td><td>Scr increase ≥0.3 mg/dL (27 μmol/L)
+or 1.5- to 2-fold from baseline</td><td>&lt;0.5 mL/kg/hr
+for ≥6 hr</td></tr><tr><td>Stage 2</td><td>Scr increase &gt;2- to 3-fold from baseline</td><td>&lt;0.5 mL/kg/hr for
+≥12 hr</td></tr><tr><td>Stage 3</td><td>Scr increase &gt;3-fold from baseline, or Scr ≥4
+mg/dL (354 μmol/L) with an acute increase
+of at least 0.5 mg/dL (44 μmol/L), or need
+for RRT</td><td>&lt;0.3 mL/kg/hr for
+≥24 hr or anuria
+for ≥12 hr</td></tr><tr><td>KDIGO Criteria</td><td>Scr Criteria</td><td>Urine Output
+Criteria</td></tr><tr><td>Stage 1</td><td>Scr increase ≥0.3 mg/dL (27 μmol/L)
+or 1.5–1.9 times from baseline</td><td>&lt;0.5 mL/kg/hr for
+6–12 hr</td></tr><tr><td>Stage 2</td><td>Scr increase 2–2.9 times from baseline</td><td>&lt;0.5 mL/kg/hr for
+≥12 hr</td></tr><tr><td>Stage 3</td><td>Scr increase three times from baseline, or Scr
+≥4 mg/dL (354 μmol/L), or need for RRT, or
+eGFRc &lt;35 mL/min/1.73 m2 (0.34 mL/sec/
+m2) in patients &lt;18 years</td><td>Anuria for ≥12 hr</td></tr></table></div><h2>866 SECTION</h2>
+<p>14</p>
+<p>|</p>
+<p>Renal</p>
+<p>Disorders</p>
+<p>Acute kidney injury</p>
+<p>Clinical history</p>
+<p>HPI, PMH, medication history, allergies, rule out pseudorenal causes;</p>
+<p>Physical examination</p>
+<p>Blood pressure, weight, fluid status, urine output;</p>
+<p>Laboratory tests</p>
+<p>Chemistry assays, hematologic tests, urine sediment, urinalysis, serologic tests, etc.;</p>
+<p>Diagnostic tests</p>
+<p>Renal imaging, biopsy</p>
+<p>Prerenal AKI Intrinsic AKI Postrenal AKI</p>
+<p>Volume depletion Vascular damage Glomerular damage Acute tubular necrosis Acute interstitial Bladder outlet obstruction</p>
+<p>Hemorrhage, GI losses, Renal artery/vein Nephrotic/nephritic Ischemic nephritis BPH, malignancy,</p>
+<p>Renal losses (drug-induced or thrombosis, glomerulopathies, Hypotension, sepsis Drugs anticholinergic drugs,</p>
+<p>osmotic diuresis, diabetes atherothromboembolism, autoimmune diseases NSAIDs, certain displaced bladder catheter;</p>
+<p>insipidus) skin losses (burns), vasculitis, accelerated Endogenous toxins antibiotics Ureteral obstruction</p>
+<p>Third-space losses (hypoalbuminemia) HTN, HUS, or TTP Myoglobin, hemoglobin, Malignancy, retroperitoneal</p>
+<p>uric acid, myeloma light Infection</p>
+<p>Decreased effective fibrosis, nephrolithiasis;</p>
+<p>chains</p>
+<p>circulatory blood volume</p>
+<p>Renal pelvis/tubular</p>
+<p>Decreased cardiac output, pulmonary Exogenous toxins</p>
+<p>obstruction</p>
+<p>HTN, valvular diseases, systemic Nephrotoxic drugs,</p>
+<p>Nephrolithiasis, drugs</p>
+<p>vasodilation, sepsis, liver failure contrast dyes</p>
+<p>Functional</p>
+<p>NSAIDs, ACEIs, ARBs</p>
+<p>(ACEIs, angiotensin-converting enzyme inhibitors; ARBs, angiotensin receptor blockers; BPH, benign prostatic hyperplasia; GI, gastrointestinal; HPI, history of present illness; HTN,</p>
+<p>hypertension; HUS, hemolytic uremic syndrome; NSAIDs, nonsteroidal anti-inflammatory drugs; PMH, past medical history; TTP, thrombotic thrombocytopenic purpura.)</p>
+<p>FIGURE 74-1. Classification of acute kidney injury (AKI) based on etiology.</p>
+<p>CH74.indd</p>
+<p>866</p>
+<p>20-11-2020</p>
+<p>13:02:36</p>
+<h2>Acute Kidney Injury | CHAPTER 74</h2>
+<p>TABLE 74-2 Diagnostic Parameters for Differentiating Causes of AKIa</p>
+<p>Laboratory Test Prerenal AKI Intrinsic AKI Postrenal AKI</p>
+<p>Urine sediment Hyaline casts, may be Granular casts, Cellular debris</p>
+<p>normal cellular debris</p>
+<p>Urinary RBC None 2–4+ Variable</p>
+<p>Urinary WBC None 2–4+ 1+</p>
+<p>Urine Na (mEq/L or &lt;20 &gt;40 &gt;40</p>
+<p>mmol/L)</p>
+<p>FE (%) &lt;1 &gt;2 Variable</p>
+<p>Na</p>
+<p>Urine specific &gt;1.018 &lt;1.012 Variable</p>
+<p>gravity</p>
+<p>aCommon laboratory tests are used to classify the cause of AKI. Functional AKI, which is not</p>
+<p>included in this table, would have laboratory values similar to those seen in prerenal AKI. The</p>
+<p>laboratory results listed under intrinsic AKI are those seen in acute tubular necrosis, the most</p>
+<p>common cause of intrinsic AKI.</p>
+<p>AKI, acute kidney injury; FE , fractional excretion of sodium; RBC, red blood cell; Scr, serum</p>
+<p>Na</p>
+<p>creatinine; WBC, white blood cell.</p>
+<h2>PREVENTION</h2>
+<li>Goals of Prevention: The goals are to screen and identify patients at risk; monitor high-risk</li>
+<p>patients until the risk subsides; and implement prevention strategies when appropriate.</p>
+<h2>GENERAL APPROACH TO PREVENTION</h2>
+<p>Nonpharmacologic Therapy</p>
+<li>Intravenous fluids are routinely used in the prevention of AKI. KDIGO guidelines</li>
+<p>recommend isotonic crystalloids over colloids for intravascular volume expansion.</p>
+<p>Balanced solutions may offer some benefit compared to normal saline solutions.</p>
+<li>Fluids are the mainstay of therapy for prevention of contrast-induced acute kidney</li>
+<p>injury (CI-AKI), a common cause of acute tubular necrosis in the inpatient setting.</p>
+<li>KDIGO guidelines recommend either sodium bicarbonate or isotonic saline infu-</li>
+<p>sions in high-risk individuals receiving radiocontrast media. A common sodium</p>
+<p>bicarbonate regimen is 154 mEq/L (mmol/L) infused at 3 mL/kg/hr for 1 hour before</p>
+<p>the procedure and at 1 mL/kg/hr for 6 hours after the procedure. One frequently cited</p>
+<p>normal saline regimen is 1 mL/kg/hr for 12 hours pre- and post-procedure.</p>
+<li>Oral ingestion of a specific amount of water pre- and post-procedure is best reserved</li>
+<pre><code>for outpatients with either normal or mildly impaired renal function undergoing</code></pre>
+<p>elective procedures.</p>
+<p>Pharmacologic Therapy</p>
+<li>Inadequate evidence exists to support use of ascorbic acid, an antioxidant, in the</li>
+<p>treatment or prevention of CI-AKI. The landmark PRESERVE trial demonstrated no</p>
+<p>benefit of N-acetylcysteine in the prevention of CI-AKI.</p>
+<li>Both hyper- and hypoglycemia are associated with adverse patient outcomes. Guide-</li>
+<p>lines from the American Diabetes Association and Surviving Sepsis Campaign rec-</p>
+<p>ommend a glycemic target range of 140–180 mg/dL (7.8–10 mmol/L) and less than</p>
+<p>180 mg/dL (10 mmol/L), respectively, in critically ill patients.</p>
+<h2>TREATMENT OF ACUTE KIDNEY INJURY</h2>
+<li>Goals of Treatment: Short-term goals include minimizing the degree of insult to the</li>
+<pre><code>kidney, reducing extrarenal complications, and expediting recovery of renal function.</code></pre>
+<pre><code>Restoration of renal function to pre-AKI baseline is the ultimate goal.</code></pre>
+<p>867</p>
+<p>CH74.indd 867 20-11-2020 13:02:37</p>
+<div class="table-container"><table><tr><th>TABLE 74-2 Diagnostic Parameters for Differentiating Causes of AKIa</th><th></th><th></th><th></th></tr><tr><td>Laboratory Test</td><td>Prerenal AKI</td><td>Intrinsic AKI</td><td>Postrenal AKI</td></tr><tr><td>Urine sediment</td><td>Hyaline casts, may be
+normal</td><td>Granular casts,
+cellular debris</td><td>Cellular debris</td></tr><tr><td>Urinary RBC</td><td>None</td><td>2–4+</td><td>Variable</td></tr><tr><td>Urinary WBC</td><td>None</td><td>2–4+</td><td>1+</td></tr><tr><td>Urine Na (mEq/L or
+mmol/L)</td><td>&lt;20</td><td>&gt;40</td><td>&gt;40</td></tr><tr><td>FE (%)
+Na</td><td>&lt;1</td><td>&gt;2</td><td>Variable</td></tr><tr><td>Urine specific
+gravity</td><td>&gt;1.018</td><td>&lt;1.012</td><td>Variable</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<p>TABLE 74-3 Urinary Findings as a Guide to the Etiology of Acute Kidney Injury</p>
+<p>Type of Urinary</p>
+<p>Evaluation Presence of Suggestive of</p>
+<p>Urinalysis Leukocyte esterases Urinary tract infection</p>
+<p>Nitrites Urinary tract infection</p>
+<p>Protein</p>
+<p>Mild (&lt;0.5 g/day) Tubular damage</p>
+<p>Moderate (0.5–3 Glomerulonephritis, pyelonephritis, tubular</p>
+<p>g/day) damage</p>
+<p>Large (&gt;3 g/day) Glomerulonephritis, nephrotic syndrome</p>
+<p>Hemoglobin Glomerulonephritis, pyelonephritis, renal</p>
+<p>infarction, renal tumors, kidney stones</p>
+<p>Myoglobin Rhabdomyolysis-associated tubular</p>
+<p>necrosis</p>
+<p>Urobilinogen Hemolysis-associated tubular necrosis</p>
+<p>Urine sediment Microorganisms Urinary tract infection</p>
+<p>Cells Red blood cells Glomerulonephritis, urinary tract infection,</p>
+<p>renal infarction, papillary necrosis, renal</p>
+<p>tumors, kidney stones</p>
+<p>White blood cells Urinary tract infection, interstitial nephritis</p>
+<p>Eosinophils Drug-induced interstitial nephritis, renal</p>
+<p>transplant rejection</p>
+<p>Epithelial cells Tubular necrosis</p>
+<p>Casts Granular casts Tubular necrosis</p>
+<p>Hyaline casts Prerenal azotemia</p>
+<p>White blood cell casts Urinary tract infection, interstitial nephritis</p>
+<p>Red blood cell casts Glomerulonephritis, renal infarct, lupus</p>
+<p>nephritis, vasculitis</p>
+<p>Crystals Urate Postrenal obstruction</p>
+<p>Calcium phosphate Postrenal obstruction</p>
+<h2>GENERAL APPROACH TO TREATMENT</h2>
+<li>There is no specific treatment that can reverse AKI or hasten its recovery. Support-</li>
+<p>ive measures that focus on hemodynamics, fluid balance, acid–base balance, and</p>
+<p>electrolyte homeostasis are the mainstays of therapy.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Fluid therapy is used to maintain or restore intravascular volume to assure adequate</li>
+<p>renal perfusion. Use IV fluids judiciously to prevent volume depletion and/or fluid</p>
+<pre><code>overload which adversely affect kidney function and increase mortality.</code></pre>
+<li>Serum electrolytes should be monitored daily. Hyperkalemia is the most common</li>
+<p>and serious electrolyte abnormality in AKI. Hypernatremia and fluid retention</p>
+<p>commonly occur, requiring calculation of daily sodium intake, including sodium</p>
+<p>contained in commonly administered antibiotics.</p>
+<li>Phosphorus and magnesium should be monitored, especially in patients with signifi-</li>
+<p>cant tissue destruction due to increased amounts of released phosphorus; neither is</p>
+<p>efficiently removed by dialysis.</p>
+<p>868</p>
+<p>CH74.indd 868 20-11-2020 13:02:37</p>
+<div class="table-container"><table><tr><th>TABLE 74-3 Urinary Findings as a Guide to the Etiology of Acute Kidney Injury</th><th></th><th></th></tr><tr><td>Type of Urinary
+Evaluation</td><td>Presence of</td><td>Suggestive of</td></tr><tr><td>Urinalysis</td><td>Leukocyte esterases</td><td>Urinary tract infection</td></tr><tr><td></td><td>Nitrites</td><td>Urinary tract infection</td></tr><tr><td></td><td>Protein</td><td></td></tr><tr><td></td><td>Mild (&lt;0.5 g/day)</td><td>Tubular damage</td></tr><tr><td></td><td>Moderate (0.5–3
+g/day)</td><td>Glomerulonephritis, pyelonephritis, tubular
+damage</td></tr><tr><td></td><td>Large (&gt;3 g/day)</td><td>Glomerulonephritis, nephrotic syndrome</td></tr><tr><td></td><td>Hemoglobin</td><td>Glomerulonephritis, pyelonephritis, renal
+infarction, renal tumors, kidney stones</td></tr><tr><td></td><td>Myoglobin</td><td>Rhabdomyolysis-associated tubular
+necrosis</td></tr><tr><td></td><td>Urobilinogen</td><td>Hemolysis-associated tubular necrosis</td></tr><tr><td>Urine sediment</td><td>Microorganisms</td><td>Urinary tract infection</td></tr><tr><td>Cells</td><td>Red blood cells</td><td>Glomerulonephritis, urinary tract infection,
+renal infarction, papillary necrosis, renal
+tumors, kidney stones</td></tr><tr><td></td><td>White blood cells</td><td>Urinary tract infection, interstitial nephritis</td></tr><tr><td></td><td>Eosinophils</td><td>Drug-induced interstitial nephritis, renal
+transplant rejection</td></tr><tr><td></td><td>Epithelial cells</td><td>Tubular necrosis</td></tr><tr><td>Casts</td><td>Granular casts</td><td>Tubular necrosis</td></tr><tr><td></td><td>Hyaline casts</td><td>Prerenal azotemia</td></tr><tr><td></td><td>White blood cell casts</td><td>Urinary tract infection, interstitial nephritis</td></tr><tr><td></td><td>Red blood cell casts</td><td>Glomerulonephritis, renal infarct, lupus
+nephritis, vasculitis</td></tr><tr><td>Crystals</td><td>Urate</td><td>Postrenal obstruction</td></tr><tr><td></td><td>Calcium phosphate</td><td>Postrenal obstruction</td></tr></table></div><h2>Acute Kidney Injury | CHAPTER 74</h2>
+<h2>TABLE 74-4 Common Indications for Renal Replacement Therapy</h2>
+<p>Indication for RRT Clinical Setting</p>
+<p>A: acid–base abnormalities Metabolic acidosis (especially if pH &lt;7.2)</p>
+<p>E: electrolyte imbalance Severe hyperkalemia and/or hypermagnesemia</p>
+<p>I: intoxications Salicylates, lithium, methanol, ethylene glycol,</p>
+<p>theophylline, phenobarbital</p>
+<p>O: fluid overload Fluid overload (especially pulmonary edema unresponsive</p>
+<p>to diuretics)</p>
+<p>U: uremia Uremia or associated complications (neuropathy,</p>
+<p>encephalopathy, pericarditis)</p>
+<li>Nutritional management of critically ill patients with AKI is complex due to multiple</li>
+<p>mechanisms for metabolic derangements. Nutritional requirements are altered by</p>
+<p>stress, inflammation, and injury that lead to hypermetabolic and hypercatabolic</p>
+<p>states.</p>
+<li>In severe AKI, renal replacement therapy (RRT), such as hemodialysis and peritoneal</li>
+<p>dialysis, is used to treat fluid overload, electrolyte disturbances (eg, hyperkalemia),</p>
+<p>acid–base imbalances, uremic complications, and pulmonary edema. See Table 74-4</p>
+<p>for indications for RRT in AKI. Intermittent and continuous (CRRT) options have</p>
+<p>different advantages (and disadvantages); the choice usually depends on physician</p>
+<p>preference and resources available. No difference in mortality or dialysis dependence</p>
+<p>has been shown; however, CRRT is generally preferred in hemodynamically unstable</p>
+<p>patients.</p>
+<li>Intermittent hemodialysis (IHD) is the most frequently used RRT and has the</li>
+<p>advantage of widespread availability and the convenience of lasting only 3–4 hours.</p>
+<p>Disadvantages include difficult venous dialysis access in hypotensive patients and</p>
+<p>hypotension due to rapid removal of large amounts of fluid.</p>
+<li>Several CRRT variants have been developed including continuous venovenous hemo-</li>
+<p>filtration (CVVH), continuous venovenous hemodialysis (CVVHD), and continuous</p>
+<p>venovenous hemodiafiltration (CVVHDF) which differ in fluid clearance and solute</p>
+<p>removal. CRRT gradually removes solute, resulting in better tolerability by critically</p>
+<p>ill patients. Disadvantages include limited availability of equipment, need for inten-</p>
+<p>sive nursing care, and the need to individualize IV replacement, dialysate fluids, and</p>
+<p>drug therapy adjustments.</p>
+<li>Circuit clotting and filter patency limit CRRT performance requiring anticoagula-</li>
+<p>tion. The KDIGO Work Group recommends regional citrate as the preferred anti-</p>
+<p>coagulant. This requires infusion of parenteral calcium which may limit feasibility</p>
+<p>of regional citrate when the supply of parenteral calcium is limited. The specific</p>
+<p>approach to anticoagulation is patient specific; if the patient requires systemic antico-</p>
+<p>agulation for an underlying comorbidity (eg, atrial fibrillation, artificial heart valve)</p>
+<p>no additional anticoagulation for RRT is needed.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Loop diuretics effectively reduce fluid overload but can worsen AKI. Equipotent</li>
+<p>doses of loop diuretics (furosemide, bumetanide, torsemide, and ethacrynic acid)</p>
+<p>have similar efficacy. KDIGO guidelines recommend limiting the use of loop diuret-</p>
+<p>ics to the management of fluid overload and avoiding their use for the sole purpose</p>
+<p>of prevention or treatment of AKI. Continuous infusions of loop diuretics appear</p>
+<p>to overcome diuretic resistance and to have fewer adverse effects than intermittent</p>
+<p>boluses but require more extensive and frequent monitoring.</p>
+<p>869</p>
+<p>CH74.indd 869 20-11-2020 13:02:37</p>
+<div class="table-container"><table><tr><th>TABLE 74-4 Common Indications for Renal Replacement Therapy</th><th></th></tr><tr><td>Indication for RRT</td><td>Clinical Setting</td></tr><tr><td>A: acid–base abnormalities</td><td>Metabolic acidosis (especially if pH &lt;7.2)</td></tr><tr><td>E: electrolyte imbalance</td><td>Severe hyperkalemia and/or hypermagnesemia</td></tr><tr><td>I: intoxications</td><td>Salicylates, lithium, methanol, ethylene glycol,
+theophylline, phenobarbital</td></tr><tr><td>O: fluid overload</td><td>Fluid overload (especially pulmonary edema unresponsive
+to diuretics)</td></tr><tr><td>U: uremia</td><td>Uremia or associated complications (neuropathy,
+encephalopathy, pericarditis)</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<p>TABLE 74-5 Common Causes of Diuretic Resistance in Patients with Acute Kidney Injury</p>
+<p>Causes of Diuretic Resistance Potential Therapeutic Solutions</p>
+<p>Excessive sodium intake (sources may Remove sodium from nutritional sources and</p>
+<p>be dietary, IV fluids, and drugs) medications</p>
+<p>Inadequate diuretic dose or Increase dose, increase frequency, use continuous</p>
+<p>inappropriate regimen infusion, or add thiazide</p>
+<p>Reduced oral bioavailability (usually Use parenteral therapy, switch to oral torsemide</p>
+<p>furosemide) or bumetanide</p>
+<p>Nephrotic syndrome (loop diuretic Increase dose, add thiazide</p>
+<p>protein binding in tubule lumen)</p>
+<p>Reduced renal blood flow</p>
+<p>Drugs (NSAIDs, ACEIs, vasodilators) Discontinue these drugs if possible</p>
+<p>Intravascular depletion Intravascular volume expansion</p>
+<p>Increased sodium resorption</p>
+<p>Distal nephron hypertrophy Add thiazide, sodium restriction</p>
+<p>Postdiuretic sodium retention Dietary sodium restriction, use continuous</p>
+<p>infusion</p>
+<p>Heart failure Assess effective circulatory volume, increase dose,</p>
+<p>increase frequency, use continuous infusion</p>
+<p>Cirrhosis Assess effective circulatory volume, consider</p>
+<p>paracentesis</p>
+<p>Acute tubular necrosis Increase diuretic dose, diuretic combination</p>
+<p>therapy</p>
+<p>ACEIs, angiotensin-converting enzyme inhibitors; NSAIDs, nonsteroidal anti-inflammatory drugs.</p>
+<li>Strategies are available to overcome diuretic resistance (Table 74-5). Combination</li>
+<p>therapy of loop diuretics plus a diuretic from a different pharmacologic class such</p>
+<p>as diuretics that work at the distal convoluted tubule (thiazides) or the collecting</p>
+<p>duct (amiloride, triamterene, and spironolactone) may have a synergistic effect.</p>
+<p>Metolazone is commonly used with a loop diuretic because, unlike other thiazides, it</p>
+<p>produces effective diuresis at GFR less than 20 mL/min (0.33 mL/sec).</p>
+<p>Drug-Dosing Considerations</p>
+<li>Drug therapy optimization in AKI is a challenge. Confounding variables include</li>
+<p>residual drug clearance, fluid accumulation, and use of RRTs.</p>
+<li>Pharmacotherapy decisions should take into consideration the four distinct phases of</li>
+<p>AKI: initiation, extension, maintenance, and recovery phase. This requires frequent</p>
+<pre><code>monitoring and adjustment of drug dosing to optimize therapy as kidney function</code></pre>
+<p>stabilizes.</p>
+<li>Volume of distribution for water soluble drugs is significantly increased due to</li>
+<p>edema. Use of dosing guidelines for chronic kidney disease (CKD) does not reflect</p>
+<p>the clearance and volume of distribution in critically ill AKI patients.</p>
+<li>Patients with AKI may have a higher residual nonrenal clearance than those with</li>
+<p>CKD with similar creatinine clearances; this complicates drug therapy individualiza-</p>
+<p>tion, especially with RRTs.</p>
+<li>The mode of CRRT determines rate of drug removal, further complicating indi-</li>
+<p>vidualization of drug therapy. Rates of ultrafiltration, blood flow, and dialysate flow</p>
+<p>influence drug clearance during CRRT.</p>
+<p>870</p>
+<p>CH74.indd 870 20-11-2020 13:02:38</p>
+<div class="table-container"><table><tr><th>TABLE 74-5 Common Causes of Diuretic Resistance in Patients with Acute Kidney Injury</th><th></th></tr><tr><td>Causes of Diuretic Resistance</td><td>Potential Therapeutic Solutions</td></tr><tr><td>Excessive sodium intake (sources may
+be dietary, IV fluids, and drugs)</td><td>Remove sodium from nutritional sources and
+medications</td></tr><tr><td>Inadequate diuretic dose or
+inappropriate regimen</td><td>Increase dose, increase frequency, use continuous
+infusion, or add thiazide</td></tr><tr><td>Reduced oral bioavailability (usually
+furosemide)</td><td>Use parenteral therapy, switch to oral torsemide
+or bumetanide</td></tr><tr><td>Nephrotic syndrome (loop diuretic
+protein binding in tubule lumen)</td><td>Increase dose, add thiazide</td></tr><tr><td>Reduced renal blood flow</td><td></td></tr><tr><td>Drugs (NSAIDs, ACEIs, vasodilators)</td><td>Discontinue these drugs if possible</td></tr><tr><td>Intravascular depletion</td><td>Intravascular volume expansion</td></tr><tr><td>Increased sodium resorption</td><td></td></tr><tr><td>Distal nephron hypertrophy</td><td>Add thiazide, sodium restriction</td></tr><tr><td>Postdiuretic sodium retention</td><td>Dietary sodium restriction, use continuous
+infusion</td></tr><tr><td>Heart failure</td><td>Assess effective circulatory volume, increase dose,
+increase frequency, use continuous infusion</td></tr><tr><td>Cirrhosis</td><td>Assess effective circulatory volume, consider
+paracentesis</td></tr><tr><td>Acute tubular necrosis</td><td>Increase diuretic dose, diuretic combination
+therapy</td></tr></table></div><h2>Acute Kidney Injury | CHAPTER 74</h2>
+<p>TABLE 74-6 Key Monitoring Parameters for Patients with Established Acute Kidney Injury</p>
+<p>Parameter Frequency</p>
+<p>Fluid intake and output Daily</p>
+<p>Patient weight Daily</p>
+<p>Hemodynamics (eg, blood pressure, heart rate, mean Hourly/Every shift</p>
+<p>arterial pressure.)</p>
+<p>Blood chemistries</p>
+<p>Sodium, potassium, chloride, bicarbonate, calcium, Daily</p>
+<p>phosphate, magnesium</p>
+<p>Blood urea nitrogen/serum creatinine Daily</p>
+<p>Drugs and their dosing regimens Daily</p>
+<p>Nutritional regimen Daily</p>
+<p>Blood glucose Daily (minimum)</p>
+<p>Therapeutic drug monitoring of renally cleared drugs Highly variable, about three times</p>
+<p>(eg, vancomycin aminoglycosides) weekly</p>
+<p>Times of administered doses Daily</p>
+<p>Doses relative to administration of renal replacement Daily</p>
+<p>therapy</p>
+<p>Urinalysis, urinary output</p>
+<p>Calculate measured creatinine clearance Every time measured urine</p>
+<p>collection performed</p>
+<p>Calculate fractional excretion of sodium Every time measured urine</p>
+<p>collection performed</p>
+<p>Plans for renal replacement therapy Daily</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Vigilant monitoring of patient status is essential (Table 74-6).</li>
+<li>Perform therapeutic drug monitoring for drugs that have a narrow therapeutic index</li>
+<p>if results can be obtained in a timely manner.</p>
+<p>See Chapter 60, Acute Kidney Injury, authored by Jenana Halilovic Maker, Lauren Roller,</p>
+<p>and William Dager, for a more detailed discussion of this topic.</p>
+<p>871</p>
+<p>CH74.indd 871 20-11-2020 13:02:38</p>
+<div class="table-container"><table><tr><th>TABLE 74-6 Key Monitoring Parameters for Patients with Established Acute Kidney Injury</th><th></th></tr><tr><td>Parameter</td><td>Frequency</td></tr><tr><td>Fluid intake and output</td><td>Daily</td></tr><tr><td>Patient weight</td><td>Daily</td></tr><tr><td>Hemodynamics (eg, blood pressure, heart rate, mean
+arterial pressure.)</td><td>Hourly/Every shift</td></tr><tr><td>Blood chemistries</td><td></td></tr><tr><td>Sodium, potassium, chloride, bicarbonate, calcium,
+phosphate, magnesium</td><td>Daily</td></tr><tr><td>Blood urea nitrogen/serum creatinine</td><td>Daily</td></tr><tr><td>Drugs and their dosing regimens</td><td>Daily</td></tr><tr><td>Nutritional regimen</td><td>Daily</td></tr><tr><td>Blood glucose</td><td>Daily (minimum)</td></tr><tr><td>Therapeutic drug monitoring of renally cleared drugs
+(eg, vancomycin aminoglycosides)</td><td>Highly variable, about three times
+weekly</td></tr><tr><td>Times of administered doses</td><td>Daily</td></tr><tr><td>Doses relative to administration of renal replacement
+therapy</td><td>Daily</td></tr><tr><td>Urinalysis, urinary output</td><td></td></tr><tr><td>Calculate measured creatinine clearance</td><td>Every time measured urine
+collection performed</td></tr><tr><td>Calculate fractional excretion of sodium</td><td>Every time measured urine
+collection performed</td></tr><tr><td>Plans for renal replacement therapy</td><td>Daily</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

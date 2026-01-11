@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>69. Opioid Use Disorder</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>69. Opioid Use Disorder</h1>
+        </header>
+        <main>
+            <li>Opioid use disorder (OUD) consists of intoxication and withdrawal from the sub-</li>
+<p>stance for which there is no cure. Since 1999, the number of overdose deaths contrib-</p>
+<p>uted to OUD has more than tripled. These deaths have involved opioid substances</p>
+<p>including prescription opioids (ie, natural opioids, semisynthetic opioids, and metha-</p>
+<p>done), as well as heroin and synthetic opioids (ie, illicitly manufactured fentanyl).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The true etiology behind substance use disorders (SUD) is unknown. In general, it is</li>
+<p>felt that there needs to be a triad of the right patient, with the right genetic risk fac-</p>
+<p>tors, being exposed to the right medication or substance in order for a SUD to occur.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Signs and symptoms of opioid intoxication include euphoria, dysphoria, slurred</li>
+<p>speech, miosis, apathy, sedation, and attention impairment. Signs and symptoms of</p>
+<p>withdrawal include lacrimation, mydriasis, piloerection, diaphoresis, diarrhea, yawn-</p>
+<p>ing, muscle aches, and insomnia. Pinpoint pupils, decreased breathing, pulmonary</p>
+<p>edema, loss of consciousness, and death may occur with opioid intoxication.</p>
+<li>The onset of withdrawal ranges from a few hours after stopping heroin to 3–5 days</li>
+<p>after stopping methadone. Duration of withdrawal ranges from 3–14 days. Occur-</p>
+<p>rence of delirium suggests withdrawal from another drug (eg, alcohol).</p>
+<li>Symptoms can be scored on the Clinical Opiate Withdrawal Symptoms (COWS)</li>
+<p>assessment tool to assess severity of opioid withdrawal.</p>
+<li>Laboratory tests to obtain include a comprehensive metabolic panel to monitor serum</li>
+<p>electrolyte concentrations in the setting of significant vomiting or diarrhea; check</p>
+<pre><code>liver function tests if using buprenorphine. Arterial blood gases, pulse oximetry, and</code></pre>
+<p>capnography are useful to assess respiratory depression in opioid intoxication.</p>
+<h2>DIAGNOSIS</h2>
+<li>The Diagnostic and Statistical Manual of Mental Disorders, 5th edition (DSM-5)</li>
+<p>defines SUD as “problematic pattern of substance use leading to clinically significant</p>
+<p>impairment or distress as manifested by at least two of eleven criteria occurring in</p>
+<p>the preceding 12-month period.”</p>
+<li>These behaviors fall into the categories of: (1) impaired control, (2) social impairment,</li>
+<p>(3) risky use, and (4) pharmacological criteria, including tolerance and withdrawal,</p>
+<h2>and are outlined in Table 69-1.</h2>
+<li>SUDs occur in a broad range of severity from mild (2–3 s ymptoms) to moderate (4–5</li>
+<p>symptoms) to severe (6 or more symptoms).</p>
+<li>DSM-5 does not separate the diagnoses of substance abuse and substance dependence.</li>
+<p>Criteria are provided for SUD, accompanied by criteria for intoxication, withdrawal,</p>
+<p>substance-induced disorders, and unspecified substance-related disorders in some cases.</p>
+<li>Addiction: A primary chronic neurobiologic disease characterized by the inability to</li>
+<pre><code>consistently abstain, impairment in behavioral control, craving, dysfunctional emo-</code></pre>
+<p>tional response, and diminished recognition of significant problems with behaviors</p>
+<p>and interpersonal relationships.</p>
+<li>Intoxication: Development of a substance-specific syndrome after recent ingestion and</li>
+<p>presence in the body of a substance; it is associated with maladaptive behavior during</p>
+<p>the waking state caused by effects of the substance on the central nervous system (CNS).</p>
+<li>Physical dependence: A state of adaptation manifested by a drug-class–specific with-</li>
+<p>drawal syndrome that can be produced by abrupt cessation, rapid dose reduction,</p>
+<p>decreasing blood level of the drug, and/or administration of an antagonist.</p>
+<p>801</p>
+<h2>RETPAHC</h2>
+<p>69</p>
+<p>Opioid Use Disorder</p>
+<p>CH69.indd 801 20-11-2020 11:43:58</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>69</th><th>Opioid Use Disorder</th></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 69-1 Eleven Criteria for Substance Use Disorder as Defined by DSM-5</p>
+<p>Specific Category Specific Behavior</p>
+<p>Impaired Control 1. Substance is often taken in larger amounts or over a longer</p>
+<p>period of time than intended</p>
+<p>Impaired Control 2. Persistent desire or continued unsuccessful efforts to cut</p>
+<p>down or control substance use</p>
+<p>Impaired Control 3. Considerable amount of time is spent obtaining substance,</p>
+<p>using substance, or recovering from use of substance</p>
+<p>Impaired Control 4. Craving or strong desire to use substance</p>
+<p>Social Impairment 5. Recurrent use of substance is resulting in failure to fulfill major</p>
+<p>obligations at work, home, or school</p>
+<p>Social Impairment 6. Continue to use substance despite persistent social or</p>
+<p>interpersonal problems</p>
+<p>Social Impairment 7. Reducing or missing social, occupation, or recreational events</p>
+<p>due to substance use</p>
+<p>Risky Use 8. Recurrent substance use in situations with increasing risk of</p>
+<p>physical harm</p>
+<p>Risky Use 9. Continued use of substance despite knowledge of persistent</p>
+<p>or recurrent physical or psychological harm that was caused</p>
+<p>or worsened by the substance</p>
+<p>Pharmacological 10. Tolerance as experienced by either:</p>
+<p>Indicators a. Need for increased amounts of the substance to achieve</p>
+<p>intoxication or desired result, or</p>
+<p>b. A noticeably decreased effect with continued use of the</p>
+<p>same amount of substance</p>
+<p>Pharmacological 11. Withdrawal as experienced by either:</p>
+<p>Indicators a. Standard symptoms of withdrawal as defined by specific</p>
+<p>substance, or</p>
+<p>b. Use of a substance or a similar substance to relieve or avoid</p>
+<p>withdrawal symptoms</p>
+<li>Substance dependence: The continued use of the substance despite adverse substance-</li>
+<p>related problems.</p>
+<li>Tolerance: A state of adaptation in which exposure to a drug induces changes that</li>
+<p>result in a diminution of one or more of the drug’s effects over time.</p>
+<li>Withdrawal: A substance-specific syndrome occurring after cessation of or reduction</li>
+<p>in intake of a substance that was used regularly.</p>
+<h2>OPIOIDS</h2>
+<li>Deaths from prescription opioids have reached epidemic levels.</li>
+<li>Heroin can be snorted, smoked, and given IV. Complications of heroin use include</li>
+<p>overdoses, anaphylactic reactions to impurities, nephrotic syndrome, septicemia,</p>
+<p>endocarditis, and acquired immunodeficiency.</p>
+<li>Hydrocodone is the most widely abused pharmaceutical controlled substance in the</li>
+<p>United States.</p>
+<li>Fentanyl is a synthetic short-acting opioid which is 50–100 times more potent than</li>
+<p>morphine and approved for management of acute or chronic pain associated with</p>
+<p>advanced cancer. Most fentanyl-related morbidity and mortality have been linked to</p>
+<p>illicitly manufactured fentanyl and fentanyl analogs. It is often mixed with heroin or</p>
+<p>cocaine, with or without the user’s knowledge. Several states have reported spikes in</p>
+<p>overdose deaths due to fentanyl and its analogs (eg, carfentanil).</p>
+<p>802</p>
+<p>CH69.indd 802 20-11-2020 11:43:59</p>
+<div class="table-container"><table><tr><th>TABLE 69-1 Eleven Criteria for Substance Use Disorder as Defined by DSM-5</th><th></th></tr><tr><td>Specific Category</td><td>Specific Behavior</td></tr><tr><td>Impaired Control</td><td>1. Substance is often taken in larger amounts or over a longer
+period of time than intended</td></tr><tr><td>Impaired Control</td><td>2. Persistent desire or continued unsuccessful efforts to cut
+down or control substance use</td></tr><tr><td>Impaired Control</td><td>3. Considerable amount of time is spent obtaining substance,
+using substance, or recovering from use of substance</td></tr><tr><td>Impaired Control</td><td>4. Craving or strong desire to use substance</td></tr><tr><td>Social Impairment</td><td>5. Recurrent use of substance is resulting in failure to fulfill major
+obligations at work, home, or school</td></tr><tr><td>Social Impairment</td><td>6. Continue to use substance despite persistent social or
+interpersonal problems</td></tr><tr><td>Social Impairment</td><td>7. Reducing or missing social, occupation, or recreational events
+due to substance use</td></tr><tr><td>Risky Use</td><td>8. Recurrent substance use in situations with increasing risk of
+physical harm</td></tr><tr><td>Risky Use</td><td>9. Continued use of substance despite knowledge of persistent
+or recurrent physical or psychological harm that was caused
+or worsened by the substance</td></tr><tr><td>Pharmacological
+Indicators</td><td>10. Tolerance as experienced by either:</td></tr><tr><td></td><td>a. Need for increased amounts of the substance to achieve
+intoxication or desired result, or</td></tr><tr><td></td><td>b. A noticeably decreased effect with continued use of the
+same amount of substance</td></tr><tr><td>Pharmacological
+Indicators</td><td>11. Withdrawal as experienced by either:</td></tr><tr><td></td><td>a. Standard symptoms of withdrawal as defined by specific
+substance, or</td></tr><tr><td></td><td>b. Use of a substance or a similar substance to relieve or avoid
+withdrawal symptoms</td></tr></table></div><h2>Opioid Use Disorder | CHAPTER 69</h2>
+<li>Opioids are commonly combined with stimulants (eg, cocaine [speedball]) or lcohol.</li>
+<li>Methadone has caused an increased number of deaths in recent years. Converting to</li>
+<p>methadone from other opioid agonists can be tricky, and lethal when done improperly.</p>
+<p>Peak respiratory depressant effects occur later and last longer than peak analgesic effects.</p>
+<li>Dextromethorphan and loperamide are over-the-counter drugs that cause depres-</li>
+<p>sant and mild hallucinogenic effects in high doses and significant h allucinations and</p>
+<p>CNS depression in excessive doses. Loperamide is sometimes taken with medica-</p>
+<p>tions or foods that enhance its ability to cross the blood-brain barrier (ie, verapamil,</p>
+<p>methadone, cimetidine or grapefruit juice) to obtain CNS effects.</p>
+<p>✓ Loperamide side effects associated with supratherapeutic doses include possible</p>
+<p>cardiac arrhythmias including QTc interval prolongation, torsades de pointes,</p>
+<p>ventricular dysrhythmias, syncope, and cardiac arrest.</p>
+<p>✓ Acute overdoses of dextromethorphan can be treated with naloxone.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Cessation of use of the drug, termination of drug-seeking</li>
+<pre><code>behaviors, and return to normal functioning. The goals of treatment of with-</code></pre>
+<p>drawal include prevention of progression to life-threatening severity, thus</p>
+<pre><code>enabling comfort and functionality conducive to participation in a treatment</code></pre>
+<p>program. OUD is a chronic disorder, and providing long-term medication</p>
+<p>decreases the risk of an accidental overdose or full relapse into opioid use.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>The treatment of OUD may also include behavioral therapy, but participation in</li>
+<p>this should not be required for receiving medications. Behavioral therapy should be</p>
+<p>introduced if and when the patient is ready.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Naloxone is a key strategy in reducing opioid-related deaths because it may</li>
+<p>revive unconscious patients with respiratory depression. Naloxone is a com-</p>
+<p>petitive mu-opioid receptor antagonist that can be used in the reversal of an opi-</p>
+<p>oid overdose, but it may precipitate physical withdrawal in dependent patients.</p>
+<h2>Table 69-2 outlines the naloxone delivery options.</h2>
+<li>Patients and their caregivers should be educated on the availability of naloxone and</li>
+<p>the proper use of this agent. The World Health Organization (WHO) recommends</p>
+<p>that anyone who might witness an overdose should have access to naloxone and</p>
+<p>proper training. Many states have simplified the process to obtain naloxone to pre-</p>
+<p>vent opioid-related overdoses.</p>
+<p>Withdrawal</p>
+<li>A variety of treatment regimens are used for patients during the acute opioid with-</li>
+<h2>drawal phase and are summarized in Tables 69-3 and 69-4.</h2>
+<li>Avoid unnecessary detoxification with drugs if possible (eg, if symptoms are</li>
+<p>tolerable), and provide patient-specific supportive care measures, such as fluids, until</p>
+<p>the patient stabilizes.</p>
+<li>The three FDA-approved medications used in OUD include methadone, buprenor-</li>
+<p>phine, and naltrexone, all of which work by blocking the effects of the opioids and</p>
+<p>reducing or eliminating the cravings.</p>
+<p>Methadone</p>
+<li>Methadone is a mu-opioid agonist that suppresses withdrawal symptoms and con-</li>
+<p>trols cravings for maintenance therapy.</p>
+<li>Once-daily dosing can range from 10 to 30 mg, depending on the patient’s use</li>
+<p>pattern. This dose should be reduced to 10–20 mg for those over the age of 60, or if</p>
+<p>drug–drug interactions are identified.</p>
+<li>Dose adjustments of 5–10 mg should occur gradually, no sooner than every 4–7 days</li>
+<p>based on clinical response. Maintenance doses range between 60 and 120 mg/day.</p>
+<p>803</p>
+<p>CH69.indd 803 20-11-2020 11:43:59</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>TABLE 69-2 Naloxone Delivery Options</h2>
+<p>Intranasal</p>
+<p>Intramuscular Auto-Injector Nasal Spray Spray</p>
+<p>Injection (Evzio) (Narcan) (Atomizer)</p>
+<p>Description Two single-use One box of One box of two 2 mg/2 mL</p>
+<p>of device 0.4 mg/mL 2 mg/0.4 mL 4 mg/0.1 mL prefilled</p>
+<p>or what is naloxone vials prefilled auto intranasal naloxone</p>
+<p>provided Two single-use injectors that devices needleless</p>
+<p>to patient 3-mL syringes, includes syringe</p>
+<p>23–25 gauge, 2 devices and a Two mucosal</p>
+<p>1–1.5 inch trainer device atomizer</p>
+<p>needles devices</p>
+<p>Directions Inject 1 mL Use one auto- Use full Spray one-half</p>
+<p>for use intramuscularly injector by contents of contents</p>
+<p>in shoulder or injecting in of spray in of syringe</p>
+<p>thigh upon outer thigh by one nostril into each</p>
+<p>signs of opioid depressing and upon signs nostril</p>
+<p>overdose. Call holding for 5 of opioid upon signs</p>
+<p>911 immediately. seconds. Voice overdose. of opioid</p>
+<p>May repeat once automation Call 911. overdose.</p>
+<p>in 2–3 minutes will direct May repeat Call 911.</p>
+<p>if no response the patient. ×1 in 2–3 May repeat</p>
+<p>or patient Call 911. May minutes if ×1 in 2–3</p>
+<p>is showing repeat ×1 in no response minutes if</p>
+<p>minimal 2–3 minutes or patient no response</p>
+<p>response if no response shows or patient</p>
+<p>or patient minimal shows</p>
+<p>shows minimal response, minimal</p>
+<p>response using the response</p>
+<p>other nostril</p>
+<p>Naloxone pearls</p>
+<li>Naloxone has not been shown to cause severe effects or side effects if administered to</li>
+<p>patients who are currently not taking opioids.</p>
+<li>Naloxone should be given if the patient is intoxicated by a combination of products since</li>
+<p>the naloxone will still work for the opioid but not for other products such as benzodiaz-</p>
+<p>epines or alcohol.</p>
+<p>Naloxone counseling topics</p>
+<li>Overdose recognition, response, prevention</li>
+<li>Importance of seeking emergency medical care</li>
+<li>Proper device use and counseling of family members and caregivers</li>
+<li>Proper storage, shelf life. Periodically check expiration date</li>
+<li>Potential side effects associated with naloxone</li>
+<li>Availability of drug treatment program</li>
+<p>General opioid safety counseling</p>
+<li>Take medication only prescribed for you, only take prescribed doses</li>
+<li>Do not mix opioids with alcohol or sleeping pills</li>
+<li>Always store all medications in a locked and secure place</li>
+<li>Dispose of unused medications appropriately</li>
+<li>Do not use opioids/drugs alone. Never buy opioids/drugs from unknown source</li>
+<li>Do not restart opioid at same dose if there is a period of abstinence. Overdose is possible</li>
+<p>due to lower tolerance</p>
+<p>804</p>
+<p>CH69.indd 804 20-11-2020 11:43:59</p>
+<div class="table-container"><table><tr><th>TABLE 69-2 Naloxone Delivery Options</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Intramuscular
+Injection</td><td>Auto-Injector
+(Evzio)</td><td>Nasal Spray
+(Narcan)</td><td>Intranasal
+Spray
+(Atomizer)</td></tr><tr><td>Description
+of device
+or what is
+provided
+to patient</td><td>Two single-use
+0.4 mg/mL
+naloxone vials
+Two single-use
+3-mL syringes,
+23–25 gauge,
+1–1.5 inch
+needles</td><td>One box of
+2 mg/0.4 mL
+prefilled auto
+injectors that
+includes
+2 devices and a
+trainer device</td><td>One box of two
+4 mg/0.1 mL
+intranasal
+devices</td><td>2 mg/2 mL
+prefilled
+naloxone
+needleless
+syringe
+Two mucosal
+atomizer
+devices</td></tr><tr><td>Directions
+for use</td><td>Inject 1 mL
+intramuscularly
+in shoulder or
+thigh upon
+signs of opioid
+overdose. Call
+911 immediately.
+May repeat once
+in 2–3 minutes
+if no response
+or patient
+is showing
+minimal
+response</td><td>Use one auto-
+injector by
+injecting in
+outer thigh by
+depressing and
+holding for 5
+seconds. Voice
+automation
+will direct
+the patient.
+Call 911. May
+repeat ×1 in
+2–3 minutes
+if no response
+or patient
+shows minimal
+response</td><td>Use full
+contents
+of spray in
+one nostril
+upon signs
+of opioid
+overdose.
+Call 911.
+May repeat
+×1 in 2–3
+minutes if
+no response
+or patient
+shows
+minimal
+response,
+using the
+other nostril</td><td>Spray one-half
+of contents
+of syringe
+into each
+nostril
+upon signs
+of opioid
+overdose.
+Call 911.
+May repeat
+×1 in 2–3
+minutes if
+no response
+or patient
+shows
+minimal
+response</td></tr><tr><td>Naloxone pearls
+• Naloxone has not been shown to cause severe effects or side effects if administered to
+patients who are currently not taking opioids.
+• Naloxone should be given if the patient is intoxicated by a combination of products since
+the naloxone will still work for the opioid but not for other products such as benzodiaz-
+epines or alcohol.
+Naloxone counseling topics
+• Overdose recognition, response, prevention
+• Importance of seeking emergency medical care
+• Proper device use and counseling of family members and caregivers
+• Proper storage, shelf life. Periodically check expiration date
+• Potential side effects associated with naloxone
+• Availability of drug treatment program</td><td></td><td></td><td></td><td></td></tr><tr><td>General opioid safety counseling
+• Take medication only prescribed for you, only take prescribed doses
+• Do not mix opioids with alcohol or sleeping pills
+• Always store all medications in a locked and secure place
+• Dispose of unused medications appropriately
+• Do not use opioids/drugs alone. Never buy opioids/drugs from unknown source
+• Do not restart opioid at same dose if there is a period of abstinence. Overdose is possible
+due to lower tolerance</td><td></td><td></td><td></td><td></td></tr></table></div><h2>Opioid Use Disorder | CHAPTER 69</h2>
+<p>TABLE 69-3 Differences Between Medication-Assisted Therapy (MAT) Products</p>
+<p>Extended-Release</p>
+<h2>Injectable Naltrexone</h2>
+<p>Methadone (XR-NTX) Buprenorphine</p>
+<p>Pharmacology in Full opioid agonist Antagonist at mu-opioid Partial agonist at mu-</p>
+<p>OUD at mu-opioid receptor (note: does opioid receptor</p>
+<p>receptor with not provide analgesia with long half-life</p>
+<p>long half-life to and is not addictive) (up to 36 hours</p>
+<p>allow for once- via sublingual</p>
+<p>daily dosing for administration);</p>
+<p>OUD blocks intoxicating</p>
+<p>effects of other</p>
+<p>opioids</p>
+<p>Phase of Medically supervised Prevention of relapse to Medically supervised</p>
+<p>treatment in withdrawal, opioid dependence withdrawal,</p>
+<p>OUD; effect maintenance; following medically maintenance;</p>
+<p>reduces or supervised reduces or</p>
+<p>eliminates withdrawal; reduces or eliminates</p>
+<p>withdrawal eliminates cravings to withdrawal</p>
+<p>symptoms and use opioids and blunts symptoms and</p>
+<p>cravings to use or blocks the effects of cravings to use</p>
+<p>opioids, blocks or illicit opioids opioids and blocks</p>
+<p>blunts the effects or blunts the</p>
+<p>of illicit opioids effects of illicit</p>
+<p>opioids</p>
+<p>Route of Provided orally once IM extended-release Sublingual, buccal</p>
+<p>administration daily: commonly (depot naltrexone) tablet, buccal film</p>
+<p>used in MAT given as liquid (note: oral not as effective Other routes of</p>
+<p>concentrate in and use is not common administration</p>
+<p>OTPs but current in the treatment of available</p>
+<p>guidelines also OUD due to insufficient after meeting</p>
+<p>allow solid oral- evidence of efficacy specific criteria:</p>
+<p>dosage forms and poor medication subdermal implant,</p>
+<p>as well adherence) subcutaneous</p>
+<p>extended-release</p>
+<p>injection</p>
+<p>Restrictions for CII; patient must Not a controlled CIII; requires waiver</p>
+<p>prescribing meet Federal substance but requires to prescribe</p>
+<p>each product Opioid-Treatment a prescription. All outside of OTPs.</p>
+<p>Program naltrexone products Prescribers will</p>
+<p>standards; can be can be prescribed by receive separate</p>
+<p>used in hospital general practitioners DEA number</p>
+<p>settings for OUD and in OUD treatment with a “X”</p>
+<p>treatment upon meeting</p>
+<p>requirements</p>
+<p>of DATA 2000.</p>
+<p>To confirm</p>
+<p>practitioner</p>
+<p>verification:</p>
+<p>https//www.</p>
+<p>samhsa.gov/</p>
+<p>bupe/lookup-</p>
+<p>form</p>
+<p>(Continued )</p>
+<p>805</p>
+<p>CH69.indd 805 20-11-2020 11:43:59</p>
+<div class="table-container"><table><tr><th>TABLE 69-3 Differences Between Medication-Assisted Therapy (MAT) Products</th><th></th><th></th><th></th></tr><tr><td></td><td>Methadone</td><td>Extended-Release
+Injectable Naltrexone
+(XR-NTX)</td><td>Buprenorphine</td></tr><tr><td>Pharmacology in
+OUD</td><td>Full opioid agonist
+at mu-opioid
+receptor with
+long half-life to
+allow for once-
+daily dosing for
+OUD</td><td>Antagonist at mu-opioid
+receptor (note: does
+not provide analgesia
+and is not addictive)</td><td>Partial agonist at mu-
+opioid receptor
+with long half-life
+(up to 36 hours
+via sublingual
+administration);
+blocks intoxicating
+effects of other
+opioids</td></tr><tr><td>Phase of
+treatment in
+OUD; effect</td><td>Medically supervised
+withdrawal,
+maintenance;
+reduces or
+eliminates
+withdrawal
+symptoms and
+cravings to use
+opioids, blocks or
+blunts the effects
+of illicit opioids</td><td>Prevention of relapse to
+opioid dependence
+following medically
+supervised
+withdrawal; reduces or
+eliminates cravings to
+use opioids and blunts
+or blocks the effects of
+illicit opioids</td><td>Medically supervised
+withdrawal,
+maintenance;
+reduces or
+eliminates
+withdrawal
+symptoms and
+cravings to use
+opioids and blocks
+or blunts the
+effects of illicit
+opioids</td></tr><tr><td>Route of
+administration
+used in MAT</td><td>Provided orally once
+daily: commonly
+given as liquid
+concentrate in
+OTPs but current
+guidelines also
+allow solid oral-
+dosage forms
+as well</td><td>IM extended-release
+(depot naltrexone)</td><td>Sublingual, buccal
+tablet, buccal film</td></tr><tr><td></td><td></td><td>(note: oral not as effective
+and use is not common
+in the treatment of
+OUD due to insufficient
+evidence of efficacy
+and poor medication
+adherence)</td><td>Other routes of
+administration
+available
+after meeting
+specific criteria:
+subdermal implant,
+subcutaneous
+extended-release
+injection</td></tr><tr><td>Restrictions for
+prescribing
+each product</td><td>CII; patient must
+meet Federal
+Opioid-Treatment
+Program
+standards; can be
+used in hospital
+settings for OUD
+treatment</td><td>Not a controlled
+substance but requires
+a prescription. All
+naltrexone products
+can be prescribed by
+general practitioners
+and in OUD treatment</td><td>CIII; requires waiver
+to prescribe
+outside of OTPs.
+Prescribers will
+receive separate
+DEA number
+with a “X”
+upon meeting
+requirements
+of DATA 2000.
+To confirm
+practitioner
+verification:
+https//www.
+samhsa.gov/
+bupe/lookup-
+form
+(Continued )</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 69-3 Differences Between Medication-Assisted Therapy (MAT) Products(Continued )</p>
+<p>Extended-Release</p>
+<h2>Injectable Naltrexone</h2>
+<p>Methadone (XR-NTX) Buprenorphine</p>
+<p>Restrictions for Implant: prescribers</p>
+<p>prescribing must be certified</p>
+<p>each product in Probuphine</p>
+<p>(continued) REMS program</p>
+<p>to insert/remove</p>
+<p>implants</p>
+<p>Subcutaneous:</p>
+<p>healthcare</p>
+<p>settings and</p>
+<p>pharmacies must</p>
+<p>be certified in</p>
+<p>the Sublocade</p>
+<p>REMS program</p>
+<p>and only dispense</p>
+<p>the medication</p>
+<p>directly to a</p>
+<p>provider for</p>
+<p>administration</p>
+<p>Patients that are Patients with OUD; Patients with OUD; Patients with OUD;</p>
+<p>commonly physiologically patients who are physiologically</p>
+<p>considered for dependent on abstinent from short- dependent on</p>
+<p>this type of opioids and acting opioids for 7–10 opioids</p>
+<p>therapy meet federal OTP days and long-acting</p>
+<p>admission criteria opioids 10–14 days</p>
+<p>Major side effects Constipation, Injection site pain Constipation,</p>
+<p>vomiting, and tenderness, vomiting, dizziness,</p>
+<p>dizziness, risk of injection site sedation, insomnia,</p>
+<p>sedation, QTc induration, toothache, blurred vision,</p>
+<p>prolongation, LFT elevation, insomnia, respiratory</p>
+<p>respiratory nasopharyngitis depression</p>
+<p>depression (risk (highest risk with</p>
+<p>is highest during concurrent use of</p>
+<p>initiation of CNS depressants</p>
+<p>methadone or including</p>
+<p>dose titration and benzodiazepines);</p>
+<p>concurrent use of sublingual</p>
+<p>benzodiazepines buprenorphine/</p>
+<p>or alcohol) naloxone</p>
+<p>sublingual and</p>
+<p>buccal film: oral</p>
+<p>hypoesthesia, oral</p>
+<p>mucosal erythema,</p>
+<p>glossodynia</p>
+<pre><code>CII, Schedule II prescription; CIII, Schedule III prescription; IM, intramuscular; LFT, liver function test;</code></pre>
+<p>OTP, Opioid Treatment Program; OUD, opioid use disorder; REMS, Risk Evaluation and Mitigation</p>
+<p>Strategy.</p>
+<p>806</p>
+<p>CH69.indd 806 20-11-2020 11:44:00</p>
+<div class="table-container"><table><tr><th>TABLE 69-3 Differences Between Medication-Assisted Therapy (MAT) Products(Continued )</th><th></th><th></th><th></th></tr><tr><td></td><td>Methadone</td><td>Extended-Release
+Injectable Naltrexone
+(XR-NTX)</td><td>Buprenorphine</td></tr><tr><td>Restrictions for
+prescribing
+each product
+(continued)</td><td></td><td></td><td>Implant: prescribers
+must be certified
+in Probuphine
+REMS program
+to insert/remove
+implants</td></tr><tr><td></td><td></td><td></td><td>Subcutaneous:
+healthcare
+settings and
+pharmacies must
+be certified in
+the Sublocade
+REMS program
+and only dispense
+the medication
+directly to a
+provider for
+administration</td></tr><tr><td>Patients that are
+commonly
+considered for
+this type of
+therapy</td><td>Patients with OUD;
+physiologically
+dependent on
+opioids and
+meet federal OTP
+admission criteria</td><td>Patients with OUD;
+patients who are
+abstinent from short-
+acting opioids for 7–10
+days and long-acting
+opioids 10–14 days</td><td>Patients with OUD;
+physiologically
+dependent on
+opioids</td></tr><tr><td>Major side effects</td><td>Constipation,
+vomiting,
+dizziness,
+sedation, QTc
+prolongation,
+respiratory
+depression (risk
+is highest during
+initiation of
+methadone or
+dose titration and
+concurrent use of
+benzodiazepines
+or alcohol)</td><td>Injection site pain
+and tenderness,
+risk of injection site
+induration, toothache,
+LFT elevation, insomnia,
+nasopharyngitis</td><td>Constipation,
+vomiting, dizziness,
+sedation, insomnia,
+blurred vision,
+respiratory
+depression
+(highest risk with
+concurrent use of
+CNS depressants
+including
+benzodiazepines);
+sublingual
+buprenorphine/
+naloxone
+sublingual and
+buccal film: oral
+hypoesthesia, oral
+mucosal erythema,
+glossodynia</td></tr></table></div><p>807</p>
+<p>Opioid</p>
+<p>Use</p>
+<p>Disorder</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>69</p>
+<p>TABLE 69-4 Extended-Release Products Approved by FDA for Opioid Use Disorder</p>
+<p>Drug Trade Name Dose Comments</p>
+<p>Naltrexone Revia Following a 7–10 day opioid- Should be part of a comprehensive treatment plan that includes psychosocial support</p>
+<h2>tablets free period for short-acting</h2>
+<p>Although specific dosage adjustments are not available for patient with hepatic</p>
+<p>opioids or a 10–14 day</p>
+<pre><code>dysfunction, reports of elevated LFTs have been reported; use with caution</code></pre>
+<p>opioid-free period for</p>
+<p>Use with caution in patients with renal impairment, although data are limited,</p>
+<p>long-acting opioids: begin</p>
+<p>naltrexone and active metabolite are renally excreted</p>
+<p>with dose of 25 mg daily</p>
+<p>with food. If no signs of</p>
+<p>withdrawal, increase dose</p>
+<p>to 50 mg po daily</p>
+<p>Naltrexone XR Vivitrol Following a 7–10 day opioid- Must be administered by a healthcare provider</p>
+<p>injection free period for short-acting</p>
+<p>Must use manufacturer provided needle and assess body size of patient at each visit so</p>
+<p>opioids or a 10–14 day</p>
+<p>proper needle size is used</p>
+<p>opioid-free period for long-</p>
+<p>Monitor injection site closely for any signs of abnormal pain and contact healthcare</p>
+<p>acting opioids: 380 mg IM</p>
+<p>provider immediately if this occurs</p>
+<p>in gluteal area alternating</p>
+<p>buttocks; every 4 weeks or Dose adjustment is required in mild or moderate hepatic impairment. No data available</p>
+<p>once a month in severe hepatic impairment</p>
+<p>No dose adjustments in mild renal impairment; use caution in patients with moderate-</p>
+<p>to-severe renal impairment, naltrexone and active metabolite are renally excreted</p>
+<p>Buprenorphine Probuphine Four implants are inserted Patients must meet specific criteria for use of Probuphine:</p>
+<p>subdermally in the inner a. Only indicated for patients who are opioid tolerant</p>
+<p>side of the upper arm and</p>
+<p>b. Demonstrates clinical stability on transmucosal buprenorphine with Subutex or</p>
+<p>should remain in place for</p>
+<p>Suboxone 8 mg/day or less (or transmucosal equivalent) for 3 months or longer</p>
+<p>6 months</p>
+<p>without requiring supplemental dose adjustments</p>
+<p>(Continued )</p>
+<p>CH69.indd</p>
+<p>807</p>
+<p>20-11-2020</p>
+<p>11:44:00</p>
+<div class="table-container"><table><tr><th>TABLE 69-4 Extended-Release Products Approved by FDA for Opioid Use Disorder</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Trade Name</td><td>Dose</td><td>Comments</td></tr><tr><td>Naltrexone
+tablets</td><td>Revia</td><td>Following a 7–10 day opioid-
+free period for short-acting
+opioids or a 10–14 day
+opioid-free period for
+long-acting opioids: begin
+with dose of 25 mg daily
+with food. If no signs of
+withdrawal, increase dose
+to 50 mg po daily</td><td>Should be part of a comprehensive treatment plan that includes psychosocial support
+Although specific dosage adjustments are not available for patient with hepatic
+dysfunction, reports of elevated LFTs have been reported; use with caution
+Use with caution in patients with renal impairment, although data are limited,
+naltrexone and active metabolite are renally excreted</td></tr><tr><td>Naltrexone XR
+injection</td><td>Vivitrol</td><td>Following a 7–10 day opioid-
+free period for short-acting
+opioids or a 10–14 day
+opioid-free period for long-
+acting opioids: 380 mg IM
+in gluteal area alternating
+buttocks; every 4 weeks or
+once a month</td><td>Must be administered by a healthcare provider
+Must use manufacturer provided needle and assess body size of patient at each visit so
+proper needle size is used
+Monitor injection site closely for any signs of abnormal pain and contact healthcare
+provider immediately if this occurs
+Dose adjustment is required in mild or moderate hepatic impairment. No data available
+in severe hepatic impairment
+No dose adjustments in mild renal impairment; use caution in patients with moderate-
+to-severe renal impairment, naltrexone and active metabolite are renally excreted</td></tr><tr><td>Buprenorphine</td><td>Probuphine</td><td>Four implants are inserted
+subdermally in the inner
+side of the upper arm and
+should remain in place for
+6 months</td><td>Patients must meet specific criteria for use of Probuphine:
+a. Only indicated for patients who are opioid tolerant
+b. Demonstrates clinical stability on transmucosal buprenorphine with Subutex or
+Suboxone 8 mg/day or less (or transmucosal equivalent) for 3 months or longer
+without requiring supplemental dose adjustments
+(Continued )</td></tr></table></div><h2>808 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 69-4 Extended-Release Products Approved by FDA for Opioid Use Disorder (Continued )</p>
+<p>Drug Trade Name Dose Comments</p>
+<p>Probuphine must be inserted or removed within a facility and by a certified provider</p>
+<p>who has completed the required live training</p>
+<p>It is recommended to not prescribe as-needed transmucosal buprenorphine products.</p>
+<p>If patient is requesting these products, reassessment is indicated</p>
+<p>Moderate-to-severe hepatic impairment: use not recommended</p>
+<p>Limited data in renal impairment, currently no dosage adjustments listed</p>
+<p>Buprenorphine Sublocade For patients who have Must be administered by a healthcare provider</p>
+<p>achieved clinical stability Steady state occurs after 4–6 months; after discontinuation detectable buprenorphine</p>
+<p>on equivalent of 8–24 levels could occur 12 months or longer; urine and plasma concentration correlations</p>
+<p>mg of a transmucosal are not known</p>
+<p>buprenorphine product</p>
+<p>Injections must occur at least 26 days apart. Follow all manufacturer directions for</p>
+<p>daily</p>
+<p>preparation and injection</p>
+<p>Available in two extended-</p>
+<p>Do not give the injection at the belt or waistband area where pressure will occur</p>
+<p>release solutions:</p>
+<p>Counsel the patient that there will be a small bump at the injection site that will</p>
+<p>a. 100 mg/0.5 mL decrease in size over the next several weeks. Do not rub or massage this area</p>
+<p>b. 300 mg/1.5 mL If needed, the most recently injected depot can be removed within the 14 days of</p>
+<p>Directions: inject 300 mg injection under local anesthesia</p>
+<p>subcutaneously once Doses can be adjusted back to 300 mg monthly for patients in whom benefits exceed</p>
+<p>a month in abdominal risks</p>
+<p>area for 2 months, then Examine injection site each month for evidence of tampering</p>
+<p>decrease dose to 100</p>
+<p>Moderate-to-severe hepatic impairment: use not recommended</p>
+<p>mg once monthly in</p>
+<p>Limited data in renal impairment, currently no dosage adjustments listed abdominal area</p>
+<pre><code>IM, intramuscularly; LFTs, liver function tests; mg, milligram; mL, milliliters.</code></pre>
+<p>CH69.indd</p>
+<p>808</p>
+<p>20-11-2020</p>
+<p>11:44:00</p>
+<div class="table-container"><table><tr><th>Drug Trade Name Dose Comments</th><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td><td>Probuphine must be inserted or removed within a facility and by a certified provider
+who has completed the required live training
+It is recommended to not prescribe as-needed transmucosal buprenorphine products.
+If patient is requesting these products, reassessment is indicated
+Moderate-to-severe hepatic impairment: use not recommended
+Limited data in renal impairment, currently no dosage adjustments listed</td></tr><tr><td>Buprenorphine</td><td>Sublocade</td><td>For patients who have
+achieved clinical stability
+on equivalent of 8–24
+mg of a transmucosal
+buprenorphine product
+daily
+Available in two extended-
+release solutions:
+a. 100 mg/0.5 mL
+b. 300 mg/1.5 mL
+Directions: inject 300 mg
+subcutaneously once
+a month in abdominal
+area for 2 months, then
+decrease dose to 100
+mg once monthly in
+abdominal area</td><td>Must be administered by a healthcare provider
+Steady state occurs after 4–6 months; after discontinuation detectable buprenorphine
+levels could occur 12 months or longer; urine and plasma concentration correlations
+are not known
+Injections must occur at least 26 days apart. Follow all manufacturer directions for
+preparation and injection
+Do not give the injection at the belt or waistband area where pressure will occur
+Counsel the patient that there will be a small bump at the injection site that will
+decrease in size over the next several weeks. Do not rub or massage this area
+If needed, the most recently injected depot can be removed within the 14 days of
+injection under local anesthesia
+Doses can be adjusted back to 300 mg monthly for patients in whom benefits exceed
+risks
+Examine injection site each month for evidence of tampering
+Moderate-to-severe hepatic impairment: use not recommended
+Limited data in renal impairment, currently no dosage adjustments listed</td></tr></table></div><h2>Opioid Use Disorder | CHAPTER 69</h2>
+<li>Adverse effects seen with methadone use include sedation and respiratory depression.</li>
+<li>Methadone has many cytochrome P450 drug interactions, and concomitant use</li>
+<p>of alcohol or benzodiazepines can lead to overdose and use should be assessed.</p>
+<li>Methadone carries a risk of QT prolongation, which is increased when given with</li>
+<p>other drugs that also prolong the QT interval.</p>
+<li>The use of methadone for OUD treatment is only approved through the Opioid</li>
+<p>Treatment Program (OTP), controlled by the Drug Enforcement Agency (DEA)</p>
+<p>and Substance Abuse and Mental Health Services Administration (SAMHSA).</p>
+<p>Methadone for the treatment of OUD may be provided to patients during a hospi-</p>
+<p>tal admission for treatment of other health conditions.</p>
+<p>Buprenorphine</p>
+<li>Buprenorphine is a partial mu-receptor agonist that is available as buprenorphine</li>
+<p>alone or buprenorphine/naloxone formulations. Table 69-5 outlines the products</p>
+<p>used in the treatment of OUD. Due to its partial agonist activity, buprenorphine does</p>
+<p>provide some intrinsic pain control and has a ceiling effect for respiratory depression.</p>
+<p>Buprenorphine can be abused.</p>
+<li>Initiation in the emergency room for patients who present with opioid withdrawal</li>
+<p>symptoms is a treatment option, and federal guidelines state that buprenorphine</p>
+<p>should be offered to patients with OUD who are appropriate candidates.</p>
+<li>Buprenorphine is a Schedule III controlled substance with specific prescribing restric-</li>
+<p>tions. Refer to the DEA webpage for the most up-to-date regulations regarding buprenor-</p>
+<p>phine prescribing. Sedation or intoxication is the main adverse effect seen with use.</p>
+<li>It is recommended that treatment starts with a COWS score of 12 or higher for the</li>
+<p>first dose, based on buprenorphine Risk Evaluation and Mitigation Strategy (REMS).</p>
+<li>Medically supervised withdrawal with buprenorphine consists of an induction phase</li>
+<p>and a dose reduction phase followed by maintenance. SAMHSA provides evidence-</p>
+<p>based recommendations for use of buprenorphine for opioid addiction through vari-</p>
+<p>ous Treatment Improvement Protocols (TIPs). The same buprenorphine preparation</p>
+<p>is commonly used for induction, stabilization, and maintenance for most patients.</p>
+<li>Induction helps patients switch from the opioid of abuse to buprenorphine, and the</li>
+<p>goal is to find the minimum dose of buprenorphine at which the patient discontinues</p>
+<p>or markedly diminishes use of the opioid of abuse and experiences no withdrawal</p>
+<p>symptoms, minimal or no side effects, and no craving. The initial induction doses</p>
+<p>should be administered as observed treatment.</p>
+<li>The stabilization phase starts when the patient is experiencing no withdrawal symp-</li>
+<p>toms, is having minimal or no side effects, and no longer has uncontrollable cravings.</p>
+<li>The maintenance phase may be indefinite and should focus on psychosocial and</li>
+<p>family issues. Attention must be focused on psychosocial and family issues identified</p>
+<p>during the course of treatment that contribute to a patient’s OUD.</p>
+<h2>• Patient education is important (Table 69-6).</h2>
+<p>Naltrexone</p>
+<li>Naltrexone is a mu-opioid antagonist that is available for OUD in both an oral tablet</li>
+<h2>and an extended-release injectable formulation.</h2>
+<li>After confirming patients have been opioid free for 7–10 days, the initial dose is</li>
+<p>25 mg given once daily, which can be increased to 50 mg/daily. Extended-release</p>
+<p>injectable naltrexone (Vivitrol®) is FDA-approved for use following opioid detoxifica-</p>
+<p>tion to help prevent relapse.</p>
+<li>The main adverse effects include swelling, bruising, and pruritus at the injection site.</li>
+<pre><code>Elevations in liver function tests may occur with oral use.</code></pre>
+<p>Alpha-2 Agonists</p>
+<li>Clonidine or lofexidine may be used to attenuate withdrawal symptoms such as</li>
+<p>anxiety, tachycardia, hypertension, chills, and piloerection.</p>
+<li>Adverse effects include hypotension, dizziness, and sedation.</li>
+<p>809</p>
+<p>CH69.indd 809 20-11-2020 11:44:00</p>
+<h2>810 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 69-5 Oral Buprenorphine Products Used for Treating Opioid Use Disorder</p>
+<p>Buprenorphine SL Tablet Suboxone SL Tablet Zubsolv SL Tablet Suboxone SL or Buccal Film Bunavail Buccal Film</p>
+<p>Strengths of products 2 mg Buprenorphine/Naloxone Buprenorphine/Naloxone Buprenorphine/Naloxone Buprenorphine/Naloxone</p>
+<p>commercially 8 mg 2 mg/0.5 mg 0.7 mg/0.18 mg 2 mg/0.5 mg 2.1 mg/0.3 mg</p>
+<p>available/Routes of</p>
+<p>administration 8 mg/2 mg 1.4 mg/0.36 mg 4 mg/1 mg 4.2 mg/0.7 mg</p>
+<p>2.9 mg/0.71 mg 8 mg/2 mg 6.3 mg/1 mg</p>
+<p>5.7 mg/1.4 mg 12 mg/3 mg</p>
+<p>8.6 mg/2.1 mg</p>
+<p>11.4 mg/2.9 mg</p>
+<p>Recommended Target maintenance dose Target maintenance dose Target maintenance dose Target maintenance dose Target maintenance dose</p>
+<p>once-daily target 16 mg 16 mg/4 mg 11.4 mg/2.9 mg 16 mg/4 mg 8.4 mg/1.4 mg</p>
+<p>maintenance dose Dosing range Dosing range Dosing range Dosing range Dosing range</p>
+<p>and dosing ranges</p>
+<p>4–24 mga 4 mg/1 mg to 24 mg/6 2.9 mg/0.71 mg to 17.2 4 mg/1 mg to 24 mg/6 mga 2.1 mg/0.3 mg to 12.6</p>
+<p>mgb mg/4.2 mga mg/2.1 mg</p>
+<p>aDoses higher than 24 mg/6 mg have not been shown to offer any further benefit.</p>
+<p>bDoses higher than 17.2 mg/4.2 mg have not been shown to offer any added benefit.</p>
+<p>SL, sublingual.</p>
+<p>Note: Refer to individual product dosing information when switching formulations due to possible bioequivalence variability. Monitoring is recommended following a switch in products</p>
+<p>due to possible variation in response to different formulations.</p>
+<p>CH69.indd</p>
+<p>810</p>
+<p>20-11-2020</p>
+<p>11:44:00</p>
+<div class="table-container"><table><tr><th>Buprenorphine SL Tablet Suboxone SL Tablet Zubsolv SL Tablet Suboxone SL or Buccal Film Bunavail Buccal Film</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Strengths of products
+commercially
+available/Routes of
+administration</td><td>2 mg
+8 mg</td><td>Buprenorphine/Naloxone
+2 mg/0.5 mg
+8 mg/2 mg</td><td>Buprenorphine/Naloxone
+0.7 mg/0.18 mg
+1.4 mg/0.36 mg
+2.9 mg/0.71 mg
+5.7 mg/1.4 mg
+8.6 mg/2.1 mg
+11.4 mg/2.9 mg</td><td>Buprenorphine/Naloxone
+2 mg/0.5 mg
+4 mg/1 mg
+8 mg/2 mg
+12 mg/3 mg</td><td>Buprenorphine/Naloxone
+2.1 mg/0.3 mg
+4.2 mg/0.7 mg
+6.3 mg/1 mg</td></tr><tr><td>Recommended
+once-daily target
+maintenance dose
+and dosing ranges</td><td>Target maintenance dose
+16 mg
+Dosing range
+4–24 mga</td><td>Target maintenance dose
+16 mg/4 mg
+Dosing range
+4 mg/1 mg to 24 mg/6
+mgb</td><td>Target maintenance dose
+11.4 mg/2.9 mg
+Dosing range
+2.9 mg/0.71 mg to 17.2
+mg/4.2 mga</td><td>Target maintenance dose
+16 mg/4 mg
+Dosing range
+4 mg/1 mg to 24 mg/6 mga</td><td>Target maintenance dose
+8.4 mg/1.4 mg
+Dosing range
+2.1 mg/0.3 mg to 12.6
+mg/2.1 mg</td></tr></table></div><h2>Opioid Use Disorder | CHAPTER 69</h2>
+<p>TABLE 69-6 Patient Education Points for Buprenorphine Treatment</p>
+<p>Prior to Starting Buprenorphine Therapy and Repeat Education</p>
+<p>at Induction:</p>
+<li>Communication with prescriber: Tell your doctors all medications including over-the-</li>
+<p>counter, herbal, creams, injections, inhalants, street medications, etc. that you are currently</p>
+<p>taking. This is important so your doctor is aware of what is in your body and if there are any</p>
+<p>chances of a dangerous drug interaction. Additionally, tell all of your doctors you are taking</p>
+<p>buprenorphine. If you are being treated for pain, it is very important to tell your doctor you</p>
+<p>are taking buprenorphine.</p>
+<li>Goals of therapy: The goal of your first week of treatment is to improve the symptoms</li>
+<p>of withdrawal without causing any oversedation (making you too tired or feeling over</p>
+<p>medicated). Notify your doctor/prescriber if you are feeling overly tired/sedated or euphoric</p>
+<p>within 1–4 hours of your dose. Dose adjustments might occur initially and it will take a little</p>
+<p>time for the buprenorphine to become stable in your system. The goals of therapy include</p>
+<p>finding the right dose to eliminate withdrawal, decrease or even eliminate cravings for opi-</p>
+<p>oids, and block the effects of other opioids without severe side effects.</p>
+<li>Product use:</li>
+<li>Buprenorphine products (tablets, sublingual film, and buccal film) are not equivalent. If</li>
+<p>you have to transition to a new buprenorphine product, a dose adjustment might be</p>
+<p>required.</p>
+<li>Take your dose at regular intervals and only as prescribed.</li>
+<li>If you miss a dose, take the dose as soon as possible. If it is almost time for the next dose,</li>
+<p>do not double your dose, take only the dose that is prescribed.</p>
+<li>Leave medication in packaging until you are ready to use.</li>
+<li>Do not swallow sublingual tablets or film. This can reduce the effect of buprenorphine</li>
+<p>and lead to withdrawal symptoms.</p>
+<h2>• Sublingual tablets</h2>
+<p>i. Place tablets under your tongue and allow the tablet to fully dissolve, which can take</p>
+<p>several minutes.</p>
+<p>ii. If your dose requires multiple tablets, all tablets can be placed under the tongue at</p>
+<p>one time. If this is uncomfortable, only place two tablets under the tongue at a time.</p>
+<li>Sublingual film</li>
+<p>i. Drink water prior to placing the film to help the film dissolve easily.</p>
+<p>ii. Place film under the tongue, to the left or right of the center of the tongue, and</p>
+<p>allow to completely dissolve.</p>
+<p>iii. If you are prescribed 2 films at a time, place the second film on the opposite side of</p>
+<p>the tongue. Do not allow the films to touch.</p>
+<p>iv. If you are prescribed more than 2 films at a time, wait until previous films have dis-</p>
+<p>solved and repeat the process.</p>
+<li>Buccal film</li>
+<p>i. Wet the inside of your cheek with your tongue or rinse with water prior to placing</p>
+<p>film.</p>
+<p>ii. Hold the film by the edges with two fingers and place on inside of cheek until fully</p>
+<p>dissolved, which can take up to 30 minutes.</p>
+<p>iii. If you are prescribed 2 films, place the second film inside the opposite cheek.</p>
+<p>iv. Do not adjust the film placement or touch the film, do not chew or swallow the film</p>
+<p>v. Do not drink or eat until the film has completely dissolved.</p>
+<li>Common side effects: Some side effects can occur when taking buprenorphine. These</li>
+<p>do not happen all of the time and do not happen to everyone. If you are experiencing any</p>
+<p>of these side effects please tell your doctor immediately. Do not stop taking buprenor-</p>
+<p>phine without first speaking to your doctor. The most common side effects include head-</p>
+<p>ache, nausea, constipation, abdominal pain, insomnia, sweating, and a possible feeling of</p>
+<p>weakness or lack of energy.</p>
+<p>(Continued )</p>
+<p>811</p>
+<p>CH69.indd 811 20-11-2020 11:44:00</p>
+<div class="table-container"><table><tr><th>TABLE 69-6 Patient Education Points for Buprenorphine Treatment</th></tr><tr><td>Prior to Starting Buprenorphine Therapy and Repeat Education
+at Induction:</td></tr><tr><td>• Communication with prescriber: Tell your doctors all medications including over-the-
+counter, herbal, creams, injections, inhalants, street medications, etc. that you are currently
+taking. This is important so your doctor is aware of what is in your body and if there are any
+chances of a dangerous drug interaction. Additionally, tell all of your doctors you are taking
+buprenorphine. If you are being treated for pain, it is very important to tell your doctor you
+are taking buprenorphine.
+• Goals of therapy: The goal of your first week of treatment is to improve the symptoms
+of withdrawal without causing any oversedation (making you too tired or feeling over
+medicated). Notify your doctor/prescriber if you are feeling overly tired/sedated or euphoric
+within 1–4 hours of your dose. Dose adjustments might occur initially and it will take a little
+time for the buprenorphine to become stable in your system. The goals of therapy include
+finding the right dose to eliminate withdrawal, decrease or even eliminate cravings for opi-
+oids, and block the effects of other opioids without severe side effects.
+• Product use:
+• Buprenorphine products (tablets, sublingual film, and buccal film) are not equivalent. If
+you have to transition to a new buprenorphine product, a dose adjustment might be
+required.
+• Take your dose at regular intervals and only as prescribed.
+• If you miss a dose, take the dose as soon as possible. If it is almost time for the next dose,
+do not double your dose, take only the dose that is prescribed.
+• Leave medication in packaging until you are ready to use.
+• Do not swallow sublingual tablets or film. This can reduce the effect of buprenorphine
+and lead to withdrawal symptoms.
+• Sublingual tablets
+i. Place tablets under your tongue and allow the tablet to fully dissolve, which can take
+several minutes.
+ii. If your dose requires multiple tablets, all tablets can be placed under the tongue at
+one time. If this is uncomfortable, only place two tablets under the tongue at a time.
+• Sublingual film
+i. Drink water prior to placing the film to help the film dissolve easily.
+ii. Place film under the tongue, to the left or right of the center of the tongue, and
+allow to completely dissolve.
+iii. If you are prescribed 2 films at a time, place the second film on the opposite side of
+the tongue. Do not allow the films to touch.
+iv. If you are prescribed more than 2 films at a time, wait until previous films have dis-
+solved and repeat the process.
+• Buccal film
+i. Wet the inside of your cheek with your tongue or rinse with water prior to placing
+film.
+ii. Hold the film by the edges with two fingers and place on inside of cheek until fully
+dissolved, which can take up to 30 minutes.
+iii. If you are prescribed 2 films, place the second film inside the opposite cheek.
+iv. Do not adjust the film placement or touch the film, do not chew or swallow the film
+v. Do not drink or eat until the film has completely dissolved.
+• Common side effects: Some side effects can occur when taking buprenorphine. These
+do not happen all of the time and do not happen to everyone. If you are experiencing any
+of these side effects please tell your doctor immediately. Do not stop taking buprenor-
+phine without first speaking to your doctor. The most common side effects include head-
+ache, nausea, constipation, abdominal pain, insomnia, sweating, and a possible feeling of
+weakness or lack of energy.</td></tr><tr><td>(Continued )</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 69-6 Patient Education Points for Buprenorphine Treatment(Continued )</p>
+<li>Precautions and warnings</li>
+<li>Using alcohol while taking buprenorphine is very dangerous and can lead to increased</li>
+<p>risk of overdose and possibly death.</p>
+<li>There is a risk of overdose and possibly death if taking buprenorphine with benzodiaz-</li>
+<p>epines or alcohol.</p>
+<li>Using tobacco products prior to using buprenorphine decreases the absorption of</li>
+<p>buprenorphine, thereby decreasing its effectiveness.</p>
+<li>Long-term buprenorphine maintenance is recommended in many cases. If you stop</li>
+<p>buprenorphine, there is a high risk of overdose if you return to illicit opioid use.</p>
+<li>Buprenorphine is an opioid that can cause physical dependence. Do not stop taking</li>
+<p>buprenorphine without consulting your doctor. If you stop buprenorphine abruptly, you</p>
+<p>could experience withdrawal symptoms.</p>
+<li>All medications, including buprenorphine, should be stored in a secure area, preferably in</li>
+<p>a locked cabinet or safe. It is important to keep medication away from children.</p>
+<li>It is recommended that you do not drive, operate heavy machinery, or perform any dan-</li>
+<p>gerous activities until you are fully aware of how this medication affects you.</p>
+<li>If you feel you have taken too much buprenorphine, you will need emergency medical</li>
+<p>attention immediately. Some possible signs include dizziness, confusion, unsteady or faint,</p>
+<p>slowed reflexes, or breathing slower.</p>
+<li>Do not inject these products. Serious life-threatening infections could occur. Additionally, seri-</li>
+<p>ous withdrawal reactions can also occur upon injecting many of these buprenorphine products.</p>
+<li>Pregnancy: It is very important to inform your doctors if you become pregnant.</li>
+<li>Counseling options: Recovery resources and counseling resources are available for you</li>
+<p>and your family. We can give you further information on this when you are ready.</p>
+<p>Maintenance:</p>
+<li>Adherence assessment: If any discrepancies arise, initiate discussion to identify reasons</li>
+<p>for discrepancies</p>
+<li>Complete pill/film count</li>
+<li>Review PDMP</li>
+<li>Confirm current buprenorphine dose</li>
+<li>Review results of urine drug screen</li>
+<li>Treatment assessment and counseling</li>
+<li>Review treatment goals and assess progress</li>
+<li>Review and assess benefits and risks of continuing buprenorphine treatment</li>
+<li>Discuss participation in counseling or encourage counseling if not receiving counseling</li>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>OUD is a chronic disorder that requires pharmacological treatment and psychosocial</li>
+<p>and educational support. Consistent monitoring for efficacy and appropriateness</p>
+<p>through treatment is critical.</p>
+<li>Monitoring for withdrawal reactions utilizing proper assessment scales (ie, COWS)</li>
+<p>can aid in evaluating the patient appropriately.</p>
+<li>Medication safety has to be considered based on unique side-effect profiles and drug-</li>
+<p>interaction concerns for the selected treatment regimen.</p>
+<li>Data from urine drug screens and profiles from the Prescription Drug Monitoring Pro-</li>
+<p>gram (PDMP) can provide critical information on the full clinical picture for each patient.</p>
+<li>Continual patient education must occur to ensure proper medication administration</li>
+<p>and safety as the therapy continues.</p>
+<p>See Chapter 82, Substance-Related Disorders I: Overview and Depressants, Stimulants,</p>
+<p>and Hallucinogens, authored by Robin Moorman Li, Patrick Leffers, and Paul L. Doering,</p>
+<p>for a more detailed discussion of the topic.</p>
+<p>812</p>
+<p>CH69.indd 812 20-11-2020 11:44:00</p>
+<div class="table-container"><table><tr><th>TABLE 69-6 Patient Education Points for Buprenorphine Treatment(Continued )</th></tr><tr><td>Precautions and warnings
+• Using alcohol while taking buprenorphine is very dangerous and can lead to increased
+risk of overdose and possibly death.
+• There is a risk of overdose and possibly death if taking buprenorphine with benzodiaz-
+epines or alcohol.
+• Using tobacco products prior to using buprenorphine decreases the absorption of
+buprenorphine, thereby decreasing its effectiveness.
+• Long-term buprenorphine maintenance is recommended in many cases. If you stop
+buprenorphine, there is a high risk of overdose if you return to illicit opioid use.
+• Buprenorphine is an opioid that can cause physical dependence. Do not stop taking
+buprenorphine without consulting your doctor. If you stop buprenorphine abruptly, you
+could experience withdrawal symptoms.
+• All medications, including buprenorphine, should be stored in a secure area, preferably in
+a locked cabinet or safe. It is important to keep medication away from children.
+• It is recommended that you do not drive, operate heavy machinery, or perform any dan-
+gerous activities until you are fully aware of how this medication affects you.
+• If you feel you have taken too much buprenorphine, you will need emergency medical
+attention immediately. Some possible signs include dizziness, confusion, unsteady or faint,
+slowed reflexes, or breathing slower.
+• Do not inject these products. Serious life-threatening infections could occur. Additionally, seri-
+ous withdrawal reactions can also occur upon injecting many of these buprenorphine products.
+Pregnancy: It is very important to inform your doctors if you become pregnant.
+Counseling options: Recovery resources and counseling resources are available for you
+and your family. We can give you further information on this when you are ready.</td></tr><tr><td>Maintenance:</td></tr><tr><td>• Adherence assessment: If any discrepancies arise, initiate discussion to identify reasons
+for discrepancies
+• Complete pill/film count
+• Review PDMP
+• Confirm current buprenorphine dose
+• Review results of urine drug screen
+• Treatment assessment and counseling
+• Review treatment goals and assess progress
+• Review and assess benefits and risks of continuing buprenorphine treatment
+• Discuss participation in counseling or encourage counseling if not receiving counseling</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

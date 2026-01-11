@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24. Gastroesophageal Reflux Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>24. Gastroesophageal Reflux Disease</h1>
+        </header>
+        <main>
+            <p>251</p>
+<h2>RETPAHC</h2>
+<p>24</p>
+<p>Gastroesophageal</p>
+<p>Reflux Disease</p>
+<li>Gastroesophageal reflux disease (GERD) is symptoms or complications resulting from</li>
+<p>refluxed stomach contents into the esophagus, oral cavity (including the larynx), or</p>
+<p>lungs. Episodic heartburn that is not frequent or painful enough to be bothersome is</p>
+<p>not included in the definition.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>In some cases, reflux is associated with defective lower esophageal sphincter (LES)</li>
+<pre><code>pressure or function. Patients may have decreased LES pressure from spontaneous</code></pre>
+<p>transient LES relaxations, transient increases in intra-abdominal pressure, or an</p>
+<p>atonic LES. Some foods and medications decrease LES pressure (Table 24-1).</p>
+<li>Problems with other normal mucosal defense mechanisms may contribute to devel-</li>
+<p>opment of GERD, including abnormal esophageal anatomy, improper esophageal</p>
+<p>clearance of gastric fluids, reduced mucosal resistance to acid, delayed or ineffective</p>
+<p>gastric emptying, inadequate production of epidermal growth factor, and reduced</p>
+<p>salivary buffering of acid.</p>
+<li>Esophagitis occurs when the esophagus is repeatedly exposed to refluxed gastric con-</li>
+<p>tents for prolonged periods. This can progress to erosion of the squamous epithelium</p>
+<p>of the esophagus (erosive esophagitis).</p>
+<li>Substances that promote esophageal damage upon reflux into the esophagus include</li>
+<p>gastric acid, pepsin, bile acids, and pancreatic enzymes. Composition and volume of</p>
+<p>the refluxate and duration of exposure are the primary determinants of the conse-</p>
+<p>quences of gastroesophageal reflux.</p>
+<li>An “acid pocket” is thought to be an area of unbuffered acid in the proximal stomach</li>
+<p>that accumulates after a meal and may contribute to GERD symptoms postprandially.</p>
+<p>GERD patients are predisposed to upward migration of acid from the acid pocket,</p>
+<p>which may also be positioned above the diaphragm in patients with hiatal hernia,</p>
+<p>increasing the risk for acid reflux.</p>
+<li>Reflux and heartburn are common in pregnancy because of hormonal effects on LES</li>
+<p>tone and increased intra-abdominal pressure from an enlarging uterus.</p>
+<li>Obesity is a risk factor for GERD due to increased intra-abdominal pressure. Tran-</li>
+<p>sient LES relaxations, an incompetent LES, and impaired esophageal motility have</p>
+<p>also been attributed to obesity.</p>
+<li>Complications from long-term acid reflux include esophagitis, esophageal strictures,</li>
+<p>Barrett esophagus, and esophageal adenocarcinoma.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Symptom-based GERD (with or without esophageal tissue injury) typically presents</li>
+<p>with heartburn, usually described as a substernal sensation of warmth or burning</p>
+<p>rising up from the abdomen that may radiate to the neck. It may wax and wane in</p>
+<p>character and be aggravated by activities that worsen reflux (eg, recumbent position,</p>
+<p>bending-over, eating a high-fat meal). Other symptoms are water brash (hypersaliva-</p>
+<p>tion), belching, and regurgitation. Alarm symptoms that may indicate complications</p>
+<p>include dysphagia, odynophagia, bleeding, and weight loss. The absence of tissue</p>
+<p>injury or erosions is termed nonerosive reflux disease (NERD).</p>
+<li>Tissue injury–based GERD (with or without esophageal symptoms) may present</li>
+<p>with esophagitis, esophageal strictures, Barrett esophagus, or esophageal carcinoma.</p>
+<p>Alarm symptoms may also be present.</p>
+<li>Extraesophageal symptoms may include chronic cough, laryngitis, wheezing, and</li>
+<p>asthma.</p>
+<p>ch24.indd 251 19-11-2020 12:13:28</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>24</th><th>Gastroesophageal
+Reflux Disease</th></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 24-1 Foods and Medications That May Worsen GERD Symptoms</p>
+<p>Foods/Beverages Medications</p>
+<p>Decreased lower esophageal sphincter pressure</p>
+<p>Fatty meal Anticholinergics</p>
+<p>Carminatives (peppermint, spearmint) Barbiturates</p>
+<p>Chocolate Caffeine</p>
+<p>Coffee, cola, tea Dihydropyridine calcium channel blockers</p>
+<p>Garlic Dopamine</p>
+<p>Onions Estrogen</p>
+<p>Chili peppers Nicotine</p>
+<p>Alcohol Nitrates</p>
+<p>Progesterone</p>
+<p>Tetracycline</p>
+<p>Theophylline</p>
+<p>Direct irritants to the esophageal mucosa</p>
+<p>Spicy foods Aspirin</p>
+<p>Orange juice Bisphosphonates</p>
+<p>Tomato juice Nonsteroidal anti-inflammatory drugs</p>
+<p>(NSAIDs)</p>
+<p>Coffee Iron</p>
+<p>Tobacco Quinidine</p>
+<p>Potassium choride</p>
+<h2>DIAGNOSIS</h2>
+<li>Clinical history is sufficient to diagnose GERD in patients with typical symptoms.</li>
+<li>Perform diagnostic tests in patients who do not respond to therapy or who present</li>
+<p>with alarm symptoms. Endoscopy is preferred for assessing mucosal injury and iden-</p>
+<p>tifying strictures, Barrett esophagus, and other complications.</p>
+<li>Ambulatory pH monitoring, combined impedance–pH monitoring, high-resolution</li>
+<p>esophageal pressure topography (HREPT), impedance manometry, and an empiric</p>
+<p>trial of a proton pump inhibitor (PPI) may be useful in some situations.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to reduce or eliminate symptoms, decrease fre-</li>
+<p>quency and duration of gastroesophageal reflux, promote healing of injured mucosa,</p>
+<p>and prevent complications.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Therapy is directed toward decreasing acidity of the refluxate, decreasing the gastric</li>
+<p>volume available to be refluxed, improving gastric emptying, increasing LES pressure,</p>
+<p>enhancing esophageal acid clearance, and protecting the esophageal mucosa.</p>
+<li>Treatment is determined by disease severity and includes the following:</li>
+<p>✓ Lifestyle changes and patient-directed therapy with antacids and/or nonprescription</p>
+<p>acid suppression therapy (histamine 2–receptor antagonists [HRAs] and/or PPIs)</p>
+<p>✓ Pharmacologic treatment with prescription-strength acid suppr 2 ession therapy</p>
+<p>✓ Antireflux surgery</p>
+<p>✓ Endoscopic therapies</p>
+<p>252</p>
+<p>ch24.indd 252 19-11-2020 12:13:29</p>
+<div class="table-container"><table><tr><th>TABLE 24-1 Foods and Medications That May Worsen GERD Symptoms</th><th></th></tr><tr><td>Foods/Beverages</td><td>Medications</td></tr><tr><td>Decreased lower esophageal sphincter pressure</td><td></td></tr><tr><td>Fatty meal</td><td>Anticholinergics</td></tr><tr><td>Carminatives (peppermint, spearmint)</td><td>Barbiturates</td></tr><tr><td>Chocolate</td><td>Caffeine</td></tr><tr><td>Coffee, cola, tea</td><td>Dihydropyridine calcium channel blockers</td></tr><tr><td>Garlic</td><td>Dopamine</td></tr><tr><td>Onions</td><td>Estrogen</td></tr><tr><td>Chili peppers</td><td>Nicotine</td></tr><tr><td>Alcohol</td><td>Nitrates
+Progesterone
+Tetracycline
+Theophylline</td></tr><tr><td>Direct irritants to the esophageal mucosa</td><td></td></tr><tr><td>Spicy foods</td><td>Aspirin</td></tr><tr><td>Orange juice</td><td>Bisphosphonates</td></tr><tr><td>Tomato juice</td><td>Nonsteroidal anti-inflammatory drugs
+(NSAIDs)</td></tr><tr><td>Coffee</td><td>Iron</td></tr><tr><td>Tobacco</td><td>Quinidine</td></tr><tr><td></td><td>Potassium choride</td></tr></table></div><h2>Gastroesophageal Reflux Disease | CHAPTER 24</h2>
+<li>The initial intervention depends in part on the patient’s condition (symptom</li>
+<p>frequency, degree of esophagitis, and presence of complications). A step-down</p>
+<p>approach is most often advocated, starting with a PPI instead of an HRA, and then</p>
+<p>2</p>
+<p>stepping down to the lowest dose of acid suppression needed to control symptoms</p>
+<h2>(Table 24-2).</h2>
+<li>Patient-directed therapy (self-treatment with nonprescription medication) is appro-</li>
+<p>priate for mild, intermittent symptoms. Patients with continuous symptoms for lon-</p>
+<p>ger than 2 weeks should seek medical attention; such patients are generally started on</p>
+<p>empiric acid-suppression therapy. Patients not responding satisfactorily or those with</p>
+<p>alarm symptoms (eg, dysphagia) should undergo endoscopy.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Potential lifestyle changes depending on the patient situation:</li>
+<p>✓ Elevate head of the bed by placing 6- to 8-in blocks under the headposts. Sleep on</p>
+<p>a foam wedge.</p>
+<p>✓ Weight reduction for overweight or obese patients.</p>
+<p>✓ Avoid foods that decrease LES pressure (eg, fats, chocolate).</p>
+<p>✓ Include protein-rich meals to augment LES pressure.</p>
+<p>✓ Avoid foods with irritant effects on the esophageal mucosa (eg, citrus juices,</p>
+<p>coffee, pepper).</p>
+<p>✓ Eat small meals and avoid eating immediately prior to sleeping (within 3 hours</p>
+<p>if possible).</p>
+<p>✓ Stop smoking.</p>
+<p>✓ Avoid alcohol.</p>
+<p>✓ Avoid tight-fitting clothes.</p>
+<p>✓ For mandatory medications that irritate the esophageal mucosa, take in the</p>
+<p>upright position with plenty of liquid or food (if appropriate).</p>
+<li>Antireflux surgery (eg, laparoscopic Nissen fundoplication) should be considered</li>
+<p>when long-term pharmacotherapy is undesirable or when patients have complica-</p>
+<p>tions. Bariatric surgery, specifically Roux-en-Y gastric bypass, should be considered</p>
+<p>in obese patients (BMI &gt;35 kg/m2) contemplating surgery.</p>
+<li>Two endoscopic therapies are: (1) radiofrequency ablation (for managing Barrett</li>
+<p>esophagus primarily when dysplasia is present), and (2) transoral incisionless fundo-</p>
+<p>plication (for select patients with chronic GERD).</p>
+<li>Magnetic sphincter augmentation can improve lower esophageal resistance and</li>
+<p>reduce GERD symptoms. Five-year results showed long-term reduction in esopha-</p>
+<p>geal acid and symptom improvement with minimal complications.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Antacids and Antacid-Alginic Acid Products</p>
+<li>Antacids provide immediate symptomatic relief for mild GERD and are often used</li>
+<p>concurrently with acid suppression therapies. Patients who require frequent use for</p>
+<p>chronic symptoms should receive prescription-strength acid suppression therapy</p>
+<p>instead.</p>
+<li>Some antacid products are combined with alginic acid, which is not a potent acid-</li>
+<p>neutralizing agent and does not enhance LES pressure, but it forms a viscous solution</p>
+<p>that floats on the surface of gastric contents. This serves as a protective barrier for the</p>
+<p>esophagus against reflux of gastric contents and reduces frequency of reflux episodes.</p>
+<p>The combination product may be superior to antacids alone in relieving GERD</p>
+<p>symptoms, but efficacy data indicating endoscopic healing are lacking.</p>
+<li>Antacids have a short duration, which necessitates frequent administration through-</li>
+<p>out the day to provide continuous acid neutralization. Taking antacids after meals</p>
+<p>can increase duration from approximately 1 hour to 3 hours; however, nighttime acid</p>
+<p>suppression cannot be maintained with bedtime doses. Antacids may cause diarrhea</p>
+<p>253</p>
+<p>ch24.indd 253 19-11-2020 12:13:29</p>
+<h2>254 SECTION</h2>
+<p>5</p>
+<p>|</p>
+<p>Gastrointestinal</p>
+<p>Disorders</p>
+<h2>TABLE 24-2 Therapeutics Approach to GERD in Adults</h2>
+<p>Recommended Treatment</p>
+<p>Regimen Brand Name Oral Dose Comments</p>
+<p>Intermittent, mild heartburn (individualized lifestyle modifications + patient-directed therapy with antacids and/or nonprescription HRAs or 2</p>
+<p>nonprescription PPI)</p>
+<p>Individualized lifestyle modifications Lifestyle modifications should be individualized for each patient</p>
+<p>Patient-directed therapy with antacids (≥12 years old)</p>
+<p>Magnesium hydroxide/Aluminum Maalox 10–20 mL as needed or after If symptoms are unrelieved with lifestyle modifications and</p>
+<p>hydroxide with simethicone meals and at bedtime nonprescription medications after 2 weeks, patient should seek</p>
+<p>medical attention; do not exceed 16 teaspoonfuls per 24 hours</p>
+<p>Antacid/Alginic acid Gaviscon 2–4 tablets or 10–20 mL after Note: Content of alginic acid varies greatly among products; the higher</p>
+<p>meals and at bedtime the alginic acid the better (at least 500 mg)</p>
+<h2>Calcium carbonate Tums 500 mg, 2–4 tablets as needed</h2>
+<p>Patient-directed therapy with nonprescription HRAs (up to twice daily) (≥12 years old)</p>
+<p>2</p>
+<p>Cimetidine Tagamet HB 200 mg If symptoms are unrelieved with lifestyle modifications and</p>
+<p>Famotidine Pepcid AC 10–20 mg nonprescription medications after 2 weeks, patient should seek</p>
+<p>medical attention</p>
+<p>Nizatidine Axid AR 75 mg</p>
+<p>Ranitidine Zantac 75–150 mg</p>
+<p>Patient-directed therapy (&gt;18 years old) with nonprescription PPIs (taken once daily)</p>
+<p>Esomeprazole Nexium 24HR 20 mg If symptoms are unrelieved with lifestyle modifications and</p>
+<p>Lansoprazole Prevacid 24HR 15 mg nonprescription medications after 2 weeks, patient should seek</p>
+<p>medical attention</p>
+<p>Omeprazole Prilosec OTC 20 mg</p>
+<p>Omeprazole/sodium bicarbonate Zegerid OTC 20 mg/1100 mg</p>
+<p>Symptomatic relief of GERD (individualized lifestyle modifications + prescription-strength HRAs or prescription-strength PPIs)</p>
+<p>2</p>
+<p>Individualized lifestyle modifications Lifestyle modifications should be individualized for each patient</p>
+<p>ch24.indd</p>
+<p>254</p>
+<p>19-11-2020</p>
+<p>12:13:29</p>
+<div class="table-container"><table><tr><th>Recommended Treatment
+Regimen</th><th>Brand Name</th><th>Oral Dose</th><th>Comments</th></tr><tr><td>Intermittent, mild heartburn (individualized lifestyle modifications + patient-directed therapy with antacids and/or nonprescription HRAs or
+2
+nonprescription PPI)</td><td></td><td></td><td></td></tr><tr><td>Individualized lifestyle modifications</td><td></td><td></td><td>Lifestyle modifications should be individualized for each patient</td></tr><tr><td>Patient-directed therapy with antacids (≥12 years old)</td><td></td><td></td><td></td></tr><tr><td>Magnesium hydroxide/Aluminum
+hydroxide with simethicone</td><td>Maalox</td><td>10–20 mL as needed or after
+meals and at bedtime</td><td>If symptoms are unrelieved with lifestyle modifications and
+nonprescription medications after 2 weeks, patient should seek
+medical attention; do not exceed 16 teaspoonfuls per 24 hours</td></tr><tr><td>Antacid/Alginic acid</td><td>Gaviscon</td><td>2–4 tablets or 10–20 mL after
+meals and at bedtime</td><td>Note: Content of alginic acid varies greatly among products; the higher
+the alginic acid the better (at least 500 mg)</td></tr><tr><td>Calcium carbonate</td><td>Tums</td><td>500 mg, 2–4 tablets as needed</td><td></td></tr><tr><td>Patient-directed therapy with nonprescription HRAs (up to twice daily) (≥12 years old)
+2</td><td></td><td></td><td></td></tr><tr><td>Cimetidine
+Famotidine
+Nizatidine
+Ranitidine</td><td>Tagamet HB
+Pepcid AC
+Axid AR
+Zantac</td><td>200 mg
+10–20 mg
+75 mg
+75–150 mg</td><td>If symptoms are unrelieved with lifestyle modifications and
+nonprescription medications after 2 weeks, patient should seek
+medical attention</td></tr><tr><td>Patient-directed therapy (&gt;18 years old) with nonprescription PPIs (taken once daily)</td><td></td><td></td><td></td></tr><tr><td>Esomeprazole
+Lansoprazole
+Omeprazole
+Omeprazole/sodium bicarbonate</td><td>Nexium 24HR
+Prevacid 24HR
+Prilosec OTC
+Zegerid OTC</td><td>20 mg
+15 mg
+20 mg
+20 mg/1100 mg</td><td>If symptoms are unrelieved with lifestyle modifications and
+nonprescription medications after 2 weeks, patient should seek
+medical attention</td></tr><tr><td>Symptomatic relief of GERD (individualized lifestyle modifications + prescription-strength HRAs or prescription-strength PPIs)
+2</td><td></td><td></td><td></td></tr><tr><td>Individualized lifestyle modifications</td><td></td><td></td><td>Lifestyle modifications should be individualized for each patient</td></tr></table></div><p>255</p>
+<p>Gastroesophageal</p>
+<p>Reflux</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>24</p>
+<p>Prescription-strength HRAs (for 6–12 weeks)</p>
+<p>2</p>
+<p>Cimetidine (off-label use) Tagamet 400 mg four times daily or For typical symptoms, treat empirically with prescription-strength acid</p>
+<p>Famotidine Pepcid 800 mg twice daily suppression therapy</p>
+<p>Nizatidine Axid 20 mg twice daily If symptoms recur, consider maintenance therapy. Note: Most patients</p>
+<p>Ranitidine Zantac 150 mg twice daily will require standard doses for maintenance therapy</p>
+<p>150 mg twice daily</p>
+<p>Prescription-strength PPIs (for 4–8 weeks)</p>
+<p>Dexlansoprazole Dexilant 30 mg once daily for 4 weeks For typical symptoms, treat empirically with prescription-strength acid</p>
+<p>Esomeprazole Nexium 20–40 mg once daily suppression therapy</p>
+<p>Lansoprazole Prevacid 15 mg once daily Patients with moderate-to-severe symptoms should receive a PPI as</p>
+<p>initial therapy</p>
+<p>Omeprazole Prilosec 20 mg once daily</p>
+<p>If symptoms recur, consider maintenance therapy</p>
+<p>Omeprazole/Sodium bicarbonate Zegerid 20 mg once daily</p>
+<p>Pantoprazole (off-label use) Protonix 40 mg once daily</p>
+<p>Rabeprazole Aciphex 20 mg once daily</p>
+<p>Healing of erosive esophagitis or treatment of patients with moderate-to-severe symptoms or complications (individualized lifestyle modifications +</p>
+<p>high-dose HRAs or PPIs or antireflux surgery)</p>
+<p>2</p>
+<p>Individualized lifestyle modifications Lifestyle modifications should be individualized for each patient</p>
+<p>(Continued)</p>
+<p>ch24.indd</p>
+<p>255</p>
+<p>19-11-2020</p>
+<p>12:13:30</p>
+<div class="table-container"><table><tr><th>Prescription-strength HRAs (for 6–12 weeks)
+2</th><th></th><th></th><th></th></tr><tr><td>Cimetidine (off-label use)
+Famotidine
+Nizatidine
+Ranitidine</td><td>Tagamet
+Pepcid
+Axid
+Zantac</td><td>400 mg four times daily or
+800 mg twice daily
+20 mg twice daily
+150 mg twice daily
+150 mg twice daily</td><td>For typical symptoms, treat empirically with prescription-strength acid
+suppression therapy</td></tr><tr><td></td><td></td><td></td><td>If symptoms recur, consider maintenance therapy. Note: Most patients
+will require standard doses for maintenance therapy</td></tr><tr><td>Prescription-strength PPIs (for 4–8 weeks)</td><td></td><td></td><td></td></tr><tr><td>Dexlansoprazole
+Esomeprazole
+Lansoprazole
+Omeprazole
+Omeprazole/Sodium bicarbonate
+Pantoprazole (off-label use)
+Rabeprazole</td><td>Dexilant
+Nexium
+Prevacid
+Prilosec
+Zegerid
+Protonix
+Aciphex</td><td>30 mg once daily for 4 weeks
+20–40 mg once daily
+15 mg once daily
+20 mg once daily
+20 mg once daily
+40 mg once daily
+20 mg once daily</td><td>For typical symptoms, treat empirically with prescription-strength acid
+suppression therapy
+Patients with moderate-to-severe symptoms should receive a PPI as
+initial therapy
+If symptoms recur, consider maintenance therapy</td></tr><tr><td>Healing of erosive esophagitis or treatment of patients with moderate-to-severe symptoms or complications (individualized lifestyle modifications +
+high-dose HRAs or PPIs or antireflux surgery)
+2</td><td></td><td></td><td></td></tr><tr><td>Individualized lifestyle modifications</td><td></td><td></td><td>Lifestyle modifications should be individualized for each patient
+(Continued)</td></tr></table></div><h2>256 SECTION</h2>
+<p>5</p>
+<p>|</p>
+<p>Gastrointestinal</p>
+<p>Disorders</p>
+<p>TABLE 24-2 Therapeutics Approach to GERD in Adults (Continued)</p>
+<p>Recommended Treatment</p>
+<p>Regimen Brand Name Oral Dose Comments</p>
+<p>PPIs (up to twice daily for up to 8 weeks)</p>
+<p>Dexlansoprazole Dexilant 60 mg daily For extraesophageal or alarm symptoms, obtain endoscopy with</p>
+<p>Esomeprazole Nexium 20–40 mg daily biopsy to evaluate mucosa</p>
+<p>Lansoprazole Prevacid 30 mg once or twice daily If symptoms are relieved, consider maintenance therapy. PPIs</p>
+<p>Omeprazole Prilosec 20 mg once or twice daily are the most effective maintenance therapy for patients with</p>
+<p>Rabeprazole Aciphex 20 mg once or twice daily extraesophageal symptoms, complications, and erosive disease.</p>
+<p>Pantoprazole Protonix 40 mg once or twice daily Start with twice-daily PPI therapy if reflux chest syndrome present</p>
+<p>Patients not responding to pharmacologic therapy, including those</p>
+<p>with persistent extraesophageal symptoms, should be evaluated via</p>
+<p>manometry and/or ambulatory reflux monitoring</p>
+<p>High-dose HRAs (for 8–12 weeks)</p>
+<p>2</p>
+<p>Cimetidine Tagamet 400 mg four times daily or If high-dose HRA needed, may consider using PPI to lower cost,</p>
+<p>2</p>
+<p>800 mg twice daily increase convenience, and increase tolerability</p>
+<p>Famotidine Pepcid 20–40 mg twice daily Four times daily HRA is considered off-label use for nizatidine</p>
+<p>2</p>
+<p>Nizatidine Aciphex 150 mg two to four times daily</p>
+<p>Ranitidine Zantac 150 mg four times daily</p>
+<p>Interventional therapy</p>
+<p>Antireflux surgery</p>
+<p>Bariatric surgery</p>
+<p>Endoscopic therapies</p>
+<p>H RA, histamine -receptor antagonist; PPI, proton pump inhibitor.</p>
+<p>2 2</p>
+<p>ch24.indd</p>
+<p>256</p>
+<p>19-11-2020</p>
+<p>12:13:30</p>
+<div class="table-container"><table><tr><th>TABLE 24-2 Therapeutics Approach to GERD in Adults (Continued)</th><th></th><th></th><th></th></tr><tr><td>Recommended Treatment
+Regimen</td><td>Brand Name</td><td>Oral Dose</td><td>Comments</td></tr><tr><td>PPIs (up to twice daily for up to 8 weeks)</td><td></td><td></td><td></td></tr><tr><td>Dexlansoprazole
+Esomeprazole
+Lansoprazole
+Omeprazole
+Rabeprazole
+Pantoprazole</td><td>Dexilant
+Nexium
+Prevacid
+Prilosec
+Aciphex
+Protonix</td><td>60 mg daily
+20–40 mg daily
+30 mg once or twice daily
+20 mg once or twice daily
+20 mg once or twice daily
+40 mg once or twice daily</td><td>For extraesophageal or alarm symptoms, obtain endoscopy with
+biopsy to evaluate mucosa
+If symptoms are relieved, consider maintenance therapy. PPIs
+are the most effective maintenance therapy for patients with
+extraesophageal symptoms, complications, and erosive disease.
+Start with twice-daily PPI therapy if reflux chest syndrome present
+Patients not responding to pharmacologic therapy, including those
+with persistent extraesophageal symptoms, should be evaluated via
+manometry and/or ambulatory reflux monitoring</td></tr><tr><td>High-dose HRAs (for 8–12 weeks)
+2</td><td></td><td></td><td></td></tr><tr><td>Cimetidine</td><td>Tagamet</td><td>400 mg four times daily or
+800 mg twice daily</td><td>If high-dose HRA needed, may consider using PPI to lower cost,
+2
+increase convenience, and increase tolerability</td></tr><tr><td>Famotidine</td><td>Pepcid</td><td>20–40 mg twice daily</td><td>Four times daily HRA is considered off-label use for nizatidine
+2</td></tr><tr><td>Nizatidine</td><td>Aciphex</td><td>150 mg two to four times daily</td><td></td></tr><tr><td>Ranitidine</td><td>Zantac</td><td>150 mg four times daily</td><td></td></tr><tr><td>Interventional therapy</td><td></td><td></td><td></td></tr><tr><td>Antireflux surgery
+Bariatric surgery
+Endoscopic therapies</td><td></td><td></td><td></td></tr></table></div><h2>Gastroesophageal Reflux Disease | CHAPTER 24</h2>
+<p>or constipation depending on the magnesium or aluminum content. These agents</p>
+<p>have significant drug interactions with tetracycline, ferrous sulfate, isoniazid, sulfo-</p>
+<p>nylureas, and quinolone antibiotics.</p>
+<p>Proton Pump Inhibitors</p>
+<li>Dexlansoprazole, esomeprazole, lansoprazole, omeprazole, pantoprazole, and</li>
+<p>rabeprazole block gastric acid secretion by inhibiting hydrogen potassium adenos-</p>
+<p>ine triphosphatase in gastric parietal cells, resulting in profound and long-lasting</p>
+<p>antisecretory effects.</p>
+<li>PPIs provide more rapid symptom relief and higher healing rates than HRAs in</li>
+<p>2</p>
+<p>patients with moderate-to-severe GERD and should be given empirically to patients</p>
+<p>with troublesome symptoms. Twice-daily use is indicated in patients not responding</p>
+<p>to standard once-daily therapy.</p>
+<li>Adverse effects include headache, diarrhea, nausea, and abdominal pain. Community-</li>
+<p>acquired pneumonia has occurred with short-term use. Potential long-term adverse</p>
+<p>effects include enteric infections, vitamin B deficiency, hypomagnesemia, and</p>
+<p>12</p>
+<p>bone fractures. PPIs can decrease the absorption of ketoconazole and itraconazole,</p>
+<p>which require an acidic environment for absorption. Although some PPIs (especially</p>
+<p>omeprazole) inhibit cytochrome P450 2C19 and may reduce conversion of clopido-</p>
+<p>grel to its active metabolite, the only prospective randomized clinical trial conducted</p>
+<p>to date found no increased rate of clinical events in patients given clopidogrel plus</p>
+<p>omeprazole.</p>
+<li>PPIs degrade in acidic environments and are therefore formulated in delayed-release</li>
+<p>capsules or tablets. Dexlansoprazole, esomeprazole, lansoprazole, and omeprazole</p>
+<p>contain enteric-coated (pH-sensitive) granules in capsules. For patients unable to</p>
+<p>swallow the capsules, the contents can be mixed in applesauce or orange juice. In</p>
+<p>patients with nasogastric tubes, the contents can be mixed in 8.4% sodium bicar-</p>
+<p>bonate solution. Esomeprazole granules can be dispersed in water. Esomeprazole,</p>
+<p>omeprazole, and pantoprazole are also available in a delayed-release oral suspension</p>
+<p>powder packet, and lansoprazole is available as a delayed-release, orally disintegrat-</p>
+<p>ing tablet. Rabeprazole is available in a capsule sprinkle that can be opened and</p>
+<p>placed in a small amount of soft food such as applesauce. Patients taking delayed-</p>
+<p>release tablets of pantoprazole or rabeprazole should be instructed not to crush, chew,</p>
+<p>or split them. Dexlansoprazole is available in a dual delayed-release capsule, with</p>
+<p>the first release occurring 1–2 hours after the dose, and the second release occurring</p>
+<p>4–5 hours after the dose.</p>
+<li>Zegerid® is a combination product containing omeprazole 20 or 40 mg with 1100 mg</li>
+<p>sodium bicarbonate in immediate-release oral capsules and powder for oral suspen-</p>
+<p>sion. It should be taken on an empty stomach at least 1 hour before a meal. The</p>
+<p>capsules should be swallowed whole and not opened, sprinkled on food, or admin-</p>
+<p>istered via nasogastric tube. The powder for oral suspension offers an alternative to</p>
+<p>delayed-release capsules or IV formulation in adults with nasogastric tubes.</p>
+<li>Lansoprazole, esomeprazole, and pantoprazole are available in IV formulations for</li>
+<p>patients who cannot take oral medications, but they are not more effective than oral</p>
+<p>preparations and are significantly more expensive.</p>
+<li>Patients should take oral PPIs in the morning 30–60 minutes before breakfast or their</li>
+<p>largest meal of the day to maximize efficacy, because these agents inhibit only actively</p>
+<p>secreting proton pumps. Dexlansoprazole can be taken without regard to meals. If</p>
+<p>dosed twice daily, the second PPI dose should be taken approximately 10–12 hours</p>
+<p>after the morning dose and prior to a meal or snack.</p>
+<p>Histamine 2–Receptor Antagonists</p>
+<li>Cimetidine, ranitidine, famotidine, and nizatidine in divided doses are effective</li>
+<p>for treating mild-to-moderate GERD. Low-dose nonprescription HRAs or standard</p>
+<p>2</p>
+<p>doses given twice daily may be beneficial for symptomatic relief of mild GERD.</p>
+<p>Patients not responding to standard doses may be hypersecretors of gastric acid and</p>
+<p>257</p>
+<p>ch24.indd 257 19-11-2020 12:13:30</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>require higher doses (Table 24-2). However, when standard doses of HRAs do not</p>
+<p>2</p>
+<p>adequately relieve symptoms, it is more cost-effective and clinically effective to switch</p>
+<p>to a PPI. The efficacy of HRAs for GERD treatment is highly variable and frequently</p>
+<p>2</p>
+<p>less than desired. Prolonged courses are frequently required.</p>
+<li>The most common adverse effects include headache, fatigue, dizziness, and either</li>
+<p>constipation or diarrhea. Cimetidine may inhibit the metabolism of theophylline,</p>
+<p>warfarin, phenytoin, nifedipine, and propranolol, among other drugs.</p>
+<li>Because all HRAs are equally effective, selection of the specific agent should be based</li>
+<p>2</p>
+<p>on differences in pharmacokinetics, safety profile, and cost.</p>
+<p>Promotility Agents</p>
+<li>Promotility agents may be useful adjuncts to acid-suppression therapy in patients</li>
+<p>with a known motility defect (eg, LES incompetence, decreased esophageal clearance,</p>
+<p>delayed gastric emptying). However, these agents are not as effective as acid suppres-</p>
+<p>sion therapy and have undesirable adverse effects.</p>
+<li>Metoclopramide, a dopamine antagonist, increases LES pressure in a dose-related</li>
+<p>manner and accelerates gastric emptying. However, it does not improve esophageal</p>
+<p>clearance. Metoclopramide provides symptomatic improvement for some patients,</p>
+<p>but evidence supporting endoscopic healing is lacking. Common adverse reactions</p>
+<p>include somnolence, nervousness, fatigue, dizziness, weakness, depression, diarrhea,</p>
+<p>and rash. In addition, extrapyramidal effects, tardive dyskinesia, and other CNS</p>
+<p>effects limit its usefulness.</p>
+<li>Bethanechol has limited value because of side effects (eg, urinary retention, abdomi-</li>
+<p>nal discomfort, nausea, flushing). It is not routinely recommended for treatment</p>
+<p>of GERD.</p>
+<p>Mucosal Protectants</p>
+<li>Sucralfate is a nonabsorbable aluminum salt of sucrose octasulfate. It has limited</li>
+<p>value for treatment of GERD but may be useful for management of radiation esopha-</p>
+<p>gitis and bile or nonacid reflux GERD.</p>
+<p>Combination Therapy</p>
+<li>Combination therapy with an acid-suppressing agent and a promotility agent or</li>
+<p>mucosal protectant seems logical, but data supporting such therapy are limited. This</p>
+<pre><code>approach is not recommended unless a patient has GERD with motor dysfunction.</code></pre>
+<p>Using the omeprazole-sodium bicarbonate immediate-release product in addition to</p>
+<p>once daily PPI therapy offers an alternative for nocturnal GERD symptoms.</p>
+<p>Maintenance Therapy</p>
+<li>Many patients with GERD relapse after medication is withdrawn, so maintenance</li>
+<p>treatment may be required. Consider long-term therapy to prevent complications</p>
+<pre><code>and worsening of esophageal function in patients who have symptomatic relapse</code></pre>
+<p>after discontinuation of therapy or dosage reduction, including patients with Barrett</p>
+<p>esophagus, strictures, or erosive esophagitis.</p>
+<li>Most patients require standard doses to prevent relapses. PPIs are the drugs of choice</li>
+<p>for maintenance treatment of moderate-to-severe esophagitis or symptoms. Usual</p>
+<p>once-daily doses are omeprazole 20 mg, lansoprazole 30 mg, rabeprazole 20 mg, or</p>
+<p>esomeprazole 20 mg. Low doses of a PPI or alternate-day regimens may be effec-</p>
+<p>tive in some patients with milder symptoms. HRAs may be effective maintenance</p>
+<p>2</p>
+<p>therapy in patients with mild disease.</p>
+<li>“On-demand” maintenance therapy, by which patients take their PPIs only when</li>
+<p>they have symptoms, may be effective for patients with endoscopy-negative GERD.</p>
+<p>258</p>
+<p>ch24.indd 258 19-11-2020 12:13:30</p>
+<h2>Gastroesophageal Reflux Disease | CHAPTER 24</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor frequency and severity of GERD symptoms, and educate patients on symp-</li>
+<p>toms that suggest presence of complications requiring immediate medical attention,</p>
+<p>such as dysphagia. Evaluate patients with persistent symptoms for presence of stric-</p>
+<p>tures or other complications.</p>
+<li>Monitor patients for adverse drug effects and the presence of extraesophageal</li>
+<p>symptoms such as laryngitis, asthma, or chest pain. These symptoms require further</p>
+<p>diagnostic evaluation.</p>
+<p>See Chapter 49, Gastroesophageal Reflux Disease, authored by Dianne B. May, Michael</p>
+<p>Thiman, and Satish S.C. Rao, for a more detailed discussion of this topic.</p>
+<p>259</p>
+<p>ch24.indd 259 19-11-2020 12:13:31</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

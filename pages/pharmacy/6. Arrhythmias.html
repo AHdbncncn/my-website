@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Arrhythmias</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>6. Arrhythmias</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>64</p>
+<h2>RETPAHC</h2>
+<p>6</p>
+<p>Arrhythmias</p>
+<li>Cardiac arrhythmia involves a group of conditions in which the heartbeat is irregular,</li>
+<p>too slow, or too fast. Supraventricular arrhythmias occur above the ventricles, and</p>
+<p>ventricular arrhythmias occur within the ventricles.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<h2>SUPRAVENTRICULAR ARRHYTHMIAS</h2>
+<p>Atrial Fibrillation and Atrial Flutter</p>
+<li>Atrial fibrillation (AF) has extremely rapid (400–600 atrial beats/min) and disorga-</li>
+<p>nized atrial activation. There is loss of atrial contraction (atrial kick), and supraven-</p>
+<p>tricular impulses penetrate the atrioventricular (AV) conduction system to variable</p>
+<p>degrees, resulting in irregular ventricular activation and an irregularly irregular</p>
+<p>pulse. The AV junction will not conduct most of the supraventricular impulses, caus-</p>
+<p>ing the ventricular response to be considerably slower than the atrial rate.</p>
+<li>Atrial flutter has rapid (270–330 atrial beats/min) but regular atrial activation. Ven-</li>
+<p>tricular response usually has a regular pattern and a pulse of 300 beats/min. This</p>
+<p>arrhythmia is less common than AF but has similar precipitating factors, conse-</p>
+<p>quences, and drug therapy approach.</p>
+<li>The predominant mechanism of AF and atrial flutter is reentry, which is usually</li>
+<p>associated with organic heart disease that causes left atrial distention (eg, ischemia or</p>
+<p>infarction, hypertensive heart disease, and valvular disorders). Additional associated</p>
+<p>disorders include acute pulmonary embolism and chronic lung disease, resulting in</p>
+<p>pulmonary hypertension and cor pulmonale, and states of high adrenergic tone such</p>
+<p>as thyrotoxicosis, alcohol withdrawal, sepsis, and excessive physical exertion.</p>
+<p>Paroxysmal Supraventricular Tachycardia</p>
+<li>PSVT arising by reentrant mechanisms includes arrhythmias caused by AV nodal</li>
+<p>reentry (AVNRT), AV reentrant tachycardia (AVRT) due to an accessory pathway,</p>
+<p>sinoatrial (SA) nodal reentry, and intraatrial reentry.</p>
+<h2>VENTRICULAR ARRHYTHMIAS</h2>
+<p>Premature Ventricular Complexes</p>
+<li>Premature ventricular complexes (PVCs) can occur in patients with or without struc-</li>
+<p>tural heart disease (SHD). PVCs may be elicited by abnormal automaticity, triggered</p>
+<p>activity, or reentrant mechanisms. PVCs often occur in healthy individuals and have</p>
+<p>little, if any, prognostic significance in this situation. PVCs occur more frequently</p>
+<p>and in more complex forms in patients with SHD than in healthy individuals, and</p>
+<p>patients with some PVC forms (multifocal or couplets) are at higher risk of sudden</p>
+<p>cardiac death.</p>
+<p>Ventricular Tachycardia</p>
+<li>Ventricular tachycardia (VT) is defined by three or more repetitive PVCs occurring</li>
+<p>at a rate of &gt;100 beats/min. It is a wide QRS tachycardia that may result acutely from</p>
+<p>severe electrolyte abnormalities (hypokalemia, hypomagnesemia), hypoxia, drug</p>
+<p>toxicity (eg, digoxin), or (most commonly) in patients presenting with acute myocar-</p>
+<p>dial infarction (MI) or myocardial ischemia complicated by heart failure (HF). The</p>
+<p>chronic recurrent form is almost always associated with SHD (eg, idiopathic dilated</p>
+<p>cardiomyopathy or remote MI with left ventricular [LV] aneurysm).</p>
+<li>Sustained VT requires intervention to restore a stable rhythm or persists for a</li>
+<p>relatively long time (usually &gt;30 seconds). Nonsustained VT self-terminates after</p>
+<p>a brief duration (usually &lt;30 seconds). Incessant VT refers to VT occurring more</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch06.indd 64 18-11-2020 14:17:21</p>
+<div class="table-container"><table><tr><th>Arrhythmias</th><th>6
+00</th><th>RETPAHC</th></tr></table></div><h2>Arrhythmias | CHAPTER 6</h2>
+<p>frequently than sinus rhythm, so that VT becomes the dominant rhythm. Monomor-</p>
+<p>phic VT has a consistent QRS configuration, whereas polymorphic VT has varying</p>
+<p>QRS complexes. Torsade de pointes (TdP) is a polymorphic VT in which the QRS</p>
+<p>complexes appear to undulate around a central axis.</p>
+<p>Ventricular Proarrhythmia</p>
+<li>Proarrhythmia is the development of a significant new arrhythmia, such as VT,</li>
+<p>ventricular fibrillation (VF), or TdP, or worsening of an existing arrhythmia. Proar-</p>
+<p>rhythmia results from the same mechanisms that cause other arrhythmias or from an</p>
+<p>alteration in the underlying substrate due to an antiarrhythmic drug (AAD).</p>
+<p>✓ Class Ic AADs can cause a rapid, sustained, monomorphic VT with a character-</p>
+<p>istic sinusoidal QRS pattern resulting from excessive sodium channel blockade</p>
+<p>and slowed conduction. The proarrhythmia risk continues as long as the AAD</p>
+<p>is continued. Predisposing factors include the presence of underlying ventricular</p>
+<pre><code>arrhythmias, coronary artery disease (CAD), and LV dysfunction.</code></pre>
+<p>✓ TdP is a rapid form of polymorphic VT associated with evidence of delayed</p>
+<p>ventricular repolarization due to blockade of potassium conductance. TdP may</p>
+<p>be hereditary or acquired. Acquired forms are associated with many clinical</p>
+<p>conditions and drugs, especially class Ia and class III I blockers. Development</p>
+<p>Kr</p>
+<p>of clinically significant QTc interval prolongation (ie, QTc interval &gt;500 msec or</p>
+<p>an increase in QTc interval of &gt;60–70 msec from baseline) after starting a drug is</p>
+<p>an indication to discontinue the agent or reduce its dose with careful monitoring.</p>
+<p>Ventricular Fibrillation</p>
+<li>VF is electrical anarchy of the ventricle resulting in no cardiac output and cardiovas-</li>
+<p>cular (CV) collapse. Sudden cardiac death occurs most commonly in patients with</p>
+<pre><code>CAD or LV dysfunction.</code></pre>
+<h2>BRADYARRHYTHMIAS</h2>
+<li>Sinus bradyarrhythmias (heart rate <60 beats/min) are common, especially in young,</li>
+<p>athletically active individuals, and are usually asymptomatic and do not require inter-</p>
+<pre><code>vention. However, some patients have sinus node dysfunction (sick sinus syndrome)</code></pre>
+<p>because of underlying SHD and the normal aging process, which attenuates SA nodal</p>
+<pre><code>function. Sinus node dysfunction is usually representative of diffuse conduction</code></pre>
+<p>disease, which may be accompanied by AV block and by paroxysmal tachycardias</p>
+<p>such as AF. Alternating bradyarrhythmias and tachyarrhythmias are referred to as</p>
+<p>the tachy–brady syndrome.</p>
+<li>AV block or conduction delay may occur in any area of the AV conduction system.</li>
+<p>AV block may be found in patients without underlying heart disease (eg, trained</p>
+<p>athletes) or during sleep when vagal tone is high. It may be transient when the under-</p>
+<p>lying etiology is reversible (eg, myocarditis, myocardial ischemia, after CV surgery,</p>
+<p>or during drug therapy). β-Blockers, digoxin, or nondihydropyridine (non-DHP) cal-</p>
+<p>cium channel blockers (CCBs) may cause AV block, primarily in the AV nodal area.</p>
+<p>Class I AADs may exacerbate conduction delays below the level of the AV node. AV</p>
+<p>block may be irreversible if the cause is acute MI, rare degenerative diseases, primary</p>
+<p>myocardial disease, or congenital heart disease.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients with AF or atrial flutter may complain of rapid heart rate, palpitations,</li>
+<p>chest pain, dyspnea, dizziness, and fatigue. Medical emergencies are severe HF (ie,</p>
+<p>pulmonary edema, hypotension) or AF occurring in the setting of acute MI. These</p>
+<p>arrhythmias are usually not directly life-threatening and do not generally cause</p>
+<p>hemodynamic collapse or syncope.</p>
+<li>PSVT caused by reentry can be transient, resulting in few, if any, symptoms. Patients</li>
+<p>may complain of intermittent episodes of rapid heart rate/palpitations that abruptly</p>
+<p>65</p>
+<p>ch06.indd 65 18-11-2020 14:17:21</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>start and stop, usually without provocation (but sometimes with exercise). Patients</p>
+<p>may also complain of chest pressure or a neck sensation. Life-threatening symptoms</p>
+<p>(syncope, hemodynamic collapse) are associated with an extremely rapid heart rate</p>
+<p>(eg, &gt;200 beats/min) and AF associated with an accessory pathway.</p>
+<li>PVCs are non–life-threatening and usually asymptomatic. Patients occasionally com-</li>
+<p>plain of palpitations or uncomfortable heartbeats. Because the PVC occurs early and</p>
+<p>the ventricle contracts when incompletely filled, patients do not feel the PVC itself;</p>
+<p>rather, the sinus beat following the PVC and a compensatory pause is responsible for</p>
+<p>the symptoms.</p>
+<li>The symptoms of sustained VT (monomorphic VT or TdP) can range from nearly</li>
+<p>asymptomatic to pulseless hemodynamic collapse. Fast heart rates and underlying</p>
+<pre><code>poor LV function result in more severe symptoms. Symptoms of nonsustained, self-</code></pre>
+<p>terminating VT correlate with duration of episodes (eg, patients with 15-second</p>
+<p>episodes will be more symptomatic than those with three-beat episodes).</p>
+<li>VF results in hemodynamic collapse, syncope, and cardiac arrest. Cardiac output and</li>
+<p>blood pressure are not recordable.</p>
+<li>Some patients who develop proarrhythmia may be asymptomatic, others may notice</li>
+<p>worsening symptoms, and some may die suddenly.</p>
+<li>Symptoms of bradyarrhythmias generally result from decreased cardiac output and</li>
+<p>may be associated with hypotension (eg, dizziness, syncope, fatigue, confusion). If</p>
+<pre><code>LV dysfunction exists, patients may experience worsening HF symptoms. Except for</code></pre>
+<p>recurrent syncope, symptoms associated with bradyarrhythmias are often subtle and</p>
+<p>nonspecific.</p>
+<h2>DIAGNOSIS</h2>
+<li>On ECG, AF is an irregularly irregular rhythm with no discernible, consistent atrial</li>
+<p>activity (P waves). Ventricular rate is usually 90–170 beats/min and the pulse is</p>
+<p>irregular. Atrial flutter is usually a regular supraventricular rhythm with characteris-</p>
+<p>tic flutter waves reflecting more organized atrial activity; the ventricular rate is often</p>
+<p>in factors of 300 beats/min (eg, 150, 100, or 75 beats/min).</p>
+<li>The ECG in patients with PSVT commonly shows a rapid, narrow QRS tachycardia</li>
+<p>(regular in rhythm) that starts and stops abruptly. Atrial activity, although present,</p>
+<p>is difficult to ascertain on ECG because P waves are “buried” in the QRS complex</p>
+<p>or T wave.</p>
+<li>Proarrhythmia can be difficult to diagnose because of the variable nature of underly-</li>
+<p>ing arrhythmias.</p>
+<li>TdP is characterized by long QT intervals or prominent U waves on the ECG.</li>
+<li>First-degree AV block is 1:1 AV conduction with a prolonged PR interval. Second-</li>
+<p>degree AV block is divided into two forms: Mobitz I AV block (Wenckebach peri-</p>
+<p>odicity) is &lt;1:1 AV conduction with progressively lengthening PR intervals until</p>
+<p>a ventricular complex is dropped; Mobitz II AV block is intermittently dropped</p>
+<p>ventricular beats in a random fashion without progressive PR lengthening. Third-</p>
+<p>degree AV block is complete heart block where AV conduction is totally absent (AV</p>
+<p>dissociation).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The desired outcome depends on the underlying arrhythmia. For</li>
+<p>example, the goals of treating AF or atrial flutter are restoring sinus rhythm, prevent-</p>
+<p>ing thromboembolic complications, and preventing further recurrences.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Use of AADs has declined because clinical trials showed increased mortality with</li>
+<p>their use due to proarrhythmic side effects. AADs have been increasingly replaced</p>
+<p>by nonpharmacologic approaches such as ablation and the implantable cardioverter-</p>
+<p>defibrillator (ICD).</p>
+<p>66</p>
+<p>ch06.indd 66 18-11-2020 14:17:21</p>
+<h2>Arrhythmias | CHAPTER 6</h2>
+<h2>ANTIARRHYTHMIC DRUGS</h2>
+<li>Drugs may depress the automatic properties of abnormal pacemaker cells by decreas-</li>
+<p>ing the slope of phase 4 depolarization and/or by elevating threshold potential. Drugs</p>
+<p>may alter conduction characteristics of the pathways of a reentrant loop.</p>
+<li>The Vaughan Williams classification system of AADs is most frequently used for</li>
+<h2>categorizing their electrophysiologic actions (Table 6-1).</h2>
+<p>✓ Class I drugs are sodium channel blockers. Class Ia drugs slow conduction veloc-</p>
+<p>ity, prolong refractoriness, and decrease the automatic properties of sodium-</p>
+<p>dependent (normal and diseased) conduction tissue. Class Ia drugs are effective</p>
+<p>for both supraventricular and ventricular arrhythmias, but they are infrequently</p>
+<p>used because of limited efficacy and significant toxicities.</p>
+<p>✓ Class Ib drugs probably act similarly to class Ia drugs, except that class Ib agents</p>
+<p>are considerably more effective in ventricular than supraventricular arrhythmias.</p>
+<p>✓ Class Ic drugs slow conduction velocity while leaving refractoriness relatively</p>
+<p>unaltered. Although effective for both ventricular and supraventricular arrhyth-</p>
+<p>mias, their use for ventricular arrhythmias has been limited by the risk of</p>
+<p>proarrhythmia.</p>
+<p>✓ Class II drugs include β-blockers; their antiarrhythmic effects result from anti-</p>
+<p>adrenergic actions. β-Blockers are most useful in tachycardias in which nodal</p>
+<p>tissues are abnormally automatic or are a portion of a reentrant loop. These agents</p>
+<p>are also helpful in slowing ventricular response in atrial tachycardias (eg, AF) by</p>
+<p>effects on the AV node.</p>
+<p>✓ Class III drugs prolong refractoriness in atrial and ventricular tissue and include</p>
+<p>very different drugs that share the common effect of delaying repolarization by</p>
+<h2>TABLE 6-1 Classification of Antiarrhythmic Drugs</h2>
+<p>Conduction Refractory</p>
+<p>Class Drug Velocitya Period Automaticity Ion Block</p>
+<p>Ia Quinidine ↓ ↑ ↓ Sodium</p>
+<p>Procainamide (intermediate)</p>
+<p>Disopyramide Potassium</p>
+<p>Ib Lidocaine 0/↓ ↓ ↓ Sodium (fast</p>
+<p>Mexiletine on–off)</p>
+<p>Ic Flecainide ↓↓ 0 ↓ Sodium (slow</p>
+<p>Propafenoneb on–off)</p>
+<p>IIc β-Blockers ↓ ↑ ↓ Calcium</p>
+<p>(indirect)</p>
+<p>III Amiodaroned 0 ↑↑ 0 Potassium</p>
+<p>Dofetilide</p>
+<p>Dronedaroned</p>
+<p>Sotalolb</p>
+<p>Ibutilide</p>
+<p>IVc Verapamil ↓ ↑ ↓ Calcium</p>
+<p>Diltiazem</p>
+<p>aVariables for normal tissue models in ventricular tissue.</p>
+<p>bAlso has β-blocking actions.</p>
+<p>cVariables for sinoatrial (SA) and atrioventricular (AV) nodal tissue only.</p>
+<p>dAlso has sodium, calcium, and β-blocking actions.</p>
+<p>0, no change; ↑, increased; ↓, decreased.</p>
+<p>67</p>
+<p>ch06.indd 67 18-11-2020 14:17:21</p>
+<div class="table-container"><table><tr><th>TABLE 6-1 Classification of Antiarrhythmic Drugs</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Class</td><td>Drug</td><td>Conduction
+Velocitya</td><td>Refractory
+Period</td><td>Automaticity</td><td>Ion Block</td></tr><tr><td>Ia</td><td>Quinidine
+Procainamide
+Disopyramide</td><td>↓</td><td>↑</td><td>↓</td><td>Sodium
+(intermediate)
+Potassium</td></tr><tr><td>Ib</td><td>Lidocaine
+Mexiletine</td><td>0/↓</td><td>↓</td><td>↓</td><td>Sodium (fast
+on–off)</td></tr><tr><td>Ic</td><td>Flecainide
+Propafenoneb</td><td>↓↓</td><td>0</td><td>↓</td><td>Sodium (slow
+on–off)</td></tr><tr><td>IIc</td><td>β-Blockers</td><td>↓</td><td>↑</td><td>↓</td><td>Calcium
+(indirect)</td></tr><tr><td>III</td><td>Amiodaroned
+Dofetilide
+Dronedaroned
+Sotalolb
+Ibutilide</td><td>0</td><td>↑↑</td><td>0</td><td>Potassium</td></tr><tr><td>IVc</td><td>Verapamil
+Diltiazem</td><td>↓</td><td>↑</td><td>↓</td><td>Calcium</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>blocking potassium channels. Amiodarone and sotalol are effective in most</p>
+<p>supraventricular and VTs. Amiodarone displays electrophysiologic characteristics</p>
+<p>of all four Vaughan Williams classes. It is a sodium channel blocker with relatively</p>
+<p>fast on–off kinetics, has nonselective β-blocking actions, blocks potassium chan-</p>
+<p>nels, and has slight calcium-blocking activity. Sotalol inhibits outward potassium</p>
+<p>movement during repolarization and also possesses nonselective β-blocking</p>
+<p>actions. Dronedarone, ibutilide, and dofetilide are indicated only for treatment</p>
+<p>of supraventricular arrhythmias.</p>
+<p>✓ Class IV drugs include the non-DHP CCBs (verapamil, diltiazem), which inhibit</p>
+<p>calcium entry into cells, thereby slowing conduction, prolonging refractoriness,</p>
+<p>and decreasing SA and AV nodal automaticity. They are effective for automatic or</p>
+<p>reentrant tachycardias that arise from or use the SA or AV nodes.</p>
+<li>See Table 6-2 for recommended doses of oral AADs, Table 6-3 for usual IV antiar-</li>
+<h2>rhythmic doses, and Table 6-4 for common side effects.</h2>
+<h2>ATRIAL FIBRILLATION OR ATRIAL FLUTTER</h2>
+<li>Treatment of AF involves several sequential goals. First, evaluate need for acute treat-</li>
+<p>ment (usually with drugs that slow ventricular rate). Second, determine whether an</p>
+<p>attempt should be made to restore the patient to SR, taking into consideration the</p>
+<p>risks (eg, thromboembolism). Lastly, consider ways to prevent long-term complica-</p>
+<p>tions, such as recurrent arrhythmia and thromboembolism (Fig. 6-1).</p>
+<h2>Hemodynamically Unstable AF</h2>
+<li>In patients with new-onset AF or atrial flutter with signs and/or symptoms of hemo-</li>
+<p>dynamic instability (eg, severe hypotension, angina, and/or pulmonary edema),</p>
+<p>direct-current cardioversion (DCC) is indicated to restore sinus rhythm immediately</p>
+<p>(without regard to the risk of thromboembolism).</p>
+<p>TABLE 6-2 Typical Maintenance Doses of Oral Antiarrhythmic Drugs</p>
+<p>Drug Dose Dose Adjusted</p>
+<p>Disopyramide 100–150 mg every 6 hours HEP, REN</p>
+<p>200–300 mg every 12 hours (SR form)</p>
+<p>Quinidine 200–300 mg sulfate salt every 6 hours HEP</p>
+<p>324–648 gluconate salt every 8–12 hours</p>
+<p>Mexiletine 200–300 mg every 8 hours HEP</p>
+<p>Flecainide 50–200 mg every 12 hours HEP, REN</p>
+<p>Propafenone 150–300 mg every 8 hours HEP</p>
+<p>225–425 mg every 12 hours (SR form)</p>
+<p>Amiodarone 400 mg 2 or 3 times daily until 10 g total, and then</p>
+<p>200–400 mg dailya</p>
+<p>Dofetilide 500 mcg every 12 hours RENb</p>
+<p>Dronedarone 400 mg twice daily (with meals)c</p>
+<p>Sotalol 80–160 mg every 12 hours RENd</p>
+<p>aUsual maintenance dose for atrial fibrillation is 200 mg/day (may further decrease dose to</p>
+<p>100 mg/day with long-term use if patient clinically stable in order to decrease risk of toxicity);</p>
+<p>usual maintenance dose for ventricular arrhythmias is 300–400 mg/day.</p>
+<p>bDose should be based on creatinine clearance; should not be used when creatinine clearance</p>
+<p>&lt;20 mL/min.</p>
+<p>cShould not be used in severe hepatic impairment.</p>
+<p>dShould not be used for atrial fibrillation when creatinine clearance &lt;40 mL/min.</p>
+<p>HEP, hepatic disease; REN, renal impairment; SR, sustained release.</p>
+<p>68</p>
+<p>ch06.indd 68 18-11-2020 14:17:22</p>
+<div class="table-container"><table><tr><th>TABLE 6-2 Typical Maintenance Doses of Oral Antiarrhythmic Drugs</th><th></th><th></th></tr><tr><td>Drug</td><td>Dose</td><td>Dose Adjusted</td></tr><tr><td>Disopyramide</td><td>100–150 mg every 6 hours
+200–300 mg every 12 hours (SR form)</td><td>HEP, REN</td></tr><tr><td>Quinidine</td><td>200–300 mg sulfate salt every 6 hours
+324–648 gluconate salt every 8–12 hours</td><td>HEP</td></tr><tr><td>Mexiletine</td><td>200–300 mg every 8 hours</td><td>HEP</td></tr><tr><td>Flecainide</td><td>50–200 mg every 12 hours</td><td>HEP, REN</td></tr><tr><td>Propafenone</td><td>150–300 mg every 8 hours
+225–425 mg every 12 hours (SR form)</td><td>HEP</td></tr><tr><td>Amiodarone</td><td>400 mg 2 or 3 times daily until 10 g total, and then
+200–400 mg dailya</td><td></td></tr><tr><td>Dofetilide</td><td>500 mcg every 12 hours</td><td>RENb</td></tr><tr><td>Dronedarone</td><td>400 mg twice daily (with meals)c</td><td></td></tr><tr><td>Sotalol</td><td>80–160 mg every 12 hours</td><td>RENd</td></tr></table></div><h2>Arrhythmias | CHAPTER 6</h2>
+<h2>TABLE 6-3 Intravenous Antiarrhythmic Dosing</h2>
+<p>Drug Clinical Situation Dose</p>
+<p>Amiodarone Pulseless VT/VF 300 mg IV/IO push (can give additional 150 mg IV/</p>
+<p>IO push if persistent VT/VF or if VT/VF recurs),</p>
+<p>followed by infusion of 1 mg/min for 6 hours,</p>
+<p>and then 0.5 mg/min × 18 hours</p>
+<p>Stable VT (with a 150 mg IV over 10 min, followed by infusion of</p>
+<p>pulse) 1 mg/min for 6 hours, and then 0.5 mg/min ×</p>
+<p>18 hours</p>
+<p>AF (termination) 150 mg IV over 10 min, followed by infusion of</p>
+<p>1 mg/min for 6 hours, and then 0.5 mg/min ×</p>
+<p>18 hours</p>
+<p>Diltiazem PSVT; AF (rate 0.25 mg/kg IV over 2 min (may repeat with</p>
+<p>control) 0.35 mg/kg IV over 2 min), followed by infusion</p>
+<p>of 5–15 mg/hr</p>
+<p>Ibutilide AF (termination) 1 mg IV over 10 min (may repeat if needed)</p>
+<p>Lidocaine Pulseless VT/VF 1–1.5 mg/kg IV/IO push (can give additional</p>
+<p>0.5–0.75 mg/kg IV/IO push every 5–10 min if</p>
+<p>persistent VT/VF [maximum cumulative dose =</p>
+<p>3 mg/kg]), followed by infusion of 1–4 mg/min</p>
+<p>(1–2 mg/min if liver disease or HF)</p>
+<h2>Stable VT (with a 1–1.5 mg/kg IV push (can give additional</h2>
+<p>pulse) 0.5–0.75 mg/kg IV push every 5–10 min if</p>
+<p>persistent VT [maximum cumulative dose =</p>
+<p>3 mg/kg]), followed by infusion of 1–4 mg/min</p>
+<p>(1–2 mg/min if liver disease or HF)</p>
+<p>Procainamide AF (termination); 15–18 mg/kg IV over 60 min, followed by infusion</p>
+<h2>stable VT (with a of 1–4 mg/min</h2>
+<p>pulse)</p>
+<p>Verapamil PSVT; AF (rate 2.5–5 mg IV over 2 min (may repeat up to</p>
+<p>control) maximum cumulative dose of 20 mg); can follow</p>
+<p>with infusion of 2.5–10 mg/hr</p>
+<p>AF, atrial fibrillation; HF, heart failure; IO, intraosseous; IV, intravenous; PSVT, paroxysmal</p>
+<p>supraventricular tachycardia; VF, ventricular fibrillation; VT, ventricular tachycardia.</p>
+<p>Ventricular Rate Control</p>
+<li>If patients are hemodynamically stable, the focus should be directed toward control-</li>
+<p>ling ventricular rate. Use drugs that slow conduction and increase refractoriness in</p>
+<pre><code>the AV node as initial therapy. In patients with normal LV function (left ventricular</code></pre>
+<p>ejection fraction [LVEF] &gt;40% [0.40]), an IV β-blocker (propranolol, metoprolol,</p>
+<p>esmolol) or non-DHP CCB (diltiazem, verapamil) is recommended as first-line</p>
+<p>therapy. If a high adrenergic state is the precipitating factor, IV β-blockers should</p>
+<p>be considered first. In patients with LVEF ≤40% (0.40), avoid IV diltiazem and</p>
+<p>verapamil and use IV β-blockers with caution. In patients having an exacerbation</p>
+<p>of HF symptoms, use IV digoxin or amiodarone as first-line therapy for ventricular</p>
+<p>rate control. IV amiodarone can also be used in patients who are refractory or have</p>
+<p>contraindications to β-blockers, non-DHP CCBs, and digoxin.</p>
+<li>After treatment with AV nodal blocking agents and a subsequent decrease in ven-</li>
+<p>tricular rate, evaluate the patient for the possibility of restoring sinus rhythm if AF</p>
+<p>persists.</p>
+<p>69</p>
+<p>ch06.indd 69 18-11-2020 14:17:22</p>
+<div class="table-container"><table><tr><th>TABLE 6-3 Intravenous Antiarrhythmic Dosing</th><th></th><th></th></tr><tr><td>Drug</td><td>Clinical Situation</td><td>Dose</td></tr><tr><td>Amiodarone</td><td>Pulseless VT/VF</td><td>300 mg IV/IO push (can give additional 150 mg IV/
+IO push if persistent VT/VF or if VT/VF recurs),
+followed by infusion of 1 mg/min for 6 hours,
+and then 0.5 mg/min × 18 hours</td></tr><tr><td></td><td>Stable VT (with a
+pulse)</td><td>150 mg IV over 10 min, followed by infusion of
+1 mg/min for 6 hours, and then 0.5 mg/min ×
+18 hours</td></tr><tr><td></td><td>AF (termination)</td><td>150 mg IV over 10 min, followed by infusion of
+1 mg/min for 6 hours, and then 0.5 mg/min ×
+18 hours</td></tr><tr><td>Diltiazem</td><td>PSVT; AF (rate
+control)</td><td>0.25 mg/kg IV over 2 min (may repeat with
+0.35 mg/kg IV over 2 min), followed by infusion
+of 5–15 mg/hr</td></tr><tr><td>Ibutilide</td><td>AF (termination)</td><td>1 mg IV over 10 min (may repeat if needed)</td></tr><tr><td>Lidocaine</td><td>Pulseless VT/VF</td><td>1–1.5 mg/kg IV/IO push (can give additional
+0.5–0.75 mg/kg IV/IO push every 5–10 min if
+persistent VT/VF [maximum cumulative dose =
+3 mg/kg]), followed by infusion of 1–4 mg/min
+(1–2 mg/min if liver disease or HF)</td></tr><tr><td></td><td>Stable VT (with a
+pulse)</td><td>1–1.5 mg/kg IV push (can give additional
+0.5–0.75 mg/kg IV push every 5–10 min if
+persistent VT [maximum cumulative dose =
+3 mg/kg]), followed by infusion of 1–4 mg/min
+(1–2 mg/min if liver disease or HF)</td></tr><tr><td>Procainamide</td><td>AF (termination);
+stable VT (with a
+pulse)</td><td>15–18 mg/kg IV over 60 min, followed by infusion
+of 1–4 mg/min</td></tr><tr><td>Verapamil</td><td>PSVT; AF (rate
+control)</td><td>2.5–5 mg IV over 2 min (may repeat up to
+maximum cumulative dose of 20 mg); can follow
+with infusion of 2.5–10 mg/hr</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>TABLE 6-4 Side Effects of Antiarrhythmic Drugs</h2>
+<p>Disopyramide Anticholinergic symptoms (dry mouth, urinary retention,</p>
+<p>constipation, blurred vision), nausea, anorexia, TdP, HF,</p>
+<p>conduction disturbances, ventricular arrhythmias</p>
+<p>Procainamidea Hypotension, TdP, worsening HF, conduction disturbances,</p>
+<p>ventricular arrhythmias</p>
+<p>Quinidine Cinchonism, diarrhea, abdominal cramps, nausea, vomiting,</p>
+<p>hypotension, TdP, worsening HF, conduction disturbances,</p>
+<p>ventricular arrhythmias, fever</p>
+<p>Lidocaine Dizziness, sedation, slurred speech, blurred vision,</p>
+<p>paresthesia, muscle twitching, confusion, nausea,</p>
+<p>vomiting, seizures, psychosis, sinus arrest, conduction</p>
+<p>disturbances</p>
+<p>Mexiletine Dizziness, sedation, anxiety, confusion, paresthesia, tremor,</p>
+<p>ataxia, blurred vision, nausea, vomiting, anorexia,</p>
+<p>conduction disturbances, ventricular arrhythmias</p>
+<p>Flecainide Blurred vision, dizziness, dyspnea, headache, tremor, nausea,</p>
+<p>worsening HF, conduction disturbances, ventricular</p>
+<p>arrhythmias</p>
+<p>Propafenone Dizziness, fatigue, blurred vision, bronchospasm, headache,</p>
+<p>taste disturbances, nausea, vomiting, bradycardia or AV</p>
+<p>block, worsening HF, ventricular arrhythmias</p>
+<p>Amiodarone Tremor, ataxia, paresthesia, insomnia, corneal microdeposits,</p>
+<p>optic neuropathy/neuritis, nausea, vomiting, anorexia,</p>
+<p>constipation, TdP (&lt;1%), bradycardia or AV block (IV</p>
+<pre><code>and oral use), pulmonary fibrosis, liver function test</code></pre>
+<p>abnormalities, hypothyroidism, hyperthyroidism,</p>
+<p>photosensitivity, blue-gray skin discoloration, hypotension</p>
+<p>(IV use), phlebitis (IV use)</p>
+<p>Dofetilide Headache, dizziness, TdP</p>
+<p>Dronedarone Nausea, vomiting, diarrhea, serum creatinine elevations,</p>
+<p>bradycardia, worsening HF, hepatotoxicity, pulmonary</p>
+<p>fibrosis, acute renal failure, TdP (&lt;1%)</p>
+<p>Ibutilide Headache, TdP, bradycardia or AV block, hypotension</p>
+<p>Sotalol Dizziness, weakness, fatigue, nausea, vomiting, diarrhea,</p>
+<p>bradycardia or AV block, TdP, bronchospasm, worsening HF</p>
+<p>aSide effects listed are for the IV formulation only; oral formulations are no longer available.</p>
+<p>AV, atrioventricular; HF, heart failure; IV, intravenous; TdP, torsade de pointes.</p>
+<p>Anticoagulation Prior to Cardioversion</p>
+<li>If sinus rhythm is to be restored, initiate anticoagulation prior to cardioversion</li>
+<p>because return of atrial contraction may dislodge poorly adherent thrombi and</p>
+<p>increase the risk of thromboembolism. Initiating anticoagulation prior to cardio-</p>
+<p>version prevents clot growth and formation of new thrombi and allows existing</p>
+<p>thrombi to become organized and well adherent to the atrial wall. Patients become at</p>
+<p>increased risk of thrombus formation and a subsequent embolic event if the duration</p>
+<p>of AF exceeds 48 hours.</p>
+<li>Patients undergoing elective cardioversion for AF lasting longer than 48 hours or an</li>
+<p>unknown duration should receive warfarin (target international normalized ratio</p>
+<p>[INR] 2–3) or a direct oral anticoagulant (DOAC; apixaban, dabigatran, edoxaban,</p>
+<p>70</p>
+<p>ch06.indd 70 18-11-2020 14:17:22</p>
+<div class="table-container"><table><tr><th>TABLE 6-4 Side Effects of Antiarrhythmic Drugs</th><th></th></tr><tr><td>Disopyramide</td><td>Anticholinergic symptoms (dry mouth, urinary retention,
+constipation, blurred vision), nausea, anorexia, TdP, HF,
+conduction disturbances, ventricular arrhythmias</td></tr><tr><td>Procainamidea</td><td>Hypotension, TdP, worsening HF, conduction disturbances,
+ventricular arrhythmias</td></tr><tr><td>Quinidine</td><td>Cinchonism, diarrhea, abdominal cramps, nausea, vomiting,
+hypotension, TdP, worsening HF, conduction disturbances,
+ventricular arrhythmias, fever</td></tr><tr><td>Lidocaine</td><td>Dizziness, sedation, slurred speech, blurred vision,
+paresthesia, muscle twitching, confusion, nausea,
+vomiting, seizures, psychosis, sinus arrest, conduction
+disturbances</td></tr><tr><td>Mexiletine</td><td>Dizziness, sedation, anxiety, confusion, paresthesia, tremor,
+ataxia, blurred vision, nausea, vomiting, anorexia,
+conduction disturbances, ventricular arrhythmias</td></tr><tr><td>Flecainide</td><td>Blurred vision, dizziness, dyspnea, headache, tremor, nausea,
+worsening HF, conduction disturbances, ventricular
+arrhythmias</td></tr><tr><td>Propafenone</td><td>Dizziness, fatigue, blurred vision, bronchospasm, headache,
+taste disturbances, nausea, vomiting, bradycardia or AV
+block, worsening HF, ventricular arrhythmias</td></tr><tr><td>Amiodarone</td><td>Tremor, ataxia, paresthesia, insomnia, corneal microdeposits,
+optic neuropathy/neuritis, nausea, vomiting, anorexia,
+constipation, TdP (&lt;1%), bradycardia or AV block (IV
+and oral use), pulmonary fibrosis, liver function test
+abnormalities, hypothyroidism, hyperthyroidism,
+photosensitivity, blue-gray skin discoloration, hypotension
+(IV use), phlebitis (IV use)</td></tr><tr><td>Dofetilide</td><td>Headache, dizziness, TdP</td></tr><tr><td>Dronedarone</td><td>Nausea, vomiting, diarrhea, serum creatinine elevations,
+bradycardia, worsening HF, hepatotoxicity, pulmonary
+fibrosis, acute renal failure, TdP (&lt;1%)</td></tr><tr><td>Ibutilide</td><td>Headache, TdP, bradycardia or AV block, hypotension</td></tr><tr><td>Sotalol</td><td>Dizziness, weakness, fatigue, nausea, vomiting, diarrhea,
+bradycardia or AV block, TdP, bronchospasm, worsening HF</td></tr></table></div><h2>Arrhythmias | CHAPTER 6</h2>
+<p>Atrial fibrillation/Flutter</p>
+<p>Severe symptoms Minimal or moderate symptoms</p>
+<p>Slow ventricular rate</p>
+<h2>DCC</h2>
+<p>(BB, CCB, digoxin)</p>
+<p>Rhythm control</p>
+<p>If atrial flutter Rate control</p>
+<p>(restore sinus</p>
+<p>only (leave in AF)</p>
+<p>rhythm)</p>
+<p>Consider Warfarin, apixaban,</p>
+<p>ablation dabigatran, or Chronic</p>
+<p>rivaroxaban ≥3 antithrombotic</p>
+<p>weeks or TEE to therapy</p>
+<p>exclude thrombusa</p>
+<p>Elective Consider adding</p>
+<p>cardioversion AAD if patient</p>
+<p>(electrical or remains symptomatic</p>
+<p>pharmacologic) despite adequate</p>
+<p>ventricular rate</p>
+<p>control or if</p>
+<p>adequate ventricular</p>
+<p>Long-term rate control cannot</p>
+<p>AADs? be achieved</p>
+<p>Isolated episode Recurrent episodes</p>
+<p>May consider AAD (especially if patient remains</p>
+<p>symptomatic despite adequate ventricular rate</p>
+<p>No AADs control or if adequate ventricular rate control</p>
+<p>cannot be achieved)b</p>
+<p>May also consider leaving in AF (and providing</p>
+<p>rate control and antithrombotic therapy)</p>
+<p>Consider chronic antithrombotic therapy</p>
+<p>for patients with risk factors for strokec</p>
+<p>aIf AF is less than 48 hours in duration, anticoagulation prior to cardioversion is unnecessary; initiate</p>
+<p>anticoagulation with unfractionated heparin, a low-molecular-weight heparin, apixaban, dabigatran, or</p>
+<p>rivaroxaban as soon as possible either before or after cardioversion for patients at high risk for stroke (this</p>
+<p>anticoagulant regimen or no antithrombotic therapy may be considered in low-risk patients).</p>
+<p>bAblation may be considered for patients who fail or do not tolerate at least 1 AAD or as first-line therapy</p>
+<p>(before AAD therapy) for select patients with recurrent symptomatic paroxysmal AF or any classification of</p>
+<p>AF and heart failure with reduced left ventricular ejection fraction.</p>
+<p>cChronic antithrombotic therapy should be considered in all patients with AF and risk factors for stroke</p>
+<p>regardless of whether or not they remain in sinus rhythm.</p>
+<p>(AAD, antiarrhythmic drug; AF, atrial fibrillation; AFl, atrial flutter; BB, β-blocker; CCB, calcium chan-</p>
+<p>nel blocker [ie, verapamil or diltiazem]; DCC, direct current cardioversion; TEE, transesophageal</p>
+<p>echocardiogram.)</p>
+<p>FIGURE 6-1. Algorithm for the treatment of AF and atrial flutter.</p>
+<p>71</p>
+<p>ch06.indd 71 18-11-2020 14:17:43</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>or rivaroxaban) for at least 3 weeks prior to cardioversion. If cardioversion is success-</p>
+<p>ful, continue anticoagulation for at least 4 weeks.</p>
+<li>Patients with AF less than 48 hours in duration do not require a prolonged period</li>
+<p>of anticoagulation prior to cardioversion because there has not been sufficient time</p>
+<p>to form atrial thrombi. Recommendations regarding short-term anticoagulation</p>
+<p>therapy given immediately prior to cardioversion differ. The CHEST guidelines</p>
+<p>recommend anticoagulation with either IV unfractionated heparin (UFH) or sub-</p>
+<p>cutaneous low-molecular-weight heparin (LMWH) (with doses used for treating</p>
+<p>venous thromboembolism) at the time the patient presents with AF that is known to</p>
+<p>be less than 48 hours in duration. If the patient is successfully cardioverted to sinus</p>
+<p>rhythm, continue therapeutic anticoagulation with warfarin (INR target range 2–3)</p>
+<p>or a DOAC for at least 4 weeks. Decisions about long-term antithrombotic therapy</p>
+<p>beyond 4 weeks should be based on the patient’s risk for stroke and not whether the</p>
+<p>patient is in sinus rhythm. According to the 2019 AHA/ACC/HRS Focused Update,</p>
+<p>the anticoagulant regimen selected depends on the patient’s risk of stroke (refer to the</p>
+<h2>textbook chapter for more information).</h2>
+<p>Conversion to Sinus Rhythm</p>
+<li>After anticoagulation needs have been addressed (or after transesophageal echocar-</li>
+<p>diography [TEE] demonstrated absence of a thrombus, obviating need for anticoagula-</p>
+<p>tion), methods for restoring sinus rhythm are pharmacologic cardioversion and DCC.</p>
+<p>Disadvantages of pharmacologic cardioversion are the risk of significant side effects</p>
+<p>(eg, drug-induced TdP, drug–drug interactions) and lower cardioversion rate for AADs</p>
+<p>compared with DCC. DCC is quick and more often successful (80%–90% success rate),</p>
+<p>but it requires prior sedation or anesthesia and has a small risk of serious complications,</p>
+<p>such as sinus arrest or ventricular arrhythmias. Clinicians often elect to use AADs</p>
+<p>first, and then resort to DCC if these drugs fail. Pharmacologic cardioversion is most</p>
+<p>effective when initiated within 7 days after the onset of AF. There is good evidence for</p>
+<p>cardioversion efficacy of class III pure Ik blockers (ibutilide, dofetilide), class Ic drugs</p>
+<p>(eg, flecainide, propafenone), and amiodarone (oral or IV).</p>
+<li>Single oral loading doses of propafenone (body weight >70 kg: 600 mg; <70 kg: 450</li>
+<p>mg) and flecainide (body weight &gt;70 kg: 300 mg; &lt;70 kg: 200 mg) are effective for</p>
+<p>cardioversion of recent-onset AF. These regimens have been incorporated into the</p>
+<p>“pill in the pocket” approach, whereby outpatient, patient-controlled self-adminis-</p>
+<p>tration of a single oral dose of either flecainide or propafenone is used to terminate</p>
+<pre><code>recent-onset AF in select patients without sinus or AV node dysfunction, bundle-</code></pre>
+<p>branch block, or SHD. This method should only be considered for patients who have</p>
+<p>been successfully cardioverted with these drugs on an inpatient basis.</p>
+<p>Chronic Anticoagulation for Stroke Prevention</p>
+<li>When initiating chronic antithrombotic therapy to prevent stroke in patients with</li>
+<p>AF, selection of the appropriate regimen is based on the patient’s stroke risk as</p>
+<p>determined by the CHADS-Vasc risk scoring system. Patients are given 2 points</p>
+<p>2 2</p>
+<p>each if they have a history of a previous stroke, transient ischemic attack, or throm-</p>
+<p>boembolism, or if they are at least 75 years old. Patients are given 1 point each for age</p>
+<p>65–74 years; having hypertension, diabetes, HF, or vascular disease; and being female.</p>
+<p>✓ Low risk: No antithrombotic therapy is recommended for males with a CHADS-</p>
+<p>2 2</p>
+<p>VASc score of 0 and females with a score of 1 because they are at low risk for stroke.</p>
+<p>✓ Intermediate risk: For patients with one nonsex stroke risk factor (ie, CHADS-</p>
+<p>2 2</p>
+<p>VASc score of 1 in males or 2 in females), oral anticoagulation is recommended</p>
+<p>over aspirin monotherapy, aspirin plus clopidogrel, or no antithrombotic therapy.</p>
+<p>✓ High risk: For patients with more than one nonsex stroke risk factor (ie, CHADS-</p>
+<p>2 2</p>
+<p>VASc score of ≥2 in males or ≥3 in females), oral anticoagulation is also</p>
+<p>recommended.</p>
+<li>For stroke prevention in AF, the CHEST guidelines recommend a DOAC (apixaban,</li>
+<p>dabigatran, edoxaban, or rivaroxaban) over warfarin. However, anticoagulant therapy</p>
+<p>72</p>
+<p>ch06.indd 72 18-11-2020 14:17:43</p>
+<h2>Arrhythmias | CHAPTER 6</h2>
+<p>must be individualized for each patient. If warfarin is used, the target INR is 2–3, and</p>
+<p>the goal time in therapeutic range (TTR) should ideally be &gt;70%. If a therapeutic</p>
+<p>INR cannot be maintained on warfarin, a DOAC is recommended. If treatment with</p>
+<p>oral anticoagulation must be temporarily interrupted, coverage with parenteral UFH</p>
+<p>or LMWH should be considered.</p>
+<li>In patients with mechanical heart valves, warfarin is the anticoagulant of choice;</li>
+<p>the target INR is based on the type and location of the valve placed. Dabigatran,</p>
+<p>edoxaban, and rivaroxaban should be avoided in patients with creatinine clearance</p>
+<p>&lt;15 mL/min (0.25 mL/sec).</p>
+<li>Decisions regarding the duration of chronic antithrombotic therapy should be based</li>
+<p>on a patient’s risk for stroke using the CHADS-VASc scoring system.</p>
+<p>2 2</p>
+<p>Chronic Antiarrhythmic Therapy</p>
+<li>Use of AADs to prevent AF recurrences is controversial; AADs may be reasonable in</li>
+<p>patients who remain symptomatic despite having adequate ventricular rate control or</p>
+<p>for patients in whom adequate ventricular rate control cannot be achieved.</p>
+<li>In patients with no SHD, dofetilide, dronedarone, flecainide, propafenone, or</li>
+<p>sotalol should be considered initially. Amiodarone is second-line if the patient</p>
+<p>fails or does not tolerate one of these drugs. In patients with HF, amiodarone or</p>
+<p>dofetilide is first-line therapy, with catheter ablation as second-line. In patients with</p>
+<p>CAD dofetilide, dronedarone, or sotalol are first-line, with amiodarone as second-</p>
+<p>line therapy. Flecainide and propafenone should be avoided in the presence of SHD</p>
+<p>because of the risk of proarrhythmia.</p>
+<h2>PAROXYSMAL SUPRAVENTRICULAR TACHYCARDIA</h2>
+<li>Both pharmacologic and nonpharmacologic methods have been used to treat PSVT.</li>
+<p>Drugs can be divided into three broad categories: (1) those that directly or indirectly</p>
+<p>increase vagal tone to the AV node (eg, digoxin), (2) those that depress conduction</p>
+<p>through slow, calcium-dependent tissue (eg, adenosine, β-blockers, and non-DHP</p>
+<p>CCBs), and (3) those that depress conduction through fast, sodium-dependent tis-</p>
+<p>sue (eg, quinidine, procainamide, disopyramide, and flecainide). Drugs within these</p>
+<p>categories alter the electrophysiologic characteristics of the reentrant substrate so that</p>
+<p>PSVT cannot be sustained.</p>
+<li>Acute management for patients with AVNRT or orthodromic AVRT includes vagal</li>
+<p>maneuvers and/or adenosine. If these options are ineffective or unfeasible in a hemo-</p>
+<p>dynamically unstable patient, synchronized DCC is the next step. If vagal techniques</p>
+<p>and adenosine are ineffective or unfeasible in a hemodynamically stable patient, the</p>
+<p>next step is administration of an IV β-blocker or non-DHP CCB. If AVNRT cannot</p>
+<p>be corrected with these measures, IV amiodarone can be used. For patients with</p>
+<p>AVRT, the next step is synchronized cardioversion.</p>
+<li>After an acute episode of AVNRT or AVRT is terminated, long-term prophylaxis is</li>
+<p>indicated if frequent episodes necessitate therapeutic intervention or if episodes are</p>
+<p>infrequent but severely symptomatic. AADs are no longer the treatment of choice to</p>
+<p>prevent recurrences of reentrant PSVT but may be necessary occasionally, particu-</p>
+<p>larly in patients with mild symptoms and infrequent recurrences. Drugs effective in</p>
+<p>preventing recurrences are the AV nodal blocking drugs (digoxin, β-blockers, non-</p>
+<p>DHP CCBs, and combinations of these agents) and the class Ic AADs (flecainide,</p>
+<p>propafenone). Sotalol, dofetilide, and amiodarone can be considered alternatives.</p>
+<li>Catheter ablation using radiofrequency current on the PSVT substrate is the pre-</li>
+<p>ferred treatment strategy (over AADs) for patients with symptomatic PSVT. It</p>
+<p>is highly effective and curative, rarely results in complications, obviates need for</p>
+<p>chronic AAD therapy, and is cost effective.</p>
+<h2>PREMATURE VENTRICULAR COMPLEXES</h2>
+<li>In apparently healthy individuals without SHD, drug therapy is unnecessary because</li>
+<p>PVCs carry little or no risk. In addition, AADs should not be used to suppress</p>
+<p>73</p>
+<p>ch06.indd 73 18-11-2020 14:17:43</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>asymptomatic PVCs. In patients with symptomatic PVCs who have risk factors for</p>
+<pre><code>arrhythmic death (recent MI, LV dysfunction, or complex PVCs), limit chronic</code></pre>
+<p>therapy to β-blockers. β-Blockers can also be used to suppress symptomatic PVCs in</p>
+<p>patients without underlying heart disease.</p>
+<h2>VENTRICULAR TACHYCARDIA</h2>
+<p>Acute Ventricular Tachycardia</p>
+<li>If severe symptoms are present, institute synchronized DCC immediately to restore</li>
+<p>sinus rhythm and correct precipitating factors if possible. If VT is an isolated electri-</p>
+<p>cal event associated with a transient initiating factor (eg, acute myocardial ischemia</p>
+<p>or digitalis toxicity), there is no need for long-term antiarrhythmic therapy after</p>
+<p>precipitating factors are corrected.</p>
+<li>Patients with mild or no symptoms can be treated initially with AADs. IV procain-</li>
+<p>amide, amiodarone, or sotalol may be considered in this situation; lidocaine is an</p>
+<p>alternative agent. Deliver synchronized DCC if the patient’s status deteriorates, VT</p>
+<p>degenerates to VF, or drug therapy fails.</p>
+<p>Sustained Ventricular Tachycardia</p>
+<li>Patients with chronic recurrent sustained VT are at high risk for death; trial-and-</li>
+<p>error attempts to find effective therapy are unwarranted. Use of invasive electro-</p>
+<p>physiologic studies and serial Holter monitoring with drug testing have been largely</p>
+<p>abandoned. These findings and the side-effect profiles of antiarrhythmic agents have</p>
+<p>led to nondrug approaches.</p>
+<li>The automatic ICD is a highly effective method for preventing sudden death due to</li>
+<p>recurrent VT or VF.</p>
+<p>Ventricular Proarrhythmia</p>
+<li>The proarrhythmia caused by the class Ic AADs is often resistant to resuscitation with</li>
+<p>cardioversion or overdrive pacing. IV lidocaine (which competes for the sodium</p>
+<p>channel receptor) or sodium bicarbonate (which reverses the excessive sodium</p>
+<p>channel blockade) has been used successfully by some clinicians.</p>
+<p>Torsade de Pointes</p>
+<li>For an acute episode of TdP, most patients require and respond to DCC. However,</li>
+<p>TdP tends to be paroxysmal and often recurs rapidly after DCC.</p>
+<li>IV magnesium sulfate is the drug of choice for preventing recurrences of TdP. If</li>
+<p>ineffective, institute strategies to increase heart rate and shorten ventricular repolar-</p>
+<p>ization (ie, temporary transvenous pacing at 105–120 beats/min or pharmacologic</p>
+<p>pacing with isoproterenol). Discontinue agents that prolong the QT interval and</p>
+<p>correct exacerbating factors (eg, hypokalemia and hypomagnesemia). Lidocaine is</p>
+<p>usually ineffective, and AADs that further prolong repolarization (eg, IV procain-</p>
+<p>amide) are absolutely contraindicated.</p>
+<p>Ventricular Fibrillation</p>
+<li>Manage patients with pulseless VT or VF (with or without associated myocardial</li>
+<p>ischemia) according to American Heart Association guidelines for cardiopulmonary</p>
+<p>resuscitation and emergency cardiovascular care (see Chapter 7).</p>
+<h2>BRADYARRHYTHMIAS</h2>
+<li>Asymptomatic sinus bradyarrhythmias usually do not require treatment.</li>
+<li>Treatment of sinus node dysfunction involves eliminating symptomatic bradycardia</li>
+<p>and potentially managing alternating tachycardias such as AF. In general, permanent</p>
+<p>pacemaker implantation is the long-term therapy of choice. Drugs commonly used</p>
+<p>to treat supraventricular tachycardias should be used with caution, if at all, in the</p>
+<pre><code>absence of a functioning pacemaker.</code></pre>
+<h2>ALGRAWANY</h2>
+<p>74</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch06.indd 74 18-11-2020 14:17:43</p>
+<h2>Arrhythmias | CHAPTER 6</h2>
+<li>Symptomatic carotid sinus hypersensitivity also should be treated with permanent</li>
+<p>pacemaker therapy. Patients who remain symptomatic may benefit from adding an</p>
+<p>α-adrenergic stimulant such as midodrine.</p>
+<li>Vasovagal syncope has traditionally been treated successfully with oral β-blockers</li>
+<p>(eg, metoprolol) to inhibit the sympathetic surge that causes forceful ventricular</p>
+<p>contraction and precedes the onset of hypotension and bradycardia. Other drugs that</p>
+<p>have been used successfully (with or without β-blockers) include fludrocortisone,</p>
+<p>anticholinergics (scopolamine patches and disopyramide), α-adrenergic agonists</p>
+<p>(midodrine), adenosine analogues (theophylline, dipyridamole), and selective</p>
+<p>serotonin reuptake inhibitors (sertraline, paroxetine).</p>
+<p>Atrioventricular Block</p>
+<li>If patients with second- or third-degree AV block develop signs or symptoms of</li>
+<p>poor perfusion (eg, altered mental status, chest pain, hypotension, shock) administer</p>
+<p>atropine (0.5 mg IV given every 3–5 minutes, up to 3 mg total dose). Transcutaneous</p>
+<p>pacing can be initiated in patients unresponsive to atropine. Infusions of epinephrine</p>
+<p>(2–10 mcg/min) or dopamine (2–10 mcg/kg/min) can also be used in the event of</p>
+<p>atropine failure. These agents usually do not help if the site of the AV block is below</p>
+<p>the AV node (Mobitz II or trifascicular AV block).</p>
+<li>Chronic symptomatic AV block warrants insertion of a permanent pacemaker.</li>
+<p>Patients without symptoms can sometimes be followed closely without the need for</p>
+<p>a pacemaker.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The most important monitoring parameters include: (1) mortality (total and sudden</li>
+<p>cardiac death), (2) arrhythmia recurrence (duration, frequency, and symptoms), (3)</p>
+<p>hemodynamic consequences (rate, blood pressure, and symptoms), and (4) treat-</p>
+<p>ment complications (side effects or need for alternative or additional drugs, devices,</p>
+<p>or surgery).</p>
+<p>See Chapter 39, The Arrhythmias, authored by Jessica J. Tilton, Cynthia A. Sanoski, and</p>
+<p>Jerry L. Bauman, for a more detailed discussion of this topic.</p>
+<p>75</p>
+<p>ch06.indd 75 18-11-2020 14:17:43</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

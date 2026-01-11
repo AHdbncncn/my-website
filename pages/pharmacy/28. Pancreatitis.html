@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28. Pancreatitis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>28. Pancreatitis</h1>
+        </header>
+        <main>
+            <p>293</p>
+<h2>RETPAHC</h2>
+<p>28</p>
+<p>Pancreatitis</p>
+<li>Acute pancreatitis (AP) is an inflammatory disorder of the pancreas characterized by</li>
+<p>upper abdominal pain and pancreatic enzyme elevations.</p>
+<li>Chronic pancreatitis (CP) is a progressive disease characterized by long-standing</li>
+<p>pancreatic inflammation leading to loss of pancreatic exocrine and endocrine</p>
+<pre><code>function.</code></pre>
+<p>Acute Pancreatitis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Gallstones and alcohol abuse account for most cases in the United States. Diabetes</li>
+<p>mellitus and autoimmune disorders such as inflammatory bowel disease are also</p>
+<p>associated with an increase in AP. A cause cannot be identified in some patients</p>
+<p>(idiopathic pancreatitis).</p>
+<li>Many medications have been implicated (Table 28-1), but drug-induced AP is rare. A</li>
+<p>causal association is difficult to confirm because ethical and practical considerations</p>
+<p>preclude rechallenge.</p>
+<li>AP is initiated by premature activation of trypsinogen to trypsin within the pancreas,</li>
+<p>leading to activation of other digestive enzymes and autodigestion of the gland.</p>
+<li>Activated pancreatic enzymes within the pancreas and surrounding tissues produce</li>
+<p>damage and necrosis to pancreatic tissue, surrounding fat, vascular endothelium,</p>
+<p>and adjacent structures. Lipase damages fat cells, producing noxious substances that</p>
+<p>cause further pancreatic and peripancreatic injury.</p>
+<li>Release of cytokines by acinar cells injures those cells and enhances the inflammatory</li>
+<p>response. Injured acinar cells liberate chemoattractants that attract neutrophils, mac-</p>
+<p>rophages, and other cells to the area of inflammation, causing systemic inflammatory</p>
+<p>response syndrome (SIRS). Vascular damage and ischemia cause release of kinins,</p>
+<p>which make capillary walls permeable and promote tissue edema.</p>
+<li>Pancreatic infection may result from increased intestinal permeability and transloca-</li>
+<p>tion of colonic bacteria.</p>
+<li>Local complications in severe AP include acute fluid collection, pancreatic necrosis,</li>
+<p>infection, abscess, pseudocyst formation, and pancreatic ascites.</p>
+<li>Systemic complications include respiratory failure and cardiovascular, renal, meta-</li>
+<p>bolic, hemorrhagic, and CNS abnormalities.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Clinical presentation depends on severity of the inflammatory process and whether</li>
+<p>damage is confined to the pancreas or involves local and systemic complications.</p>
+<li>The initial presentation ranges from moderate abdominal discomfort to excruciating</li>
+<p>pain, shock, and respiratory distress. Abdominal pain occurs in 95% of patients and</p>
+<p>is usually epigastric, often radiating to the upper quadrants or back. Onset is usu-</p>
+<p>ally sudden, and intensity is often described as “knife-like” or “boring.” Pain usually</p>
+<p>reaches maximum intensity within 30 minutes and may persist for hours or days.</p>
+<p>Nausea and vomiting occur in 85% of patients and usually follow onset of pain.</p>
+<li>Signs include marked epigastric tenderness on palpation with rebound tenderness</li>
+<p>and guarding in severe cases. The abdomen is often distended and tympanic with</p>
+<p>decreased or absent bowel sounds in severe disease.</p>
+<p>ch28.indd 293 20-11-2020 10:45:02</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>28</th><th>Pancreatitis</th></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>TABLE 28-1 Medications Associated with Acute Pancreatitis</h2>
+<p>Well-Supported Probable</p>
+<p>Association Association Possible Association</p>
+<p>5-Aminosalicylic acid Acetaminophen Aldesleukin Indinavir</p>
+<p>Azathioprine Itraconazole Amiodarone Indomethacin</p>
+<p>Bortezomib Ifosfamide Calcium Infliximab</p>
+<p>Carbamazepine Interferon α2b Ceftriaxone Ketoprofen</p>
+<p>Cimetidine Maprotiline Capecitabine Ketorolac</p>
+<p>Corticosteroids Methyldopa Carboplatin Lipid emulsion</p>
+<p>C Cy is t p a l r a a t b in ine Oxaliplatin C C e lo le za c p ox in ib e L L M i i r s e a in f g e o l n u p a t r m i i d l e ic acid</p>
+<p>Didanosine Cholestyramine Metformin</p>
+<p>Enalapril Ciprofloxacin Metolazone</p>
+<p>Erythromycin Clarithromycin Metronidazole</p>
+<p>Estrogens Clonidine Nitrofurantoin</p>
+<p>Furosemide Cyclosporine Omeprazole</p>
+<p>Mercaptopurine Danazol Ondansetron</p>
+<p>M Oc e t s r a e l o a t m id i e ne D Et i a a n zo e x rc id e e pt P P P a r ro a c v p li a t o a s f t x o a e l t l in</p>
+<p>Olsalazine Ethacrynic acid Propoxyphene</p>
+<p>Opioids Exenatide Rifampin</p>
+<p>Pentamidine Famciclovir Sertraline</p>
+<p>Pentavalent Glyburide Simvastatin</p>
+<p>antimonials Gold salts Sorafenib</p>
+<p>Sulfasalazine Granisetron Sulindac</p>
+<p>Sulfamethoxazole Ibuprofen Zalcitabine</p>
+<p>and trimethoprim Imatinib</p>
+<p>Sulindac</p>
+<p>Tamoxifen</p>
+<p>Tetracyclines</p>
+<p>Valproic acid/Salts</p>
+<li>Vital signs may be normal, but hypotension, tachycardia, and low-grade fever are</li>
+<p>often observed, especially with widespread pancreatic inflammation and necrosis.</p>
+<p>Dyspnea and tachypnea are signs of acute respiratory complications.</p>
+<li>Jaundice and altered mental status may be present; other signs of alcoholic liver</li>
+<p>disease may be present in patients with alcoholic pancreatitis.</p>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis of AP requires two of the following: (1) upper abdominal pain, (2) serum</li>
+<p>lipase or amylase at least three times the upper limit of normal, and (3) characteristic</p>
+<p>findings on imaging studies.</p>
+<li>Transabdominal ultrasound should be performed in all patients to detect dilated</li>
+<p>biliary ducts and gallstones. Contrast-enhanced computed tomography (CECT) is</p>
+<p>used if the diagnosis cannot be made from clinical and laboratory findings. Magnetic</p>
+<p>resonance cholangiopancreatography (MRCP) is used to grade severity of AP, iden-</p>
+<p>tify bile duct problems not seen on CECT, or if there are contraindications to CECT.</p>
+<p>294</p>
+<p>ch28.indd 294 20-11-2020 10:45:03</p>
+<div class="table-container"><table><tr><th>TABLE 28-1 Medications Associated with Acute Pancreatitis</th><th></th><th></th><th></th></tr><tr><td>Well-Supported
+Association</td><td>Probable
+Association</td><td>Possible Association</td><td></td></tr><tr><td>5-Aminosalicylic acid</td><td>Acetaminophen
+Itraconazole
+Ifosfamide
+Interferon α2b
+Maprotiline
+Methyldopa
+Oxaliplatin</td><td>Aldesleukin</td><td>Indinavir</td></tr><tr><td>Azathioprine</td><td></td><td>Amiodarone
+Calcium
+Ceftriaxone
+Capecitabine
+Carboplatin
+Celecoxib
+Clozapine
+Cholestyramine
+Ciprofloxacin
+Clarithromycin
+Clonidine
+Cyclosporine
+Danazol
+Diazoxide
+Etanercept
+Ethacrynic acid
+Exenatide
+Famciclovir
+Glyburide
+Gold salts
+Granisetron
+Ibuprofen
+Imatinib</td><td>Indomethacin</td></tr><tr><td>Bortezomib
+Carbamazepine
+Cimetidine
+Corticosteroids
+Cisplatin
+Cytarabine
+Didanosine
+Enalapril
+Erythromycin
+Estrogens
+Furosemide
+Mercaptopurine
+Mesalamine
+Octreotide
+Olsalazine
+Opioids
+Pentamidine
+Pentavalent
+antimonials
+Sulfasalazine
+Sulfamethoxazole
+and trimethoprim
+Sulindac
+Tamoxifen
+Tetracyclines
+Valproic acid/Salts</td><td></td><td></td><td>Infliximab</td></tr><tr><td></td><td></td><td></td><td>Ketoprofen
+Ketorolac</td></tr><tr><td></td><td></td><td></td><td>Lipid emulsion</td></tr><tr><td></td><td></td><td></td><td>Liraglutide</td></tr><tr><td></td><td></td><td></td><td>Lisinopril</td></tr><tr><td></td><td></td><td></td><td>Mefenamic acid</td></tr><tr><td></td><td></td><td></td><td>Metformin</td></tr><tr><td></td><td></td><td></td><td>Metolazone</td></tr><tr><td></td><td></td><td></td><td>Metronidazole</td></tr><tr><td></td><td></td><td></td><td>Nitrofurantoin</td></tr><tr><td></td><td></td><td></td><td>Omeprazole</td></tr><tr><td></td><td></td><td></td><td>Ondansetron</td></tr><tr><td></td><td></td><td></td><td>Paclitaxel</td></tr><tr><td></td><td></td><td></td><td>Pravastatin</td></tr><tr><td></td><td></td><td></td><td>Propofol</td></tr><tr><td></td><td></td><td></td><td>Propoxyphene</td></tr><tr><td></td><td></td><td></td><td>Rifampin</td></tr><tr><td></td><td></td><td></td><td>Sertraline</td></tr><tr><td></td><td></td><td></td><td>Simvastatin
+Sorafenib
+Sulindac
+Zalcitabine</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><h2>Pancreatitis | CHAPTER 28</h2>
+<li>AP may be associated with leukocytosis, hyperglycemia, and hypoalbuminemia.</li>
+<p>Hepatic transaminases, alkaline phosphatase, and bilirubin are usually elevated in</p>
+<p>gallstone pancreatitis and in patients with intrinsic liver disease. Marked hypocalce-</p>
+<p>mia indicates severe necrosis and is a poor prognostic sign.</p>
+<li>Serum amylase usually rises 4–8 hours after symptom onset, peaks at 24 hours, and</li>
+<p>returns to normal over the next 8–14 days. Concentrations greater than three times</p>
+<p>the upper limit of normal are highly suggestive of AP.</p>
+<li>Serum lipase is specific to the pancreas, and concentrations are elevated and parallel</li>
+<p>the serum amylase elevations. Increases persist longer than serum amylase elevations</p>
+<p>and can be detected after the amylase has returned to normal.</p>
+<li>Hematocrit may be normal, but hemoconcentration results from multiple factors</li>
+<p>(eg, vomiting). Hematocrit &gt;47% predicts severe AP, and hematocrit &lt;44% predicts</p>
+<p>mild disease.</p>
+<li>C-reactive protein levels >150 mg/dL at 48–72 hours predict severe AP.</li>
+<li>Thrombocytopenia and increased international normalized ratio (INR) occur in</li>
+<p>some patients with severe AP and associated liver disease.</p>
+<h2>TREATMENT (FIG. 28-1)</h2>
+<li>Goals of Treatment: Relieve abdominal pain and nausea; replace fluids; correct</li>
+<p>electrolyte, glucose, and lipid abnormalities; minimize systemic complications; and</p>
+<p>manage pancreatic necrosis and infection.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Endoscopic retrograde cholangiopancreatography (ERCP) may be performed to</li>
+<p>remove biliary tract stones.</p>
+<li>Patients with alcohol-related pancreatitis should receive abstinence interventions</li>
+<p>during the inpatient stay.</p>
+<li>Nutritional support is important because AP creates a catabolic state that promotes</li>
+<p>nutritional depletion. Patients with mild AP can begin oral feeding when pain is</p>
+<p>decreasing and inflammatory markers are improving. Nutritional support should</p>
+<p>begin when it is anticipated that oral nutrition will be withheld for longer than</p>
+<p>1 week. Enteral nutrition via nasogastric or nasojejunal tube is preferred over paren-</p>
+<p>teral nutrition (PN) in severe AP, if tolerated. If enteral feeding is not possible or is</p>
+<p>inadequate, PN should be implemented before protein and calorie depletion become</p>
+<p>advanced.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Patients with AP often require IV antiemetics for nausea.</li>
+<li>Patients requiring ICU admission should be treated with antisecretory agents if they</li>
+<p>are at risk of stress-related mucosal bleeding.</p>
+<li>Vasodilation from the inflammatory response, vomiting, and nasogastric suction</li>
+<p>contribute to hypovolemia and fluid and electrolyte abnormalities, necessitating</p>
+<p>replacement. Patients should receive aggressive fluid replacement to reduce the risks</p>
+<p>of persistent SIRS and organ failure. Different guidelines recommend goal-directed</p>
+<p>IV fluid with either lactated Ringer’s at an initial rate of 5–10 mL/kg/hr or crystalloids</p>
+<p>at a rate of 250–500 mL/hr.</p>
+<li>Intravenous potassium, calcium, and magnesium are used to correct electrolyte defi-</li>
+<p>ciency, and insulin is used to treat hyperglycemia.</p>
+<li>Parenteral opioid analgesics are used to control abdominal pain, although</li>
+<p>high-quality supporting evidence is lacking. Parenteral morphine is often used,</p>
+<p>295</p>
+<p>ch28.indd 295 20-11-2020 10:45:03</p>
+<h2>296 SECTION</h2>
+<p>5</p>
+<p>|</p>
+<p>Gastrointestinal</p>
+<p>Disorders</p>
+<p>Acute pancreatitis</p>
+<p>Screen for SIRS</p>
+<p>Replace fluids, initially with Ringer’s lactate</p>
+<p>Correct electrolytes</p>
+<p>Treat metabolic abnormalities</p>
+<p>Control pain</p>
+<p>Assess medication as potential contributing factors</p>
+<p>Consider ERCP if cholangitis or biliary pancreatitis with common bile duct obstruction</p>
+<p>Mild disease Moderate disease Severe disease</p>
+<p>Initiate oral food when pain Assess need for ICU ICU admission required.</p>
+<p>is decreasing and lab values admission. Treat systemic Treat systemic complications.</p>
+<p>improving complications. Gradually Enteral tube feeding preferred</p>
+<p>advance oral diet vs parenteral nutrition</p>
+<p>Improvement No improvement</p>
+<p>Continue treatment Rule out infected</p>
+<p>pancreatic necrosis</p>
+<p>If infected, treat with</p>
+<p>antibiotics and</p>
+<p>consider invasive</p>
+<p>interentions</p>
+<p>(ERCP, endoscopic retrograde cholangiopancreatography; ICU, intensive care unit; SIRS, systemic inflammatory response syndrome.)</p>
+<p>FIGURE 28-1. Algorithm of guidelines for evaluation and treatment of acute pancreatitis.</p>
+<p>ch28.indd</p>
+<p>296</p>
+<p>20-11-2020</p>
+<p>10:45:03</p>
+<h2>Pancreatitis | CHAPTER 28</h2>
+<p>and patient-controlled analgesia should be considered in patients who require</p>
+<p>frequent opioid dosing (eg, every 2–3 hours). Nonsteroidal anti-inflammatory</p>
+<p>agents (NSAIDs) may be sufficient in patients with mild-to-moderate pain if not</p>
+<p>contraindicated.</p>
+<li>Selective digestive tract decontamination using minimally absorbed antibiotics may</li>
+<p>be effective in reducing the risk of pancreatic infection, but more studies are needed</p>
+<p>before this approach can be recommended.</p>
+<li>Prophylactic antibiotics are not recommended in patients with AP without</li>
+<p>signs or symptoms of infection, including those with necrosis, predicted severe</p>
+<p>AP, or necrotizing pancreatitis. However, empiric antimicrobial therapy may be</p>
+<p>considered in patients with necrosis who deteriorate or fail to improve within</p>
+<p>7–10 days.</p>
+<li>Patients with known or suspected infected AP should receive broad-spectrum anti-</li>
+<p>biotics that cover the range of enteric aerobic gram-negative bacilli and anaerobic</p>
+<p>organisms. Imipenem–cilastatin (500 mg IV every 8 hours) has been widely used but</p>
+<p>has been replaced on many formularies by newer carbapenems (eg, meropenem). A</p>
+<p>fluoroquinolone (eg, ciprofloxacin or levofloxacin) combined with metronidazole</p>
+<p>should be considered for penicillin-allergic patients.</p>
+<li>There are insufficient data to support routine use of somatostatin or octreotide</li>
+<p>for treatment of AP. Parenteral histamine2-receptor antagonists and proton pump</p>
+<p>inhibitors do not improve the overall outcome of patients with AP.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>In patients with mild AP, assess pain control, fluid and electrolyte status, and nutri-</li>
+<p>tion periodically depending on the degree of abdominal pain and fluid loss.</p>
+<li>Goals for fluid therapy include one or more of the following: heart rate <120 bpm,</li>
+<p>mean arterial pressure 65–85 mm Hg, urinary output &gt;0.5–1 mL/kg/hr, invasive</p>
+<p>measures of stroke volume or intrathoracic blood volume, or hematocrit 35%–44%</p>
+<p>with blood transfusion.</p>
+<li>Transfer patients with severe AP to an intensive care unit for close monitoring of</li>
+<p>vital signs, fluid and electrolyte status, white blood cell count, blood glucose, lactate</p>
+<p>dehydrogenase, aspartate aminotransferase, serum albumin, hematocrit, blood urea</p>
+<p>nitrogen, serum creatinine, and INR. Continuous hemodynamic and arterial blood</p>
+<p>gas monitoring is essential. Serum lipase, amylase, and bilirubin require less frequent</p>
+<p>monitoring. Monitor for signs of infection, relief of abdominal pain, and adequate</p>
+<p>nutritional status. Assess severity of disease and patient response using evidence-</p>
+<p>based methods.</p>
+<p>Chronic Pancreatitis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>CP results from long-standing pancreatic inflammation and leads to irreversible</li>
+<p>destruction of pancreatic tissue with fibrin deposition and loss of exocrine and</p>
+<pre><code>endocrine function.</code></pre>
+<li>Chronic ethanol consumption accounts for about two-thirds of cases in Western</li>
+<p>society. Most of the remaining cases are idiopathic, and a small percentage is due to</p>
+<p>rare causes such as autoimmune, hereditary, and tropical pancreatitis.</p>
+<li>The exact pathogenesis is unknown. Activation of pancreatic stellate cells by toxins,</li>
+<p>oxidative stress, and/or inflammatory mediators appears to be the cause of fibrin</p>
+<p>deposition.</p>
+<li>Abdominal pain may be caused by abnormal pain processing in the central nervous</li>
+<p>system and sensitization of visceral nerves. This may explain the hyperalgesia that CP</p>
+<p>patients often experience with the need for various methods of pain management.</p>
+<p>Impaired inhibition of somatic and visceral pain pathways may also cause pain in</p>
+<p>areas distant to the pancreas.</p>
+<p>297</p>
+<p>ch28.indd 297 20-11-2020 10:45:04</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The main features of CP are abdominal pain, malabsorption with steatorrhea, weight</li>
+<p>loss, and diabetes. Jaundice occurs in ~10% of patients.</p>
+<li>Patients typically report deep, penetrating epigastric or abdominal pain that may</li>
+<p>radiate to the back. Pain often occurs with meals and at night and may be associated</p>
+<p>with nausea and vomiting.</p>
+<li>Steatorrhea and azotorrhea occur in most patients. Steatorrhea is often associated</li>
+<p>with diarrhea and bloating. Weight loss may occur.</p>
+<li>Pancreatic diabetes is a late manifestation commonly associated with pancreatic</li>
+<p>calcification.</p>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis is based primarily on clinical presentation and either imaging or pancre-</li>
+<pre><code>atic function studies. Noninvasive imaging includes abdominal ultrasound, CT, and</code></pre>
+<p>MRCP. Invasive imaging includes endoscopic ultrasonography (EUS) and ERCP.</p>
+<li>Serum amylase and lipase are usually normal or only slightly elevated but may be</li>
+<p>increased in acute exacerbations.</p>
+<li>Total bilirubin, alkaline phosphatase, and hepatic transaminases may be elevated</li>
+<p>with ductal obstruction. Serum albumin and calcium may be low with malnutrition.</p>
+<li>Pancreatic function tests include:</li>
+<p>✓ Serum trypsinogen (&lt;20 ng/mL is abnormal)</p>
+<p>✓ Fecal elastase (&lt;200 mcg/g of stool is abnormal)</p>
+<p>✓ Fecal chymotrypsin (&lt;3 units/g of stool is abnormal)</p>
+<p>✓ Fecal fat estimation (&gt;7 g/day is abnormal; stool must be collected for 72 hours)</p>
+<p>✓ 13C-mixed triglyceride breath test (not available in the United States)</p>
+<p>✓ Secretin stimulation (evaluates duodenal bicarbonate secretion)</p>
+<p>✓ Cholecystokinin stimulation (evaluates pancreatic lipase secretion)</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Major goals for uncomplicated CP are to relieve abdominal pain,</li>
+<p>treat complications of malabsorption and glucose intolerance, and improve quality of</p>
+<p>life. Secondary goals are to delay development of complications and treat associated</p>
+<p>disorders such as depression and malnutrition.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Lifestyle modifications should include abstinence from alcohol and smoking</li>
+<p>cessation.</p>
+<li>Advise patients with steatorrhea to eat smaller, more frequent meals and reduce</li>
+<p>dietary fat intake.</p>
+<li>Reduction in dietary fat may be needed if symptoms are uncontrolled with enzyme</li>
+<p>supplementation. Enteral nutrition via a feeding tube is recommended for patients</p>
+<p>who cannot consume adequate calories, have continued weight loss, experience com-</p>
+<p>plications, or require surgery.</p>
+<li>Invasive procedures and surgery are used primarily to treat uncontrolled pain and</li>
+<p>the complications of CP.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Pain may initially be treated with acetaminophen (eg, 500–650 mg every 4–6 hours)</li>
+<p>with or without NSAIDs (eg, ibuprofen 200–400 mg every 6–8 hours initially), with</p>
+<p>adjuvant agents added for inadequate pain relief or as the disease progresses.</p>
+<li>Analgesic regimens should be individualized and start with the lowest effective</li>
+<p>dose, with titration to maximum recommended or tolerated doses before adding or</p>
+<p>298</p>
+<p>ch28.indd 298 20-11-2020 10:45:04</p>
+<h2>Pancreatitis | CHAPTER 28</h2>
+<p>TABLE 28-2 Commercially Available Pancreatic Enzyme (Pancrelipase) Preparations</p>
+<p>Enzyme Content Per Unit Dose (USP Units)</p>
+<p>Product Lipase Amylase Protease</p>
+<h2>Tablets</h2>
+<p>ViokaceTM 10,440 lipase units 10,440 39,150 39,150</p>
+<p>ViokaceTM 20,880 lipase units 20,880 78,300 78,300</p>
+<p>Enteric-coated beads</p>
+<p>Zenpep® 3,000 lipase units 3,000 16,000 10,000</p>
+<p>Zenpep® 5,000 lipase units 5,000 27,000 17,000</p>
+<p>Zenpep® 10,000 lipase units 10,000 55,000 34,000</p>
+<p>Zenpep® 15,000 lipase units 15,000 82,000 51,000</p>
+<p>Zenpep® 20,000 lipase units 20,000 109,000 68,000</p>
+<p>Zenpep® 25,000 lipase units 25,000 136,000 85,000</p>
+<p>Zenpep® 40,000 lipase units 40,000 218,000 136,000</p>
+<p>Enteric-coated microspheres with bicarbonate buffer</p>
+<p>Pertzye 4,000 lipase units 4,000 15,125 14,375</p>
+<p>Pertzye 8,000 lipase units 8,000 30,250 28,750</p>
+<p>Pertzye 16,000 lipase units 16,000 60,500 57,500</p>
+<p>Enteric-coated microspheres</p>
+<p>Creon® 3,000 lipase units 3,000 15,000 9,500</p>
+<p>Creon® 6,000 lipase units 6,000 30,000 19,000</p>
+<p>Creon® 12,000 lipase units 12,000 60,000 38,000</p>
+<p>Creon® 24,000 lipase units 24,000 120,000 76,000</p>
+<p>Creon® 36,000 lipase units 36,000 180,000 114,000</p>
+<h2>Enteric-coated minitablets/microtablets</h2>
+<p>Pancreaze® 4,200 lipase units 4,200 17,500 10,000</p>
+<p>Pancreaze® 10,500 lipase units 10,500 43,750 25,000</p>
+<p>Pancreaze® 16,800 lipase units 16,800 70,000 40,000</p>
+<p>Pancreaze® 21,000 lipase units 21,000 61,000 37,000</p>
+<p>Ultresa 4,000 lipase units 4,000 8,000 8,000</p>
+<p>Ultresa 13,800 lipase units 13,800 27,600 27,600</p>
+<p>Ultresa 20,700 lipase units 20,700 41,400 41,400</p>
+<p>Ultresa 23,000 lipase units 23,000 46,000 46,000</p>
+<p>USP, United States Pharmacopeia.</p>
+<p>substituting agents. Schedule analgesics around the clock (rather than as needed) to</p>
+<p>maximize efficacy. Scheduling short-acting analgesics prior to meals may decrease</p>
+<p>postprandial pain.</p>
+<li>Pregabalin (75 mg twice daily initially; maximum 300 mg twice daily) has the best</li>
+<p>evidence as an adjuvant agent. Consider selective serotonin reuptake inhibitors (eg,</p>
+<p>paroxetine), serotonin/norepinephrine reuptake inhibitors (eg, duloxetine), and</p>
+<p>tricyclic antidepressants in patients with pain that is difficult to manage.</p>
+<li>Tramadol (50–100 mg every 4–6 hours, maximum 400 mg/day) may be tried before</li>
+<p>adding more potent opioid analgesics.</p>
+<p>299</p>
+<p>ch28.indd 299 20-11-2020 10:45:04</p>
+<div class="table-container"><table><tr><th>TABLE 28-2 Commercially Available Pancreatic Enzyme (Pancrelipase) Preparations</th><th></th><th></th><th></th></tr><tr><td></td><td>Enzyme Content Per Unit Dose (USP Units)</td><td></td><td></td></tr><tr><td>Product</td><td>Lipase</td><td>Amylase</td><td>Protease</td></tr><tr><td>Tablets</td><td></td><td></td><td></td></tr><tr><td>ViokaceTM 10,440 lipase units</td><td>10,440</td><td>39,150</td><td>39,150</td></tr><tr><td>ViokaceTM 20,880 lipase units</td><td>20,880</td><td>78,300</td><td>78,300</td></tr><tr><td>Enteric-coated beads</td><td></td><td></td><td></td></tr><tr><td>Zenpep® 3,000 lipase units</td><td>3,000</td><td>16,000</td><td>10,000</td></tr><tr><td>Zenpep® 5,000 lipase units</td><td>5,000</td><td>27,000</td><td>17,000</td></tr><tr><td>Zenpep® 10,000 lipase units</td><td>10,000</td><td>55,000</td><td>34,000</td></tr><tr><td>Zenpep® 15,000 lipase units</td><td>15,000</td><td>82,000</td><td>51,000</td></tr><tr><td>Zenpep® 20,000 lipase units</td><td>20,000</td><td>109,000</td><td>68,000</td></tr><tr><td>Zenpep® 25,000 lipase units</td><td>25,000</td><td>136,000</td><td>85,000</td></tr><tr><td>Zenpep® 40,000 lipase units</td><td>40,000</td><td>218,000</td><td>136,000</td></tr><tr><td>Enteric-coated microspheres with bicarbonate buffer</td><td></td><td></td><td></td></tr><tr><td>Pertzye 4,000 lipase units</td><td>4,000</td><td>15,125</td><td>14,375</td></tr><tr><td>Pertzye 8,000 lipase units</td><td>8,000</td><td>30,250</td><td>28,750</td></tr><tr><td>Pertzye 16,000 lipase units</td><td>16,000</td><td>60,500</td><td>57,500</td></tr><tr><td>Enteric-coated microspheres</td><td></td><td></td><td></td></tr><tr><td>Creon® 3,000 lipase units</td><td>3,000</td><td>15,000</td><td>9,500</td></tr><tr><td>Creon® 6,000 lipase units</td><td>6,000</td><td>30,000</td><td>19,000</td></tr><tr><td>Creon® 12,000 lipase units</td><td>12,000</td><td>60,000</td><td>38,000</td></tr><tr><td>Creon® 24,000 lipase units</td><td>24,000</td><td>120,000</td><td>76,000</td></tr><tr><td>Creon® 36,000 lipase units</td><td>36,000</td><td>180,000</td><td>114,000</td></tr><tr><td>Enteric-coated minitablets/microtablets</td><td></td><td></td><td></td></tr><tr><td>Pancreaze® 4,200 lipase units</td><td>4,200</td><td>17,500</td><td>10,000</td></tr><tr><td>Pancreaze® 10,500 lipase units</td><td>10,500</td><td>43,750</td><td>25,000</td></tr><tr><td>Pancreaze® 16,800 lipase units</td><td>16,800</td><td>70,000</td><td>40,000</td></tr><tr><td>Pancreaze® 21,000 lipase units</td><td>21,000</td><td>61,000</td><td>37,000</td></tr><tr><td>Ultresa 4,000 lipase units</td><td>4,000</td><td>8,000</td><td>8,000</td></tr><tr><td>Ultresa 13,800 lipase units</td><td>13,800</td><td>27,600</td><td>27,600</td></tr><tr><td>Ultresa 20,700 lipase units</td><td>20,700</td><td>41,400</td><td>41,400</td></tr><tr><td>Ultresa 23,000 lipase units</td><td>23,000</td><td>46,000</td><td>46,000</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>Malabsorption and/or steatorrhea</p>
+<p>Begin pancreatic enzyme</p>
+<p>supplement (25,000-</p>
+<p>50,000 units/meal)</p>
+<p>Improvement No improvement</p>
+<p>Continue Increase enzyme dose (max of</p>
+<p>treatment 90,000 units/meal)</p>
+<p>Improvement No improvement</p>
+<p>Continue Add HRA or PPI</p>
+<p>2</p>
+<p>treatment and consider reduction</p>
+<p>in dietary fat</p>
+<p>(HRA, histamine-receptor antagonist; PPI, proton pump inhibitor.)</p>
+<p>2 2</p>
+<p>FIGURE 28-2. Algorithm for the treatment of malabsorption and steatorrhea in</p>
+<p>chronic pancreatitis.</p>
+<li>Opioids should be reserved for severe or refractory pain:</li>
+<p>✓ Codeine: 30–60 mg every 6 hours</p>
+<p>✓ Hydrocodone: 5–10 mg every 4–6 hours</p>
+<p>✓ Morphine sulfate (extended-release): 30–60 mg every 8–12 hours</p>
+<p>✓ Oxycodone: 5–10 mg every 6 hours</p>
+<p>✓ Methadone: 2.5–10 mg every 8–12 hours</p>
+<p>✓ Hydromorphone: 0.5–1 mg every 4–6 hours</p>
+<p>✓ Fentanyl patch: 25–100 mcg/hr every 72 hours</p>
+<li>Adding pancreatic enzyme supplements or antioxidants for pain control has been</li>
+<p>studied but is not supported by high-quality evidence and is not recommended in</p>
+<p>current guidelines.</p>
+<li>Pancreatic enzyme supplementation is required for most patients with malabsorption</li>
+<p>to achieve adequate nutritional status and reduction in steatorrhea (Fig. 28-2). The</p>
+<p>enzyme dose required to minimize malabsorption is 25,000–50,000 units of lipase</p>
+<p>administered with each meal initially. Half of the necessary mealtime dose is recom-</p>
+<p>mended with snacks. The mealtime dose may be increased to a maximum of 90,000</p>
+<p>units. Products containing enteric-coated microspheres are preferred (Table 28-2).</p>
+<p>Ideally, patients should eat 3–5 meals/day, and those who require more than one</p>
+<p>capsule/tablet per meal should distribute the doses throughout the meal.</p>
+<li>An antisecretory agent (eg, ranitidine, omeprazole) should be added when there is</li>
+<p>an inadequate response to enzyme therapy alone. The increased gastric and duodenal</p>
+<p>pH is thought to increase the amount of active enzymes available in the duodenum.</p>
+<li>Adverse effects from pancreatic enzyme supplements are generally benign, but high</li>
+<p>doses can cause nausea, diarrhea, and intestinal upset. A more serious but uncommon</p>
+<p>300</p>
+<p>ch28.indd 300 20-11-2020 10:45:05</p>
+<h2>Pancreatitis | CHAPTER 28</h2>
+<p>adverse effect is fibrosing colonopathy, which has been reported mostly in children</p>
+<p>with cystic fibrosis who received high enzyme doses for prolonged periods.</p>
+<li>Assess patients with CP for deficiencies in fat-soluble vitamins and provide supple-</li>
+<p>mentation as required.</p>
+<li>Exogenous insulin is the primary means for treating diabetes mellitus associated with</li>
+<p>CP. Metformin may be initiated in early CP and has the added benefit of reducing the</p>
+<p>risk of pancreatic cancer.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess the severity and frequency of abdominal pain periodically using a stan-</li>
+<p>dardized scale to determine analgesic efficacy. Patients receiving opioids should</p>
+<p>be prescribed laxatives on an as-needed or scheduled basis and be monitored for</p>
+<p>constipation.</p>
+<li>For patients receiving pancreatic enzymes for malabsorption, monitor body weight</li>
+<p>and stool frequency and consistency periodically.</p>
+<li>Monitor blood glucose carefully in diabetic patients.</li>
+<p>See Chapter 56, Pancreatitis, authored by Scott Bolesta and Patricia A. Montgomery, for</p>
+<p>a more detailed discussion of this topic.</p>
+<p>301</p>
+<p>ch28.indd 301 20-11-2020 10:45:05</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

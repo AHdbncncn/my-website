@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>67. Bipolar Disorder</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>67. Bipolar Disorder</h1>
+        </header>
+        <main>
+            <p>767</p>
+<h2>RETPAHC</h2>
+<p>67</p>
+<p>Bipolar Disorder</p>
+<li>Bipolar disorder is a common, lifelong, often severe cyclic mood disorder characterized</li>
+<p>by recurrent fluctuations in mood, energy, and behavior. The mania or hypomania</p>
+<p>is not substance-related or caused by other medical or psychiatric disorders.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Table 67-1 lists medical conditions, medications, and treatments that may induce</li>
+<p>mania.</p>
+<li>Bipolar disorder is influenced by developmental, genetic, neurobiological, and</li>
+<p>psychological factors. Multiple gene loci are likely involved in the heredity of mood</p>
+<p>disorders.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Different types of episodes may occur sequentially with or without a period of nor-</li>
+<p>mal mood (euthymia) between them. There can be mood fluctuations that continue</p>
+<p>for months or after one episode, and there can be years without recurrence of any</p>
+<p>type of mood episode.</p>
+<h2>DIAGNOSIS</h2>
+<li>The Diagnostic and Statistical Manual of Mental Disorders, 5th edition classifies bipo-</li>
+<p>lar disorders into five subtypes:</p>
+<p>(1) Bipolar I disorder: At least one manic episode, which may have been preceded by</p>
+<p>and may be followed by hypomanic or major depressive episode(s).</p>
+<p>(2) Bipolar II disorder: At least one hypomanic episode and a current or past major</p>
+<p>depressive episode.</p>
+<p>(3) Cyclothymic disorder: Chronic fluctuations between subsyndromal depressive</p>
+<p>and hypomanic episodes.</p>
+<p>(4) Other specified bipolar and related disorder.</p>
+<p>(5) Unspecified bipolar and related disorder.</p>
+<li>See Table 67-2 for diagnostic criteria for major depressive episode, manic episode,</li>
+<p>and hypomanic episode.</p>
+<li>A medical, psychiatric, and medication history; physical examination; and laboratory</li>
+<p>testing are necessary to rule out organic causes of mania or depression.</p>
+<li>Delusions, hallucinations, and suicide attempts are more common in bipolar depres-</li>
+<p>sion than in unipolar depression.</p>
+<li>Acute mania usually begins abruptly, and symptoms increase over several days.</li>
+<p>Bizarre behavior, hallucinations, and paranoid or grandiose delusions may occur.</p>
+<pre><code>There is marked impairment in functioning. Manic episodes may be precipitated by</code></pre>
+<p>stressors, sleep deprivation, antidepressants, central nervous system (CNS) stimu-</p>
+<p>lants, or bright light.</p>
+<li>In hypomanic episodes, there is no marked impairment in social or occupational</li>
+<pre><code>functioning, no delusions, and no hallucinations. Some patients may be more pro-</code></pre>
+<p>ductive than usual, but 5%–15% of patients may rapidly switch to a manic episode.</p>
+<h2>COURSE OF ILLNESS</h2>
+<li>Childhood onset is associated with more mood episodes, rapid cycling, and comor-</li>
+<p>bid psychiatric conditions.</p>
+<p>CH67.indd 767 20-11-2020 16:34:32</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>67</th><th>Bipolar Disorder</th></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>TABLE 67-1 Secondary Causes of Mania</h2>
+<p>Medical conditions that induce mania</p>
+<li>CNS disorders (brain tumor, strokes, head injuries, subdural hematoma, multiple sclerosis,</li>
+<p>systemic lupus erythematosus, temporal lobe seizures, Huntington disease)</p>
+<li>Infections (encephalitis, neurosyphilis, sepsis, human immunodeficiency virus)</li>
+<li>Electrolyte or metabolic abnormalities (calcium or sodium fluctuations, hyperglycemia or</li>
+<p>hypoglycemia)</p>
+<li>Endocrine or hormonal dysregulation (Addison disease, Cushing disease, hyperthyroidism</li>
+<p>or hypothyroidism, menstrual-related or pregnancy-related or perimenopausal mood</p>
+<p>disorders)</p>
+<p>Medications or drugs that induce mania</p>
+<li>Alcohol intoxication</li>
+<li>Drug withdrawal states (alcohol, α-adrenergic agonists, antidepressants, barbiturates,</li>
+<p>2</p>
+<p>benzodiazepines, opiates)</p>
+<li>Antidepressants (MAOIs, TCAs, 5-HT and/or NE and/or DA reuptake inhibitors, 5-HT</li>
+<p>antagonists)</p>
+<li>DA-augmenting agents (CNS stimulants: amphetamines, cocaine, sympathomimetics;</li>
+<p>DA agonists, releasers, and reuptake inhibitors)</p>
+<li>Hallucinogens (LSD, PCP)</li>
+<li>Marijuana intoxication precipitates psychosis, paranoid thoughts, anxiety, and restlessness</li>
+<li>NE-augmenting agents (α-adrenergic antagonists, β-agonists, NE reuptake inhibitors)</li>
+<p>2</p>
+<li>Steroids (anabolic, adrenocorticotropic hormone, corticosteroids)</li>
+<li>Thyroid preparations</li>
+<li>Xanthines (caffeine, theophylline)</li>
+<li>Nonprescription weight loss agents and decongestants (ephedra, pseudoephedrine)</li>
+<li>Herbal products (St. John’s wort)</li>
+<p>Somatic therapies that induce mania</p>
+<li>Bright light therapy</li>
+<li>Deep brain stimulation</li>
+<li>Sleep deprivation</li>
+<p>CNS, central nervous system; DA, dopamine; 5-HT, serotonin; LSD, lysergic acid diethylamide;</p>
+<p>MAOI, monoamine oxidase inhibitor; NE, norepinephrine; PCP, phencyclidine; TCA, tricyclic</p>
+<p>antidepressant.</p>
+<li>Rapid cyclers, 20% of patients with bipolar disorder, have four or more episodes per</li>
+<p>year (major depressive, manic, or hypomanic). Rapid cycling is associated with fre-</p>
+<p>quent and severe episodes of depression and a poorer long-term prognosis.</p>
+<li>Women are more likely to have depressive symptoms, older age of onset, better adher-</li>
+<p>ence, and thyroid abnormalities. Men may have more manic episodes and substance use.</p>
+<li>Suicide attempts occur in up to 50% of patients with bipolar disorder, and ~10%–19%</li>
+<p>of individuals with bipolar I disorder commit suicide. Patients with bipolar II</p>
+<p>disorder may have a higher rate of suicide attempts than bipolar I patients.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: (1) Eliminate mood episode with complete remission of symp-</li>
+<p>toms (ie, acute treatment); (2) prevent recurrences or relapses of mood episodes (ie,</p>
+<pre><code>continuation phase treatment); (3) return to baseline psychosocial functioning; (4)</code></pre>
+<p>maximize adherence with therapy; (5) minimize adverse effects; (6) use medications</p>
+<p>with the best tolerability and fewest drug interactions; (7) minimize polypharmacy</p>
+<p>when possible; (8) treat comorbid substance use and abuse; (9) eliminate alcohol,</p>
+<p>marijuana, cocaine, amphetamines, and hallucinogens; (10) minimize nicotine use</p>
+<p>and stop caffeine intake at least 8 hours prior to bedtime; and (11) avoid stressors or</p>
+<p>substances that precipitate an acute episode.</p>
+<p>768</p>
+<p>CH67.indd 768 20-11-2020 16:34:32</p>
+<div class="table-container"><table><tr><th>TABLE 67-1 Secondary Causes of Mania</th></tr><tr><td>Medical conditions that induce mania
+CNS disorders (brain tumor, strokes, head injuries, subdural hematoma, multiple sclerosis,
+systemic lupus erythematosus, temporal lobe seizures, Huntington disease)
+Infections (encephalitis, neurosyphilis, sepsis, human immunodeficiency virus)
+Electrolyte or metabolic abnormalities (calcium or sodium fluctuations, hyperglycemia or
+hypoglycemia)
+Endocrine or hormonal dysregulation (Addison disease, Cushing disease, hyperthyroidism
+or hypothyroidism, menstrual-related or pregnancy-related or perimenopausal mood
+disorders)</td></tr><tr><td>Medications or drugs that induce mania
+Alcohol intoxication
+Drug withdrawal states (alcohol, α-adrenergic agonists, antidepressants, barbiturates,
+2
+benzodiazepines, opiates)
+Antidepressants (MAOIs, TCAs, 5-HT and/or NE and/or DA reuptake inhibitors, 5-HT
+antagonists)
+DA-augmenting agents (CNS stimulants: amphetamines, cocaine, sympathomimetics;
+DA agonists, releasers, and reuptake inhibitors)
+Hallucinogens (LSD, PCP)
+Marijuana intoxication precipitates psychosis, paranoid thoughts, anxiety, and restlessness
+NE-augmenting agents (α-adrenergic antagonists, β-agonists, NE reuptake inhibitors)
+2
+Steroids (anabolic, adrenocorticotropic hormone, corticosteroids)
+Thyroid preparations
+Xanthines (caffeine, theophylline)
+Nonprescription weight loss agents and decongestants (ephedra, pseudoephedrine)
+Herbal products (St. John’s wort)</td></tr><tr><td>Somatic therapies that induce mania
+Bright light therapy
+Deep brain stimulation
+Sleep deprivation</td></tr></table></div><h2>Bipolar Disorder | CHAPTER 67</h2>
+<h2>TABLE 67-2 Evaluation and Diagnosis of Mood Episodes</h2>
+<p>Impairment of</p>
+<p>Diagnosis Functioning or Need</p>
+<p>Episode for Hospitalizationa DSM-5 Criteriab</p>
+<p>Major Yes At least 2-week period of either depressed</p>
+<p>depressive mood or loss of interest or pleasure in normal</p>
+<p>activities, associated with at least five of the</p>
+<p>following symptoms:</p>
+<h2>• Depressed, sad mood (adults); can be irritable</h2>
+<p>mood in children</p>
+<li>Decreased interest and pleasure in normal</li>
+<p>activities</p>
+<li>Decreased or increased appetite, weight loss or</li>
+<p>weight gain</p>
+<li>Insomnia or hypersomnia</li>
+<li>Psychomotor retardation or agitation</li>
+<li>Decreased energy or fatigue</li>
+<li>Feelings of excessive guilt or worthlessness</li>
+<li>Impaired concentration or indecisiveness</li>
+<li>Recurrent thoughts of death, suicidal thoughts</li>
+<p>or attempts</p>
+<p>Manic Yes At least 1-week period of abnormally and</p>
+<p>persistently elevated mood (expansive or</p>
+<h2>irritable) and energy, associated with at least</h2>
+<p>three of the following symptoms (four if the</p>
+<h2>mood is only irritable):</h2>
+<li>Inflated self-esteem (grandiosity)</li>
+<li>Decreased need for sleep</li>
+<li>Increased talking (pressure of speech)</li>
+<li>Racing thoughts (flight of ideas)</li>
+<li>Distractibility (poor attention)</li>
+<li>Increased goal-directed activity (socially, at</li>
+<p>work, or sexually) or psychomotor agitation</p>
+<li>Excessive involvement in activities that are</li>
+<p>pleasurable but have a high risk for serious</p>
+<p>consequences (buying sprees, sexual indiscre-</p>
+<p>tions, poor judgment in business ventures)</p>
+<p>Hypomanic No At least 4 days of abnormally and persistently</p>
+<h2>elevated mood (expansive or irritable) and</h2>
+<p>energy, associated with at least three of the</p>
+<p>following symptoms (four if the mood is only</p>
+<h2>irritable):</h2>
+<li>Inflated self-esteem (grandiosity)</li>
+<li>Decreased need for sleep</li>
+<li>Increased talking (pressure of speech)</li>
+<li>Racing thoughts (flight of ideas)</li>
+<li>Distractibility (poor attention)</li>
+<li>Increased goal-directed activity (socially, at</li>
+<p>work, or sexually) or psychomotor agitation</p>
+<li>Excessive involvement in activities that are</li>
+<p>pleasurable but have a high risk for serious</p>
+<p>consequences (buying sprees, sexual indiscre-</p>
+<p>tions, poor judgment in business ventures)</p>
+<pre><code>aImpairment in social or occupational functioning; may include need for hospitalization because of</code></pre>
+<p>potential self-harm, harm to others, or psychotic symptoms.</p>
+<p>bThe disorder is not caused by a medical condition (eg, hypothyroidism) or substance-induced</p>
+<p>disorder (eg, antidepressant treatment, medications, drugs of abuse). Numerous specifiers are</p>
+<p>available to further characterize episodes (eg, with mixed features, with anxious distress, with</p>
+<p>rapid cycling, with melancholic features).</p>
+<p>769</p>
+<p>CH67.indd 769 20-11-2020 16:34:33</p>
+<div class="table-container"><table><tr><th>TABLE 67-2 Evaluation and Diagnosis of Mood Episodes</th><th></th><th></th></tr><tr><td>Diagnosis
+Episode</td><td>Impairment of
+Functioning or Need
+for Hospitalizationa</td><td>DSM-5 Criteriab</td></tr><tr><td>Major
+depressive</td><td>Yes</td><td>At least 2-week period of either depressed
+mood or loss of interest or pleasure in normal
+activities, associated with at least five of the
+following symptoms:
+• Depressed, sad mood (adults); can be irritable
+mood in children
+• Decreased interest and pleasure in normal
+activities
+• Decreased or increased appetite, weight loss or
+weight gain
+• Insomnia or hypersomnia
+• Psychomotor retardation or agitation
+• Decreased energy or fatigue
+• Feelings of excessive guilt or worthlessness
+• Impaired concentration or indecisiveness
+• Recurrent thoughts of death, suicidal thoughts
+or attempts</td></tr><tr><td>Manic</td><td>Yes</td><td>At least 1-week period of abnormally and
+persistently elevated mood (expansive or
+irritable) and energy, associated with at least
+three of the following symptoms (four if the
+mood is only irritable):
+• Inflated self-esteem (grandiosity)
+• Decreased need for sleep
+• Increased talking (pressure of speech)
+• Racing thoughts (flight of ideas)
+• Distractibility (poor attention)
+• Increased goal-directed activity (socially, at
+work, or sexually) or psychomotor agitation
+• Excessive involvement in activities that are
+pleasurable but have a high risk for serious
+consequences (buying sprees, sexual indiscre-
+tions, poor judgment in business ventures)</td></tr><tr><td>Hypomanic</td><td>No</td><td>At least 4 days of abnormally and persistently
+elevated mood (expansive or irritable) and
+energy, associated with at least three of the
+following symptoms (four if the mood is only
+irritable):
+• Inflated self-esteem (grandiosity)
+• Decreased need for sleep
+• Increased talking (pressure of speech)
+• Racing thoughts (flight of ideas)
+• Distractibility (poor attention)
+• Increased goal-directed activity (socially, at
+work, or sexually) or psychomotor agitation
+• Excessive involvement in activities that are
+pleasurable but have a high risk for serious
+consequences (buying sprees, sexual indiscre-
+tions, poor judgment in business ventures)</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>GENERAL APPROACH</h2>
+<li>Table 67-3 shows an algorithmic approach to treating acute episodes including</li>
+<p>refractory episodes in adults.</p>
+<li>Treatment must be individualized because the clinical presentation, severity, and fre-</li>
+<p>quency of episodes vary widely among patients. Adherence to treatment is the most</p>
+<p>important factor in achieving goals.</p>
+<li>During acute episodes, medications can be added and then tapered once the patient</li>
+<p>is stabilized and euthymic.</p>
+<li>Patients with bipolar disorder should remain on a mood stabilizer (eg, lithium, val-</li>
+<p>proate, or a second-generation antipsychotic [SGA]) lifelong.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Patients and family members should be educated about bipolar disorder (eg, symp-</li>
+<p>toms, causes, and course) and treatment options.</p>
+<li>Nonpharmacologic approaches should address adequate nutrition, sleep, exercise,</li>
+<p>and stress reduction.</p>
+<li>Psychological interventions include cognitive behavioral therapy (CBT), interper-</li>
+<p>sonal and social rhythm therapy, group psychoeducation, family focused therapy, and</p>
+<p>enhanced relapse prevention/individual psychoeducation.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>See Table 67-4 for product and dosing information on medications for bipolar</li>
+<p>disorder.</p>
+<li>Lithium, divalproex sodium (valproate), extended-release carbamazepine, aripip-</li>
+<p>razole, asenapine, cariprazine, olanzapine, quetiapine, risperidone, and ziprasi-</p>
+<p>done are currently approved by the U.S. Food and Drug administration (FDA) for</p>
+<p>treatment of acute mania. Lithium, aripiprazole, olanzapine, intramuscular (IM)</p>
+<p>risperidone, and lamotrigine are approved for maintenance treatment.</p>
+<li>Quetiapine and lurasidone are the only FDA-approved monotherapy antipsychotics</li>
+<p>for bipolar depression.</p>
+<li>Combination therapies (see Table 67-3) can provide better acute response and</li>
+<p>long-term prevention of relapse and recurrence than monotherapy in some bipolar</p>
+<p>patients.</p>
+<li>Sources of useful guidelines include the Canadian Network for Mood and Anxiety</li>
+<p>Treatments (CANMAT), International Society for Bipolar Disorders (ISBD), and</p>
+<p>International Task Force of the World Federation of Societies of Biological Psychiatry</p>
+<h2>(WFSBP).</h2>
+<p>Lithium</p>
+<li>Lithium is a first-line agent for acute mania, acute bipolar depression, and mainte-</li>
+<p>nance treatment of bipolar I and II disorders.</p>
+<li>Lithium is rapidly absorbed, neither protein bound nor metabolized, and excreted</li>
+<p>unchanged in the urine and other body fluids.</p>
+<li>It may require 6–8 weeks to show antidepressant efficacy. It produces a prophylactic</li>
+<p>response in up to two-thirds of patients and reduces suicide risk.</p>
+<li>Abrupt discontinuation or noncompliance with lithium therapy can increase the risk</li>
+<p>of relapse.</p>
+<li>Initial GI and CNS side effects are often dose related and are worse at peak serum</li>
+<p>concentrations (1–2 hours postdose). Lowering the dose, taking doses with food,</p>
+<p>using extended-release products, and once-daily dosing at bedtime may help.</p>
+<p>Diarrhea can sometimes be improved by switching to a liquid formulation.</p>
+<li>A benign fine hand tremor occurs in many patients whereas a coarse hand tremor</li>
+<p>may be a sign of toxicity. The fine tremor may be treated by switching to a long-acting</p>
+<p>preparation, lowering the dose, or adding propranolol, 20–120 mg/day.</p>
+<p>770</p>
+<p>CH67.indd 770 20-11-2020 16:34:33</p>
+<h2>Bipolar Disorder | CHAPTER 67</h2>
+<p>TABLE 67-3 Algorithm and Guidelines for the Acute Treatment of Mood Episodes in Patients</p>
+<p>with Bipolar I Disorder</p>
+<p>Acute Manic or Mixed Episode Acute Depressive Episode</p>
+<p>General Guidelines General Guidelines</p>
+<p>Assess for secondary causes of mania or mixed Assess for secondary causes of depression</p>
+<p>states (eg, alcohol or drug use) (eg, alcohol or drug use)</p>
+<p>Discontinue antidepressants Taper off antipsychotics, benzodiazepines,</p>
+<p>Taper off stimulants and caffeine if possible or sedative–hypnotic agents if possible</p>
+<p>Treat substance abuse Treat substance abuse</p>
+<p>Encourage good nutrition (with regular Encourage good nutrition (with regular</p>
+<p>protein and essential fatty acid intake), protein and essential fatty acid intake),</p>
+<p>exercise, adequate sleep, stress reduction, exercise, adequate sleep, stress</p>
+<p>and psychosocial therapy reduction, and psychosocial therapy</p>
+<p>Mild-to-Moderate</p>
+<p>Depressive Severe Depressive</p>
+<p>Hypomania Mania Episode Episode</p>
+<p>First, optimize First, optimize First, initiate and/ First, optimize</p>
+<p>current mood previously or optimize current mood</p>
+<p>stabilizer if prescribed mood mood-stabilizing stabilizer if</p>
+<p>noncompliance stabilizer or medication: noncompliance</p>
+<p>is suspected medication regimen lithiuma, is suspected</p>
+<p>OR initiate if noncompliance quetiapine, OR initiate a</p>
+<p>mood-stabilizing suspected OR lurasidone new mood-</p>
+<p>medication: initiate new Alternative stabilizing</p>
+<p>lithiuma, mood-stabilizing anticonvulsants: medication:</p>
+<p>valproatea, two- or three-drug lamotriginec, lithiuma or</p>
+<p>carbamazepinea, combinations valproatea; quetiapine or</p>
+<p>or SGAs (lithiuma, valproatea, antipsychotics: lurasidone</p>
+<p>Consider adding a or SGA) plus a fluoxetine/ Alternative</p>
+<p>benzodiazepine benzodiazepine olanzapine fluoxetine/</p>
+<p>(lorazepam or (lorazepam or combination olanzapine</p>
+<p>clonazepam) clonazepam) and/ combination</p>
+<p>f a t a i n n o r d g e e s r i j e a o t u s d a t m h n m t e o i c n o d e t r i n i t n a v - t t e o i e f o r r f m o f a o i i n s o d r f s r r j a a e o u s g n c m h n i o t o t c i n a m p t r t i i t s a v i m - y o ; t e c e n l e o h t r n r m o r o e a d r t a z i e t c e d m p f a e o m n r t If p p a i w s n n y r i e t c c a h s o h n e m o a n t s b i t p b i , o s s i i n v n y is e a c i t t h i i a o o t n t e i c</p>
+<p>catatonia Do not combine</p>
+<p>Alt m ern ed at ic iv a e t ion Do not combine antipsychotics</p>
+<p>treatment antipsychotics Alternative</p>
+<p>options: Alternative medication anticonvulsants:</p>
+<p>oxcarbazepine treatment options:</p>
+<p>lamotriginec,</p>
+<p>carbamazepinea; valproatea</p>
+<p>if patient does</p>
+<p>not respond or</p>
+<p>tolerate, consider</p>
+<p>oxcarbazepine (Continued )</p>
+<p>771</p>
+<p>CH67.indd 771 20-11-2020 16:34:34</p>
+<div class="table-container"><table><tr><th>TABLE 67-3 Algorithm and Guidelines for the Acute Treatment of Mood Episodes in Patients
+with Bipolar I Disorder</th><th></th><th></th><th></th></tr><tr><td>Acute Manic or Mixed Episode</td><td></td><td>Acute Depressive Episode</td><td></td></tr><tr><td>General Guidelines</td><td></td><td>General Guidelines</td><td></td></tr><tr><td>Assess for secondary causes of mania or mixed
+states (eg, alcohol or drug use)
+Discontinue antidepressants
+Taper off stimulants and caffeine if possible
+Treat substance abuse
+Encourage good nutrition (with regular
+protein and essential fatty acid intake),
+exercise, adequate sleep, stress reduction,
+and psychosocial therapy</td><td></td><td>Assess for secondary causes of depression
+(eg, alcohol or drug use)
+Taper off antipsychotics, benzodiazepines,
+or sedative–hypnotic agents if possible
+Treat substance abuse
+Encourage good nutrition (with regular
+protein and essential fatty acid intake),
+exercise, adequate sleep, stress
+reduction, and psychosocial therapy</td><td></td></tr><tr><td>Hypomania</td><td>Mania</td><td>Mild-to-Moderate
+Depressive
+Episode</td><td>Severe Depressive
+Episode</td></tr><tr><td>First, optimize
+current mood
+stabilizer if
+noncompliance
+is suspected
+OR initiate
+mood-stabilizing
+medication:
+lithiuma,
+valproatea,
+carbamazepinea,
+or SGAs
+Consider adding a
+benzodiazepine
+(lorazepam or
+clonazepam)
+for short-term
+adjunctive
+treatment of
+agitation or
+insomnia if
+needed
+Alternative
+medication
+treatment
+options:
+oxcarbazepine</td><td>First, optimize
+previously
+prescribed mood
+stabilizer or
+medication regimen
+if noncompliance
+suspected OR
+initiate new
+mood-stabilizing
+two- or three-drug
+combinations
+(lithiuma, valproatea,
+or SGA) plus a
+benzodiazepine
+(lorazepam or
+clonazepam) and/
+or antipsychotic
+for short-term
+adjunctive treatment
+of agitation or
+insomnia; lorazepam
+is recommended for
+catatonia
+Do not combine
+antipsychotics
+Alternative medication
+treatment options:
+carbamazepinea;
+if patient does
+not respond or
+tolerate, consider
+oxcarbazepine</td><td>First, initiate and/
+or optimize
+mood-stabilizing
+medication:
+lithiuma,
+quetiapine,
+lurasidone
+Alternative
+anticonvulsants:
+lamotriginec,
+valproatea;
+antipsychotics:
+fluoxetine/
+olanzapine
+combination</td><td>First, optimize
+current mood
+stabilizer if
+noncompliance
+is suspected
+OR initiate a
+new mood-
+stabilizing
+medication:
+lithiuma or
+quetiapine or
+lurasidone
+Alternative
+fluoxetine/
+olanzapine
+combination
+If psychosis is
+present, initiate
+an antipsychotic
+in combination
+with above
+Do not combine
+antipsychotics
+Alternative
+anticonvulsants:
+lamotriginec,
+valproatea
+(Continued )</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 67-3 Algorithm and Guidelines for the Acute Treatment of Mood Episodes in Patients</p>
+<p>with Bipolar I Disorder (Continued )</p>
+<p>Acute Manic or Mixed Episode Acute Depressive Episode</p>
+<p>Mild-to-Moderate</p>
+<p>Depressive Severe Depressive</p>
+<p>Hypomania Mania Episode Episode</p>
+<p>Second, if response Second, if response is Second, if</p>
+<p>is inadequate, inadequate, consider response is</p>
+<p>consider a a three-drug inadequate,</p>
+<p>two-drug combination: consider</p>
+<p>combination: Lithiuma plus an carbamazepinea</p>
+<p>Lithiuma plus an anticonvulsant plus or adding</p>
+<p>anticonvulsant or an antipsychotic</p>
+<p>antidepressantd</p>
+<p>an SGA Anticonvulsant plus an Third, if response</p>
+<p>Anticonvulsant anticonvulsant plus is inadequate,</p>
+<p>plus an an antipsychotic consider a</p>
+<p>a o n r t S ic G o A nvulsant Th i i n rd ad , i e f q re u s a p t o e, n c s o e n is s ider t c h o r m ee b - i d n r a u t g io n:</p>
+<p>ECT for mania Lithium plus</p>
+<p>with psychosis</p>
+<p>lamotriginec</p>
+<p>or catatoniab, or plus an</p>
+<p>add clozapine for</p>
+<p>antidepressantd</p>
+<p>treatment-refractory Lithium plus</p>
+<p>illness quetiapine</p>
+<p>plus</p>
+<p>antidepressantd</p>
+<p>Fourth, if response</p>
+<p>is inadequate,</p>
+<p>consider ECT for</p>
+<p>treatment-</p>
+<p>refractory illness</p>
+<p>and depression</p>
+<p>with psychosis or</p>
+<p>catatoniab</p>
+<p>aUse standard therapeutic serum concentration ranges if clinically indicated; if partial response or</p>
+<p>breakthrough episode, adjust dose to achieve higher serum concentrations without causing</p>
+<p>intolerable adverse effects; valproate is preferred over lithium for mixed episodes and rapid</p>
+<p>cycling; lithium and/or lamotrigine is preferred over valproate for bipolar depression.</p>
+<p>bECT is used for severe mania or depression during pregnancy and for mixed episodes; prior to</p>
+<p>treatment, anticonvulsants, lithium, and benzodiazepines should be tapered off to maximize</p>
+<p>therapy and minimize adverse effects.</p>
+<p>cLamotrigine is not approved for the acute treatment of depression, and the dose must be started</p>
+<p>low and slowly titrated up to decrease adverse effects if used for maintenance therapy of bipolar</p>
+<p>I disorder. Lamotrigine may be initiated during acute treatment with plans to transition to this</p>
+<p>medication for long-term maintenance. A drug interaction and a severe dermatologic rash can</p>
+<p>occur when lamotrigine is combined with valproate (ie, lamotrigine doses must be halved from</p>
+<p>standard dosing titration).</p>
+<p>dControversy exists concerning the use of antidepressants, and they are often considered third line in</p>
+<p>treating acute bipolar depression, except in patients with no recent history of severe acute mania</p>
+<p>or potentially in bipolar II patients.</p>
+<p>ECT, electroconvulsive therapy; SGA, second-generation antipsychotic.</p>
+<p>772</p>
+<p>CH67.indd 772 20-11-2020 16:34:34</p>
+<div class="table-container"><table><tr><th>TABLE 67-3 Algorithm and Guidelines for the Acute Treatment of Mood Episodes in Patients
+with Bipolar I Disorder (Continued )</th><th></th><th></th><th></th></tr><tr><td>Acute Manic or Mixed Episode</td><td></td><td>Acute Depressive Episode</td><td></td></tr><tr><td>Hypomania</td><td>Mania</td><td>Mild-to-Moderate
+Depressive
+Episode</td><td>Severe Depressive
+Episode</td></tr><tr><td>Second, if response
+is inadequate,
+consider a
+two-drug
+combination:
+Lithiuma plus an
+anticonvulsant or
+an SGA
+Anticonvulsant
+plus an
+anticonvulsant
+or SGA</td><td>Second, if response is
+inadequate, consider
+a three-drug
+combination:
+Lithiuma plus an
+anticonvulsant plus
+an antipsychotic
+Anticonvulsant plus an
+anticonvulsant plus
+an antipsychotic
+Third, if response is
+inadequate, consider
+ECT for mania
+with psychosis
+or catatoniab, or
+add clozapine for
+treatment-refractory
+illness</td><td></td><td>Second, if
+response is
+inadequate,
+consider
+carbamazepinea
+or adding
+antidepressantd
+Third, if response
+is inadequate,
+consider a
+three-drug
+combination:
+Lithium plus
+lamotriginec
+plus an
+antidepressantd
+Lithium plus
+quetiapine
+plus
+antidepressantd
+Fourth, if response
+is inadequate,
+consider ECT for
+treatment-
+refractory illness
+and depression
+with psychosis or
+catatoniab</td></tr></table></div><h2>Bipolar Disorder | CHAPTER 67</h2>
+<li>Polydipsia with polyuria with or without nephrogenic diabetes insipidus (DI) can</li>
+<p>occur. About 30%–50% of patients develop nephrogenic DI soon after initiating</p>
+<p>lithium, and it persists in about 10%–25% of patients. It is typically reversible with</p>
+<p>discontinuation of lithium. Nocturia is common and is managed by changing to</p>
+<p>once-daily dosing at bedtime.</p>
+<li>Lithium reduces the kidneys’ ability to concentrate urine and may cause a nephro-</li>
+<p>genic DI with low urine-specific gravity and low osmolality polyuria (urine volume</p>
+<p>&gt;3 L/day). This may be treated with loop or thiazide diuretics. If a thiazide diuretic</p>
+<p>is used, lithium doses should be decreased by 50% and lithium and potassium levels</p>
+<p>monitored. Amiloride has weaker natriuretic effects and seems to have little effect on</p>
+<p>lithium clearance.</p>
+<li>Hypothyroidism can occur in lithium-treated patients (more common in women)</li>
+<p>and does not require discontinuation of lithium. Exogenous thyroid hormone (ie,</p>
+<p>levothyroxine) can be added to the regimen. If lithium is discontinued, the need for</p>
+<p>the levothyroxine should be reassessed because hypothyroidism can be reversible.</p>
+<li>Lithium may cause cardiac effects including T-wave flattening or inversion (up to</li>
+<p>30% of patients), atrioventricular block, and bradycardia. In patients with significant</p>
+<p>cardiac disease, an ECG and consultation with a cardiologist are recommended at</p>
+<p>baseline and periodically during therapy.</p>
+<li>Other late-appearing lithium side effects are benign reversible leukocytosis, acne,</li>
+<p>folliculitis, and weight gain.</p>
+<li>Lithium toxicity can occur with serum levels greater than 1.5 mEq/L (mmol/L), but</li>
+<p>older persons may have toxic symptoms at lower levels. Severe toxic symptoms (eg,</p>
+<p>vomiting, diarrhea, incontinence, incoordination, impaired cognition, arrhythmias,</p>
+<p>seizures, permanent neurologic impairment, and kidney damage) may occur with</p>
+<p>serum concentrations above 2 mEq/L (mmol/L).</p>
+<p>✓ Factors predisposing to lithium toxicity include sodium restriction, dehydration,</p>
+<p>vomiting, diarrhea, age greater than 50 years, heart failure, cirrhosis, drug interac-</p>
+<p>tions that decrease lithium clearance, heavy exercise, sauna baths, hot weather,</p>
+<p>and fever. Tell patients to maintain adequate sodium and fluid intake and to avoid</p>
+<p>excessive use of alcohol and caffeine-containing beverages.</p>
+<p>✓ If lithium toxicity is suspected, discontinue lithium and send the patient immedi-</p>
+<p>ately to the emergency department.</p>
+<p>✓ Consider intermittent hemodialysis in these situations:</p>
+<p>ο In lithium-naive patients, when lithium serum concentrations are at least 4</p>
+<p>mEq/L (mmol/L).</p>
+<p>ο In patients previously taking lithium, when lithium serum concentrations are</p>
+<p>2.5 mEq/L (mmol/L) or greater and moderate-to-severe neurologic toxicity is</p>
+<p>present or as clinically indicated.</p>
+<p>ο Continue hemodialysis until serum lithium concentration is below 1 mEq/L</p>
+<p>(mmol/L) when drawn 8 hours after the last dialysis.</p>
+<p>✓ Thiazide diuretics, nonsteroidal anti-inflammatory drugs, angiotensin-converting</p>
+<p>enzyme inhibitors, and salt-restricted diets can elevate lithium levels. Neurotoxic-</p>
+<p>ity can occur when lithium is combined with antipsychotics, methyldopa, met-</p>
+<p>ronidazole, phenytoin, and verapamil. Combining lithium with calcium channel</p>
+<p>blockers is not recommended because of reports of neurotoxicity. Acetaminophen</p>
+<p>or aspirin and loop diuretics are less likely to interfere with lithium clearance.</p>
+<p>Caffeine and theophylline can enhance renal elimination of lithium.</p>
+<li>Lithium is usually initiated with 600 mg/day for prophylaxis and 900–1200 mg/day</li>
+<p>for acute mania. Give immediate-release preparations two or three times daily and</p>
+<p>extended-release products once or twice daily. After patients are stabilized, many</p>
+<p>patients can switch to once-daily dosing.</p>
+<li>In general, lithium serum concentrations should be maintained between 0.6 and 1.0</li>
+<p>mEq/L (mmol/L). Lithium levels are considered to be at steady state after approxi-</p>
+<p>mately 5 days with samples drawn 12 hours postdose. Initially, check serum lithium</p>
+<p>773</p>
+<p>CH67.indd 773 20-11-2020 16:34:35</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>concentrations once or twice weekly. After a desired serum concentration is achieved,</p>
+<p>check levels in 2 weeks, and when stable, check them every 3–6 months.</p>
+<li>Lithium clearance increases by 50%–100% during pregnancy. Monitor serum levels</li>
+<p>monthly during pregnancy and weekly the month before delivery. At delivery, reduce</p>
+<p>dose to prepregnancy levels and maintain hydration.</p>
+<li>A reasonable therapeutic trial in outpatients is at least 4–6 weeks with lithium</li>
+<p>serum concentrations of 0.6–1.2 mEq/L (mmol/L). Although serum concentra-</p>
+<p>tions less than 0.6 mEq/L (mmol/L) may be associated with higher relapse rates,</p>
+<p>some patients can do well at 0.4–0.7 mEq/L (mmol/L). Acutely manic patients can</p>
+<p>require serum concentrations of 1–1.2 mEq/L (mmol/L), and some need up to</p>
+<p>1.5 mEq/L (mmol/L). For bipolar prophylaxis in older patients, serum concentrations</p>
+<p>of 0.4–0.6 mEq/L (mmol/L) are recommended.</p>
+<p>Anticonvulsants</p>
+<li>For more in-depth information on the side effects, pharmacokinetics, and drug</li>
+<h2>interactions of anticonvulsants, refers to Chapter 54.</h2>
+<p>Valproate Sodium and Valproic Acid</p>
+<li>Divalproex sodium (sodium valproate), FDA-approved for acute manic or mixed</li>
+<p>episodes, is the most prescribed mood stabilizer in the United States. It is as effective</p>
+<p>as lithium and olanzapine for pure mania, and it can be more effective than lithium</p>
+<p>for rapid cycling, mixed states, and bipolar disorder with substance abuse. It reduces</p>
+<p>the frequency of (or prevents) recurrent manic, depressive, and mixed episodes.</p>
+<li>Lithium, carbamazepine, antipsychotics, or benzodiazepines can augment the</li>
+<p>antimanic effects of valproate. Valproate can be added to lithium to achieve syner-</p>
+<p>gistic effects in patients who are treatment refractory and are rapid cyclers or have</p>
+<p>mixed features, and the combination is effective as maintenance therapy of bipolar</p>
+<p>I disorder. The potential for drug interactions necessitate blood level monitoring of</p>
+<p>both agents. SGAs can be added to valproate for breakthrough mania, but they can</p>
+<p>increase the risk of sedation and weight gain. Combining valproate with lamotrigine</p>
+<p>increases the risk of rashes, ataxia, tremor, sedation, and fatigue.</p>
+<li>The most frequent dose-related side effects of valproate are GI complaints, fine</li>
+<p>tremor, and sedation. Giving it with food, reducing the initial dose and making</p>
+<p>gradual increases, or switching to the extended-release formulation can help alleviate</p>
+<p>the GI complaints. Reducing the dose or adding a β-blocker may alleviate tremors.</p>
+<p>Giving the total dose at bedtime can minimize daytime sedation. Other side effects</p>
+<p>are ataxia, lethargy, alopecia, pruritus, prolonged bleeding, transient increases in</p>
+<p>liver enzymes, weight gain, and hyperammonemia. Thrombocytopenia can occur</p>
+<p>at higher doses; lowering the valproate dose may normalize platelet counts. Fatal</p>
+<p>necrotizing hepatitis is rare and idiosyncratic, occurring in children on multiple</p>
+<p>anticonvulsants. Life-threatening pancreatitis has been reported.</p>
+<li>For healthy inpatient adults with acute mania, the initial starting dose of valpro-</li>
+<p>ate is typically 20 mg/kg/day given in divided doses over 12 hours. The daily dose</p>
+<p>is adjusted by 250–500 mg every 1–3 days based on response and tolerability. The</p>
+<h2>maximum dose is 60 mg/kg/day (see Table 67-4).</h2>
+<p>✓ For outpatients who are hypomanic or euthymic, or for older patients, the initial</p>
+<p>dose is generally lower (5–10 mg/kg/day in divided doses) and gradually titrated</p>
+<p>to avoid side effects.</p>
+<p>✓ After establishing the optimal dose, the dose can be given twice daily or at bedtime</p>
+<p>if tolerated.</p>
+<p>✓ Extended-release divalproex can be given once daily, but bioavailability can be 15%</p>
+<p>lower than that of immediate release products.</p>
+<li>Most clinicians seek a serum concentration range of 50–125 mcg/mL (347–866</li>
+<p>μmol/L) measured 12 hours after the last dose. Patients with cyclothymia or bipolar</p>
+<p>II disorder respond at lower blood levels, while patients with more severe forms may</p>
+<p>require up to 150 mcg/mL (1040 μmol/L). Serum levels are most useful when assess-</p>
+<p>ing for adherence or toxicity.</p>
+<p>774</p>
+<p>CH67.indd 774 20-11-2020 16:34:35</p>
+<h2>Bipolar Disorder | CHAPTER 67</h2>
+<p>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the</p>
+<p>Treatment of Bipolar Disorder</p>
+<p>Drug Usual Dosing; Special</p>
+<p>(Brand Name) Initial Dosing Population Dosing Comments</p>
+<p>Lithium salts</p>
+<p>Lithium carbonate 300 mg 900–2400 mg/day in Use alone or in</p>
+<p>(Eskalitha,b) twice daily two to four divided combination with</p>
+<p>doses, preferably other medications</p>
+<p>(Eskalith CR) with meals (eg, valproate,</p>
+<p>(Lithobid) Renal impairment: carbamazepine,</p>
+<p>Lithium citrate lower doses required antipsychotics) for</p>
+<p>with frequent serum acute treatment</p>
+<p>(Cibalith-Sa,b) monitoring of mania and for</p>
+<p>maintenance</p>
+<p>There is wide variation treatment</p>
+<p>in the dosage</p>
+<p>needed to achieve</p>
+<p>therapeutic</p>
+<p>response and trough</p>
+<p>serum lithium</p>
+<p>concentration (ie,</p>
+<p>0.6–1.2 mEq/L</p>
+<p>[mmol/L] for</p>
+<p>maintenance therapy</p>
+<p>and 0.8–1.2 mEq/L</p>
+<p>[mmol/L] for acute</p>
+<p>mood episodes</p>
+<p>taken 12 hours after</p>
+<p>the last dose)</p>
+<p>Anticonvulsants</p>
+<p>Divalproex sodium 250–500 mg 750–3000 mg/day Use alone or in</p>
+<p>(Depakotea) twice daily (20–60 mg/kg/day) combination with</p>
+<p>(Depakote ER) Loa o d f i d n i g v a d lp os ro e e x g d i i v v e id n e o d n d c o e s d es aily or in o (e t g h , e l r it m hiu ed m ic , ations</p>
+<p>Valproic acida (20–30 mg/ Titrate to clinical carbamazepine,</p>
+<p>(Depakene) kg/day) can response antipsychotics)</p>
+<p>Valproate sodium be given Dose adjustment f t o re r a a t c m u e te n t of</p>
+<p>(Depacon) needed with hepatic mania and for</p>
+<p>impairment maintenance</p>
+<p>treatment</p>
+<p>Use caution when</p>
+<p>combining with</p>
+<p>lamotrigine</p>
+<p>because of</p>
+<p>potential drug</p>
+<p>interaction</p>
+<p>Lamotrigine 25 mg daily 50–400 mg/day in Use alone or in</p>
+<p>(Lamictalb) divided doses. combination with</p>
+<p>Increase dosage other medications</p>
+<p>slowly (eg, 25 mg/ (eg, lithium,</p>
+<p>day for 2 weeks, then carbamazepine)</p>
+<p>50 mg/day for weeks for long-term</p>
+<p>3 and 4, and then 50 maintenance</p>
+<p>mg/day increments treatment for</p>
+<p>at weekly intervals bipolar I disorder</p>
+<p>up to 200 mg/day)</p>
+<p>Dose adjustment</p>
+<p>needed with hepatic</p>
+<p>impairment</p>
+<p>(Continued )</p>
+<p>775</p>
+<p>CH67.indd 775 20-11-2020 16:34:35</p>
+<div class="table-container"><table><tr><th>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the
+Treatment of Bipolar Disorder</th><th></th><th></th><th></th></tr><tr><td>Drug
+(Brand Name)</td><td>Initial Dosing</td><td>Usual Dosing; Special
+Population Dosing</td><td>Comments</td></tr><tr><td>Lithium salts</td><td></td><td></td><td></td></tr><tr><td>Lithium carbonate
+(Eskalitha,b)
+(Eskalith CR)
+(Lithobid)
+Lithium citrate
+(Cibalith-Sa,b)</td><td>300 mg
+twice daily</td><td>900–2400 mg/day in
+two to four divided
+doses, preferably
+with meals
+Renal impairment:
+lower doses required
+with frequent serum
+monitoring
+There is wide variation
+in the dosage
+needed to achieve
+therapeutic
+response and trough
+serum lithium
+concentration (ie,
+0.6–1.2 mEq/L
+[mmol/L] for
+maintenance therapy
+and 0.8–1.2 mEq/L
+[mmol/L] for acute
+mood episodes
+taken 12 hours after
+the last dose)</td><td>Use alone or in
+combination with
+other medications
+(eg, valproate,
+carbamazepine,
+antipsychotics) for
+acute treatment
+of mania and for
+maintenance
+treatment</td></tr><tr><td>Anticonvulsants</td><td></td><td></td><td></td></tr><tr><td>Divalproex sodium
+(Depakotea)
+(Depakote ER)
+Valproic acida
+(Depakene)
+Valproate sodium
+(Depacon)</td><td>250–500 mg
+twice daily
+Loading dose
+of divalproex
+(20–30 mg/
+kg/day) can
+be given</td><td>750–3000 mg/day
+(20–60 mg/kg/day)
+given once daily or in
+divided doses
+Titrate to clinical
+response
+Dose adjustment
+needed with hepatic
+impairment</td><td>Use alone or in
+combination with
+other medications
+(eg, lithium,
+carbamazepine,
+antipsychotics)
+for acute
+treatment of
+mania and for
+maintenance
+treatment
+Use caution when
+combining with
+lamotrigine
+because of
+potential drug
+interaction</td></tr><tr><td>Lamotrigine
+(Lamictalb)</td><td>25 mg daily</td><td>50–400 mg/day in
+divided doses.
+Increase dosage
+slowly (eg, 25 mg/
+day for 2 weeks, then
+50 mg/day for weeks
+3 and 4, and then 50
+mg/day increments
+at weekly intervals
+up to 200 mg/day)
+Dose adjustment
+needed with hepatic
+impairment</td><td>Use alone or in
+combination with
+other medications
+(eg, lithium,
+carbamazepine)
+for long-term
+maintenance
+treatment for
+bipolar I disorder
+(Continued )</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the</p>
+<p>Treatment of Bipolar Disorder (Continued )</p>
+<p>Drug Usual Dosing; Special</p>
+<p>(Brand Name) Initial Dosing Population Dosing Comments</p>
+<p>Carbamazepine 200 mg 200–1800 mg/day Use alone or in</p>
+<p>(Equetroa) twice daily in two to four combination</p>
+<p>divided doses with other</p>
+<p>(Tegretol) Titrate to clinical medications (eg,</p>
+<p>(Epitol) response lithium, valproate,</p>
+<p>(Tegretol-XR) Dose adjustment a fo n r t i t p h s e y a c c h u o t t e ic s)</p>
+<p>(Carbatrol) needed with hepatic and long-term</p>
+<p>impairment maintenance</p>
+<p>treatment of</p>
+<p>mania or mixed</p>
+<p>episodes for</p>
+<p>bipolar I disorder.</p>
+<p>APA guidelines</p>
+<p>recommend</p>
+<p>reserving it for</p>
+<p>patients unable</p>
+<p>to tolerate or who</p>
+<p>have inadequate</p>
+<p>response to lithium</p>
+<p>or valproate</p>
+<p>Extended-release</p>
+<h2>tablets should be</h2>
+<p>swallowed whole</p>
+<p>and not be broken</p>
+<p>or chewed</p>
+<p>Carbitrol capsules can</p>
+<p>be opened and</p>
+<p>contents sprinkled</p>
+<p>over food</p>
+<p>Oxcarbazepine 300 mg 300–1200 mg/day in Use after patients</p>
+<p>(Trileptal) twice daily two divided doses have failed</p>
+<p>Titrate dosage based on treatment with</p>
+<p>clinical response carbamazepine or</p>
+<p>have intolerable</p>
+<p>Dose adjustment side effects</p>
+<p>required with severe</p>
+<p>renal impairment May have fewer</p>
+<p>adverse effects</p>
+<p>and be better</p>
+<p>tolerated than</p>
+<p>carbamazepine</p>
+<p>Atypical antipsychotics</p>
+<p>Aripiprazole 10–15 mg daily 10–30 mg/day</p>
+<p>(Abilifya,b) once daily</p>
+<p>(Abilify Maintenab)</p>
+<p>Asenapine 5–10 mg 5–10 mg twice daily</p>
+<p>(Saphrisa) twice daily sublingually</p>
+<p>sublingually (Continued )</p>
+<p>776</p>
+<p>CH67.indd 776 20-11-2020 16:34:36</p>
+<div class="table-container"><table><tr><th>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the
+Treatment of Bipolar Disorder (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug
+(Brand Name)</td><td>Initial Dosing</td><td>Usual Dosing; Special
+Population Dosing</td><td>Comments</td></tr><tr><td>Carbamazepine
+(Equetroa)
+(Tegretol)
+(Epitol)
+(Tegretol-XR)
+(Carbatrol)</td><td>200 mg
+twice daily</td><td>200–1800 mg/day
+in two to four
+divided doses
+Titrate to clinical
+response
+Dose adjustment
+needed with hepatic
+impairment</td><td>Use alone or in
+combination
+with other
+medications (eg,
+lithium, valproate,
+antipsychotics)
+for the acute
+and long-term
+maintenance
+treatment of
+mania or mixed
+episodes for
+bipolar I disorder.
+APA guidelines
+recommend
+reserving it for
+patients unable
+to tolerate or who
+have inadequate
+response to lithium
+or valproate
+Extended-release
+tablets should be
+swallowed whole
+and not be broken
+or chewed
+Carbitrol capsules can
+be opened and
+contents sprinkled
+over food</td></tr><tr><td>Oxcarbazepine
+(Trileptal)</td><td>300 mg
+twice daily</td><td>300–1200 mg/day in
+two divided doses
+Titrate dosage based on
+clinical response
+Dose adjustment
+required with severe
+renal impairment</td><td>Use after patients
+have failed
+treatment with
+carbamazepine or
+have intolerable
+side effects
+May have fewer
+adverse effects
+and be better
+tolerated than
+carbamazepine</td></tr><tr><td>Atypical antipsychotics</td><td></td><td></td><td></td></tr><tr><td>Aripiprazole
+(Abilifya,b)
+(Abilify Maintenab)</td><td>10–15 mg daily</td><td>10–30 mg/day
+once daily</td><td></td></tr><tr><td>Asenapine
+(Saphrisa)</td><td>5–10 mg
+twice daily
+sublingually</td><td>5–10 mg twice daily
+sublingually</td><td>(Continued )</td></tr></table></div><h2>Bipolar Disorder | CHAPTER 67</h2>
+<p>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the</p>
+<p>Treatment of Bipolar Disorder (Continued )</p>
+<p>Drug Usual Dosing; Special</p>
+<p>(Brand Name) Initial Dosing Population Dosing Comments</p>
+<p>Cariprazine 1.5 mg daily 3–6 mg daily</p>
+<p>(Vraylara)</p>
+<p>Lurasidone 20 mg daily 20–120 mg daily</p>
+<p>(Latudac) with food</p>
+<p>Olanzapine 2.5–5 mg 5–20 mg/day once daily</p>
+<p>(Zyprexaa,b) twice daily or in divided doses</p>
+<p>(Zyprexa Zydis)</p>
+<p>Olanzapine and 6 mg olanzapine 6–12 mg olanzapine</p>
+<p>fluoxetine and 25 mg and 25–50 mg</p>
+<p>(Symbyaxc) fluoxetine daily fluoxetine daily</p>
+<p>Quetiapine 50 mg twice daily 50–800 mg/day in</p>
+<p>(Seroquela,b) divided doses or</p>
+<p>once daily when</p>
+<p>stabilized</p>
+<p>Risperidone 0.5–1 mg 0.5–6 mg/day</p>
+<p>(Risperdala) twice daily once daily or in</p>
+<p>divided doses</p>
+<p>(Risperdal M-Tab)</p>
+<p>(Risperdal Constab)</p>
+<p>Ziprasidone 40–60 mg 40–160 mg/day in</p>
+<p>(Geodona) twice daily divided doses</p>
+<p>Benzodiazepines</p>
+<p>Various Dosage should be Use in combination</p>
+<p>slowly adjusted with other</p>
+<p>up and down medications (eg,</p>
+<p>according to antipsychotics,</p>
+<p>response and lithium, valproate)</p>
+<p>adverse effects for acute treatment</p>
+<p>of mania or mixed</p>
+<p>episodes</p>
+<p>Use as a short-term</p>
+<p>adjunctive sedative–</p>
+<p>hypnotic agent</p>
+<p>aFDA-approved for acute mania.</p>
+<p>bFDA-approved for maintenance.</p>
+<p>cFDA-approved for acute bipolar depression.</p>
+<p>FDA-approved agents may be used as monotherapy in various phases of the illness as noted in the</p>
+<h2>table footnotes.</h2>
+<p>Carbamazepine</p>
+<li>Because of drug interactions, carbamazepine is usually reserved for use after treat-</li>
+<p>ment failure with lithium or divalproex sodium.</p>
+<li>It has acute antimanic effects, but its long-term effectiveness is less clear. It may be</li>
+<p>less effective than lithium for maintenance therapy and for bipolar depression.</p>
+<li>The combination of carbamazepine with lithium, valproate, and antipsychotics is</li>
+<p>often used for manic episodes in treatment-resistant patients.</p>
+<li>Adverse effects of carbamazepine are summarized in Chapter 54.</li>
+<p>777</p>
+<p>CH67.indd 777 20-11-2020 16:34:36</p>
+<div class="table-container"><table><tr><th>TABLE 67-4 Products, Dosage and Administration, and Clinical Use of Agents Used in the
+Treatment of Bipolar Disorder (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug
+(Brand Name)</td><td>Initial Dosing</td><td>Usual Dosing; Special
+Population Dosing</td><td>Comments</td></tr><tr><td>Cariprazine
+(Vraylara)</td><td>1.5 mg daily</td><td>3–6 mg daily</td><td></td></tr><tr><td>Lurasidone
+(Latudac)</td><td>20 mg daily</td><td>20–120 mg daily
+with food</td><td></td></tr><tr><td>Olanzapine
+(Zyprexaa,b)
+(Zyprexa Zydis)</td><td>2.5–5 mg
+twice daily</td><td>5–20 mg/day once daily
+or in divided doses</td><td></td></tr><tr><td>Olanzapine and
+fluoxetine
+(Symbyaxc)</td><td>6 mg olanzapine
+and 25 mg
+fluoxetine daily</td><td>6–12 mg olanzapine
+and 25–50 mg
+fluoxetine daily</td><td></td></tr><tr><td>Quetiapine
+(Seroquela,b)</td><td>50 mg twice daily</td><td>50–800 mg/day in
+divided doses or
+once daily when
+stabilized</td><td></td></tr><tr><td>Risperidone
+(Risperdala)
+(Risperdal M-Tab)
+(Risperdal Constab)</td><td>0.5–1 mg
+twice daily</td><td>0.5–6 mg/day
+once daily or in
+divided doses</td><td></td></tr><tr><td>Ziprasidone
+(Geodona)</td><td>40–60 mg
+twice daily</td><td>40–160 mg/day in
+divided doses</td><td></td></tr><tr><td>Benzodiazepines</td><td></td><td></td><td></td></tr><tr><td>Various</td><td>Dosage should be
+slowly adjusted
+up and down
+according to
+response and
+adverse effects</td><td>Use in combination
+with other
+medications (eg,
+antipsychotics,
+lithium, valproate)
+for acute treatment
+of mania or mixed
+episodes
+Use as a short-term
+adjunctive sedative–
+hypnotic agent</td><td></td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Carbamazepine induces the hepatic metabolism of antidepressants, anticonvulsants,</li>
+<p>antipsychotics, and many other medications. Women taking oral contraceptives</p>
+<p>who receive carbamazepine should be counseled to use a nonhormonal method of</p>
+<p>contraception.</p>
+<li>Certain medications that inhibit CYP3A4 (eg, cimetidine, diltiazem, erythromycin,</li>
+<p>fluoxetine, fluvoxamine, itraconazole, ketoconazole, nefazodone, and verapamil)</p>
+<p>added to carbamazepine therapy may cause carbamazepine toxicity. When carbam-</p>
+<p>azepine is combined with valproate, reduce the carbamazepine dose, as its free levels</p>
+<p>can be increased. Do not combine clozapine and carbamazepine because of possible</p>
+<p>additive bone marrow suppression.</p>
+<li>For inpatients in an acute manic episode, doses can be started at 400–600 mg/day</li>
+<p>in divided doses with meals and increased by 200 mg/day every 2–4 days up to</p>
+<p>10–15 mg/kg/day. Outpatients should be started at lower doses and titrated upward</p>
+<p>more slowly to avoid side effects. Many patients tolerate once-daily dosing after</p>
+<p>stabilization.</p>
+<li>During the first month of therapy, serum concentrations may decrease because of</li>
+<p>autoinduction of cytochrome P450 3A4 enzymes, requiring a dose increase.</p>
+<li>Carbamazepine serum levels are usually obtained every 1 or 2 weeks during the first</li>
+<p>2 months, then every 3–6 months during maintenance. Serum samples are drawn</p>
+<p>10–12 hours postdose and at least 4–7 days after dosage initiation or change. Most</p>
+<p>clinicians attempt to maintain levels between 6–10 mcg/mL (25–42 μmol/L), but</p>
+<p>some patients may require 12–14 mcg/mL (51–59 μmol/L).</p>
+<li>Use of carbamazepine in patients of Asian ancestry requires genetic testing for</li>
+<p>human leukocyte antigen (HLA) allele, HLA-B 1502, to help detect a higher risk of</p>
+<p>Stevens–Johnson syndrome and toxic epidermal necrolysis.</p>
+<p>Oxcarbazepine</p>
+<li>Oxcarbazepine is not FDA-approved for treatment of bipolar disorder in the United</li>
+<p>States. Guidelines typically recommend it as a third-line option for mania, a third- or</p>
+<p>fourth-line option for maintenance treatment, and it is not recommended for treat-</p>
+<p>ment of bipolar depression.</p>
+<li>Initial dosing is usually 150–300 mg twice daily, which can be increased by 300–600</li>
+<p>mg every 3–6 days up to 1200 mg/day in divided doses (with or without food).</p>
+<li>Discontinue oxcarbazepine at the first sign of a skin reaction, as severe dermatologic</li>
+<p>reactions have been reported (eg, Stevens–Johnson syndrome). Other adverse effects</p>
+<p>may include impaired cognitive or psychomotor performance, somnolence, fatigue,</p>
+<p>incoordination, and hyponatremia. Severe hyponatremia is more common with</p>
+<p>oxcarbazepine than with carbamazepine.</p>
+<li>Oxcarbazepine is a CYP 2C19 inhibitor and a 3A3/4 inducer. It induces the metabo-</li>
+<p>lism of oral contraceptives, necessitating use of alternative contraception measures.</p>
+<p>Oxcarbazepine does not autoinduce its own metabolism.</p>
+<p>Lamotrigine</p>
+<li>Lamotrigine has both antidepressant and mood-stabilizing effects. It may have aug-</li>
+<p>menting properties when combined with lithium or valproate. It has a low rate of</p>
+<p>switching patients to mania. Although it is less effective for acute mania compared</p>
+<p>with lithium and valproate, it may be beneficial for the maintenance therapy of</p>
+<p>treatment-resistant bipolar I and II disorders. It seems most effective for prevention</p>
+<p>of bipolar depression.</p>
+<li>Common adverse effects include headache, nausea, dizziness, ataxia, diplopia,</li>
+<p>drowsiness, tremor, maculopapular rash, and pruritus. Although most rashes</p>
+<p>resolve with continued therapy, some progress to life-threatening Stevens–</p>
+<p>Johnson syndrome. Discontinue lamotrigine if the rash is diffuse, involves mucous</p>
+<p>membranes, and is accompanied by fever or sore throat. The incidence of rash is</p>
+<p>greatest with concomitant administration of valproate, rapid dose escalation of</p>
+<p>lamotrigine, and higher than recommended lamotrigine initial doses.</p>
+<p>778</p>
+<p>CH67.indd 778 20-11-2020 16:34:37</p>
+<h2>Bipolar Disorder | CHAPTER 67</h2>
+<li>In patients taking valproate, dose lamotrigine at about one-half the standard doses,</li>
+<p>and titrate upward more slowly than usual.</p>
+<li>For maintenance treatment of bipolar disorder, the usual dosage range of lamotrigine</li>
+<p>is 50–300 mg/day. The target dose is generally 200 mg/day (100 mg/day when com-</p>
+<p>bined with valproate and 400 mg/day when combined with carbamazepine). For</p>
+<p>patients not taking medications that affect lamotrigine’s clearance, the dose is 25 mg/</p>
+<p>day for the first 2 weeks, then 50 mg/day for weeks 3 and 4, 100 mg/day for the next</p>
+<p>week, then 200 mg/day. Patients who stop dosing for more than a few days should</p>
+<p>restart the dose escalation schedule.</p>
+<p>Antipsychotics</p>
+<li>First-generation (eg, fluphenazine, haloperidol) and second-generation (eg, aripip-</li>
+<p>razole, asenapine, clozapine, lurasidone, quetiapine, risperidone, ziprasidone) anti-</p>
+<p>psychotics are effective as monotherapy or as add-on therapy for acute mania.</p>
+<p>Long-term antipsychotics can be needed for some patients, but the risks versus ben-</p>
+<p>efits must be weighed in view of long-term side effects (eg, obesity, type 2 diabetes,</p>
+<p>hyperlipidemia, hyperprolactinemia, and tardive dyskinesia).</p>
+<li>Both first- and second-generation antipsychotics are effective in ~70% of patients</li>
+<p>with acute mania associated with agitation, aggression, and psychosis.</p>
+<li>Clinical trials support the use of quetiapine and lurasidone as monotherapy and</li>
+<p>adjunctive treatment for bipolar depression. Data also support use of combined</p>
+<p>fluoxetine/olanzapine for bipolar depression.</p>
+<li>Oral aripiprazole, olanzapine, and long-acting risperidone are effective monotherapy</li>
+<p>options for maintenance treatment in bipolar disorder. First-generation depot</p>
+<p>antipsychotics (eg, haloperidol decanoate, fluphenazine decanoate) can be</p>
+<p>useful for maintenance treatment in patients who are noncompliant or</p>
+<p>treatment-resistant.</p>
+<li>Controlled studies in acute mania suggest that lithium or valproate plus an antipsy-</li>
+<p>chotic is more effective than any of these agents alone.</p>
+<li>Clozapine monotherapy has acute and long-term mood stabilizing effects in</li>
+<p>refractory bipolar disorder but requires regular white blood cell monitoring for</p>
+<p>agranulocytosis.</p>
+<li>Higher initial antipsychotic doses (eg, olanzapine 20 mg/day) may be required for</li>
+<p>acute mania. After mania is controlled (usually 7–28 days), the antipsychotic can be</p>
+<p>gradually tapered and discontinued, and the patient maintained on mood stabilizer</p>
+<p>monotherapy.</p>
+<li>For more information on the side effects, pharmacokinetics, and drug interactions of</li>
+<h2>specific antipsychotics, refer to Chapter 70.</h2>
+<p>Alternative Medications</p>
+<li>High-potency benzodiazepines (eg, clonazepam and lorazepam) are common alter-</li>
+<p>natives (or adjuncts) to antipsychotics for acute mania, agitation, anxiety, panic,</p>
+<p>and insomnia, or in patients who cannot take mood stabilizers. IM lorazepam may</p>
+<p>be used for acute agitation. When no longer required, benzodiazepines should be</p>
+<p>gradually tapered and discontinued to avoid withdrawal symptoms. A relative con-</p>
+<p>traindication for long-term use is a history of drug or alcohol abuse or dependency.</p>
+<li>Many clinicians consider adjunctive antidepressants third-line for acute bipolar</li>
+<p>depression, except in those with no history of severe and/or recent mania or poten-</p>
+<p>tially in bipolar II patients. The rate of mood switching from depression to mania</p>
+<p>with tricyclic antidepressants and venlafaxine is higher than the rate associated with</p>
+<p>use of selective serotonin reuptake inhibitors. Before initiating an antidepressant, be</p>
+<p>sure the patient has a therapeutic dose or blood level of a primary mood stabilizer.</p>
+<p>Be cautious in using antidepressants in those with a history of mania after a depres-</p>
+<p>sive episode, and those with frequent cycling. Generally, the antidepressant should be</p>
+<p>withdrawn 2–6 months after remission.</p>
+<p>779</p>
+<p>CH67.indd 779 20-11-2020 16:34:37</p>
+<h2>780 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 67-5 Guidelines for Baseline and Routine Laboratory Tests and Monitoring for Patients with Bipolar Disorder Taking Mood Stabilizers</p>
+<p>Baseline:</p>
+<p>Physical</p>
+<p>Examination</p>
+<p>and General Hematologic Liver Function Renal Function Thyroid Serum</p>
+<p>Chemistrya Testsb Metabolic Testsc Testsd Testse Function Testsf Electrolytesg Dermatologich</p>
+<p>6–12 6–12 6–12 6–12 6–12 6–12 6–12</p>
+<p>Baseline BaselinemonthsBaselinemonthsBaselinemonthsBaselinemonths BaselinemonthsBaseline months Baseline months</p>
+<p>SGAsi X X X</p>
+<p>Carbamazepinej X X X X X X X X X X</p>
+<p>Lamotriginek X X X</p>
+<p>Lithiuml X X X X X X X X X X X X X</p>
+<p>Oxcarbazepinem X X X</p>
+<p>Valproaten X X X X X X X X X</p>
+<p>aScreen for drug abuse and serum pregnancy.</p>
+<p>bComplete blood cell count (CBC) with differential and platelets.</p>
+<p>cFasting glucose, serum lipids, and weight.</p>
+<p>dLactate dehydrogenase, aspartate aminotransferase, alanine aminotransferase, total bilirubin, and alkaline phosphatase.</p>
+<p>eSerum creatinine, blood urea nitrogen, urinalysis, urine osmolality, and specific gravity.</p>
+<p>fTriiodothyronine, total thyroxine, thyroxine uptake, and thyroid-stimulating hormone.</p>
+<p>gSerum sodium.</p>
+<p>hRashes, hair thinning, and alopecia.</p>
+<p>iSecond-generation antipsychotics: Monitor for increased appetite with weight gain (primarily in patients with initial low or normal body mass index); monitor closely if rapid or significant</p>
+<p>weight gain occurs during early therapy; cases of hyperlipidemia and diabetes reported.</p>
+<p>CH67.indd</p>
+<p>780</p>
+<p>20-11-2020</p>
+<p>16:34:38</p>
+<div class="table-container"><table><tr><th>Baseline:
+Physical
+Examination
+and General Hematologic Liver Function Renal Function Thyroid Serum
+Chemistrya Testsb Metabolic Testsc Testsd Testse Function Testsf Electrolytesg Dermatologich</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>CTION
+13
+|
+Psychiatric
+Disorders</th></tr><tr><td></td><td>Baseline</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td>Baseline</td><td>6–12
+months</td><td></td></tr><tr><td>SGAsi</td><td>X</td><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Carbamazepinej</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td><td></td></tr><tr><td>Lamotriginek</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td></td></tr><tr><td>Lithiuml</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td></td></tr><tr><td>Oxcarbazepinem</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td></td><td></td><td></td></tr><tr><td>Valproaten</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td></td></tr></table></div><p>781</p>
+<p>Bipolar</p>
+<p>Disorder</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>67</p>
+<p>jCarbamazepine: Manufacturer recommends CBC and platelets (and possibly reticulocyte counts and serum iron) at baseline, and that subsequent monitoring be individualized by the clinician</p>
+<pre><code>(eg, CBC, platelet counts, and liver function tests every 2 weeks during the first 2 months of treatment, and then every 3 months if normal). Monitor more closely if patient</code></pre>
+<p>exhibits hematologic or hepatic abnormalities or if the patient is receiving a myelotoxic drug; discontinue if platelets are &lt;100,000/mm3 (&lt;100 × 109/L), if white blood cell (WBC) count</p>
+<pre><code>is &lt;3000/mm3 (&lt;3 × 109/L), or if there is evidence of bone marrow suppression or liver dysfunction. Serum electrolyte levels should be monitored in the elderly or those at risk for</code></pre>
+<p>hyponatremia. Carbamazepine interferes with some pregnancy tests.</p>
+<p>kLamotrigine: If renal or hepatic impairment, monitor closely and adjust dosage according to manufacturer’s guidelines. Serious dermatologic reactions have occurred within 2–8 weeks of</p>
+<p>initiating treatment and are more likely to occur in patients receiving concomitant valproate, with rapid dosage escalation, or using doses exceeding the recommended titration schedule.</p>
+<pre><code>lLithium: Obtain baseline electrocardiogram for patients older than 40 years or if preexisting cardiac disease (benign, reversible T-wave depression can occur). Renal function tests should</code></pre>
+<pre><code>be obtained every 2–3 months during the first 6 months, and then every 6–12 months; if impaired renal function, monitor 24-hour urine volume and creatinine every 3 months; if urine</code></pre>
+<pre><code>volume &gt;3 L/day, monitor urinalysis, osmolality, and specific gravity every 3 months. Thyroid function tests should be obtained once or twice during the first 6 months, and then every</code></pre>
+<pre><code>6–12 months; monitor for signs and symptoms of hypothyroidism; if supplemental thyroid therapy is required, monitor thyroid function tests and adjust thyroid dose every 1–2 months</code></pre>
+<pre><code>until thyroid function indices are within normal range, and then monitor every 3–6 months.</code></pre>
+<p>mOxcarbazepine: Hyponatremia (serum sodium concentrations &lt;125 mEq/L [mmol/L]) has been reported and occurs more frequently during the first 3 months of therapy; serum sodium</p>
+<p>concentrations should be monitored in patients receiving drugs that lower serum sodium concentrations (eg, diuretics or drugs that cause inappropriate antidiuretic hormone secretion) or</p>
+<p>in patients with symptoms of hyponatremia (eg, confusion, headache, lethargy, and malaise). Hypersensitivity reactions have occurred in approximately 25%–30% of patients with a history</p>
+<p>of carbamazepine hypersensitivity and require immediate discontinuation.</p>
+<pre><code>nValproate: Weight gain reported in patients with low or normal body mass index. Monitor platelets and liver function during first 3–6 months if evidence of increased bruising or bleeding.</code></pre>
+<p>Monitor closely if patients exhibit hematologic or hepatic abnormalities or in patients receiving drugs that affect coagulation, such as aspirin or warfarin; discontinue if platelets are</p>
+<p>&lt;100,000/mm3/L (&lt;100 × 109/L) or if prolonged bleeding time. Pancreatitis, hyperammonemic encephalopathy, polycystic ovary syndrome, increased testosterone, and menstrual</p>
+<p>irregularities have been reported; not recommended during first trimester of pregnancy due to risk of neural tube defects.</p>
+<p>SGAs, second-generation antipsychotics.</p>
+<p>CH67.indd</p>
+<p>781</p>
+<p>20-11-2020</p>
+<p>16:34:38</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>Special Populations</p>
+<li>The occurrence of Epstein anomaly in infants exposed to lithium during the first</li>
+<p>trimester is estimated to be between 1 and 10.78:1000, and the risk of neural tube</p>
+<p>defects is 13.4:1000.</p>
+<li>When lithium is used during pregnancy, use the lowest effective dose to prevent</li>
+<p>relapse, thus lessening the risk of “floppy” infant syndrome, hypothyroidism, and</p>
+<p>nontoxic goiter in the infant. Monitor closely and adjust dose as appropriate.</p>
+<li>Breastfeeding is usually discouraged for women taking lithium.</li>
+<li>When valproate, carbamazepine, and lamotrigine are taken during the first trimester,</li>
+<p>the risk of neural tube defects is ~4%, ~3%, and ~2%, respectively. Administration of</p>
+<p>folic acid can reduce the risk of neural tube defects.</p>
+<li>Women taking valproate may breastfeed, but mother and infant should have identical</li>
+<p>laboratory monitoring.</p>
+<li>First-generation antipsychotics seem to have little teratogenic risk when used during</li>
+<p>pregnancy. Data on the SGAs are more limited. Risk to benefit ratio must be consid-</p>
+<p>ered before using antipsychotics during pregnancy.</p>
+<li>Lithium, valproic acid, and carbamazepine are used in pediatric bipolar disorder, but</li>
+<p>data are limited. Aripiprazole and risperidone are FDA-approved for bipolar mania</p>
+<p>in adolescents 13–17 years. Quetiapine is approved as monotherapy or adjunctive</p>
+<p>therapy to lithium or divalproex in manic patients aged 10–17 years. Olanzapine is</p>
+<p>approved for manic or mixed episodes in patients aged 13–17 years.</p>
+<li>Lithium is FDA-approved as a mood stabilizer for children older than 12 years.</li>
+<li>A guideline for treatment of children and adolescents with bipolar disorder is Practice</li>
+<p>Parameters for the Assessment and Treatment of Children and Adolescents with Bipolar</p>
+<p>Disorder.</p>
+<li>The elimination half-life of lithium and valproate increases with age. Older patients</li>
+<p>can have many medical comorbidities and increased sensitivity to side effects of</p>
+<p>mood stabilizers and antipsychotics.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Mood episodes: Document symptoms on a daily mood chart (document life stress-</li>
+<p>ors, type of episode, length of episode, and treatment outcome); monthly and yearly</p>
+<p>life charts are valuable for documenting patterns of mood cycles.</p>
+<li>See Table 67-5 for guidelines for laboratory monitoring of patients on mood</li>
+<p>stabilizers.</p>
+<li>Assess medication adherence; missing medication doses is a primary reason for non-</li>
+<p>response and recurrence of episodes.</p>
+<li>Ask patients about adverse effects, especially sedation and weight gain; manage side</li>
+<p>effects rapidly and vigorously to avoid nonadherence.</p>
+<li>Be aware of suicidal ideation or attempts. Suicide completion rates with bipolar I</li>
+<p>disorder are 10%–15%; suicide attempts are primarily associated with depressive</p>
+<p>episodes, mixed episodes with severe depression, or presence of psychosis.</p>
+<li>Assess patients with partial treatment response or nonresponse for accurate diagno-</li>
+<p>sis, concomitant medical or psychiatric conditions, medication adherence, and use of</p>
+<p>medications or substances that exacerbate mood symptoms.</p>
+<li>Involve patients and family members in treatment to monitor target symptom</li>
+<p>response and side effects and to enhance adherence and reduce stressors. Standard-</p>
+<p>ized rating scales may be useful in monitoring for response.</p>
+<p>See Chapter 86, Bipolar Disorder, authored by Shannon J. Drayton and Christopher</p>
+<p>S. Fields, for a more detailed discussion of this topic.</p>
+<p>782</p>
+<p>CH67.indd 782 20-11-2020 16:34:39</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

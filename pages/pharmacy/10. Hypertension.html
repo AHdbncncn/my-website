@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Hypertension</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>10. Hypertension</h1>
+        </header>
+        <main>
+            <p>112</p>
+<h2>RETPAHC</h2>
+<p>10</p>
+<p>Hypertension</p>
+<li>Hypertension is defined as persistently elevated arterial blood pressure (BP). See</li>
+<h2>Table 10-1 for the classification of BP in adults.</h2>
+<li>Isolated systolic hypertension is diastolic blood pressure (DBP) <80 mm Hg and</li>
+<p>systolic blood pressure (SBP) ≥130 mm Hg.</p>
+<li>Hypertensive crisis (BP >180/120 mm Hg) is categorized as hypertensive emer-</li>
+<p>gency (extreme BP elevation with acute or progressing end-organ damage) or</p>
+<p>hypertensive urgency (extreme BP elevation without acute or progressing end-</p>
+<p>organ injury).</p>
+<li>This chapter incorporates elements of the 2017 American College of Cardiology/</li>
+<p>American Heart Association (ACC/AHA) Guideline for the Prevention, Detection,</p>
+<p>Evaluation, and Management of High Blood Pressure in Adults, the most recent</p>
+<p>evidence-based U.S. guideline for hypertension management.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Hypertension may result from an unknown etiology (primary or essential hyper-</li>
+<p>tension) or from a specific cause (secondary hypertension). Secondary hyper-</p>
+<p>tension (&lt;10% of cases) is usually caused by chronic kidney disease (CKD) or</p>
+<p>renovascular disease. Other conditions are Cushing syndrome, coarctation of</p>
+<p>the aorta, obstructive sleep apnea, hyperparathyroidism, pheochromocytoma,</p>
+<p>primary aldosteronism, and hyperthyroidism. Examples of drugs that may</p>
+<p>increase BP include corticosteroids, estrogens, nonsteroidal anti-inflammatory</p>
+<p>drugs (NSAIDs), amphetamines, cyclosporine, tacrolimus, erythropoietin, and</p>
+<p>venlafaxine.</p>
+<li>Factors contributing to development of primary hypertension include:</li>
+<p>✓ Humoral abnormalities involving the renin–angiotensin–aldosterone system</p>
+<p>(RAAS), natriuretic hormone, and hyperinsulinemia;</p>
+<p>✓ Disturbances in the CNS, autonomic nerve fibers, adrenergic receptors, or</p>
+<p>baroreceptors;</p>
+<p>✓ Abnormalities in renal or tissue autoregulatory processes for sodium excretion,</p>
+<p>plasma volume, and arteriolar constriction;</p>
+<p>✓ Deficiency in synthesis of vasodilating substances in vascular endothelium</p>
+<p>( prostacyclin, bradykinin, nitric oxide) or excess vasoconstricting substances</p>
+<p>(angiotensin II, endothelin I);</p>
+<p>✓ High sodium intake or lack of dietary calcium.</p>
+<li>Major causes of death include cerebrovascular events, cardiovascular (CV) events,</li>
+<p>and renal failure. Probability of premature death correlates with the severity of BP</p>
+<p>elevation.</p>
+<h2>TABLE 10-1 Classification of Blood Pressure in Adults</h2>
+<p>Classification Systolic (mm Hg) Diastolic (mm Hg)</p>
+<p>Normal &lt;120 and &lt;80</p>
+<p>Prehypertension 120–139 or 80–89</p>
+<p>Stage 1 hypertension 140–159 or 90–99</p>
+<p>Stage 2 hypertension ≥160 or ≥100</p>
+<p>ch10.indd 112 18-11-2020 14:58:23</p>
+<div class="table-container"><table><tr><th>Hypertension</th><th>1</th></tr></table></div><div class="table-container"><table><tr><th>TABLE 10-1 Classification of Blood Pressure in Adults</th><th></th><th></th><th></th></tr><tr><td>Classification</td><td>Systolic (mm Hg)</td><td></td><td>Diastolic (mm Hg)</td></tr><tr><td>Normal</td><td>&lt;120</td><td>and</td><td>&lt;80</td></tr><tr><td>Prehypertension</td><td>120–139</td><td>or</td><td>80–89</td></tr><tr><td>Stage 1 hypertension</td><td>140–159</td><td>or</td><td>90–99</td></tr><tr><td>Stage 2 hypertension</td><td>≥160</td><td>or</td><td>≥100</td></tr></table></div><h2>Hypertension | CHAPTER 10</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients with uncomplicated primary hypertension are usually asymptomatic</li>
+<p>initially.</p>
+<li>Patients with secondary hypertension may have symptoms of the underlying</li>
+<p>disorder:</p>
+<p>✓ Pheochromocytoma—headaches, sweating, tachycardia, palpitations, orthostatic</p>
+<p>hypotension;</p>
+<p>✓ Primary aldosteronism—hypokalemic symptoms of muscle cramps and</p>
+<p>weakness;</p>
+<p>✓ Cushing syndrome—moon face, buffalo hump, hirsutism, weight gain, polyuria,</p>
+<p>edema, menstrual irregularities, acne, muscle weakness.</p>
+<h2>DIAGNOSIS</h2>
+<li>Elevated BP may be the only sign of primary hypertension on physical examination.</li>
+<p>Diagnosis should be based on the average of two or more readings taken at each of</p>
+<p>two or more clinical encounters. Refer to the textbook chapter for the correct proce-</p>
+<p>dure for BP measurement.</p>
+<li>Signs of end-organ damage occur primarily in the eyes, brain, heart, kidneys, and</li>
+<p>peripheral vasculature.</p>
+<li>Funduscopic examination may reveal arteriolar narrowing, focal arteriolar constric-</li>
+<p>tion, arteriovenous nicking, retinal hemorrhages and exudates, and disk edema.</p>
+<p>Presence of papilledema usually indicates a hypertensive emergency requiring rapid</p>
+<p>treatment.</p>
+<li>Cardiopulmonary examination may reveal abnormal heart rate or rhythm, left ven-</li>
+<p>tricular (LV) hypertrophy, coronary artery disease, or heart failure (HF).</p>
+<li>Peripheral vascular examination may reveal aortic or abdominal bruits, distended</li>
+<p>veins, diminished or absent peripheral pulses, or lower extremity edema.</p>
+<li>Patients with renal artery stenosis may have an abdominal systolic-diastolic bruit.</li>
+<li>Baseline hypokalemia may suggest mineralocorticoid-induced hypertension. Protein,</li>
+<p>blood cells, and casts in the urine may indicate renovascular disease.</p>
+<li>Laboratory tests: Blood urea nitrogen (BUN), serum creatinine with estimated</li>
+<p>glomerular filtration rate (eGFR, using the Modification of Diet in Renal Disease</p>
+<p>[MDRD] equation), fasting lipid panel, fasting blood glucose, serum electrolytes</p>
+<p>(sodium, potassium, calcium), uric acid, hemoglobin and hematocrit, and spot</p>
+<p>urine albumin-to-creatinine ratio. A 12-lead electrocardiogram (ECG) should also</p>
+<p>be obtained.</p>
+<li>Laboratory tests to diagnose secondary hypertension: Baseline hypokalemia may</li>
+<p>suggest mineralocorticoid-induced hypertension. Protein, red blood cells, and casts</p>
+<p>in the urine may indicate renovascular disease. Obtain plasma norepinephrine and</p>
+<p>urinary metanephrine levels for pheochromocytoma; plasma and urinary aldoste-</p>
+<p>rone concentrations for primary aldosteronism; and plasma renin activity, captopril</p>
+<p>stimulation test, renal vein renin, and renal artery angiography for renovascular</p>
+<p>disease.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The overall goal is to reduce morbidity and mortality from CV</li>
+<p>events. The 2017 ACC/AHA guideline recommends a goal BP of &lt;130/80 mm Hg</p>
+<p>for most patients, including those with clinical arteriosclerotic cardiovascular disease</p>
+<p>(ASCVD), diabetes, or CKD. For older ambulatory, community-dwelling patients,</p>
+<p>the goal is SBP &lt;130 mm Hg. For institutionalized older patients and those with</p>
+<p>a high disease burden or limited life expectancy, consider a relaxed SBP goal of</p>
+<p>&lt;150 mm Hg (or &lt;140 mm Hg if tolerated).</p>
+<p>113</p>
+<p>ch10.indd 113 18-11-2020 14:58:23</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Implement lifestyle modifications in all patients with elevated BP or stage 1 or 2</li>
+<p>hypertension. These measures alone are appropriate initial treatment for patients with</p>
+<p>elevated BP or stage 1 hypertension who are at low risk of ASCVD (ie, primary pre-</p>
+<p>vention with a 10-year ASCVD risk &lt;10%). Start drug therapy for these patients when</p>
+<p>BP is ≥140/90 mm Hg. For patients with stage 1 or 2 hypertension who already have</p>
+<p>ASCVD (secondary prevention) or an elevated 10-year ASCVD risk ≥10%, the thresh-</p>
+<p>old for starting drug therapy is ≥130/80 mm Hg with a goal BP of &lt;130/80 mm Hg.</p>
+<li>Lifestyle modifications shown to lower BP include (1) weight loss if overweight</li>
+<p>or obese, (2) the Dietary Approaches to Stop Hypertension (DASH) eating plan,</p>
+<p>(3) reduced salt intake, ideally to 1.5 g/day sodium (3.8 g/day sodium chloride),</p>
+<p>(4) physical activity (90–150 min/week of aerobic or dynamic resistance training),</p>
+<p>and (5) moderation of alcohol intake (≤2 drinks/day in men and ≤1 drink/day in</p>
+<p>women). Although smoking cessation does not control BP, it reduces CV disease risk</p>
+<p>and should be encouraged.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>General Approach to Treatment</p>
+<li>Initial drug selection depends on the degree of BP elevation and presence of compel-</li>
+<p>ling indications for certain drugs.</p>
+<li>Use a single first-line drug as initial therapy in most patients with newly diagnosed</li>
+<p>stage 1 hypertension. Start combination drug therapy (preferably with two first-line</p>
+<p>drugs) as the initial regimen in patients with newly diagnosed stage 2 hypertension</p>
+<p>(Fig. 10-1).</p>
+<li>The four first-line options are angiotensin-converting enzyme (ACE) inhibitors,</li>
+<p>angiotensin II receptor blockers (ARBs), calcium channel blockers (CCBs), and</p>
+<p>thiazide diuretics.</p>
+<li>β-Blockers should be reserved to treat a specific compelling indication or in com-</li>
+<p>bination with a first-line antihypertensive agent for patients without a compelling</p>
+<p>indication.</p>
+<li>Other antihypertensive drug classes (α-blockers, direct renin inhibitors, central</li>
+<p>1</p>
+<p>α-agonists, and direct arterial vasodilators) may be used for select patients after</p>
+<p>2</p>
+<p>implementing first-line agents. They are generally reserved for resistant hypertension</p>
+<p>or as add-on therapy with multiple other first-line agents. However, they either lack</p>
+<p>convincing evidence showing reduced morbidity and mortality in hypertension or</p>
+<p>have a high incidence of adverse effects that hinders tolerability.</p>
+<h2>COMPELLING INDICATIONS</h2>
+<li>Compelling indications are specific comorbid conditions for which clinical trial data</li>
+<p>support using specific antihypertensive drug classes to treat both hypertension and</p>
+<p>the compelling indication (Fig. 10-2). Selection of drug therapy should follow an</p>
+<p>evidence-based order.</p>
+<p>Heart Failure with Reduced Ejection Fraction (HFrEF)</p>
+<li>Guideline-directed medical therapy consists of three to four drugs: ACE inhibitor or</li>
+<p>ARB plus diuretic, followed by addition of an evidence-based β-blocker and possibly</p>
+<p>a mineralocorticoid receptor antagonist.</p>
+<li>Start an ACE inhibitor or ARB in low doses to avoid orthostatic hypotension because</li>
+<p>of the high renin state in HF.</p>
+<li>Diuretics reduce edema, and loop diuretics are often needed, especially in patients</li>
+<p>with advanced HF and/or CKD.</p>
+<li>β-Blockers modify disease in HFrEF and are part of standard treatment; adding a</li>
+<p>β-blocker to a diuretic with an ACE inhibitor or ARB reduces CV morbidity and</p>
+<p>mortality. Because of the risk of exacerbating HF, β-blockers must be started in</p>
+<p>very low doses and titrated slowly to high doses based on tolerability. Bisoprolol,</p>
+<p>114</p>
+<p>ch10.indd 114 18-11-2020 14:58:24</p>
+<p>115</p>
+<p>Hypertension</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>10</p>
+<p>Normal BP Elevated BP Stage 1 hypertension Stage 2 hypertension</p>
+<p>&lt;120/80 mm Hg 120–129/&lt;80 mm Hg 130–139/80–89 mm Hg ≥140/90 mm Hg</p>
+<p>Promote optimal Lifestyle Lifestyle modifications</p>
+<p>Clinical ASCVD,</p>
+<p>lifestyle habits modifications and medications</p>
+<p>diabetes, CKD, or 10-yr ASCVD</p>
+<p>risk score 10%</p>
+<p>Reassess Reassess No Yes If no compelling indication:</p>
+<p>in 1 year in 3–6 months Two-drug combination [A-1] preferred and</p>
+<p>Lifestyle strongly recommended if &gt;20/10 mm Hg</p>
+<p>Lifestyle</p>
+<p>modifications and away from goal using an</p>
+<p>modifications</p>
+<p>medication ACEi or ARB with CCB [A-2];</p>
+<p>or</p>
+<p>ACEi or ARB with thiazide [B-2]</p>
+<p>If no compelling indication:</p>
+<p>Reassess</p>
+<p>Monotherapy with an</p>
+<p>in 3–6 months ACEi [A-1], ARB [A-2], Reassess</p>
+<p>CCB [A-1], or thiazide [A-1] in 1 month</p>
+<p>Reassess</p>
+<p>in 1 month</p>
+<p>FIGURE 10-1. Algorithm for treatment of elevated BP and hypertension based on BP category at initial diagnosis. Drug therapy recommendations</p>
+<p>are graded with strength of recommendation and quality of evidence in brackets. Strength of recommendations: A, B, and C are good, moderate, and</p>
+<p>poor evidence to support recommendation, respectively. Quality of evidence: (1) evidence from more than one properly randomized controlled trial; (2)</p>
+<p>evidence from at least one well-designed clinical trial with randomization, from cohort or case-controlled studies, or dramatic results from uncontrolled</p>
+<p>experiments or subgroup analyses; (3) evidence from opinions of respected authorities, based on clinical experience, descriptive studies, or reports of</p>
+<p>expert communities. *Most patients with diabetes or CKD have a 10-year ASCVD risk score ≥10%.</p>
+<p>ch10.indd</p>
+<p>115</p>
+<p>18-11-2020</p>
+<p>14:58:24</p>
+<h2>116 SECTION</h2>
+<p>2</p>
+<p>|</p>
+<p>Cardiovascular</p>
+<p>Disorders</p>
+<p>Most common</p>
+<p>compelling indication(s)</p>
+<h2>Heart failure Heart failure Stable</h2>
+<p>Chronic Secondary</p>
+<p>with reduced with preserved ischemic Diabetes</p>
+<p>kidney stroke</p>
+<p>ejection fraction ejection fraction heart mellitus*</p>
+<p>disease prevention</p>
+<p>(HFrEF) (HFpEF) disease</p>
+<p>ACEi or ARB ACEi or ARB β-blocker ACEi [A-1],</p>
+<p>Thiazide [A-2]</p>
+<p>Standard [A-1]; then add [B-2]; then add [A-1]; ARB [A-1], ACEi [A-1]</p>
+<p>or</p>
+<p>pharmacotherapy β-blocker# [A-1]; β-blocker [B-2]; then add CCB [A-1], or</p>
+<p>thiazide with</p>
+<p>(first-line) diuretic if edema diuretic if edema ACEi [A-1] or or thiazide ARB [A-1]</p>
+<p>ACEi [A-2]</p>
+<p>present [A-3] present [A-3] ARB [B-2] [A-1]</p>
+<p>Mineralocorticoid CCB [B-1]</p>
+<p>Add-on receptor (if angina) # in HFrEF only, use bisoprolol, carvedilol, or metoprolol</p>
+<p>after standard succinate, titrated to the evidence-based dose</p>
+<p>antagonist</p>
+<p>pharmacotherapy [A-1] Thiazide [B-1] or * if albuminuria present in diabetes, treat like chronic</p>
+<p>mineralocorticoid kidney disease and use an ACEi or ARB titrated to the</p>
+<p>receptor maximum tolerated dose</p>
+<p>antagonist [B-1]</p>
+<p>FIGURE 10-2. Compelling indications for individual drug classes. Recommendations are evidence-based from outcome studies or clinical guidelines. The order</p>
+<p>of drug therapies is a general guidance that should be balanced with clinical judgment and patient response. Add-on recommendations are used when additional</p>
+<p>agents are needed to lower BP to goal values. BP control should be managed concurrently with the compelling indication. Drug therapy recommendations are</p>
+<p>graded with strength of recommendation and quality of evidence in brackets. Strength of recommendations: A, B, and C are good, moderate, and poor evidence</p>
+<p>to support recommendation, respectively. Quality of evidence: (1) evidence from more than one randomized controlled trial; (2) evidence from at least one well-</p>
+<p>designed clinical trial with randomization, from cohort or case-controlled analytic studies or multiple time series, or dramatic results from uncontrolled experiments</p>
+<p>or subgroup analyses; (3) evidence from opinions of respected authorities, based on clinical experience, descriptive studies, or reports of expert communities.</p>
+<p>ch10.indd</p>
+<p>116</p>
+<p>18-11-2020</p>
+<p>14:58:25</p>
+<div class="table-container"><table><tr><th>ACEi or ARB
+[B-2]; then add
+β-blocker [B-2];
+diuretic if edema
+present [A-3]</th><th>β-blocker
+[A-1];
+then add
+ACEi [A-1] or
+ARB [B-2]</th><th>ACEi [A-1],
+ARB [A-1],
+CCB [A-1],
+or thiazide
+[A-1]</th></tr></table></div><div class="table-container"><table><tr><th>ACEi [A-1]
+or
+ARB [A-1]</th><th>Thiazide [A-2]
+or
+thiazide with
+ACEi [A-2]</th></tr></table></div><h2>Hypertension | CHAPTER 10</h2>
+<p>carvedilol, and metoprolol succinate are the only β-blockers proven to be beneficial</p>
+<p>in HFrEF.</p>
+<li>After implementation of a standard three-drug regimen, other agents may be added</li>
+<p>to further reduce CV morbidity and mortality, and reduce BP if needed. A mineralo-</p>
+<p>corticoid receptor antagonist (spironolactone or eplerenone) may be considered at</p>
+<p>this point. For African Americans, addition of a fixed-dose combination of isosor-</p>
+<p>bide dinitrate and hydralazine to the standard three-drug regimen is an option to</p>
+<p>improve CV outcomes.</p>
+<p>Heart Failure with Preserved Ejection Fraction (HFpEF)</p>
+<li>Unlike interventions in HFrEF that decrease morbidity and mortality, trials using the</li>
+<p>same medications in HFpEF have not shown similar benefits. Therefore, treatment</p>
+<p>should be targeted at signs and symptoms (eg, dyspnea, fatigue, edema), appropriate</p>
+<p>management of underlying coronary artery disease, and attainment of goal BP to</p>
+<p>prevent HF progression.</p>
+<li>Patients should use a β-blocker or an ACE inhibitor (or ARB) for treatment of</li>
+<p>hypertension, and they should receive a diuretic if signs and symptoms of edema</p>
+<p>are present.</p>
+<h2>Stable Ischemic Heart Disease (SIHD)</h2>
+<li>β-Blockers (without ISA) are first-line therapy in SIHD; they reduce BP and improve</li>
+<p>angina symptoms by decreasing myocardial oxygen consumption and demand.</p>
+<p>β-Blockers should be used for hypertension treatment in patients with SIHD. An</p>
+<p>ACE inhibitor or ARB has been shown to reduce CV events as an add-on to a</p>
+<p>β-blocker.</p>
+<li>A long-acting nondihydropyridine CCB is an alternative to a β-blocker in SIHD, but</li>
+<p>β-blockers are the therapy of choice.</p>
+<li>A dihydropyridine CCB may be considered as add-on therapy in SIHD patients who have</li>
+<p>ongoing ischemic symptoms, but cardiac stimulation makes these agents less desirable.</p>
+<li>For acute coronary syndromes, first-line therapy includes a β-blocker and ACE inhibi-</li>
+<p>tor (or ARB); the combination lowers BP, controls acute ischemia, and reduces CV risk.</p>
+<p>Diabetes Mellitus</p>
+<li>All four first-line antihypertensive classes (ACE inhibitors, ARBs, CCBs, thiazides)</li>
+<p>reduce CV events in patients with diabetes, with no evidence of difference in all-</p>
+<p>cause mortality, CV mortality, HF, or stroke. The risk of kidney disease progression</p>
+<p>is low in the absence of albuminuria (urine albumin-to-creatinine ratio ≥30 mg/g</p>
+<p>[3.4 mg/mmol creatinine]). Therefore, any first-line agent can be used to control</p>
+<p>hypertension in patients with diabetes in the absence of albuminuria. Regardless of</p>
+<p>the initial agent selected, most patients require combination therapy, which typically</p>
+<p>includes an ACE inhibitor (or ARB) with a CCB or thiazide.</p>
+<li>After first-line agents, a β-blocker is a useful add-on therapy for BP control in</li>
+<p>patients with diabetes. However, they may mask symptoms of hypoglycemia (tremor,</p>
+<p>tachycardia, and palpitations but not sweating) in tightly controlled patients, delay</p>
+<p>recovery from hypoglycemia, and elevate BP due to vasoconstriction caused by unop-</p>
+<p>posed β-receptor stimulation during the hypoglycemic recovery phase. Despite these</p>
+<p>potential problems, β-blockers can be used safely in patients with diabetes.</p>
+<p>Chronic Kidney Disease</p>
+<li>In addition to lowering BP, ACE inhibitors and ARBs reduce intraglomerular pres-</li>
+<p>sure, which may further slow CKD progression.</p>
+<li>Start with low doses and evaluate the serum creatinine soon after starting therapy</li>
+<p>to minimize the risk of rapid and profound BP drops that could precipitate acute</p>
+<p>kidney injury (AKI).</p>
+<p>117</p>
+<p>ch10.indd 117 18-11-2020 14:58:25</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Secondary Stroke Prevention</p>
+<li>A thiazide diuretic, either alone or combined with an ACE inhibitor, is recommended</li>
+<p>for patients with history of stroke or transient ischemic attack. Implement antihyperten-</p>
+<p>sive drug therapy only after patients have stabilized after an acute cerebrovascular event.</p>
+<li>The threshold for starting antihypertensive drug therapy in patients with a history of</li>
+<p>stroke is when BP is &gt;140/90 mm Hg. Once therapy is initiated, patients should be</p>
+<p>treated to a goal of &lt;130/80 mm Hg.</p>
+<h2>FIRST-LINE ANTIHYPERTENSIVE AGENTS (TABLE 10-2)</h2>
+<p>Angiotensin-Converting Enzyme Inhibitors</p>
+<li>ACE inhibitors block conversion of angiotensin I to angiotensin II, a potent vaso-</li>
+<p>constrictor and stimulator of aldosterone secretion. ACE inhibitors also block</p>
+<p>degradation of bradykinin and stimulate synthesis of other vasodilating substances</p>
+<p>(prostaglandin E and prostacyclin).</p>
+<li>Starting doses sh 2 ould be low with slow dose titration. Acute hypotension may occur</li>
+<p>at the onset of therapy, especially in patients who are sodium or volume depleted, in</p>
+<p>HF exacerbation, very elderly, or on concurrent vasodilators or diuretics. Starting</p>
+<p>doses in such patients should be half the normal dose followed by slow dose titration.</p>
+<li>ACE inhibitors decrease aldosterone and can increase serum potassium concentra-</li>
+<p>tions. Hyperkalemia occurs primarily in patients with CKD or those also taking</p>
+<p>potassium supplements, potassium-sparing diuretics, mineralocorticoid receptor</p>
+<p>antagonists, ARBs, or direct renin inhibitors.</p>
+<li>AKI is an uncommon but serious side effect; preexisting kidney disease increases</li>
+<pre><code>risk. Bilateral renal artery stenosis or unilateral stenosis of a solitary functioning</code></pre>
+<p>kidney renders patients dependent on the vasoconstrictive effect of angiotensin II on</p>
+<p>efferent arterioles, making them particularly susceptible to AKI.</p>
+<li>GFR decreases somewhat when ACE inhibitors are started because of inhibition of angio-</li>
+<p>tensin II vasoconstriction on efferent arterioles. Serum creatinine concentrations often</p>
+<p>increase, but modest elevations (eg, absolute increases &lt;1 mg/dL [88 μmol/L]) do not</p>
+<p>warrant treatment changes. Discontinue therapy or reduce dose if larger increases occur.</p>
+<li>Angioedema occurs in <1% of patients. Drug withdrawal is necessary, and some</li>
+<p>patients may require drug treatment and/or emergent intubation to support respi-</p>
+<p>ration. An ARB can generally be used in patients with a history of ACE inhibitor-</p>
+<p>induced angioedema, with careful monitoring.</p>
+<li>A persistent dry cough occurs in up to 20% of patients and is thought to be due to</li>
+<p>inhibition of bradykinin breakdown.</p>
+<li>ACE inhibitors (as well as ARBs and direct renin inhibitors) are contraindicated in</li>
+<p>pregnancy.</p>
+<p>Angiotensin II Receptor Blockers</p>
+<li>Angiotensin II is generated by the renin–angiotensin pathway (which involves ACE)</li>
+<p>and an alternative pathway that uses other enzymes such as chymases. ACE inhibitors</p>
+<p>block only the renin–angiotensin pathway, whereas ARBs inhibit angiotensin II gen-</p>
+<p>erated by either pathway. The ARBs directly block the angiotensin II type 1 receptor</p>
+<p>that mediates the effects of angiotensin II.</p>
+<li>Unlike ACE inhibitors, ARBs do not block bradykinin breakdown. Although this</li>
+<p>accounts for the lack of cough as a side effect, some of the antihypertensive effect of</p>
+<p>ACE inhibitors may be due to bradykinin.</p>
+<li>The combination of an ACE inhibitor and ARB has no additional CV event lowering</li>
+<pre><code>but is associated with a higher risk of side effects (renal dysfunction, hypotension)</code></pre>
+<p>and should be avoided.</p>
+<li>All ARBs have similar antihypertensive efficacy and fairly flat dose-response curves.</li>
+<p>Addition of a CCB or thiazide diuretic significantly increases antihypertensive</p>
+<p>efficacy.</p>
+<p>118</p>
+<p>ch10.indd 118 18-11-2020 14:58:25</p>
+<h2>Hypertension | CHAPTER 10</h2>
+<p>TABLE 10-2 Most Common First-Line and Other Antihypertensive Agents</p>
+<p>Usual Dose</p>
+<p>Medication (Brand Range (mg/ Daily</p>
+<p>Class Subclass Name) day) Frequency</p>
+<p>ACEi Benazepril (Lotensin) 10–40 1 or 2</p>
+<p>Captopril (Capoten) 12.5–150 2 or 3</p>
+<p>Enalapril (Vasotec) 5–40 1 or 2</p>
+<p>Fosinopril (Monopril) 10–40 1</p>
+<p>Lisinopril (Prinivil, 10–40 1</p>
+<p>Zestril)</p>
+<p>Moexipril (Univasc) 7.5–30 1 or 2</p>
+<p>Perindopril (Aceon) 4–16 1</p>
+<p>Quinapril (Accupril) 10–80 1 or 2</p>
+<p>Ramipril (Altace) 2.5–10 1 or 2</p>
+<p>Trandolapril (Mavik) 1–4 1</p>
+<p>ARB Azilsartan (Edarbi) 40–80 1</p>
+<p>Candesartan (Atacand) 8–32 1 or 2</p>
+<p>Eprosartan (Teveten) 600–800 1 or 2</p>
+<p>Irbesartan (Avapro) 150–300 1</p>
+<p>Losartan (Cozaar) 50–100 1 or 2</p>
+<p>Telmisartan (Micardis) 20–40 1</p>
+<p>Olmesartan (Benicar) 20–80 1</p>
+<p>Valsartan (Diovan) 80–320 1</p>
+<p>Calcium Dihydropyridine Amlodipine (Norvasc) 2.5–10 1</p>
+<p>channel Felodipine (Plendil) 5–20 1</p>
+<p>blocker</p>
+<p>Nifedipine long- 30–90 1</p>
+<p>acting (Afeditab CR</p>
+<p>Adalat CC, Nifediac</p>
+<p>CC, Nifedical XL,</p>
+<p>Procardia XL)</p>
+<p>Nisoldipine (Sular) 10–40 1</p>
+<p>Nondihydropyridine Diltiazem sustained 120–480 1</p>
+<p>release (Cardizem</p>
+<p>CD, Cartia XT, Dilacor</p>
+<p>XR, Diltia XT, Tiazac,</p>
+<p>Taztia XT)</p>
+<p>Diltiazem extended 180–480 1 (morning or</p>
+<p>release (Cardizem evening)</p>
+<p>LA, Matzim LA)</p>
+<p>Verapamil sustained 180–420 1 or 2</p>
+<p>release (Calan SR,</p>
+<p>Isoptin SR, Verelan)</p>
+<p>Verapamil 100–400 1 (in the</p>
+<p>chronotherapeutic evening)</p>
+<p>oral drug absorption</p>
+<p>system (Verelan PM)</p>
+<p>(Continued )</p>
+<p>119</p>
+<p>ch10.indd 119 18-11-2020 14:58:25</p>
+<div class="table-container"><table><tr><th>TABLE 10-2 Most Common First-Line and Other Antihypertensive Agents</th><th></th><th></th><th></th><th></th></tr><tr><td>Class</td><td>Subclass</td><td>Medication (Brand
+Name)</td><td>Usual Dose
+Range (mg/
+day)</td><td>Daily
+Frequency</td></tr><tr><td>ACEi</td><td></td><td>Benazepril (Lotensin)</td><td>10–40</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Captopril (Capoten)</td><td>12.5–150</td><td>2 or 3</td></tr><tr><td></td><td></td><td>Enalapril (Vasotec)</td><td>5–40</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Fosinopril (Monopril)</td><td>10–40</td><td>1</td></tr><tr><td></td><td></td><td>Lisinopril (Prinivil,
+Zestril)</td><td>10–40</td><td>1</td></tr><tr><td></td><td></td><td>Moexipril (Univasc)</td><td>7.5–30</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Perindopril (Aceon)</td><td>4–16</td><td>1</td></tr><tr><td></td><td></td><td>Quinapril (Accupril)</td><td>10–80</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Ramipril (Altace)</td><td>2.5–10</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Trandolapril (Mavik)</td><td>1–4</td><td>1</td></tr><tr><td>ARB</td><td></td><td>Azilsartan (Edarbi)</td><td>40–80</td><td>1</td></tr><tr><td></td><td></td><td>Candesartan (Atacand)</td><td>8–32</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Eprosartan (Teveten)</td><td>600–800</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Irbesartan (Avapro)</td><td>150–300</td><td>1</td></tr><tr><td></td><td></td><td>Losartan (Cozaar)</td><td>50–100</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Telmisartan (Micardis)</td><td>20–40</td><td>1</td></tr><tr><td></td><td></td><td>Olmesartan (Benicar)</td><td>20–80</td><td>1</td></tr><tr><td></td><td></td><td>Valsartan (Diovan)</td><td>80–320</td><td>1</td></tr><tr><td>Calcium
+channel
+blocker</td><td>Dihydropyridine</td><td>Amlodipine (Norvasc)</td><td>2.5–10</td><td>1</td></tr><tr><td></td><td></td><td>Felodipine (Plendil)</td><td>5–20</td><td>1</td></tr><tr><td></td><td></td><td>Nifedipine long-
+acting (Afeditab CR
+Adalat CC, Nifediac
+CC, Nifedical XL,
+Procardia XL)</td><td>30–90</td><td>1</td></tr><tr><td></td><td></td><td>Nisoldipine (Sular)</td><td>10–40</td><td>1</td></tr><tr><td></td><td>Nondihydropyridine</td><td>Diltiazem sustained
+release (Cardizem
+CD, Cartia XT, Dilacor
+XR, Diltia XT, Tiazac,
+Taztia XT)</td><td>120–480</td><td>1</td></tr><tr><td></td><td></td><td>Diltiazem extended
+release (Cardizem
+LA, Matzim LA)</td><td>180–480</td><td>1 (morning or
+evening)</td></tr><tr><td></td><td></td><td>Verapamil sustained
+release (Calan SR,
+Isoptin SR, Verelan)</td><td>180–420</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Verapamil
+chronotherapeutic
+oral drug absorption
+system (Verelan PM)</td><td>100–400</td><td>1 (in the
+evening)
+(Continued )</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>TABLE 10-2 Most Common First-Line and Other Antihypertensive Agents (Continued )</p>
+<p>Usual Dose</p>
+<p>Medication (Brand Range (mg/ Daily</p>
+<p>Class Subclass Name) day) Frequency</p>
+<p>Diuretic Thiazide Chlorthalidone 12.5–25 1</p>
+<p>(Thalitone)</p>
+<p>Hydrochlorothiazide 12.5–50 1</p>
+<p>(Microzide)</p>
+<p>Indapamide (Lozol) 1.25–2.5 1</p>
+<p>Metolazone 2.5–10 1</p>
+<p>(Zaroxolyn)</p>
+<p>Loop Bumetanide (Bumex) 0.5–4 2</p>
+<p>Furosemide (Lasix) 20–80 2</p>
+<p>Torsemide (Demadex) 5–10 1</p>
+<p>Potassium sparing Amiloride (Midamor) 5–10 1 or 2</p>
+<p>Amiloride/ 5–50 1</p>
+<p>Hydrochlorothiazide</p>
+<p>(Moduretic)</p>
+<p>Triamterene 50–100 1 or 2</p>
+<p>(Dyrenium)</p>
+<p>Triamterene/ 37.5–75/ 1</p>
+<p>Hydrochlorothiazide 25–50</p>
+<p>(Dyazide, Maxide)</p>
+<p>Mineralocorticoid Eplerenone (Inspra) 50–100 1 or 2</p>
+<p>receptor Spironolactone 25–50 1 or 2</p>
+<p>antagonist (Aldactone,</p>
+<p>CaroSpir)</p>
+<p>β-Blocker Cardioselective Atenolol (Tenormin) 25–100 1 or 2</p>
+<p>Betaxolol (Kerlone) 5–20 1</p>
+<p>Bisoprolol (Zebeta) 2.5–10 1</p>
+<p>Metoprolol tartrate 100–200 2</p>
+<p>(Lopressor)</p>
+<p>Metoprolol succinate 50–200 1</p>
+<p>extended release</p>
+<p>(Toprol XL)</p>
+<p>Nebivolol (Bystolic) 5–20 1</p>
+<p>Nonselective Nadolol (Corgard) 40–120 1</p>
+<p>Propranolol (Inderal) 160–480 2</p>
+<p>Propranolol long acting 80–320 1</p>
+<p>(Inderal LA, Inderal</p>
+<p>XL, InnoPran XL)</p>
+<p>Timolol (Blocadren) 10–40 1</p>
+<p>Mixed α- and Carvedilol (Coreg) 12.5–50 2</p>
+<p>β-blockers Carvedilol phosphate 20–80 1</p>
+<p>(Coreg CR)</p>
+<p>Labetalol (Normodyne, 200–800 2</p>
+<p>Trandate)</p>
+<p>120</p>
+<p>ch10.indd 120 18-11-2020 14:58:25</p>
+<div class="table-container"><table><tr><th>TABLE 10-2 Most Common First-Line and Other Antihypertensive Agents (Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Class</td><td>Subclass</td><td>Medication (Brand
+Name)</td><td>Usual Dose
+Range (mg/
+day)</td><td>Daily
+Frequency</td></tr><tr><td>Diuretic</td><td>Thiazide</td><td>Chlorthalidone
+(Thalitone)</td><td>12.5–25</td><td>1</td></tr><tr><td></td><td></td><td>Hydrochlorothiazide
+(Microzide)</td><td>12.5–50</td><td>1</td></tr><tr><td></td><td></td><td>Indapamide (Lozol)</td><td>1.25–2.5</td><td>1</td></tr><tr><td></td><td></td><td>Metolazone
+(Zaroxolyn)</td><td>2.5–10</td><td>1</td></tr><tr><td></td><td>Loop</td><td>Bumetanide (Bumex)</td><td>0.5–4</td><td>2</td></tr><tr><td></td><td></td><td>Furosemide (Lasix)</td><td>20–80</td><td>2</td></tr><tr><td></td><td></td><td>Torsemide (Demadex)</td><td>5–10</td><td>1</td></tr><tr><td></td><td>Potassium sparing</td><td>Amiloride (Midamor)</td><td>5–10</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Amiloride/
+Hydrochlorothiazide
+(Moduretic)</td><td>5–50</td><td>1</td></tr><tr><td></td><td></td><td>Triamterene
+(Dyrenium)</td><td>50–100</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Triamterene/
+Hydrochlorothiazide
+(Dyazide, Maxide)</td><td>37.5–75/
+25–50</td><td>1</td></tr><tr><td></td><td>Mineralocorticoid
+receptor
+antagonist</td><td>Eplerenone (Inspra)</td><td>50–100</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Spironolactone
+(Aldactone,
+CaroSpir)</td><td>25–50</td><td>1 or 2</td></tr><tr><td>β-Blocker</td><td>Cardioselective</td><td>Atenolol (Tenormin)</td><td>25–100</td><td>1 or 2</td></tr><tr><td></td><td></td><td>Betaxolol (Kerlone)</td><td>5–20</td><td>1</td></tr><tr><td></td><td></td><td>Bisoprolol (Zebeta)</td><td>2.5–10</td><td>1</td></tr><tr><td></td><td></td><td>Metoprolol tartrate
+(Lopressor)</td><td>100–200</td><td>2</td></tr><tr><td></td><td></td><td>Metoprolol succinate
+extended release
+(Toprol XL)</td><td>50–200</td><td>1</td></tr><tr><td></td><td></td><td>Nebivolol (Bystolic)</td><td>5–20</td><td>1</td></tr><tr><td></td><td>Nonselective</td><td>Nadolol (Corgard)</td><td>40–120</td><td>1</td></tr><tr><td></td><td></td><td>Propranolol (Inderal)</td><td>160–480</td><td>2</td></tr><tr><td></td><td></td><td>Propranolol long acting
+(Inderal LA, Inderal
+XL, InnoPran XL)</td><td>80–320</td><td>1</td></tr><tr><td></td><td></td><td>Timolol (Blocadren)</td><td>10–40</td><td>1</td></tr><tr><td></td><td>Mixed α- and
+β-blockers</td><td>Carvedilol (Coreg)</td><td>12.5–50</td><td>2</td></tr><tr><td></td><td></td><td>Carvedilol phosphate
+(Coreg CR)</td><td>20–80</td><td>1</td></tr><tr><td></td><td></td><td>Labetalol (Normodyne,
+Trandate)</td><td>200–800</td><td>2</td></tr></table></div><h2>Hypertension | CHAPTER 10</h2>
+<li>ARBs have a low incidence of side effects. Like ACE inhibitors, they may cause renal</li>
+<p>insufficiency, hyperkalemia, and orthostatic hypotension. ARBs are contraindicated</p>
+<p>in pregnancy.</p>
+<p>Calcium Channel Blockers</p>
+<li>Dihydropyridine and nondihydropyridine CCBs are first-line antihypertensive</li>
+<p>therapies and are also used in addition to or instead of other first-line agents for the</p>
+<p>compelling indication of ischemic heart disease.</p>
+<li>CCBs cause relaxation of cardiac and smooth muscle by blocking voltage-sensitive</li>
+<p>calcium channels, thereby reducing entry of extracellular calcium into cells. This</p>
+<p>leads to vasodilation and a corresponding reduction in BP. Dihydropyridine CCBs</p>
+<p>may cause reflex sympathetic activation, and all agents (except amlodipine and felo-</p>
+<p>dipine) may have negative inotropic effects.</p>
+<li>Verapamil decreases heart rate, slows atrioventricular (AV) nodal conduction, and</li>
+<p>produces a negative inotropic effect that may precipitate HF in patients with border-</p>
+<p>line cardiac reserve. Diltiazem decreases AV conduction and heart rate to a lesser</p>
+<p>extent than verapamil.</p>
+<li>Diltiazem and verapamil can cause cardiac conduction abnormalities such as bra-</li>
+<p>dycardia, AV block, and HF. Both can cause peripheral edema and hypotension.</p>
+<p>Verapamil causes constipation in about 7% of patients.</p>
+<li>Dihydropyridines cause a baroreceptor-mediated reflex increase in heart rate because</li>
+<p>of potent peripheral vasodilating effects. Dihydropyridines do not decrease AV node</p>
+<p>conduction and are not effective for treating supraventricular tachyarrhythmias.</p>
+<li>Short-acting nifedipine may rarely increase frequency, intensity, and duration of</li>
+<p>angina in association with acute hypotension. This effect may be obviated by using</p>
+<p>sustained-release formulations of nifedipine or other dihydropyridines. Other side</p>
+<p>effects of dihydropyridines are dizziness, flushing, headache, gingival hyperplasia,</p>
+<p>and peripheral edema.</p>
+<p>Diuretics</p>
+<li>Thiazides are the preferred type of diuretic and are a first-line option for most</li>
+<p>patients with hypertension. Chlorthalidone (thiazide-like) is preferred over hydro-</p>
+<p>chlorothiazide, especially in resistant hypertension, because it is more potent on a</p>
+<p>milligram-per-milligram basis.</p>
+<li>Loop diuretics are more potent for inducing diuresis but are not ideal antihyperten-</li>
+<p>sives unless edema treatment is also needed. Loop diuretics are sometimes required</p>
+<p>over thiazides in patients with severe CKD when eGFR is &lt;30 mL/min/1.73 m2,</p>
+<p>especially when edema is present.</p>
+<li>Potassium-sparing diuretics are weak antihypertensives when used alone and provide</li>
+<p>minimal additive effect when combined with a thiazide or loop diuretic. Their primary</p>
+<p>use is in combination with another diuretic to counteract potassium-wasting properties.</p>
+<li>Mineralocorticoid receptor antagonists (spironolactone and eplerenone) are also</li>
+<p>potassium-sparing diuretics that are usually used to treat resistant hypertension because</p>
+<p>elevated aldosterone concentrations are prevalent in this setting. They are also used as</p>
+<p>add-on agents in patients with HFrEF with or without concomitant hypertension.</p>
+<li>Acutely, diuretics lower BP by causing diuresis. The reduction in plasma volume and</li>
+<p>stroke volume associated with diuresis decreases cardiac output and BP. The initial</p>
+<p>drop in cardiac output causes a compensatory increase in peripheral vascular resis-</p>
+<p>tance. With chronic therapy, extracellular fluid volume and plasma volume return</p>
+<p>to near pretreatment levels, and peripheral vascular resistance falls below baseline.</p>
+<p>Reduced peripheral vascular resistance is responsible for persistent hypotensive</p>
+<p>effects. Thiazides also mobilize sodium and water from arteriolar walls, which may</p>
+<p>contribute to decreased peripheral vascular resistance and lowered BP.</p>
+<li>Combining diuretics with other antihypertensive agents usually results in an addi-</li>
+<p>tive hypotensive effect because of independent mechanisms of action. Furthermore,</p>
+<p>121</p>
+<p>ch10.indd 121 18-11-2020 14:58:25</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>many nondiuretic antihypertensive agents induce sodium and water retention, which</p>
+<p>is counteracted by concurrent diuretic use.</p>
+<li>Side effects of thiazides include hypokalemia, hypomagnesemia, hypercalcemia,</li>
+<pre><code>hyperuricemia, hyperglycemia, dyslipidemia, and sexual dysfunction. Loop diuretics</code></pre>
+<p>have less effect on serum lipids and glucose, but hypokalemia is more pronounced,</p>
+<p>and hypocalcemia may occur.</p>
+<li>Hypokalemia and hypomagnesemia may cause muscle fatigue or cramps, and severe</li>
+<p>electrolyte abnormalities may result in serious cardiac arrhythmias. Low-dose</p>
+<p>therapy (eg, 25 mg hydrochlorothiazide or 12.5 mg chlorthalidone daily) causes less</p>
+<p>electrolyte disturbances than higher doses.</p>
+<li>Potassium-sparing diuretics may cause hyperkalemia, especially in patients with</li>
+<p>CKD or diabetes and in patients receiving concurrent treatment with a mineralocor-</p>
+<p>ticoid receptor antagonist, ACE inhibitor, ARB, direct renin inhibitor, or potassium</p>
+<p>supplement. Eplerenone has an increased risk for hyperkalemia and is contraindi-</p>
+<pre><code>cated in patients with impaired renal function or type 2 diabetes with proteinuria.</code></pre>
+<p>Spironolactone may cause gynecomastia in up to 10% of patients; this effect occurs</p>
+<p>rarely with eplerenone.</p>
+<h2>ALTERNATIVE ANTIHYPERTENSIVE AGENTS (TABLES 10-2 AND 10-3)</h2>
+<p>β-Blockers</p>
+<li>Evidence suggests that β-blockers may not reduce CV events as well as ACE inhibi-</li>
+<p>tors, ARBs, CCBs, or thiazides when used as the initial drug in patients who do not</p>
+<p>have a compelling indication for a β-blocker.</p>
+<li>β-Blockers are appropriate first-line agents when used to treat specific compelling</li>
+<p>indications (Fig. 10-2) or when an ACE inhibitor, ARB, CCB, or thiazide cannot be</p>
+<p>used. β-Blockers also have an important role as add-on therapy to first-line agents in</p>
+<p>patients with hypertension but no compelling indications.</p>
+<li>Their hypotensive mechanism may involve decreased cardiac output through nega-</li>
+<p>tive chronotropic and inotropic cardiac effects and inhibition of renin release from</p>
+<p>the kidney.</p>
+<li>Atenolol, betaxolol, bisoprolol, metoprolol, and nebivolol are cardioselective at</li>
+<p>low doses and bind more avidly to β-receptors than to β-receptors. As a result,</p>
+<p>1 2</p>
+<h2>TABLE 10-3 Alternative Antihypertensive Agents</h2>
+<p>Class Drug (Brand Name) Usual Dose Range (mg/day) Daily Frequency</p>
+<p>α-Blockers</p>
+<p>1</p>
+<p>Doxazosin (Cardura) 1–8 1</p>
+<p>Prazosin (Minipress) 2–20 2 or 3</p>
+<p>Terazosin (Hytrin) 1–20 1 or 2</p>
+<p>Direct renin inhibitor</p>
+<p>Aliskiren (Tekturna) 150–300 1</p>
+<p>Central α-agonists</p>
+<p>2</p>
+<p>Clonidine (Catapres) 0.1–0.8 2</p>
+<p>Clonidine patch 0.1–0.3 1 weekly</p>
+<p>(Catapres-TTS) 2</p>
+<p>Methyldopa (Aldomet) 250–1000</p>
+<p>Direct arterial vasodilators</p>
+<p>Minoxidil (Loniten) 10–40 1 or 2</p>
+<p>Hydralazine (Apresoline) 20–100 2 to 4</p>
+<p>122</p>
+<p>ch10.indd 122 18-11-2020 14:58:25</p>
+<div class="table-container"><table><tr><th>TABLE 10-3 Alternative Antihypertensive Agents</th><th></th><th></th></tr><tr><td>Class Drug (Brand Name)</td><td>Usual Dose Range (mg/day)</td><td>Daily Frequency</td></tr><tr><td>α-Blockers
+1
+Doxazosin (Cardura)
+Prazosin (Minipress)
+Terazosin (Hytrin)</td><td>1–8
+2–20
+1–20</td><td>1
+2 or 3
+1 or 2</td></tr><tr><td>Direct renin inhibitor
+Aliskiren (Tekturna)</td><td>150–300</td><td>1</td></tr><tr><td>Central α-agonists
+2
+Clonidine (Catapres)
+Clonidine patch
+(Catapres-TTS)
+Methyldopa (Aldomet)</td><td>0.1–0.8
+0.1–0.3
+250–1000</td><td>2
+1 weekly
+2</td></tr><tr><td>Direct arterial vasodilators
+Minoxidil (Loniten)
+Hydralazine (Apresoline)</td><td>10–40
+20–100</td><td>1 or 2
+2 to 4</td></tr></table></div><h2>Hypertension | CHAPTER 10</h2>
+<p>they are less likely to provoke bronchospasm and vasoconstriction and are safer than</p>
+<p>nonselective β-blockers in patients with asthma or diabetes who have a compelling</p>
+<p>indication for a β-blocker. Cardioselectivity is a dose-dependent phenomenon, and</p>
+<p>the effect is lost at higher doses.</p>
+<li>Acebutolol, carteolol, and pindolol possess intrinsic sympathomimetic activity</li>
+<p>(ISA) or partial β-receptor agonist activity. When sympathetic tone is low, as in rest-</p>
+<p>ing states, β-receptors are partially stimulated, so resting heart rate, cardiac output,</p>
+<p>and peripheral blood flow are not reduced when receptors are blocked. Theoretically,</p>
+<p>these drugs may have advantages in select patients with HF or sinus bradycardia.</p>
+<p>Unfortunately, they do not reduce CV events as well as other β-blockers and may</p>
+<p>increase CV risk in patients with SIHD. Thus, agents with ISA are rarely needed and</p>
+<p>have no role in hypertension management.</p>
+<li>Atenolol and nadolol have relatively long half-lives and are excreted renally; the dos-</li>
+<p>age may need to be reduced in patients with renal insufficiency. Even though the half-</p>
+<p>lives of other β-blockers are shorter, once-daily administration still may be effective.</p>
+<li>Cardiac side effects include bradycardia, AV conduction abnormalities, and acute HF.</li>
+<p>Blocking β-receptors in arteriolar smooth muscle may cause cold extremities and</p>
+<p>2</p>
+<p>aggravate intermittent claudication or Raynaud phenomenon because of decreased</p>
+<p>peripheral blood flow. Increases in serum lipids and glucose appear to be transient</p>
+<p>and of little clinical significance.</p>
+<li>Abrupt cessation of β-blocker therapy can produce cardiac ischemia (angina, chest</li>
+<p>pain), a CV event, or even death in patients with coronary artery disease. In patients</p>
+<p>without heart disease, abrupt discontinuation of β-blockers may be associated with</p>
+<p>tachycardia, sweating, and generalized malaise in addition to increased BP. For</p>
+<p>these reasons, the dose should always be tapered gradually over 1–2 weeks before</p>
+<p>discontinuation.</p>
+<p>α-Receptor Blockers</p>
+<p>1</p>
+<li>Prazosin, terazosin, and doxazosin are selective α-receptor blockers that inhibit</li>
+<p>1</p>
+<p>catecholamine uptake in smooth muscle cells of peripheral vasculature, resulting in</p>
+<p>vasodilation and BP lowering.</p>
+<li>A first-dose phenomenon characterized by orthostatic hypotension accompanied</li>
+<p>by transient dizziness or faintness, palpitations, and even syncope may occur within</p>
+<p>1–3 hours of the first dose or after later dosage increases. The patient should take the</p>
+<p>first dose (and subsequent first increased doses) at bedtime. Occasionally, orthostatic</p>
+<p>hypotension and dizziness persist with chronic administration.</p>
+<li>Sodium and water retention can occur; these agents are most effective when given</li>
+<p>with a thiazide to maintain antihypertensive efficacy and minimize edema.</p>
+<li>These agents block postsynaptic α-adrenergic receptors on the prostate capsule,</li>
+<p>1</p>
+<p>causing relaxation and decreased resistance to urinary outflow. Although they can</p>
+<p>provide symptomatic benefit in men with benign prostatic hyperplasia, they should</p>
+<p>be used to lower BP only in combination with first-line antihypertensive agents.</p>
+<p>Direct Renin Inhibitor</p>
+<li>Aliskiren blocks the RAAS at its point of activation, resulting in reduced plasma</li>
+<p>renin activity and BP. It is approved for monotherapy or in combination therapy.</p>
+<p>It should not be used with an ACE inhibitor or an ARB because of a higher risk of</p>
+<p>adverse effects without additional reduction in CV events. Its role in the management</p>
+<p>of hypertension is limited.</p>
+<li>Many of the cautions and adverse effects seen with ACE inhibitors and ARBs apply to</li>
+<p>aliskiren. It is contraindicated in pregnancy due to known teratogenic effects.</p>
+<p>Central α-Agonists</p>
+<p>2</p>
+<li>Clonidine, guanfacine, and methyldopa lower BP primarily by stimulating α-</li>
+<p>2</p>
+<p>adrenergic receptors in the brain, which reduces sympathetic outflow from the</p>
+<p>vasomotor center and increases vagal tone. Stimulation of presynaptic α-receptors</p>
+<p>2</p>
+<p>123</p>
+<p>ch10.indd 123 18-11-2020 14:58:25</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>peripherally may contribute to reduced sympathetic tone. Consequently, there may</p>
+<p>be decreases in heart rate, cardiac output, total peripheral resistance, plasma renin</p>
+<p>activity, and baroreceptor reflexes.</p>
+<li>Clonidine is often used in resistant hypertension, and methyldopa is frequently used</li>
+<p>for pregnancy-induced hypertension.</p>
+<li>Chronic use results in sodium and fluid retention. Other side effects include depression,</li>
+<p>orthostatic hypotension, dizziness, and anticholinergic effects (eg, dry mouth, sedation).</p>
+<li>Abrupt cessation may lead to rebound hypertension, perhaps from a compensa-</li>
+<p>tory increase in norepinephrine release that follows discontinuation of presynaptic</p>
+<p>α-receptor stimulation.</p>
+<li>Methyldopa rarely causes hepatitis or hemolytic anemia. A transient elevation</li>
+<p>in hepatic transaminases occasionally occurs. Discontinue therapy if persistent</p>
+<pre><code>increases in liver function tests occur, because this may herald onset of fulminant,</code></pre>
+<p>life-threatening hepatitis. Coombs-positive hemolytic anemia occurs rarely, and 20%</p>
+<p>of patients exhibit a positive direct Coombs test without anemia. For these reasons,</p>
+<p>methyldopa has limited usefulness except in pregnancy.</p>
+<p>Direct Arterial Vasodilators</p>
+<li>Hydralazine and minoxidil directly relax arteriolar smooth muscle, resulting in</li>
+<p>vasodilation and BP lowering. Compensatory activation of baroreceptor reflexes</p>
+<p>increases sympathetic outflow, thereby increasing heart rate, cardiac output, and</p>
+<p>renin release. Consequently, hypotensive effectiveness of direct vasodilators dimin-</p>
+<p>ishes over time unless the patient is also taking a diuretic and a β-blocker. The</p>
+<p>diuretic minimizes the side effect of sodium and water retention. Direct vasodilators</p>
+<p>can precipitate angina in patients with underlying SIHD unless the baroreceptor</p>
+<p>reflex mechanism is blocked with a β-blocker. Nondihydropyridine CCBs can be</p>
+<p>used as an alternative to β-blockers in patients with contraindications to β-blockers.</p>
+<li>Hydralazine may cause a dose-related, reversible lupus-like syndrome, which is more</li>
+<p>common in slow acetylators. Lupus-like reactions can usually be avoided by limiting</p>
+<p>the maximum total daily dose to 200 mg. Because of side effects, hydralazine has</p>
+<p>limited usefulness for chronic hypertension management.</p>
+<li>Minoxidil is a more potent vasodilator than hydralazine, and compensatory increases</li>
+<p>in heart rate, cardiac output, renin release, and sodium retention are more dramatic.</p>
+<p>Due to significant water retention, a loop diuretic is often more effective than a</p>
+<p>thiazide. Reversible hypertrichosis on the face, arms, back, and chest may be trouble-</p>
+<p>some. Minoxidil is reserved for resistant hypertension and for patients requiring</p>
+<p>hydralazine who experience drug-induced lupus.</p>
+<h2>SPECIAL POPULATIONS</h2>
+<p>Older Persons</p>
+<li>Older patients may present with either isolated systolic hypertension or elevation in</li>
+<p>both SBP and DBP. CV morbidity and mortality are more directly correlated to SBP</p>
+<p>than to DBP in patients aged 50 and older.</p>
+<li>First-line antihypertensives provide significant benefits and can be used safely in</li>
+<p>older patients, but smaller-than-usual initial doses must be used for initial therapy.</p>
+<li>Although the most appropriate BP goal for older patients has been debated, the totality</li>
+<p>of evidence indicates that older ambulatory patients should be treated to an SBP goal of</p>
+<p>&lt;130 mm Hg, with careful monitoring. In patients with multiple comorbidities, a relaxed</p>
+<p>SBP goal of at least &lt;150 mm Hg (or &lt;140 mm Hg if tolerated) may be considered.</p>
+<p>Children and Adolescents</p>
+<li>In children, hypertension is defined as SBP or DBP that is >95th percentile for sex,</li>
+<p>age, and height on at least three occasions. For adolescents, BP values between the</p>
+<p>90th and 95th percentile, or &gt;120/80 mm Hg, is considered elevated BP.</p>
+<li>Because secondary hypertension is more common in children and adolescents than</li>
+<p>in adults, an appropriate workup is required if elevated BP is identified.</p>
+<p>124</p>
+<p>ch10.indd 124 18-11-2020 14:58:25</p>
+<h2>Hypertension | CHAPTER 10</h2>
+<li>Nonpharmacologic treatment (eg, weight loss if overweight or obese, healthy diet,</li>
+<p>physical activity) is the cornerstone of therapy for primary hypertension.</p>
+<li>The goal is to reduce the BP to <90th percentile for sex, age, and height and</li>
+<p>&lt;130/80 mm Hg in adolescents age 13 years and older.</p>
+<li>ACE inhibitors, ARBs, β-blockers, CCBs, and thiazide diuretics are all acceptable</li>
+<p>drug therapy choices.</p>
+<li>ACE inhibitors, ARBs, and direct renin inhibitors are contraindicated in sexually</li>
+<p>active girls because of potential teratogenic effects.</p>
+<p>Pregnancy</p>
+<li>Preeclampsia is defined as hypertension (elevated BP ≥140/90 mm Hg on more than</li>
+<p>2 occasions at least 4 hours apart after 20 weeks’ gestation or ≥160/110 mm Hg con-</p>
+<p>firmed within a short interval) in association with thrombocytopenia, impaired liver</p>
+<pre><code>function, new-onset renal insufficiency, pulmonary edema, or new-onset cerebral</code></pre>
+<p>or visual disturbances. It can lead to life-threatening complications for both mother</p>
+<p>and fetus.</p>
+<li>Eclampsia is the onset of convulsions in preeclampsia and is a medical emergency.</li>
+<li>Definitive treatment of preeclampsia is delivery, and labor induction is indicated</li>
+<p>if eclampsia is imminent or present. Otherwise, management consists of restrict-</p>
+<p>ing activity, bed rest, and close monitoring. Salt restriction or other measures</p>
+<p>that contract blood volume should be avoided. Antihypertensives are used</p>
+<p>before induction of labor if DBP is &gt;105 mm Hg, with a target DBP of 95–105</p>
+<p>mm Hg. Intravenous (IV) hydralazine is most commonly used; IV labetalol is</p>
+<p>also effective.</p>
+<li>Chronic hypertension is hypertension that predates pregnancy. Labetalol, long-acting</li>
+<p>nifedipine, or methyldopa is recommended as first-line therapy due to favorable</p>
+<p>safety profiles. β-Blockers (except atenolol) and CCBs are also reasonable alterna-</p>
+<p>tives. ACE inhibitors, ARBs, and the direct renin inhibitor aliskiren are known</p>
+<p>teratogens and contraindicated in pregnancy.</p>
+<p>African Americans</p>
+<li>Hypertension is more common and more difficult to control in African Americans</li>
+<p>than in those of other races; treatment usually requires two or more antihypertensives</p>
+<p>to reach a BP goal of &lt;130/80 mm Hg.</p>
+<li>CCBs and thiazides are most effective in African Americans and should be</li>
+<p>first-line in the absence of a compelling indication. Antihypertensive response</p>
+<p>is significantly increased when either class is combined with a β-blocker, ACE</p>
+<p>inhibitor, or ARB, perhaps due to the low-renin pattern of hypertension in Afri-</p>
+<p>can Americans.</p>
+<li>Medications recommended for specific compelling indications should be used, even</li>
+<p>if the antihypertensive effect may not be as great as with another drug class (eg, use a</p>
+<p>β-blocker first-line for hypertension in African Americans with SIHD).</p>
+<p>Pulmonary Disease and Peripheral Arterial Disease</p>
+<li>Although β-blockers (especially nonselective agents) have generally been avoided in</li>
+<p>hypertensive patients with asthma and COPD because of fear of inducing broncho-</p>
+<p>spasm, cardioselective β-blockers can be used safely. Consequently, cardioselective</p>
+<p>agents should be used to treat a compelling indication (ie, SIHD or HF) in patients</p>
+<p>with reactive airway disease.</p>
+<li>Because PAD is a noncoronary form of ASCVD, patients with PAD are at increased</li>
+<p>risk of stroke and CV events. β-Blockers can theoretically be problematic because</p>
+<p>of possible decreased peripheral blood flow secondary to unopposed stimulation of</p>
+<p>α-receptors that results in vasoconstriction. However, available data indicate that</p>
+<p>1</p>
+<pre><code>β-blockers do not worsen claudication symptoms or cause functional impairment.</code></pre>
+<p>Therefore, antihypertensive treatment for patients with PAD should follow the same</p>
+<p>general principles as patients without PAD.</p>
+<p>125</p>
+<p>ch10.indd 125 18-11-2020 14:58:25</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>HYPERTENSIVE URGENCIES AND EMERGENCIES</h2>
+<li>Hypertensive urgencies are ideally managed by adjusting maintenance therapy, add-</li>
+<p>ing a new antihypertensive, increasing the dose of a current medication, or treating</p>
+<p>anxiety as applicable. Acute administration of a short-acting oral drug (captopril,</p>
+<p>clonidine, or labetalol) followed by careful observation for several hours to ensure a</p>
+<p>gradual BP reduction is an option.</p>
+<p>✓ Captopril 25–50 mg orally may be given at 1- to 2-hour intervals. The onset of</p>
+<p>action is 15–30 minutes.</p>
+<p>✓ For treatment of hypertensive rebound after withdrawal of clonidine, 0.2 mg orally</p>
+<p>is given initially, followed by 0.2 mg hourly until the DBP falls below 110 mm Hg</p>
+<p>or a total of 0.7 mg has been administered; a single dose may be sufficient.</p>
+<p>✓ Labetalol 200–400 mg orally can be given, followed by additional doses every 2–3</p>
+<p>hours.</p>
+<li>Hypertensive emergencies require immediate BP reduction with a parenteral agent to limit</li>
+<p>new or progressing end-organ damage. The rate of BP reduction depends on whether the</p>
+<p>patient has aortic dissection, severe preeclampsia or eclampsia, or pheochromocytoma</p>
+<p>with hypertensive crisis. In these life-threatening situations, patients should be managed</p>
+<p>in an intensive care unit, and SBP should be reduced immediately to &lt;140 mm Hg in the</p>
+<p>first hour, with additional SBP lowering to &lt;120 mm Hg for patients with aortic dissec-</p>
+<p>tion. For patients with a hypertensive emergency without aortic dissection, severe pre-</p>
+<p>eclampsia or eclampsia, or pheochromocytoma with hypertensive crisis, the initial target</p>
+<p>is reduction in mean arterial pressure of up to 25% over the first hour. If the patient is then</p>
+<p>stable, BP can be reduced to 160/100–110 mm Hg within the next 2–6 hours. Precipitous</p>
+<p>drops in BP may cause end-organ ischemia or infarction. If BP reduction is well tolerated,</p>
+<p>additional gradual decreases toward the goal BP can be attempted after 24–48 hours.</p>
+<p>✓ Nitroprusside is the agent of choice for minute-to-minute control in most cases.</p>
+<p>In aortic dissection, propranolol should be given first to prevent reflex sympa-</p>
+<p>thetic activation. When the nitroprusside infusion must be continued longer</p>
+<p>than 72 hours, measure serum thiocyanate levels, and discontinue the infusion</p>
+<p>if the level exceeds 12 mg/dL (~2.0 mmol/L). The risk of thiocyanate toxicity is</p>
+<pre><code>increased in patients with impaired kidney function. Other adverse effects are</code></pre>
+<p>nausea, vomiting, muscle twitching, and sweating.</p>
+<p>✓ Dosing guidelines and adverse effects of parenteral agents for treating hypertensive</p>
+<h2>emergency are listed in Table 10-4.</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Both clinic-based and self-measurement home BP monitoring are important for</li>
+<p>monitoring and managing hypertension. Encourage patients to obtain a home BP</p>
+<p>monitor, record the results, and bring them to follow-up clinic visits.</p>
+<li>Evaluate BP response in the clinic 4 weeks after initiating or making changes in ther-</li>
+<p>apy and compare the results to home BP readings. Once goal BP is obtained, monitor</p>
+<p>BP every 3–6 months, assuming no signs or symptoms of acute end-organ damage.</p>
+<p>Evaluate more frequently in patients with a history of poor control, nonadherence,</p>
+<p>progressive end-organ damage, or symptoms of adverse drug effects.</p>
+<li>Automated BP monitoring can be useful to establish effective 24-hour control and</li>
+<p>confirm white coat or masked uncontrolled hypertension.</p>
+<li>Monitor patients routinely for adverse drug events, which may require dosage reduc-</li>
+<p>tion or substitution with an alternative antihypertensive agent. Perform laboratory</p>
+<p>monitoring 4 weeks after starting a new agent or dose increase, and then every 6–12</p>
+<p>months in stable patients. For patients treated with a mineralocorticoid receptor</p>
+<p>antagonist (eplerenone or spironolactone) monitor potassium concentrations and</p>
+<pre><code>kidney function within 3 days of initiation and again at 1 week to detect potential</code></pre>
+<p>hyperkalemia.</p>
+<li>Monitor patients for signs and symptoms of hypertension-associated complications.</li>
+<p>Take a careful history for ischemic chest pain (or pressure), palpitations, dizziness,</p>
+<p>126</p>
+<p>ch10.indd 126 18-11-2020 14:58:25</p>
+<p>127</p>
+<p>Hypertension</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>10</p>
+<p>TABLE 10-4 Parenteral Antihypertensive Agents for Hypertensive Emergency</p>
+<p>Duration</p>
+<p>Drug Dose Onset (Minutes) (Minutes) Adverse Effects</p>
+<p>Clevidipine 1–2 mg/hr (32 mg/hr max) 2–4 5–15 Headache, nausea, tachycardia, hypertriglyceridemia</p>
+<p>Enalaprilat 1.25–5 mg IV every 6 hours 15–30 360–720 Precipitous fall in BP in high-renin states; variable</p>
+<p>response</p>
+<p>Esmolol hydrochloride 250–500 mcg/kg/min IV bolus, then 1–2 10–20 Hypotension, nausea, asthma, first-degree heart</p>
+<p>50–100 mcg/kg/min IV infusion; may block, heart failure</p>
+<p>repeat bolus after 5 min or increase</p>
+<p>infusion to 300 mcg/min</p>
+<p>Fenoldopam mesylate 0.1–0.3 mcg/kg/min IV infusion &lt;5 30 Tachycardia, headache, nausea, flushing</p>
+<p>Hydralazine hydrochloride 12–20 mg IV 10–20 60–240 Tachycardia, flushing, headache, vomiting,</p>
+<p>10–50 mg IM 20–30 240–360 aggravation of angina</p>
+<p>Labetalol hydrochloride 20–80 mg IV bolus every 10 min; 0.5–2 5–10 180–360 Vomiting, scalp tingling, bronchoconstriction,</p>
+<p>mg/min IV infusion dizziness, nausea, heart block, orthostatic</p>
+<p>hypotension</p>
+<p>Nicardipine hydrochloride 5–15 mg/hr IV 5–10 15–30; may Tachycardia, headache, flushing, local phlebitis</p>
+<p>exceed 240</p>
+<p>Nitroglycerin 5–100 mcg/min IV infusion 2–5 5–10 Headache, vomiting, methemoglobinemia, tolerance</p>
+<p>with prolonged use</p>
+<p>Sodium nitroprusside 0.25–10 mcg/kg/min IV infusion (requires Immediate 1–2 Nausea, vomiting, muscle twitching, sweating,</p>
+<p>special delivery system) thiocyanate and cyanide intoxication</p>
+<p>BP, blood pressure; IM, intramuscular; IV, intravenous.</p>
+<p>ch10.indd</p>
+<p>127</p>
+<p>18-11-2020</p>
+<p>14:58:25</p>
+<div class="table-container"><table><tr><th>TABLE 10-4 Parenteral Antihypertensive Agents for Hypertensive Emergency</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Dose</td><td>Onset (Minutes)</td><td>Duration
+(Minutes)</td><td>Adverse Effects</td></tr><tr><td>Clevidipine</td><td>1–2 mg/hr (32 mg/hr max)</td><td>2–4</td><td>5–15</td><td>Headache, nausea, tachycardia, hypertriglyceridemia</td></tr><tr><td>Enalaprilat</td><td>1.25–5 mg IV every 6 hours</td><td>15–30</td><td>360–720</td><td>Precipitous fall in BP in high-renin states; variable
+response</td></tr><tr><td>Esmolol hydrochloride</td><td>250–500 mcg/kg/min IV bolus, then
+50–100 mcg/kg/min IV infusion; may
+repeat bolus after 5 min or increase
+infusion to 300 mcg/min</td><td>1–2</td><td>10–20</td><td>Hypotension, nausea, asthma, first-degree heart
+block, heart failure</td></tr><tr><td>Fenoldopam mesylate</td><td>0.1–0.3 mcg/kg/min IV infusion</td><td>&lt;5</td><td>30</td><td>Tachycardia, headache, nausea, flushing</td></tr><tr><td>Hydralazine hydrochloride</td><td>12–20 mg IV</td><td>10–20</td><td>60–240</td><td>Tachycardia, flushing, headache, vomiting,
+aggravation of angina</td></tr><tr><td></td><td>10–50 mg IM</td><td>20–30</td><td>240–360</td><td></td></tr><tr><td>Labetalol hydrochloride</td><td>20–80 mg IV bolus every 10 min; 0.5–2
+mg/min IV infusion</td><td>5–10</td><td>180–360</td><td>Vomiting, scalp tingling, bronchoconstriction,
+dizziness, nausea, heart block, orthostatic
+hypotension</td></tr><tr><td>Nicardipine hydrochloride</td><td>5–15 mg/hr IV</td><td>5–10</td><td>15–30; may
+exceed 240</td><td>Tachycardia, headache, flushing, local phlebitis</td></tr><tr><td>Nitroglycerin</td><td>5–100 mcg/min IV infusion</td><td>2–5</td><td>5–10</td><td>Headache, vomiting, methemoglobinemia, tolerance
+with prolonged use</td></tr><tr><td>Sodium nitroprusside</td><td>0.25–10 mcg/kg/min IV infusion (requires
+special delivery system)</td><td>Immediate</td><td>1–2</td><td>Nausea, vomiting, muscle twitching, sweating,
+thiocyanate and cyanide intoxication</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>dyspnea, orthopnea, headache, sudden change in vision, one-sided weakness, slurred</p>
+<p>speech, and loss of balance.</p>
+<li>Monitor funduscopic changes on eye examination, LV hypertrophy on ECG,</li>
+<pre><code>albuminuria, and changes in kidney function periodically.</code></pre>
+<li>Assess patient adherence with the regimen regularly. Ask patients about changes in</li>
+<pre><code>their general health perception, physical functioning, and overall satisfaction with</code></pre>
+<p>treatment.</p>
+<p>See Chapter 30, Hypertension, authored by Eric J. MacLaughlin and Joseph J. Saseen, for</p>
+<p>a more detailed discussion of this topic.</p>
+<p>128</p>
+<p>ch10.indd 128 18-11-2020 14:58:25</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

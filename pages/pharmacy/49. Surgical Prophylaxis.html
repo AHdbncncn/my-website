@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49. Surgical Prophylaxis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>49. Surgical Prophylaxis</h1>
+        </header>
+        <main>
+            <p>531</p>
+<h2>RETPAHC</h2>
+<p>49</p>
+<p>Surgical Prophylaxis</p>
+<li>Antibiotics administered prior to the contamination of previously sterile tissues or</li>
+<p>fluids are considered prophylactic. The goal of prophylactic antibiotics is to prevent</p>
+<p>an infection from developing.</p>
+<li>Presumptive antibiotic therapy is administered when an infection is suspected but</li>
+<p>not yet proven. Therapeutic antibiotics are required for established infection.</p>
+<li>Surgical-site infections (SSIs) are classified as either incisional (eg, cellulitis of the</li>
+<p>incision site) or involving an organ or space (eg, with meningitis). Incisional SSIs</p>
+<p>may be superficial (skin or subcutaneous tissue) or deep (fascial and muscle layers).</p>
+<p>Both types, by definition, occur by postoperative day 30. This period extends to</p>
+<p>1 year from the date of surgery in the case of prosthesis implantation involvement</p>
+<p>with a deep incisional or organ/space infection</p>
+<h2>RISK FACTORS FOR SURGICAL WOUND INFECTION</h2>
+<li>The traditional classification system developed by the National Research Council</li>
+<p>(NRC) stratifying surgical procedures by infection risk is reproduced in Table 49-1.</p>
+<p>The NRC wound classification for a specific procedure is determined intraop-</p>
+<p>eratively and is the primary determinant of whether antibiotic prophylaxis is</p>
+<p>warranted.</p>
+<li>The Study on the Efficacy of Nosocomial Infection Control (SENIC) analyzed more</li>
+<p>than 100,000 surgery cases and identified abdominal operations, operations lasting</p>
+<p>more than 2 hours, contaminated or dirty procedures, and more than three underly-</p>
+<p>ing medical diagnoses as factors associated with an increased incidence of SSI. When</p>
+<p>the NRC classification described in Table 49-1 was stratified by the number of SENIC</p>
+<p>risk factors present, the infection rates varied by as much as a factor of 15 within the</p>
+<p>same operative category.</p>
+<li>The SENIC risk assessment technique has been modified to include the Ameri-</li>
+<p>can Society of Anesthesiologists preoperative assessment score (Table 49-2). An</p>
+<p>American Society of Anesthesiologists score greater than or equal to three was a</p>
+<p>strong predictor for the development of an SSI.</p>
+<h2>BACTERIOLOGY</h2>
+<li>Bacteria involved in SSI are acquired either from the patient’s normal flora (endog-</li>
+<p>enous) or from contamination during the surgical procedure (exogenous).</p>
+<li>The loss of normal flora through the use of broad-spectrum antibiotics can</li>
+<p>destabilize homeostasis, allowing pathogenic bacteria to proliferate and infection to</p>
+<p>occur.</p>
+<li>Normal flora can become pathogenic when translocated to a normally sterile tissue</li>
+<p>site or fluid during surgical procedures.</p>
+<li>The five most common pathogens encountered in surgical wounds are Staphylococcus</li>
+<p>aureus, coagulase-negative staphylococci, Enterococci, Escherichia coli, and Pseudo-</p>
+<p>monas aeruginosa.</p>
+<li>Impaired host defenses, vascular occlusive states, traumatized tissues, and the</li>
+<p>presence of a foreign body greatly decrease the number of bacteria required to cause</p>
+<p>an SSI.</p>
+<p>ch49.indd 531 19-11-2020 21:08:52</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>49</th><th>Surgical Prophylaxis</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 49-1 National Research Council Wound Classification, Risk of Surgical Site Infection,</p>
+<p>and Indication for Antibiotics</p>
+<p>SSI Rate (%)</p>
+<p>Preoperative No Preoperative</p>
+<p>Classification Antibiotics Antibiotics Criteria Antibiotics</p>
+<p>Clean 0.8 5.1 No acute Not indicated</p>
+<p>inflammation or unless</p>
+<h2>transection of GI, high-risk</h2>
+<p>oropharyngeal, procedurea</p>
+<p>genitourinary,</p>
+<p>biliary, or</p>
+<p>respiratory tracts;</p>
+<p>elective case, no</p>
+<p>technique break</p>
+<p>Clean– 1.3 10.1 Controlled Prophylactic</p>
+<p>contaminated opening of antibiotics</p>
+<p>aforementioned indicated</p>
+<p>tracts with</p>
+<p>minimal spillage/</p>
+<p>minor technique</p>
+<p>break; clean</p>
+<p>procedures</p>
+<p>performed</p>
+<p>emergently</p>
+<p>or with major</p>
+<p>technique breaks</p>
+<p>Contaminated 10.2 21.9 Acute, nonpurulent Prophylactic</p>
+<p>inflammation antibiotics</p>
+<p>present; major indicated</p>
+<p>spillage/</p>
+<p>technique break</p>
+<p>during clean–</p>
+<p>contaminated</p>
+<p>procedure</p>
+<p>Dirty N/A N/A Obvious preexisting Therapeutic</p>
+<p>infection present antibiotics</p>
+<p>(abscess, pus, or required</p>
+<p>necrotic tissue</p>
+<p>present)</p>
+<p>aHigh-risk procedures include implantation of prosthetic materials and other procedures where surgical</p>
+<p>site infection is associated with high morbidity (see the text).</p>
+<p>N/A, not applicable; SSI, surgical site infection.</p>
+<h2>ANTIBIOTIC ISSUES</h2>
+<h2>SCHEDULING ANTIBIOTIC ADMINISTRATION</h2>
+<li>The following principles must be considered when providing antimicrobial surgical</li>
+<p>prophylaxis:</p>
+<p>✓ Antimicrobials should be delivered to the surgical site prior to the initial incision.</p>
+<p>They should be administered within 60 minutes prior to the initial incision, prefer-</p>
+<p>ably at the time of anesthetic induction. Antibiotics should not be prescribed to be</p>
+<p>given “on-call to the OR (operating room).”</p>
+<p>✓ Bactericidal antibiotic tissue concentrations should be maintained throughout the</p>
+<p>surgical procedure.</p>
+<li>Strategies to ensure appropriate antimicrobial prophylaxis use are described in Table 49-3.</li>
+<p>532</p>
+<p>ch49.indd 532 19-11-2020 21:08:52</p>
+<div class="table-container"><table><tr><th>TABLE 49-1 National Research Council Wound Classification, Risk of Surgical Site Infection,
+and Indication for Antibiotics</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>SSI Rate (%)</td><td></td><td></td><td></td></tr><tr><td>Classification</td><td>Preoperative
+Antibiotics</td><td>No Preoperative
+Antibiotics</td><td>Criteria</td><td>Antibiotics</td></tr><tr><td>Clean</td><td>0.8</td><td>5.1</td><td>No acute
+inflammation or
+transection of GI,
+oropharyngeal,
+genitourinary,
+biliary, or
+respiratory tracts;
+elective case, no
+technique break</td><td>Not indicated
+unless
+high-risk
+procedurea</td></tr><tr><td>Clean–
+contaminated</td><td>1.3</td><td>10.1</td><td>Controlled
+opening of
+aforementioned
+tracts with
+minimal spillage/
+minor technique
+break; clean
+procedures
+performed
+emergently
+or with major
+technique breaks</td><td>Prophylactic
+antibiotics
+indicated</td></tr><tr><td>Contaminated</td><td>10.2</td><td>21.9</td><td>Acute, nonpurulent
+inflammation
+present; major
+spillage/
+technique break
+during clean–
+contaminated
+procedure</td><td>Prophylactic
+antibiotics
+indicated</td></tr><tr><td>Dirty</td><td>N/A</td><td>N/A</td><td>Obvious preexisting
+infection present
+(abscess, pus, or
+necrotic tissue
+present)</td><td>Therapeutic
+antibiotics
+required</td></tr></table></div><h2>Surgical Prophylaxis | CHAPTER 49</h2>
+<p>TABLE 49-2 Surgical Site Infection Incidence (%) Stratified by NRC Wound Classification and</p>
+<p>SENIC Risk Factorsa</p>
+<p>Number of</p>
+<p>SENIC Risk</p>
+<p>Factors Clean Clean–Contaminated Contaminated Dirty</p>
+<h2>0 1.1 0.6 N/A N/A</h2>
+<p>1 3.9 2.8 4.5 6.7</p>
+<p>2 8.4 8.4 8.3 10.9</p>
+<p>3 15.8 17.7 11.0 18.8</p>
+<h2>4 N/A N/A 23.9 27.4</h2>
+<p>aStudy on the Efficacy of Nosocomial Infection Control (SENIC) risk factors include abdominal</p>
+<p>operation, operations lasting &gt;2 hours, contaminated or dirty procedures by National Research</p>
+<p>Council (NRC) classification, and more than three underlying medical diagnoses.</p>
+<p>N/A, not applicable; NRC, National Research Council; SENIC, Study on the Efficacy of Nosocomial</p>
+<p>Infection Control.</p>
+<p>Reproduced, with permission, from Wilson AP, Hodgson B, Liu M, et al. Reduction in wound infection rates</p>
+<p>by wound surveillance with postdischarge follow-up and feedback. Br J Surg. 2006;93:630-638.</p>
+<p>TABLE 49-3 Strategies for Implementing an Institutional Program to Ensure Appropriate Use</p>
+<p>of Antimicrobial Prophylaxis in Surgery</p>
+<p>1. Educate: Develop an educational program that enforces the importance and rationale of</p>
+<p>timely antimicrobial prophylaxis. Make this educational program available to all healthcare</p>
+<p>practitioners involved in the patient’s care.</p>
+<p>2. Standardize the ordering process: Establish a protocol (eg, a preprinted order sheet)</p>
+<p>that standardizes antibiotic choice according to current published evidence, formulary</p>
+<p>availability, institutional resistance patterns, and cost.</p>
+<p>3. Standardize the delivery and administration process: Use system that ensures</p>
+<p>antibiotics are prepared and delivered to the holding area in a timely fashion. Standardize</p>
+<p>the administration time to &lt;1 hour preoperatively. Designate responsibility and</p>
+<p>accountability for antibiotic administration. Provide visible reminders to prescribe/</p>
+<p>administer prophylactic antibiotics (eg, checklists). Develop a system to remind surgeons/</p>
+<p>nurses to readminister antibiotics intraoperatively during long procedures.</p>
+<p>4. Provide feedback: Follow up with regular reports of compliance and infection rates.</p>
+<h2>ANTIMICROBIAL SELECTION</h2>
+<li>The choice of the prophylactic antimicrobial depends on the type of surgical pro-</li>
+<p>cedure, most likely pathogenic organisms, safety and efficacy of the antimicrobial,</p>
+<p>current literature evidence supporting its use, and cost.</p>
+<li>Typically, gram-positive coverage is included in the choice of surgical prophylaxis</li>
+<p>because organisms such as S. aureus and S. epidermidis are common skin flora.</p>
+<li>Parenteral antibiotic administration is favored because of its reliability in achieving</li>
+<h2>suitable tissue concentrations.</h2>
+<li>First-generation cephalosporins (particularly cefazolin) are the preferred choice, par-</li>
+<p>ticularly for clean surgical procedures. Antianaerobic cephalosporins (eg, cefoxitin</p>
+<p>or cefotetan) are appropriate choices when broad-spectrum anaerobic and gram-</p>
+<p>negative coverage are desired.</p>
+<li>Although third-generation cephalosporins (eg, ceftriaxone) have been advocated for</li>
+<p>prophylaxis because of their increased gram-negative coverage and prolonged half-</p>
+<p>lives, their inferior gram-positive and anaerobic activity and high cost have discouraged</p>
+<p>the widespread use of these agents.</p>
+<p>533</p>
+<p>ch49.indd 533 19-11-2020 21:08:52</p>
+<div class="table-container"><table><tr><th>TABLE 49-2 Surgical Site Infection Incidence (%) Stratified by NRC Wound Classification and
+SENIC Risk Factorsa</th><th></th><th></th><th></th><th></th></tr><tr><td>Number of
+SENIC Risk
+Factors</td><td>Clean</td><td>Clean–Contaminated</td><td>Contaminated</td><td>Dirty</td></tr><tr><td>0</td><td>1.1</td><td>0.6</td><td>N/A</td><td>N/A</td></tr><tr><td>1</td><td>3.9</td><td>2.8</td><td>4.5</td><td>6.7</td></tr><tr><td>2</td><td>8.4</td><td>8.4</td><td>8.3</td><td>10.9</td></tr><tr><td>3</td><td>15.8</td><td>17.7</td><td>11.0</td><td>18.8</td></tr><tr><td>4</td><td>N/A</td><td>N/A</td><td>23.9</td><td>27.4</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 49-3 Strategies for Implementing an Institutional Program to Ensure Appropriate Use
+of Antimicrobial Prophylaxis in Surgery</th></tr><tr><td>1. Educate: Develop an educational program that enforces the importance and rationale of
+timely antimicrobial prophylaxis. Make this educational program available to all healthcare
+practitioners involved in the patient’s care.
+2. Standardize the ordering process: Establish a protocol (eg, a preprinted order sheet)
+that standardizes antibiotic choice according to current published evidence, formulary
+availability, institutional resistance patterns, and cost.
+3. Standardize the delivery and administration process: Use system that ensures
+antibiotics are prepared and delivered to the holding area in a timely fashion. Standardize
+the administration time to &lt;1 hour preoperatively. Designate responsibility and
+accountability for antibiotic administration. Provide visible reminders to prescribe/
+administer prophylactic antibiotics (eg, checklists). Develop a system to remind surgeons/
+nurses to readminister antibiotics intraoperatively during long procedures.
+4. Provide feedback: Follow up with regular reports of compliance and infection rates.</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>Vancomycin may be considered for prophylactic therapy in surgical procedures</li>
+<p>involving implantation of a prosthetic device in which the rate of methicillin-resistant</p>
+<p>S. aureus (MRSA) is high. If the risk of MRSA is low and a β-lactam hypersensitivity</p>
+<p>exists, clindamycin can be used instead of cefazolin in order to limit vancomycin use.</p>
+<h2>RECOMMENDATIONS FOR SPECIFIC TYPES OF SURGERIES</h2>
+<h2>• Specific recommendations are summarized in Table 49-4.</h2>
+<h2>GASTRODUODENAL SURGERY</h2>
+<li>The risk of infection rises with conditions that increase gastric pH and subsequent</li>
+<p>bacterial overgrowth, such as obstruction, hemorrhage, malignancy, and acid-</p>
+<p>suppression therapy (clean-contaminated).</p>
+<li>A single dose of intravenous (IV) cefazolin will provide adequate prophylaxis for most</li>
+<p>cases. Oral ciprofloxacin may be used for patients with β-lactam hypersensitivity.</p>
+<li>Postoperative therapeutic antibiotics may be indicated if perforation is detected</li>
+<p>during surgery, depending on whether an established infection is present.</p>
+<h2>HEPATOBILIARY SURGERY</h2>
+<li>Antibiotic prophylaxis has been proven beneficial for surgery involving the biliary</li>
+<p>tract.</p>
+<li>Most frequently encountered organisms include E. coli, Klebsiella, and Enterococci.</li>
+<p>Single-dose prophylaxis with cefazolin is currently recommended. Ciprofloxacin</p>
+<p>and levofloxacin are alternatives for patients with β-lactam hypersensitivity.</p>
+<li>For patients undergoing elective laparoscopic cholecystectomy, antibiotic prophylaxis</li>
+<p>has traditionally not been recommended but newer trials and systematic reviews are</p>
+<p>conflicting and assessments of current practice are reflective of this.</p>
+<li>Ciprofloxacin and levofloxacin are effective alternatives for β-lactam-allergic patients</li>
+<p>undergoing open cholecystectomy.</p>
+<li>Detection of an active infection during surgery (gangrenous gallbladder or suppura-</li>
+<p>tive cholangitis) is an indication for therapeutic postoperative antibiotics.</p>
+<h2>COLORECTAL SURGERY</h2>
+<li>Anaerobes and gram-negative aerobes predominate in SSIs (see Table 49-4),</li>
+<p>although gram-positive aerobes are also important. Therefore, the risk of an SSI in</p>
+<p>the absence of an adequate prophylactic regimen is substantial.</p>
+<li>Risk factors for SSIs include age over 60 years, hypoalbuminemia, poor preoperative</li>
+<p>bowel preparation, corticosteroid therapy, malignancy, and operations lasting longer</p>
+<p>than 3.5 hours.</p>
+<li>Reducing bacteria load with a thorough bowel preparation regimen (4 L of polyeth-</li>
+<p>ylene glycol solution or 90 mL of sodium phosphate solution administered orally the</p>
+<p>day before surgery) is controversial, even though it is used by most surgeons.</p>
+<li>While oral or parenteral antimicrobials have been used, combination therapy (oral</li>
+<p>and IV) was superior to oral regimens alone and IV regimens alone. The combination</p>
+<p>of 1 g of neomycin and 1 g of erythromycin base given orally 19, 18, and 9 hours pre-</p>
+<p>operatively is the most commonly used oral regimen in the United States. Cefoxitin</p>
+<p>and cefotetan are the IV agents used most commonly, but other second- and some</p>
+<p>third-generation cephalosporins also are effective.</p>
+<li>Postoperative antibiotics are unnecessary in the absence of any untoward events or</li>
+<p>findings during surgery.</p>
+<h2>APPENDECTOMY</h2>
+<li>Preoperative antimicrobials are effective at reducing the risk of infection after appen-</li>
+<p>dectomy and should be administered in all cases.</p>
+<p>534</p>
+<p>ch49.indd 534 19-11-2020 21:08:53</p>
+<p>535</p>
+<p>Surgical</p>
+<p>Prophylaxis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>49</p>
+<p>TABLE 49-4 Most Likely Pathogens and Specific Recommendations for Surgical Prophylaxis</p>
+<p>Recommended Grade of</p>
+<p>Type of Operation Likely Pathogens Prophylaxis Regimena Comments Recommendationb</p>
+<p>GI surgery</p>
+<p>Gastroduodenal Enteric gram-negative bacilli, Cefazolin 1 g × 1 High-risk patients only (obstruction, hemorrhage, IA</p>
+<p>gram-positive cocci, oral malignancy, acid suppression therapy, morbid</p>
+<p>anaerobes obesity)</p>
+<p>Bariatric Surgery Enteric gram-negative bacilli, Cefazolin 2 g × 1 Intraoperative redosing required for procedures IB</p>
+<p>gram-positive cocci, oral longer than 4 hours</p>
+<p>anaerobes</p>
+<p>Cholecystectomy Enteric gram-negative bacilli, Cefazolin 1 g × 1 for High-risk patients only (open biliary tract IA</p>
+<p>anaerobes high-risk patients; procedures, acute cholecystitis, common duct</p>
+<p>laparoscopic: controversial stones, previous biliary surgery, jaundice, age</p>
+<p>&gt;60 years, obesity, diabetes mellitus)</p>
+<p>Transjugular intrahepatic Enteric gram-negative bacilli, Ceftriaxone 1 g × 1 Longer-acting cephalosporins preferred IA</p>
+<p>portosystemic shunt anaerobes</p>
+<h2>(TIPS)</h2>
+<p>Appendectomy Enteric gram-negative bacilli, Cefoxitin or cefotetan 1 g Second intraoperative dose of cefoxitin may be IA</p>
+<p>anaerobes × 1 or cefazolin 1 g plus required if procedure lasts longer than 3 hours</p>
+<p>metronidazole 1 g × 1</p>
+<p>Colorectal Enteric gram-negative bacilli, Orally: neomycin 1 g + Role of mechanical bowel preparation is IA</p>
+<p>anaerobes erythromycin base 1 g controversial. It is widely used despite</p>
+<p>at 1, 2, and 11 pm 1 day evidence suggesting it may have no effect on</p>
+<p>preoperatively plus SSI or other clinical outcomes</p>
+<p>mechanical bowel</p>
+<p>preparation</p>
+<p>IV: cefoxitin or cefotetan</p>
+<p>1 g × 1 (Continued )</p>
+<p>ch49.indd</p>
+<p>535</p>
+<p>19-11-2020</p>
+<p>21:08:53</p>
+<div class="table-container"><table><tr><th>Type of Operation</th><th>Likely Pathogens</th><th>Recommended
+Prophylaxis Regimena</th><th>Comments</th><th>Grade of
+Recommendationb</th></tr><tr><td>GI surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Gastroduodenal</td><td>Enteric gram-negative bacilli,
+gram-positive cocci, oral
+anaerobes</td><td>Cefazolin 1 g × 1</td><td>High-risk patients only (obstruction, hemorrhage,
+malignancy, acid suppression therapy, morbid
+obesity)</td><td>IA</td></tr><tr><td>Bariatric Surgery</td><td>Enteric gram-negative bacilli,
+gram-positive cocci, oral
+anaerobes</td><td>Cefazolin 2 g × 1</td><td>Intraoperative redosing required for procedures
+longer than 4 hours</td><td>IB</td></tr><tr><td>Cholecystectomy</td><td>Enteric gram-negative bacilli,
+anaerobes</td><td>Cefazolin 1 g × 1 for
+high-risk patients;
+laparoscopic: controversial</td><td>High-risk patients only (open biliary tract
+procedures, acute cholecystitis, common duct
+stones, previous biliary surgery, jaundice, age
+&gt;60 years, obesity, diabetes mellitus)</td><td>IA</td></tr><tr><td>Transjugular intrahepatic
+portosystemic shunt
+(TIPS)</td><td>Enteric gram-negative bacilli,
+anaerobes</td><td>Ceftriaxone 1 g × 1</td><td>Longer-acting cephalosporins preferred</td><td>IA</td></tr><tr><td>Appendectomy</td><td>Enteric gram-negative bacilli,
+anaerobes</td><td>Cefoxitin or cefotetan 1 g
+× 1 or cefazolin 1 g plus
+metronidazole 1 g × 1</td><td>Second intraoperative dose of cefoxitin may be
+required if procedure lasts longer than 3 hours</td><td>IA</td></tr><tr><td>Colorectal</td><td>Enteric gram-negative bacilli,
+anaerobes</td><td>Orally: neomycin 1 g +
+erythromycin base 1 g
+at 1, 2, and 11 pm 1 day
+preoperatively plus
+mechanical bowel
+preparation
+IV: cefoxitin or cefotetan
+1 g × 1</td><td>Role of mechanical bowel preparation is
+controversial. It is widely used despite
+evidence suggesting it may have no effect on
+SSI or other clinical outcomes</td><td>IA
+(Continued )</td></tr></table></div><h2>536 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 49-4 Most Likely Pathogens and Specific Recommendations for Surgical Prophylaxis (Continued )</p>
+<p>Recommended Grade of</p>
+<p>Type of Operation Likely Pathogens Prophylaxis Regimena Comments Recommendationb</p>
+<p>GI endoscopy Variable, depending on Orally: amoxicillin 2 g × 1 Recommended only for high-risk patients IA</p>
+<p>procedure, but typically undergoing high-risk procedures (see the text)</p>
+<p>IV: ampicillin 2 g × 1 or</p>
+<p>enteric gram-negative bacilli,</p>
+<p>cefazolin 1 g × 1</p>
+<p>gram-positive cocci, oral</p>
+<p>anaerobes</p>
+<p>Urologic surgery</p>
+<p>Prostate resection, E. coli Ciprofloxacin 500 mg orally All patients with positive preoperative urine IA–IB</p>
+<p>shock-wave lithotripsy, or cultures should receive a course of antibiotic</p>
+<p>ureteroscopy treatment</p>
+<p>Trimethoprim–</p>
+<p>sulfamethoxazole 1 DS</p>
+<h2>tablet</h2>
+<p>Removal of external urinary E. coli Ciprofloxacin 500 mg orally Should be considered only in patients with risk IB</p>
+<p>catheters, cystography, or factors (see the text)</p>
+<p>urodynamic</p>
+<p>studies, simple Trimethoprim–</p>
+<p>cystourethroscopy sulfamethoxazole 1 DS</p>
+<h2>tablet</h2>
+<p>Gynecological surgery</p>
+<p>Cesarean section Enteric gram-negative bacilli, Cefazolin 2 g × 1 and Antimicrobial administration should be prior to IA</p>
+<p>anaerobes, group B streptococci, azithromycin 500 mg the initial incision as opposed to after umbilical</p>
+<p>enterococci IV × 1 cord clamping</p>
+<p>Hysterectomy Enteric gram-negative bacilli, Vaginal: cefazolin 1 g × 1 Metronidazole 1 g IV × 1 is recommended IA</p>
+<p>anaerobes, group B streptococci, Abdominal: cefotetan 1 g × alternative for penicillin allergy</p>
+<p>enterococci</p>
+<p>1 or cefazolin 1 g × 1</p>
+<p>ch49.indd</p>
+<p>536</p>
+<p>19-11-2020</p>
+<p>21:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 49-4 Most Likely Pathogens and Specific Recommendations for Surgical Prophylaxis (Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Type of Operation</td><td>Likely Pathogens</td><td>Recommended
+Prophylaxis Regimena</td><td>Comments</td><td>Grade of
+Recommendationb</td></tr><tr><td>GI endoscopy</td><td>Variable, depending on
+procedure, but typically
+enteric gram-negative bacilli,
+gram-positive cocci, oral
+anaerobes</td><td>Orally: amoxicillin 2 g × 1
+IV: ampicillin 2 g × 1 or
+cefazolin 1 g × 1</td><td>Recommended only for high-risk patients
+undergoing high-risk procedures (see the text)</td><td>IA</td></tr><tr><td>Urologic surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Prostate resection,
+shock-wave lithotripsy,
+ureteroscopy</td><td>E. coli</td><td>Ciprofloxacin 500 mg orally
+or
+Trimethoprim–
+sulfamethoxazole 1 DS
+tablet</td><td>All patients with positive preoperative urine
+cultures should receive a course of antibiotic
+treatment</td><td>IA–IB</td></tr><tr><td>Removal of external urinary
+catheters, cystography,
+urodynamic
+studies, simple
+cystourethroscopy</td><td>E. coli</td><td>Ciprofloxacin 500 mg orally
+or
+Trimethoprim–
+sulfamethoxazole 1 DS
+tablet</td><td>Should be considered only in patients with risk
+factors (see the text)</td><td>IB</td></tr><tr><td>Gynecological surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Cesarean section</td><td>Enteric gram-negative bacilli,
+anaerobes, group B streptococci,
+enterococci</td><td>Cefazolin 2 g × 1 and
+azithromycin 500 mg
+IV × 1</td><td>Antimicrobial administration should be prior to
+the initial incision as opposed to after umbilical
+cord clamping</td><td>IA</td></tr><tr><td>Hysterectomy</td><td>Enteric gram-negative bacilli,
+anaerobes, group B streptococci,
+enterococci</td><td>Vaginal: cefazolin 1 g × 1
+Abdominal: cefotetan 1 g ×
+1 or cefazolin 1 g × 1</td><td>Metronidazole 1 g IV × 1 is recommended
+alternative for penicillin allergy</td><td>IA</td></tr></table></div><p>537</p>
+<p>Surgical</p>
+<p>Prophylaxis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>49</p>
+<p>Head and neck surgery</p>
+<p>Maxillofacial surgery Staphylococcus aureus, Cefazolin 2 g or clindamycin Repeat intraoperative dose for operations longer IA</p>
+<p>streptococci spp., oral anerobes 600 mg than 4 hours</p>
+<p>Head and neck cancer S. aureus, streptococci spp., oral Clindamycin 600 mg at Add gentamicin for clean–contaminated IA</p>
+<h2>resection anerobes induction and every procedures</h2>
+<p>8 hours × 2 more doses</p>
+<p>Cardiothoracic surgery</p>
+<p>Cardiac surgery S. aureus, S. epidermidis, Cefazolin 1 g every 8 hours Patients &gt;80 kg (&gt;176 lb) should receive 2 g of IA</p>
+<p>Corynebacterium × 48 hours cefazolin instead; in areas with high prevalence</p>
+<p>Intranasal mupirocin of S. aureus resistance, vancomycin should be</p>
+<p>twice daily for 5 days considered</p>
+<p>preoperatively for patients</p>
+<p>colonized with S. aureus</p>
+<p>Thoracic surgery S. aureus, S. epidermidis, Cefuroxime 750 mg IV every First-generation cephalosporins are deemed IA</p>
+<p>Corynebacterium, enteric 8 hours × 48 hours inadequate, and shorter durations of</p>
+<p>gram-negative bacilli prophylaxis have not been adequately studied</p>
+<p>Vascular surgery</p>
+<p>Abdominal aorta and S. aureus, S. epidermidis, enteric Cefazolin 1 g at induction Although complications from infections may be IB</p>
+<p>lower extremity vascular gram-negative bacilli and every 8 hours × 2 infrequent, graft infections are associated with</p>
+<p>surgery more doses significant morbidity</p>
+<p>Orthopedic surgery</p>
+<p>Joint replacement S. aureus, S. epidermidis Cefazolin 1 g × 1 Vancomycin reserved for penicillin-allergic IA</p>
+<p>preoperatively, then every patients or where institutional prevalence of</p>
+<p>8 hours × 2 more doses methicillin-resistant S. aureus warrants use</p>
+<p>Intranasal mupirocin</p>
+<p>twice daily for 5 days</p>
+<p>preoperatively for patients</p>
+<p>(Continued ) colonized with S. aureus</p>
+<p>ch49.indd</p>
+<p>537</p>
+<p>19-11-2020</p>
+<p>21:08:53</p>
+<div class="table-container"><table><tr><th>Head and neck surgery</th><th></th><th></th><th></th><th></th></tr><tr><td>Maxillofacial surgery</td><td>Staphylococcus aureus,
+streptococci spp., oral anerobes</td><td>Cefazolin 2 g or clindamycin
+600 mg</td><td>Repeat intraoperative dose for operations longer
+than 4 hours</td><td>IA</td></tr><tr><td>Head and neck cancer
+resection</td><td>S. aureus, streptococci spp., oral
+anerobes</td><td>Clindamycin 600 mg at
+induction and every
+8 hours × 2 more doses</td><td>Add gentamicin for clean–contaminated
+procedures</td><td>IA</td></tr><tr><td>Cardiothoracic surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Cardiac surgery</td><td>S. aureus, S. epidermidis,
+Corynebacterium</td><td>Cefazolin 1 g every 8 hours
+× 48 hours
+Intranasal mupirocin
+twice daily for 5 days
+preoperatively for patients
+colonized with S. aureus</td><td>Patients &gt;80 kg (&gt;176 lb) should receive 2 g of
+cefazolin instead; in areas with high prevalence
+of S. aureus resistance, vancomycin should be
+considered</td><td>IA</td></tr><tr><td>Thoracic surgery</td><td>S. aureus, S. epidermidis,
+Corynebacterium, enteric
+gram-negative bacilli</td><td>Cefuroxime 750 mg IV every
+8 hours × 48 hours</td><td>First-generation cephalosporins are deemed
+inadequate, and shorter durations of
+prophylaxis have not been adequately studied</td><td>IA</td></tr><tr><td>Vascular surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Abdominal aorta and
+lower extremity vascular
+surgery</td><td>S. aureus, S. epidermidis, enteric
+gram-negative bacilli</td><td>Cefazolin 1 g at induction
+and every 8 hours × 2
+more doses</td><td>Although complications from infections may be
+infrequent, graft infections are associated with
+significant morbidity</td><td>IB</td></tr><tr><td>Orthopedic surgery</td><td></td><td></td><td></td><td></td></tr><tr><td>Joint replacement</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g × 1
+preoperatively, then every
+8 hours × 2 more doses
+Intranasal mupirocin
+twice daily for 5 days
+preoperatively for patients
+colonized with S. aureus</td><td>Vancomycin reserved for penicillin-allergic
+patients or where institutional prevalence of
+methicillin-resistant S. aureus warrants use</td><td>IA
+(Continued )</td></tr></table></div><h2>538 SECTION</h2>
+<p>8</p>
+<p>|</p>
+<p>Infectious</p>
+<p>Diseases</p>
+<p>TABLE 49-4 Most Likely Pathogens and Specific Recommendations for Surgical Prophylaxis (Continued )</p>
+<p>Recommended Grade of</p>
+<p>Type of Operation Likely Pathogens Prophylaxis Regimena Comments Recommendationb</p>
+<p>Hip fracture repair S. aureus, S. epidermidis Cefazolin 1 g × 1 Compound fractures are treated as if infection is IA</p>
+<p>preoperatively, then every presumed</p>
+<p>8 hours for 48 hours</p>
+<p>Open/Compound fractures S. aureus, S. epidermidis, Cefazolin 1 g × 1 Gram-negative coverage (ie, gentamicin) often IA</p>
+<p>gram-negative bacilli, preoperatively, then every indicated for severe open fractures</p>
+<p>polymicrobial 8 hours for a course of</p>
+<p>presumed infection</p>
+<p>Neurosurgery</p>
+<p>CSF shunt procedures S. aureus, S. epidermidis Cefazolin 1 g every 8 hours No agents have been shown to be better than IA</p>
+<p>× 3 doses or ceftriaxone cefazolin in randomized comparative trials</p>
+<p>2 g × 1</p>
+<p>Spinal surgery S. aureus, S. epidermidis Cefazolin 1 g × 1 Limited number of clinical trials comparing IB</p>
+<p>different treatment regimens</p>
+<p>CSF shunt procedures S. aureus, S. epidermidis Cefazolin 1 g every 8 hours No agents have been shown to be better than IA</p>
+<p>× 3 doses or ceftriaxone cefazolin in randomized comparative trials</p>
+<p>2 g × 1</p>
+<p>Craniotomy S. aureus, S. epidermidis Cefazolin 1 g × 1 or Vancomycin 1 g IV × 1 can be substituted for IA</p>
+<p>cefotaxime 1 g × 1 patients with penicillin allergy</p>
+<p>aOne-time doses are optimally infused at induction of anesthesia except as noted. Repeat doses may be required for long procedures. See the text for references.</p>
+<p>bStrength of recommendations: Category IA: Strongly recommended and supported by well-designed experimental, clinical, or epidemiologic studies. Category IB: Strongly recommended</p>
+<p>and supported by some experimental, clinical, or epidemiologic studies and strong theoretical rationale. Category II: Suggested and supported by suggestive clinical or epidemiologic</p>
+<p>studies or theoretical rationale.</p>
+<p>CSF, cerebrospinal fluid; DS, double strength.</p>
+<p>ch49.indd</p>
+<p>538</p>
+<p>19-11-2020</p>
+<p>21:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 49-4 Most Likely Pathogens and Specific Recommendations for Surgical Prophylaxis (Continued )
+Recommended Grade of
+Type of Operation Likely Pathogens Prophylaxis Regimena Comments Recommendationb</th><th></th><th></th><th></th><th></th></tr><tr><td>Hip fracture repair</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g × 1
+preoperatively, then every
+8 hours for 48 hours</td><td>Compound fractures are treated as if infection is
+presumed</td><td>IA</td></tr><tr><td>Open/Compound fractures</td><td>S. aureus, S. epidermidis,
+gram-negative bacilli,
+polymicrobial</td><td>Cefazolin 1 g × 1
+preoperatively, then every
+8 hours for a course of
+presumed infection</td><td>Gram-negative coverage (ie, gentamicin) often
+indicated for severe open fractures</td><td>IA</td></tr><tr><td>Neurosurgery</td><td></td><td></td><td></td><td></td></tr><tr><td>CSF shunt procedures</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g every 8 hours
+× 3 doses or ceftriaxone
+2 g × 1</td><td>No agents have been shown to be better than
+cefazolin in randomized comparative trials</td><td>IA</td></tr><tr><td>Spinal surgery</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g × 1</td><td>Limited number of clinical trials comparing
+different treatment regimens</td><td>IB</td></tr><tr><td>CSF shunt procedures</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g every 8 hours
+× 3 doses or ceftriaxone
+2 g × 1</td><td>No agents have been shown to be better than
+cefazolin in randomized comparative trials</td><td>IA</td></tr><tr><td>Craniotomy</td><td>S. aureus, S. epidermidis</td><td>Cefazolin 1 g × 1 or
+cefotaxime 1 g × 1</td><td>Vancomycin 1 g IV × 1 can be substituted for
+patients with penicillin allergy</td><td>IA</td></tr></table></div><h2>Surgical Prophylaxis | CHAPTER 49</h2>
+<li>A cephalosporin with antianaerobic activity, such as cefoxitin or cefotetan, is</li>
+<p>recommended as first-line therapy; however, cefotetan may be superior for longer</p>
+<p>operations because of its longer duration of action.</p>
+<li>Single-dose therapy with cefotetan is adequate. Intraoperative dosing of cefoxitin</li>
+<p>may be required if the procedure extends beyond 3 hours.</p>
+<h2>UROLOGIC PROCEDURES</h2>
+<li>As long as the urine is sterile preoperatively, the risk of SSI after urologic procedures</li>
+<p>is low, and the benefit of prophylactic antibiotics in this setting is controversial. E. coli</p>
+<p>is the most frequently encountered organism.</p>
+<li>Antibiotic prophylaxis is warranted for all patients undergoing transurethral resec-</li>
+<p>tion of the prostate or bladder tumors, shock wave lithotripsy, percutaneous renal</p>
+<p>surgery, or ureteroscopy.</p>
+<h2>• Specific recommendations are listed in Table 49-4.</h2>
+<li>Urologic procedures requiring an abdominal approach such as a nephrectomy or</li>
+<p>cystectomy require prophylaxis appropriate for a clean-contaminated abdominal</p>
+<p>procedure.</p>
+<h2>CESAREAN SECTION</h2>
+<li>Antibiotics are efficacious to prevent SSIs for all women undergoing cesarean section</li>
+<p>regardless of underlying risk factors.</p>
+<li>Cefazolin, 2 g IV, remains the drug of choice. For patients with a β-lactam allergy,</li>
+<h2>preoperative metronidazole is an acceptable alternative.</h2>
+<li>Antimicrobial administration should occur at the time of the initial incision instead</li>
+<p>of at the time of umbilical cord clamping.</p>
+<h2>HYSTERECTOMY</h2>
+<li>Vaginal hysterectomies are associated with a high rate of postoperative infection</li>
+<p>when performed without the benefit of prophylactic antibiotics.</p>
+<li>A single preoperative dose of cefazolin or cefoxitin is recommended for vaginal</li>
+<p>hysterectomy. For patients with β-lactam hypersensitivity, a single preoperative dose</p>
+<p>of metronidazole or doxycycline is effective.</p>
+<li>Abdominal hysterectomy SSI rates are correspondingly lower than vaginal hyster-</li>
+<p>ectomy rates. However, prophylactic antibiotics are still recommended regardless of</p>
+<p>underlying risk factors.</p>
+<li>First-, second-, or third-generation cephalosporins can be used for prophylaxis.</li>
+<h2>HEAD AND NECK SURGERY</h2>
+<li>Use of prophylactic antibiotics during head and neck surgery depends on the proce-</li>
+<p>dure type. Clean procedures, such as thyroidectomy or a simple tooth extraction, are</p>
+<p>associated with low rates of SSI and antimicrobial prophylaxis is not recommended.</p>
+<p>Head and neck procedures involving an incision through a mucosal layer carry a</p>
+<p>high risk of SSI.</p>
+<li>Specific recommendations for prophylaxis are listed in Table 49-4.</li>
+<li>Although typical doses of cefazolin are ineffective for anaerobic infections, the</li>
+<p>recommended 2 g dose produces concentrations high enough to be inhibitory to</p>
+<p>these organisms. A 24-hour duration has been used in most studies, but single-dose</p>
+<p>therapy may also be effective.</p>
+<li>A single dose of clindamycin is adequate for prophylaxis in maxillofacial surgery</li>
+<p>unless the procedure lasts longer than 4 hours, when a second dose should be admin-</p>
+<p>istered intraoperatively. For most head and neck cancer resection surgeries, including</p>
+<p>free-flap reconstruction, 24 hours of clindamycin is appropriate,</p>
+<h2>CARDIAC SURGERY</h2>
+<li>Although most cardiac surgeries are technically clean procedures, prophylactic anti-</li>
+<p>biotics have been shown to lower rates of SSI.</p>
+<p>539</p>
+<p>ch49.indd 539 19-11-2020 21:08:54</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<li>The usual pathogens are skin flora (see Table 49-4) and, rarely, gram-negative enteric</li>
+<p>organisms.</p>
+<li>Risk factors for developing an SSI after cardiac surgery include obesity, renal insuf-</li>
+<p>ficiency, connective tissue disease, reexploration for bleeding, and poorly timed</p>
+<p>administration of antibiotics.</p>
+<li>Cefazolin has been extensively studied and is currently considered the drug of</li>
+<p>choice. Patients weighing more than 80 kg should receive 2 g cefazolin rather than</p>
+<p>1 g. Doses should be administered no earlier than 60 minutes before the first incision</p>
+<p>and no later than the beginning of induction of anesthesia.</p>
+<li>Extending antibiotic administration beyond 48 hours does not lower SSI rates.</li>
+<li>Vancomycin use may be justified in hospitals with a high incidence of SSI with</li>
+<p>MRSA or when sternal wounds are to be explored for possible mediastinitis.</p>
+<h2>NONCARDIAC VASCULAR SURGERY</h2>
+<li>Prophylactic antibiotics are beneficial, especially in procedures involving the abdom-</li>
+<p>inal aorta and the lower extremities.</p>
+<li>Twenty-four hours of prophylaxis with IV cefazolin is adequate. For patients with</li>
+<p>β-lactam allergy, 24 hours of oral ciprofloxacin is effective.</p>
+<h2>ORTHOPEDIC SURGERY</h2>
+<li>Prophylactic antibiotics are beneficial in cases involving implantation of prosthetic</li>
+<p>material (pins, plates, and artificial joints).</p>
+<li>The most likely pathogens mirror those of other clean procedures and include</li>
+<p>staphylococci and, infrequently, gram-negative aerobes.</p>
+<li>Cefazolin is the drug of choice. For hip fracture repairs and joint replacements, it</li>
+<p>should be administered for 24 hours. Vancomycin is not recommended unless a</p>
+<p>patient has a history of β-lactam hypersensitivity or the propensity for MRSA infec-</p>
+<p>tion at the institution necessitates its use.</p>
+<h2>NEUROSURGERY</h2>
+<li>The use of prophylactic antibiotics in neurosurgery is controversial.</li>
+<li>Single doses of cefazolin appear to lower SSI risk after craniotomy.</li>
+<p>See Chapter 141, Antimicrobial Prophylaxis in Surgery, authored by Salmaan Kanji, for a</p>
+<p>more detailed discussion of this topic.</p>
+<p>540</p>
+<p>ch49.indd 540 19-11-2020 21:08:54</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

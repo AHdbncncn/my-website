@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>73. Acid–Base Disorders</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>73. Acid–Base Disorders</h1>
+        </header>
+        <main>
+            <h2>SECTION 14</h2>
+<h2>RENAL DISORDERS</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>73</p>
+<p>Acid–Base Disorders</p>
+<p>855</p>
+<h2>RETPAHC</h2>
+<li>Acid–base disorders are caused by disturbances in hydrogen ion (H+) homeosta-</li>
+<p>sis, which is ordinarily maintained by extracellular buffering, renal regulation of</p>
+<p>hydrogen ion and bicarbonate excretion, and ventilatory regulation of carbon dioxide</p>
+<p>(CO) elimination.</p>
+<p>2</p>
+<h2>GENERAL PRINCIPLES</h2>
+<li>Buffering refers to the ability of a solution to resist change in pH after the addition of</li>
+<p>a strong acid or base. The body’s principal extracellular buffer system is the carbonic</p>
+<p>acid/bicarbonate (HCO/HCO−) system.</p>
+<li>Most of the body’s 2 acid 3 produ 3 ction is in the form of CO and is produced from</li>
+<p>2</p>
+<p>catabolism of carbohydrates, proteins, and lipids.</p>
+<li>There are four primary types of acid–base disturbances, which can occur indepen-</li>
+<p>dently or together as a compensatory response.</p>
+<li>Metabolic acid–base disorders are caused by changes in plasma bicarbonate con-</li>
+<p>centration (HCO−). Metabolic acidosis is characterized by decreased HCO−, and</p>
+<p>3 3</p>
+<p>metabolic alkalosis is characterized by increased HCO−.</p>
+<li>Respiratory acid–base disorders are caused by altered 3 alveolar ventilation, produc-</li>
+<p>ing changes in arterial carbon dioxide tension (PaCO). Respiratory acidosis is</p>
+<p>2</p>
+<p>characterized by increased PaCO, whereas respiratory alkalosis is characterized by</p>
+<p>2</p>
+<p>decreased PaCO.</p>
+<p>2</p>
+<h2>DIAGNOSIS</h2>
+<li>Blood gases (Table 73-1), serum electrolytes, medical history, and clinical condi-</li>
+<p>tion are the primary tools for determining the cause of acid–base disorders and for</p>
+<p>designing therapy.</p>
+<li>Arterial blood gases (ABGs) are measured to determine oxygenation and acid–base</li>
+<p>status (Figure 73-1). Low pH values (&lt;7.35) indicate acidemia, whereas high values</p>
+<p>(&gt;7.45) indicate alkalemia. The PaCO value helps determine whether there is a</p>
+<p>2</p>
+<p>primary respiratory abnormality, whereas the HCO− concentration helps determine</p>
+<p>3</p>
+<p>whether there is a primary metabolic abnormality. Steps in acid–base diagnosis</p>
+<p>and interpretation based on observed compensatory responses are described in</p>
+<h2>Tables 73-2 and 73-3, respectively.</h2>
+<p>Metabolic Acidosis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Metabolic acidosis is characterized by a decrease in pH as a result of a primary decrease</li>
+<p>in serum HCO− concentration, which can result from the buffering of an exogenous</p>
+<p>3</p>
+<p>acid (consumption of HCO−), accumulation of an organic acid because of a metabolic</p>
+<p>3</p>
+<p>disturbance (eg, lactic acid and ketoacids), loss of bicarbonate-rich body fluids (eg,</p>
+<p>diarrhea, biliary drainage, or pancreatic fistula), or progressive accumulation of endog-</p>
+<pre><code>enous acids secondary to impaired kidney function (eg, phosphates and sulfates).</code></pre>
+<p>Rapid administration of non–alkali-containing IV fluids can cause dilutional acidosis.</p>
+<p>CH73.indd 855 20-11-2020 12:45:49</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>73</th><th>3</th><th>Acid–Base Disorders</th></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<h2>TABLE 73-1 Normal Blood Gas Values</h2>
+<p>Arterial Blood Mixed Venous Blood</p>
+<p>pH 7.40 (7.35–7.45) 7.38 (7.33–7.43)</p>
+<p>PO 80–100 mm Hg (10.6–13.3 kPa) 35–40 mm Hg (4.7–5.3 kPa)</p>
+<p>2</p>
+<p>SaO 95% (0.95) 70–75% (0.70–0.75)</p>
+<p>2</p>
+<p>PCO 35–45 mm Hg (4.7–6.0 kPa) 45–51 mm Hg (6.0–6.8 kPa)</p>
+<p>2</p>
+<p>HCO– 22–26 mEq/L (mmol/L) 24–28 mEq/L (mmol/L)</p>
+<p>3</p>
+<p>HCO–, bicarbonate; PCO, partial pressure of carbon dioxide; PO, partial pressure of oxygen;</p>
+<p>3 2 2</p>
+<p>SaO, saturation of arterial oxygen.</p>
+<p>2</p>
+<h2>TABLE 73-2 Steps in Acid–Base Diagnosis</h2>
+<p>1. Obtain ABGs and electrolytes simultaneously</p>
+<p>2. Compare [HCO–] on ABG and electrolytes to verify accuracy</p>
+<p>3</p>
+<p>3. Calculate SAG</p>
+<p>4. Is acidemia (pH &lt;7.35) or alkalemia (pH &gt;7.45) present?</p>
+<p>5. Is the primary abnormality respiratory (alteration in PaCO) or metabolic</p>
+<p>2</p>
+<p>(alteration in HCO)?</p>
+<p>3</p>
+<h2>6. Estimate compensatory response (Table 73-3)</h2>
+<p>7. Compare change in [Cl–] with change in [Na+]</p>
+<p>ABG, arterial blood gases; [Cl–], chloride ion concentration; [HCO–], bicarbonate concentration; [Na+], sodium</p>
+<p>3</p>
+<p>ion concentration; PaCO, partial pressure of carbon dioxide from arterial blood; SAG, serum anion gap.</p>
+<p>2</p>
+<li>Serum anion gap (SAG) can be used to infer whether an organic or mineral acidosis</li>
+<p>is present. SAG is calculated as follows:</p>
+<p>SAG=[Na+]−[Cl−]−[HCO−]</p>
+<p>3</p>
+<p>The normal anion gap is approximately 9 mEq/L (mmol/L), with a range of 3–11</p>
+<p>mEq/L (mmol/L). SAG is a relative rather than an absolute indication of the cause of</p>
+<p>metabolic acidosis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Chronic metabolic acidosis is relatively asymptomatic; major manifestations are bone</li>
+<p>demineralization with the development of rickets in children and osteomalacia and</p>
+<p>osteopenia in adults.</p>
+<li>Acute severe metabolic acidemia (pH <7.2) involves the cardiovascular, respiratory,</li>
+<p>and central nervous systems. Hyperventilation is often the first sign of metabolic aci-</p>
+<p>dosis. Respiratory compensation may occur as Kussmaul respirations (ie, deep, rapid</p>
+<p>respirations characteristic of diabetic ketoacidosis).</p>
+<li>The compensatory response for metabolic acidosis is to increase CO excretion by</li>
+<p>2</p>
+<p>increasing the respiratory rate.</p>
+<h2>TREATMENT</h2>
+<li>The primary treatment is to correct the underlying disorder. Additional treatment</li>
+<p>depends on the severity and onset of acidosis.</p>
+<li>Manage asymptomatic patients with mild to moderate acidemia (HCO− 12–20</li>
+<p>3</p>
+<p>mEq/L [mmol/L]; pH 7.2–7.4) with gradual correction of the acidemia over days</p>
+<p>to weeks using oral sodium bicarbonate or other alkali preparations (Table 73-4).</p>
+<p>856</p>
+<p>CH73.indd 856 20-11-2020 12:45:51</p>
+<div class="table-container"><table><tr><th>TABLE 73-1 Normal Blood Gas Values</th><th></th><th></th></tr><tr><td></td><td>Arterial Blood</td><td>Mixed Venous Blood</td></tr><tr><td>pH</td><td>7.40 (7.35–7.45)</td><td>7.38 (7.33–7.43)</td></tr><tr><td>PO
+2</td><td>80–100 mm Hg (10.6–13.3 kPa)</td><td>35–40 mm Hg (4.7–5.3 kPa)</td></tr><tr><td>SaO
+2</td><td>95% (0.95)</td><td>70–75% (0.70–0.75)</td></tr><tr><td>PCO
+2</td><td>35–45 mm Hg (4.7–6.0 kPa)</td><td>45–51 mm Hg (6.0–6.8 kPa)</td></tr><tr><td>HCO–
+3</td><td>22–26 mEq/L (mmol/L)</td><td>24–28 mEq/L (mmol/L)</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 73-2 Steps in Acid–Base Diagnosis</th></tr><tr><td>1. Obtain ABGs and electrolytes simultaneously
+2. Compare [HCO–] on ABG and electrolytes to verify accuracy
+3
+3. Calculate SAG
+4. Is acidemia (pH &lt;7.35) or alkalemia (pH &gt;7.45) present?
+5. Is the primary abnormality respiratory (alteration in PaCO) or metabolic
+2
+(alteration in HCO)?
+3
+6. Estimate compensatory response (Table 73-3)
+7. Compare change in [Cl–] with change in [Na+]</td></tr></table></div><p>857</p>
+<p>Acid–Base</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>73</p>
+<p>pH</p>
+<p>&lt;7.35 7.35–7.45 &gt;7.45</p>
+<p>Acidemia Normal Alkalemia</p>
+<p>or</p>
+<p>compensated</p>
+<p>↑ PaCO 2 Primary ↓ HCO− 3 diso o r r der ↓ PaCO 2 Primary ↑ HCO− 3</p>
+<p>mixed disorder</p>
+<p>Respiratory Metabolic Respiratory Metabolic</p>
+<p>acidosis acidosis alkalosis alkalosis</p>
+<p>(HCO−, bicarbonate; PaCO, partial pressure of carbon dioxide.) 3 2</p>
+<h2>FIGURE 73-1. Analysis of arterial blood gases.</h2>
+<p>CH73.indd</p>
+<p>857</p>
+<p>20-11-2020</p>
+<p>12:45:51</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<p>TABLE 73-3 Guidelines for Interpretation of Acid–Base Disorders Based on Compensatory</p>
+<p>Responses</p>
+<p>Acidosis Compensation</p>
+<p>Metabolic PaCO (in mm Hg) should decrease by 1.3 times the fall in plasma</p>
+<p>2</p>
+<p>[HCO–] (in mEq/L or mmol/L)</p>
+<p>3</p>
+<p>Acute respiratory The plasma [HCO–] should increase by 0.1 times the increase in</p>
+<p>3</p>
+<p>PaCO ± 3 (in mm Hg)</p>
+<p>2</p>
+<p>Chronic respiratory The plasma [HCO–] should increase by 0.35 times the increase in</p>
+<p>3</p>
+<p>PaCO ± 4 (in mm Hg)</p>
+<p>2</p>
+<p>Alkalosis Compensation</p>
+<p>Metabolic PaCO (in mm Hg) should increase by 0.4–0.6 times the rise in</p>
+<p>2</p>
+<p>plasma [HCO–] (in mEq/L or mmol/L)</p>
+<p>3</p>
+<p>Acute respiratory The plasma [HCO–] should decrease by 0.2 times the decrease in</p>
+<p>3</p>
+<p>PaCO (in mm Hg), but usually not to &lt;18 mEq/L (mmol/L)</p>
+<p>2</p>
+<p>Chronic respiratory The plasma [HCO–] should fall by 0.35 times the decrease in PaCO</p>
+<p>3 2</p>
+<p>(in mm Hg), but usually not to &lt;14 mEq/L (mmol/L)</p>
+<p>[HCO–], bicarbonate concentration; PaCO, partial pressure of carbon dioxide from arterial blood;</p>
+<p>3 2</p>
+<p>multiply values expressed in kPa by 7.519 to convert to mm Hg.</p>
+<li>The dose of bicarbonate can be calculated as follows:</li>
+<p>Loadingdose(mEqormmol/L)=(V HCO−×bodyweight)×</p>
+<p>d 3</p>
+<p>(desired[HCOO−]−current[HCO−],</p>
+<p>3 3</p>
+<p>where V HCO− is the volume of distribution of HCO− (0.5 L/kg).</p>
+<p>d 3 3</p>
+<li>Intravenous alkali therapy can be used to treat patients with acute severe metabolic</li>
+<p>acidosis due to hyperchloremic acidosis, but its role is controversial in patients with</p>
+<p>lactic acidosis. Therapeutic options include sodium bicarbonate and historically,</p>
+<p>tromethamine, which is no longer available in the United States.</p>
+<li>Sodium bicarbonate is recommended to raise arterial pH to 7.2. However, an open-</li>
+<p>label, multicenter, controlled trial found that sodium bicarbonate administration did</p>
+<p>not reduce mortality at 28 days compared with no sodium bicarbonate administra-</p>
+<p>tion. If IV sodium bicarbonate is administered, the goal is to increase, not normalize,</p>
+<p>pH to 7.2 and HCO− to 8–10 mEq/L (mmol/L).</p>
+<p>3</p>
+<p>Metabolic Alkalosis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Metabolic alkalosis is initiated by increased pH and HCO−, which can result from</li>
+<p>3</p>
+<p>loss of hydrogen ions via the gastrointestinal (GI) tract (eg, nasogastric suctioning,</p>
+<p>vomiting) or kidneys (eg, diuretics, Cushing syndrome) or from gain of bicarbonate</p>
+<p>(eg, administration of bicarbonate, acetate, lactate, or citrate).</p>
+<li>Metabolic alkalosis is maintained by abnormal renal function that prevents the</li>
+<p>kidneys from excreting excess bicarbonate.</p>
+<p>858</p>
+<p>CH73.indd 858 20-11-2020 12:45:52</p>
+<div class="table-container"><table><tr><th>TABLE 73-3 Guidelines for Interpretation of Acid–Base Disorders Based on Compensatory
+Responses</th><th></th></tr><tr><td>Acidosis</td><td>Compensation</td></tr><tr><td>Metabolic</td><td>PaCO (in mm Hg) should decrease by 1.3 times the fall in plasma
+2
+[HCO–] (in mEq/L or mmol/L)
+3</td></tr><tr><td>Acute respiratory</td><td>The plasma [HCO–] should increase by 0.1 times the increase in
+3
+PaCO ± 3 (in mm Hg)
+2</td></tr><tr><td>Chronic respiratory</td><td>The plasma [HCO–] should increase by 0.35 times the increase in
+3
+PaCO ± 4 (in mm Hg)
+2</td></tr><tr><td>Alkalosis</td><td>Compensation</td></tr><tr><td>Metabolic</td><td>PaCO (in mm Hg) should increase by 0.4–0.6 times the rise in
+2
+plasma [HCO–] (in mEq/L or mmol/L)
+3</td></tr><tr><td>Acute respiratory</td><td>The plasma [HCO–] should decrease by 0.2 times the decrease in
+3
+PaCO (in mm Hg), but usually not to &lt;18 mEq/L (mmol/L)
+2</td></tr><tr><td>Chronic respiratory</td><td>The plasma [HCO–] should fall by 0.35 times the decrease in PaCO
+3 2
+(in mm Hg), but usually not to &lt;14 mEq/L (mmol/L)</td></tr></table></div><p>859</p>
+<p>Acid–Base</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>73</p>
+<p>TABLE 73-4 Therapeutic Alternatives for Oral Alkali Replacement</p>
+<p>Generic Name Trade Name(s) Milliequivalents of Alkali Dosage Form(s) Comment</p>
+<p>Shohl’s solution (sodium citrate/ Bicitra (Willen) 1 mEq Na/mL; equivalent to Solution (500 mg Na citrate, Citrate preparations increase absorption</p>
+<p>citric acid) 1 mEq bicarbonate 334 mg citric acid/5 mL) of aluminum</p>
+<p>Sodium bicarbonate Various (eg, Sodamint) 3.9 mEq bicarbonate/tablet 325 mg tablet Bicarbonate preparations can cause</p>
+<p>(325 mg) bloating because of CO production</p>
+<p>2</p>
+<h2>7.8 mEq bicarbonate/tablet (650 mg) 650 mg tablet</h2>
+<p>Baking soda (various) 60 mEq bicarbonate/tsp (5 g/tsp) Powder</p>
+<p>Potassium citrate Urocit-K (Mission) 5 mEq citrate/tablet 5 mEq tablet Citrate preparations increase absorption</p>
+<p>of aluminum</p>
+<p>Potassium bicarbonate/ K-Lyte (Bristol) 25 mEq bicarbonate/tablet 25 mEq tablet (effervescent) Citrate preparations increase absorption</p>
+<p>potassium citrate of aluminum, while bicarbonate</p>
+<p>preparations can cause bloating</p>
+<p>K-Lyte DS (Bristol) 50 mEq bicarbonate/tablet 50 mEq tablet (effervescent)</p>
+<p>(double strength)</p>
+<p>Potassium citrate/citric acid Polycitra-K (Willen) 2 mEq K/mL; equivalent to 2 mEq Solution (1,100 mg K citrate, Citrate preparations increase absorption</p>
+<p>bicarbonate 334 mg citric acid/5 mL) of aluminum</p>
+<p>30 mEq bicarbonate/unit dose Crystals for reconstitution</p>
+<p>packet (3,300 mg K citrate, 1,002 mg</p>
+<p>citric acid/unit dose packet)</p>
+<p>Sodium citrate/ Polycitra (Willen) 1 mEq K, 1 mEq Na/mL; Syrup (Polycitra); solution Citrate preparations increase absorption</p>
+<p>potassium citrate/citric acid Polycitra-LC (Willen) equivalent to 2 mEq (Polycitra-LC) (both contain of aluminum</p>
+<p>bicarbonate 550 mg K citrate, 500 mg Na</p>
+<p>citrate, 334 mg citric acid/5 mL)</p>
+<p>CH73.indd</p>
+<p>859</p>
+<p>20-11-2020</p>
+<p>12:45:52</p>
+<div class="table-container"><table><tr><th>TABLE 73-4 Therapeutic Alternatives for Oral Alkali Replacement</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Trade Name(s)</td><td>Milliequivalents of Alkali</td><td>Dosage Form(s)</td><td>Comment</td></tr><tr><td>Shohl’s solution (sodium citrate/
+citric acid)</td><td>Bicitra (Willen)</td><td>1 mEq Na/mL; equivalent to
+1 mEq bicarbonate</td><td>Solution (500 mg Na citrate,
+334 mg citric acid/5 mL)</td><td>Citrate preparations increase absorption
+of aluminum</td></tr><tr><td>Sodium bicarbonate</td><td>Various (eg, Sodamint)</td><td>3.9 mEq bicarbonate/tablet
+(325 mg)</td><td>325 mg tablet</td><td>Bicarbonate preparations can cause
+bloating because of CO production
+2</td></tr><tr><td></td><td></td><td>7.8 mEq bicarbonate/tablet (650 mg)</td><td>650 mg tablet</td><td></td></tr><tr><td></td><td>Baking soda (various)</td><td>60 mEq bicarbonate/tsp (5 g/tsp)</td><td>Powder</td><td></td></tr><tr><td>Potassium citrate</td><td>Urocit-K (Mission)</td><td>5 mEq citrate/tablet</td><td>5 mEq tablet</td><td>Citrate preparations increase absorption
+of aluminum</td></tr><tr><td>Potassium bicarbonate/
+potassium citrate</td><td>K-Lyte (Bristol)</td><td>25 mEq bicarbonate/tablet</td><td>25 mEq tablet (effervescent)</td><td>Citrate preparations increase absorption
+of aluminum, while bicarbonate
+preparations can cause bloating</td></tr><tr><td></td><td>K-Lyte DS (Bristol)</td><td>50 mEq bicarbonate/tablet
+(double strength)</td><td>50 mEq tablet (effervescent)</td><td></td></tr><tr><td>Potassium citrate/citric acid</td><td>Polycitra-K (Willen)</td><td>2 mEq K/mL; equivalent to 2 mEq
+bicarbonate</td><td>Solution (1,100 mg K citrate,
+334 mg citric acid/5 mL)</td><td>Citrate preparations increase absorption
+of aluminum</td></tr><tr><td></td><td></td><td>30 mEq bicarbonate/unit dose
+packet</td><td>Crystals for reconstitution
+(3,300 mg K citrate, 1,002 mg
+citric acid/unit dose packet)</td><td></td></tr><tr><td>Sodium citrate/
+potassium citrate/citric acid</td><td>Polycitra (Willen)
+Polycitra-LC (Willen)</td><td>1 mEq K, 1 mEq Na/mL;
+equivalent to 2 mEq
+bicarbonate</td><td>Syrup (Polycitra); solution
+(Polycitra-LC) (both contain
+550 mg K citrate, 500 mg Na
+citrate, 334 mg citric acid/5 mL)</td><td>Citrate preparations increase absorption
+of aluminum</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>No unique signs or symptoms are associated with mild to moderate metabolic</li>
+<p>alkalosis. Some patients complain of symptoms related to the underlying disorder</p>
+<p>(eg, muscle weakness with hypokalemia or postural dizziness with volume depletion)</p>
+<p>or have a history of vomiting, gastric drainage, or diuretic use.</p>
+<li>Severe alkalemia (pH >7.60) can be associated with cardiac arrhythmias and neuro-</li>
+<p>muscular irritability.</p>
+<li>The compensatory response to metabolic alkalosis is respiratory, manifested as</li>
+<p>hypoventilation which increases PaCO.</p>
+<p>2</p>
+<h2>TREATMENT</h2>
+<li>Treatment is aimed at correcting the factor(s) responsible for maintaining the alka-</li>
+<p>losis and depends on whether the disorder is sodium chloride responsive or resistant</p>
+<h2>(Figure 73-2).</h2>
+<p>Respiratory Alkalosis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Respiratory alkalosis is characterized by a decrease in PaCO that leads to an increase</li>
+<p>2</p>
+<p>in pH.</p>
+<li>PaCO decreases when ventilatory CO excretion exceeds metabolic CO production,</li>
+<p>2 2 2</p>
+<p>usually because of hyperventilation.</p>
+<li>Causes include increases in neurochemical stimulation via central or peripheral</li>
+<p>mechanisms, or physical increases in ventilation via voluntary or artificial means (eg,</p>
+<p>mechanical ventilation).</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Although usually asymptomatic, respiratory alkalosis can cause adverse neuromus-</li>
+<p>cular, cardiovascular, and GI effects.</p>
+<li>Light-headedness, confusion, decreased intellectual functioning, syncope, and</li>
+<p>seizures can be caused by decreased cerebral blood flow.</p>
+<li>Nausea and vomiting can occur, probably due to cerebral hypoxia.</li>
+<li>Cardiac arrhythmias can occur in severe respiratory alkalosis.</li>
+<li>Serum electrolytes can be altered; serum chloride is usually increased; serum</li>
+<p>potassium, phosphorus, and ionized calcium are usually decreased.</p>
+<li>The initial compensatory response is to chemically buffer excess bicarbonate by</li>
+<p>releasing hydrogen ions from intracellular proteins, phosphates, and hemoglobin.</p>
+<p>If prolonged (&gt;6 hours), the kidneys attempt to further compensate by increasing</p>
+<p>bicarbonate elimination.</p>
+<h2>TREATMENT</h2>
+<li>Treatment is often unnecessary because most patients have few symptoms and only</li>
+<p>mild pH alterations (ie, pH not exceeding 7.50).</p>
+<li>Direct measures (eg, treatment of pain, hypovolemia, fever, infection, or salicylate</li>
+<p>overdose) can be effective. A rebreathing device (eg, paper bag) can help control</p>
+<p>hyperventilation in patients with anxiety/hyperventilation syndrome.</p>
+<li>Correct respiratory alkalosis associated with mechanical ventilation by decreasing</li>
+<p>the number of mechanical breaths per minute, using a capnograph and spirometer</p>
+<p>to adjust ventilator settings more precisely, or increasing dead space in the ventilator</p>
+<p>circuit.</p>
+<p>860</p>
+<p>CH73.indd 860 20-11-2020 12:45:52</p>
+<p>861</p>
+<p>Acid–Base</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>73</p>
+<p>Metabolic alkalosis</p>
+<p>Sodium chloride Sodium chloride resistant</p>
+<p>responsive, pH &lt;7.60 or unclassified, pH &lt;7.60</p>
+<p>A po ce ta t m a s z s g o iu l Q a m m D i i f o d K r e B P &lt; I O 3 D . 5 2 p 5 m lu 0 s E – q 3 / 7 L 5 Asse a s n s d in c t h ra lo v r a i s d c e u s la to r r v e o s lume r G ep iv le e t n e o c r h m lo a r l i d s e a l s in to e r t e o s Exogenou th s e c r o a r p t y icosteroid Yes m De in c e r r e to a a l s o o e c n o d e r o w t s ic i e t o h o i d r le a c s c h s t a iv n i g ty e</p>
+<p>No</p>
+<p>Increased intravascular Decreased • Excess alkali intake</p>
+<p>volume or sodium intolerant intravascular volume • Glucose ingestion Yes</p>
+<p>after starvation Adjust therapeutic regimen</p>
+<li>High-dose penicillin</li>
+<p>therapy</p>
+<p>Persistent alkalosis or No</p>
+<p>initial pH &gt;7.60</p>
+<p>Profound potassium Yes Oral or IV potassium</p>
+<p>depletion, K &lt;3 mEq/L supplementation</p>
+<li>Hydrochloric acid • Spironolactone</li>
+<p>– Preferred for those with • Amiloride No</p>
+<p>renal failure, liver failure, • Triamterene Yes</p>
+<p>Endogenous</p>
+<p>or decompensated CHF mineralocorticoid</p>
+<li>Alternatives: If no response, excess (eg, Bartter or</li>
+<p>– Ammonium chloride consider surgery Gitelman syndrome)</p>
+<p>– Arginine No</p>
+<p>monohydrochloride Yes Start amiloride or</p>
+<p>Liddle syndrome triamterene</p>
+<p>(BID, twice daily; CHF, congestive heart failure; K, potassium [serum potassium in mEq/L is numerically equal to mmol/L]; PO, orally; QD, every day.)</p>
+<p>FIGURE 73-2. Treatment algorithm for patients with primary metabolic alkalosis.</p>
+<p>CH73.indd</p>
+<p>861</p>
+<p>20-11-2020</p>
+<p>12:45:53</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<p>Respiratory Acidosis</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Respiratory acidosis is characterized by an increase in PaCO and a decrease in pH.</li>
+<li>Respiratory acidosis results from disorders that restrict vent 2 ilation or increase CO</li>
+<p>2</p>
+<p>production, airway and pulmonary abnormalities, neuromuscular abnormalities, or</p>
+<p>mechanical ventilator problems.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Neuromuscular symptoms include altered mental status, abnormal behavior, seizures,</li>
+<p>stupor, and coma. Hypercapnia can mimic a stroke or CNS tumor by producing head-</p>
+<p>ache, papilledema, focal paresis, and abnormal reflexes. CNS symptoms are caused by</p>
+<p>increased cerebral blood flow and are variable, depending in part on the acuity of onset.</p>
+<li>Initial compensatory response to acute respiratory acidosis is chemical buffering. If</li>
+<p>prolonged (&gt;12–24 hours), proximal tubular HCO− reabsorption, ammoniagenesis,</p>
+<p>3</p>
+<p>and distal tubular H+ secretion are enhanced, resulting in an increase in serum</p>
+<p>HCO− concentration that raises pH to normal.</p>
+<p>3</p>
+<h2>TREATMENT</h2>
+<li>Provide adequate ventilation if CO excretion is acutely and severely impaired</li>
+<p>2</p>
+<p>(PaCO &gt;80 mm Hg [&gt;10.6 kPa]) or if life-threatening hypoxia is present (arterial</p>
+<p>2</p>
+<p>oxygen tension [PaO] &lt;40 mm Hg [&lt;5.3 kPa]). Ventilation can include maintaining</p>
+<p>2</p>
+<p>a patent airway (eg, emergency tracheostomy, bronchoscopy, or intubation), clearing</p>
+<p>excessive secretions, administering oxygen, and providing mechanical ventilation.</p>
+<li>Treat underlying cause aggressively (eg, administration of bronchodilators for bron-</li>
+<p>chospasm; narcotic or benzodiazepine antagonists to reverse effect of these agents</p>
+<p>on the respiratory center). Bicarbonate administration is rarely necessary and is</p>
+<p>potentially harmful.</p>
+<li>Chronic respiratory acidosis (eg, chronic obstructive pulmonary disease [COPD]) is</li>
+<p>treated essentially the same as acute respiratory acidosis with a few important exceptions.</p>
+<p>Oxygen therapy should be initiated carefully and only if the PaO is less than 50 mm Hg</p>
+<p>2</p>
+<p>(6.7 kPa) because the drive to breathe depends on hypoxemia rather than hypercarbia.</p>
+<li>For information on chronic respiratory acidosis, see Chapter 79.</li>
+<p>Mixed Acid–Base Disorders</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Failure of compensation is responsible for mixed acid–base disorders such as respira-</li>
+<p>tory acidosis and metabolic acidosis, or respiratory alkalosis and metabolic alkalosis.</p>
+<p>In contrast, excess compensation is responsible for metabolic acidosis and respiratory</p>
+<p>alkalosis, or metabolic alkalosis and respiratory acidosis.</p>
+<li>Respiratory and metabolic acidosis can develop in patients with cardiorespira-</li>
+<p>tory arrest, with chronic lung disease and shock, and with metabolic acidosis and</p>
+<p>respiratory failure.</p>
+<li>The most common mixed acid–base disorder is respiratory and metabolic alkalosis,</li>
+<p>which occurs in critically ill surgical patients with respiratory alkalosis caused by</p>
+<p>mechanical ventilation, hypoxia, sepsis, hypotension, neurologic damage, pain, or</p>
+<p>drugs; and with metabolic alkalosis caused by vomiting or nasogastric suctioning and</p>
+<p>massive blood transfusions.</p>
+<li>Mixed metabolic acidosis and respiratory alkalosis occur in patients with advanced</li>
+<p>liver disease, salicylate intoxication, and pulmonary–renal syndromes.</p>
+<p>862</p>
+<p>CH73.indd 862 20-11-2020 12:45:53</p>
+<h2>Acid–Base Disorders | CHAPTER 73</h2>
+<li>Metabolic alkalosis and respiratory acidosis can occur in patients with COPD and</li>
+<p>respiratory acidosis who are treated with salt restriction, diuretics, and possibly</p>
+<p>glucocorticoids.</p>
+<h2>TREATMENT</h2>
+<li>Treat mixed respiratory and metabolic acidosis by initiating oxygen delivery to</li>
+<p>improve hypercarbia and hypoxia. Mechanical ventilation can be needed to reduce</p>
+<p>PaCO. During initial therapy, give appropriate amounts of alkali to reverse the</p>
+<p>2</p>
+<p>metabolic acidosis.</p>
+<li>Correct the metabolic component of mixed respiratory and metabolic alkalosis by</li>
+<p>administering sodium and potassium chloride solutions. Readjust the ventilator</p>
+<p>or treat the underlying disorder causing hyperventilation to treat the respiratory</p>
+<p>component.</p>
+<li>Treatment of mixed metabolic acidosis and respiratory alkalosis should be directed</li>
+<p>at the underlying cause.</p>
+<li>In metabolic alkalosis and respiratory acidosis, pH does not usually deviate signifi-</li>
+<p>cantly from normal, but treatment can be required to maintain PaO and PaCO at</p>
+<p>2 2</p>
+<p>acceptable levels. Aim treatment at decreasing plasma bicarbonate with sodium and</p>
+<p>potassium chloride therapy, allowing renal excretion of retained bicarbonate from</p>
+<p>diuretic-induced metabolic alkalosis.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor patients closely because acid–base disorders can be serious and even</li>
+<p>life-threatening.</p>
+<li>ABGs are the primary tools for evaluation of therapeutic outcome.</li>
+<p>See Chapter 69, Acid–Base Disorders, authored by John W. Devlin and Thomas D. Nolin,</p>
+<p>for a more detailed discussion of this topic.</p>
+<p>863</p>
+<p>CH73.indd 863 20-11-2020 12:45:53</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

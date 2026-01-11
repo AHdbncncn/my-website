@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. Acne Vulgaris</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>15. Acne Vulgaris</h1>
+        </header>
+        <main>
+            <p>167</p>
+<h2>RETPAHC</h2>
+<h2>SECTION 3</h2>
+<h2>DERMATOLOGIC DISORDERS</h2>
+<p>Edited by Terry L. Schwinghammer</p>
+<p>15</p>
+<p>Acne Vulgaris</p>
+<li>Acne is a chronic skin disease characterized by open or closed comedones and</li>
+<p>inflammatory lesions, including papules, pustules, and nodules (cysts).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Acne usually begins during prepuberty and progresses as androgen production and</li>
+<p>sebaceous gland activity increase with gonad development.</p>
+<li>Acne progresses through four stages: (1) increased sebum production by sebaceous</li>
+<p>glands, (2) Propionibacterium acnes (renamed Cutibacterium acnes) follicular coloni-</p>
+<p>zation (and bacterial lipolysis of sebum triglycerides to free fatty acids), (3) release of</p>
+<p>inflammatory mediators, and (4) increased follicular keratinization.</p>
+<li>Circulating androgens cause sebaceous glands to increase their size and activity.</li>
+<p>There is increased keratinization of epidermal cells and development of an obstructed</p>
+<p>sebaceous follicle, called a microcomedone. Cells adhere to each other, forming a</p>
+<p>dense keratinous plug. Sebum, produced in increasing amounts, becomes trapped</p>
+<p>behind the keratin plug and solidifies, contributing to open or closed comedone</p>
+<p>formation.</p>
+<li>Pooling of sebum in the follicle facilitates proliferation of the anaerobic bacterium</li>
+<p>P. acnes, which generates a T-cell response resulting in inflammation. P. acnes</p>
+<p>produces a lipase that hydrolyzes sebum triglycerides into free fatty acids that may</p>
+<p>increase keratinization and lead to microcomedone formation.</p>
+<li>Noninflammatory acne lesions include closed comedones (whiteheads) and open</li>
+<p>comedones (blackheads). Closed comedones are the first visible lesion in acne; they</p>
+<p>are almost completely obstructed to drainage and have a tendency to rupture. Open</p>
+<p>comedones are formed as the plug extends to the upper canal and dilates its opening.</p>
+<li>Inflammatory acne lesions include papules, pustules, and nodules. Pus formation</li>
+<p>occurs due to recruitment of neutrophils into the follicle during the inflamma-</p>
+<p>tory process and release of P. acnes–generated chemokines. P. acnes also produces</p>
+<p>enzymes that increase permeability of the follicular wall, causing it to rupture,</p>
+<p>thereby releasing keratin, lipids, and irritating free fatty acids into the dermis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Lesions usually occur on the face, back, neck, shoulders, and chest and may extend</li>
+<p>to the buttocks or extremities. One or more anatomic areas may be involved; once</p>
+<p>present, the pattern of involvement tends to remain constant. The skin, scalp, and</p>
+<p>hair are frequently oily.</p>
+<li>Lesions may take months to heal completely. Nodules and deep lesions may result in</li>
+<p>scarring. Resolution of inflammatory lesions may leave erythematous or pigmented</p>
+<p>macules (hyperpigmentation) that persist for months or longer, especially in dark-</p>
+<p>skinned individuals.</p>
+<h2>DIAGNOSIS</h2>
+<li>Diagnosis is established by patient assessment, which includes observation of lesions</li>
+<p>and excluding other potential causes (eg, drug-induced acne). Several different systems</p>
+<p>are in use to grade acne severity.</p>
+<p>ch15.indd 167 18-11-2020 17:42:03</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>1</th><th>5</th><th>Acne Vulgaris</th><th></th></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table></div><h2>SECTION 3 | Dermatologic Disorders</h2>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Reduce the number and severity of lesions, improve appearance,</li>
+<p>slow progression, limit duration and recurrence, prevent disfigurement from scarring</p>
+<p>and hyperpigmentation, and avoid psychologic suffering.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Acne is a chronic disease that warrants early and aggressive treatment (Fig. 15-1).</li>
+<p>Maintenance therapy is often needed for optimal outcomes. Patient adherence to</p>
+<p>lengthy treatment regimens is crucial to long-term control.</p>
+<li>Eliminating follicular occlusion will arrest the acne cascade. Nondrug and pharmaco-</li>
+<p>logic measures should be directed toward cleansing, reducing triggers, and combination</p>
+<p>therapy targeting all four pathogenic mechanisms.</p>
+<li>Combination therapy is often more effective than single therapy and may decrease</li>
+<p>side effects and minimize resistance or tolerance to individual treatments.</p>
+<li>Topical therapy is standard treatment for mild-to-moderate acne, whereas systemic</li>
+<p>therapy is required for moderate-to-severe acne.</p>
+<li>First-, second-, and third-line therapies should be selected and altered as appropriate</li>
+<p>for the severity and staging of the disease. Treatment is directed at control, not cure.</p>
+<p>Regimens should be tapered over time, adjusting to response.</p>
+<li>Combine the smallest number of agents at the lowest possible dosages to ensure effi-</li>
+<p>cacy, safety, avoidance of resistance, and patient adherence. Once control is achieved,</p>
+<p>simplify the regimen but continue with some suppressive therapy.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Encourage patients to avoid aggravating factors (eg, mechanical occlusion, cosmetics),</li>
+<p>maintain a balanced low-glycemic-load diet, and control stress.</p>
+<li>Patients should wash twice daily with a mild, nonfragranced opaque or glycerin soap</li>
+<p>or a soapless cleanser. Scrubbing should be minimized to prevent follicular rupture.</p>
+<li>Males using a safety razor for shaving should soften the beard with soap and warm</li>
+<p>water or shaving gel. Shaving should be done lightly and infrequently, using a sharp</p>
+<p>blade and being careful to avoid nicking lesions. Strokes should be in the direction of</p>
+<p>hair growth, shaving each area only once to minimize irritation.</p>
+<p>Benzoyl peroxide Abnormal Salicylic acid</p>
+<p>Topical/oral keratinization Benzoyl peroxide</p>
+<p>antibiotics of follicle Topical retinoids</p>
+<p>Isotretinoin Isotretinoin</p>
+<p>Acne</p>
+<p>pathogenesis</p>
+<p>P. acnes Abnormal</p>
+<p>proliferation and sebum</p>
+<p>drug</p>
+<p>mechanisms</p>
+<p>Antiandrogens</p>
+<p>Intralesional Isotretinoin</p>
+<p>corticosteroids Topical/oral antibiotics</p>
+<p>Inflammatory</p>
+<p>Oral corticosteroids Corticosteroids</p>
+<p>response</p>
+<p>Topical/oral antibiotics Estrogens</p>
+<p>© Debra Sibbald</p>
+<h2>FIGURE 15-1. Acne pathogenesis and drug mechanisms.</h2>
+<p>168</p>
+<p>ch15.indd 168 18-11-2020 17:42:05</p>
+<h2>Acne Vulgaris | CHAPTER 15</h2>
+<li>Comedone extraction results in immediate cosmetic improvement but has not been</li>
+<p>widely tested in clinical trials.</p>
+<li>Light therapies are believed to work by killing P. acnes and by damaging and shrink-</li>
+<p>ing sebaceous glands, reducing sebum output with few or temporary adverse effects.</p>
+<p>Light therapies may be used once or twice weekly over a course of 6–10 treatments,</p>
+<p>with each irradiation lasting 10–20 minutes. Home-use blue light therapy is now</p>
+<p>available.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Comedonal noninflammatory acne: Select topical agents that target the increased</li>
+<p>keratinization by producing exfoliation. Topical retinoids (especially adapalene) or a</p>
+<p>fixed combination with a retinoid (eg, adapalene plus benzoyl peroxide) are drugs of</p>
+<p>choice. Benzoyl peroxide, azelaic acid, or salicylic acid are second-line alternatives.</p>
+<li>Mild-to-moderate papulopustular inflammatory acne: It is important to reduce the</li>
+<p>population of P. acnes in follicles. Either the fixed-dose combination of adapalene</p>
+<p>plus benzoyl peroxide or benzoyl peroxide, topical retinoid, or azelaic acid are rec-</p>
+<p>ommended as first choice therapy. In moderate papulopustular inflammatory acne,</p>
+<p>the fixed-dose combination is preferred, with or without hormonal therapy and/or</p>
+<p>antibiotic, particularly if the trunk is involved. If there are limitations in use of first-</p>
+<p>choice agents, alternatives include blue light monotherapy, alternate combination</p>
+<p>therapy (such as fixed-dose combination of erythromycin plus tretinoin), or oral zinc.</p>
+<p>In cases of widespread disease, combining an oral antibiotic with topical benzoyl</p>
+<p>peroxide with or without adapalene can be considered.</p>
+<li>Moderately severe or severe papulopustular or moderate nodular acne: An oral antibi-</li>
+<p>otic plus the fixed-dose topical combination is preferred. Alternatively, oral isotreti-</p>
+<p>noin or oral hormonal therapy can be added. If there are limitations to use of these</p>
+<p>agents, consider oral antiandrogens in combination with oral antibiotics or topical</p>
+<p>treatments.</p>
+<li>Nodular or conglobate acne: Monotherapy with oral isotretinoin is first choice. As</li>
+<p>alternatives, a retinoid fixed combination or oral antibiotic can be recommended.</p>
+<p>For females, oral isotretinoin plus antiandrogenic hormonal therapy is preferred.</p>
+<p>Alternatively, a fixed combination retinoid with oral antibiotics and/or an oral anti-</p>
+<p>androgen can be recommended.</p>
+<li>Maintenance acne therapy: A topical retinoid alone or a retinoid plus benzoyl perox-</li>
+<p>ide fixed-dose combination is most commonly recommended. Topical azelaic acid is</p>
+<p>an alternative. Maintenance is usually begun after a 12-week induction period and</p>
+<p>continues for 3–4 months. A longer duration may be necessary to prevent relapse</p>
+<p>upon discontinuation. Long-term therapy with antibiotics is not recommended to</p>
+<p>minimize antibiotic resistance.</p>
+<p>Exfoliants (Peeling Agents)</p>
+<li>Exfoliants induce continuous mild drying and peeling by irritation, damaging super-</li>
+<p>ficial skin layers and inciting inflammation. This stimulates mitosis, thickening the</p>
+<p>epidermis and increasing horny cells, scaling, and erythema. Decreased sweating</p>
+<p>results in a dry, less oily surface and may resolve pustular lesions.</p>
+<li>Resorcinol is less keratolytic than salicylic acid and, when used alone, is classified by</li>
+<p>the Food and Drug Administration (FDA) as category II (not generally recognized as</p>
+<p>safe and effective). The FDA considers resorcinol 2% and resorcinol monoacetate 3%</p>
+<p>to be safe and effective when used in combination with sulfur 3%–8%. Resorcinol is</p>
+<p>an irritant and sensitizer and should not be applied to large areas or on broken skin.</p>
+<p>It produces a reversible dark brown scale on some dark-skinned individuals.</p>
+<li>Salicylic acid is a comedolytic agent available over the counter in 0.5%–2% strengths;</li>
+<p>concentrations between 3% and 6% are keratolytic, softening the horny layer and pro-</p>
+<p>ducing shedding of scales. It has mild antibacterial activity against P. acnes and offers</p>
+<p>slight anti-inflammatory activity at concentrations up to 5%. Salicylic acid is recog-</p>
+<p>nized by the FDA as safe and effective, but it offers no advantages over benzoyl per-</p>
+<p>ALGRAWAoNxidYe or topical retinoids. Salicylic acid products are often used as first-line therapy</p>
+<p>169</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch15.indd 169 18-11-2020 17:42:05</p>
+<h2>SECTION 3 | Dermatologic Disorders</h2>
+<p>for mild acne because of their availability without a prescription in alcohol–detergent</p>
+<p>impregnated pads, washes, bars, and semisolid vehicles. Both wash-off and leave-</p>
+<p>on preparations are well tolerated. Lower concentrations are sometimes combined</p>
+<p>with sulfur to produce an additive keratolytic effect. Concentrations of 5%–10% can</p>
+<p>also be used by prescription, beginning with a low concentration and increasing as</p>
+<p>tolerance develops to the irritation. Salicylic acid is often used when patients cannot</p>
+<p>tolerate topical retinoids because of skin irritation.</p>
+<li>Sulfur is keratolytic and has antibacterial activity. It can quickly resolve pustules</li>
+<p>and papules, mask lesions, and produce irritation that leads to skin peeling. Sulfur is</p>
+<p>used in the precipitated or colloidal form in concentrations of 2%–10%. Although it</p>
+<p>is often combined with salicylic acid or resorcinol to increase effect, use is limited by</p>
+<p>offensive odor and availability of more effective agents.</p>
+<p>Topical Retinoids</p>
+<li>Retinoids reduce obstruction within the follicle and are useful for both comedonal</li>
+<p>and inflammatory acne. They reverse abnormal keratinocyte desquamation and are</p>
+<p>active keratolytics. They inhibit microcomedone formation, decreasing the number</p>
+<p>of mature comedones and inflammatory lesions.</p>
+<li>Topical retinoids are safe, effective, and economical for treating all but the most</li>
+<p>severe cases of acne. They should be the first step in moderate acne, alone or with</p>
+<p>antibiotics and benzoyl peroxide, reverting to retinoids alone for maintenance once</p>
+<p>adequate results are achieved. Combination products containing benzoyl peroxide or</p>
+<p>topical antimicrobials are available.</p>
+<li>Retinoids can produce extended periods of remission if accompanying irritation does</li>
+<p>not impede patient adherence. Side effects of dryness, peeling, erythema, and irrita-</p>
+<p>tion can be mitigated by reduced frequency of application.</p>
+<li>Retinoids should be applied at night, a half hour after cleansing, starting with every</li>
+<p>other night for 1–2 weeks to adjust to irritation. Doses can be increased only after</p>
+<p>4–6 weeks of the lowest concentration and least irritating vehicle. Gels and creams</p>
+<p>are less irritating than solutions.</p>
+<li>Tretinoin (retinoic acid, vitamin A acid) is available in various strengths in creams,</li>
+<p>gels, and pumps. Tretinoin should not be used in pregnant women because of risk</p>
+<p>to the fetus.</p>
+<li>Adapalene (Differin) is the topical retinoid of first choice for both treatment and</li>
+<p>maintenance therapy because it is as effective but less irritating than other topical</p>
+<p>retinoids. Adapalene is available as 0.1% gel (nonprescription for once-daily applica-</p>
+<p>tion by patients age 12 years and older), cream, solution, lotion, and pads. A 0.3% gel</p>
+<p>is also available. It is also available in fixed-dose combinations with benzoyl peroxide</p>
+<p>to increase efficacy over monotherapies.</p>
+<li>Tazarotene (Tazorac) is as effective as adapalene in reducing noninflammatory</li>
+<p>and inflammatory lesion counts when applied half as frequently. Compared with</p>
+<p>tretinoin, it is as effective for comedonal and more effective for inflammatory lesions</p>
+<p>when applied once daily. The product is available as a 0.05% and 0.1% cream or gel</p>
+<p>and a 0.1% foam. Tazarotene is contraindicated in pregnancy.</p>
+<li>Trifarotene (Aklief) was approved in the United States in late 2019 for treatment of</li>
+<p>acne in patients age 9 years and older. The product is available as a 0.005% cream for</p>
+<p>application once daily in the evening.</p>
+<p>Topical Antibacterial Agents</p>
+<li>Benzoyl peroxide is bactericidal to P. acnes and is also mildly comedolytic. It sup-</li>
+<p>presses sebum production and reduces free fatty acids, which are comedogenic and</p>
+<p>trigger inflammation. No resistance has been reported, and addition of benzoyl per-</p>
+<p>oxide to antibiotic therapy improves efficacy and may reduce resistance development.</p>
+<p>✓ Benzoyl peroxide is useful for both noninflammatory and inflammatory acne. It</p>
+<p>has a rapid onset and may decrease the number of inflamed lesions within 5 days.</p>
+<p>Used alone or in combination, benzoyl peroxide is the standard of care for mild-</p>
+<p>to-moderate papulopustular acne. It is an agent of first choice when combined</p>
+<p>170</p>
+<p>ch15.indd 170 18-11-2020 17:42:06</p>
+<h2>Acne Vulgaris | CHAPTER 15</h2>
+<p>with adapalene for most patients with mild-to-moderate inflammatory acne and a</p>
+<p>second-line choice for patients with noninflammatory comedonal acne. It is often</p>
+<p>combined with a topical retinoid or antibiotic. For maintenance therapy, benzoyl</p>
+<p>peroxide can be added to a topical retinoid.</p>
+<p>✓ Topical washes, foams, creams, or gels can be used as leave-on or wash-off agents.</p>
+<p>Strengths available range from 2.5% to 10%. All single-agent preparations are</p>
+<p>available without prescription.</p>
+<p>✓ Therapy should be initiated with the weakest concentration (2.5%) in a water-</p>
+<p>based formulation in the evening. Once tolerance is achieved, the strength may be</p>
+<p>increased to 5% or the base changed to the acetone or alcohol gels, or to paste. It is</p>
+<p>important to wash the product off in the morning. A sunscreen should be applied</p>
+<p>during the day.</p>
+<p>✓ Side effects of benzoyl peroxide include dryness, irritation, and, rarely, allergic</p>
+<p>contact dermatitis. It may bleach hair, clothing, and towels.</p>
+<li>Topical clindamycin and erythromycin are macrolide antibiotics that are effective</li>
+<p>and well-tolerated acne treatments. They are recommended for use in combination</p>
+<p>with topical benzoyl peroxide (wash-off or leave-on) or retinoids, which increases</p>
+<p>efficacy and decreases development of resistant organisms. Clindamycin is preferred</p>
+<p>over erythromycin because of better efficacy and lack of systemic absorption; it is</p>
+<p>available as a single-ingredient topical preparation or in combination with benzoyl</p>
+<p>peroxide. Erythromycin is available alone and in combination with retinoic acid or</p>
+<p>benzoyl peroxide, but it is seldom used in practice.</p>
+<li>Azelaic acid has antibacterial, anti-inflammatory, and comedolytic activity. It is</li>
+<p>used for mild-to-moderate inflammatory acne but has limited efficacy compared</p>
+<p>with other therapies. It is an alternative to first-choice therapy for comedonal and</p>
+<p>inflammatory acne, particularly in combination. It is also an alternative to topical</p>
+<p>retinoids for maintenance therapy. Azelaic acid is well tolerated, with adverse effects</p>
+<p>of pruritus, burning, stinging, and tingling occurring in 1%–5% of patients. Ery-</p>
+<p>thema, dryness, peeling, and irritation occur in fewer than 1% of patients. Azelaic</p>
+<p>acid is available in 20% cream (Azelex) and 15% gel (Finacea) formulations, which</p>
+<p>are usually applied twice daily (morning and evening) on clean, dry skin. Most</p>
+<p>patients experience improvement within 4 weeks, but treatment may be continued</p>
+<p>over several months if necessary.</p>
+<li>Dapsone (Aczone) is a sulfone that has antibacterial and anti-inflammatory proper-</li>
+<p>ties and improves both inflammatory and noninflammatory acne. It may be par-</p>
+<p>ticularly useful for patients with sensitivities or intolerance to conventional antiacne</p>
+<p>agents and may be used in sulfonamide-allergic patients. Dapsone 5% topical gel is</p>
+<p>applied twice daily; the 7.5% gel is applied once daily. Combination therapy with topi-</p>
+<p>cal retinoids may be indicated if comedonal lesions are present. Topical dapsone 5%</p>
+<p>gel has also been used in combination with adapalene or benzoyl peroxide.</p>
+<p>Oral Antibacterials</p>
+<li>Use of oral antibiotics is reserved for patients with moderate-to-severe inflammatory</li>
+<p>acne. Tetracyclines (minocycline and doxycycline) have both antibacterial and anti-</p>
+<p>inflammatory effects and are considered first-line therapy. Macrolides (erythromycin,</p>
+<p>azithromycin) and trimethoprim/sulfamethoxazole are acceptable alternative</p>
+<p>agents. Because of bacterial resistance, erythromycin should be limited to patients</p>
+<p>who cannot use a tetracycline (eg, pregnant women and children &lt;8 years old).</p>
+<li>Ciprofloxacin and trimethoprim alone may be effective in cases where other antibi-</li>
+<p>otics cannot be used or are ineffective.</p>
+<li>Sarecycline (Seysara) is a narrow-spectrum tetracycline derivative with anti-inflammatory</li>
+<p>properties approved for treatment of inflammatory lesions of non-nodular moderate-</p>
+<p>to-severe acne vulgaris in patients 9 years of age or older.</p>
+<li>Oral antibiotics should be accompanied by early use of combination therapy with</li>
+<p>retinoids. In such cases, the antibiotic may often be discontinued after 3–6 months</p>
+<p>of therapy.</p>
+<p>171</p>
+<p>ch15.indd 171 18-11-2020 17:42:06</p>
+<h2>SECTION 3 | Dermatologic Disorders</h2>
+<li>The incidence of significant adverse effects with oral antibiotic use is low. Vaginal</li>
+<p>candidiasis may complicate use of all oral antibiotics. Minocycline has been associ-</p>
+<p>ated with pigment deposition in the skin, mucous membranes, and teeth; it may</p>
+<p>also cause dose-related dizziness, urticaria, hypersensitivity syndrome, autoimmune</p>
+<p>hepatitis, a systemic lupus erythematosus–like syndrome, and serum sickness–like</p>
+<p>reactions. Doxycycline is a photosensitizer, especially at higher doses.</p>
+<li>The choice of antibiotic should be determined based on the side effect profile, resis-</li>
+<p>tance, cost, and consensus guidelines.</p>
+<p>Intralesional Corticosteroids</p>
+<li>Intralesional triamcinolone acetonide injections are effective for large individual</li>
+<p>inflammatory nodules. Intralesional injections may produce rapid improvement and</p>
+<p>decreased pain but may also be associated with local skin atrophy.</p>
+<p>Antisebum Agents</p>
+<li>Isotretinoin is a metabolite of vitamin A that decreases sebum production, inhibits</li>
+<p>P. acnes growth, and reduces inflammation. It is approved for treatment of severe recal-</p>
+<p>citrant nodular acne in non-pregnant patients 12 years of age and older with multiple</p>
+<p>inflammatory nodules with a diameter of 5 mm or greater. It has also been used for</p>
+<p>moderate acne that is treatment resistant, relapses quickly after discontinuation of</p>
+<p>oral antibiotic therapy, or produces physical scarring or significant psychosocial</p>
+<p>distress. Isotretinoin is the only drug treatment for acne that produces prolonged</p>
+<p>remission.</p>
+<p>✓ The approved isotretinoin dose range is 0.5–2 mg/kg/day, usually given over a</p>
+<p>20-week course. Drug absorption is greater when taken with food.</p>
+<p>✓ Guidelines recommend initiation at 0.5 mg/kg/day when appropriate, subse-</p>
+<p>quently increasing to 1 mg/kg/day after the first month as tolerated, with a goal</p>
+<p>cumulative dose between 120 and 150 mg/kg.</p>
+<p>✓ Side effects include those of the mucocutaneous (most common), musculoskel-</p>
+<p>etal, and ophthalmic systems, as well as headaches and central nervous system</p>
+<p>effects. Most adverse effects, such as cheilitis and dry nose, eyes, and mouth,</p>
+<p>are temporary and resolve after discontinuation. Laboratory monitoring during</p>
+<p>therapy should include triglycerides, cholesterol, transaminases, and complete</p>
+<p>blood counts. Mood disorders, depression, suicidal ideation, and suicides have</p>
+<p>been reported sporadically, but a causal relationship has not been established. The</p>
+<p>issue is complex because depression and suicidal ideation occur with severe acne</p>
+<p>in the absence of isotretinoin.</p>
+<p>✓ Because of teratogenicity, two different forms of contraception must be started</p>
+<p>in female patients of childbearing potential beginning 1 month before therapy,</p>
+<p>continuing throughout treatment, and for up to 4 months after discontinuation</p>
+<p>of therapy. All patients receiving isotretinoin must participate in the iPLEDGE</p>
+<p>program, which requires pregnancy tests and assurances by prescribers and phar-</p>
+<p>macists that they will follow required procedures.</p>
+<li>Oral contraceptives containing estrogen can be useful for acne in some women</li>
+<p>because of their antiandrogenic properties. Agents with FDA approval for acne in</p>
+<p>women who also desire contraception include norgestimate with ethinyl estradiol</p>
+<p>and norethindrone acetate with ethinyl estradiol; other estrogen-containing prod-</p>
+<p>ucts may also be effective. They may be used alone or in combination with other</p>
+<p>acne treatments.</p>
+<li>Spironolactone in higher doses is an antiandrogen. Doses of 50–200 mg have been</li>
+<p>shown to be effective for acne in select women.</p>
+<li>Cyproterone acetate is an antiandrogen that may be effective for acne in females</li>
+<p>when combined with ethinyl estradiol (in the form of an oral contraceptive). No</p>
+<p>cyproterone/estrogen–containing oral contraceptives are available in the United</p>
+<p>States.</p>
+<p>172</p>
+<p>ch15.indd 172 18-11-2020 17:42:07</p>
+<h2>Acne Vulgaris | CHAPTER 15</h2>
+<li>Oral corticosteroids in high doses used for short courses may provide temporary</li>
+<p>benefit in patients with severe inflammatory acne. Low-dose prednisone (5–15 mg</p>
+<p>daily) given alone or with high estrogen-containing combination oral contraceptives</p>
+<p>has shown efficacy for acne and seborrhea. Long-term adverse effects preclude oral</p>
+<p>corticosteroid use as a primary therapy for acne.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Provide patients with acne with a monitoring framework that includes specific</li>
+<p>parameters and frequency of monitoring. Have them record the objective response</p>
+<p>to treatment in a diary. Contact patients within 2–3 weeks after the start of therapy</p>
+<p>to assess progress and then every 4–8 weeks thereafter.</p>
+<li>Good adherence to therapy is the key to treatment success.</li>
+<li>Lesion counts should decrease by 10%–15% within 4–8 weeks or by more than 50%</li>
+<p>within 2–4 months. Inflammatory lesions should resolve within a few weeks, and</p>
+<p>comedones should resolve by 3–4 months. If anxiety or depression is present at the</p>
+<p>outset, control or improvement should be achieved within 2–4 months.</p>
+<li>Long-term parameters should include no progression of severity, lengthening of</li>
+<p>acne-free periods throughout therapy, and no further scarring or pigmentation</p>
+<p>throughout therapy.</p>
+<li>Monitor patients regularly for adverse treatment effects with appropriate dose</li>
+<p>reduction, alternative therapy, preventative measures, or drug discontinuation as</p>
+<p>appropriate.</p>
+<p>See Chapter 113, Acne Vulgaris, authored by Debra J. Sibbald, for a more detailed discussion</p>
+<p>of this topic.</p>
+<p>173</p>
+<p>ch15.indd 173 18-11-2020 17:42:07</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

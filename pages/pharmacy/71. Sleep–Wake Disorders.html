@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>71. Sleep–Wake Disorders</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>71. Sleep–Wake Disorders</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>830</p>
+<h2>RETPAHC</h2>
+<p>71</p>
+<p>Sleep–Wake Disorders</p>
+<li>The Diagnostic and Statistical Manual of Mental Disorders, 5th ed., category of sleep–</li>
+<p>wake disorders encompasses insomnia, hypersomnolence, narcolepsy, breathing-</p>
+<p>related sleep disorders, circadian rhythm sleep–wake disorders, nonrapid eye</p>
+<p>movement (NREM) sleep arousal disorders, nightmare disorder, rapid eye movement</p>
+<p>(REM) sleep behavior disorder, restless legs syndrome, and substance/medication-</p>
+<p>induced sleep disorder.</p>
+<h2>SLEEP PHYSIOLOGY</h2>
+<li>Humans typically have four to six cycles of NREM and REM sleep each night, each</li>
+<p>cycle lasting 70–120 minutes. Usually, there is progression through the four stages of</p>
+<p>NREM sleep before the first REM period.</p>
+<li>Stage 1 of NREM is the stage between wakefulness and sleep. Stages 3 and 4 sleep are</li>
+<p>called delta sleep (ie, slow-wave sleep).</p>
+<li>In REM sleep, there is a low-amplitude, mixed-frequency electroencephalogram,</li>
+<p>increased electrical and metabolic activity, increased cerebral blood flow, muscle atonia,</p>
+<p>poikilothermia, vivid dreaming, and fluctuations in respiratory and cardiac rate.</p>
+<li>Older individuals have lighter more fragmented sleep with more arousals and gradual</li>
+<p>reduction in slow-wave sleep.</p>
+<li>REM sleep is turned on by cholinergic cells. Dopamine has an alerting effect. Neuro-</li>
+<p>chemicals involved in wakefulness include norepinephrine and acetylcholine in the</p>
+<p>cortex and histamine and neuropeptides (eg, substance P and corticotropin-releasing</p>
+<p>factor) in the hypothalamus.</p>
+<li>Polysomnography (PSG) measures multiple electrophysiologic parameters simulta-</li>
+<p>neously during sleep (eg, electroencephalogram, electrooculogram of each eye, elec-</p>
+<p>trocardiogram, electromyogram, air thermistors, abdominal and thoracic strain belts,</p>
+<p>and oxygen saturation) to characterize sleep and diagnose sleep disorders.</p>
+<p>Insomnia</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Insomnia is subjectively characterized as trouble initiating or maintaining sleep asso-</li>
+<p>ciated with daytime consequences.</p>
+<li>Transient (two or three nights) and short-term (less than 3 months) insomnia is</li>
+<p>common. Chronic insomnia (more than 3 months duration) occurs in 9%–12% of</p>
+<p>adults and in up to 20% of older individuals.</p>
+<h2>DIAGNOSIS</h2>
+<li>A complete diagnostic examination should include routine laboratory tests, physical</li>
+<p>and mental status examinations, as well as ruling out any medication- or substance-</p>
+<p>related causes.</p>
+<li>Causes of insomnia include stress; jet lag or shift work; pain or other medical</li>
+<p>problems; mood or anxiety disorders; substance withdrawal; stimulants, steroids, or</p>
+<p>other medications.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Correct the underlying sleep complaint, improve daytime func-</li>
+<p>tioning, and avoid adverse drug effects.</p>
+<p>CH71.indd 830 20-11-2020 12:16:27</p>
+<div class="table-container"><table><tr><th>Sleep–Wake Disorders</th><th>71
+00</th><th>RETPAHC</th></tr></table></div><h2>Sleep–Wake Disorders | CHAPTER 71</h2>
+<p>TABLE 71-1 Nonpharmacologic Recommendations for Managing Insomnia</p>
+<p>Stimulus control procedures</p>
+<p>1. Establish regular time to wake up and to go to sleep (including weekends).</p>
+<p>2. Sleep only as much as necessary to feel rested.</p>
+<p>3. Go to bed only when sleepy. Avoid long periods of wakefulness in bed. Use the bed only</p>
+<p>for sleep or intimacy; do not read or watch television in bed.</p>
+<p>4. Avoid trying to force sleep; if you do not fall asleep within 20–30 minutes, leave the bed</p>
+<p>and perform a relaxing activity (eg, read, listen to music) until drowsy. Repeat this as often</p>
+<p>as necessary.</p>
+<p>5. Avoid blue spectrum light from television, smart phones, tablets, and other mobile</p>
+<p>devices.</p>
+<p>6. Avoid daytime naps.</p>
+<p>7. Schedule worry time during the day. Do not take your troubles to bed.</p>
+<p>Sleep hygiene recommendations</p>
+<p>1. Exercise routinely (three to four times weekly) but not close to bedtime because this can</p>
+<p>increase wakefulness.</p>
+<p>2. Create a comfortable sleep environment by avoiding temperature extremes, loud noises,</p>
+<p>and illuminated clocks in the bedroom.</p>
+<p>3. Discontinue or reduce the use of alcohol, caffeine, and nicotine.</p>
+<p>4. Avoid drinking large quantities of liquids in the evening to prevent nighttime trips to the</p>
+<p>restroom.</p>
+<p>5. Do something relaxing and enjoyable before bedtime.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Behavioral and educational interventions that may help include short-term cognitive</li>
+<p>behavioral therapy, relaxation therapy, stimulus control therapy, cognitive therapy,</p>
+<p>sleep restriction, paradoxical intention, and sleep hygiene education (Table 71-1).</p>
+<li>Management includes identifying the cause of insomnia, educating about sleep</li>
+<p>hygiene, managing stress, monitoring for mood symptoms, and eliminating</p>
+<p>unnecessary pharmacotherapy.</p>
+<li>In patients aged 55 years and older, cognitive behavioral therapy may be more</li>
+<p>effective than pharmacologic therapy at improving certain measures of insomnia.</p>
+<li>Transient and short-term insomnia should be treated with good sleep hygiene and</li>
+<p>careful use of sedative–hypnotics if necessary. Chronic insomnia calls for careful</p>
+<p>assessment for a medical cause, nonpharmacologic treatment, and careful use of</p>
+<h2>sedative–hypnotics if necessary (Figure 71-1).</h2>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Antihistamines (eg, diphenhydramine, doxylamine, and pyrilamine) are less effec-</li>
+<p>tive than benzodiazepines, but side effects are usually minimal. Their anticholinergic</p>
+<p>side effects may be problematic, especially in Older individuals.</p>
+<li>Antidepressants are good alternatives for patients who should not receive benzodiaz-</li>
+<p>epines, especially those with depression, pain, or a history of substance abuse.</p>
+<p>✓ Amitriptyline, doxepin, and nortriptyline are effective, but side effects include</p>
+<p>sedation, anticholinergic effects, adrenergic blockade effects, and cardiac conduc-</p>
+<p>tion prolongation.</p>
+<p>✓ Low-dose doxepin is approved for sleep maintenance insomnia.</p>
+<p>✓ Mirtazapine may improve sleep, but may cause daytime sedation and weight gain.</p>
+<p>831</p>
+<p>CH71.indd 831 20-11-2020 12:16:28</p>
+<div class="table-container"><table><tr><th>TABLE 71-1 Nonpharmacologic Recommendations for Managing Insomnia</th></tr><tr><td>Stimulus control procedures</td></tr><tr><td>1. Establish regular time to wake up and to go to sleep (including weekends).
+2. Sleep only as much as necessary to feel rested.
+3. Go to bed only when sleepy. Avoid long periods of wakefulness in bed. Use the bed only
+for sleep or intimacy; do not read or watch television in bed.
+4. Avoid trying to force sleep; if you do not fall asleep within 20–30 minutes, leave the bed
+and perform a relaxing activity (eg, read, listen to music) until drowsy. Repeat this as often
+as necessary.
+5. Avoid blue spectrum light from television, smart phones, tablets, and other mobile
+devices.
+6. Avoid daytime naps.
+7. Schedule worry time during the day. Do not take your troubles to bed.</td></tr><tr><td>Sleep hygiene recommendations</td></tr><tr><td>1. Exercise routinely (three to four times weekly) but not close to bedtime because this can
+increase wakefulness.
+2. Create a comfortable sleep environment by avoiding temperature extremes, loud noises,
+and illuminated clocks in the bedroom.
+3. Discontinue or reduce the use of alcohol, caffeine, and nicotine.
+4. Avoid drinking large quantities of liquids in the evening to prevent nighttime trips to the
+restroom.
+5. Do something relaxing and enjoyable before bedtime.</td></tr></table></div><h2>832 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>Sleep–wake Disorders</p>
+<p>Yes</p>
+<p>Obstructive sleep apnea Narcolepsy</p>
+<p>PSG: Nasal CPAP therapy Excessive daytime Sleep paralysis, cataplexy,</p>
+<p>and weight loss if obese sleepiness and/or hypnagogic</p>
+<p>hallucinations</p>
+<p>Optimize CPAP to alleviate Stimulant/modafinil</p>
+<p>sleep-disordered breathing Alternatives: Venlafaxine, fluoxetine,</p>
+<p>and day time sleepiness sodium oxybate or sodium oxybate.</p>
+<p>selegiline</p>
+<p>Still sleepy? Alternatives: imipramine,</p>
+<p>protriptyline, or</p>
+<p>Alternative therapy oral Modafinil or armodafinil</p>
+<p>selegiline</p>
+<p>devices, surgery, etc. Unable to in select patients</p>
+<p>tolerate</p>
+<p>Short-term insomnia Circadian rhythm disorder</p>
+<p>Yes No</p>
+<p>Sleep hygiene and short- Yes Chronic insomnia Jet lag Shift work</p>
+<p>acting BZDRA or ramelteon</p>
+<p>Short-acting Naps and exposure to</p>
+<p>Sleep hygiene and treat BZDRA, ramelteon, or bright light at night and</p>
+<p>Adequate therapeutic underlying medical melatonin, no alcohol darkness during day;</p>
+<p>response or psychiatric condition if necessary, modafinil</p>
+<p>No and BZDRA if necessary for daytime sleepiness and</p>
+<p>BZDRA for daytime sleep</p>
+<p>Trazodone, different</p>
+<p>BZDRA, or suvorexant</p>
+<p>(BZDRA, benzodiazepine receptor agonist; CPAP, continuous positive airway pressure; PSG, Polysomnography.)</p>
+<h2>FIGURE 71-1. Algorithm for treatment of dyssomnias.</h2>
+<p>CH71.indd</p>
+<p>832</p>
+<p>20-11-2020</p>
+<p>12:16:29</p>
+<h2>Sleep–Wake Disorders | CHAPTER 71</h2>
+<p>✓ Trazodone, 25–100 mg at bedtime, is often used for insomnia induced by selec-</p>
+<p>tive serotonin reuptake inhibitors or bupropion and in patients prone to substance</p>
+<p>abuse. Side effects include serotonin syndrome (when used with other serotonergic</p>
+<p>drugs), oversedation, α-adrenergic blockade, dizziness, and rarely, priapism.</p>
+<li>Suvorexant (an orexinA and orexinB antagonist) turns off wake signaling. Doses of</li>
+<p>10–20 mg at bedtime are indicated for difficulty initiating or maintaining sleep. Side</p>
+<p>effects include sedation and rarely narcolepsy-like symptoms. Use caution in patients</p>
+<p>with depression because suvorexant can worsen depression and trigger suicidal</p>
+<p>thinking in a dose-dependent manner.</p>
+<li>Ramelteon is a melatonin receptor agonist selective for the MT and MT receptors.</li>
+<p>1 2</p>
+<p>The dose is 8 mg at bedtime. It is well tolerated, but side effects include headache,</p>
+<p>dizziness, and somnolence. It is not a controlled substance, and does not cause acute</p>
+<p>drowsiness similar to other insomnia agents. It is effective for patients with chronic</p>
+<p>obstructive pulmonary disease and sleep apnea.</p>
+<li>Valerian, an herbal product, is available without a prescription. The recommended</li>
+<p>dose is 300–600 mg. Purity and potency concerns are an issue. It may cause daytime</p>
+<p>sedation.</p>
+<li>The benzodiazepine receptor agonists (BZDRAs) are the most commonly used drugs</li>
+<p>for insomnia. They include the newer nonbenzodiazepine γ-aminobutyric acid</p>
+<h2>A</h2>
+<p>(GABA ) agonists and the traditional benzodiazepines, which also bind to GABA .</p>
+<h2>A A</h2>
+<p>The FDA requires labeling regarding anaphylaxis, facial angioedema, complex sleep</p>
+<p>behaviors (eg, sleep driving, phone calls, and sleep eating).</p>
+<p>Benzodiazepine Hypnotics</p>
+<li>The pharmacokinetics and dosing of BZDRAs are summarized in Table 71-2.</li>
+<li>Benzodiazepines have sedative, anxiolytic, muscle relaxant, and anticonvulsant prop-</li>
+<p>erties. They increase stage 2 sleep and decrease REM and delta sleep.</p>
+<li>Overdose fatalities are rare unless benzodiazepines are taken with other central ner-</li>
+<p>vous system (CNS) depressants.</p>
+<li>Triazolam is distributed quickly because of its high lipophilicity, and it has a short</li>
+<p>duration of effect. Erythromycin, nefazodone, fluvoxamine, and ketoconazole reduce</p>
+<p>the clearance of triazolam and increase plasma concentrations.</p>
+<li>The effects of flurazepam and quazepam are long because of active metabolites</li>
+<p>and therefore they should not be used as first-line agents.</p>
+<p>✓ Side effects include drowsiness, psychomotor incoordination, decreased concen-</p>
+<p>tration, cognitive deficits, and anterograde amnesia, which are minimized by using</p>
+<p>the lowest dose possible.</p>
+<p>✓ Tolerance to daytime CNS effects (eg, drowsiness, decreased concentration) may</p>
+<p>develop in some individuals.</p>
+<p>✓ Rebound insomnia is minimized by using the lowest effective dose and tapering</p>
+<p>the dose upon discontinuation.</p>
+<p>✓ Long elimination half-life benzodiazepines are associated with falls and hip frac-</p>
+<p>tures; thus, flurazepam and quazepam should be avoided in older individuals.</p>
+<p>Nonbenzodiazepine GABA Agonists</p>
+<h2>A</h2>
+<li>In general, the nonbenzodiazepine hypnotics do not have significant active metabo-</li>
+<p>lites, and they are associated with less withdrawal, tolerance, and rebound insomnia</p>
+<p>than the benzodiazepines.</p>
+<li>Zolpidem is comparable in effectiveness to benzodiazepine hypnotics, and it has little</li>
+<p>effect on sleep stages. Its duration is approximately 6–8 hours. Common side effects</p>
+<p>are drowsiness, amnesia, dizziness, headache, and gastrointestinal (GI) complaints.</p>
+<p>It appears to have minimal effects on next-day psychomotor performance. The usual</p>
+<p>dose is 5 mg in women, older persons, and those with liver impairment, and 5–10</p>
+<p>mg in men. Sleep eating has been reported. It should be taken on an empty stomach.</p>
+<li>Zaleplon has a rapid onset, a half-life of ~1 hour, and no active metabolites. It</li>
+<p>decreases time to sleep onset, but does not reduce nighttime awakenings or increase</p>
+<p>833</p>
+<p>CH71.indd 833 20-11-2020 12:16:29</p>
+<h2>834 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 71-2 Pharmacokinetics of Benzodiazepine Receptor Agonists</p>
+<p>Generic Name Daily Dose Clinically Significant</p>
+<p>(Brand Name) t (hours)a Half-Lifeb (hours) Range (mg) Metabolic Pathway Metabolites</p>
+<p>max</p>
+<p>Estazolam (ProSom) 2 12–15 1–2 Oxidation –</p>
+<p>Eszopiclone (Lunesta) 1–1.5 6 2–3 Oxidation –</p>
+<p>Demethylation</p>
+<p>Flurazepam (Dalmane) 1 8 15–30 Oxidation Hydroxyethylflurazepam, flurazepam</p>
+<p>aldehyde</p>
+<p>N-dealkylation N-desalkylflurazepamc</p>
+<p>Quazepam (Doral) 2 39 7.5–15 Oxidation, N-dealkylation 2-Oxo-quazepam,</p>
+<p>N-desalkylflurazepamc</p>
+<p>Temazepam (Restoril) 1.5 10–15 15–30 Conjugation –</p>
+<p>Triazolam (Halcion) 1 2 0.125–0.25 Oxidation –</p>
+<p>Zaleplon (Sonata) 1 1 5–10 Oxidation –</p>
+<p>Zolpidem (Ambien; 1.6 2–2.6 1.75–10d Oxidation –</p>
+<p>Intermezzo)</p>
+<p>aTime to peak plasma concentration.</p>
+<p>bHalf-life of parent drug.</p>
+<p>cN-desalkylflurazepam, mean half-life 47–100 hours.</p>
+<p>dOral and sublingual dosing 5–10 mg; sublingual tablets for middle-of-the night dosing 1.75–3.5 mg (1.75 mg for women, 3.5 mg for men).</p>
+<p>CH71.indd</p>
+<p>834</p>
+<p>20-11-2020</p>
+<p>12:16:29</p>
+<div class="table-container"><table><tr><th>Generic Name
+(Brand Name)</th><th>t (hours)a
+max</th><th>Half-Lifeb (hours)</th><th>Daily Dose
+Range (mg)</th><th>Metabolic Pathway</th><th>Clinically Significant
+Metabolites</th></tr><tr><td>Estazolam (ProSom)</td><td>2</td><td>12–15</td><td>1–2</td><td>Oxidation</td><td>–</td></tr><tr><td>Eszopiclone (Lunesta)</td><td>1–1.5</td><td>6</td><td>2–3</td><td>Oxidation</td><td>–</td></tr><tr><td></td><td></td><td></td><td></td><td>Demethylation</td><td></td></tr><tr><td>Flurazepam (Dalmane)</td><td>1</td><td>8</td><td>15–30</td><td>Oxidation</td><td>Hydroxyethylflurazepam, flurazepam
+aldehyde</td></tr><tr><td></td><td></td><td></td><td></td><td>N-dealkylation</td><td>N-desalkylflurazepamc</td></tr><tr><td>Quazepam (Doral)</td><td>2</td><td>39</td><td>7.5–15</td><td>Oxidation, N-dealkylation</td><td>2-Oxo-quazepam,
+N-desalkylflurazepamc</td></tr><tr><td>Temazepam (Restoril)</td><td>1.5</td><td>10–15</td><td>15–30</td><td>Conjugation</td><td>–</td></tr><tr><td>Triazolam (Halcion)</td><td>1</td><td>2</td><td>0.125–0.25</td><td>Oxidation</td><td>–</td></tr><tr><td>Zaleplon (Sonata)</td><td>1</td><td>1</td><td>5–10</td><td>Oxidation</td><td>–</td></tr><tr><td>Zolpidem (Ambien;
+Intermezzo)</td><td>1.6</td><td>2–2.6</td><td>1.75–10d</td><td>Oxidation</td><td>–</td></tr></table></div><h2>Sleep–Wake Disorders | CHAPTER 71</h2>
+<p>the total sleep time. It does not appear to cause next-day psychomotor impairment.</p>
+<p>The most common side effects are dizziness, headache, and somnolence. The recom-</p>
+<p>mended dose is 10 mg (5 mg in older patients).</p>
+<li>Eszopiclone has a rapid onset and duration of action of up to 6 hours. The most</li>
+<p>common adverse effects are somnolence, unpleasant taste, headache, and dry mouth.</p>
+<p>It may be taken nightly for up to 6 months.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess patients with short-term or chronic insomnia after 1 week of therapy for drug</li>
+<p>effectiveness, adverse events, and adherence to nonpharmacologic recommenda-</p>
+<p>tions. Patients should maintain a daily recording of awakenings, medications taken,</p>
+<p>naps, and an index of sleep quality.</p>
+<p>Obstructive Sleep Apnea</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Obstructive sleep apnea (OSA) is potentially life-threatening and characterized by</li>
+<p>repeated episodes of nocturnal breathing cessation followed by blood oxygen desatu-</p>
+<p>ration. It is caused by occlusion of the upper airway, and blood oxygen (O) desatu-</p>
+<p>2</p>
+<p>ration can occur. Episodes may be caused by obesity or fixed upper airway lesions,</p>
+<p>enlarged tonsils, amyloidosis, and hypothyroidism. OSA is associated with motor</p>
+<p>vehicle accidents, depression, increased cancer risk, stroke, arrhythmias, hyperten-</p>
+<p>sion, cor pulmonale, and sudden death.</p>
+<li>The apneic episode is terminated by a reflex action in response to the fall in blood O</li>
+<p>2</p>
+<p>saturation that causes an arousal with resumed breathing.</p>
+<h2>CLNICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Heavy snoring, severe gas exchange disturbances, respiratory failure, and gasping</li>
+<p>occur in severe episodes. Patients with OSA usually complain of excessive daytime</p>
+<p>sleepiness (EDS). Other symptoms are morning headache, poor memory, and</p>
+<p>irritability.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goal is to alleviate sleep-disordered breathing and prevent</li>
+<h2>complications (Figure 71-1).</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Nonpharmacologic approaches are the treatments of choice (eg, weight loss [for</li>
+<p>all overweight patients], tonsillectomy, nasal septal repair, and nasal positive air-</p>
+<p>way pressure [PAP], which may be continuous [CPAP] or bilevel). Other surgical</p>
+<p>therapies, such as uvulopalatopharyngoplasty and tracheostomy, may be necessary</p>
+<p>in severe cases.</p>
+<li>Management parameters are published by the American Academy of Sleep Medicine.</li>
+<p>Avoid all CNS depressants and drugs that promote weight gain. Angiotensin-</p>
+<p>converting enzyme (ACE) inhibitors can also worsen sleep-disordered breathing.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>There is no drug therapy for OSA, and medications that worsen sleep should be</li>
+<p>avoided.</p>
+<li>Modafinil and armodafinil are approved by the FDA to improve wakefulness in</li>
+<p>those with residual daytime sleepiness. They should be used only in patients without</p>
+<p>cardiovascular disease who are using optimal PAP therapy.</p>
+<p>835</p>
+<p>CH71.indd 835 20-11-2020 12:16:30</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess patients with OSA after 1–3 months of treatment for improvement in alert-</li>
+<p>ness, daytime symptoms, weight reduction, and compliance with PAP therapy. Bed</p>
+<p>partners can report on snoring and gasping.</p>
+<p>Narcolepsy</p>
+<h2>PATHOPHSYIOLOGY</h2>
+<li>Narcolepsy type 1 includes symptoms of cataplexy and occurs in 70%–80% of patients.</li>
+<p>Cataplexy is a sudden bilateral loss of muscle tone with collapse, which can be precipi-</p>
+<p>tated by high emotional situation. Narcolepsy type 2 does not include cataplexy.</p>
+<li>Dysfunction of the hypocretin/orexin neurotransmitter system may play a central</li>
+<p>role in narcolepsy. An autoimmune process may cause destruction of hypocretin-</p>
+<p>producing cells.</p>
+<h2>CLINICAL PRESENTATION AND DIAGNOSIS</h2>
+<li>Narcolepsy can be diagnosed if the patient goes into REM sleep within 5 minutes</li>
+<p>of sleep. The narcolepsy tetrad includes EDS, cataplexy, hallucinations, and sleep</p>
+<p>paralysis. Patients complain of EDS, sleep attacks that last up to 30 minutes, fatigue,</p>
+<p>impaired performance, and disturbed nighttime sleep.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goal is to maximize alertness during waking hours and</li>
+<h2>improve quality of life (Figure 71-1).</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Provide patient and family education about misconceptions around the individual’s</li>
+<p>behavior.</p>
+<li>Encourage good sleep hygiene and two or more daytime naps daily (as little as 15</li>
+<p>minutes).</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Pharmacotherapy (Table 71-3) focuses on EDS and REM sleep abnormalities.</li>
+<li>Modafinil, the standard for treatment of EDS, and armodafinil (the active R-isomer)</li>
+<p>are FDA-approved. They do not treat cataplexy. Evidence suggests no risk of</p>
+<p>tolerance, withdrawal, or risk of abuse. Side effects include headache, nausea,</p>
+<p>nervousness, and insomnia.</p>
+<li>Amphetamines and methylphenidate have a fast onset of effect and durations of 3–4</li>
+<p>hours and 6–10 hours, respectively, for EDS. Amphetamines have more risk of abuse</p>
+<p>and tolerance. Side effects include insomnia, hypertension, palpitations, and irritability.</p>
+<li>Clinicians may prescribe sustained-release stimulants with scheduled administration</li>
+<p>times, and immediate-release stimulants to be taken as needed when the patient</p>
+<p>requires alertness (eg, driving, etc.).</p>
+<li>The most common treatments for cataplexy are the tricyclic antidepressants,</li>
+<p>serotonin norepinephrine reuptake inhibitors, and selective serotonin reuptake</p>
+<p>inhibitors. Imipramine, protriptyline, clomipramine, fluoxetine, and n ortriptyline</p>
+<p>are effective in approximately 80% of patients. Selegiline improves hypersomnolence</p>
+<p>and cataplexy.</p>
+<li>Atomoxetine may improve cataplexy and sleepiness in children but appears to be less</li>
+<p>effective than other therapies in adults and older teenagers.</p>
+<li>Sodium oxybate (γ-hydroxybutyrate) improves EDS and decreases episodes of sleep</li>
+<p>paralysis, cataplexy, and hypnagogic hallucinations. Give at bedtime and repeat</p>
+<p>2.5–4 hours later. Side effects include nausea, somnolence, confusion, dizziness, and</p>
+<p>incontinence.</p>
+<p>836</p>
+<p>CH71.indd 836 20-11-2020 12:16:30</p>
+<p>837</p>
+<p>Sleep–Wake</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>71</p>
+<h2>TABLE 71-3 Dosing of Drugs Used to Treat Narcolepsy</h2>
+<p>Generic Name Brand Name Initial Dose (mg) Usual Dose (mg) Comments</p>
+<p>Agents for excessive daytime somnolence</p>
+<p>Dextroamphetamine Dexedrine 5–10 5–60 Concurrent use of amphetamines and acidic foods may</p>
+<p>reduce amphetamine absorption</p>
+<p>Dextroamphetamine/ Adderall 5–20 5–60 See above</p>
+<p>amphetamine saltsa</p>
+<p>Methamphetamineb Desoxyn 5–15 5–15 See above</p>
+<p>Lisdexamfetamine Vyvanse 20–30 20–70 Prodrug of dextroamphetamine</p>
+<p>Methylphenidate Ritalin 10–40 30–80 May increase bleeding risk with warfarin therapy</p>
+<p>Modafinil Provigil 100–200 200–400 May reduce effectiveness of hormonal contraceptives</p>
+<p>Armodafinil Nuvigil 150 150–250 May reduce effectiveness of hormonal contraceptives</p>
+<p>Sodium oxybatec Xyrem 4.5 g/night 4.5–9 g/night Do not use with other CNS depressants</p>
+<p>Agents for cataplexy</p>
+<p>Atomoxetine Strattera 18–100 40–100 Use lower doses in CYP2D6 poor metabolizers</p>
+<p>Fluoxetine Prozac 10–20 20–80 Cataplexy benefits occur sooner than antidepressant benefits</p>
+<p>Imipramine Tofranil 50–100 50–250 Anticholinergic side effects</p>
+<p>Nortriptyline Aventyl, Pamelor 50–100 50–200 Anticholinergic side effects</p>
+<p>Protriptyline Vivactil 5–10 5–30</p>
+<p>Venlafaxine Effexor 37.5 37.5–225 May increase blood pressure</p>
+<p>Selegiline Eldepryl 5–10 20–40 Doses less than 10 mg/day do not require dietary tyramine</p>
+<p>restrictions</p>
+<p>aDextroamphetamine sulfate, dextroamphetamine saccharate, amphetamine aspartate, and amphetamine sulfate.</p>
+<p>bNot available in some states.</p>
+<p>cAlso effective in treating cataplexy.</p>
+<p>CH71.indd</p>
+<p>837</p>
+<p>20-11-2020</p>
+<p>12:16:30</p>
+<div class="table-container"><table><tr><th>TABLE 71-3 Dosing of Drugs Used to Treat Narcolepsy</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Brand Name</td><td>Initial Dose (mg)</td><td>Usual Dose (mg)</td><td>Comments</td></tr><tr><td>Agents for excessive daytime somnolence</td><td></td><td></td><td></td><td></td></tr><tr><td>Dextroamphetamine</td><td>Dexedrine</td><td>5–10</td><td>5–60</td><td>Concurrent use of amphetamines and acidic foods may
+reduce amphetamine absorption</td></tr><tr><td>Dextroamphetamine/
+amphetamine saltsa</td><td>Adderall</td><td>5–20</td><td>5–60</td><td>See above</td></tr><tr><td>Methamphetamineb</td><td>Desoxyn</td><td>5–15</td><td>5–15</td><td>See above</td></tr><tr><td>Lisdexamfetamine</td><td>Vyvanse</td><td>20–30</td><td>20–70</td><td>Prodrug of dextroamphetamine</td></tr><tr><td>Methylphenidate</td><td>Ritalin</td><td>10–40</td><td>30–80</td><td>May increase bleeding risk with warfarin therapy</td></tr><tr><td>Modafinil</td><td>Provigil</td><td>100–200</td><td>200–400</td><td>May reduce effectiveness of hormonal contraceptives</td></tr><tr><td>Armodafinil</td><td>Nuvigil</td><td>150</td><td>150–250</td><td>May reduce effectiveness of hormonal contraceptives</td></tr><tr><td>Sodium oxybatec</td><td>Xyrem</td><td>4.5 g/night</td><td>4.5–9 g/night</td><td>Do not use with other CNS depressants</td></tr><tr><td>Agents for cataplexy</td><td></td><td></td><td></td><td></td></tr><tr><td>Atomoxetine</td><td>Strattera</td><td>18–100</td><td>40–100</td><td>Use lower doses in CYP2D6 poor metabolizers</td></tr><tr><td>Fluoxetine</td><td>Prozac</td><td>10–20</td><td>20–80</td><td>Cataplexy benefits occur sooner than antidepressant benefits</td></tr><tr><td>Imipramine</td><td>Tofranil</td><td>50–100</td><td>50–250</td><td>Anticholinergic side effects</td></tr><tr><td>Nortriptyline</td><td>Aventyl, Pamelor</td><td>50–100</td><td>50–200</td><td>Anticholinergic side effects</td></tr><tr><td>Protriptyline</td><td>Vivactil</td><td>5–10</td><td>5–30</td><td></td></tr><tr><td>Venlafaxine</td><td>Effexor</td><td>37.5</td><td>37.5–225</td><td>May increase blood pressure</td></tr><tr><td>Selegiline</td><td>Eldepryl</td><td>5–10</td><td>20–40</td><td>Doses less than 10 mg/day do not require dietary tyramine
+restrictions</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Patients with narcolepsy should keep a diary of frequency and severity of core symp-</li>
+<p>toms. Monitoring parameters include reduction in daytime sleepiness, cataplexy,</p>
+<p>hypnagogic and hypnopompic hallucinations, and sleep paralysis.</p>
+<li>Assess patients regularly during medication titration, then every 6–12 months for</li>
+<p>side effects (eg, hypertension, sleep disturbances, and cardiovascular abnormalities).</p>
+<p>See Chapter 89, Sleep–Wake Disorders, authored by John M. Dopp and Bradley G.</p>
+<p>Phillips, for a more detailed discussion of this topic.</p>
+<p>838</p>
+<p>CH71.indd 838 20-11-2020 12:16:30</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

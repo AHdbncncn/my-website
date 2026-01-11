@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63. Lymphomas</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>63. Lymphomas</h1>
+        </header>
+        <main>
+            <p>721</p>
+<h2>RETPAHC</h2>
+<p>63</p>
+<p>Lymphomas</p>
+<li>Lymphomas are a heterogeneous group of malignancies that arise from malig-</li>
+<p>nant transformation of immune cells residing predominantly in lymphoid tissues.</p>
+<p>Differences in histology have led to the classification of Hodgkin and non-Hodgkin</p>
+<p>lymphoma (HL and NHL, respectively), which are addressed separately in this chapter.</p>
+<p>Hodgkin Lymphoma</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>B-cell transcriptional processes are disrupted during malignant transformation,</li>
+<p>preventing expression of B-cell surface markers and production of immunoglobulin</p>
+<p>messenger RNA. Alterations in the normal apoptotic pathways favor cell survival</p>
+<p>and proliferation.</p>
+<li>Malignant Reed–Sternberg cells overexpress nuclear factor-κB, which is associated</li>
+<p>with cell proliferation and antiapoptotic signals. Infections with viral and bacterial</p>
+<p>pathogens upregulate nuclear factor-κB. Epstein–Barr virus is found in many, but</p>
+<p>not all, HL tumors.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Most patients with HL present with a painless, rubbery, enlarged lymph node in</li>
+<p>the supradiaphragmatic area and commonly have mediastinal nodal involvement.</p>
+<p>Asymptomatic adenopathy of the inguinal and axillary regions may also be present.</p>
+<li>Constitutional, or “B,” symptoms (eg, fever, drenching night sweats, and weight loss)</li>
+<p>are present at diagnosis in approximately 25% of patients with HL.</p>
+<h2>DIAGNOSIS AND STAGING</h2>
+<li>Diagnosis requires the presence of Reed–Sternberg cells in the lymph node biopsy.</li>
+<li>Staging is performed to provide prognostic information and to guide therapy.</li>
+<p>Clinical staging is based on noninvasive procedures such as history, physical exami-</p>
+<p>nation, laboratory tests, and radiography, including positron emission tomography</p>
+<p>(PET). Pathologic staging is based on biopsy findings of strategic sites (eg, bone mar-</p>
+<p>row, spleen, and abdominal nodes) using an invasive procedure (eg, laparoscopy).</p>
+<li>At diagnosis, approximately half of patients have localized disease (stages I, II,</li>
+<p>and II) and the others have advanced disease, of which 10%–15% is stage IV.</p>
+<li>Progn E osis predominantly depends on age and amount of disease; patients older than</li>
+<p>65–70 years have a lower cure rate than younger patients. Patients with limited stage</p>
+<p>disease (stages I and II) have a 90%–95% cure rate, whereas those with advanced</p>
+<p>disease (stages III and IV) have a 60%–80% cure rate.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goal is to maximize curability while minimizing short- and</li>
+<p>long-term treatment-related complications.</p>
+<li>Treatment options include radiation therapy (RT), chemotherapy, or both (combined-</li>
+<p>modality therapy). The therapeutic role of surgery is limited, regardless of stage.</p>
+<li>RT is an integral part of treatment and can be used alone for select patients with</li>
+<p>early-stage disease, although most patients will receive chemotherapy and radiation.</p>
+<li>Long-term complications of RT, chemotherapy, and chemoradiotherapy include</li>
+<pre><code>gonadal dysfunction, secondary malignancies (eg, lung, breast, and GI tract, as well</code></pre>
+<p>as leukemia), and cardiac disease.</p>
+<p>CH63.indd 721 20-11-2020 10:07:14</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>63</th><th>Lymphomas</th></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<h2>INITIAL CHEMOTHERAPY</h2>
+<li>Treat all stages and risk-groups of HL with 8–12 weeks of chemotherapy and then</li>
+<p>obtain a restaging PET-CT (Table 63-1). Most patients with unfavorable disease will</p>
+<p>require RT.</p>
+<h2>SALVAGE CHEMOTHERAPY</h2>
+<li>Response to salvage therapy depends on the extent and site of recurrence, previous</li>
+<p>therapy, and duration of first remission. Choice of salvage therapy should be guided</p>
+<p>by response to initial therapy and a patient’s ability to tolerate therapy.</p>
+<li>Patients who relapse after an initial complete response can be treated with the same</li>
+<p>regimen, a non–cross-resistant regimen, RT, or high-dose chemotherapy and autolo-</p>
+<p>gous hematopoietic stem cell transplantation (HSCT).</p>
+<li>Lack of complete remission after initial therapy or relapse within 1 year after com-</li>
+<p>pleting initial therapy is associated with a poor prognosis. Patients with these prog-</p>
+<p>nostic factors are candidates for high-dose chemotherapy and HSCT.</p>
+<li>Immune checkpoint inhibitors, specifically PD-1 (programmed death 1 pathway)</li>
+<p>inhibitors (eg, nivolumab and pembrolizumab), are approved for relapsed HL.</p>
+<p>Non-Hodgkin Lymphoma</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>NHLs are derived from monoclonal proliferation of malignant B or T lymphocytes</li>
+<p>and their precursors. Current classification schemes characterize NHLs according to</p>
+<p>cell of origin, clinical features, and morphologic features.</p>
+<li>The World Health Organization (WHO) classification uses grade to refer to histologic</li>
+<p>parameters such as cell and nuclear size, density of chromatin, and proliferation</p>
+<p>fraction, and aggressiveness to denote clinical behavior of a tumor.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients present with a variety of symptoms, which depend on site of involvement</li>
+<p>and whether it is nodal or extranodal.</p>
+<li>Adenopathy can be localized or generalized. Involved nodes are painless, rubbery,</li>
+<p>and discrete and usually located in the cervical and supraclavicular regions. Mesen-</p>
+<p>teric or GI involvement can cause nausea, vomiting, obstruction, abdominal pain,</p>
+<p>palpable abdominal mass, or GI bleeding. Bone marrow involvement can cause</p>
+<p>symptoms related to anemia, neutropenia, or thrombocytopenia.</p>
+<li>Forty percent of patients with NHL present with B symptoms—fever, drenching night</li>
+<p>sweats, and weight loss.</p>
+<h2>DIAGNOSIS AND STAGING</h2>
+<li>Diagnosis is established by biopsy of an involved lymph node. Diagnostic workup of</li>
+<p>NHL is generally similar to that of HL.</p>
+<li>NHL classification systems continue to evolve. Slow-growing or indolent lymphomas</li>
+<p>are favorable (untreated survival measured in years), whereas rapid-growing or aggressive</p>
+<p>lymphomas are unfavorable (untreated survival measured in weeks to months).</p>
+<li>Prognosis depends on histologic subtype and clinical risk factors (eg, age >60 years,</li>
+<p>performance status of two or more, abnormal lactate dehydrogenase, extranodal involve-</p>
+<p>ment, and stage III or IV disease). These risk factors are used to calculate the International</p>
+<p>Prognostic Index (IPI) that is most useful in patients with aggressive lymphomas.</p>
+<li>A newer prognostic index for patients with indolent (follicular) lymphomas uses</li>
+<p>similar risk factors except that poor performance status is replaced with low hemo-</p>
+<p>globin (&lt;12 g/dL [120 g/L; 7.45 mmol/L]). Current research is focused on prognostic</p>
+<p>importance of phenotypic and molecular characteristics of NHL.</p>
+<p>722</p>
+<p>CH63.indd 722 20-11-2020 10:07:16</p>
+<h2>Lymphomas | CHAPTER 63</h2>
+<p>TABLE 63-1 Combination Chemotherapy Regimens for Hodgkin Lymphoma</p>
+<p>Dosage</p>
+<p>Drug (mg/m2) Route Days</p>
+<h2>MOPP</h2>
+<p>Mechlorethamine 6 IV 1, 8</p>
+<p>Vincristine 1.4 IV 1, 8</p>
+<p>Procarbazine 100 Oral 1–14</p>
+<p>Prednisone 40 Oral 1–14</p>
+<p>Repeat every 21 days</p>
+<h2>ABVD</h2>
+<p>Doxorubicin (Adriamycin) 25 IV 1, 15</p>
+<p>Bleomycin 10 IV 1, 15</p>
+<p>Vinblastine 6 IV 1, 15</p>
+<p>Dacarbazine 375 IV 1, 15</p>
+<p>Repeat every 28 days</p>
+<h2>MOPP/ABVD</h2>
+<p>Alternating months</p>
+<p>of MOPP and ABVD</p>
+<p>MOPP/ABV hybrid</p>
+<p>Mechlorethamine 6 IV 1</p>
+<p>Vincristine 1.4 IV 1</p>
+<p>Procarbazine 100 Oral 1–7</p>
+<p>Prednisone 40 Oral 1–14</p>
+<p>Doxorubicin 35 IV 8</p>
+<p>Bleomycin 10 IV 8</p>
+<p>Vinblastine 6 IV 8</p>
+<p>Repeat every 28 days</p>
+<p>Stanford V</p>
+<p>Doxorubicin 25 IV Weeks 1, 3, 5,</p>
+<p>7, 9, 11</p>
+<p>Vinblastine 6 IV Weeks 1, 3, 5,</p>
+<p>7, 9, 11</p>
+<p>Mechlorethamine 6 IV Weeks 1, 5, 9</p>
+<p>Etoposide 60 IV Weeks 3, 7, 11</p>
+<p>Vincristine 1.4 IV Weeks 2, 4, 6, 8,</p>
+<p>10, 12</p>
+<p>Bleomycin 5 IV Weeks 2, 4, 6, 8</p>
+<p>Prednisone 40 Oral Every other day</p>
+<p>for 12 weeks;</p>
+<p>begin tapering at</p>
+<p>week 10</p>
+<p>One course (12 weeks)</p>
+<p>(Continued )</p>
+<p>723</p>
+<p>CH63.indd 723 20-11-2020 10:07:16</p>
+<div class="table-container"><table><tr><th>TABLE 63-1 Combination Chemotherapy Regimens for Hodgkin Lymphoma</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Dosage
+(mg/m2)</td><td>Route</td><td>Days</td></tr><tr><td>MOPP</td><td></td><td></td><td></td></tr><tr><td>Mechlorethamine</td><td>6</td><td>IV</td><td>1, 8</td></tr><tr><td>Vincristine</td><td>1.4</td><td>IV</td><td>1, 8</td></tr><tr><td>Procarbazine</td><td>100</td><td>Oral</td><td>1–14</td></tr><tr><td>Prednisone</td><td>40</td><td>Oral</td><td>1–14</td></tr><tr><td>Repeat every 21 days</td><td></td><td></td><td></td></tr><tr><td>ABVD</td><td></td><td></td><td></td></tr><tr><td>Doxorubicin (Adriamycin)</td><td>25</td><td>IV</td><td>1, 15</td></tr><tr><td>Bleomycin</td><td>10</td><td>IV</td><td>1, 15</td></tr><tr><td>Vinblastine</td><td>6</td><td>IV</td><td>1, 15</td></tr><tr><td>Dacarbazine</td><td>375</td><td>IV</td><td>1, 15</td></tr><tr><td>Repeat every 28 days</td><td></td><td></td><td></td></tr><tr><td>MOPP/ABVD</td><td></td><td></td><td></td></tr><tr><td>Alternating months
+of MOPP and ABVD</td><td></td><td></td><td></td></tr><tr><td>MOPP/ABV hybrid</td><td></td><td></td><td></td></tr><tr><td>Mechlorethamine</td><td>6</td><td>IV</td><td>1</td></tr><tr><td>Vincristine</td><td>1.4</td><td>IV</td><td>1</td></tr><tr><td>Procarbazine</td><td>100</td><td>Oral</td><td>1–7</td></tr><tr><td>Prednisone</td><td>40</td><td>Oral</td><td>1–14</td></tr><tr><td>Doxorubicin</td><td>35</td><td>IV</td><td>8</td></tr><tr><td>Bleomycin</td><td>10</td><td>IV</td><td>8</td></tr><tr><td>Vinblastine</td><td>6</td><td>IV</td><td>8</td></tr><tr><td>Repeat every 28 days</td><td></td><td></td><td></td></tr><tr><td>Stanford V</td><td></td><td></td><td></td></tr><tr><td>Doxorubicin</td><td>25</td><td>IV</td><td>Weeks 1, 3, 5,
+7, 9, 11</td></tr><tr><td>Vinblastine</td><td>6</td><td>IV</td><td>Weeks 1, 3, 5,
+7, 9, 11</td></tr><tr><td>Mechlorethamine</td><td>6</td><td>IV</td><td>Weeks 1, 5, 9</td></tr><tr><td>Etoposide</td><td>60</td><td>IV</td><td>Weeks 3, 7, 11</td></tr><tr><td>Vincristine</td><td>1.4</td><td>IV</td><td>Weeks 2, 4, 6, 8,
+10, 12</td></tr><tr><td>Bleomycin</td><td>5</td><td>IV</td><td>Weeks 2, 4, 6, 8</td></tr><tr><td>Prednisone</td><td>40</td><td>Oral</td><td>Every other day
+for 12 weeks;
+begin tapering at
+week 10</td></tr><tr><td>One course (12 weeks)</td><td></td><td></td><td>(Continued )</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 63-1 Combination Chemotherapy Regimens for Hodgkin Lymphoma (Continued )</p>
+<p>Dosage</p>
+<p>Drug (mg/m2) Route Days</p>
+<p>BEACOPP (standard-dose)</p>
+<p>Bleomycin 10 IV 8</p>
+<p>Etoposide 100 IV 1–3</p>
+<p>Adriamycin (doxorubicin) 25 IV 1</p>
+<p>Cyclophosphamide 650 IV 1</p>
+<p>Oncovin (vincristine) 1.4a IV 8</p>
+<p>Procarbazine 100 Oral 1–7</p>
+<p>Prednisone 40 Oral 1–14</p>
+<p>Repeat every 21 days</p>
+<p>BEACOPP (escalated-dose)</p>
+<p>Bleomycin 10 IV 8</p>
+<p>Etoposide 200 IV 1–3</p>
+<p>Adriamycin (doxorubicin) 35 IV 1</p>
+<p>Cyclophosphamide 1250 IV 1</p>
+<p>Oncovin (vincristine) 1.4a IV 8</p>
+<p>Procarbazine 100 Oral 1–7</p>
+<p>Prednisone 40 Oral 1–14</p>
+<p>Granulocyte colony- Subcutaneously 8+</p>
+<p>stimulating factor</p>
+<p>Repeat every 21 days</p>
+<h2>A-AVD</h2>
+<p>Brentuximab vedotin 1.2 mg/kg IV 1, 15</p>
+<p>Doxorubicin 25 IV 1, 15</p>
+<p>Vinblastine 6 IV 1, 15</p>
+<p>Dacarbazine 375 IV 1, 15</p>
+<p>aVincristine dose capped at 2 mg.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to relieve symptoms and, whenever possible, cure</li>
+<p>the patient of disease while minimizing the risk of serious toxicity.</p>
+<h2>GENERAL PRINCIPLES</h2>
+<li>Appropriate therapy for NHL depends on many factors, including patient age, his-</li>
+<p>tologic type, stage and site of disease, presence of adverse prognostic factors, and</p>
+<p>patient preference.</p>
+<li>Treatment is divided into two categories: limited disease (eg, localized disease; Ann</li>
+<p>Arbor stages I and II) and advanced disease (eg, Ann Arbor stage III or IV and stage</p>
+<p>II patients with poor prognostic features).</p>
+<li>Treatment options include RT, chemotherapy, and biologic agents. RT is used for</li>
+<p>remission induction with early stage, localized disease and, more commonly, as a</p>
+<p>palliative measure in advanced disease.</p>
+<li>Effective chemotherapy ranges from single-agent therapy for indolent (follicular)</li>
+<p>lymphomas to aggressive, complex combination regimens for aggressive disease.</p>
+<p>724</p>
+<p>CH63.indd 724 20-11-2020 10:07:16</p>
+<div class="table-container"><table><tr><th>TABLE 63-1 Combination Chemotherapy Regimens for Hodgkin Lymphoma (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Dosage
+(mg/m2)</td><td>Route</td><td>Days</td></tr><tr><td>BEACOPP (standard-dose)</td><td></td><td></td><td></td></tr><tr><td>Bleomycin</td><td>10</td><td>IV</td><td>8</td></tr><tr><td>Etoposide</td><td>100</td><td>IV</td><td>1–3</td></tr><tr><td>Adriamycin (doxorubicin)</td><td>25</td><td>IV</td><td>1</td></tr><tr><td>Cyclophosphamide</td><td>650</td><td>IV</td><td>1</td></tr><tr><td>Oncovin (vincristine)</td><td>1.4a</td><td>IV</td><td>8</td></tr><tr><td>Procarbazine</td><td>100</td><td>Oral</td><td>1–7</td></tr><tr><td>Prednisone</td><td>40</td><td>Oral</td><td>1–14</td></tr><tr><td>Repeat every 21 days</td><td></td><td></td><td></td></tr><tr><td>BEACOPP (escalated-dose)</td><td></td><td></td><td></td></tr><tr><td>Bleomycin</td><td>10</td><td>IV</td><td>8</td></tr><tr><td>Etoposide</td><td>200</td><td>IV</td><td>1–3</td></tr><tr><td>Adriamycin (doxorubicin)</td><td>35</td><td>IV</td><td>1</td></tr><tr><td>Cyclophosphamide</td><td>1250</td><td>IV</td><td>1</td></tr><tr><td>Oncovin (vincristine)</td><td>1.4a</td><td>IV</td><td>8</td></tr><tr><td>Procarbazine</td><td>100</td><td>Oral</td><td>1–7</td></tr><tr><td>Prednisone</td><td>40</td><td>Oral</td><td>1–14</td></tr><tr><td>Granulocyte colony-
+stimulating factor</td><td></td><td>Subcutaneously</td><td>8+</td></tr><tr><td>Repeat every 21 days</td><td></td><td></td><td></td></tr><tr><td>A-AVD</td><td></td><td></td><td></td></tr><tr><td>Brentuximab vedotin</td><td>1.2 mg/kg</td><td>IV</td><td>1, 15</td></tr><tr><td>Doxorubicin</td><td>25</td><td>IV</td><td>1, 15</td></tr><tr><td>Vinblastine</td><td>6</td><td>IV</td><td>1, 15</td></tr><tr><td>Dacarbazine</td><td>375</td><td>IV</td><td>1, 15</td></tr></table></div><h2>Lymphomas | CHAPTER 63</h2>
+<h2>FOLLICULAR LYMPHOMAS</h2>
+<li>Follicular lymphomas occur in older adults, with a majority having advanced disease</li>
+<p>that includes the chromosomal translocation t(14;18). Clinical course is generally</p>
+<p>indolent, with median survival of 8–10 years. The natural history of follicular lym-</p>
+<p>phoma is unpredictable, with spontaneous regression of objective disease seen in</p>
+<p>20%–30% of patients.</p>
+<p>Localized Follicular Lymphoma</p>
+<li>Options for stages I and II follicular lymphoma include locoregional RT and immu-</li>
+<p>notherapy (ie, rituximab) with or without chemotherapy or RT.</p>
+<li>RT is the standard treatment and is usually curative. Chemotherapy is not recom-</li>
+<p>mended, unless the patient has high-risk, stage II disease.</p>
+<p>Advanced Follicular Lymphoma</p>
+<li>Management of stages II bulky, III, and IV indolent lymphoma is controversial</li>
+<p>because standard approaches are not curative. Median time to relapse is only 18–36</p>
+<p>months. After relapse, response can be reinduced; however, response rates and dura-</p>
+<p>tions decrease with each retreatment.</p>
+<li>Therapeutic options are diverse and include watchful waiting, RT, single-agent che-</li>
+<p>motherapy, combination chemotherapy, biologic therapy, radioimmunotherapy, and</p>
+<p>combined-modality therapy. Immediate aggressive therapy does not improve survival</p>
+<p>compared with conservative therapy (ie, watchful waiting followed by single-agent</p>
+<p>chemotherapy, rituximab, or RT, when treatment is needed).</p>
+<li>Oral alkylating agents chlorambucil or cyclophosphamide, used alone or in com-</li>
+<p>bination with prednisone, are the mainstay of treatment. These single agents are as</p>
+<p>effective as combination regimens and produce minimal toxicity, but secondary acute</p>
+<p>leukemia is a concern. Bendamustine is an IV alkylating agent approved for relapsed</p>
+<p>or refractory indolent NHL.</p>
+<li>Fludarabine is an adenosine analogue that produces high response rates in previously</li>
+<p>untreated and relapsed advanced follicular lymphoma. Fludarabine is associated with</p>
+<p>prolonged myelosuppression and profound immunosuppression, increasing the risk</p>
+<p>of opportunistic infections, such as fungal infections.</p>
+<li>Rituximab, a chimeric monoclonal antibody directed at the CD20 molecule on B</li>
+<p>cells, is one of the most widely used therapies for follicular lymphoma. It is approved</p>
+<p>for first-line therapy either alone or combined with chemotherapy and as mainte-</p>
+<p>nance therapy for patients with stable disease or with partial or complete response</p>
+<p>following induction chemotherapy.</p>
+<p>✓ The most common chemotherapy regimen used with rituximab is the CHOP regi-</p>
+<p>men (Table 63-2). Practice guidelines list rituximab maintenance for up to 2 years</p>
+<p>as an option in both first- and second-line therapy.</p>
+<p>✓ Rituximab adverse effects are usually infusion related, especially after the first</p>
+<p>infusion, and consist of fever, chills, respiratory symptoms, fatigue, headache,</p>
+<h2>TABLE 63-2 CHOP Regimen</h2>
+<p>Drug Dose Route Treatment Days</p>
+<p>Cyclophosphamide 750 mg/m2 IV 1</p>
+<p>Doxorubicin 50 mg/m2 IV 1</p>
+<p>Vincristinea 1.4 mg/m2 IV 1</p>
+<p>Prednisone 100 mg Oral 1–5</p>
+<p>One cycle is 21 days</p>
+<p>aVincristine dose is typically capped at 2 mg.</p>
+<p>Another name for doxorubicin is hydroxydaunorubicin.</p>
+<p>725</p>
+<p>CH63.indd 725 20-11-2020 10:07:17</p>
+<div class="table-container"><table><tr><th>TABLE 63-2 CHOP Regimen</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Dose</td><td>Route</td><td>Treatment Days</td></tr><tr><td>Cyclophosphamide</td><td>750 mg/m2</td><td>IV</td><td>1</td></tr><tr><td>Doxorubicin</td><td>50 mg/m2</td><td>IV</td><td>1</td></tr><tr><td>Vincristinea</td><td>1.4 mg/m2</td><td>IV</td><td>1</td></tr><tr><td>Prednisone</td><td>100 mg</td><td>Oral</td><td>1–5</td></tr><tr><td>One cycle is 21 days</td><td></td><td></td><td></td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>pruritus, and angioedema. Pretreatment with oral acetaminophen, 650 mg, and</p>
+<p>diphenhydramine, 50 mg, 30 minutes before the infusion is recommended.</p>
+<li>A second anti-CD20 monoclonal antibody, obinutuzumab, is approved in combina-</li>
+<p>tion with chemotherapy, as first-line, second-line, and subsequent therapy options for</p>
+<p>treatment of follicular lymphoma.</p>
+<li>90Y-ibritumomab tiuxetan is an anti-CD20 radioimmunoconjugate, linking mouse</li>
+<p>antibodies to radioisotopes. Radiation is selectively delivered to tumor cells express-</p>
+<p>ing the CD20 antigen and to adjacent tumor cells that do not express it.</p>
+<p>✓ Radioimmunotherapy is generally well tolerated. Toxicities include infusion-</p>
+<p>related reactions, myelosuppression, and possibly myelodysplastic syndrome or</p>
+<p>acute myelogenous leukemia.</p>
+<li>Phosphatidylinositol-3-kinase (PI3K) inhibitors, idealisib and copanlisib, reduce a</li>
+<p>messenger that affects malignant B lymphocyte proliferation and survival. They are</p>
+<p>treatment options for second-line therapy with relapsed or refractory follicular lym-</p>
+<p>phoma. Both agents are associated with serious adverse reactions including severe</p>
+<p>neutropenia, diarrhea, infection, and pneumonia.</p>
+<li>High-dose chemotherapy followed by HSCT is an option for relapsed follicular lym-</li>
+<p>phoma. The recurrence rate is lower after allogeneic than after autologous HSCT, but</p>
+<p>the benefit is offset by increased treatment-related mortality.</p>
+<h2>AGGRESSIVE LYMPHOMAS</h2>
+<li>Diffuse large B-cell lymphomas (DLBCLs) are the most common lymphoma in</li>
+<p>patients of all ages but most commonly seen in the seventh decade. Extranodal</p>
+<p>disease is present at diagnosis in 30%–40% of patients. IPI score correlates with</p>
+<p>prognosis. Diffuse aggressive lymphomas are sensitive to chemotherapy, with cure</p>
+<p>achieved in some patients.</p>
+<p>Treatment of Localized Disease</p>
+<li>Stage I and nonbulky stage II should be treated with three or four cycles of rituximab</li>
+<p>and CHOP (R-CHOP) followed by locoregional RT or six to eight cycles of R-CHOP</p>
+<p>with no RT.</p>
+<li>Patients with at least one adverse risk factor should receive six cycles of R-CHOP</li>
+<p>followed by locoregional RT.</p>
+<p>Treatment of Advanced Disease</p>
+<li>Bulky stage II and stages III and IV lymphoma should be treated with R-CHOP or</li>
+<p>rituximab and CHOP-like chemotherapy until achieving complete response (usually 4–6</p>
+<p>cycles). Maintenance therapy following a complete response does not improve survival.</p>
+<li>Consider high-dose chemotherapy with autologous HSCT in high-risk patients who</li>
+<p>respond to standard chemotherapy and meet HSCT criteria.</p>
+<li>Although historically elderly adults have lower complete response and survival rates</li>
+<p>than younger patients, full-dose R-CHOP is recommended as initial treatment for</p>
+<p>aggressive lymphoma in the elderly.</p>
+<p>Treatment of Refractory or Relapsed Disease</p>
+<li>Approximately one-third of patients with aggressive lymphoma will require salvage</li>
+<p>therapy at some point. Salvage therapy is more likely to induce response if the</p>
+<p>response to initial chemotherapy was complete (chemosensitivity) than if it was pri-</p>
+<p>marily or partially resistant to chemotherapy.</p>
+<li>High-dose chemotherapy with autologous HSCT is the therapy of choice for younger</li>
+<p>patients with chemosensitive relapse.</p>
+<li>Salvage regimens incorporate drugs not used as initial therapy. Commonly used</li>
+<p>regimens include DHAP (dexamethasone, cytarabine, and cisplatin), ESHAP</p>
+<p>(etoposide, methylprednisolone, cytarabine, and cisplatin), and MINE (mesna,</p>
+<p>ifosfamide, mitoxantrone, and etoposide). None is clearly superior to the others.</p>
+<li>Rituximab is being evaluated in combination with many salvage regimens.</li>
+<p>726</p>
+<p>CH63.indd 726 20-11-2020 10:07:17</p>
+<h2>Lymphomas | CHAPTER 63</h2>
+<h2>NON-HODGKIN LYMPHOMA IN ACQUIRED IMMUNODEFICIENCY</h2>
+<h2>SYNDROME</h2>
+<li>Patients with AIDS have more than a 100-fold increased risk of developing NHL,</li>
+<p>which is usually aggressive (eg, Burkitt or DLBCL).</p>
+<li>Treatment of AIDS-related lymphoma is difficult because underlying immunodefi-</li>
+<p>ciency increases the risk of treatment-related myelosuppression.</p>
+<li>Standard combination regimens (eg, CHOP) yield disappointing results. Newer</li>
+<p>approaches, including dose-adjusted EPOCH (etoposide, prednisone, vincristine,</p>
+<p>cyclophosphamide, and doxorubicin), appear promising. The role of rituximab in the</p>
+<p>treatment of AIDS-related DLBCL is not clear.</p>
+<li>Prophylactic antibiotics should be continued during chemotherapy, but the optimal</li>
+<p>timing for highly active antiretroviral therapy (HAART) is not clear in patients with</p>
+<p>AIDS-related lymphoma.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The primary outcome to be identified is tumor response, which is based on physical</li>
+<p>examination, radiologic evidence, PET/computed tomography (CT) scanning, and</p>
+<p>other baseline findings.</p>
+<p>See Chapter 149, Lymphomas, authored by Alexandre Chan, Chia Jie Tan, and Jolynn</p>
+<p>Sessions, for a more detailed discussion of this topic.</p>
+<p>727</p>
+<p>CH63.indd 727 20-11-2020 10:07:18</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

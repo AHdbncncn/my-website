@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53. Alzheimer Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>53. Alzheimer Disease</h1>
+        </header>
+        <main>
+            <h2>SECTION 9</h2>
+<h2>NEUROLOGIC DISORDERS</h2>
+<p>Edited by Vicki L. Ellingrod</p>
+<p>53</p>
+<p>Alzheimer Disease</p>
+<p>575</p>
+<h2>RETPAHC</h2>
+<li>Alzheimer disease (AD) affects ~7.5 million Americans of all ages and is a progressive</li>
+<pre><code>illness of unknown cause characterized by loss of cognitive and physical functioning,</code></pre>
+<p>commonly with behavior symptoms.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Dominantly inherited forms of AD are fewer than 1% of cases. More than half of</li>
+<p>young-onset, dominantly inherited cases are attributed to chromosomal alterations</p>
+<p>that affect processing of the amyloid precursor protein. Genetic susceptibility to</p>
+<p>late-onset AD is primarily linked to the apolipoprotein E (APOE) genotype, but an</p>
+<p>interaction of multiple genes with the environment may be at play.</p>
+<li>AD risk factors include age, decreased reserve capacity of the brain, head injury,</li>
+<p>Down syndrome, depression, mild cognitive impairment, and risk factors for vas-</p>
+<p>cular disease, including hypertension, elevated homocysteine, elevated low-density</p>
+<p>lipoprotein cholesterol, low high-density lipoprotein cholesterol, obesity, metabolic</p>
+<p>syndrome, and diabetes.</p>
+<li>Signature findings include intracellular neurofibrillary tangles (NFTs), extracellular</li>
+<p>amyloid plaques in the cortex and medial temporal lobe, degeneration of neurons and</p>
+<p>synapses, and cortical atrophy. AD-affected individuals appear to have a higher bur-</p>
+<p>den of plaques and NFTs in their younger years compared to age-matched controls.</p>
+<li>Proposed mechanisms for these changes include: (1) β-amyloid protein aggregation,</li>
+<p>leading to formation of plaques; (2) hyperphosphorylation of tau protein, leading to</p>
+<p>NFTs; (3) synaptic failure and depletion of neurotrophin and neurotransmitters; (4)</p>
+<pre><code>mitochondrial dysfunction; and (5) oxidative stress. The amyloid cascade hypothesis</code></pre>
+<p>states that there is an imbalance between production and clearance of β-amyloid,</p>
+<p>with aggregation and accumulation of β-amyloid leading to AD. Whether this is the</p>
+<p>primary pathology in most forms of AD remains to be shown.</p>
+<li>Of neurotransmitter deficits, loss of cholinergic activity is most prominent, and it</li>
+<p>correlates with AD severity. Cholinergic cell loss seems to be a consequence of AD</p>
+<p>pathology, not the cause of it.</p>
+<li>Other neurotransmitter considerations include: (1) serotonergic neurons of the raphe</li>
+<p>nuclei and noradrenergic cells of the locus ceruleus are lost; (2) monoamine oxidase</p>
+<p>type B activity is increased; (3) glutamate pathways of the cortex and limbic structures</p>
+<p>are abnormal; and (4) excitatory neurotransmitters, including glutamate, may be</p>
+<p>neurotoxic.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Cognitive decline is gradual and includes memory loss, aphasia, apraxia, agnosia,</li>
+<pre><code>disorientation, and impaired executive function. Other non-cognitive symptoms</code></pre>
+<p>include depression, psychotic symptoms, aggression, motor hyperactivity, uncoop-</p>
+<p>erativeness, wandering, and combativeness. Patients become increasingly unable to</p>
+<h2>care for themselves. Table 53-1 shows the stages of AD.</h2>
+<p>ch53.indd 575 20-11-2020 13:00:28</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>53</th><th>Alzheimer Disease</th></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 53-1 Stages of Alzheimer Disease</h2>
+<p>Mild (MMSE Patient has difficulty remembering recent events. Ability to manage</p>
+<p>score finances, prepare food, and carry out other household activities declines.</p>
+<p>26–21) May get lost while driving. Begins to withdraw from difficult tasks and to</p>
+<p>give up hobbies. May deny memory problems.</p>
+<p>Moderate Patient requires assistance with activities of daily living. Frequently</p>
+<p>(MMSE disoriented with regard to time (date, year, and season). Recall of recent</p>
+<p>score events is severely impaired. May forget some details of past life events</p>
+<p>20–10) and names of family and friends. Functioning may fluctuate from day</p>
+<p>to day. Patient generally denies problems. May become suspicious or</p>
+<p>tearful. Loses ability to drive safely. Agitation, paranoia, and delusions</p>
+<p>are common.</p>
+<p>Severe (MMSE Patient loses ability to speak, walk, and feed self. Incontinent of urine and</p>
+<p>score 9–0) feces. Requires care 24 hours a day, 7 days a week.</p>
+<p>MMSE, Mini-Mental State Examination.</p>
+<h2>DIAGNOSIS</h2>
+<li>The National Institute on Aging and the Alzheimer’s Association view AD as a spec-</li>
+<p>trum beginning with an asymptomatic preclinical phase progressing to the symp-</p>
+<p>tomatic preclinical phase and then to the dementia phase. AD is a clinical diagnosis,</p>
+<p>based largely on identified symptoms and difficulty with activities of daily living</p>
+<p>revealed by patient and caregiver interviews.</p>
+<li>Patients with suspected AD should have a history and physical examination with</li>
+<p>appropriate laboratory tests (serum B , folate, thyroid panel, blood cell counts, serum</p>
+<p>12</p>
+<pre><code>electrolytes, and liver function tests), and computed tomography (CT) or magnetic</code></pre>
+<p>resonance imaging (MRI) may aid diagnosis.</p>
+<li>International guidelines recommend structural imaging (ie, noncontrast enhanced</li>
+<p>CT or MRI) be performed when evaluating people with suspected dementia to iden-</p>
+<p>tify structural abnormalities consistent with AD or other pathology, such as brain</p>
+<p>atrophy, vascular damage, or tumors. To exclude other diagnoses, cerebrospinal fluid</p>
+<p>analysis or an electroencephalogram can occasionally be justified.</p>
+<li>Obtain information on medication use; alcohol or other substance use; family</li>
+<p>medical history; and history of trauma, depression, or head injury. Rule out medi-</p>
+<p>cation use (eg, anticholinergics, sedatives, hypnotics, opioids, antipsychotics, and</p>
+<p>anticonvulsants) as contributors to dementia symptoms. Rule out medications that</p>
+<p>could contribute to delirium (eg, digoxin, nonsteroidal anti-inflammatory drugs</p>
+<p>[NSAIDs], histamine-2 [H] receptor antagonists, amiodarone, antihypertensives,</p>
+<p>2</p>
+<p>and corticosteroids).</p>
+<li>The Folstein Mini-Mental State Examination (MMSE) can help establish a history of</li>
+<p>deficits in two or more areas of cognition at baseline against which to evaluate change</p>
+<p>in severity over time. The average expected decline in an untreated patient is 2–4</p>
+<p>points per year (Table 53-1). Other scales for assessment are also available.</p>
+<li>In the future, improved brain imaging and validated biomarkers of disease will enable</li>
+<p>a more sophisticated diagnosis with identified cognitive strengths and weaknesses</p>
+<p>and neuroanatomic localization of deficits.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goal of treatment in AD is to maintain cognitive function-</li>
+<p>ing and activities of daily living as long as possible, with a secondary goal to treat the</p>
+<p>psychiatric and behavioral symptoms.</p>
+<p>576</p>
+<p>ch53.indd 576 20-11-2020 13:00:29</p>
+<div class="table-container"><table><tr><th>TABLE 53-1 Stages of Alzheimer Disease</th><th></th></tr><tr><td>Mild (MMSE
+score
+26–21)</td><td>Patient has difficulty remembering recent events. Ability to manage
+finances, prepare food, and carry out other household activities declines.
+May get lost while driving. Begins to withdraw from difficult tasks and to
+give up hobbies. May deny memory problems.</td></tr><tr><td>Moderate
+(MMSE
+score
+20–10)</td><td>Patient requires assistance with activities of daily living. Frequently
+disoriented with regard to time (date, year, and season). Recall of recent
+events is severely impaired. May forget some details of past life events
+and names of family and friends. Functioning may fluctuate from day
+to day. Patient generally denies problems. May become suspicious or
+tearful. Loses ability to drive safely. Agitation, paranoia, and delusions
+are common.</td></tr><tr><td>Severe (MMSE
+score 9–0)</td><td>Patient loses ability to speak, walk, and feed self. Incontinent of urine and
+feces. Requires care 24 hours a day, 7 days a week.</td></tr></table></div><h2>Alzheimer Disease | CHAPTER 53</h2>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>The general approach to nonpharmacologic strategies for cognitive and non-</li>
+<p>cognitive symptoms of AD is to identify the symptom and causative factors, and</p>
+<p>adapt the caregiving environment to remedy the situation.</p>
+<li>Sleep disturbances, wandering, urinary incontinence, agitation, and aggression</li>
+<p>should be managed with behavioral and environmental interventions whenever</p>
+<p>possible, for example, redirecting the patient’s attention and removing stressors and</p>
+<p>triggers.</p>
+<li>On initial diagnosis, the patient and caregiver should be educated on the course of</li>
+<p>illness, available treatments, legal decisions, changes in lifestyle that will become</p>
+<p>necessary, and other quality-of-life issues.</p>
+<li>Primary prevention of AD may include smoking cessation, increasing physical activ-</li>
+<p>ity, and reducing midlife obesity, hypertension, and diabetes. Also adherence to the</p>
+<p>Mediterranean Diet or Dietary Approaches to Stop Hypertension (DASH) Diet may</p>
+<p>reduce the risk of cognitive impairment or decline.</p>
+<h2>PHARMACOLOGIC THERAPY OF COGNITIVE SYMPTOMS</h2>
+<li>Cholinesterase inhibitors and NMDA-receptor antagonists are indicated for treat-</li>
+<p>ment of AD. Current guidelines do not have a specific preference for cholinesterase</p>
+<p>inhibitor initiation.</p>
+<li>Reasonable expectations of treatment may be a slowed decline in abilities and delayed</li>
+<p>long-term care placement.</p>
+<li>Dosing regimens should be simplified and patient and caregiver preferences consid-</li>
+<p>ered in an effort to improve medication adherence and persistence.</p>
+<li>Gaps in treatment may be associated with a loss of benefits when medication is</li>
+<p>stopped but this is controversial.</p>
+<p>Cholinesterase Inhibitors</p>
+<li>Table 53-2 summarizes dosing of the cholinesterase inhibitors and memantine.</li>
+<li>No comparative trials have assessed the effectiveness of one agent over another.</li>
+<p>Donepezil, rivastigmine, and galantamine are indicated in mild-to-moderate AD;</p>
+<p>donepezil is also indicated for severe AD.</p>
+<li>MMSE is practical to use in the clinical setting to measure changes in cognitive</li>
+<pre><code>function. Successful treatment would show a decline in MMSE sco re of less than</code></pre>
+<p>2 points per year.</p>
+<li>The three cholinesterase inhibitors have similar efficacy in mild-to-moderate</li>
+<p>AD, and duration of benefit lasts 3–24 months. Because of their short half-lives,</p>
+<p>if rivastigmine or galantamine treatment is interrupted for several days or longer,</p>
+<p>retitrate starting at the lowest dose. Gradual dose titration over several months</p>
+<p>improves tolerability. When switching from one agent to another, a washout period</p>
+<p>is recommended.</p>
+<li>Table 53-3 lists common side effects and monitoring parameters for the cholin-</li>
+<p>esterase inhibitors. Abrupt discontinuation can cause worsening of cognition and</p>
+<p>behavior in some patients.</p>
+<p>N-Methyl-d-Aspartate (NMDA) Receptor Antagonist</p>
+<li>Memantine (Namenda) blocks glutamatergic neurotransmission by antagonizing</li>
+<p>NMDA receptors, which may prevent excitotoxic reactions. It is used as monotherapy</p>
+<p>and in combination with a cholinesterase inhibitor. It is indicated for treatment of</p>
+<p>moderate to severe AD, but not for mild AD. It is not metabolized by the liver and is</p>
+<p>primarily excreted unchanged in the urine. Dosing must be adjusted in patients with</p>
+<p>renal impairment. It is usually well tolerated; side effects include constipation, confu-</p>
+<h2>sion, dizziness, and headache (Table 53-3).</h2>
+<li>Combination therapy with cholinesterase inhibitors and memantine, individu-</li>
+<p>ally or as Namzaric, is generally prescribed for people with moderate-to-severe</p>
+<pre><code>AD and has been shown to slow cognitive and functional decline to a statistically</code></pre>
+<p>577</p>
+<p>ch53.indd 577 20-11-2020 13:00:30</p>
+<h2>578 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 53-2 Dosing of Drugs Used for Cognitive Symptoms</h2>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Other</p>
+<p>Cholinesterase inhibitors</p>
+<p>Donepezil Aricept, 5 mg daily in the evening 5–10 mg daily in No dosage adjustments recommended Available as: tablet, ODT, oral</p>
+<p>Aricept ODT mild to moderate AD solution</p>
+<p>10–23 mg daily in Can be taken with or</p>
+<p>moderate to severe AD without food</p>
+<p>Weight loss associated with</p>
+<p>23 mg daily dose</p>
+<p>Rivastigmine Exelon 1.5 mg twice daily 3–6 mg twice a day Capsule/oral solution: renal impairment, Available as: capsule, oral</p>
+<p>(capsule, oral solution) (capsule, oral solution) hepatic impairment, or low body weight solution, transdermal patch</p>
+<p>(&lt;50 kg [&lt;110 lb]): patients may be</p>
+<p>Take with meals</p>
+<p>able to only tolerate lower doses</p>
+<p>Also indicated for Parkinson</p>
+<p>disease dementia</p>
+<p>4.6 mg/day (transdermal 9.5–13.3 mg/day Transdermal patch: mild to moderate Application of multiple</p>
+<p>patch) (transdermal patch) hepatic impairment or low body weight: transdermal patches at</p>
+<p>consider maximum daily dose of 4.6 mg same time associated with</p>
+<p>every 24 hours hospitalization and death</p>
+<p>Galantamine Razadyne, 4 mg twice daily (tablet, 8–12 mg twice a day Moderate renal or hepatic impairment: Available as: tablet, oral solution,</p>
+<p>Razadyne ER oral solution) (tablet, oral solution) maximum daily dose of 16 mg extended-release capsule</p>
+<p>8 mg daily in the morning 16–24 mg Severe renal or hepatic impairment: not Take with meals</p>
+<p>(extended-release (extended-release recommended</p>
+<p>capsule) capsule)</p>
+<p>ch53.indd</p>
+<p>578</p>
+<p>20-11-2020</p>
+<p>13:00:30</p>
+<div class="table-container"><table><tr><th>TABLE 53-2 Dosing of Drugs Used for Cognitive Symptoms</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose</td><td>Usual Range</td><td>Special Population Dose</td><td>Other</td></tr><tr><td>Cholinesterase inhibitors</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Donepezil</td><td>Aricept,
+Aricept ODT</td><td>5 mg daily in the evening</td><td>5–10 mg daily in
+mild to moderate AD
+10–23 mg daily in
+moderate to severe AD</td><td>No dosage adjustments recommended</td><td>Available as: tablet, ODT, oral
+solution
+Can be taken with or
+without food
+Weight loss associated with
+23 mg daily dose</td></tr><tr><td>Rivastigmine</td><td>Exelon</td><td>1.5 mg twice daily
+(capsule, oral solution)
+4.6 mg/day (transdermal
+patch)</td><td>3–6 mg twice a day
+(capsule, oral solution)
+9.5–13.3 mg/day
+(transdermal patch)</td><td>Capsule/oral solution: renal impairment,
+hepatic impairment, or low body weight
+(&lt;50 kg [&lt;110 lb]): patients may be
+able to only tolerate lower doses
+Transdermal patch: mild to moderate
+hepatic impairment or low body weight:
+consider maximum daily dose of 4.6 mg
+every 24 hours</td><td>Available as: capsule, oral
+solution, transdermal patch
+Take with meals
+Also indicated for Parkinson
+disease dementia
+Application of multiple
+transdermal patches at
+same time associated with
+hospitalization and death</td></tr><tr><td>Galantamine</td><td>Razadyne,
+Razadyne ER</td><td>4 mg twice daily (tablet,
+oral solution)
+8 mg daily in the morning
+(extended-release
+capsule)</td><td>8–12 mg twice a day
+(tablet, oral solution)
+16–24 mg
+(extended-release
+capsule)</td><td>Moderate renal or hepatic impairment:
+maximum daily dose of 16 mg
+Severe renal or hepatic impairment: not
+recommended</td><td>Available as: tablet, oral solution,
+extended-release capsule
+Take with meals</td></tr></table></div><p>579</p>
+<p>Alzheimer</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>53</p>
+<p>N-methyl-d-aspartate (NMDA) receptor antagonist</p>
+<p>Memantine Namenda, 5 mg daily (tablet, oral 10 mg twice daily Severe renal impairment: recommended Available as: tablet, oral solution,</p>
+<p>Namenda XR solution) 28 mg daily maintenance dose of 5 mg twice daily extended-release capsule</p>
+<p>7 mg daily (extended-release (tablet, oral solution) or 14 mg daily Can be taken with or</p>
+<p>(extended-release capsule) (extended-release capsule) without food</p>
+<p>capsule) Severe hepatic impairment: administer Can open capsule and sprinkle</p>
+<p>with caution contents on applesauce for</p>
+<p>ease of administration</p>
+<p>Cholinesterase inhibitor + NMDA receptor antagonist</p>
+<p>Memantine + Namzaric 7 mg/10 mg (if patient is 28 mg/10 mg daily Severe renal impairment: Available as: memantine</p>
+<p>donepezil stabilized on donepezil 14 mg/10 mg daily extended-release and</p>
+<p>and not currently on donepezil capsule</p>
+<p>memantine) Can be taken with or</p>
+<p>28 mg/10 mg (if without food</p>
+<p>patient is stabilized Can open capsule and sprinkle</p>
+<p>on memantine and contents on applesauce for</p>
+<p>donepezil) ease of administration</p>
+<h2>ODT, orally disintegrating tablet.</h2>
+<p>ch53.indd</p>
+<p>579</p>
+<p>20-11-2020</p>
+<p>13:00:30</p>
+<div class="table-container"><table><tr><th>N-methyl-d-aspartate (NMDA) receptor antagonist</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Memantine</td><td>Namenda,
+Namenda XR</td><td>5 mg daily (tablet, oral
+solution)
+7 mg daily
+(extended-release
+capsule)</td><td>10 mg twice daily
+28 mg daily
+(extended-release
+capsule)</td><td>Severe renal impairment: recommended
+maintenance dose of 5 mg twice daily
+(tablet, oral solution) or 14 mg daily
+(extended-release capsule)
+Severe hepatic impairment: administer
+with caution</td><td>Available as: tablet, oral solution,
+extended-release capsule
+Can be taken with or
+without food
+Can open capsule and sprinkle
+contents on applesauce for
+ease of administration</td></tr><tr><td>Cholinesterase inhibitor + NMDA receptor antagonist</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Memantine +
+donepezil</td><td>Namzaric</td><td>7 mg/10 mg (if patient is
+stabilized on donepezil
+and not currently on
+memantine)
+28 mg/10 mg (if
+patient is stabilized
+on memantine and
+donepezil)</td><td>28 mg/10 mg daily</td><td>Severe renal impairment:
+14 mg/10 mg daily</td><td>Available as: memantine
+extended-release and
+donepezil capsule
+Can be taken with or
+without food
+Can open capsule and sprinkle
+contents on applesauce for
+ease of administration</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<p>TABLE 53-3 Monitoring Drug Therapy for Cognitive Symptoms (Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reaction Parameters Comments</p>
+<p>Galantamine Serious skin Appearance of Discontinue galantamine at</p>
+<p>reactions skin rash first sign of skin rash, unless</p>
+<p>(Stevens– clearly not drug related</p>
+<p>Johnson If signs/symptoms are</p>
+<p>syndrome and suggestive of a serious</p>
+<p>acute generalized reaction, consider alternative</p>
+<p>exanthematous treatment and do not</p>
+<p>pustulosis) rechallenge</p>
+<p>Rivastigmine Allergic dermatitis Application site Discontinue rivastigmine if</p>
+<p>reaction spread evidence of disseminated</p>
+<p>beyond patch allergic dermatitis appears</p>
+<p>size, evidence of Patients sensitized by exposure</p>
+<p>a more intense to the transdermal patch</p>
+<p>local reaction may not be able to take</p>
+<p>(increasing rivastigmine by mouth</p>
+<p>erythema, either; allergy testing and</p>
+<p>edema, papules, close medical supervision</p>
+<p>vesicles), and recommended</p>
+<p>persistence</p>
+<p>of symptoms</p>
+<p>for more than</p>
+<p>48 hours after</p>
+<p>patch removal</p>
+<p>Cholinesterase Dizziness, syncope, Report of dizziness Dizziness is usually mild,</p>
+<p>inhibitors bradycardia, atrial or falls, pulse, transient, and not related to</p>
+<p>arrhythmias, blood pressure, cardiovascular problems</p>
+<p>sinoatrial and and postural Routine pulse checks at</p>
+<p>atrioventricular blood pressure baseline, monthly during</p>
+<p>block, myocardial change titration, and every 6 months</p>
+<p>infarction thereafter</p>
+<p>Nausea, vomiting, Weight and GI Take with food to decrease</p>
+<p>diarrhea, complaints GI upset</p>
+<p>anorexia, Usually transient, dose-related</p>
+<p>weight loss GI adverse effects seen</p>
+<p>with drug initiation, dosage</p>
+<p>titration, or drug switch</p>
+<p>Debilitated patients or those</p>
+<p>weighing &lt;55 kg (&lt;121</p>
+<p>lb) may be more likely to</p>
+<p>experience GI adverse effects</p>
+<p>and significant weight</p>
+<p>loss, particularly when</p>
+<p>rivastigmine is prescribed</p>
+<p>or when titrating to</p>
+<p>donepezil 23 mg</p>
+<p>GI adverse effects less</p>
+<p>prominent with transdermal</p>
+<p>versus oral rivastigmine</p>
+<p>(Continued )</p>
+<p>580</p>
+<p>ch53.indd 580 20-11-2020 13:00:31</p>
+<div class="table-container"><table><tr><th>TABLE 53-3 Monitoring Drug Therapy for Cognitive Symptoms</th><th></th><th></th><th></th><th>(Continued )</th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td><td></td><td></td></tr><tr><td>Galantamine</td><td>Serious skin
+reactions
+(Stevens–
+Johnson
+syndrome and
+acute generalized
+exanthematous
+pustulosis)</td><td>Appearance of
+skin rash</td><td>Discontinue galantamine at
+first sign of skin rash, unless
+clearly not drug related
+If signs/symptoms are
+suggestive of a serious
+reaction, consider alternative
+treatment and do not
+rechallenge</td><td></td><td></td></tr><tr><td>Rivastigmine</td><td>Allergic dermatitis</td><td>Application site
+reaction spread
+beyond patch
+size, evidence of
+a more intense
+local reaction
+(increasing
+erythema,
+edema, papules,
+vesicles), and
+persistence
+of symptoms
+for more than
+48 hours after
+patch removal</td><td>Discontinue rivastigmine if
+evidence of disseminated
+allergic dermatitis appears
+Patients sensitized by exposure
+to the transdermal patch
+may not be able to take
+rivastigmine by mouth
+either; allergy testing and
+close medical supervision
+recommended</td><td></td><td></td></tr><tr><td>Cholinesterase
+inhibitors</td><td>Dizziness, syncope,
+bradycardia, atrial
+arrhythmias,
+sinoatrial and
+atrioventricular
+block, myocardial
+infarction</td><td>Report of dizziness
+or falls, pulse,
+blood pressure,
+and postural
+blood pressure
+change</td><td>Dizziness is usually mild,
+transient, and not related to
+cardiovascular problems
+Routine pulse checks at
+baseline, monthly during
+titration, and every 6 months
+thereafter</td><td></td><td></td></tr><tr><td></td><td>Nausea, vomiting,
+diarrhea,
+anorexia,
+weight loss</td><td>Weight and GI
+complaints</td><td>Take with food to decrease
+GI upset
+Usually transient, dose-related
+GI adverse effects seen
+with drug initiation, dosage
+titration, or drug switch
+Debilitated patients or those
+weighing &lt;55 kg (&lt;121
+lb) may be more likely to
+experience GI adverse effects
+and significant weight
+loss, particularly when
+rivastigmine is prescribed
+or when titrating to
+donepezil 23 mg
+GI adverse effects less
+prominent with transdermal
+versus oral rivastigmine
+(Continued )</td><td></td><td></td></tr></table></div><h2>Alzheimer Disease | CHAPTER 53</h2>
+<p>TABLE 53-3 Monitoring Drug Therapy for Cognitive Symptoms (Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reaction Parameters Comments</p>
+<p>Cholinesterase Peptic ulcer disease, Signs or symptoms Of particular concern for</p>
+<p>inhibitors GI bleeding of active or patients at increased risk</p>
+<p>(con’t) occult GI of developing ulcers, such</p>
+<p>bleeding as those with a history of</p>
+<p>ulcer disease or concurrently</p>
+<p>taking NSAIDs</p>
+<p>Insomnia, vivid/ Complaints of sleep Donepezil can be taken in the</p>
+<p>abnormal disturbances, morning to decrease risk of</p>
+<p>dreams, daytime sleep disturbances</p>
+<p>nightmares drowsiness</p>
+<p>Memantine Headache, Report of dizziness Confusion may be observed</p>
+<p>confusion, or falls, during dose titration and is</p>
+<p>dizziness, hallucinations usually transient</p>
+<p>hallucinations</p>
+<p>Constipation GI complaints Memantine may mitigate GI</p>
+<p>adverse effects associated</p>
+<p>with cholinesterase inhibitor</p>
+<p>therapy</p>
+<p>GI, gastrointestinal; NSAIDs, nonsteroidal anti-inflammatory drugs.</p>
+<p>significant degree compared to cholinesterase inhibitor monotherapy or no treatment.</p>
+<p>Memantine may help mitigate some of the GI adverse effects seen with cholines-</p>
+<p>terase inhibitors.</p>
+<p>Other Drugs</p>
+<li>Use of estrogen, NSAIDS, prednisone, statins, or ginkgo biloba is not recommended</li>
+<p>to prevent or treat dementia.</p>
+<li>Vitamin E is under investigation for prevention of AD and is not recommended for</li>
+<p>treatment of AD.</p>
+<li>Do not use ginkgo biloba in individuals taking anticoagulants or antiplatelet drugs,</li>
+<p>and use cautiously in those taking NSAIDs.</p>
+<li>There is currently insufficient evidence to recommend medical foods such as Axona,</li>
+<p>Souvenaid, and Cerefolin NAC for treatment of AD.</p>
+<h2>PHARMACOLOGIC THERAPY OF NONCOGNITIVE SYMPTOMS</h2>
+<li>No drug is FDA approved for the treatment of AD behavioral and psychological</li>
+<p>symptoms such as psychotic symptoms, inappropriate or disruptive behavior, and</p>
+<p>depression.</p>
+<li>General guidelines include: (1) starting with reduced doses and titrating slowly; (2)</li>
+<p>monitoring closely; (3) periodically attempting to taper and discontinue medication;</p>
+<p>and (4) careful documentation.</p>
+<li>Some evidence supports that cholinesterase inhibitors and memantine may be ben-</li>
+<p>eficial in treating non-cognitive symptoms, but they do not reduce acute agitation.</p>
+<p>Avoid anticholinergic psychotropic medications as they may worsen cognition.</p>
+<p>Antidepressants</p>
+<li>Depression and dementia share many symptoms, and the diagnosis of depression can</li>
+<p>be difficult, especially later in the course of AD.</p>
+<p>581</p>
+<p>ch53.indd 581 20-11-2020 13:00:31</p>
+<div class="table-container"><table><tr><th>TABLE 53-3 Monitoring Drug Therapy for Cognitive Symptoms (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Cholinesterase
+inhibitors
+(con’t)</td><td>Peptic ulcer disease,
+GI bleeding</td><td>Signs or symptoms
+of active or
+occult GI
+bleeding</td><td>Of particular concern for
+patients at increased risk
+of developing ulcers, such
+as those with a history of
+ulcer disease or concurrently
+taking NSAIDs</td></tr><tr><td></td><td>Insomnia, vivid/
+abnormal
+dreams,
+nightmares</td><td>Complaints of sleep
+disturbances,
+daytime
+drowsiness</td><td>Donepezil can be taken in the
+morning to decrease risk of
+sleep disturbances</td></tr><tr><td>Memantine</td><td>Headache,
+confusion,
+dizziness,
+hallucinations</td><td>Report of dizziness
+or falls,
+hallucinations</td><td>Confusion may be observed
+during dose titration and is
+usually transient</td></tr><tr><td></td><td>Constipation</td><td>GI complaints</td><td>Memantine may mitigate GI
+adverse effects associated
+with cholinesterase inhibitor
+therapy</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>A selective serotonin reuptake inhibitor (SSRI) is usually given to depressed</li>
+<p>patients with AD, and the best evidence is for sertraline and citalopram. Tricyclic</p>
+<p>antidepressants are usually avoided.</p>
+<p>✓ Common side effects seen with SSRIs can be found in Chapter 68.</p>
+<p>Antipsychotics</p>
+<li>Antipsychotic medications have traditionally been used for disruptive behaviors and</li>
+<p>neuropsychiatric symptoms, but the risks and benefits must be carefully weighed.</p>
+<li>Atypical antipsychotics (ie, aripiprazole, risperidone, olanzapine, and quetiapine)</li>
+<p>have been shown to be more effective compared to placebo; however, the higher risk</p>
+<p>of adverse effects and mortality offset this benefit. Antipsychotics in AD should be</p>
+<p>restricted to patients with severe symptoms that have not responded to other mea-</p>
+<p>sures, and treatment should be tapered as early as possible and rarely used beyond</p>
+<p>12 weeks.</p>
+<p>✓ Common adverse events include somnolence, extrapyramidal symptoms,</p>
+<p>abnormal gait, worsening cognition, cerebrovascular events, and increased risk of</p>
+<p>death (see black-box warning). See Chapter 70 for more information.</p>
+<p>Miscellaneous Therapies</p>
+<li>Evidence for benzodiazepine use is lacking and not advised due to significant adverse</li>
+<p>effects.</p>
+<li>Use of antiepileptic medication (ie, carbamazepine and gabapentin) may be</li>
+<p>alternatives for agitation, but evidence is conflicting. Use of valproic acid is no longer</p>
+<p>recommended due to severe adverse effects.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>At baseline interview both patient and caregiver to identify target symptoms; define</li>
+<pre><code>therapeutic goals; and document cognitive status, physical status, functional perfor-</code></pre>
+<p>mance, mood, thought processes, and behavior.</p>
+<li>Use the MMSE for cognition, Bristol Activities of Daily Living Scale for activities of</li>
+<p>daily living, and Neuropsychiatric Inventory Questionnaire for assessment of behav-</p>
+<pre><code>ioral disturbances to quantify changes in symptoms and functioning.</code></pre>
+<li>Observe the patient carefully for potential side effects. The specific side effects to</li>
+<p>be monitored and the method and frequency of monitoring should be documented.</p>
+<li>Assess for drug effectiveness, side effects, adherence to regimen, and need for</li>
+<p>dosage adjustment or change in treatment at 2–4 weeks, and 8–12 weeks after initiation,</p>
+<p>followed by every 3–6 months thereafter. Several months to 1 year of treatment may</p>
+<p>be required to determine whether medications for cognition are beneficial.</p>
+<li>Drug deprescribing for people with AD is aided by the availability of deprescribing</li>
+<p>guidelines. When to stop treatment due to lack of efficacy, if ever, is controversial.</p>
+<p>See Chapter 71, Alzheimer Disease, authored by Emily P. Peron, Kristin M. Zimmerman,</p>
+<p>Ericka L Crouse, Patricia W. Slattum, and Sarah E. Hobgood, for a more detailed</p>
+<p>discussion of this topic.</p>
+<p>582</p>
+<p>ch53.indd 582 20-11-2020 13:00:32</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

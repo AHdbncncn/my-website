@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Patient Care Process</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Patient Care Process</h1>
+        </header>
+        <main>
+            <h2>INTRODUCTION</h2>
+<p>Edited by Cecily V. DiPiro and Terry L. Schwinghammer</p>
+<p>The Patient Care Process</p>
+<h2>INTRODUCTION</h2>
+<p>Health professionals who provide direct patient care are often called practitioners.</p>
+<p>Health professionals practice when they use their unique knowledge and skills to serve</p>
+<p>patients. A healthcare practice is not a physical location or simply a list of activities.</p>
+<p>Rather, a professional practice requires three essential elements: (1) a philosophy of</p>
+<p>practice, (2) a process of care, and (3) a practice management system.</p>
+<p>A practice philosophy is the moral purpose and commonly held set of values that</p>
+<p>guides the profession. It is the critical foundation on which the practices of pharmacy,</p>
+<p>medicine, nursing, and dentistry are built. Although the concept of pharmaceutical</p>
+<p>care is not formally included in the code of ethics for the pharmacy profession or the</p>
+<p>oath of a pharmacist, pharmacists understand that they have a unique responsibility</p>
+<p>for addressing the drug-related needs of patients and should be held accountable for</p>
+<p>preventing, identifying, and resolving drug therapy problems.</p>
+<p>The patient care process is a fundamental series of actions that guide the activities</p>
+<p>of health professionals. In 2014, the Joint Commission for Pharmacy Practitioners</p>
+<p>(JCPP)—representing 11 national pharmacy organizations—endorsed a framework</p>
+<p>for providing clinically oriented patient care services called the Pharmacists’ Patient</p>
+<p>Care Process. This process includes five essential steps: (1) collecting subjective and</p>
+<p>objective information about the patient; (2) assessing the collected data to identify</p>
+<p>problems, determine the adequacy of current treatments, and set priorities; (3) creating</p>
+<p>an individualized care plan that is evidence-based and cost-effective; (4) implementing</p>
+<p>the care plan; and (5) monitoring the patient over time during follow-up encounters to</p>
+<p>evaluate the effectiveness of the plan and modify it as needed (Fig. 1). In addition to</p>
+<p>the five fundamental steps, a patient-centered approach to decision making is essential.</p>
+<p>A practice management system is necessary to support the efficient and effective</p>
+<p>delivery of services, including physical, financial, and human resources with policies</p>
+<p>and procedures to carry out the work of patient care.</p>
+<p>This chapter provides a brief summary of the patient care process applied to drug</p>
+<p>therapy management and the practice management issues influencing adoption and</p>
+<p>application of this process by pharmacists.</p>
+<h2>IMPORTANCE OF A STANDARD CARE PROCESS</h2>
+<p>The stimulus for developing the patient care process for pharmacy was the wide</p>
+<p>variation observed as pharmacists provided direct patient care, often using the same</p>
+<p>terminology to describe diverse services or, conversely, using different terminology to</p>
+<p>describe the same service. Without a consistent patient care process, it has been chal-</p>
+<p>lenging for the pharmacy profession to communicate the pharmacist’s role to external</p>
+<p>groups and establish the distinct value pharmacists bring to an interprofessional care</p>
+<p>team. Moreover, the patient must know and understand what is to be delivered to deter-</p>
+<p>mine how best to receive the care provided. Likewise, other members of the healthcare</p>
+<p>team must determine how best to integrate the pharmacist’s work into their efforts car-</p>
+<p>ing for the patient. A process of care must be built on a set of fundamental steps that can</p>
+<p>address the wide range of complexity that exists among patients. The process needs to be</p>
+<p>adaptable to varied settings, diverse populations, and different acuity levels.</p>
+<p>1</p>
+<p>ch00.indd 1 18-11-2020 14:16:20</p>
+<div class="table-container"><table><tr><th></th><th></th><th>The Patient Care Process</th></tr></table></div><h2>| INTRODUCTION</h2>
+<p>FIGURE 1. The pharmacists’ patient care process. Joint Commission of Pharmacy</p>
+<p>Practitioners. Pharmacists’ Patient Care Process. May 29, 2014. Available at: https://</p>
+<p>jcpp.net/wp-content/uploads/2016/03/PatientCareProcess-with-supporting-</p>
+<p>organizations.pdf. Reprinted with permission.</p>
+<h2>THE PATIENT CARE PROCESS TO OPTIMIZE PHARMACOTHERAPY</h2>
+<p>The application or focus of a profession-specific process of care depends upon the pro-</p>
+<p>fession’s knowledge and expertise. For pharmacy, the patient care process is focused on</p>
+<p>patient medication-related needs and experience with medication therapy. Each health</p>
+<p>profession then addresses patient needs by assessing patient-specific information in a</p>
+<p>unique manner. For pharmacists providing comprehensive medication management</p>
+<p>(CMM), the assessment step involves a systematic examination of the indication, effec-</p>
+<p>tiveness, safety, and adherence for each of the patient’s medications. This is a unique way</p>
+<p>of approaching a patient’s health needs; no other discipline applies a systematic assess-</p>
+<p>ment process to medications and the medication experience in this manner.</p>
+<p>The pharmacists’ patient care process is standardized and is not specific to a care</p>
+<p>setting—it can be applied wherever CMM is performed. However, the type of informa-</p>
+<p>tion collected, its sources, and the duration of time to complete the process may vary</p>
+<p>depending on the practice setting and acuity of care. The subsequent sections in this</p>
+<p>chapter briefly describe the steps in the patient care process for pharmacists.</p>
+<h2>COLLECT PATIENT-SPECIFIC INFORMATION</h2>
+<p>Collect relevant subjective and objective information about the patient and analyze the</p>
+<p>data to understand the medical/medication history and clinical status of the patient.</p>
+<p>Information from the health record may include patient demographics, active medical</p>
+<p>2</p>
+<p>ch00.indd 2 18-11-2020 14:16:24</p>
+<p>The Patient Care Process |</p>
+<p>problem list, admission and discharge notes, office visit notes, laboratory values, diag-</p>
+<p>nostic tests, and medication lists. Conduct a comprehensive medication review with</p>
+<p>the patient that also includes alcohol, tobacco and caffeine use; immunization status;</p>
+<p>allergies; and adverse drug effects. Ask whether the patient has questions or concerns</p>
+<p>for the visit. Document a complete medication list that includes all prescription and</p>
+<p>nonprescription medications as well as dietary supplements the patient is taking (ie,</p>
+<p>name, indication, strength and formulation, dose, frequency, duration, and response</p>
+<p>to medication). Gather past medication history, if pertinent. Collect information about</p>
+<p>the patient’s medication experience (eg, beliefs, expectations, and cultural consider-</p>
+<p>ations related to medications) and personal goals of therapy. Ask about the patient’s</p>
+<p>ability to access medications, manage medications at home, adhere to the therapy, and</p>
+<p>use medications appropriately. Gather additional important information (eg, physi-</p>
+<p>cal assessment findings, review of systems, home-monitored blood glucose, blood</p>
+<p>pressure readings).</p>
+<h2>ASSESS INFORMATION AND FORMULATE A</h2>
+<h2>MEDICATION THERAPY PROBLEM LIST</h2>
+<p>Analyze the information collected to formulate a problem list consisting of the patient’s</p>
+<p>active medical problems and medication therapy problems in order to prioritize</p>
+<p>medication therapy recommendations that achieve the patient’s health goals. Assess</p>
+<p>the indication of each medication the patient is taking, including the presence of an</p>
+<p>appropriate indication; consider also whether the patient has an untreated medical</p>
+<p>condition that requires therapy. Assess the effectiveness of each medication, including</p>
+<p>progress toward achieving therapeutic goals; optimal selection of drug product, dose,</p>
+<p>and duration of therapy; and need for additional laboratory data to monitor medication</p>
+<p>response. Assess the safety of each medication by identifying adverse events; excessive</p>
+<p>doses; availability of safer alternatives; pertinent drug-disease, drug-drug, or drug-food</p>
+<p>interactions; and need for additional laboratory data to monitor medication safety.</p>
+<p>Assess adherence and the patient’s ability to take each medication (eg, administration,</p>
+<p>access, affordability). Ensure that medication administration times are appropriate</p>
+<p>and convenient for the patient. From all of this information, formulate and prioritize a</p>
+<p>medication therapy problem list, classifying the patient’s medication therapy problems</p>
+<p>based on indication, effectiveness, safety, and adherence (Table 1).</p>
+<h2>TABLE 1 Medication Therapy Problem Categories Framework</h2>
+<p>Medication-Related Needs Medication Therapy Problem Category</p>
+<p>Indication Unnecessary medication therapy</p>
+<p>Needs additional medication therapy</p>
+<p>Effectiveness Ineffective medication</p>
+<p>Dosage too low</p>
+<p>Needs additional monitoring</p>
+<p>Safety Adverse medication event</p>
+<p>Dosage too high</p>
+<p>Needs additional monitoring</p>
+<p>Adherence Adherence</p>
+<p>Cost</p>
+<p>Pharmacy Quality Alliance. PQA Medication Therapy Problem Categories Framework. August 2017.</p>
+<p>Available at: https://www.pqaalliance.org/assets/Measures/PQA%20MTP%20Categories%20</p>
+<p>Framework.pdf.</p>
+<p>3</p>
+<p>ch00.indd 3 18-11-2020 14:16:24</p>
+<div class="table-container"><table><tr><th>TABLE 1 Medication Therapy Problem Categories Framework</th><th></th></tr><tr><td>Medication-Related Needs</td><td>Medication Therapy Problem Category</td></tr><tr><td>Indication</td><td>Unnecessary medication therapy</td></tr><tr><td></td><td>Needs additional medication therapy</td></tr><tr><td>Effectiveness</td><td>Ineffective medication</td></tr><tr><td></td><td>Dosage too low</td></tr><tr><td></td><td>Needs additional monitoring</td></tr><tr><td>Safety</td><td>Adverse medication event</td></tr><tr><td></td><td>Dosage too high</td></tr><tr><td></td><td>Needs additional monitoring</td></tr><tr><td>Adherence</td><td>Adherence</td></tr><tr><td></td><td>Cost</td></tr></table></div><h2>| INTRODUCTION</h2>
+<h2>DEVELOP THE CARE PLAN</h2>
+<p>Working in collaboration with other healthcare professionals and the patient or care-</p>
+<p>giver, develop an individualized, patient-centered care plan that is evidence based</p>
+<p>and affordable for the patient. Design the plan to manage the patient’s active medical</p>
+<p>conditions and resolve the identified medication therapy problems. Coordinate care</p>
+<p>with the primary care provider and other healthcare team members to reach consensus</p>
+<p>on the proposed care plan, when needed. Identify the monitoring parameters necessary</p>
+<p>to assess effectiveness, safety, and adherence, including frequency of follow-up moni-</p>
+<p>toring. Design personalized education and interventions for the patient, and reconcile</p>
+<p>all medication lists (eg, from the medical record, patient, pharmacy) to arrive at an</p>
+<p>accurate and updated medication list. Determine who will implement components of</p>
+<p>the care plan (ie, patient, clinical pharmacist, other providers). Decide on the appropri-</p>
+<p>ate time frame and mode for patient follow-up (eg, phone, face-to-face).</p>
+<h2>IMPLEMENT THE CARE PLAN</h2>
+<p>Implement the care plan in collaboration with other healthcare professionals and the</p>
+<p>patient or caregiver. Discuss the care plan with the patient, educate the patient about</p>
+<p>the medications and goals of therapy, make sure the patient understands and agrees</p>
+<p>with the plan, and implement recommendations that are within your scope of practice.</p>
+<p>For recommendations that cannot be independently implemented, communicate the</p>
+<p>care plan to the rest of the team, indicating where input is required by other team mem-</p>
+<p>bers. Document the encounter in the health record (eg, assessment, medication therapy</p>
+<p>care plan, rationale, monitoring, and follow-up). Arrange patient follow-up based on</p>
+<p>the determined time frame and communicate follow-up instructions with the patient.</p>
+<h2>FOLLOW-UP WITH THE PATIENT</h2>
+<p>Provide targeted follow-up and monitoring (whether in person, electronically, or via</p>
+<p>phone) to assess the effectiveness and safety of the care plan. Modify the plan when</p>
+<p>needed in collaboration with other team members and the patient or caregiver to</p>
+<p>achieve patient and clinical goals of therapy. Plan for a CMM follow-up visit at least</p>
+<p>once within a year of the initial visit, and repeat all steps of the patient care process</p>
+<p>at that time to ensure continuity of care and ongoing medication optimization. Refer</p>
+<p>the patient back to the provider (and document accordingly) if all medication therapy</p>
+<p>problems have been resolved, no new problems are identified, and it is determined that</p>
+<p>the patient no longer needs CMM services.</p>
+<h2>PRACTICE MANAGEMENT ISSUES</h2>
+<p>A practice management system is essential to the care process and includes the metrics</p>
+<p>to ensure patient health outcomes are being achieved; efficient workflow; communica-</p>
+<p>tion and documentation using the power of information technology (IT); and data</p>
+<p>that accurately reflect the attribution and value the practitioner brings to patient care.</p>
+<h2>QUALITY METRICS</h2>
+<p>The patient care process sets a standard of achievable performance by defining the</p>
+<p>parameters of the process that can be measured. With the movement toward outcome-</p>
+<p>based healthcare models and value-based payment systems, it is critical to objectively</p>
+<p>measure the impact a patient care service has on a patient’s health and well-being. For</p>
+<p>the process to be measurable, each element must be clearly defined and performed in</p>
+<p>a similar manner during each patient encounter. The lack of clarity and consistency</p>
+<p>has hindered collection of robust evidence to support the value of pharmacists’ patient</p>
+<p>care services. The standard patient care process gives pharmacists an opportunity to</p>
+<p>show value on a large scale because the services are comparable and clearly understood</p>
+<p>across practice settings.</p>
+<h2>ALGRAWANY</h2>
+<p>4</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch00.indd 4 18-11-2020 14:16:25</p>
+<p>The Patient Care Process |</p>
+<h2>WORKFLOW, DOCUMENTATION, AND INFORMATION SYSTEMS</h2>
+<p>Healthcare systems are rapidly embracing the power of technology to analyze infor-</p>
+<p>mation and gain important insights about the health outcomes being achieved. The</p>
+<p>uniform patient care process sets a standard for the practice workflow that allows IT</p>
+<p>systems to capture and extract data for analysis and sharing. The ability to capture</p>
+<p>clinical data is currently available through a number of coding systems, such as the</p>
+<p>International Classification of Diseases 10th edition (ICD-10) and the Systematized</p>
+<p>Nomenclature of Medicine—Clinical Terms (SNOMED-CT). Practitioners need to</p>
+<p>understand how coding systems operate behind the scenes when performing and</p>
+<p>documenting their clinical activities. This will enable practitioners to assist informa-</p>
+<p>tion technologists to effectively design systems to accurately document the elements of</p>
+<p>the process that can produce the data on medication-related outcomes.</p>
+<h2>DOCUMENTATION, ATTRIBUTION, AND PAYMENT</h2>
+<p>Payment to healthcare providers for patient care services in the United States has</p>
+<p>traditionally been based on the documentation and reporting of standard processes of</p>
+<p>care. Rules and guidance from Medicare and the Centers for Medicare and Medicaid</p>
+<p>Services (CMS) are considered the billing and payment standard for healthcare provid-</p>
+<p>ers both for governmental and commercial payers. Reporting the complexity of care</p>
+<p>provided is built on top of the documentation requirements; complexity is determined</p>
+<p>by the number of required elements in each documentation domain. A billing code</p>
+<p>is then assigned to the patient encounter that equates to a payment commensurate</p>
+<p>with the level of care provided. This process is the basis for the current fee-for-service</p>
+<p>payment structure, and it is likely that this general format will remain in any future</p>
+<p>payment model. The traditional SOAP (Subjective, Objective, Assessment, Plan) note</p>
+<p>format is often used by pharmacists when documenting patient care and is particularly</p>
+<p>appropriate when providing services incident to an eligible Medicare Part B provider.</p>
+<p>However, some elements of the SOAP note that are required when using certain bill-</p>
+<p>ing codes are not routinely performed by pharmacists (eg, comprehensive physical</p>
+<p>examination). The pharmacists’ patient care process establishes a standard framework</p>
+<p>that reflects the pharmacist’s work. Using a standard care process accompanied with</p>
+<p>a standard documentation framework will result in efficiencies of practice, enable</p>
+<p>appropriate and accurate billing, and facilitate the attribution of care to desired patient</p>
+<p>outcomes needed in value-based payment models.</p>
+<p>See Chapter 1, The Patient Care Process, authored by Stuart T. Haines, Mary Ann</p>
+<p>Kliethermes, and Todd D. Sorensen for a more detailed discussion of this topic.</p>
+<p>5</p>
+<p>ch00.indd 5 18-11-2020 14:16:25</p>
+<p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

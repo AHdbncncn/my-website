@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. Ischemic Heart Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>11. Ischemic Heart Disease</h1>
+        </header>
+        <main>
+            <p>129</p>
+<h2>RETPAHC</h2>
+<p>11</p>
+<p>Ischemic Heart Disease</p>
+<li>Ischemic heart disease (IHD) is defined as lack of oxygen and decreased or no blood</li>
+<p>flow to the myocardium resulting from coronary artery narrowing or obstruction.</p>
+<p>It may present as acute coronary syndrome (ACS), which includes unstable angina</p>
+<p>and non–ST-segment elevation (NSTE) or ST-segment elevation (STE) myocardial</p>
+<p>infarction (MI), chronic stable exertional angina, ischemia without symptoms,</p>
+<p>microvascular angina, or ischemia due to coronary artery vasospasm (variant or</p>
+<p>Prinzmetal angina). The focus of this chapter is stable IHD.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Angina pectoris usually results from increased myocardial oxygen demand (MVo) in</li>
+<p>2</p>
+<p>the setting of a fixed decrease in myocardial oxygen supply because of atherosclerotic</p>
+<p>plaque.</p>
+<li>Major determinants of MVo are heart rate (HR), myocardial contractility, and</li>
+<p>2</p>
+<p>intramyocardial wall tension during systole. A doubling in any of these individual</p>
+<p>parameters requires a 50% increase in coronary flow to maintain myocardial supply.</p>
+<li>Coronary atherosclerotic plaques typically develop in larger epicardial (R or</li>
+<p>1</p>
+<p>conductance) vessels, which normally offer little resistance to myocardial flow. As</p>
+<p>plaques grow and narrow the lumen, the affected vessel begins to provide consider-</p>
+<p>able resistance to blood flow. Smaller endocardial (R or resistance) vessels provide</p>
+<p>2</p>
+<p>most resistance to flow in normal coronary arteries and can contract and dilate to</p>
+<p>maintain blood flow based on metabolic demands of the myocardium (referred to as</p>
+<p>autoregulation). As a result, coronary plaques that occupy less than 50%–70% of the</p>
+<p>vessel luminal diameter rarely produce ischemia or angina. However, smaller plaques</p>
+<p>have a lipid-rich core and thin fibrous cap and are more prone to rupture and cause</p>
+<p>acute thrombosis. When the luminal diameter of epicardial vessels is reduced by</p>
+<p>70% or more, endocardial vessels are maximally dilated, much of the coronary flow</p>
+<p>reserve has been used, and minimal physical exertion may result in a flow deficit</p>
+<p>with myocardial ischemia and often angina. When epicardial stenosis exceeds 90%,</p>
+<p>endocardial flow reserve is exhausted (referred to as critical stenosis).</p>
+<li>When coronary stenosis exceeds 70%, ischemic episodes lead to production of vas-</li>
+<p>cular endothelial growth factor and basic fibroblast growth factor which, combined</p>
+<p>with endogenous vasodilators (eg, nitrous oxide, prostacyclin), cause native collateral</p>
+<p>vessels to increase in diameter (arteriogenesis) to maintain perfusion. New collateral</p>
+<p>vessels can also develop (angiogenesis).</p>
+<li>Inflammation also plays a role in IHD; macrophages and T-lymphocytes produce</li>
+<p>cytokines, chemokines, and growth factors that activate endothelial cells, increase</p>
+<p>vasoreactivity, and cause proliferation of vascular smooth muscle cells. C-reactive</p>
+<p>protein may be elevated and correlates with adverse cardiovascular events.</p>
+<li>Some patients have plaque that causes a fixed decrease in supply but also have</li>
+<p>reduced myocardial oxygen supply transiently due to vasospasm at the site of the</p>
+<p>plaque. Vasospasm is typically caused by endothelial damage induced by the plaque.</p>
+<p>Patient symptoms depend on the extent of the fixed obstruction and the degree of</p>
+<p>dynamic change in coronary arterial tone. The pattern of ischemic symptoms can</p>
+<p>change due to a variable amount of vasospasm under certain conditions (referred to</p>
+<p>as variable threshold angina). Ischemic episodes may be more common in the morn-</p>
+<p>ing hours (due to circadian release of vasoconstrictors) and be precipitated by cold</p>
+<p>exposure and emotional or mental stress.</p>
+<li>Patients with variant (Prinzmetal) angina usually do not have a coronary flow-</li>
+<p>obstructing plaque but instead have significant reduction in myocardial oxygen</p>
+<p>supply due to vasospasm in epicardial vessels.</p>
+<p>ch11.indd 129 18-11-2020 16:20:05</p>
+<div class="table-container"><table><tr><th></th><th>11</th><th></th></tr><tr><td>Ischemic Heart Disease</td><td></td><td>RETPAHC</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients typically complain of chest pain precipitated by exertion or activities of</li>
+<p>daily living that is described as squeezing, crushing, heaviness, or chest tightness. It</p>
+<p>can also be more vague and described as a numbness or burning in the chest. The</p>
+<p>location is often substernal and may radiate to the right or left shoulder or arm (left</p>
+<p>more commonly), neck, back, or abdomen. Ischemic symptoms may be associated</p>
+<p>with diaphoresis, nausea, vomiting, and dyspnea. Chest pain generally lasts from</p>
+<p>5 to 20 minutes and is usually relieved by rest or sublingual nitroglycerin (SL NTG).</p>
+<li>Some patients (especially women and older individuals) present with atypical chest</li>
+<p>pain, characterized by midepigastric discomfort, effort intolerance, dyspnea, and</p>
+<p>excessive fatigue. Patients with diabetes mellitus may have decreased pain sensation</p>
+<p>due to neuropathy.</p>
+<li>Patients with variant (Prinzmetal) angina are typically younger and may present with</li>
+<p>chest pain at rest, often early in the morning, and may have transient ST-segment</p>
+<p>elevation on the ECG.</p>
+<h2>DIAGNOSIS</h2>
+<li>Obtain the medical history to identify the quality and severity of chest pain, precipi-</li>
+<p>tating factors, location, duration, pain radiation, and response to nitroglycerin or rest.</p>
+<p>Ischemic chest pain may resemble pain from noncardiac sources, and diagnosis of</p>
+<p>anginal pain may be difficult based on history alone.</p>
+<li>Assess nonmodifiable risk factors for coronary artery disease (CAD): age, sex, and</li>
+<p>family history of premature atherosclerotic disease in first-degree relatives (male</p>
+<p>onset before age 55 or female before age 65). Identify the presence of modifiable CAD</p>
+<p>risk factors: hypertension, diabetes mellitus, dyslipidemia, and cigarette smoking.</p>
+<li>Physical exam findings are usually nonspecific, but patients having an ischemic</li>
+<p>episode may present with tachycardia, diaphoresis, shortness of breath, nausea, vom-</p>
+<p>iting, and lightheadedness. Other findings related to CAD risk factors may include</p>
+<p>increased blood pressure (BP) and a fourth heart sound reflecting longstanding</p>
+<p>hypertension. Other positive findings may include pulmonary crackles, displaced</p>
+<p>point of maximal impulse, and a third heart sound in patients with heart failure with</p>
+<p>reduced ejection fraction (HFrEF).</p>
+<li>Markers of inflammation, such as high-sensitivity C-reactive protein (hs-CRP), may</li>
+<p>be elevated.</p>
+<li>Cardiac troponin concentrations are not typically elevated in stable IHD.</li>
+<li>Resting ECG is normal in at least half of patients with angina who are not experienc-</li>
+<p>ing acute ischemia. About 50% of patients develop ischemic ST-T wave changes dur-</p>
+<p>ing an episode of angina, which can be observed on the ECG during an exercise stress</p>
+<p>test. Patients who cannot endure stress testing can have the myocardium stressed</p>
+<p>pharmacologically with adenosine, regadenoson, dipyridamole, or dobutamine.</p>
+<li>Coronary angiography is the most accurate test for confirming CAD but is inva-</li>
+<p>sive and requires arterial access. Myocardial perfusion imaging, cardiac magnetic</p>
+<p>resonance, coronary artery calcium scoring, and CT angiography can also be used</p>
+<p>to detect CAD.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: A primary goal of therapy is complete (or nearly complete)</li>
+<p>elimination of anginal chest pain and return to normal activities. Long-term goals are</p>
+<p>to slow progression of atherosclerosis and prevent complications such as MI, heart</p>
+<p>failure, stroke, and death.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Risk factor modification is the primary nondrug approach for primary and second-</li>
+<p>ary prevention of CAD events. Lifestyle modifications include daily physical activity,</p>
+<p>130</p>
+<p>ch11.indd 130 18-11-2020 16:20:06</p>
+<h2>Ischemic Heart Disease | CHAPTER 11</h2>
+<p>weight management, dietary therapy (reduced intake of saturated fats, trans-fatty</p>
+<p>acids, and cholesterol), smoking cessation, psychological interventions (eg, screening</p>
+<p>and treatment for depression if appropriate), limitation of alcohol intake, and avoid-</p>
+<p>ing exposure to air pollution.</p>
+<li>Surgical revascularization options for select patients include coronary artery bypass</li>
+<p>grafting (CABG) or percutaneous coronary intervention (PCI) with or without stent</p>
+<p>placement.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Guideline-directed medical therapy (GDMT) reduces the rates of death and MI</li>
+<p>similar to revascularization therapy. See Figure 11-1 for a treatment algorithm based</p>
+<p>on the American College of Cardiology/American Heart Association (ACC/AHA)</p>
+<p>guidelines.</p>
+<li>Approaches to risk factor modification include the following recommendations:</li>
+<p>✓ Dyslipidemia: Use moderate- or high-dose statin therapy in the absence of con-</p>
+<p>traindications or adverse effects, in addition to lifestyle changes. Addition of</p>
+<p>ezetimibe (first) or a PCSK9 inhibitor (second) is reasonable for patients who do</p>
+<p>not tolerate statins or do not attain a 50% decrease in LDL cholesterol (or LDL</p>
+<p>remains above 70–100 mg/dL).</p>
+<p>✓ Blood pressure: If BP is ≥130/80 mm Hg, institute drug therapy in addition to or</p>
+<p>after a trial of lifestyle modifications.</p>
+<p>✓ Diabetes mellitus: Pharmacotherapy to achieve a target A1C of ≤7% (53 mmol/</p>
+<p>mol Hb) is reasonable for select patients (eg, short duration of diabetes and long life</p>
+<p>expectancy). An A1C goal of &lt;8% is reasonable for other patients, such as those with</p>
+<p>micro- or macrovascular complications or coexisting medical conditions.</p>
+<p>✓ Annual influenza vaccinations are recommended.</p>
+<p>Antiplatelet Therapy</p>
+<li>Aspirin irreversibly blocks cyclooxygenase-1 (COX-1) activity and subsequent</li>
+<p>thromboxane A production, leading to reduced platelet activation and aggregation.</p>
+<p>2</p>
+<p>A small percentage of patients are nonresponsive to aspirin’s antiplatelet effects. Anti-</p>
+<p>inflammatory drugs (NSAIDs) may interfere with aspirin’s antiplatelet effect when</p>
+<p>coadministered by competing for the site of action in the COX-1 enzyme. The ACC/</p>
+<p>AHA guidelines contain the following recommendations for stable IHD:</p>
+<p>✓ Aspirin: 75–162 mg daily should be continued indefinitely in the absence of</p>
+<p>contraindications.</p>
+<p>✓ Clopidogrel: 75 mg daily is an appropriate alternative when aspirin is contrain-</p>
+<p>dicated. Patient responsiveness to clopidogrel is highly variable, with estimates of</p>
+<p>nonresponsiveness ranging from 5% to 44% of patients. The most common cause of</p>
+<p>nonresponsiveness is nonadherence, but genetic polymorphisms to CYP2C19 may</p>
+<p>contribute in some patients. Some studies have suggested that patients receiving</p>
+<p>a proton pump inhibitor (most often omeprazole) together with clopidogrel have</p>
+<p>reduced antiplatelet activity and more ischemic events due to inhibition of cyto-</p>
+<p>chrome P450 enzymes involved in converting clopidogrel to its active metabolite.</p>
+<p>However, the only prospective randomized clinical trial conducted to date found</p>
+<p>no increased rate of clinical events in patients given clopidogrel plus omeprazole.</p>
+<p>✓ Dual antiplatelet therapy (DAPT) with aspirin plus a P2Y inhibitor (clopido-</p>
+<p>12</p>
+<p>grel, prasugrel, ticagrelor) is beneficial after PCI with coronary stent placement</p>
+<p>and after treatment for ACS. Its benefits in other situations are less clear. The</p>
+<p>combination of aspirin (75–162 mg daily) and clopidogrel 75 mg daily may be</p>
+<p>reasonable in certain high-risk patients.</p>
+<p>Angiotensin-Converting Enzyme (ACE) Inhibitors and Angiotensin</p>
+<p>Receptor Blockers (ARBs)</p>
+<li>In the setting of IHD, ACE inhibitors stabilize coronary plaque, restore or improve</li>
+<pre><code>endothelial function, inhibit vascular smooth muscle cell growth, decrease</code></pre>
+<p>131</p>
+<p>ch11.indd 131 18-11-2020 16:20:06</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>Stable Ischemic Heart Disease</h2>
+<p>Risk Factor Modification Management of Angina</p>
+<h2>SL NTG</h2>
+<p>for acute attacks</p>
+<p>Lifestyle Modifications</p>
+<p>Diet, Exercise,</p>
+<p>Weight Reduction, BP &lt;130/80 mm Hg:</p>
+<p>Smoking Cessation Add LA nitrate</p>
+<p>Yes Vasospastic</p>
+<p>angina?</p>
+<p>BP ≥130/80 mm Hg:</p>
+<p>Add CCB</p>
+<p>No</p>
+<p>Annual Influenza Vaccination</p>
+<p>Heart Rate &gt;60 beats per minute</p>
+<p>1. β-blocker</p>
+<p>2. Non-DHP CCB</p>
+<p>Management of Comorbidities</p>
+<p>HTN: BP goal ≤130/80 mm Hg</p>
+<p>DM: A1C goal ≤7% (53 mmol/mol Hb) Angina</p>
+<p>Moderate-to-High Intensity Statins Continue Therapy Yes symptoms</p>
+<p>and Monitor controlled?</p>
+<p>No</p>
+<p>Antiplatelet Therapy</p>
+<p>Aspirin 81 mg daily BP &lt;130/80</p>
+<p>OR mm Hg?</p>
+<p>Clopidogrel 75 mg daily</p>
+<p>if aspirin allergy</p>
+<p>Yes No</p>
+<p>DAPT may be reasonable in</p>
+<p>certain high-risk patients Add</p>
+<p>Ranolazine Add</p>
+<p>or DHP CCB</p>
+<p>LA nitrate</p>
+<p>ACE inhibitor</p>
+<p>Continued angina</p>
+<p>if HTN, DM, LVEF ≤40%, or CKD</p>
+<h2>OR</h2>
+<p>ARB if intolerant to ACE inhibitors</p>
+<p>Consider PCI or CABG surgery</p>
+<p>(ACE, angiotensin-converting enzyme; ARB, angiotensin receptor blocker; BP, blood pressure; CABG,</p>
+<p>coronary artery bypass graft; CCB, calcium channel blocker; CKD, chronic kidney disease; DAPT, dual</p>
+<p>antiplatelet therapy; DHP, dihydropyridine; DM, diabetes mellitus; Hb, hemoglobin; HTN, hypertension;</p>
+<p>LA, long-acting; LVEF, left ventricular ejection fraction; PCI, percutaneous coronary intervention; SL NTG,</p>
+<p>sublingual nitroglycerin.)</p>
+<p>FIGURE 11-1. Algorithm for treatment of stable ischemic heart disease</p>
+<p>(guideline-directed medical therapy).</p>
+<p>macrophage migration, and possibly prevent oxidative stress. However, ACE inhibi-</p>
+<p>tors have not been shown to improve symptomatic ischemia or reduce chest pain</p>
+<p>episodes. Clinical trials of the role of ACE inhibitors or ARBs in reducing cardio-</p>
+<p>vascular events (eg, cardiovascular death, MI, stroke) in high-risk patients have</p>
+<p>produced conflicting results. The ACC/AHA guidelines for stable IHD recommend</p>
+<p>the following strategies:</p>
+<p>✓ Use ACE inhibitors in patients who also have hypertension, diabetes, HFrEF, or</p>
+<p>chronic kidney disease, unless contraindicated.</p>
+<p>132</p>
+<p>ch11.indd 132 18-11-2020 16:20:07</p>
+<h2>Ischemic Heart Disease | CHAPTER 11</h2>
+<p>✓ ARBs are recommended for the same populations if patients are intolerant to ACE</p>
+<p>inhibitors.</p>
+<p>✓ Combination ACE inhibitor/ARB therapy should be avoided due to the lack of</p>
+<p>additional benefit and a higher risk of adverse events (eg, hypotension, syncope,</p>
+<pre><code>renal dysfunction).</code></pre>
+<p>✓ Table 11-1 provides the usual dosage ranges for ACE inhibitors and ARBs in</p>
+<h2>stable IHD.</h2>
+<p>TABLE 11-1 Drugs and Regimens for Stable Ischemic Heart Disease</p>
+<p>Drug Class and Generic Names Usual Dosage Rangea</p>
+<p>Angiotensin-Converting Enzyme Inhibitors</p>
+<p>Captopril 6.25–50 mg 3 times daily</p>
+<p>Enalapril 2.5–40 mg daily in 1–2 divided doses</p>
+<p>Fosinopril 10–80 mg daily in 1–2 divided doses</p>
+<p>Lisinopril 2.5–40 mg once daily</p>
+<p>Perindopril 4–8 mg once daily</p>
+<p>Quinapril 5–20 mg twice daily</p>
+<p>Ramipril 2.5–10 mg daily in 1–2 divided doses</p>
+<p>Trandolapril 1–4 mg once daily</p>
+<p>Angiotensin Receptor Blockers</p>
+<p>Candesartan 4–32 mg once daily</p>
+<p>Valsartan 80–320 mg daily in 1–2 divided doses</p>
+<p>Telmisartan 20–80 mg once daily</p>
+<p>β-Adrenergic Blockers</p>
+<p>Atenololb 25–200 mg once daily</p>
+<p>Betaxololb 5–20 mg once daily</p>
+<p>Bisoprololb 2.5–10 mg once daily</p>
+<p>Carvedilolc 3.125–25 mg twice daily</p>
+<p>Carvedilol phosphatec 10-80 mg once daily</p>
+<p>Labetalolc 100–400 mg twice daily</p>
+<p>Metoprololb 50–200 mg twice daily (once daily for extended</p>
+<p>release)</p>
+<p>Nadolold 40–120 mg once daily</p>
+<p>Nebivolol 5–10 mg once daily</p>
+<p>Propranolold 20–120 mg twice daily (60–240 mg once daily</p>
+<p>for long-acting formulation)</p>
+<p>Timolold 10–20 mg twice daily</p>
+<p>Calcium Channel Blockers: Nondihydropyridine Type</p>
+<p>Diltiazem, extended release 120–360 mg once daily</p>
+<p>Verapamil, extended release 180–480 mg once daily</p>
+<p>(Continued)</p>
+<p>133</p>
+<p>ch11.indd 133 18-11-2020 16:20:07</p>
+<div class="table-container"><table><tr><th>TABLE 11-1 Drugs and Regimens for Stable Ischemic Heart Disease</th><th></th></tr><tr><td>Drug Class and Generic Names</td><td>Usual Dosage Rangea</td></tr><tr><td>Angiotensin-Converting Enzyme Inhibitors</td><td></td></tr><tr><td>Captopril</td><td>6.25–50 mg 3 times daily</td></tr><tr><td>Enalapril</td><td>2.5–40 mg daily in 1–2 divided doses</td></tr><tr><td>Fosinopril</td><td>10–80 mg daily in 1–2 divided doses</td></tr><tr><td>Lisinopril</td><td>2.5–40 mg once daily</td></tr><tr><td>Perindopril</td><td>4–8 mg once daily</td></tr><tr><td>Quinapril</td><td>5–20 mg twice daily</td></tr><tr><td>Ramipril</td><td>2.5–10 mg daily in 1–2 divided doses</td></tr><tr><td>Trandolapril</td><td>1–4 mg once daily</td></tr><tr><td>Angiotensin Receptor Blockers</td><td></td></tr><tr><td>Candesartan</td><td>4–32 mg once daily</td></tr><tr><td>Valsartan</td><td>80–320 mg daily in 1–2 divided doses</td></tr><tr><td>Telmisartan</td><td>20–80 mg once daily</td></tr><tr><td>β-Adrenergic Blockers</td><td></td></tr><tr><td>Atenololb</td><td>25–200 mg once daily</td></tr><tr><td>Betaxololb</td><td>5–20 mg once daily</td></tr><tr><td>Bisoprololb</td><td>2.5–10 mg once daily</td></tr><tr><td>Carvedilolc</td><td>3.125–25 mg twice daily</td></tr><tr><td>Carvedilol phosphatec</td><td>10-80 mg once daily</td></tr><tr><td>Labetalolc</td><td>100–400 mg twice daily</td></tr><tr><td>Metoprololb</td><td>50–200 mg twice daily (once daily for extended
+release)</td></tr><tr><td>Nadolold</td><td>40–120 mg once daily</td></tr><tr><td>Nebivolol</td><td>5–10 mg once daily</td></tr><tr><td>Propranolold</td><td>20–120 mg twice daily (60–240 mg once daily
+for long-acting formulation)</td></tr><tr><td>Timolold</td><td>10–20 mg twice daily</td></tr><tr><td>Calcium Channel Blockers: Nondihydropyridine Type</td><td></td></tr><tr><td>Diltiazem, extended release</td><td>120–360 mg once daily</td></tr><tr><td>Verapamil, extended release</td><td>180–480 mg once daily
+(Continued)</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>TABLE 11-1 Drugs and Regimens for Stable Ischemic Heart Disease(Continued)</p>
+<p>Drug Class and Generic Names Usual Dosage Rangea</p>
+<p>Calcium Channel Blockers: Dihydropyridine Type</p>
+<p>Amlodipine 5–10 mg once daily</p>
+<p>Felodipine 5–10 mg once daily</p>
+<p>Nifedipine, extended release 30–90 mg once daily</p>
+<p>Nicardipine 20–40 mg three times daily</p>
+<p>Nitrates</p>
+<p>Nitroglycerin extended-release capsules 2.5 mg three times daily initially, with up-titration</p>
+<p>according to symptoms and tolerance; allow a</p>
+<p>10- to 12-hour nitrate-free interval</p>
+<p>Isosorbide dinitrate tablets 5–20 mg two to three times daily, with a daily</p>
+<p>nitrate-free interval of at least 14 hours (eg,</p>
+<p>dose at 7 am, noon, and 5 pm)</p>
+<p>Isosorbide dinitrate slow-release 40 mg one to two times daily, with a daily</p>
+<p>capsules nitrate-free interval of at least 18 hours (eg,</p>
+<p>dose at 8 am and 2 pm)</p>
+<p>Isosorbide mononitrate tablets 5–20 mg two times daily initially, with</p>
+<p>up-titration according to symptoms and</p>
+<p>tolerance; doses should be taken 7 hours</p>
+<p>apart (eg, 8 am and 3 pm)</p>
+<p>Isosorbide mononitrate 30–120 mg once daily</p>
+<h2>extended-release tablets</h2>
+<p>Nitroglycerin transdermal 0.2–0.8 mg/hr, on for 12–14 hours, off for</p>
+<p>extended-release film 10–12 hours</p>
+<pre><code>aConsult official prescribing information. In patients with renal and hepatic dysfunction, adjust initial</code></pre>
+<p>and maintenance doses for all agents as appropriate based on FDA-approved labeling.</p>
+<p>bRelatively β-selective (selectively is lost at higher doses).</p>
+<p>1</p>
+<p>cBlocks α, β, and β receptors.</p>
+<p>1 1 2</p>
+<p>dNonselective (blocks both β and β receptors).</p>
+<p>1 2</p>
+<p>Data from Landup D, DiDomenico RJ. Stable ischemic heart disease. In: Chisholm-Burns MA, et al., eds.</p>
+<p>Pharmacotherapy Principles &amp; Practice. 5th ed. New York: McGraw-Hill Education; 2019.</p>
+<p>β-Adrenergic Blockers</p>
+<li>β-Blockers competitively inhibit the effects of neuronally released and circulating</li>
+<p>catecholamines on β-adrenoceptors. Blockade of β-receptors in the heart and kidney</p>
+<p>1</p>
+<p>reduces HR, contractility, and BP, thereby decreasing MVo.</p>
+<li>β-Blockers are recommended over calcium channel blocke 2 rs (CCBs) for initial con-</li>
+<p>trol of angina episodes in patients with stable IHD. The target is to lower the resting</p>
+<p>HR to 50–60 beats/min and the exercise HR to &lt;100 beats/min. For patients (eg,</p>
+<p>elderly) who cannot tolerate these ranges, the target HR should be as low as can be</p>
+<p>tolerated above 50 beats/min. β-Blockers may be combined with CCBs or long-acting</p>
+<p>nitrates when initial treatment with β-blockers alone is unsuccessful.</p>
+<li>Only the β-blockers carvedilol, metoprolol succinate, and bisoprolol should be</li>
+<p>used in patients with HFrEF, starting with low doses and titrating upward slowly.</p>
+<li>Selection of a particular agent depends on the presence of comorbid states, pre-</li>
+<p>ferred dosing frequency, and cost. β-Selective agents are preferred in patients with</p>
+<p>1</p>
+<p>chronic obstructive pulmonary disease, peripheral arterial disease (PAD), diabetes,</p>
+<pre><code>dyslipidemia, and sexual dysfunction. Drugs with combined α- and β-blockade are</code></pre>
+<p>1</p>
+<p>effective for IHD, but agents with intrinsic sympathomimetic activity provide little</p>
+<p>134</p>
+<p>ch11.indd 134 18-11-2020 16:20:08</p>
+<div class="table-container"><table><tr><th>TABLE 11-1 Drugs and Regimens for Stable Ischemic Heart Disease(Continued)</th><th></th></tr><tr><td>Drug Class and Generic Names</td><td>Usual Dosage Rangea</td></tr><tr><td>Calcium Channel Blockers: Dihydropyridine Type</td><td></td></tr><tr><td>Amlodipine</td><td>5–10 mg once daily</td></tr><tr><td>Felodipine</td><td>5–10 mg once daily</td></tr><tr><td>Nifedipine, extended release</td><td>30–90 mg once daily</td></tr><tr><td>Nicardipine</td><td>20–40 mg three times daily</td></tr><tr><td>Nitrates</td><td></td></tr><tr><td>Nitroglycerin extended-release capsules</td><td>2.5 mg three times daily initially, with up-titration
+according to symptoms and tolerance; allow a
+10- to 12-hour nitrate-free interval</td></tr><tr><td>Isosorbide dinitrate tablets</td><td>5–20 mg two to three times daily, with a daily
+nitrate-free interval of at least 14 hours (eg,
+dose at 7 am, noon, and 5 pm)</td></tr><tr><td>Isosorbide dinitrate slow-release
+capsules</td><td>40 mg one to two times daily, with a daily
+nitrate-free interval of at least 18 hours (eg,
+dose at 8 am and 2 pm)</td></tr><tr><td>Isosorbide mononitrate tablets</td><td>5–20 mg two times daily initially, with
+up-titration according to symptoms and
+tolerance; doses should be taken 7 hours
+apart (eg, 8 am and 3 pm)</td></tr><tr><td>Isosorbide mononitrate
+extended-release tablets</td><td>30–120 mg once daily</td></tr><tr><td>Nitroglycerin transdermal
+extended-release film</td><td>0.2–0.8 mg/hr, on for 12–14 hours, off for
+10–12 hours</td></tr></table></div><h2>Ischemic Heart Disease | CHAPTER 11</h2>
+<p>to no reduction in resting HR and are not preferred except perhaps in patients with</p>
+<p>PAD or dyslipidemia.</p>
+<li>Common adverse effects include bradycardia, hypotension, heart block, impaired</li>
+<p>glucose metabolism, altered serum lipids (transiently increased triglycerides,</p>
+<p>decreased HDL-C, and no change in LDL-C), fatigue, depression, insomnia, and</p>
+<p>malaise. β-Blockers are contraindicated in patients with preexisting bradycardia,</p>
+<p>hypotension, 2nd- or 3rd-degree atrioventricular (AV) block, uncontrolled asthma,</p>
+<p>severe PAD, hypotension, HFrEF with unstable fluid status, and diabetes associated</p>
+<p>with frequent episodes of hypoglycemia.</p>
+<li>If β-blocker therapy must be discontinued, doses should be tapered over 2–3 weeks</li>
+<p>to prevent abrupt withdrawal, which can significantly increase in MVo and induce</p>
+<p>2</p>
+<p>ischemia and even MI because of up-regulation of β-receptors in the myocardium.</p>
+<li>See Table 11-1 for the usual dosage ranges of β-blockers in stable IHD.</li>
+<p>Calcium Channel Blockers</p>
+<li>CCBs modulate calcium entry into the myocardium, vascular smooth muscle, and</li>
+<p>other tissues, which reduces the cytosolic concentration of calcium responsible for</p>
+<p>activation of the actin–myosin complex and contraction of vascular smooth muscle</p>
+<p>and myocardium. All CCBs reduce MVo by reducing wall tension via lowering</p>
+<p>2</p>
+<p>arterial BP and (to a minor extent) depressing contractility. CCBs also provide some</p>
+<p>increase in supply by inducing coronary vasodilation and preventing vasospasm.</p>
+<li>CCBs or long-acting nitrates should be prescribed for relief of symptoms when</li>
+<p>β-blockers are contraindicated or cause unacceptable side effects.</p>
+<li>Dihydropyridine CCBs (eg, nifedipine, amlodipine, isradipine, and felodipine)</li>
+<p>primarily affect vascular smooth muscle with little effect on the myocardium. These</p>
+<p>drugs produce minimal reduction in contractility and either no change or increased</p>
+<p>HR due to reflex tachycardia from direct arterial dilation. Nifedipine produces more</p>
+<pre><code>impairment of LV function than amlodipine and felodipine. Short-acting agents</code></pre>
+<p>should not be used because of their greater propensity to cause reflex tachycardia.</p>
+<p>Other side effects of these CCBs include hypotension, headache, gingival hyperplasia,</p>
+<p>and peripheral edema. Although most CCBs are contraindicated in patients with</p>
+<p>HFrEF, amlodipine and felodipine are considered safe options in these patients.</p>
+<li>Nondihydropyridine CCBs (verapamil and diltiazem) mostly affect the myocardium</li>
+<p>with minimal effects on vascular smooth muscle; they reduce HR, contractility, and</p>
+<p>MVo. Initial therapy for relief of symptoms with a long-acting nondihydropyridine</p>
+<p>2</p>
+<p>CCB instead of a β-blocker is a reasonable approach. Common side effects of these</p>
+<p>CCBs include bradycardia, hypotension, AV block, and symptoms of LV depression.</p>
+<p>These agents should be avoided in patients with concomitant HFrEF due to negative</p>
+<p>inotropic effects. Verapamil may cause constipation in ~8% of patients. Verapamil and</p>
+<p>diltiazem inhibit clearance of drugs that utilize the cytochrome P450 3A4 isoenzyme</p>
+<p>such as carbamazepine, cyclosporine, lovastatin, simvastatin, and benzodiazepines.</p>
+<p>Verapamil, and to a lesser extent diltiazem, also inhibit P-glycoprotein–mediated</p>
+<p>drug transport, which can increase concentrations of digoxin and cyclosporine.</p>
+<p>Verapamil also decreases digoxin clearance. Agents that induce the 3A4 isoenzyme</p>
+<p>can reduce the effectiveness of all CCBs.</p>
+<li>See Table 11-1 for the usual dosage ranges of CCBs in stable IHD.</li>
+<p>Nitrates</p>
+<li>Nitrates increase concentrations of cyclic guanosine monophosphate in vascular</li>
+<p>endothelium, leading to reduced cytoplasmic calcium and vasodilation. Most vasodi-</p>
+<p>lation occurs on the venous side, leading to reduced preload, myocardial wall tension,</p>
+<p>and MVo. Arterial vasodilation increases as doses are escalated, which can produce</p>
+<p>2</p>
+<p>reflex tachycardia that can negate some of the antianginal benefits. This effect can</p>
+<p>be mitigated with concomitant β-blocker therapy. Nitrates also produce vasodilation</p>
+<p>of stenotic epicardial vessels and intracoronary collateral vessels, increasing oxygen</p>
+<p>supply to the ischemic myocardium.</p>
+<p>135</p>
+<p>ch11.indd 135 18-11-2020 16:20:09</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>All patients should have access to sublingual (SL) NTG 0.3 or 0.4 mg tablets or</li>
+<p>spray to treat acute angina episodes. Relief typically occurs within 5 minutes of</p>
+<p>administration.</p>
+<li>SL nitrates can also be used to prevent acute episodes if given 2–5 minutes before</li>
+<p>activities known to produce angina; protection can last for up to 30 minutes with SL</p>
+<p>NTG and up to 1 hour with SL isosorbide dinitrate (ISDN).</p>
+<li>Long-acting nitrates (or CCBs) should be prescribed for relief of symptoms when</li>
+<p>β-blockers are contraindicated or cause unacceptable side effects. Various nitrate</p>
+<p>formulations are available for acute and chronic use (Table 11-1).</p>
+<li>Transdermal patches and isosorbide mononitrate (ISMN) are most commonly pre-</li>
+<p>scribed for long-term prevention of angina episodes. ISDN is also effective, but the</p>
+<p>three times daily regimen requires dosing every 4–5 hours during the day to provide a</p>
+<p>nitrate-free interval. Chronic nitrate use should incorporate a 10- to 14-hour nitrate-</p>
+<p>free interval each day to reduce nitrate tolerance. Because this approach places the</p>
+<p>patient at risk for angina episodes, the nitrate-free interval is usually provided dur-</p>
+<p>ing the nighttime hours when the patient has a reduced MVo while sleeping. The</p>
+<p>2</p>
+<p>extended-release ISMN products that are dosed twice daily should be given 7 hours</p>
+<p>apart (eg, 7:00 am and 2:00 pm). An extended-release, once-daily ISMN product is</p>
+<p>available that provides 12 hours of nitrate exposure followed by a 12-hour nitrate-free</p>
+<p>interval. Transdermal NTG patches are typically prescribed as “on in the am and off</p>
+<p>in the pm” but patients should be given specific application and removal times (eg,</p>
+<p>apply at 8:00 am and remove at 8:00 pm).</p>
+<li>Nitrates should not be used routinely as monotherapy for stable IHD because of the</li>
+<p>lack of angina coverage during the nitrate-free interval, lack of protection against</p>
+<p>circadian rhythm (nocturnal) ischemic events, and potential for reflex tachycardia.</p>
+<p>Concomitant β-blocker or diltiazem therapy can prevent rebound ischemia during</p>
+<p>the nitrate-free interval.</p>
+<li>Common nitrate side effects include headache, flushing, nausea, postural hypoten-</li>
+<p>sion, and syncope. Headache can be treated with acetaminophen and usually resolves</p>
+<p>after about 2 weeks of continued therapy. Transdermal NTG may cause skin ery-</p>
+<p>thema and inflammation. Initiating therapy with smaller doses and/or rotating the</p>
+<p>application site can minimize transdermal nitroglycerin side effects.</p>
+<p>Ranolazine</p>
+<li>Ranolazine reduces ischemic episodes by selective inhibition of late sodium current</li>
+<p>(I ), which reduces intracellular sodium concentration and improves myocardial</p>
+<p>Na</p>
+<pre><code>function and perfusion. It does not impact HR, BP, the inotropic state, or increase</code></pre>
+<p>coronary blood flow.</p>
+<li>Ranolazine is effective as monotherapy for relief of angina symptoms but should only</li>
+<p>be used if patients cannot tolerate traditional agents due to hemodynamic or other</p>
+<p>adverse effects. Because it does not substantially affect HR and BP, it is recommended</p>
+<p>as add-on therapy to traditional antianginal agents for patients who achieve goal HR</p>
+<p>and BP and still have exertional angina symptoms, patients who cannot achieve these</p>
+<p>hemodynamic goals due to adverse effects, and patients who reach maximum doses</p>
+<p>of traditional agents but still have angina symptoms.</p>
+<li>The initial ranolazine dose is 500 mg twice daily, increased to 1000 mg twice daily</li>
+<p>within the next 1–2 weeks if tolerated. It can be combined with a β-blocker when</p>
+<p>initial treatment with β-blockers alone is unsuccessful.</p>
+<li>Adverse effects include constipation, nausea, dizziness, and headache. Ranolazine</li>
+<p>can prolong the QTc interval and should be used with caution in patients receiving</p>
+<p>concomitant QTc-prolonging agents.</p>
+<li>Potent inhibitors of CYP3A4 and P-glycoprotein (ketoconazole, itraconazole, pro-</li>
+<p>tease inhibitors, clarithromycin, and nefazodone) or potent inducers of CYP3A4</p>
+<p>and P-glycoprotein (phenytoin, phenobarbital, carbamazepine, rifampin, rifabutin,</p>
+<p>rifapentine, St. John’s wort) are contraindicated with ranolazine due to significant</p>
+<p>increases and decreases in ranolazine drug concentrations, respectively. Moderate</p>
+<p>136</p>
+<p>ch11.indd 136 18-11-2020 16:20:09</p>
+<h2>Ischemic Heart Disease | CHAPTER 11</h2>
+<p>CYP3A4 inhibitors (eg, diltiazem, verapamil, erythromycin, and fluconazole) can be</p>
+<p>used with ranolazine, but the maximum dose should not exceed 500 mg twice daily.</p>
+<h2>TREATMENT OF VARIABLE THRESHOLD ANGINA</h2>
+<h2>AND PRINZMETAL ANGINA</h2>
+<li>Patients with variable threshold angina require pharmacotherapy for vasospasm.</li>
+<p>Most patients respond well to SL NTG for acute attacks.</p>
+<li>Both CCBs and nitrates are effective for chronic therapy. CCBs may be preferred</li>
+<p>because they are dosed less frequently. Nifedipine, verapamil, and diltiazem are</p>
+<p>equally effective as single agents for initial management of coronary vasospasm; dose</p>
+<p>titration is important to maximize the response. Patients unresponsive to CCBs alone</p>
+<p>may have nitrates added.</p>
+<li>β-Blockers are not useful for vasospasm because they may induce coronary vasocon-</li>
+<p>striction and prolong ischemia.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assess for symptom improvement by number of angina episodes, weekly SL NTG</li>
+<p>use, and increased exercise capacity or duration of exertion needed to induce angina.</p>
+<li>Use statins for dyslipidemia, strive to achieve BP and A1C goals, and implement the</li>
+<p>lifestyle modifications of dietary modification, smoking cessation, weight loss, and</p>
+<p>regular exercise.</p>
+<li>Once patients have been optimized on medical therapy, symptoms should improve</li>
+<p>over 2–4 weeks and remain stable until the disease progresses. Patients may require</p>
+<p>evaluation every 1–2 months until target endpoints are achieved; follow-up every</p>
+<p>6–12 months thereafter is appropriate.</p>
+<li>The Seattle Angina Questionnaire, Specific Activity Scale, and Canadian Cardiovas-</li>
+<p>cular Society classification system can be used to improve reproducibility of symptom</p>
+<p>assessment.</p>
+<li>If the patient is doing well, no other assessment may be necessary. Although follow-</li>
+<p>up exercise tolerance testing with or without cardiac imaging can be performed to</p>
+<p>objectively assess control of ischemic episodes, this is rarely done if patients are doing</p>
+<p>well because of the expense involved.</p>
+<li>Monitor for adverse drug effects such as headache and dizziness with nitrates; fatigue</li>
+<p>and lassitude with β-blockers; and peripheral edema, constipation, and dizziness</p>
+<p>with CCBs.</p>
+<p>See Chapter 32, Stable Ischemic Heart Disease, authored by Paul P. Dobesh, Robert J.</p>
+<p>DiDomenico, and Kelly C. Rogers, for a more detailed discussion of this topic.</p>
+<p>137</p>
+<p>ch11.indd 137 18-11-2020 16:20:09</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

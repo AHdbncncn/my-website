@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Acute Coronary Syndromes</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>5. Acute Coronary Syndromes</h1>
+        </header>
+        <main>
+            <h2>SECTION 2</h2>
+<h2>CARDIOVASCULAR DISORDERS</h2>
+<p>Edited by Terry L. Schwinghammer</p>
+<p>51</p>
+<h2>RETPAHC</h2>
+<p>5</p>
+<p>Acute Coronary Syndromes</p>
+<li>Acute coronary syndrome (ACS) involves acute myocardial ischemia resulting from</li>
+<p>imbalance between myocardial oxygen demand and supply. Classification based on</p>
+<p>electrocardiographic (ECG) changes includes: (1) ST-segment-elevation myocardial</p>
+<p>infarction (STEMI) or (2) non–ST-segment-elevation ACS (NSTE-ACS), which</p>
+<p>includes non–ST-segment-elevation MI (NSTEMI) and unstable angina (UA).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Endothelial dysfunction, inflammation, and formation of fatty streaks contribute</li>
+<p>to development of atherosclerotic coronary artery plaques. Eventual plaque rupture</p>
+<p>and subsequent thrombus formation abruptly decreases myocardial blood flow and</p>
+<p>oxygen supply, leading to ischemia and potentially infarction.</p>
+<li>Atherosclerotic plaques that rupture typically have thin fibrous caps and tend to be</li>
+<p>nonobstructive, occluding &lt;70% of the luminal diameter; thus, patients may not</p>
+<p>experience angina prior to plaque rupture due to adequate autoregulation that main-</p>
+<p>tains blood flow and oxygen supply during increased myocardial oxygen demand.</p>
+<p>Increased catecholamine release during physical or emotional stress may enhance the</p>
+<p>likelihood of rupture of a thinning fibrous cap.</p>
+<li>Plaque rupture breaches the barrier between the necrotic plaque core and blood</li>
+<p>components; circulating platelets are attracted and adhere to the area of injury. Plate-</p>
+<p>let adhesion occurs via platelet glycoprotein (GP) VI receptors binding to collagen</p>
+<p>within the damaged fibrotic cap, as well as platelet GP Ib-IX receptors and von Wil-</p>
+<p>lebrand factor. Platelets are then activated by collagen, thrombin, thromboxane A,</p>
+<p>2</p>
+<p>adenosine diphosphate (ADP), epinephrine, and serotonin. Binding of these activa-</p>
+<p>tors to their specific receptors on the platelet surface (eg, P2Y receptor for ADP, pro-</p>
+<p>12</p>
+<p>tease-activated receptor [PAR]-1 for thrombin) results in increased platelet surface</p>
+<p>area and release of further platelet activators from granules within platelets. Assembly</p>
+<p>of tenase and prothrombinase complexes within activated platelets produces most of</p>
+<p>the activated factor Xa and IIa (thrombin) in the coagulation cascade. A change in</p>
+<p>the conformation of the GP IIb/IIIa surface receptors of platelets cross-links platelets</p>
+<p>to each other through fibrinogen bridges, resulting in platelet aggregation and forma-</p>
+<p>tion of a platelet plug in the area of plaque rupture.</p>
+<li>Activation of the clotting cascade forms a fibrin meshwork (thrombus) around the</li>
+<p>platelet plug that traps cellular components such as red blood cells and causes abrupt</p>
+<p>reduction in myocardial blood flow and oxygen supply. If ischemia is left untreated,</p>
+<p>myocyte necrosis and cell death may ensue.</p>
+<li>Subtypes of MI are based on etiology: (1) rupture, fissure, or erosion of an athero-</li>
+<p>sclerotic plaque (90% of cases); (2) reduced myocardial oxygen supply or increased</p>
+<p>demand in the absence of a coronary artery process; (3) MI resulting in death with-</p>
+<p>out the possibility of measuring biomarkers; (4) MI associated with percutaneous</p>
+<p>coronary intervention (PCI; Type 4a) or stent thrombosis (Type 4b); and (5) MI</p>
+<p>associated with coronary artery bypass graft (CABG) surgery.</p>
+<li>After MI, acute and chronic adaptations occur to prevent hemodynamic collapse but</li>
+<p>may also lead to ventricular remodeling and post-MI complications. Stimulation of</p>
+<p>the sympathetic nervous system (SNS) and renin–angiotensin–aldosterone system</p>
+<p>(RAAS) compensates for decreased cardiac output. However, chronic hyperactiva-</p>
+<p>tion of these systems can lead to ventricular hypertrophy and further impairment</p>
+<p>ch05.indd 51 18-11-2020 16:18:39</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>5</th><th>Acute Coronary Syndromes</th></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>of contractility and cardiac output. Release of inflammatory mediators and collagen</p>
+<p>deposition contribute to myocardial fibrosis or scarring, which can lead to thinning</p>
+<p>of the left ventricular (LV) wall and eventual development of dilated cardiomyopathy.</p>
+<li>Complications of MI include ventricular arrhythmias, bradyarrhythmias, heart block,</li>
+<p>heart failure (HF), cardiogenic shock, LV free-wall or septal rupture, thromboembolism</p>
+<p>(including stroke secondary to LV thrombus embolization), aneurysm formation, and</p>
+<p>pericarditis. Many patients with ACS develop depression during the convalescent period.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The patient is typically in acute distress and may present with or develop hyperten-</li>
+<p>sive crisis, acute HF, cardiogenic shock, or cardiac arrest.</p>
+<li>The classic symptom of ACS is abrupt-onset substernal chest pain or discomfort often</li>
+<p>described as a squeezing, heaviness, or tightness that persists for 10 minutes or longer.</p>
+<p>Symptoms may radiate to the arms and shoulders (especially on the left side), back, abdo-</p>
+<p>men, or jaw. Nausea, vomiting, diaphoresis, or shortness of breath may also be present.</p>
+<li>Many patients have atypical symptoms without chest pain, such as epigastric pain,</li>
+<p>indigestion, pleuritic chest pain, and increasing exertional dyspnea. Older adults,</p>
+<pre><code>women, and patients with diabetes mellitus (DM), impaired renal function, and</code></pre>
+<p>dementia are more likely to present with atypical features.</p>
+<li>No physical examination findings are specific for ACS. Nonspecific findings include</li>
+<p>S or paradoxical splitting of S heart sounds on auscultation. Signs of acute decom-</p>
+<p>4 2</p>
+<p>pensated HF include jugular venous distention, pulmonary edema, and an S on</p>
+<p>3</p>
+<p>auscultation. Patients may also present with arrhythmias, heart block, hypertension</p>
+<p>(HTN), hypotension, or shock.</p>
+<h2>DIAGNOSIS</h2>
+<li>Obtain 12-lead ECG within 10 minutes of presentation. Changes suggestive of acute</li>
+<p>ischemia include STE, ST-segment depression, and T-wave inversion. Presence of a</p>
+<p>new left bundle-branch block (LBBB) in patients with suspected ACS is strongly sug-</p>
+<p>gestive of acute MI. Some patients with ACS have no ECG changes, so appropriate</p>
+<p>evaluation and risk stratification must carefully assess medical history, presenting</p>
+<p>symptoms, and cardiac biomarkers.</p>
+<li>Cardiac troponin (either T or I) is measured at the time of presentation and repeated</li>
+<p>3–6 hours later to detect myocardial injury; elevated blood levels (exceeding the 99th</p>
+<p>percentile of the upper reference limit) occur within 2–4 hours of myocyte injury or</p>
+<p>necrosis and may remain elevated as long as 2 weeks. Myocardial injury is considered</p>
+<p>acute if there is a dynamic rise and/or fall by 20% or more in serial troponin values.</p>
+<p>Elevated levels in a patient with ACS symptoms, ischemic changes on ECG, or other</p>
+<p>evidence of ischemia confirm the diagnosis of MI. Additional troponin levels should</p>
+<p>be obtained beyond 6 hours after symptom onset in patients with intermediate- to</p>
+<p>high-risk features of ACS but normal troponin levels during serial measurements.</p>
+<li>Elevated dynamic cardiac troponin levels with ST-segment elevation of at least 1 mm</li>
+<p>in two contiguous leads or new LBBB on the presenting ECG confirms the diagnosis</p>
+<p>of STEMI. In contrast, the diagnosis of NSTEMI is appropriate for patients with</p>
+<p>symptoms of ACS and elevated troponin levels without at least 1 mm ST-segment</p>
+<p>elevation on the ECG at presentation. Patients with symptoms consistent with ACS</p>
+<p>but in whom troponin is not elevated may have UA or an alternative diagnosis.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Short-term goals includes: (1) early restoration of blood flow to</li>
+<p>the affected artery to prevent infarct expansion (in the case of MI) or prevent com-</p>
+<p>plete occlusion and MI (in UA), (2) prevention of death and other complications, (3)</p>
+<p>prevention of coronary artery reocclusion, and (4) relief of ischemic chest discomfort.</p>
+<p>Long-term goals include control of cardiovascular (CV) risk factors, prevention of</p>
+<p>additional CV events, and improvement in quality of life.</p>
+<p>52</p>
+<p>ch05.indd 52 18-11-2020 16:18:39</p>
+<h2>Acute Coronary Syndromes | CHAPTER 5</h2>
+<h2>GENERAL APPROACH TO TREATMENT OF ACS</h2>
+<li>The clinical presentation, past medical history, ECG, and biomarkers are used to</li>
+<p>stratify patients as low, medium, or high risk and determine which patients may ben-</p>
+<p>efit from reperfusion therapy, an early invasive approach, or medical management.</p>
+<p>Treatment decisions are based on the initial and ongoing risk stratification (Fig. 5-1).</p>
+<li>Because STEMI has the highest short-term risk of death, these patients should be</li>
+<p>emergently referred for primary PCI; confirmation of elevated troponin should not</p>
+<p>delay treatment.</p>
+<li>General measures include hospital admission, oxygen administration if saturation is</li>
+<p>&lt;90% (0.90) bed rest with continuous multilead ST-segment monitoring for arrhyth-</p>
+<p>mias and ischemia, frequent measurement of vital signs, ischemic pain relief, and</p>
+<p>prompt initiation of antithrombotic therapy.</p>
+<li>Assess kidney function (serum creatinine, creatinine clearance) to identify patients</li>
+<p>who may need dosing adjustments and those at high risk of morbidity and mortality.</p>
+<li>Measure serum potassium and magnesium levels, which may affect heart rhythm.</li>
+<p>Obtain complete blood cell count (CBC), fasting lipid panel, and coagulation tests (aPTT</p>
+<p>or anti-Xa levels, INR) because most patients will receive antithrombotic therapy.</p>
+<h2>ACUTE SUPPORTIVE CARE FOR ACS</h2>
+<li>Aspirin is recommended for all ACS patients without contraindications, regardless of</li>
+<p>the type of ACS or management strategy. The initial dose is 162–325 mg (non-enteric</p>
+<p>coated) given as soon as possible and chewed and swallowed to speed dissolution and</p>
+<p>onset of platelet inhibition (&lt;30 minutes). After the initial dose, aspirin 81 mg daily</p>
+<p>is continued indefinitely. Contraindications to aspirin include hypersensitivity and</p>
+<p>major GI intolerance. In these cases, clopidogrel with a loading dose followed by a</p>
+<p>maintenance dose should be used as an alternative.</p>
+<li>Nitroglycerin (NTG) is indicated for relief of anginal symptoms, uncontrolled HTN,</li>
+<p>and acute HF. The sublingual (SL) dose is 0.3–0.4 mg every 5 minutes for up to</p>
+<p>3 doses as needed for angina. Consider intravenous (IV) NTG for persistent angina</p>
+<p>despite SL NTG at an initial dose of 10 mcg/min titrated to symptom relief and</p>
+<p>desired blood pressure (BP). Continue IV NTG until symptoms have resolved, BP is</p>
+<p>controlled, and HF symptoms have subsided. Gradually taper the infusion upon dis-</p>
+<p>continuation. Nitrate administration is contraindicated in patients who have recently</p>
+<p>taken oral phosphodiesterase-5 (PDE-5) inhibitors (eg, sildenafil).</p>
+<li>Oxygen administration (2–4 L/min) should be reserved for select patients, particu-</li>
+<p>larly those with oxygen saturation &lt;90% (0.90), because data suggest that routine use</p>
+<p>may adversely affect patients with ACS by increasing coronary vascular resistance</p>
+<p>and reducing coronary blood flow.</p>
+<li>Morphine is an analgesic, anxiolytic, and venodilator that reduces oxygen demand,</li>
+<p>but its role in ACS is uncertain because some studies have shown adverse outcomes.</p>
+<p>Current guidelines recommend IV morphine for pain relief in patients with STEMI.</p>
+<p>Recommended doses are 4–8 mg IV × 1 (lower dose in elderly), then 2–8 mg IV</p>
+<p>every 5–15 minutes as needed. In NSTE-ACS, IV morphine use is recommended</p>
+<p>only in patients refractory to treatment with other anti-ischemic medications; doses</p>
+<p>between 1 and 5 mg every 5–30 minutes are recommended.</p>
+<li>β-Blockers should be administered to all patients without contraindications because</li>
+<p>they reduce angina and the risk of MI and arrhythmias, even though their mortality</p>
+<p>benefit in the reperfusion era is uncertain. Current guidelines recommend initiation</p>
+<p>of an oral β-blocker within the first 24 hours of ACS presentation and continuation</p>
+<p>for at least 3 years in patients with normal LV ejection fraction (LVEF). For ACS</p>
+<pre><code>patients with LV dysfunction (LVEF &lt;40% [0.40]), β-blocker therapy is often life-</code></pre>
+<p>long. Recommended doses include:</p>
+<p>✓ Carvedilol: 6.25 mg orally twice daily; target dose is 25 mg twice daily as tolerated.</p>
+<p>✓ Metoprolol: 25–50 mg orally every 6–12 hours for 2–3 days, then once daily</p>
+<p>(metoprolol succinate) or twice daily (metoprolol tartrate); target dose is 200 mg</p>
+<p>daily. The IV dose is 5 mg every 5 minutes as tolerated up to 3 doses, titrated to</p>
+<p>53</p>
+<p>ch05.indd 53 18-11-2020 16:18:39</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Clinical suspicion of ACS including ishemic symptoms lasting at least 10 minutes</p>
+<li>Obtain & interpret 12-lead ECG within 10 minutes (prehopital ECG, if possible)</li>
+<li>Obtain serial cTn levels</li>
+<li>Continuous ST-segment monitoring</li>
+<li>Aspirin 162-325 mg (chew & swallow)</li>
+<li>Nitroglycerin 0.3-0.4 mg SL every 5 minutes as needed, up to 3 doses</li>
+<li>Oxygen (if O saturation <90%)</li>
+<p>2</p>
+<p>ST-segment ST-segment T-wave No ECG</p>
+<p>elevation depression inversion changes</p>
+<p>ST-segment elevation</p>
+<p>Non-ST-segment elevation ACS</p>
+<h2>ACS</h2>
+<p>Initiate acute</p>
+<p>Initiate acute supportive care</p>
+<p>supportive care</p>
+<p>Risk stratify</p>
+<p>Initiate reperfusion</p>
+<p>therapy:</p>
+<p>primary PCI preferred, Low-Risk</p>
+<p>fibrinolysis if D2B time NSTE-ACS Intermediate–High Risk NSTE-ACS</p>
+<p>&gt; 120 minutes</p>
+<p>Ischemia-driven</p>
+<p>Initiate P2Y 12 Inhibitor approach Early invasive approach</p>
+<p>Primary PCI: prasugrel,</p>
+<p>ticagrelor, clopidogrel, Consider P2Y 12 Initiate P2Y 12 inhibitor</p>
+<p>or cangrelor inhibitor Elevated cTn levels or ischemic changes</p>
+<p>Fibrinolysis: clopidogrel clopidogrel or on ECG:prasugrel or ticagrelor</p>
+<p>ticagrelor Normal cTn levels &amp; no ischemic changes</p>
+<p>on ECG:clopidogrel, prasugrel,</p>
+<p>Consider GP IIb/IIIa or ticagrelor</p>
+<p>Inhibitor</p>
+<p>If primary PCI</p>
+<p>Initiate</p>
+<p>performed,no p2Y12 anticoagulation Initiate anticoagulation</p>
+<p>inhibitor prior to fondaparinux, UFH or LMWH, may switch to bivalirudin</p>
+<p>PCI,&amp; bivalirudin LMWH,or,UFH during PCI</p>
+<p>not used</p>
+<p>Positive</p>
+<p>Initiate anticoagulation Non-invasive stress Coronary angiography;</p>
+<p>UFH, bivalirudin, stress test test PCI, if appropriate</p>
+<p>or LMWH</p>
+<p>Negative stress test</p>
+<p>Consider GP IIb/IIIa inhibitor</p>
+<p>or cangrelor</p>
+<p>If no P2Y inhibitor prior to</p>
+<p>12</p>
+<h2>PCI</h2>
+<p>Diagnosis:</p>
+<p>STEMI Normal Elevated Normal</p>
+<p>cTn levels cTn levels cTn levels</p>
+<p>Consider</p>
+<p>Diagnosis: Diagnosis:</p>
+<p>noncardiac</p>
+<h2>NSTEMI UA</h2>
+<p>origin of symptoms</p>
+<p>FIGURE 5-1. Evaluation and initial management of patients with suspected ACS.</p>
+<h2>ALGRAWANY</h2>
+<p>54</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch05.indd 54 18-11-2020 16:18:40</p>
+<div class="table-container"><table><tr><th>ST-segment
+elevation</th><th>ST-segment
+depression</th></tr></table></div><div class="table-container"><table><tr><th>ST-segment elevation
+ACS</th><th>Non-ST-segment elevation ACS</th></tr></table></div><div class="table-container"><table><tr><th>Initiate acute
+supportive care</th><th>Initiate acute supportive care</th></tr></table></div><div class="table-container"><table><tr><th>Initiate reperfusion
+therapy:
+primary PCI preferred,
+fibrinolysis if D2B time
+&gt; 120 minutes</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td>Low-Risk
+NSTE-ACS</td><td></td><td>Intermediate–High Risk NSTE-ACS</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Initiate P2Y Inhibitor
+12
+Primary PCI: prasugrel,
+ticagrelor, clopidogrel,
+or cangrelor
+Fibrinolysis: clopidogrel</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Consider P2Y
+12
+inhibitor
+clopidogrel or
+ticagrelor</td><td></td><td>Initiate P2Y inhibitor
+12
+Elevated cTn levels or ischemic changes
+on ECG:prasugrel or ticagrelor
+Normal cTn levels &amp; no ischemic changes
+on ECG:clopidogrel, prasugrel,
+or ticagrelor</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Consider GP IIb/IIIa
+Inhibitor
+If primary PCI
+performed,no p2Y12
+inhibitor prior to
+PCI,&amp; bivalirudin
+not used</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table></div><h2>Acute Coronary Syndromes | CHAPTER 5</h2>
+<p>BP and heart rate (HR); the IV route should be reserved for STEMI patients with</p>
+<p>acute uncontrolled HTN or refractory symptoms.</p>
+<li>Calcium channel blockers (CCBs) have anti-ischemic effects but may not have</li>
+<p>beneficial effects on mortality, MI, or recurrent MI. Guidelines recommend</p>
+<p>nondihydropyridine CCBs (diltiazem, verapamil) for angina symptoms in patients</p>
+<p>with ACS who have a contraindication, have intolerance, or are refractory to</p>
+<pre><code>β-blockers in the absence of LV dysfunction, risk factors for cardiogenic shock, and</code></pre>
+<p>atrioventricular conduction defects. Long-acting CCBs are recommended for patients</p>
+<p>with ACS with known or suspected vasospasm. Recommended doses include:</p>
+<p>✓ Diltiazem: 120–360 mg/day orally</p>
+<p>✓ Verapamil: 240–480 mg/day orally</p>
+<p>✓ Amlodipine: 5–10 mg orally once daily</p>
+<p>✓ Nicardipine: 60–120 mg/day orally</p>
+<p>✓ Nifedipine extended-release (ER): 30–120 mg orally once daily</p>
+<h2>TREATMENT STRATEGIES IN STEMI</h2>
+<p>Primary PCI</p>
+<li>Mechanical reperfusion with PCI using intracoronary balloons, stents, or other devices</li>
+<p>within 90 minutes of first medical contact is the reperfusion treatment of choice.</p>
+<p>Patients presenting to hospitals unable to perform PCI should be transferred to a PCI-</p>
+<p>capable hospital to achieve reperfusion within 120 minutes of the first medical contact.</p>
+<p>Compared to reperfusion with fibrinolysis, primary PCI improves survival, establishes</p>
+<p>consistent revascularization to the infarct-related artery, reduces the risk of stroke and</p>
+<p>intracranial hemorrhage (ICH), and reduces reinfarction and recurrent ischemia.</p>
+<p>Fibrinolysis</p>
+<li>Administer fibrinolysis to patients with STEMI when PCI cannot be performed</li>
+<p>within 120 minutes of first medical contact, provided no contraindications exist.</p>
+<p>Limit use of fibrinolytics between 12 and 24 hours after symptom onset to patients</p>
+<p>with clinical and/or ECG evidence of ongoing ischemia.</p>
+<li>Absolute contraindications to fibrinolytic therapy include any prior hemorrhagic</li>
+<p>stroke, ischemic stroke within 3 months, intracranial neoplasm or AV malformation,</p>
+<p>active internal bleeding, aortic dissection, considerable facial or closed head trauma</p>
+<p>in the past 3 months, intracranial or intraspinal surgery within 2 months, severe</p>
+<p>uncontrolled HTN, and for streptokinase, treatment within previous 6 months</p>
+<p>(if considering streptokinase again). Primary PCI is preferred in these situations.</p>
+<li>A fibrin-specific agent (alteplase, reteplase, or tenecteplase) is preferred over the</li>
+<p>non–fibrin-specific agent streptokinase because of greater reperfusion success and</p>
+<p>less systemic bleeding.</p>
+<li>Treat eligible patients within 30 minutes of hospital arrival with one of the following:</li>
+<p>✓ Alteplase: 15-mg IV bolus over 1–2 minutes, then 0.75 mg/kg (maximum 50 mg)</p>
+<p>IV over 30 minutes, then 0.5 mg/kg (maximum 35 mg) IV over 60 minutes; maxi-</p>
+<p>mum total dose 100 mg</p>
+<p>✓ Reteplase: 10 units IV over 2 minutes, followed 30 minutes later with another</p>
+<p>10 units IV over 2 minutes</p>
+<p>✓ Tenecteplase: Single IV bolus given over 5 seconds based on patient weight:</p>
+<p>30 mg if &lt;60 kg; 35 mg if 60–69.9 kg; 40 mg if 70–79.9 kg; 45 mg if 80–89.9 kg;</p>
+<p>and 50 mg if ≥90 kg</p>
+<li>Fibrinolytic therapy is associated with a slight but statistically significant risk for</li>
+<p>stroke, largely attributed to ICH (0.9%–1.0% of patients). Predictors for ICH include</p>
+<p>advanced age, lower total body weight, female sex, preexisting cerebrovascular dis-</p>
+<p>ease, and systolic and diastolic HTN at time of presentation.</p>
+<p>Antithrombotic Therapy</p>
+<li>Administer antithrombotic therapy with antiplatelet agents and parenteral antico-</li>
+<p>agulation concomitantly with both primary PCI and fibrinolysis to improve vessel</p>
+<p>patency and prevent reocclusion (see Antithrombotic Therapy section below).</p>
+<p>55</p>
+<p>ch05.indd 55 18-11-2020 16:18:40</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>TREATMENT STRATEGIES IN NSTE-ACS</h2>
+<p>Early Invasive Approach</p>
+<li>Patients presenting with NSTE-ACS typically have a partially occluded coronary artery</li>
+<p>with some residual perfusion; therefore, the need for and urgency to perform PCI is</p>
+<p>not as critical. With an early invasive approach, diagnostic angiography is typically</p>
+<p>performed within the first 24 hours with the intent to perform revascularization if</p>
+<p>appropriate. Guidelines recommend this strategy in patients with intermediate to high</p>
+<p>risk for death, MI, refractory angina, acute HF, cardiogenic shock, or arrhythmias.</p>
+<p>Ischemia-Guided Approach (Medical Management)</p>
+<li>If an early invasive strategy using PCI is not considered appropriate, select low-risk</li>
+<p>patients may receive more conservative ischemia-guided medical management,</p>
+<p>where antiplatelet and anticoagulants are administered and PCI is not initially</p>
+<p>planned. Patients are evaluated for signs and symptoms of recurrent ischemia or</p>
+<p>hemodynamic instability (eg, with noninvasive stress testing) and taken for coronary</p>
+<p>angiography and possible PCI only if symptoms recur.</p>
+<h2>ANTITHROMBOTIC THERAPY FOR ACS</h2>
+<li>Both antiplatelet and anticoagulant therapy are necessary in the acute treatment phase</li>
+<p>of ACS because platelets dominate the pathophysiologic processes in arterial thrombo-</p>
+<p>sis, and thrombin is involved in both platelet activation and coagulation. After hospital</p>
+<p>discharge, most patients are continued on long-term antiplatelet therapy only, although</p>
+<p>long-term anticoagulant therapy may benefit some high-risk individuals.</p>
+<p>Antiplatelet Therapy</p>
+<li>Aspirin: A dose of 81 mg daily is continued indefinitely (after the initial 162–325 mg</li>
+<p>dose) in patients with either STEMI or NSTE-ACS, regardless of the management</p>
+<p>strategy employed. Patients undergoing PCI for STEMI or NSTE-ACS already receiv-</p>
+<p>ing chronic aspirin 81 mg daily should be given an additional dose of 81–325 mg</p>
+<p>before the procedure.</p>
+<li>P2Y Inhibitors: An oral agent (clopidogrel, prasugrel, ticagrelor) is typically given</li>
+<p>12</p>
+<p>with aspirin as dual antiplatelet therapy (DAPT) to prevent stent thrombosis and</p>
+<p>thrombotic CV events. Cangrelor is an IV drug indicated as an adjunct to PCI to</p>
+<p>reduce periprocedural MI, repeat revascularization, and stent thrombosis in patients</p>
+<p>not receiving oral P2Y inhibitors or planned GP IIb/IIIa inhibitors. Any of the four</p>
+<p>12</p>
+<p>agents may be given with primary PCI, but only clopidogrel has been evaluated in</p>
+<p>large clinical trials in patients with STEMI receiving reperfusion with fibrinolysis.</p>
+<p>Recommended doses are as follows:</p>
+<p>✓ Clopidogrel: 600-mg oral loading dose before primary PCI for STEMI or NSTE-</p>
+<p>ACS. Give a 300-mg oral loading dose to patients receiving a fibrinolytic or who</p>
+<p>do not receive reperfusion therapy. Avoid a loading dose in patients age ≥75 years.</p>
+<p>The maintenance dose is 75 mg daily.</p>
+<p>✓ Prasugrel: 60-mg oral loading dose in patients undergoing PCI, followed by 10 mg</p>
+<p>orally once daily for patients weighing ≥60 kg; use 5 mg once daily for patients</p>
+<p>weighing &lt;60 kg.</p>
+<p>✓ Ticagrelor: 180-mg oral loading dose in patients undergoing PCI, followed by 90</p>
+<p>mg orally twice daily.</p>
+<p>✓ Cangrelor: 30 mcg/kg IV bolus prior to PCI followed by 4 mcg/kg/min infusion</p>
+<p>for duration of PCI or 2 hours, whichever is longer.</p>
+<li>Withhold clopidogrel and ticagrelor for at least 5 days and prasugrel for 7 days before</li>
+<p>elective surgery (eg, CABG surgery). Cangrelor can be continued until just a few</p>
+<p>hours before surgery because of its short duration of action.</p>
+<p>Glycoprotein IIb/IIIa Inhibitors (GPIs)</p>
+<li>GPIs inhibit GP IIb/IIIa receptors on platelets, blocking the binding of fibrinogen to</li>
+<p>activated GP IIb/IIIa receptors, which is the final step in platelet aggregation.</p>
+<p>56</p>
+<p>ch05.indd 56 18-11-2020 16:18:40</p>
+<h2>Acute Coronary Syndromes | CHAPTER 5</h2>
+<li>These agents must be given with unfractionated heparin (UFH) or a low-molecular-</li>
+<p>weight heparin (LMWH) that should be discontinued immediately after PCI to</p>
+<p>reduce the risk of major bleeding.</p>
+<li>Use of GPIs has been declining in recent years; patients likely to benefit most are</li>
+<p>those receiving PCI for NSTE-ACS with elevated troponin levels and patients with</p>
+<p>STEMI who have not been preloaded with a P2Y inhibitor and are not being treated</p>
+<p>12</p>
+<p>with bivalirudin. Recommended doses are as follows:</p>
+<p>✓ Abciximab: 0.25 mg/kg IV bolus given 10–60 minutes before the start of PCI, fol-</p>
+<p>lowed by 0.125 mcg/kg/min (maximum 10 mcg/min) for 12 hours; alternatively,</p>
+<p>0.25 mg/kg intracoronary bolus only.</p>
+<p>✓ Eptifibatide: 180 mcg/kg IV bolus, repeated in 10 minutes, followed by IV infu-</p>
+<p>sion of 2 mcg/kg/min for 18–24 hours after PCI; reduce infusion dose by 50% if</p>
+<p>creatinine clearance (CrCl) is &lt;50 mL/min (0.83 mL/sec).</p>
+<p>✓ Tirofiban: 25 mcg/kg IV bolus, then 0.15 mcg/kg/min for up to 18–24 hours after</p>
+<p>PCI; reduce infusion dose by 50% if CrCl is ≤60 mL/min (1.0 mL/sec).</p>
+<li>GPIs are not beneficial and should not be used in patients with NSTE-ACS under-</li>
+<p>going an ischemia-driven approach. GPIs should also be avoided in patients with</p>
+<p>STEMI receiving reperfusion with fibrinolytics because of significant increases in</p>
+<p>major bleeding and ICH.</p>
+<li>Besides bleeding, GPIs cause significant thrombocytopenia in about 1% of patients</li>
+<p>receiving abciximab and 0.5% with eptifibatide and tirofiban. Because GPIs are given</p>
+<p>with heparin, it is important to differentiate GPI-induced thrombocytopenia from</p>
+<p>heparin-induced thrombocytopenia (HIT).</p>
+<p>Anticoagulants</p>
+<li>Although patients with ACS are typically on at least two antiplatelet agents for a year</li>
+<p>or more, a single anticoagulant is usually given for a short time (the initial few days</p>
+<p>of hospitalization).</p>
+<li>Current evidence in the acute management of ACS is with injectable anticoagu-</li>
+<p>lants. See Table 5-1 for anticoagulant indications and drug doses in ACS.</p>
+<li>Unfractionated heparin (UFH) has been widely used in ACS management for</li>
+<p>several decades. Based on experience, UFH can be used across the spectrum of</p>
+<p>ACS and regardless of the management strategy. Because of significant interpatient</p>
+<p>variability in anticoagulant response, therapy must be monitored with the activated</p>
+<p>partial thromboplastin time (aPTT) every 6 hours until two consecutive readings</p>
+<p>are within the institution’s therapeutic range (1.5–2 times the control value), then</p>
+<p>every 24 hours for the duration of UFH therapy. The activated clotting time (ACT) is</p>
+<p>monitored during PCI because it can be measured at the bedside with rapid results.</p>
+<p>Platelet counts should also be monitored daily or every other day to detect HIT. If</p>
+<p>HIT is suspected, discontinue UFH and provide anticoagulation with an IV direct</p>
+<p>thrombin inhibitor.</p>
+<li>Low-molecular-weight heparins (LMWHs) provide a predicable anticoagulant</li>
+<p>dose response with no need for routine therapeutic monitoring. Anti-Xa level</p>
+<p>monitoring may be helpful in obese patients (&gt;190 kg) and patients with severe</p>
+<p>renal insufficiency (eg, CrCl &lt;30 mL/min [0.5 mL/sec]). The target peak anti-Xa</p>
+<p>level is 0.3–0.7 IU/mL (kIU/L) drawn 4 hours after the third dose. The utility of anti-</p>
+<p>Xa monitoring is limited because patients with ACS typically receive anticoagulant</p>
+<p>therapy for only a few days. Although the incidence of HIT is lower with LMWHs</p>
+<p>(&lt;2%) than with UFH (2%–5%), monitoring of platelet counts is still warranted. Due</p>
+<p>to 90% crossreactivity between HIT antibodies from LMWH and UFH, LMWH is</p>
+<p>not a safe alternative in patients who develop HIT from UFH and vice versa.</p>
+<p>✓ Enoxaparin is the most widely studied agent in ACS and is the only LMWH</p>
+<p>recommended in current guidelines. Data support its efficacy in patients with</p>
+<p>STEMI and NSTE-ACS, regardless of the perfusion or management strat-</p>
+<p>egy used. However, enoxaparin dosing varies across these different situations</p>
+<p>(Table 5-1). In patients with STEMI receiving reperfusion with fibrinolytics,</p>
+<p>57</p>
+<p>ch05.indd 57 18-11-2020 16:18:40</p>
+<h2>58 SECTION</h2>
+<p>2</p>
+<p>|</p>
+<p>Cardiovascular</p>
+<p>Disorders</p>
+<p>TABLE 5-1 Anticoagulant Drug Use and Dosing for Treatment of Acute Coronary Syndrome</p>
+<h2>STEMI NSTE-ACS</h2>
+<p>Primary PCI Fibrinolytic Perfusion Early Invasive Strategy Ischemia-Driven</p>
+<p>Drug Strategy</p>
+<p>Bivalirudin 0.75 mg/kg IV bolus, followed No recommendation 0.10 mg/kg IV bolus, followed by No recommendation</p>
+<p>by 1.75 mg/kg/hr IV infusion 0.25 mg/kg/hr IV infusion until</p>
+<p>until completion of PCI; completion of PCI</p>
+<p>CrCl &lt;30 mL/min (0.5 mL/sec):</p>
+<p>reduce infusion to</p>
+<p>1 mg/kg/hr</p>
+<p>Enoxaparin 0.5 mg/kg one-time IV bolus 30 mg IV bolus, followed within 15 min by 1 mg/kg SC every 12 hours until PCI; 1 mg/kg SC every</p>
+<p>1 mg/kg SC every 12 hours for up to may give an initial 30 mg IV bolus; 12 hours for duration of</p>
+<p>8 days or hospital discharge; cap first two Give 0.3 mg/kg IV bolus if PCI occurs hospitalization; may give</p>
+<p>SC doses at 100 mg; before two SC doses have been an initial 30 mg IV bolus;</p>
+<p>CrCl &lt;30 mL/min (0.5 mL/sec): 30 mg IV given, or if the last dose was given CrCl &lt;30 mL/min (0.5 mL/</p>
+<p>bolus, followed by 1 mg/kg SC every 8 hours or more prior to PCI; sec): 1 mg/kg SC every</p>
+<p>24 hours; cap first dose at 100 mg; CrCl &lt;30 mL/min (0.5 mL/s): 24 hours</p>
+<p>Age ≥75 years: omit IV bolus and initiate 1 mg/kg SC every 24 hours</p>
+<p>0.75 mg/kg SC every 12 hours; cap first</p>
+<p>two doses at 75 mg;</p>
+<p>CrCl &lt;30 mL/min (0.5 mL/sec) and age</p>
+<p>≥75: omit IV bolus and initiate at 1 mg/kg</p>
+<p>every 24 hours</p>
+<p>ch05.indd</p>
+<p>58</p>
+<p>18-11-2020</p>
+<p>16:18:40</p>
+<div class="table-container"><table><tr><th>TABLE 5-1 Anticoagulant Drug Use and Dosing for Treatment of Acute Coronary Syndrome</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>STEMI</td><td></td><td>NSTE-ACS</td><td></td></tr><tr><td>Drug</td><td>Primary PCI</td><td>Fibrinolytic Perfusion</td><td>Early Invasive Strategy</td><td>Ischemia-Driven
+Strategy</td></tr><tr><td>Bivalirudin</td><td>0.75 mg/kg IV bolus, followed
+by 1.75 mg/kg/hr IV infusion
+until completion of PCI;
+CrCl &lt;30 mL/min (0.5 mL/sec):
+reduce infusion to
+1 mg/kg/hr</td><td>No recommendation</td><td>0.10 mg/kg IV bolus, followed by
+0.25 mg/kg/hr IV infusion until
+completion of PCI</td><td>No recommendation</td></tr><tr><td>Enoxaparin</td><td>0.5 mg/kg one-time IV bolus</td><td>30 mg IV bolus, followed within 15 min by
+1 mg/kg SC every 12 hours for up to
+8 days or hospital discharge; cap first two
+SC doses at 100 mg;
+CrCl &lt;30 mL/min (0.5 mL/sec): 30 mg IV
+bolus, followed by 1 mg/kg SC every
+24 hours; cap first dose at 100 mg;
+Age ≥75 years: omit IV bolus and initiate
+0.75 mg/kg SC every 12 hours; cap first
+two doses at 75 mg;
+CrCl &lt;30 mL/min (0.5 mL/sec) and age
+≥75: omit IV bolus and initiate at 1 mg/kg
+every 24 hours</td><td>1 mg/kg SC every 12 hours until PCI;
+may give an initial 30 mg IV bolus;
+Give 0.3 mg/kg IV bolus if PCI occurs
+before two SC doses have been
+given, or if the last dose was given
+8 hours or more prior to PCI;
+CrCl &lt;30 mL/min (0.5 mL/s):
+1 mg/kg SC every 24 hours</td><td>1 mg/kg SC every
+12 hours for duration of
+hospitalization; may give
+an initial 30 mg IV bolus;
+CrCl &lt;30 mL/min (0.5 mL/
+sec): 1 mg/kg SC every
+24 hours</td></tr></table></div><p>59</p>
+<p>Acute</p>
+<p>Coronary</p>
+<p>Syndromes</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>5</p>
+<p>Fondaparinux No recommendation 2.5 mg IV first dose, followed by 2.5 mg SC 2.5 mg SC daily until PCI; 2.5 mg SC daily for up to</p>
+<p>daily for up to 8 days or hospital discharge At time of PCI, if no GPI give 85 units/ 8 days or duration of</p>
+<p>kg IV UFHa; if with GPI give 60 units/ hospitalization.</p>
+<p>kg IV UFHa</p>
+<p>Unfractionated If no GPI, 70–100 units/kg IV 60 units/kg (max. 4000 units) IV bolus, 60 units/kg (max. 4000 units) IV bolus, 60 units/kg (max. 4000</p>
+<p>heparin (UFH) bolus to achieve therapeutic followed by 12 units/kg/hr (max. initial followed by 12 units/kg/hr (max. units) IV bolus, followed</p>
+<p>ACTa; infusion rate 1000 units/hr) initial infusion rate 1000 units/hr)a by 12 units/kg/hr (max.</p>
+<p>If taking GPI, 50–70 units/kg IV initial infusion rate 1000</p>
+<p>bolus to achieve therapeutic units/hr)</p>
+<p>ACTa</p>
+<p>aAdditional IV UFH boluses may be needed to maintain a therapeutic ACT.</p>
+<p>ACT, activated clotting time; CrCl, creatinine clearance; GPI, glycoprotein IIb/IIIa inhibitor; IV, intravenous; NSTE-ACS, non-ST-segment elevation acute coronary syndrome; PCI, percutaneous</p>
+<p>coronary intervention; SC, subcutaneous; STEMI, ST-segment elevation myocardial infarction; UFH, unfractionated heparin.</p>
+<p>ch05.indd</p>
+<p>59</p>
+<p>18-11-2020</p>
+<p>16:18:40</p>
+<div class="table-container"><table><tr><th>Fondaparinux</th><th>No recommendation</th><th>2.5 mg IV first dose, followed by 2.5 mg SC
+daily for up to 8 days or hospital discharge</th><th>2.5 mg SC daily until PCI;
+At time of PCI, if no GPI give 85 units/
+kg IV UFHa; if with GPI give 60 units/
+kg IV UFHa</th><th>2.5 mg SC daily for up to
+8 days or duration of
+hospitalization.</th></tr><tr><td>Unfractionated
+heparin (UFH)</td><td>If no GPI, 70–100 units/kg IV
+bolus to achieve therapeutic
+ACTa;
+If taking GPI, 50–70 units/kg IV
+bolus to achieve therapeutic
+ACTa</td><td>60 units/kg (max. 4000 units) IV bolus,
+followed by 12 units/kg/hr (max. initial
+infusion rate 1000 units/hr)</td><td>60 units/kg (max. 4000 units) IV bolus,
+followed by 12 units/kg/hr (max.
+initial infusion rate 1000 units/hr)a</td><td>60 units/kg (max. 4000
+units) IV bolus, followed
+by 12 units/kg/hr (max.
+initial infusion rate 1000
+units/hr)</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>enoxaparin demonstrated a significant 17% reduction in death and MI compared</p>
+<p>to UFH. Based on clinical trial data, either UFH or enoxaparin is recommended in</p>
+<p>patients with NSTE-ACS.</p>
+<li>Fondaparinux provides a predicable anticoagulant dose response with no need for</li>
+<p>therapeutic monitoring (similar to LMWH). A clinical trial in NSTE-ACS patients</p>
+<p>receiving either an ischemia-driven or invasive management strategy demonstrated</p>
+<p>similar efficacy between fondaparinux and enoxaparin, with significantly less</p>
+<p>major bleeding in patients receiving fondaparinux. Although confounding fac-</p>
+<p>tors may account for the bleeding difference, fondaparinux can be considered in</p>
+<p>patients undergoing an ischemia-driven approach who are at high risk of bleeding.</p>
+<p>Fondaparinux is not recommended in patients receiving primary PCI for STEMI</p>
+<p>because of clinical trial results demonstrating higher rates of catheter-related</p>
+<p>thrombosis compared to UFH. In patients with STEMI receiving fibrinolytics,</p>
+<p>fondaparinux had efficacy and safety similar to UFH. However, fondaparinux is</p>
+<p>rarely used in patients with STEMI based on the lack of superiority to UFH and the</p>
+<p>benefit shown with enoxaparin over UFH in this population.</p>
+<li>Bivalirudin is a direct thrombin inhibitor that is used only in patients with ACS who</li>
+<p>receive PCI and can be monitored with the ACT in the catheterization laboratory.</p>
+<p>Although current guidelines recommend bivalirudin use, UFH is often used instead</p>
+<p>because recent trials suggested that bivalirudin does not offer efficacy or safety ben-</p>
+<p>efits over UFH alone in the setting of primary PCI for STEMI. Bivalirudin has not</p>
+<p>been evaluated in patients with STEMI receiving reperfusion with fibrinolytics or in</p>
+<p>patients with NSTE-ACS undergoing an ischemia-driven approach.</p>
+<h2>SECONDARY PREVENTION OF ISCHEMIC EVENTS</h2>
+<li>After a diagnosis of ACS, patients are considered to have atherosclerotic cardiovas-</li>
+<p>cular disease (ASCVD) and should be treated aggressively because they are at the</p>
+<p>highest risk of recurrent major adverse cardiovascular events (MACE).</p>
+<li>Aggressive risk factor modification strategies should be initiated and continued</li>
+<p>indefinitely (eg, increased physical activity, dietary modification, weight loss, BP</p>
+<p>modification, and smoking cessation).</p>
+<li>Pharmacotherapy proven to decrease mortality, HF, reinfarction, stroke, and stent</li>
+<p>thrombosis should be initiated prior to hospital discharge in all patients without</p>
+<p>contraindications. This includes anti-ischemic, antiplatelet, lipid-lowering, and anti-</p>
+<p>hypertensive therapies.</p>
+<li>Medication reconciliation at discharge should include assessment for the medication</li>
+<p>classes listed below as appropriate unless a contraindication exists; drug regimen</p>
+<p>examples within medication classes listed here are not intended to be exhaustive.</p>
+<li>Aspirin: Treat with aspirin 81 mg once daily indefinitely.</li>
+<li>P2Y inhibitor: Because the ischemic risk following ACS is high, DAPT with aspirin</li>
+<p>12</p>
+<p>plus a P2Y receptor inhibitor is indicated for most patients for at least 12 months</p>
+<p>12</p>
+<p>regardless of the management strategy employed. Continuation of DAPT beyond</p>
+<p>12 months may be reasonable for patients at higher ischemic risk if they also have a</p>
+<p>low bleeding risk. For patients with STEMI treated with fibrinolysis, the minimum</p>
+<p>recommended duration of DAPT is 14 days.</p>
+<p>✓ Clopidogrel: 75 mg once daily</p>
+<p>✓ Prasugrel: 10 mg once daily (5 mg daily if body weight &lt;60 kg)</p>
+<p>✓ Ticagrelor: 90 mg twice daily</p>
+<li>β-Blocker:</li>
+<p>✓ Carvedilol: 6.25 mg twice daily; target dose (in patients with HF with reduced</p>
+<p>ejection fraction [HFrEF]) 25 mg twice daily as tolerated</p>
+<p>✓ Metoprolol: 25–50 mg every 6–12 hours for 2–3 days, then once daily (metopro-</p>
+<p>lol succinate) or twice daily (metoprolol tartrate); target dose (in patients with</p>
+<p>HFrEF) 200 mg daily</p>
+<p>Other β-blockers may be considered; in patients with HFrEF, use either metopro-</p>
+<p>lol succinate, carvedilol, or bisoprolol, Continue therapy for at least 3 years and</p>
+<p>indefinitely in patients with concomitant HFrEF.</p>
+<p>60</p>
+<p>ch05.indd 60 18-11-2020 16:18:40</p>
+<h2>Acute Coronary Syndromes | CHAPTER 5</h2>
+<li>Statin: Initiate high-intensity statin therapy during the index hospitalization once the</li>
+<p>patient has been stabilized and continue treatment indefinitely. All patients should</p>
+<p>receive the highest dose of maximally tolerated statin:</p>
+<p>✓ Atorvastatin: 80 mg daily</p>
+<p>✓ Rosuvastatin: 20–40 mg daily</p>
+<p>Moderate-intensity statins or lower doses of high-intensity statins may be considered</p>
+<p>for ACS patients with a history of statin intolerance or those at high risk for statin-</p>
+<p>related adverse effects. Patients over age 75 may be prescribed a moderate-intensity</p>
+<p>statin as initial therapy. Reassess a lipid panel 4–6 weeks after initiation of therapy</p>
+<p>with the goal of a 50% reduction in LDL-C from baseline.</p>
+<li>Non-statin cholesterol-lowering medications: For patients with very high risk</li>
+<p>ASCVD (eg, post-ACS) and LDL-C &gt;70 mg/dL (1.81 mmol/L) on maximally</p>
+<p>tolerated statin therapy.</p>
+<p>✓ Ezetimibe: 10 mg daily</p>
+<p>✓ Simvastatin: 40 mg/ezetimibe 10 mg daily</p>
+<p>✓ Alirocumab: 75 mg SC every 2 weeks</p>
+<li>Angiotensin-converting enzyme (ACE) inhibitor: Early administration (within</li>
+<p>48 hours of presentation) is associated with lower mortality within the first month</p>
+<p>of therapy with additional benefit observed during over longer treatment durations.</p>
+<p>✓ Lisinopril: 2.5–5 mg daily; target dose 10–40 mg daily</p>
+<p>✓ Captopril: 6.25–12.5 mg three times daily; target dose 25–50 mg three times daily</p>
+<p>✓ Ramipril: 2.5 mg twice daily; target dose 5 mg twice daily</p>
+<p>✓ Trandolapril: 0.5–1 mg daily; target dose 4 mg daily</p>
+<li>Angiotensin receptor blocker (ARB): Patients intolerant to ACE inhibitors:</li>
+<p>✓ Valsartan: 20 mg twice daily; target dose 160 mg twice daily</p>
+<li>Aldosterone antagonist: To reduce mortality, consider administration within the</li>
+<p>first 14 days after MI in patients treated with both an ACE inhibitor (or ARB) and</p>
+<pre><code>β-blocker with LV dysfunction (LVEF ≤40% [0.40]) and either HF symptoms or DM.</code></pre>
+<p>✓ Eplerenone: 25 mg daily; target dose 50 mg daily</p>
+<p>✓ Spironolactone: 12.5–25 mg daily; target dose 25–50 mg daily</p>
+<li>Nitroglycerin: All patients not taking PDE-5 inhibitors should be prescribed and</li>
+<p>instructed on appropriate use of short-acting NTG, either SL tablets (0.3–0.4 mg SL</p>
+<p>every 5 minutes, up to 3 doses) or lingual spray to relieve acute anginal symptoms</p>
+<p>on an as-needed basis.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Evaluation of short-term efficacy focuses on restoration or preservation of coronary</li>
+<p>blood flow, symptom relief, and prevention of MACE.</p>
+<li>Determine restoration of blood flow and relief of ischemia by resolution of ischemic</li>
+<p>ECG changes on presentation, which should occur soon after revascularization.</p>
+<li>Although troponin levels may remain elevated for several days, levels in patients with</li>
+<p>MI should peak within 12–24 hours and then decline steadily once ischemia is relieved.</p>
+<li>Monitor for development of ACS complications (eg, HF, arrhythmias) frequently.</li>
+<li>Prior to hospital discharge, perform echocardiogram or equivalent modality to iden-</li>
+<pre><code>tify patients with LV dysfunction (LVEF &lt;40% [0.40]) who are at high risk of death</code></pre>
+<p>and candidates for guideline-directed medical therapy and device therapy.</p>
+<li>Assure that evidence-based therapies shown to reduce the risk of MACE following</li>
+<p>ACS have been initiated.</p>
+<li>Long-term outcome evaluation is directed at maintaining functional capacity, quality</li>
+<p>of life, and continued focus on risk reduction.</p>
+<li>Monitor patients at every healthcare encounter for development of adverse effects</li>
+<h2>from ACS pharmacotherapy (Table 5-2).</h2>
+<p>See Chapter 33, Acute Coronary Syndrome, authored by Robert J. DiDomenico, Paul P.</p>
+<p>Dobesh, and Shannon W. Finks, for a more detailed discussion of this topic.</p>
+<p>61</p>
+<p>ch05.indd 61 18-11-2020 16:18:40</p>
+<h2>62 SECTION</h2>
+<p>2</p>
+<p>|</p>
+<p>Cardiovascular</p>
+<p>Disorders</p>
+<p>TABLE 5-2 Adverse Drug Effect Monitoring for Acute Coronary Syndrome</p>
+<p>Drug Adverse Effects Monitoring Parameters</p>
+<p>Fibrinolytics Bleeding (ICH) Clinical signs of bleedinga; baseline aPTT, INR; Hgb, Hct, platelet count at baseline then daily; mental</p>
+<p>status every 2 hours for signs of ICH</p>
+<p>Aspirin Dyspepsia, GI bleeding Clinical signs of bleedinga; GI upset; Hgb, Hct, and platelet count at baseline and every 6 months</p>
+<p>P2Y inhibitors Bleeding, rash Clinical signs of bleedinga; evidence of rash; Hgb, Hct, platelet count at baseline and every 6 months</p>
+<p>12</p>
+<p>Ticagrelor: dyspnea, ventricular pauses, Ticagrelor: dyspnea, HR, telemetry during hospitalization</p>
+<p>bradycardia</p>
+<p>Glycoprotein IIb/ Bleeding, thrombocytopenia (can be profound Clinical signs of bleedinga; Hgb, Hct, and platelet count at baseline, 2 hours, then daily</p>
+<p>IIIa inhibitors with abciximab) Eptifibatide and tirofiban: SCr at baseline then daily</p>
+<p>Anticoagulants Bleeding Clinical signs of bleedinga; baseline aPTT, INR; Hgb, Hct, platelet count at baseline then daily</p>
+<p>UFH and LMWH: heparin-induced UFH: aPTT every 6 hours until two consecutive aPTT values are at goal, then every 24 hours; monitor</p>
+<p>thrombocytopenia the ACT during PCI</p>
+<p>Enoxaparin, bivalirudin, and fondaparinux: SCr at baseline then daily</p>
+<p>Enoxaparin: may consider steady-state anti-Xa levels in select populations</p>
+<p>β-Blockers Hypotension, HF, bradycardia, cardiogenic Continuous telemetry (while hospitalized); BP, HR, signs and symptoms of HF; monitor every 5</p>
+<p>shock, AV block, exacerbation of asthma or min before each IV bolus dose; monitor every shift while hospitalized then at each healthcare</p>
+<p>reactive airway disease encounter after discharge</p>
+<p>Nitroglycerin Flushing, headache, hypotension, tachycardia BP and HR; monitor every 5–15 min following dosage adjustment of IV NTG then every 1–2 hours;</p>
+<p>monitor every 5 min following administration of short-acting NTG</p>
+<p>ch05.indd</p>
+<p>62</p>
+<p>18-11-2020</p>
+<p>16:18:40</p>
+<div class="table-container"><table><tr><th>TABLE 5-2 Adverse Drug Effect Monitoring for Acute Coronary Syndrome</th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Effects</td><td>Monitoring Parameters</td></tr><tr><td>Fibrinolytics</td><td>Bleeding (ICH)</td><td>Clinical signs of bleedinga; baseline aPTT, INR; Hgb, Hct, platelet count at baseline then daily; mental
+status every 2 hours for signs of ICH</td></tr><tr><td>Aspirin</td><td>Dyspepsia, GI bleeding</td><td>Clinical signs of bleedinga; GI upset; Hgb, Hct, and platelet count at baseline and every 6 months</td></tr><tr><td>P2Y inhibitors
+12</td><td>Bleeding, rash</td><td>Clinical signs of bleedinga; evidence of rash; Hgb, Hct, platelet count at baseline and every 6 months</td></tr><tr><td></td><td>Ticagrelor: dyspnea, ventricular pauses,
+bradycardia</td><td>Ticagrelor: dyspnea, HR, telemetry during hospitalization</td></tr><tr><td>Glycoprotein IIb/
+IIIa inhibitors</td><td>Bleeding, thrombocytopenia (can be profound
+with abciximab)</td><td>Clinical signs of bleedinga; Hgb, Hct, and platelet count at baseline, 2 hours, then daily
+Eptifibatide and tirofiban: SCr at baseline then daily</td></tr><tr><td></td><td></td><td></td></tr><tr><td>Anticoagulants</td><td>Bleeding</td><td>Clinical signs of bleedinga; baseline aPTT, INR; Hgb, Hct, platelet count at baseline then daily</td></tr><tr><td></td><td>UFH and LMWH: heparin-induced
+thrombocytopenia</td><td>UFH: aPTT every 6 hours until two consecutive aPTT values are at goal, then every 24 hours; monitor
+the ACT during PCI</td></tr><tr><td></td><td></td><td>Enoxaparin, bivalirudin, and fondaparinux: SCr at baseline then daily</td></tr><tr><td></td><td></td><td>Enoxaparin: may consider steady-state anti-Xa levels in select populations</td></tr><tr><td>β-Blockers</td><td>Hypotension, HF, bradycardia, cardiogenic
+shock, AV block, exacerbation of asthma or
+reactive airway disease</td><td>Continuous telemetry (while hospitalized); BP, HR, signs and symptoms of HF; monitor every 5
+min before each IV bolus dose; monitor every shift while hospitalized then at each healthcare
+encounter after discharge</td></tr><tr><td>Nitroglycerin</td><td>Flushing, headache, hypotension, tachycardia</td><td>BP and HR; monitor every 5–15 min following dosage adjustment of IV NTG then every 1–2 hours;
+monitor every 5 min following administration of short-acting NTG</td></tr></table></div><p>63</p>
+<p>Acute</p>
+<p>Coronary</p>
+<p>Syndromes</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>5</p>
+<p>Morphine Hypotension, respiratory depression, sedation, BP, HR, respiratory rate, sedation level 5 min after administration then every 1–2 hours for 4 hours</p>
+<p>hypersensitivity after the last dose</p>
+<p>Calcium channel Hypotension BP and HR every shift while hospitalized then at each healthcare encounter after discharge</p>
+<p>blockers Verapamil and diltiazem: HF, cardiogenic Verapamil and diltiazem: continuous telemetry (while hospitalized); signs and symptoms of HF every</p>
+<p>shock, bradycardia, AV block shift while hospitalized then at each healthcare encounter after discharge</p>
+<pre><code>Statins GI discomfort, arthralgia, myalgia, Liver function tests at baseline (prior to discharge) and if signs or symptoms of hepatotoxicity</code></pre>
+<p>musculoskeletal pain, hepatotoxicity develop; creatine kinase if severe myalgia or musculoskeletal symptoms occur; LDL-C at baseline,</p>
+<p>4–12 weeks after initiation or dose adjustment, then every 3–12 months</p>
+<pre><code>Nonstatin Ezetimibe and combination: GI discomfort, Simvastatin/ezetimibe: liver function tests at baseline (prior to discharge) and if signs or symptoms</code></pre>
+<p>therapies for arthralgia, myalgia, musculoskeletal pain of hepatotoxicity develop; creatinine kinase if severe myalgia or musculoskeletal symptoms occur;</p>
+<p>cholesterol Alirocumab: injection site pain, LDL-C at baseline, 4–12 weeks after initiation or dose adjustment, then every 3–12 months</p>
+<p>management hypersensitivity Alirocumab: LDL-C at baseline and 4–8 weeks after initiation or dose adjustment; evaluation of</p>
+<p>injection site if injection site pain develops, signs and symptoms of hypersensitivity with each</p>
+<p>healthcare encounter</p>
+<p>ACE inhibitors Hypotension, hyperuricemia, hyperkalemia, BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each</p>
+<pre><code>worsening renal function, chronic cough, healthcare encounter; SCr and potassium at baseline, 1–2 weeks after initiation, then every 6–12</code></pre>
+<p>angioedema months; signs and symptoms of angioedema or cough with each healthcare encounter</p>
+<p>ARBs Hypotension, hyperuricemia, hyperkalemia, BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each</p>
+<pre><code>worsening renal function healthcare encounter; SCr and potassium at baseline, 1–2 weeks after initiation, then every 6–12</code></pre>
+<p>months</p>
+<pre><code>Aldosterone Hyperkalemia, worsening renal function BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each</code></pre>
+<p>antagonist healthcare encounter; SCr and potassium at baseline, after initiation or dose adjustment: at 3 days,</p>
+<p>1 week, monthly for 3 months, then every 3 months</p>
+<p>a Clinical signs of bleeding include bloody stools, melena, hematuria, hematemesis, bruising, and oozing from arterial or venous puncture sites.</p>
+<p>ACE, angiotensin-converting enzyme; ACT, activated clotting time; aPTT, activated partial thromboplastin time; ARB, angiotensin receptor blocker; AV, atrioventricular; BP, blood pressure;</p>
+<p>GI, gastrointestinal; Hct, hematocrit; HF, heart failure; Hgb, hemoglobin; HR, heart rate; ICH, intracranial hemorrhage; INR, international normalized ratio; LDL-C, low-density lipoprotein</p>
+<p>cholesterol; NTG, nitroglycerin; PCI, percutaneous coronary intervention; SCr, serum creatinine; UFH, unfractionated heparin.</p>
+<p>ch05.indd</p>
+<p>63</p>
+<p>18-11-2020</p>
+<p>16:18:40</p>
+<div class="table-container"><table><tr><th>Morphine</th><th>Hypotension, respiratory depression, sedation,
+hypersensitivity</th><th>BP, HR, respiratory rate, sedation level 5 min after administration then every 1–2 hours for 4 hours
+after the last dose</th></tr><tr><td>Calcium channel
+blockers</td><td>Hypotension
+Verapamil and diltiazem: HF, cardiogenic
+shock, bradycardia, AV block</td><td>BP and HR every shift while hospitalized then at each healthcare encounter after discharge
+Verapamil and diltiazem: continuous telemetry (while hospitalized); signs and symptoms of HF every
+shift while hospitalized then at each healthcare encounter after discharge</td></tr><tr><td>Statins</td><td>GI discomfort, arthralgia, myalgia,
+musculoskeletal pain, hepatotoxicity</td><td>Liver function tests at baseline (prior to discharge) and if signs or symptoms of hepatotoxicity
+develop; creatine kinase if severe myalgia or musculoskeletal symptoms occur; LDL-C at baseline,
+4–12 weeks after initiation or dose adjustment, then every 3–12 months</td></tr><tr><td>Nonstatin
+therapies for
+cholesterol
+management</td><td>Ezetimibe and combination: GI discomfort,
+arthralgia, myalgia, musculoskeletal pain
+Alirocumab: injection site pain,
+hypersensitivity</td><td>Simvastatin/ezetimibe: liver function tests at baseline (prior to discharge) and if signs or symptoms
+of hepatotoxicity develop; creatinine kinase if severe myalgia or musculoskeletal symptoms occur;
+LDL-C at baseline, 4–12 weeks after initiation or dose adjustment, then every 3–12 months
+Alirocumab: LDL-C at baseline and 4–8 weeks after initiation or dose adjustment; evaluation of
+injection site if injection site pain develops, signs and symptoms of hypersensitivity with each
+healthcare encounter</td></tr><tr><td>ACE inhibitors</td><td>Hypotension, hyperuricemia, hyperkalemia,
+worsening renal function, chronic cough,
+angioedema</td><td>BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each
+healthcare encounter; SCr and potassium at baseline, 1–2 weeks after initiation, then every 6–12
+months; signs and symptoms of angioedema or cough with each healthcare encounter</td></tr><tr><td>ARBs</td><td>Hypotension, hyperuricemia, hyperkalemia,
+worsening renal function</td><td>BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each
+healthcare encounter; SCr and potassium at baseline, 1–2 weeks after initiation, then every 6–12
+months</td></tr><tr><td>Aldosterone
+antagonist</td><td>Hyperkalemia, worsening renal function</td><td>BP every shift while hospitalized, 1–2 weeks after initiation or dose adjustment, then with each
+healthcare encounter; SCr and potassium at baseline, after initiation or dose adjustment: at 3 days,
+1 week, monthly for 3 months, then every 3 months</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

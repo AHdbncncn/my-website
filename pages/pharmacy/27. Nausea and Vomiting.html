@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27. Nausea and Vomiting</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>27. Nausea and Vomiting</h1>
+        </header>
+        <main>
+            <li>Nausea is usually defined as the inclination to vomit or as a feeling in the throat</li>
+<p>or epigastric region alerting an individual that vomiting is imminent. Vomiting is</p>
+<p>defined as the ejection or expulsion of gastric contents through the mouth, often</p>
+<p>requiring a forceful event.</p>
+<h2>ETIOLOGY AND PATHOPHYSIOLOGY</h2>
+<li>Specific etiologies associated with nausea and vomiting are presented in Table 27-1.</li>
+<li>Table 27-2 presents cytotoxic agents categorized by their emetogenic potential. Although</li>
+<p>some agents may have greater emetogenic potential than others, combinations of agents,</p>
+<p>high doses, clinical settings, psychological conditions, prior treatment experiences, and</p>
+<p>unusual stimuli to sight, smell, or taste may alter a patient’s response to a drug treatment.</p>
+<p>281</p>
+<h2>RETPAHC</h2>
+<p>27</p>
+<p>Nausea and Vomiting</p>
+<h2>TABLE 27-1 Etiologies of Nausea and Vomiting</h2>
+<p>Intraperitoneal</p>
+<p>Mechanical obstruction</p>
+<p>Gastric outlet obstruction</p>
+<p>Small-bowel obstruction</p>
+<pre><code>Altered sensorimotor function</code></pre>
+<p>Gastroparesis</p>
+<p>Gastroesophageal reflux</p>
+<p>Intestinal pseudo-obstruction</p>
+<h2>Irritable bowel syndrome</h2>
+<p>Chronic idiopathic nausea</p>
+<p>Functional vomiting</p>
+<p>Cyclic vomiting syndrome</p>
+<p>Cannabinoid hyperemesis syndrome</p>
+<p>Rumination syndrome</p>
+<p>Inflammatory diseases</p>
+<p>Pancreatitis</p>
+<p>Pyelonephritis</p>
+<p>Cholecystitis</p>
+<p>Appendicitis</p>
+<p>Hepatitis</p>
+<p>Acute gastroenteritis</p>
+<p>Viral</p>
+<p>Bacterial</p>
+<p>Biliary colic</p>
+<p>Liver failure</p>
+<p>Cardiovascular diseases</p>
+<p>Myocardial infarction</p>
+<p>Cardiomyopathy</p>
+<p>(Continued )</p>
+<p>ch27.indd 281 19-11-2020 12:59:06</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>27</th><th>Nausea and Vomiting</th></tr></table></div><div class="table-container"><table><tr><th>TABLE 27-1 Etiologies of Nausea and Vomiting</th></tr><tr><td>Intraperitoneal
+Mechanical obstruction
+Gastric outlet obstruction
+Small-bowel obstruction
+Altered sensorimotor function
+Gastroparesis
+Gastroesophageal reflux
+Intestinal pseudo-obstruction
+Irritable bowel syndrome
+Chronic idiopathic nausea
+Functional vomiting
+Cyclic vomiting syndrome
+Cannabinoid hyperemesis syndrome
+Rumination syndrome
+Inflammatory diseases
+Pancreatitis
+Pyelonephritis
+Cholecystitis
+Appendicitis
+Hepatitis
+Acute gastroenteritis
+Viral
+Bacterial
+Biliary colic
+Liver failure</td></tr><tr><td>Cardiovascular diseases
+Myocardial infarction
+Cardiomyopathy
+(Continued )</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>TABLE 27-1 Etiologies of Nausea and Vomiting(Continued )</h2>
+<p>Neurologic processes</p>
+<p>Increased intracranial pressure</p>
+<p>Migraine headache</p>
+<p>Vestibular disorders</p>
+<p>Intracerebral hemorrhage</p>
+<p>Intracerebral malignancy</p>
+<p>Metabolic disorders</p>
+<p>Diabetes mellitus (diabetic ketoacidosis)</p>
+<p>Addison’s disease</p>
+<p>Renal disease (uremia)</p>
+<p>Psychiatric causes</p>
+<p>Depression</p>
+<p>Anxiety disorders</p>
+<p>Anorexia and bulimia nervosa</p>
+<p>Therapy-induced causes</p>
+<p>Antineoplastic agents</p>
+<p>Radiation therapy</p>
+<p>Anticonvulsant preparations</p>
+<p>Digoxin, cardiac antiarrhythmics</p>
+<p>Opioids</p>
+<p>Oral hypoglycemics</p>
+<p>Oral contraceptives</p>
+<p>Antibiotics</p>
+<p>Volatile general anesthetics</p>
+<p>Drug withdrawal</p>
+<p>Opioids</p>
+<p>Benzodiazepines</p>
+<p>Miscellaneous causes</p>
+<p>Pregnancy</p>
+<p>Noxious odors</p>
+<p>Postoperative vomiting</p>
+<li>The three consecutive phases of emesis are nausea, retching, and vomiting. Nausea,</li>
+<p>the imminent need to vomit, is associated with gastric stasis. Retching is the</p>
+<p>labored movement of abdominal and thoracic muscles before vomiting. The final</p>
+<p>phase of emesis is vomiting, the forceful expulsion of gastric contents due to GI</p>
+<p>retroperistalsis.</p>
+<li>Vomiting is triggered by afferent impulses to the vomiting center, a nucleus of cells in</li>
+<p>the medulla. Impulses are received from sensory centers, such as the chemoreceptor</p>
+<p>trigger zone, cerebral cortex, and visceral afferents from the pharynx and GI tract.</p>
+<p>The vomiting center integrates the afferent impulses, resulting in efferent impulses</p>
+<p>to the salivation center, respiratory center, and the pharyngeal, GI, and abdominal</p>
+<p>muscles, leading to vomiting.</p>
+<p>282</p>
+<p>ch27.indd 282 19-11-2020 12:59:06</p>
+<div class="table-container"><table><tr><th>TABLE 27-1 Etiologies of Nausea and Vomiting(Continued )</th></tr><tr><td>Neurologic processes
+Increased intracranial pressure
+Migraine headache
+Vestibular disorders
+Intracerebral hemorrhage
+Intracerebral malignancy</td></tr><tr><td>Metabolic disorders
+Diabetes mellitus (diabetic ketoacidosis)
+Addison’s disease
+Renal disease (uremia)</td></tr><tr><td>Psychiatric causes
+Depression
+Anxiety disorders
+Anorexia and bulimia nervosa</td></tr><tr><td>Therapy-induced causes
+Antineoplastic agents
+Radiation therapy
+Anticonvulsant preparations
+Digoxin, cardiac antiarrhythmics
+Opioids
+Oral hypoglycemics
+Oral contraceptives
+Antibiotics
+Volatile general anesthetics</td></tr><tr><td>Drug withdrawal
+Opioids
+Benzodiazepines</td></tr><tr><td>Miscellaneous causes
+Pregnancy
+Noxious odors
+Postoperative vomiting</td></tr></table></div><h2>Nausea and Vomiting | CHAPTER 27</h2>
+<p>TABLE 27-2 Emetic Risk of Agents Used in Oncology and Treatment Options</p>
+<p>Antiemetic Dose on Day 1 Antiemetic Dose on</p>
+<p>Antiemetic Agent of Chemotherapy Subsequent Days</p>
+<p>High Risk (&gt;90%): Anthracycline/Cyclophosphamide combination, carboplatin AUC &gt;4,</p>
+<p>carmustine, cisplatin, cyclophosphamide &gt;1500 mg/m2, dacarbazine, mechlorethamine,</p>
+<p>streptozocin</p>
+<p>NK-1 Antagonist</p>
+<p>Aprepitant 125 mg oral 80 mg oral on days 2–3</p>
+<p>Fosaprepitant 150 mg IV</p>
+<p>Netupitant/Palonosetron 300 mg/0.5 mg oral</p>
+<p>Rolapitant</p>
+<p>180 mg oral</p>
+<p>5-HT3 Antagonista</p>
+<p>Dolasetron 100 mg oral</p>
+<p>Granisetron 2 mg oral or 1 mg IV or</p>
+<p>10 mcg/kg IV or 1 patch</p>
+<p>or 10 mg SQ</p>
+<p>Ondansetron 8 mg oral twice daily or 24</p>
+<p>mg oral or 8 mg IV or 0.15</p>
+<p>mg/kg IV</p>
+<p>0.5 mg oral or 0.25 mg IV</p>
+<p>Palonosetron 0.3 mg IV</p>
+<p>Ramosetron 5 mg oral or 5 mg IV</p>
+<p>Tropisetron</p>
+<p>Dexamethasoneb 12 mg or 20 mg oral/IV 8 mg oral/IV daily or twice</p>
+<p>daily on days 2–4</p>
+<p>Olanzapine 10 mg oral 10 mg oral on days 2–4</p>
+<p>Moderate Risk (30%–90%): Aldesleukin, alemtuzumab, arsenic trioxide, azacitidine,</p>
+<p>bendamustine, busulfan, carboplatin AUC &lt;4, clofarabine, cyclophosphamide &lt;1500</p>
+<p>mg/m2, cytarabine &gt;1000 mg/m2, dactinomycin, daunorubicin, daunorubicin/cytarabine</p>
+<p>liposomal, doxorubicin, epirubicin, idarubicin, ifosfamide, irinotecan (conventional and</p>
+<p>liposomal), melphalan, oxaliplatin, romidepsin, temozolomide, thiotepa, trabectedin</p>
+<p>5-HT3 Antagonist</p>
+<p>Dolasetron 100 mg oral</p>
+<p>Granisetron 2 mg oral or 1 mg IV or 10</p>
+<p>mcg/kg IV or 1 patch or</p>
+<p>10 mg SQ</p>
+<p>Ondansetron 8 mg oral twice daily or 8 mg</p>
+<p>IV or 0.15 mg/kg IV</p>
+<p>Palonosetron 0.5 mg oral or 0.25 mg IV</p>
+<p>Ramosetron 0.3 mg IV</p>
+<p>Tropisetron 5 mg oral or 5 mg IV</p>
+<p>Dexamethasone 8 mg oral/IV 8 mg oral/IV on days 2–3c</p>
+<p>(Continued )</p>
+<p>283</p>
+<p>ch27.indd 283 19-11-2020 12:59:06</p>
+<div class="table-container"><table><tr><th>TABLE 27-2 Emetic Risk of Agents Used in Oncology and Treatment Options</th><th></th><th></th></tr><tr><td>Antiemetic Agent</td><td>Antiemetic Dose on Day 1
+of Chemotherapy</td><td>Antiemetic Dose on
+Subsequent Days</td></tr><tr><td>High Risk (&gt;90%): Anthracycline/Cyclophosphamide combination, carboplatin AUC &gt;4,
+carmustine, cisplatin, cyclophosphamide &gt;1500 mg/m2, dacarbazine, mechlorethamine,
+streptozocin</td><td></td><td></td></tr><tr><td>NK-1 Antagonist</td><td></td><td></td></tr><tr><td>Aprepitant</td><td>125 mg oral</td><td>80 mg oral on days 2–3</td></tr><tr><td>Fosaprepitant</td><td>150 mg IV</td><td></td></tr><tr><td>Netupitant/Palonosetron</td><td>300 mg/0.5 mg oral</td><td></td></tr><tr><td>Rolapitant</td><td></td><td></td></tr><tr><td></td><td>180 mg oral</td><td></td></tr><tr><td>5-HT3 Antagonista</td><td></td><td></td></tr><tr><td>Dolasetron</td><td>100 mg oral</td><td></td></tr><tr><td>Granisetron</td><td>2 mg oral or 1 mg IV or
+10 mcg/kg IV or 1 patch
+or 10 mg SQ</td><td></td></tr><tr><td>Ondansetron</td><td>8 mg oral twice daily or 24
+mg oral or 8 mg IV or 0.15
+mg/kg IV</td><td></td></tr><tr><td></td><td>0.5 mg oral or 0.25 mg IV</td><td></td></tr><tr><td>Palonosetron</td><td>0.3 mg IV</td><td></td></tr><tr><td>Ramosetron</td><td>5 mg oral or 5 mg IV</td><td></td></tr><tr><td>Tropisetron</td><td></td><td></td></tr><tr><td>Dexamethasoneb</td><td>12 mg or 20 mg oral/IV</td><td>8 mg oral/IV daily or twice
+daily on days 2–4</td></tr><tr><td>Olanzapine</td><td>10 mg oral</td><td>10 mg oral on days 2–4</td></tr><tr><td>Moderate Risk (30%–90%): Aldesleukin, alemtuzumab, arsenic trioxide, azacitidine,
+bendamustine, busulfan, carboplatin AUC &lt;4, clofarabine, cyclophosphamide &lt;1500
+mg/m2, cytarabine &gt;1000 mg/m2, dactinomycin, daunorubicin, daunorubicin/cytarabine
+liposomal, doxorubicin, epirubicin, idarubicin, ifosfamide, irinotecan (conventional and
+liposomal), melphalan, oxaliplatin, romidepsin, temozolomide, thiotepa, trabectedin</td><td></td><td></td></tr><tr><td>5-HT3 Antagonist</td><td></td><td></td></tr><tr><td>Dolasetron</td><td>100 mg oral</td><td></td></tr><tr><td>Granisetron</td><td>2 mg oral or 1 mg IV or 10
+mcg/kg IV or 1 patch or
+10 mg SQ</td><td></td></tr><tr><td>Ondansetron</td><td>8 mg oral twice daily or 8 mg
+IV or 0.15 mg/kg IV</td><td></td></tr><tr><td>Palonosetron</td><td>0.5 mg oral or 0.25 mg IV</td><td></td></tr><tr><td>Ramosetron</td><td>0.3 mg IV</td><td></td></tr><tr><td>Tropisetron</td><td>5 mg oral or 5 mg IV</td><td></td></tr><tr><td>Dexamethasone</td><td>8 mg oral/IV</td><td>8 mg oral/IV on days 2–3c
+(Continued )</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 27-2 Emetic Risk of Agents Used in Oncology and Treatment Options(Continued )</p>
+<p>Low Risk (10%–30%): Aflibercept, atezolizumab, belinostat, blinatumomab, bortezomib,</p>
+<p>brentuximab, cabazitaxel, carfilzomib, cetuximab, cytarabine &lt;1000 mg/m2, docetaxel,</p>
+<p>doxorubicin, liposomal (Doxil®), elotuzumab, eribulin, etoposide, fluorouracil, gemcitabine,</p>
+<p>ipilimumab, ixabepilone, methotrexate, mitomycin, mitoxantrone, paclitaxel (conventional</p>
+<p>and albumin-bound), necitumumab, olaratumab, omacetaxine, panitumumab, pemetrexed,</p>
+<p>pentostatin, pertuzumab, talimogene-iaherparepvec, temsirolimus, topotecan, trastuzumab</p>
+<p>emtansine</p>
+<p>Choose One</p>
+<p>5-HT3 Antagonist</p>
+<p>Dolasetron 100 mg oral</p>
+<p>Granisetron 2 mg oral or 1 mg IV or 10</p>
+<p>mcg/kg IV or 1 patch or</p>
+<p>10 mg SQ</p>
+<p>Ondansetron 8 mg oral twice daily or 8 mg</p>
+<p>IV or 0.15 mg/kg IV</p>
+<p>Palonosetron 0.5 mg oral or 0.25 mg IV</p>
+<p>Ramosetron 0.3 mg IV</p>
+<p>Tropisetron 5 mg oral or 5 mg IV</p>
+<h2>OR</h2>
+<p>Dexamethasone 8 mg oral/IV</p>
+<p>Minimal Risk (&lt;10%): Avelumab, asparaginase (Erwinia and Pegaspargase), bevacizumab,</p>
+<p>bleomycin, cladribine, daratumumab, decitabine, durvalumab, fludarabine, nelerabine,</p>
+<p>nivolumab, obinutuzumab, ofatumumab, peginterferon, pembrolizumab, pralatrexate,</p>
+<p>ramucirumab, rituximab (IV and SQ), siltuximab, trastuzumab, valrubicin, vinblastine,</p>
+<p>vincristine (conventional and liposomal), vinorelbine</p>
+<p>No routine prophylactic antiemetics are needed</p>
+<p>aNo additional 5-HT3-RA is needed if netupitant/palonosetron is used.</p>
+<p>bDexamethasone dose on day 1 should be reduced to 12 mg when given with aprepitant,</p>
+<p>fosaprepitant, and netupitant/palonosetron due to drug interactions. Dexamethasone dose on</p>
+<p>days 2–4 should be omitted when used as antiemetic with anthracycline/cyclophosphamide</p>
+<p>combination regimen or carboplatin AUC ≥4.</p>
+<p>cOnly if regimen is known to cause delayed nausea/vomiting (eg, cyclophosphamide, doxorubicin,</p>
+<p>oxaliplatin).</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The clinical presentation of nausea and vomiting is given in Table 27-3. Nausea and</li>
+<p>vomiting may be classified as either simple or complex.</p>
+<h2>TREATMENT</h2>
+<li>Goal of treatment: Prevent or eliminate nausea and vomiting; ideally accomplished</li>
+<p>without adverse effects or with clinically acceptable adverse effects.</p>
+<h2>GENERAL APPROACH TO TREATMENT</h2>
+<li>Treatment options for nausea and vomiting include drug and nondrug modalities</li>
+<p>such as biofeedback and hypnosis. For patients who are suffering due to excessive</p>
+<p>or disagreeable food or beverage consumption, avoidance or moderation in dietary</p>
+<p>intake may lead to symptom resolution.</p>
+<p>284</p>
+<p>ch27.indd 284 19-11-2020 12:59:06</p>
+<div class="table-container"><table><tr><th>TABLE 27-2 Emetic Risk of Agents Used in Oncology and Treatment Options(Continued )</th><th></th><th></th></tr><tr><td>Low Risk (10%–30%): Aflibercept, atezolizumab, belinostat, blinatumomab, bortezomib,
+brentuximab, cabazitaxel, carfilzomib, cetuximab, cytarabine &lt;1000 mg/m2, docetaxel,
+doxorubicin, liposomal (Doxil®), elotuzumab, eribulin, etoposide, fluorouracil, gemcitabine,
+ipilimumab, ixabepilone, methotrexate, mitomycin, mitoxantrone, paclitaxel (conventional
+and albumin-bound), necitumumab, olaratumab, omacetaxine, panitumumab, pemetrexed,
+pentostatin, pertuzumab, talimogene-iaherparepvec, temsirolimus, topotecan, trastuzumab
+emtansine</td><td></td><td></td></tr><tr><td>Choose One</td><td></td><td></td></tr><tr><td>5-HT3 Antagonist</td><td></td><td></td></tr><tr><td>Dolasetron</td><td>100 mg oral</td><td></td></tr><tr><td>Granisetron</td><td>2 mg oral or 1 mg IV or 10
+mcg/kg IV or 1 patch or
+10 mg SQ</td><td></td></tr><tr><td>Ondansetron</td><td>8 mg oral twice daily or 8 mg
+IV or 0.15 mg/kg IV</td><td></td></tr><tr><td>Palonosetron</td><td>0.5 mg oral or 0.25 mg IV</td><td></td></tr><tr><td>Ramosetron</td><td>0.3 mg IV</td><td></td></tr><tr><td>Tropisetron</td><td>5 mg oral or 5 mg IV</td><td></td></tr><tr><td>OR</td><td></td><td></td></tr><tr><td>Dexamethasone</td><td>8 mg oral/IV</td><td></td></tr><tr><td>Minimal Risk (&lt;10%): Avelumab, asparaginase (Erwinia and Pegaspargase), bevacizumab,
+bleomycin, cladribine, daratumumab, decitabine, durvalumab, fludarabine, nelerabine,
+nivolumab, obinutuzumab, ofatumumab, peginterferon, pembrolizumab, pralatrexate,
+ramucirumab, rituximab (IV and SQ), siltuximab, trastuzumab, valrubicin, vinblastine,
+vincristine (conventional and liposomal), vinorelbine</td><td></td><td></td></tr><tr><td>No routine prophylactic antiemetics are needed</td><td></td><td></td></tr></table></div><h2>Nausea and Vomiting | CHAPTER 27</h2>
+<h2>TABLE 27-3 Clinical Presentation of Nausea and Vomiting</h2>
+<p>General</p>
+<p>Depending on severity of symptoms, patients may present in mild-to-severe distress</p>
+<p>Symptoms</p>
+<p>Simple: Self-limiting, resolves spontaneously, and requires only symptomatic therapy</p>
+<p>Complex: Not relieved after administration of antiemetics; progressive deterioration of</p>
+<p>patient secondary to fluid-electrolyte imbalances; usually associated with noxious</p>
+<p>agents or pyschogenic events</p>
+<p>Signs</p>
+<p>Simple: Patient complaint of queasiness or discomfort</p>
+<p>Complex: Weight loss; fever; abdominal pain</p>
+<p>Laboratory tests</p>
+<p>Simple: None</p>
+<p>Complex: Serum electrolyte concentrations; upper/lower GI evaluation</p>
+<p>Other information</p>
+<p>Fluid input and output</p>
+<p>Medication history</p>
+<p>Recent history of behavioral or visual changes, headache, pain, or stress</p>
+<p>Family history positive for psychogenic vomiting</p>
+<li>Patients with symptoms of systemic illness may quickly improve as their underly-</li>
+<p>ing condition resolves. Patients in whom these symptoms result from labyrinthine</p>
+<p>changes produced by motion may benefit quickly by assuming a stable physical</p>
+<p>position.</p>
+<li>Changes in diet such as restricting oral intake, eating smaller meals, avoiding spicy</li>
+<p>or fried foods and instead eating bland foods such as with the BRAT diet (Bananas,</p>
+<p>Rice, Applesauce, and Toast) can help alleviate symptoms.</p>
+<h2>PHARMACOLOGIC MANAGEMENT</h2>
+<li>Information concerning commonly available antiemetic preparations is compiled</li>
+<p>in Table 27-4. The treatment of simple nausea and vomiting often involves self-care</p>
+<p>from a list of nonprescription products. Nonprescription and prescription drugs are</p>
+<p>useful in the treatment of simple nausea and vomiting in small, infrequently admin-</p>
+<p>istered doses and are associated with minimal side effects. As the symptoms persist</p>
+<p>or become worse, prescription medications may be chosen, either as single-agent</p>
+<p>therapy or in combination.</p>
+<li>For most conditions, a single-agent antiemetic is preferred; however, for</li>
+<p>patients not responding to such therapy and those receiving highly emetogenic</p>
+<p>chemotherapy, multiple-agent regimens are usually required.</p>
+<li>The management of complex nausea and vomiting, such as in patients who are</li>
+<p>receiving antineoplastic agents, may require initial combination therapy. In combina-</p>
+<p>tion regimens, the goal is to achieve symptomatic control through administration of</p>
+<p>agents with different pharmacologic mechanisms of action.</p>
+<h2>CHEMOTHERAPY-INDUCED NAUSEA AND VOMITING (CINV)</h2>
+<li>There are five categories of CINV: acute, delayed, anticipatory, breakthrough, and</li>
+<p>refractory. Nausea or vomiting that occurs within 24 hours of chemotherapy admin-</p>
+<p>istration is defined as acute CINV, whereas when it starts more than 24 hours after</p>
+<p>chemotherapy administration, it is defined as delayed CINV.</p>
+<p>285</p>
+<p>ch27.indd 285 19-11-2020 12:59:06</p>
+<div class="table-container"><table><tr><th>TABLE 27-3 Clinical Presentation of Nausea and Vomiting</th></tr><tr><td>General
+Depending on severity of symptoms, patients may present in mild-to-severe distress</td></tr><tr><td>Symptoms
+Simple: Self-limiting, resolves spontaneously, and requires only symptomatic therapy
+Complex: Not relieved after administration of antiemetics; progressive deterioration of
+patient secondary to fluid-electrolyte imbalances; usually associated with noxious
+agents or pyschogenic events</td></tr><tr><td>Signs
+Simple: Patient complaint of queasiness or discomfort
+Complex: Weight loss; fever; abdominal pain</td></tr><tr><td>Laboratory tests
+Simple: None
+Complex: Serum electrolyte concentrations; upper/lower GI evaluation</td></tr><tr><td>Other information
+Fluid input and output
+Medication history
+Recent history of behavioral or visual changes, headache, pain, or stress
+Family history positive for psychogenic vomiting</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa (Continued )</p>
+<p>Adult Dosage Dosage Form/</p>
+<p>Drug Regimen Route Availability</p>
+<p>Antacids: Useful with simple nausea/vomiting</p>
+<p>Adverse drug reactions: Magnesium products—diarrhea; Aluminum or calcium</p>
+<p>products—constipation</p>
+<p>Antacids (various) 15–30 mL every 2–4 Liquid/Oral Nonprescription</p>
+<p>hours prn</p>
+<p>Antihistaminic–Anticholinergic Agents: Especially problematic in the elderly;</p>
+<p>increased risk of complications in patients with BPH, narrow angle glaucoma, or asthma</p>
+<p>Adverse drug reactions: Drowsiness, confusion, blurred vision, dry mouth, urinary</p>
+<p>retention</p>
+<p>Dimenhydrinate 50–100 mg every Tab, chew tab, cap Nonprescription</p>
+<p>(Dramamine) 4–6 hours prn</p>
+<p>Diphenhydramine 25–50 mg every 4–6 Tab, cap, liquid Prescription/</p>
+<p>(Benadryl) hours prn IM, IV nonprescription</p>
+<p>10–50 mg every 2–4</p>
+<p>hours prn</p>
+<p>Hydroxyzine (Vistaril, 25–100 mg every Tab (unlabeled use) Prescription</p>
+<p>Atarax) 4–6 hours prn</p>
+<p>Meclizine (Bonine, 12.5–25 mg 1 hour Tab, chew tab Prescription/</p>
+<p>Antivert) before travel; nonprescription</p>
+<p>repeat every</p>
+<p>12–24 hours prn</p>
+<p>Scopolamine 1.5 mg every 72 Transdermal patch Prescription</p>
+<p>(Transderm Scop) hours</p>
+<p>Trimethobenzamide 300 mg three to four Cap Prescription</p>
+<p>(Tigan) times daily IM</p>
+<p>200 mg three to four</p>
+<p>times daily</p>
+<p>Benzodiazepine: Used for ANV but is contraindicated with olanzapine</p>
+<p>Adverse drug reactions: Dizziness, sedation, appetite changes, memory impairment;</p>
+<p>observe for additive sedation especially if used with narcotic analgesics</p>
+<p>Lorazepam (Ativan) 0.5–2 mg on night Tab, IV Prescription (C-IV)</p>
+<p>before and</p>
+<p>morning of</p>
+<p>chemotherapy</p>
+<p>Butyrophenones: Used for breakthrough CINV; droperidol has limited use</p>
+<p>Adverse drug reactions: Haloperidol—sedation, constipation, hypotension, EPS;</p>
+<p>droperidol—QTc prolongation and/or torsade de pointes, 12-lead electrocardiogram</p>
+<p>prior to administration, followed by cardiac monitoring for 2–3 hours after</p>
+<p>administration</p>
+<p>Haloperidol (Haldol) 0.5–2 mg every 4–6 Tab, liquid, IM, IV Prescription</p>
+<p>hours prn</p>
+<p>Droperidol (Inapsine)b 2.5 mg; additional IM, IV Prescription</p>
+<p>1.25 mg may be</p>
+<p>given</p>
+<p>(Continued )</p>
+<p>286</p>
+<p>ch27.indd 286 19-11-2020 12:59:07</p>
+<div class="table-container"><table><tr><th>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa</th><th></th><th></th><th></th><th>(Continued )</th><th></th></tr><tr><td>Drug</td><td>Adult Dosage
+Regimen</td><td>Dosage Form/
+Route</td><td>Availability</td><td></td><td></td></tr><tr><td>Antacids: Useful with simple nausea/vomiting
+Adverse drug reactions: Magnesium products—diarrhea; Aluminum or calcium
+products—constipation</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Antacids (various)</td><td>15–30 mL every 2–4
+hours prn</td><td>Liquid/Oral</td><td>Nonprescription</td><td></td><td></td></tr><tr><td>Antihistaminic–Anticholinergic Agents: Especially problematic in the elderly;
+increased risk of complications in patients with BPH, narrow angle glaucoma, or asthma
+Adverse drug reactions: Drowsiness, confusion, blurred vision, dry mouth, urinary
+retention</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Dimenhydrinate
+(Dramamine)</td><td>50–100 mg every
+4–6 hours prn</td><td>Tab, chew tab, cap</td><td>Nonprescription</td><td></td><td></td></tr><tr><td>Diphenhydramine
+(Benadryl)</td><td>25–50 mg every 4–6
+hours prn
+10–50 mg every 2–4
+hours prn</td><td>Tab, cap, liquid
+IM, IV</td><td>Prescription/
+nonprescription</td><td></td><td></td></tr><tr><td>Hydroxyzine (Vistaril,
+Atarax)</td><td>25–100 mg every
+4–6 hours prn</td><td>Tab (unlabeled use)</td><td>Prescription</td><td></td><td></td></tr><tr><td>Meclizine (Bonine,
+Antivert)</td><td>12.5–25 mg 1 hour
+before travel;
+repeat every
+12–24 hours prn</td><td>Tab, chew tab</td><td>Prescription/
+nonprescription</td><td></td><td></td></tr><tr><td>Scopolamine
+(Transderm Scop)</td><td>1.5 mg every 72
+hours</td><td>Transdermal patch</td><td>Prescription</td><td></td><td></td></tr><tr><td>Trimethobenzamide
+(Tigan)</td><td>300 mg three to four
+times daily
+200 mg three to four
+times daily</td><td>Cap
+IM</td><td>Prescription</td><td></td><td></td></tr><tr><td>Benzodiazepine: Used for ANV but is contraindicated with olanzapine
+Adverse drug reactions: Dizziness, sedation, appetite changes, memory impairment;
+observe for additive sedation especially if used with narcotic analgesics</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Lorazepam (Ativan)</td><td>0.5–2 mg on night
+before and
+morning of
+chemotherapy</td><td>Tab, IV</td><td>Prescription (C-IV)</td><td></td><td></td></tr><tr><td>Butyrophenones: Used for breakthrough CINV; droperidol has limited use
+Adverse drug reactions: Haloperidol—sedation, constipation, hypotension, EPS;
+droperidol—QTc prolongation and/or torsade de pointes, 12-lead electrocardiogram
+prior to administration, followed by cardiac monitoring for 2–3 hours after
+administration</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Haloperidol (Haldol)</td><td>0.5–2 mg every 4–6
+hours prn</td><td>Tab, liquid, IM, IV</td><td>Prescription</td><td></td><td></td></tr><tr><td>Droperidol (Inapsine)b</td><td>2.5 mg; additional
+1.25 mg may be
+given</td><td>IM, IV</td><td>Prescription
+(Continued )</td><td></td><td></td></tr></table></div><h2>Nausea and Vomiting | CHAPTER 27</h2>
+<p>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa (Continued )</p>
+<p>Cannabinoids: Used for breakthrough CINV</p>
+<p>Adverse drug reactions: Eurphoria, somnolence, xerostomia</p>
+<p>Dronabinol (Marinol) 5–15 mg/m2 every Cap Prescription (C-III)</p>
+<p>2–4 hours prn Oral solution</p>
+<p>4.2–12.6 mg/m2</p>
+<p>every 2–4 hours</p>
+<p>prn</p>
+<p>Nabilone (Cesamet) 1–2 mg twice daily Cap Prescription (C-II)</p>
+<p>Corticosteroids: Useful as a single agent or in combination therapy for prophylaxis of</p>
+<p>CINV or PONV</p>
+<p>Adverse drug reactions: Insomnia, GI symptoms, agitation, appetite stimulation,</p>
+<p>hypertension, and hyperglycemia</p>
+<h2>Dexamethasone See Table 27-2 for Tab, IV Prescription</h2>
+<p>CINV dosing and</p>
+<h2>Table 27-6 for</h2>
+<p>PONV dosing</p>
+<p>Histamine (H2) Antagonists: Useful with nausea secondary to heartburn or GERD</p>
+<p>Adverse drug reactions: Headache, constipation, or diarrhea</p>
+<p>Cimetidine (Tagamet 200 mg twice daily Tab Nonprescription</p>
+<p>HB) prn</p>
+<p>Famotidine (Pepcid AC) 10 mg twice daily Tab Nonprescription</p>
+<p>prn</p>
+<p>Nizatidine (Axid AR) 75 mg twice daily Tab Nonprescription</p>
+<p>prn</p>
+<p>5-Hydroxytryptamine-3 Receptor Antagonists: Useful as a single-agent or</p>
+<p>combination therapy for prophylaxis of CINV or PONV</p>
+<p>Adverse drug reactions: Asthenia, constipation, headache</p>
+<h2>See Table 27-2 for Tab, IV Prescription</h2>
+<p>CINV dosing and</p>
+<h2>Table 27-6 for</h2>
+<p>PONV dosing</p>
+<p>Miscellaneous Agents</p>
+<p>Metoclopramide: Prokinetic activity useful in diabetic gastroparesis. Adverse drug</p>
+<p>reactions: Asthenia, headache, somnolence, EPS</p>
+<p>Olanzapine: Use with caution in elderly; contraindicated with benzodiazepines. Adverse</p>
+<p>drug reactions: Sedation, prolonged QTc interval, EPS</p>
+<p>Pyridoxine: Used in NVP. May be used alone or in combination with doxylamine 12.5</p>
+<p>mg. Combination product available as prescription. Adverse drug reactions: Drowsiness,</p>
+<p>headache</p>
+<p>(Continued )</p>
+<p>287</p>
+<p>ch27.indd 287 19-11-2020 12:59:07</p>
+<div class="table-container"><table><tr><th>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa (Continued )</th><th></th><th></th><th></th></tr><tr><td>Cannabinoids: Used for breakthrough CINV
+Adverse drug reactions: Eurphoria, somnolence, xerostomia</td><td></td><td></td><td></td></tr><tr><td>Dronabinol (Marinol)</td><td>5–15 mg/m2 every
+2–4 hours prn
+4.2–12.6 mg/m2
+every 2–4 hours
+prn</td><td>Cap
+Oral solution</td><td>Prescription (C-III)</td></tr><tr><td>Nabilone (Cesamet)</td><td>1–2 mg twice daily</td><td>Cap</td><td>Prescription (C-II)</td></tr><tr><td>Corticosteroids: Useful as a single agent or in combination therapy for prophylaxis of
+CINV or PONV
+Adverse drug reactions: Insomnia, GI symptoms, agitation, appetite stimulation,
+hypertension, and hyperglycemia</td><td></td><td></td><td></td></tr><tr><td>Dexamethasone</td><td>See Table 27-2 for
+CINV dosing and
+Table 27-6 for
+PONV dosing</td><td>Tab, IV</td><td>Prescription</td></tr><tr><td>Histamine (H2) Antagonists: Useful with nausea secondary to heartburn or GERD
+Adverse drug reactions: Headache, constipation, or diarrhea</td><td></td><td></td><td></td></tr><tr><td>Cimetidine (Tagamet
+HB)</td><td>200 mg twice daily
+prn</td><td>Tab</td><td>Nonprescription</td></tr><tr><td>Famotidine (Pepcid AC)</td><td>10 mg twice daily
+prn</td><td>Tab</td><td>Nonprescription</td></tr><tr><td>Nizatidine (Axid AR)</td><td>75 mg twice daily
+prn</td><td>Tab</td><td>Nonprescription</td></tr><tr><td>5-Hydroxytryptamine-3 Receptor Antagonists: Useful as a single-agent or
+combination therapy for prophylaxis of CINV or PONV
+Adverse drug reactions: Asthenia, constipation, headache</td><td></td><td></td><td></td></tr><tr><td></td><td>See Table 27-2 for
+CINV dosing and
+Table 27-6 for
+PONV dosing</td><td>Tab, IV</td><td>Prescription</td></tr><tr><td>Miscellaneous Agents
+Metoclopramide: Prokinetic activity useful in diabetic gastroparesis. Adverse drug
+reactions: Asthenia, headache, somnolence, EPS
+Olanzapine: Use with caution in elderly; contraindicated with benzodiazepines. Adverse
+drug reactions: Sedation, prolonged QTc interval, EPS
+Pyridoxine: Used in NVP. May be used alone or in combination with doxylamine 12.5
+mg. Combination product available as prescription. Adverse drug reactions: Drowsiness,
+headache
+(Continued )</td><td></td><td></td><td></td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa (Continued )</p>
+<p>Metoclopramide 10–20 mg (0.5–2 Tab, IV Prescription</p>
+<p>(Reglan) mg/kg) four times</p>
+<p>daily</p>
+<p>Olanzapine (Zyprexa) 5–10 mg daily Tab Prescription</p>
+<p>Pyridoxine (vitamin B) 10–25 mg orally Tab, cap Nonprescription</p>
+<p>6</p>
+<p>three to four times</p>
+<p>daily</p>
+<p>Phenothiazines: Useful in simple nausea/vomiting or breakthrough CINV</p>
+<p>Adverse drug reactions: Prolonged QTc interval, constipation, dizziness, tachycardia,</p>
+<p>tardive dyskinesia, drowsiness</p>
+<p>Chlorpromazine 10–25 mg every 4–6 Tab, liquid Prescription</p>
+<p>(Thorazine) hours prn</p>
+<p>25–50 mg every 4–6 IM, IV</p>
+<p>hours prn</p>
+<p>Prochlorperazine 5–10 mg every 4–6 Tab, liquid Prescription</p>
+<p>(Compazine) hours prn</p>
+<p>5–10 mg every 3–4 IM</p>
+<p>hours prn IV</p>
+<p>2.5–10 mg every 3–4 Prescription</p>
+<p>hours prn</p>
+<p>25 mg twice daily Supp Prescription</p>
+<p>prn</p>
+<p>Promethazine 12.5–25 mg every Tab, liquid, IM, IV, Prescription</p>
+<p>(Phenergan) 4–6 hours prn supp</p>
+<p>Substance P/Neurokinin-1 Receptor Antagonist: Useful in combination therapy for</p>
+<p>prophylaxis of CINV and PONV</p>
+<p>Adverse drug reactions: Constipation, diarrhea, headache, hiccups, dyspepsia, and</p>
+<p>fatigue</p>
+<h2>Aprepitant See Table 27-2 for Cap, IV Prescription</h2>
+<p>CINV dosing and</p>
+<h2>Table 27-6 for</h2>
+<p>PONV dosing</p>
+<p>Fosaprepitant IV Prescription</p>
+<p>Netupitant/ Cap Prescription</p>
+<p>Palonosetron</p>
+<p>Rolapitant Cap Prescription</p>
+<p>aAll regimens should be monitored for resolution or occurrence of nausea and vomiting as well as</p>
+<p>maintaining an adequate hydration status.</p>
+<p>bSee text for warnings.</p>
+<p>ANV, anticipatory nausea and vomiting; C-II, C-III, and C-IV, controlled substance schedule 2, 3, and 4,</p>
+<p>respectively; cap, capsule; chew tab, chewable tablet; CINV, chemotherapy-induced nausea and</p>
+<p>vomiting; GERD, gastroesophageal reflux disease; liquid, oral syrup, concentrate, or suspension;</p>
+<p>PONV, postoperative nausea and vomiting; prn, as needed; supp, rectal suppository; tab, tablet.</p>
+<p>288</p>
+<p>ch27.indd 288 19-11-2020 12:59:07</p>
+<div class="table-container"><table><tr><th>TABLE 27-4 Common Antiemetic Preparations and Adult Dosage Regimensa (Continued )</th><th></th><th></th><th></th></tr><tr><td>Metoclopramide
+(Reglan)</td><td>10–20 mg (0.5–2
+mg/kg) four times
+daily</td><td>Tab, IV</td><td>Prescription</td></tr><tr><td>Olanzapine (Zyprexa)</td><td>5–10 mg daily</td><td>Tab</td><td>Prescription</td></tr><tr><td>Pyridoxine (vitamin B)
+6</td><td>10–25 mg orally
+three to four times
+daily</td><td>Tab, cap</td><td>Nonprescription</td></tr><tr><td>Phenothiazines: Useful in simple nausea/vomiting or breakthrough CINV
+Adverse drug reactions: Prolonged QTc interval, constipation, dizziness, tachycardia,
+tardive dyskinesia, drowsiness</td><td></td><td></td><td></td></tr><tr><td>Chlorpromazine
+(Thorazine)</td><td>10–25 mg every 4–6
+hours prn</td><td>Tab, liquid</td><td>Prescription</td></tr><tr><td></td><td>25–50 mg every 4–6
+hours prn</td><td>IM, IV</td><td></td></tr><tr><td>Prochlorperazine
+(Compazine)</td><td>5–10 mg every 4–6
+hours prn</td><td>Tab, liquid</td><td>Prescription</td></tr><tr><td></td><td>5–10 mg every 3–4
+hours prn</td><td>IM
+IV</td><td></td></tr><tr><td></td><td>2.5–10 mg every 3–4
+hours prn</td><td></td><td>Prescription</td></tr><tr><td></td><td>25 mg twice daily
+prn</td><td>Supp</td><td>Prescription</td></tr><tr><td>Promethazine
+(Phenergan)</td><td>12.5–25 mg every
+4–6 hours prn</td><td>Tab, liquid, IM, IV,
+supp</td><td>Prescription</td></tr><tr><td>Substance P/Neurokinin-1 Receptor Antagonist: Useful in combination therapy for
+prophylaxis of CINV and PONV
+Adverse drug reactions: Constipation, diarrhea, headache, hiccups, dyspepsia, and
+fatigue</td><td></td><td></td><td></td></tr><tr><td>Aprepitant</td><td>See Table 27-2 for
+CINV dosing and
+Table 27-6 for
+PONV dosing</td><td>Cap, IV</td><td>Prescription</td></tr><tr><td>Fosaprepitant</td><td></td><td>IV</td><td>Prescription</td></tr><tr><td>Netupitant/
+Palonosetron</td><td></td><td>Cap</td><td>Prescription</td></tr><tr><td>Rolapitant</td><td></td><td>Cap</td><td>Prescription</td></tr></table></div><h2>Nausea and Vomiting | CHAPTER 27</h2>
+<li>Nausea or vomiting that occurs prior to receiving chemotherapy is termed anticipa-</li>
+<p>tory nausea and vomiting (ANV). Breakthrough nausea and vomiting is defined as</p>
+<p>emesis occurring despite prophylactic administration of antiemetics and requiring</p>
+<p>the use of rescue antiemetics. Breakthrough emesis occurs in 10%−40% treated with</p>
+<p>antiemetics.</p>
+<li>The emetogenic potential of the chemotherapeutic agent or regimen (see Table 27-2)</li>
+<p>is the primary factor to consider when selecting an antiemetic for prophylaxis of CINV.</p>
+<p>Recommendations for antiemetics in patients receiving chemotherapy are presented</p>
+<h2>in Table 27-2.</h2>
+<p>Prophylaxis of CINV</p>
+<li>The primary goal of emesis prevention is no nausea and/or vomiting throughout the</li>
+<p>period of emetic risk.</p>
+<li>The duration of emetic risk is 2 days for patients receiving moderately emetogenic</li>
+<p>chemotherapy and 3 days for highly emetogenic chemotherapy. Emetic prophylaxis</p>
+<p>should be provided through the entire period of risk.</p>
+<li>The selection of the antiemetic regimen should be based on the chemotherapy drug</li>
+<p>with highest emetogenicity (see Table 27-2). Prior emetic experience and patient-</p>
+<p>specific factors should also be considered.</p>
+<li>When given in equipotent doses, oral and IV 5-HT3-RAs are equivalent in efficacy.</li>
+<li>The toxicities of antiemetics should be considered and managed appropriately.</li>
+<li>Patients receiving highly emetogenic chemotherapy should receive a four-drug</li>
+<p>antiemetic regimen that is initiated prior to the administration of chemotherapy on</p>
+<p>day 1, which includes an NK1 receptor antagonist, a 5-HT3-RA, dexamethasone, and</p>
+<p>olanzapine. Antiemetics administered on the subsequent days following completion</p>
+<p>of chemotherapy may include aprepitant (if aprepitant was used on day 1), dexa-</p>
+<p>methasone, and olanzapine on days 2−4 as outlined in Table 27-2.</p>
+<li>Patients receiving moderately emetogenic chemotherapy should receive a two-drug</li>
+<p>regimen with a 5-HT3-RA and dexamethasone on day 1. Dexamethasone should be</p>
+<p>continued on days 2−3 only if the chemotherapy agent is known to cause delayed</p>
+<p>nausea and vomiting (eg, cyclophosphamide, doxorubicin, oxaliplatin). Depending</p>
+<p>on the dose given, patients receiving carboplatin may receive the three-drug com-</p>
+<p>bination of an NK1 receptor antagonist, a 5-HT3-RA, plus dexamethasone on day 1</p>
+<p>of therapy. If aprepitant was used on day 1, it should be continued on days 2−3;</p>
+<p>otherwise, no additional antiemetics are required in the delayed emetic risk period.</p>
+<li>For chemotherapy regimens that are of low emetic risk, either dexamethasone or a</li>
+<p>5-HT3-RA as a single agent may be used on day 1 only. For minimal emetic risk, no</p>
+<p>routine antiemetic prophylaxis is recommended.</p>
+<li>Nonpharmacologic interventions, such as behavioral therapy with systematic desen-</li>
+<p>sitization, hypnosis, acupuncture/acupressure or music therapy, may be of benefit</p>
+<p>for ANV. If ANV occurs, oral lorazepam 0.5−2 mg starting the evening prior to</p>
+<p>chemotherapy and then an additional dose 1−2 hours prior to chemotherapy admin-</p>
+<p>istration may be used.</p>
+<h2>RADIATION-INDUCED NAUSEA AND VOMITING</h2>
+<li>Radiotherapy-induced emesis risk groups include total-body irradiation (highest</li>
+<p>risk), upper body or abdomen and craniospinal radiotherapy (moderate risk), brain,</p>
+<p>head, and neck, thorax, and pelvic radiotherapy (low risk), and extremity or breast</p>
+<p>radiotherapy (minimal risk).</p>
+<li>Those at highest risk should receive preventive therapy with a 5-HT3-RA plus dexa-</li>
+<p>methasone in patients who are receiving total-body irradiation (high emetic risk).</p>
+<li>Patients undergoing RT procedures with moderate emetic risk should receive a</li>
+<p>5-HT3-RA prior to each fraction and optional dexamethasone prior to fractions</p>
+<p>1 through 5.</p>
+<li>Those receiving low and minimal emetic risk radiotherapy may be offered rescue</li>
+<p>therapy with a 5-HT3-RA, dexamethasone, or dopamine receptor antagonist.</p>
+<h2>ALGRAWANY</h2>
+<p>289</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch27.indd 289 19-11-2020 12:59:07</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>POSTOPERATIVE NAUSEA AND VOMITING (PONV)</h2>
+<li>Risk factors for PONV are listed in Table 27-5. Those with 3−5 risk factors are at</li>
+<p>highest risk, 2−3 risk factors at moderate risk, and 0−1 at low risk.</p>
+<li>A variety of pharmacologic approaches are available and may be prescribed as single or</li>
+<p>combination therapy for prophylaxis of PONV. See Table 27-6 for doses of specific agents.</p>
+<li>Patients at highest risk of vomiting should receive two or more prophylactic anti-</li>
+<p>emetics from different pharmacologic classes, while those at moderate risk should</p>
+<p>receive one or two drugs. For prophylaxis of PONV scopolamine patches must</p>
+<p>be initiated the evening before the surgery or at least 2 hours prior, whereas NK1</p>
+<p>antagonists should be given during the induction of anesthesia; all other agents are</p>
+<p>recommended to be given at the end of the surgery.</p>
+<li>Ondansetron is considered the “gold standard” 5-HT3-RA. Granisetron has similar</li>
+<p>results as ondansetron and is less effective than palonosetron.</p>
+<li>Patients who experience PONV after receiving prophylactic treatment with a combination</li>
+<p>of 5-HT3-RA plus dexamethasone should be given rescue therapy from a different drug</p>
+<p>class such as a phenothiazine, metoclopramide, or droperidol. If no prophylaxis was given</p>
+<p>initially, the recommended treatment is low-dose 5-HT3-RA such as ondansetron 1 mg.</p>
+<h2>DISORDERS OF BALANCE</h2>
+<li>Beneficial therapy for patients with nausea and vomiting associated with disorders of</li>
+<p>balance can reliably be found among the antihistaminic–anticholinergic agents. Oral</p>
+<p>regimens of antihistaminic–anticholinergic agents given one to several times each</p>
+<p>day may be effective, especially when the first dose is administered prior to motion.</p>
+<li>Scopolamine (usually administered as a patch) is effective for the prevention of</li>
+<p>motion sickness and is considered first line for this indication.</p>
+<h2>ANTIEMETIC USE DURING PREGNANCY</h2>
+<li>A prenatal vitamin started 1 month prior to becoming pregnant may help reduce the</li>
+<p>incidence and severity of nausea and vomiting of pregnancy (NVP). Eating smaller,</p>
+<p>more frequent meals every 1–2 hours, and avoiding foods or odors that trigger symp-</p>
+<p>toms is recommended.</p>
+<li>Pyridoxine (10–25 mg one to four times daily) is recommended as first-line therapy</li>
+<p>with or without doxylamine (12.5–20 mg one to four times daily). Dimenhydrinate,</p>
+<p>TABLE 27-5 Risk Factors for Postoperative Nausea and Vomiting (PONV)</p>
+<p>Patient-related factors</p>
+<p>Age less than 50 years old</p>
+<p>Female gender (two to three times greater incidence of PONV vs males)</p>
+<p>Nonsmoker</p>
+<p>History of PONV or motion sickness (threefold increase in incidence of PONV)</p>
+<p>Hydration status</p>
+<p>Factors related to anesthesia</p>
+<p>Use of general anesthesia</p>
+<p>Use of volatile anesthetics</p>
+<p>Nitrous oxide</p>
+<p>Use of opioids (intraoperative or postoperative)</p>
+<p>Factors related to surgery</p>
+<p>Type of surgical procedure (laparoscopic, gynecological, cholecystectomy)</p>
+<p>Duration of surgery</p>
+<p>290</p>
+<p>ch27.indd 290 19-11-2020 12:59:07</p>
+<div class="table-container"><table><tr><th>TABLE 27-5 Risk Factors for Postoperative Nausea and Vomiting (PONV)</th></tr><tr><td>Patient-related factors
+Age less than 50 years old
+Female gender (two to three times greater incidence of PONV vs males)
+Nonsmoker
+History of PONV or motion sickness (threefold increase in incidence of PONV)
+Hydration status</td></tr><tr><td>Factors related to anesthesia
+Use of general anesthesia
+Use of volatile anesthetics
+Nitrous oxide
+Use of opioids (intraoperative or postoperative)</td></tr><tr><td>Factors related to surgery
+Type of surgical procedure (laparoscopic, gynecological, cholecystectomy)
+Duration of surgery</td></tr></table></div><h2>Nausea and Vomiting | CHAPTER 27</h2>
+<p>TABLE 27-6 Recommended Prophylactic Doses of Selected Antiemetics for Postoperative</p>
+<p>Nausea and Vomiting in Adults and Postoperative Vomiting in Children</p>
+<p>Drug Adult Dose Pediatric Dose (IV) Timing of Dosea</p>
+<p>Aprepitantb 40 mg orally Not labeled for use in Within 3 hours prior</p>
+<p>pediatrics to induction</p>
+<p>Dexamethasone 4–5 mg IV 150 mcg/kg up to At induction</p>
+<p>5 mg</p>
+<p>Dimenhydrinate 1 mg/kg IV 0.5 mg/kg up to Not specified</p>
+<p>25 mg</p>
+<p>Dolasetron 12.5 mg IV 350 mcg/kg up to At end of surgery</p>
+<p>12.5 mg</p>
+<p>Droperidolc 0.625–1.25 mg IV 10–15 mcg/kg up to At end of surgery</p>
+<p>1.25 mg</p>
+<p>Granisetron 0.35–3 mg IV 40 mcg/kg up to At end of surgery</p>
+<p>0.6 mg</p>
+<p>Haloperidol 0.5–2 mg (IM or IV) N/Ad Not specified</p>
+<p>Methylprednisolone 40 mg IV N/Ad At induction</p>
+<p>Ondansetron 4 mg IV, 8 mg orally 50–100 mcg/kg up At end of surgery</p>
+<p>disintegrating to 4 mg</p>
+<h2>tablet</h2>
+<p>Palonosetronb 0.075 mg IV N/Ad At induction</p>
+<p>Promethazinec 6.25–12.5 mg IV N/Ad At induction</p>
+<p>Scopolamine Transdermal patch N/Ad Prior evening or</p>
+<p>4 hours before</p>
+<p>surgery</p>
+<p>aBased on recommendations from consensus guidelines.</p>
+<p>bLabeled for use in PONV but not included in consensus guidelines.</p>
+<p>cSee FDA “black box” warning.</p>
+<p>dPediatric dosing not included in consensus guidelines.</p>
+<p>diphenhydramine, prochlorperazine, or promethazine may also be considered in the</p>
+<p>treatment of NVP.</p>
+<li>Patients with persistent NVP or who show signs of dehydration should receive IV</li>
+<p>fluid replacement with thiamine then dextrose.</p>
+<li>Ondansetron, promethazine, and metoclopramide have similar effectiveness for</li>
+<p>hyperemesis gravidarum, although ondansetron may be better tolerated due to less</p>
+<p>adverse effects.</p>
+<h2>ANTIEMETIC USE IN CHILDREN</h2>
+<li>For children receiving highly emetogenic chemotherapy the three-drug combina-</li>
+<p>tion of an NK-1 antagonist, a 5-HT3-RA, and dexamethasone is recommended. If</p>
+<p>an NK-1 antagonist cannot be used, a 5-HT3-RA and dexamethasone are recom-</p>
+<p>mended. If dexamethasone cannot be used, an NK-1 antagonist with a 5-HT3-RA</p>
+<p>should be used.</p>
+<p>291</p>
+<p>ch27.indd 291 19-11-2020 12:59:07</p>
+<div class="table-container"><table><tr><th>TABLE 27-6 Recommended Prophylactic Doses of Selected Antiemetics for Postoperative
+Nausea and Vomiting in Adults and Postoperative Vomiting in Children</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adult Dose</td><td>Pediatric Dose (IV)</td><td>Timing of Dosea</td></tr><tr><td>Aprepitantb</td><td>40 mg orally</td><td>Not labeled for use in
+pediatrics</td><td>Within 3 hours prior
+to induction</td></tr><tr><td>Dexamethasone</td><td>4–5 mg IV</td><td>150 mcg/kg up to
+5 mg</td><td>At induction</td></tr><tr><td>Dimenhydrinate</td><td>1 mg/kg IV</td><td>0.5 mg/kg up to
+25 mg</td><td>Not specified</td></tr><tr><td>Dolasetron</td><td>12.5 mg IV</td><td>350 mcg/kg up to
+12.5 mg</td><td>At end of surgery</td></tr><tr><td>Droperidolc</td><td>0.625–1.25 mg IV</td><td>10–15 mcg/kg up to
+1.25 mg</td><td>At end of surgery</td></tr><tr><td>Granisetron</td><td>0.35–3 mg IV</td><td>40 mcg/kg up to
+0.6 mg</td><td>At end of surgery</td></tr><tr><td>Haloperidol</td><td>0.5–2 mg (IM or IV)</td><td>N/Ad</td><td>Not specified</td></tr><tr><td>Methylprednisolone</td><td>40 mg IV</td><td>N/Ad</td><td>At induction</td></tr><tr><td>Ondansetron</td><td>4 mg IV, 8 mg orally
+disintegrating
+tablet</td><td>50–100 mcg/kg up
+to 4 mg</td><td>At end of surgery</td></tr><tr><td>Palonosetronb</td><td>0.075 mg IV</td><td>N/Ad</td><td>At induction</td></tr><tr><td>Promethazinec</td><td>6.25–12.5 mg IV</td><td>N/Ad</td><td>At induction</td></tr><tr><td>Scopolamine</td><td>Transdermal patch</td><td>N/Ad</td><td>Prior evening or
+4 hours before
+surgery</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<li>Children treated with low emetic risk chemotherapy should receive single-agent</li>
+<p>5-HT3-RA prior to chemotherapy, while minimal emetic risk chemotherapy regi-</p>
+<p>mens do not require routine antiemetics.</p>
+<li>For nausea and vomiting associated with pediatric gastroenteritis, there is greater</li>
+<p>emphasis on rehydration measures than on pharmacologic intervention.</p>
+<p>See Chapter 52, Nausea and Vomiting, authored by Leigh Anne Hylton Gravatt, Krista L.</p>
+<p>Donohoe, and Mandy L. Gatesman, for a more detailed discussion of this topic.</p>
+<p>292</p>
+<p>ch27.indd 292 19-11-2020 12:59:07</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

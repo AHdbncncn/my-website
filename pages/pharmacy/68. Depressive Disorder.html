@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>68. Depressive Disorder</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>68. Depressive Disorder</h1>
+        </header>
+        <main>
+            <p>783</p>
+<h2>RETPAHC</h2>
+<p>68</p>
+<p>Depressive Disorders</p>
+<li>The essential feature of major depressive disorder (MDD) is a clinical course char-</li>
+<p>acterized by one or more major depressive episodes without a history of manic or</p>
+<p>hypomanic episodes.</p>
+<li>Refer to guidelines published by the American Psychiatric Association, the British</li>
+<p>Association of Psychopharmacology, and the Canadian Network for Mood and Anxi-</p>
+<p>ety Treatments (CANMAT) because they have similarities in their recommendations.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Monoamine hypothesis: Decreased brain levels of the neurotransmitters norepinephrine</li>
+<p>(NE), serotonin (5-HT), and dopamine (DA) may cause depression.</p>
+<li>Postsynaptic changes in receptor sensitivity: Studies have demonstrated that desensi-</li>
+<p>tization or downregulation of NE or 5-HT receptors may relate to onset of antide-</p>
+<h2>1A</h2>
+<p>pressant effects.</p>
+<li>Dysregulation hypothesis: Failure of homeostatic neurotransmitter regulation, rather</li>
+<p>than absolute increases or decreases in their activities.</p>
+<li>Inflammatory hypothesis: Chronic stress and inflammation may alter glutamatergic</li>
+<p>and GABA transmission. Brain-derived neurotrophic factor (BDNF) is a primary</p>
+<p>mediator of neuronal changes as well as synaptogenesis whose expression is reduced</p>
+<p>due to stress and may be associated with depression.</p>
+<li>Neuroactive steroids are a growing area of research for depression.</li>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Emotional symptoms: Diminished ability to experience pleasure, loss of interest in</li>
+<p>usual activities, sadness, pessimism, crying, hopelessness, anxiety, feelings of worth-</p>
+<p>lessness or guilt, and psychotic features (eg, auditory hallucinations and delusions).</p>
+<p>Recurrent thoughts of death, suicidal ideation without a specific plan, suicide</p>
+<p>attempt, or a plan for committing suicide.</p>
+<li>Physical symptoms: Weight gain or loss, fatigue, pain (especially headache), sleep dis-</li>
+<p>turbance, decreased or increased appetite, loss of sexual interest, and gastrointestinal</p>
+<p>(GI) and cardiovascular complaints (especially palpitations).</p>
+<li>Cognitive symptoms: Decreased ability to concentrate, poor memory for recent</li>
+<p>events, confusion, and indecisiveness.</p>
+<li>Psychomotor disturbances: Psychomotor retardation (slowed physical movements,</li>
+<p>thought processes, and speech) or psychomotor agitation.</p>
+<h2>DIAGNOSIS</h2>
+<li>MDD is characterized by one or more major depressive episodes, as defined by the</li>
+<p>Diagnostic and Statistical Manual of Mental Disorders, 5th ed. Five or more of the</p>
+<p>above symptoms must have been present nearly every day during the same 2-week</p>
+<p>period and cause significant distress or impairment. Depressed mood or loss of</p>
+<p>interest or pleasure must be present in adults (or irritable mood in children and</p>
+<p>adolescents). Table 68-1 outlines a common acronym for MDD diagnostic criteria.</p>
+<li>The depressive episode must not be attributable to physiological effects of a substance</li>
+<p>or medical condition.</p>
+<li>There must not be a history of manic-like or hypomanic-like episodes unless they</li>
+<p>were induced by a substance or medical condition.</p>
+<p>CH68.indd 783 20-11-2020 11:21:51</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>68</th><th>Depressive Disorders</th></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>TABLE 68-1 Diagnostic Criteria for Major Depressive Episode</h2>
+<p>S Suicidal ideation with or without plan, suicide attempt; recurrent thoughts of death</p>
+<p>I Interest—loss of interest or pleasure in activities; anhedonia</p>
+<p>G Guilt—inappropriate or excessive in nature; feelings of worthlessness</p>
+<p>E Energy decreased</p>
+<p>C Concentration decreased; difficulty making decisions</p>
+<p>A Appetite changes; typically decreased; resulting in 5% change in weight from baseline</p>
+<p>P Psychomotor agitation or retardation</p>
+<p>S Sleep impairment; typically insomnia but may be hypersomnia</p>
+<li>At least five symptoms must be consistently present over a 2-week period.</li>
+<li>Symptoms must include depressed mood or anhedonia.</li>
+<li>Symptoms must cause substantial distress or impairment in functioning.</li>
+<li>Other medical conditions or substance use do not account for symptoms.</li>
+<li>Diagnosis requires a medication review, physical examination, mental status</li>
+<pre><code>examination, a complete blood count with differential, thyroid function tests, and</code></pre>
+<p>electrolyte determination.</p>
+<li>Many chronic illnesses (eg, stroke, Parkinson disease, traumatic brain injury, hypo-</li>
+<p>thyroidism) and substance abuse and dependence disorders are associated with</p>
+<p>depression. Medications associated with depressive symptoms include many antihy-</p>
+<p>pertensives, oral contraceptives, isotretinoin, interferon-β , and many others.</p>
+<li>Standardized rating scale should be used to diagnose 1 a depression and evaluate</li>
+<p>treatment.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Resolution of current symptoms (ie, remission), prevention of</li>
+<p>further episodes of depression (ie, relapse or recurrence), and prevention of suicide.</p>
+<h2>NONPHARMACOLOGIC TREATMENT</h2>
+<li>Psychotherapy (eg, cognitive therapy, behavioral therapy, or interpersonal psycho-</li>
+<p>therapy) is recommended as primary treatment for mild to moderately severe major</p>
+<p>depressive episode. For severe depression, it may be used in combination with medi-</p>
+<p>cations as its effect is considered additive. Psychotherapy alone is not recommended</p>
+<p>for acute treatment of severe and/or psychotic MDD.</p>
+<li>Electroconvulsive therapy (ECT) may be considered when a rapid response is</li>
+<p>needed, risks of other treatments outweigh potential benefits, there is history of a</p>
+<p>poor response to drugs, and the patient prefers ECT. A rapid therapeutic response</p>
+<p>(10–14 days) has been reported.</p>
+<li>Repetitive transcranial magnetic stimulation has demonstrated efficacy and does not</li>
+<p>require anesthesia as does ECT.</p>
+<li>Recent data suggest the benefit of physical activity in patients with MDD, and the</li>
+<p>American Psychiatry Association has endorsed inclusion of exercise into MDD</p>
+<p>treatment plans.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>General Approach</p>
+<li>Figure 68-1 shows an algorithm for treatment of uncomplicated MDD. Table 68-2</li>
+<p>guides adult dosing of antidepressants.</p>
+<p>784</p>
+<p>CH68.indd 784 20-11-2020 11:21:52</p>
+<div class="table-container"><table><tr><th>TABLE 68-1 Diagnostic Criteria for Major Depressive Episode</th><th></th></tr><tr><td>S</td><td>Suicidal ideation with or without plan, suicide attempt; recurrent thoughts of death</td></tr><tr><td>I</td><td>Interest—loss of interest or pleasure in activities; anhedonia</td></tr><tr><td>G</td><td>Guilt—inappropriate or excessive in nature; feelings of worthlessness</td></tr><tr><td>E</td><td>Energy decreased</td></tr><tr><td>C</td><td>Concentration decreased; difficulty making decisions</td></tr><tr><td>A</td><td>Appetite changes; typically decreased; resulting in 5% change in weight from baseline</td></tr><tr><td>P</td><td>Psychomotor agitation or retardation</td></tr><tr><td>S</td><td>Sleep impairment; typically insomnia but may be hypersomnia</td></tr><tr><td>• At least five symptoms must be consistently present over a 2-week period.
+• Symptoms must include depressed mood or anhedonia.
+• Symptoms must cause substantial distress or impairment in functioning.
+• Other medical conditions or substance use do not account for symptoms.</td><td></td></tr></table></div><p>785</p>
+<p>Depressive</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>68</p>
+<p>Uncomplicated, physically healthy outpatient without any</p>
+<p>contraindication to a specific class of antidepressants</p>
+<p>SSRI (choice depends on multiple factors)</p>
+<p>Failed trial due to nonresponse Partial response</p>
+<p>Response/remission</p>
+<p>or limiting adverse effect (after maximizing dose)</p>
+<p>Consider augmentation</p>
+<p>Ensure medication adherence (non-SSRI antidepressant, lithium, Maintain for at least 4–9 months</p>
+<p>thyroid hormone, atypical antipsychotic) for continuation, and, if</p>
+<li>or- necessary, 12–36 months</li>
+<p>Switch to alternative agent Switch to alternative agent for maintenance</p>
+<p>(different SSRI, non-SSRI (different SSRI or non-SSRI</p>
+<p>antidepressant) antidepressant)</p>
+<p>Partial response Partial response</p>
+<p>Response/ Response/</p>
+<p>Failed trial (after maximizing Failed trial (after maximizing</p>
+<p>remission remission</p>
+<p>dose) dose)</p>
+<p>Switch to alternative Consider augmentation Maintain for at least Consider augmentation Maintain for at least 4–9</p>
+<p>Switch to alternative</p>
+<p>agent (non-SSRI antidepressant, 4–9 months for continuation, (non-SSRI antidepressant, months for continuation, and,</p>
+<p>agent (non-SSRI</p>
+<p>(non-SSRI lithium, thyroid hormone, and, if necessary, 12–36 lithium, thyroid hormone, if necessary, 12–36 months</p>
+<p>antidepressant) antidepressant) atypical antipsychotic) months for maintenance atypical antipsychotic) for maintenance</p>
+<p>(SSRI, selective serotonin reuptake inhibitor.)</p>
+<p>FIGURE 68-1. Algorithm for treatment of uncomplicated MDD. Note: Both the BAP guidelines and the STAR*D trial suggest that switching and</p>
+<p>augmentation strategies are supported by stronger evidence compared to dose increases (among poor antidepressant responders).</p>
+<p>CH68.indd</p>
+<p>785</p>
+<p>20-11-2020</p>
+<p>11:21:53</p>
+<h2>786 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 68-2 Adult Dosing Guidance for Currently Available Antidepressant Medications</p>
+<p>Usual Dosage</p>
+<p>Drug Initial Dose Range Comments (eg, Maximum Daily Dosage, Suggested Therapeutic Plasma</p>
+<p>(Brand Name) (mg/day) (mg/day) Concentration)a</p>
+<p>Selective serotonin reuptake inhibitors (SSRIs)</p>
+<p>Citalopram (Celexa) 20 20–40 Doses &gt;40 mg/day not recommended due to QT prolongation risk; maximum 20 mg/day</p>
+<p>for CYP2C19 poor metabolizers or coadministration with CYP2C19 inhibitors; 20 mg/</p>
+<p>day recommended for patients older than 60 years of age</p>
+<p>Escitalopram 10 10–20 Maximum 20 mg/day; dose may be increased to maximum daily dose after at least 1 week</p>
+<p>(Lexapro) if needed; 5 mg tablet available for unique circumstances</p>
+<p>Fluoxetine (Prozac) 20 20–60 Maximum 80 mg/day; dose may be increased in 20 mg increments; doses of 5 or 10 mg/</p>
+<p>day have been used as initial therapy; doses &gt;20 mg/day may be given in a single daily</p>
+<p>dose or divided twice daily</p>
+<p>Fluvoxamine (Luvox) 50 50–300 Maximum 300 mg/day; daily doses &gt;100 mg total dose should be divided twice daily,</p>
+<p>with the larger dose given at night</p>
+<p>Maximum 300 mg/day (ER formulation)</p>
+<p>Paroxetine (Paxil) 20 20–50 Maximum 50 mg/day (IR formulation); titrate 10 mg/day increments weekly</p>
+<p>Maximum 62.5 mg/day (CR formulation); titrate 12.5 mg/day increments weekly</p>
+<p>Sertraline (Zoloft) 50 50–200 Maximum 200 mg/day; titrate 25 mg/day increments weekly</p>
+<p>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</p>
+<p>Newer-generation SNRIs</p>
+<p>Desvenlafaxine 50 50 Doses up to 400 mg/day have been studied; however, AEs are increased and no</p>
+<p>(Pristiq) additional benefit has been shown at doses exceeding 50 mg/day. Dose reductions or</p>
+<p>discontinuation may be required if sustained hypertension occurs</p>
+<p>Duloxetine 30 30–90 Maximum 120 mg/day (given once or twice daily); doses exceeding 60 mg/day not</p>
+<p>(Cymbalta) shown to provide increased efficacy for the treatment of MDD</p>
+<p>CH68.indd</p>
+<p>786</p>
+<p>20-11-2020</p>
+<p>11:21:53</p>
+<div class="table-container"><table><tr><th>Usual Dosage
+Drug Initial Dose Range Comments (eg, Maximum Daily Dosage, Suggested Therapeutic Plasma
+(Brand Name) (mg/day) (mg/day) Concentration)a</th><th></th><th></th><th></th></tr><tr><td>Selective serotonin reuptake inhibitors (SSRIs)</td><td></td><td></td><td></td></tr><tr><td>Citalopram (Celexa)</td><td>20</td><td>20–40</td><td>Doses &gt;40 mg/day not recommended due to QT prolongation risk; maximum 20 mg/day
+for CYP2C19 poor metabolizers or coadministration with CYP2C19 inhibitors; 20 mg/
+day recommended for patients older than 60 years of age</td></tr><tr><td>Escitalopram
+(Lexapro)</td><td>10</td><td>10–20</td><td>Maximum 20 mg/day; dose may be increased to maximum daily dose after at least 1 week
+if needed; 5 mg tablet available for unique circumstances</td></tr><tr><td>Fluoxetine (Prozac)</td><td>20</td><td>20–60</td><td>Maximum 80 mg/day; dose may be increased in 20 mg increments; doses of 5 or 10 mg/
+day have been used as initial therapy; doses &gt;20 mg/day may be given in a single daily
+dose or divided twice daily</td></tr><tr><td>Fluvoxamine (Luvox)</td><td>50</td><td>50–300</td><td>Maximum 300 mg/day; daily doses &gt;100 mg total dose should be divided twice daily,
+with the larger dose given at night</td></tr><tr><td></td><td></td><td></td><td>Maximum 300 mg/day (ER formulation)</td></tr><tr><td>Paroxetine (Paxil)</td><td>20</td><td>20–50</td><td>Maximum 50 mg/day (IR formulation); titrate 10 mg/day increments weekly</td></tr><tr><td></td><td></td><td></td><td>Maximum 62.5 mg/day (CR formulation); titrate 12.5 mg/day increments weekly</td></tr><tr><td>Sertraline (Zoloft)</td><td>50</td><td>50–200</td><td>Maximum 200 mg/day; titrate 25 mg/day increments weekly</td></tr><tr><td>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</td><td></td><td></td><td></td></tr><tr><td>Newer-generation SNRIs</td><td></td><td></td><td></td></tr><tr><td>Desvenlafaxine
+(Pristiq)</td><td>50</td><td>50</td><td>Doses up to 400 mg/day have been studied; however, AEs are increased and no
+additional benefit has been shown at doses exceeding 50 mg/day. Dose reductions or
+discontinuation may be required if sustained hypertension occurs</td></tr><tr><td>Duloxetine
+(Cymbalta)</td><td>30</td><td>30–90</td><td>Maximum 120 mg/day (given once or twice daily); doses exceeding 60 mg/day not
+shown to provide increased efficacy for the treatment of MDD</td></tr></table></div><p>787</p>
+<p>Depressive</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>68</p>
+<p>Venlafaxine (Effexor) 37.5–75 75–225 Maximum 375 mg/day (IR); maximum 225 mg/day (ER); may increase in increments up to</p>
+<p>75 mg/day at a minimum of every 4 days. Dose reductions or discontinuation may be</p>
+<p>required if sustained hypertension occurs</p>
+<p>Levomilnacipran 20 40–120 Initial dose (20 mg) for 2 days before dose increases is recommended at intervals of 2 or</p>
+<p>(Fetzima) more days. Dose adjustment or discontinuation may be required if sustained elevated</p>
+<p>heart rate or hypertension occurs</p>
+<p>Tricyclic antidepressants (TCAs)</p>
+<p>Amitriptyline (Elavil) 25 100–200 Maximum 300 mg/day for MDD; depending on the total dose, it may be given as a single</p>
+<p>daily dose at bedtime or in divided doses throughout the day; therapeutic serum level</p>
+<p>100–250 ng/mL (mcg/L; 370–925 nmol/L); parent drug plus metabolite (nortriptyline)</p>
+<p>Desipramine 25 100–200 Maximum 300 mg/day; suggested therapeutic concentration range for combined</p>
+<p>(Norpramin) imipramine + desipramine: 150–300 ng/mL (mcg/L; 550–1100 nmol/L)</p>
+<p>Doxepin (Sinequan) 25 100–200 Maximum 300 mg/day; may be given in a single daily dose at bedtime (if tolerated) or in</p>
+<p>divided doses throughout the day; a single dose should not exceed 150 mg</p>
+<p>Imipramine (Tofranil) 25 100–200 Maximum 300 mg/day; may be given in a single daily dose at bedtime (if tolerated) or</p>
+<p>in divided doses throughout the day; suggested therapeutic concentration range for</p>
+<p>combined imipramine + desipramine: 150–300 ng/mL (mcg/L; 550–1100 nmol/L)</p>
+<p>Nortriptyline 25 50–150 Maximum 150 mg/day; total daily may be given as a single daily dose (if tolerated) or</p>
+<p>(Pamelor) 25 mg doses given three to four times daily; therapeutic serum level 50–150 ng/mL</p>
+<p>(mcg/L; 190–570 nmol/L)</p>
+<p>Norepinephrine and dopamine reuptake inhibitor (NDRI)</p>
+<p>Bupropion 150 (75 mg given 150–450 Maximum 450 mg/day (IR, ER), 400 mg/day (SR); ER dosed once daily; SR dosed once or</p>
+<p>(Wellbutrin) twice daily) twice daily; IR may be dosed up to three times daily. Adhering to labeled maximum</p>
+<p>daily and maximum single doses minimizes effect on seizure threshold</p>
+<p>Mixed serotonergic effects (mixed 5-HT)</p>
+<p>Nefazodone 100 200–400 Maximum 600 mg/day; daily doses should be divided twice daily</p>
+<p>(Serzone)</p>
+<p>(Continued )</p>
+<p>CH68.indd</p>
+<p>787</p>
+<p>20-11-2020</p>
+<p>11:21:53</p>
+<div class="table-container"><table><tr><th>Venlafaxine (Effexor)</th><th>37.5–75</th><th>75–225</th><th>Maximum 375 mg/day (IR); maximum 225 mg/day (ER); may increase in increments up to
+75 mg/day at a minimum of every 4 days. Dose reductions or discontinuation may be
+required if sustained hypertension occurs</th></tr><tr><td>Levomilnacipran
+(Fetzima)</td><td>20</td><td>40–120</td><td>Initial dose (20 mg) for 2 days before dose increases is recommended at intervals of 2 or
+more days. Dose adjustment or discontinuation may be required if sustained elevated
+heart rate or hypertension occurs</td></tr><tr><td>Tricyclic antidepressants (TCAs)</td><td></td><td></td><td></td></tr><tr><td>Amitriptyline (Elavil)</td><td>25</td><td>100–200</td><td>Maximum 300 mg/day for MDD; depending on the total dose, it may be given as a single
+daily dose at bedtime or in divided doses throughout the day; therapeutic serum level
+100–250 ng/mL (mcg/L; 370–925 nmol/L); parent drug plus metabolite (nortriptyline)</td></tr><tr><td>Desipramine
+(Norpramin)</td><td>25</td><td>100–200</td><td>Maximum 300 mg/day; suggested therapeutic concentration range for combined
+imipramine + desipramine: 150–300 ng/mL (mcg/L; 550–1100 nmol/L)</td></tr><tr><td>Doxepin (Sinequan)</td><td>25</td><td>100–200</td><td>Maximum 300 mg/day; may be given in a single daily dose at bedtime (if tolerated) or in
+divided doses throughout the day; a single dose should not exceed 150 mg</td></tr><tr><td>Imipramine (Tofranil)</td><td>25</td><td>100–200</td><td>Maximum 300 mg/day; may be given in a single daily dose at bedtime (if tolerated) or
+in divided doses throughout the day; suggested therapeutic concentration range for
+combined imipramine + desipramine: 150–300 ng/mL (mcg/L; 550–1100 nmol/L)</td></tr><tr><td>Nortriptyline
+(Pamelor)</td><td>25</td><td>50–150</td><td>Maximum 150 mg/day; total daily may be given as a single daily dose (if tolerated) or
+25 mg doses given three to four times daily; therapeutic serum level 50–150 ng/mL
+(mcg/L; 190–570 nmol/L)</td></tr><tr><td>Norepinephrine and dopamine reuptake inhibitor (NDRI)</td><td></td><td></td><td></td></tr><tr><td>Bupropion
+(Wellbutrin)</td><td>150 (75 mg given
+twice daily)</td><td>150–450</td><td>Maximum 450 mg/day (IR, ER), 400 mg/day (SR); ER dosed once daily; SR dosed once or
+twice daily; IR may be dosed up to three times daily. Adhering to labeled maximum
+daily and maximum single doses minimizes effect on seizure threshold</td></tr><tr><td>Mixed serotonergic effects (mixed 5-HT)</td><td></td><td></td><td></td></tr><tr><td>Nefazodone
+(Serzone)</td><td>100</td><td>200–400</td><td>Maximum 600 mg/day; daily doses should be divided twice daily
+(Continued )</td></tr></table></div><h2>788 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 68-2 Adult Dosing Guidance for Currently Available Antidepressant Medications (Continued )</p>
+<p>Usual Dosage</p>
+<p>Drug Initial Dose Range Comments (eg, Maximum Daily Dosage, Suggested Therapeutic Plasma</p>
+<p>(Brand Name) (mg/day) (mg/day) Concentration)a</p>
+<p>Trazodone (Desyrel; 50 150–300 Maximum 600 mg/day; IR daily dose should be divided three times daily and may increase</p>
+<p>Oleptro) by 50 mg/day increments every 3–7 days; ER dose titration initiated at 150 mg at</p>
+<p>bedtime and can be increased 75 mg/day every 3 days</p>
+<p>Vilazodone (Viibryd) 10 20–40 Target dose 20–40 mg/day unless coadministered with CYP3A4 inhibitor (dose not to</p>
+<p>exceed 20 mg/day). Dose titration: 10 mg/day for 7 days, 20 mg/day for 7 days, and</p>
+<p>then may increase to 40 mg/day. Dose must be taken with food to ensure adequate</p>
+<p>drug absorption and bioavailability</p>
+<p>Vortioxetine 10 20 Maximum 20 mg/day; minimal difference in efficacy and side effects in clinical trials</p>
+<p>(Brintellix) between 10 and 20 mg</p>
+<p>Serotonin and α-adrenergic antagonist</p>
+<p>2</p>
+<p>Mirtazapine 15 15–45 Maximum 45 mg/day; dose adjustment may be required for renal impairment</p>
+<p>(Remeron)</p>
+<p>Monoamine oxidase inhibitors (MAOIs)</p>
+<p>Phenelzine (Nardil) 15 30–90 Divided dosing 2–3 times daily; dosing may be increased to 90 mg/day based on</p>
+<p>tolerance and response</p>
+<p>Selegiline 6 6–12 Not to exceed 12 mg/24 hours; dose may be increased by 3 mg/day increments every 2</p>
+<p>(transdermal) weeks; site of application should be rotated</p>
+<p>(Emsam)</p>
+<p>Tranylcypromine 10 20–40 Maximum 60 mg/day; divided dosing; increase by 10 mg at 1- to 3-week intervals</p>
+<p>(Parnate)</p>
+<p>Isocarboxazid 10–20 30–60 Maximum 60 mg/day; divided dosing</p>
+<p>(Marplan)</p>
+<p>CH68.indd</p>
+<p>788</p>
+<p>20-11-2020</p>
+<p>11:21:53</p>
+<div class="table-container"><table><tr><th>Usual Dosage
+Drug Initial Dose Range Comments (eg, Maximum Daily Dosage, Suggested Therapeutic Plasma
+(Brand Name) (mg/day) (mg/day) Concentration)a</th><th></th><th></th><th></th></tr><tr><td>Trazodone (Desyrel;
+Oleptro)</td><td>50</td><td>150–300</td><td>Maximum 600 mg/day; IR daily dose should be divided three times daily and may increase
+by 50 mg/day increments every 3–7 days; ER dose titration initiated at 150 mg at
+bedtime and can be increased 75 mg/day every 3 days</td></tr><tr><td>Vilazodone (Viibryd)</td><td>10</td><td>20–40</td><td>Target dose 20–40 mg/day unless coadministered with CYP3A4 inhibitor (dose not to
+exceed 20 mg/day). Dose titration: 10 mg/day for 7 days, 20 mg/day for 7 days, and
+then may increase to 40 mg/day. Dose must be taken with food to ensure adequate
+drug absorption and bioavailability</td></tr><tr><td>Vortioxetine
+(Brintellix)</td><td>10</td><td>20</td><td>Maximum 20 mg/day; minimal difference in efficacy and side effects in clinical trials
+between 10 and 20 mg</td></tr><tr><td>Serotonin and α-adrenergic antagonist
+2</td><td></td><td></td><td></td></tr><tr><td>Mirtazapine
+(Remeron)</td><td>15</td><td>15–45</td><td>Maximum 45 mg/day; dose adjustment may be required for renal impairment</td></tr><tr><td>Monoamine oxidase inhibitors (MAOIs)</td><td></td><td></td><td></td></tr><tr><td>Phenelzine (Nardil)</td><td>15</td><td>30–90</td><td>Divided dosing 2–3 times daily; dosing may be increased to 90 mg/day based on
+tolerance and response</td></tr><tr><td>Selegiline
+(transdermal)
+(Emsam)</td><td>6</td><td>6–12</td><td>Not to exceed 12 mg/24 hours; dose may be increased by 3 mg/day increments every 2
+weeks; site of application should be rotated</td></tr><tr><td>Tranylcypromine
+(Parnate)</td><td>10</td><td>20–40</td><td>Maximum 60 mg/day; divided dosing; increase by 10 mg at 1- to 3-week intervals</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>Isocarboxazid
+(Marplan)</td><td>10–20</td><td>30–60</td><td>Maximum 60 mg/day; divided dosing</td></tr></table></div><p>789</p>
+<p>Depressive</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>68</p>
+<p>Second-generation antipsychotics (SGA) as augmentation (5HT and D modulators)</p>
+<h2>2A 2</h2>
+<p>Aripiprazole (Abilify) 2 2–15 FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</p>
+<p>Brexpiprazole 1 1–3 Not FDA-approved for augmentation; CANMAT Level 1 evidence, 2nd line</p>
+<p>(Rexulti)</p>
+<p>Olanzapine (Zyprexa) 2.5 2.5–10 Not FDA-approved for augmentation; CANMAT Level 1 evidence, 2nd line</p>
+<p>Quetiapine 50 150–300 FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</p>
+<p>(Seroquel)</p>
+<p>Risperidone 1 1–3 Not FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</p>
+<p>(Risperdal)</p>
+<p>Alternative augmentation agents (not FDA-approved for antidepressant augmentation)</p>
+<p>Buspirone (Buspar) 10 10–60 Divided dosing 2–3 times daily</p>
+<p>5HT1A partial agonist</p>
+<p>Lithium 300 600–1200 Dose based on therapeutic levels (target 0.6–1 mEq/L [mmol/L])</p>
+<p>Mechanism in depression not fully understood</p>
+<p>Triiodothyronine 0.025 0.025–0.05 Once daily dosing; monitor free T3 levels</p>
+<p>(Cytomel)</p>
+<p>aSI conversion for cases where reference ranges are for a mixture of parent drug and active metabolite is calculated based on a 1:1 ratio.</p>
+<p>AE, adverse effects; CR, continuous release; ER, extended release; IR, immediate release; MDD, major depressive disorder; SR, sustained release; CANMAT, Canadian Network for Mood and</p>
+<p>Anxiety Treatments.</p>
+<p>CH68.indd</p>
+<p>789</p>
+<p>20-11-2020</p>
+<p>11:21:53</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<div class="table-container"><table><tr><th>Second-generation antipsychotics (SGA) as augmentation (5HT and D modulators)
+2A 2</th><th></th><th></th><th></th></tr><tr><td>Aripiprazole (Abilify)</td><td>2</td><td>2–15</td><td>FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</td></tr><tr><td>Brexpiprazole
+(Rexulti)</td><td>1</td><td>1–3</td><td>Not FDA-approved for augmentation; CANMAT Level 1 evidence, 2nd line</td></tr><tr><td>Olanzapine (Zyprexa)</td><td>2.5</td><td>2.5–10</td><td>Not FDA-approved for augmentation; CANMAT Level 1 evidence, 2nd line</td></tr><tr><td>Quetiapine
+(Seroquel)</td><td>50</td><td>150–300</td><td>FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</td></tr><tr><td>Risperidone
+(Risperdal)</td><td>1</td><td>1–3</td><td>Not FDA-approved for augmentation; CANMAT Level 1 evidence, 1st line</td></tr><tr><td>Alternative augmentation agents (not FDA-approved for antidepressant augmentation)</td><td></td><td></td><td></td></tr><tr><td>Buspirone (Buspar)</td><td>10</td><td>10–60</td><td>Divided dosing 2–3 times daily</td></tr><tr><td></td><td></td><td></td><td>5HT1A partial agonist</td></tr><tr><td>Lithium</td><td>300</td><td>600–1200</td><td>Dose based on therapeutic levels (target 0.6–1 mEq/L [mmol/L])</td></tr><tr><td></td><td></td><td></td><td>Mechanism in depression not fully understood</td></tr><tr><td>Triiodothyronine
+(Cytomel)</td><td>0.025</td><td>0.025–0.05</td><td>Once daily dosing; monitor free T3 levels</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Antidepressants are equal in efficacy when administered in comparable doses, and</li>
+<p>they are often classified by chemical structure and/or presumed mechanism.</p>
+<li>The initial choice of antidepressant is often made empirically and influenced by the</li>
+<p>patient’s or family member’s history of response, concurrent medical conditions,</p>
+<p>medications the patient is taking, presenting symptoms, potential for drug–drug</p>
+<p>interactions, side effect profiles, patient preference, and drug cost.</p>
+<li>An individual’s pharmacogenomics may be useful when choosing therapy as a way</li>
+<p>to better predict antidepressant side effects or response. Dosing recommendations</p>
+<p>to aid in the interpretation of results are available through the Clinical Pharmacoge-</p>
+<p>nomics Implementation Consortium (CPIC) as well as the FDA-approved package</p>
+<p>inserts.</p>
+<li>50%–60% of patients with varying types of depression improve with drug therapy.</li>
+<li>At least a 6-week trial of an antidepressant at maximum dosage is considered an</li>
+<p>adequate trial of that medication.</p>
+<li>The acute phase of treatment lasts 6–12 weeks, and the goal is remission (ie, absence</li>
+<p>of symptoms). The continuation phase (4–9 months after remission) seeks to elimi-</p>
+<p>nate residual symptoms or prevent relapse. The maintenance phase (12–36 months or</p>
+<p>more) seeks to prevent recurrence of a new episode of depression.</p>
+<li>Give older patients one-half of the initial dose given to younger adults, and increase</li>
+<p>the dose more slowly. Older patients may require 6–12 weeks of treatment to achieve</p>
+<p>the desired antidepressant response.</p>
+<li>Early in treatment, all antidepressants can increase suicidal thinking and behavior in</li>
+<p>children, adolescents, and young adults less than 25 years of age. Suicide risk may also</p>
+<p>be elevated in the 30 days after discontinuation.</p>
+<li>Some clinicians recommend lifelong therapy for persons younger than 40 years with</li>
+<p>two or more prior episodes and for all persons with three or more prior episodes.</p>
+<li>Educate patients and their support systems about the delay in antidepressant</li>
+<p>response (typically 2–4 weeks) and the importance of adherence before starting</p>
+<p>therapy and throughout treatment.</p>
+<li>Occurrence of a withdrawal syndrome with some antidepressants may be</li>
+<p>reduced with a slow taper over weeks or months when the medication is being</p>
+<p>discontinued.</p>
+<li>Table 68-3 shows antidepressant potency and relative selectivity for inhibition of</li>
+<p>various receptors. Specific adverse effects seen with select antidepressants are given</p>
+<h2>in Table 68-4.</h2>
+<li>The ability of any antidepressant to inhibit or induce the CYP450 enzymes can be a</li>
+<p>significant factor determining its capability to cause a pharmacokinetic drug–drug</p>
+<p>interaction.</p>
+<p>Selective Serotonin Reuptake Inhibitors</p>
+<li>The SSRIs inhibit the reuptake of 5-HT into the presynaptic neuron. They are gener-</li>
+<p>ally chosen as first-line antidepressants because of their relative safety in overdose</p>
+<p>and improved tolerability compared with earlier agents (Figure 68-1).</p>
+<li>The SSRIs, with the possible exceptions of citalopram and sertraline, may have a</li>
+<p>nonlinear pattern of drug accumulation with chronic dosing. Hepatic impairment,</p>
+<p>renal impairment, and age can influence the pharmacokinetics of SSRIs. The phar-</p>
+<p>macokinetics of the antidepressants is summarized in Table 68-5.</p>
+<li>Any antidepressant that enhances serotonergic activity can be associated with</li>
+<p>serotonin syndrome characterized by mental status changes, autonomic instability,</p>
+<p>and neuromuscular abnormalities. Combining an SSRI with another 5-HT augment-</p>
+<p>ing agent is also a risk.</p>
+<li>The primary adverse effects for SSRIs are nausea, vomiting, diarrhea, headache,</li>
+<pre><code>insomnia, fatigue, and sexual dysfunction and have a reduced incidence of sedative,</code></pre>
+<p>anticholinergic, and cardiovascular adverse effects or weight gain.</p>
+<li>A few patients have anxiety symptoms early in treatment which may be reduced by</li>
+<p>starting with lower doses and slowly titrating up.</p>
+<p>790</p>
+<p>CH68.indd 790 20-11-2020 11:21:54</p>
+<h2>Depressive Disorders | CHAPTER 68</h2>
+<p>TABLE 68-3 Relative Potencies of Norepinephrine and Serotonin Reuptake Blockade and</p>
+<p>Selected Receptor Antagonism Profile of Antidepressants</p>
+<p>Reuptake Antagonism</p>
+<p>NE 5-HT M1 H1 α1</p>
+<p>Selective serotonin reuptake inhibitors (SSRIs)</p>
+<p>Citalopram 0 ++++ 0 + 0</p>
+<p>Escitalopram 0 ++++ 0 0 0</p>
+<p>Fluoxetine + ++++ 0 0 0</p>
+<p>Fluvoxamine 0 ++++ 0 + 0</p>
+<p>Paroxetine ++ ++++ + + 0</p>
+<p>Sertraline 0 ++++ 0 0 0</p>
+<p>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</p>
+<p>Duloxetine +++ ++++ + 0 +</p>
+<p>Levomilnacipran ++++ +++ + 0 0</p>
+<p>Venlafaxinea and +++ ++++ + + 0</p>
+<p>desvenlafaxine</p>
+<p>Tricyclic antidepressants (TCAs)</p>
+<p>Amitriptyline ++ ++++ ++++ ++++ +++</p>
+<p>Desipramine ++++ ++ ++ ++ ++</p>
+<p>Doxepin ++ ++ +++ ++++ ++</p>
+<p>Imipramine ++ ++++ +++ +++ ++++</p>
+<p>Nortriptyline ++++ ++ ++ ++ +</p>
+<p>Mixed serotonergic (mixed 5-HT)</p>
+<p>Nefazodone 0 ++ 0 +++ +++</p>
+<p>Trazodone 0 ++ 0 ++++ +++</p>
+<p>Vilazodone 0 ++++ 0 + 0</p>
+<p>Vortioxetine 0 ++++ 0 + 0</p>
+<p>Norepinephrine and dopamine reuptake inhibitor (NDRI)</p>
+<p>Bupropionb + 0 + 0 0</p>
+<p>Serotonin and α-receptor antagonist</p>
+<p>2</p>
+<p>Mirtazapine 0 0 0 ++ ++</p>
+<p>aVenlafaxine: primarily 5-HT at lower doses, NE at higher doses, and DA at very high doses.</p>
+<p>bBupropion: also blocks dopamine reuptake.</p>
+<p>α1, antiadrenergic, hypotension; H1, antihistamine, sedation; M1, antimuscarinic/anticholinergic</p>
+<p>side effects.</p>
+<p>++++, high; +++, moderate; ++, low; +, very low; 0, absent or not adequately studied.</p>
+<li>Citalopram and escitalopram may to an increase in QT interval at doses above 40 mg/day.</li>
+<li>Potentially fatal reactions may occur when any SSRI and MAOI are coadministered.</li>
+<p>A 5-week washout after fluoxetine discontinuation is critical before starting an MAOI.</p>
+<li>If an SSRI is added to a regimen which includes drugs known to interact with SSRIs,</li>
+<p>the SSRI starting dose should be low and slowly titrated.</p>
+<li>Table 68-6 compares second- and third-generation antidepressants for their effects on</li>
+<p>CYP450 enzymes. CYP2D6 and 3A4 are responsible for the metabolism of more than</p>
+<p>80% of currently marketed drugs. Consult the drug interaction literature for detailed</p>
+<p>information concerning any real or potential psychotherapeutic drug interactions.</p>
+<p>791</p>
+<p>CH68.indd 791 20-11-2020 11:21:54</p>
+<div class="table-container"><table><tr><th>TABLE 68-3 Relative Potencies of Norepinephrine and Serotonin Reuptake Blockade and
+Selected Receptor Antagonism Profile of Antidepressants</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Reuptake Antagonism</td><td></td><td>M1</td><td>H1</td><td>α1</td></tr><tr><td></td><td>NE</td><td>5-HT</td><td></td><td></td><td></td></tr><tr><td>Selective serotonin reuptake inhibitors (SSRIs)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Citalopram</td><td>0</td><td>++++</td><td>0</td><td>+</td><td>0</td></tr><tr><td>Escitalopram</td><td>0</td><td>++++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Fluoxetine</td><td>+</td><td>++++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Fluvoxamine</td><td>0</td><td>++++</td><td>0</td><td>+</td><td>0</td></tr><tr><td>Paroxetine</td><td>++</td><td>++++</td><td>+</td><td>+</td><td>0</td></tr><tr><td>Sertraline</td><td>0</td><td>++++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Duloxetine</td><td>+++</td><td>++++</td><td>+</td><td>0</td><td>+</td></tr><tr><td>Levomilnacipran</td><td>++++</td><td>+++</td><td>+</td><td>0</td><td>0</td></tr><tr><td>Venlafaxinea and
+desvenlafaxine</td><td>+++</td><td>++++</td><td>+</td><td>+</td><td>0</td></tr><tr><td>Tricyclic antidepressants (TCAs)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Amitriptyline</td><td>++</td><td>++++</td><td>++++</td><td>++++</td><td>+++</td></tr><tr><td>Desipramine</td><td>++++</td><td>++</td><td>++</td><td>++</td><td>++</td></tr><tr><td>Doxepin</td><td>++</td><td>++</td><td>+++</td><td>++++</td><td>++</td></tr><tr><td>Imipramine</td><td>++</td><td>++++</td><td>+++</td><td>+++</td><td>++++</td></tr><tr><td>Nortriptyline</td><td>++++</td><td>++</td><td>++</td><td>++</td><td>+</td></tr><tr><td>Mixed serotonergic (mixed 5-HT)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Nefazodone</td><td>0</td><td>++</td><td>0</td><td>+++</td><td>+++</td></tr><tr><td>Trazodone</td><td>0</td><td>++</td><td>0</td><td>++++</td><td>+++</td></tr><tr><td>Vilazodone</td><td>0</td><td>++++</td><td>0</td><td>+</td><td>0</td></tr><tr><td>Vortioxetine</td><td>0</td><td>++++</td><td>0</td><td>+</td><td>0</td></tr><tr><td>Norepinephrine and dopamine reuptake inhibitor (NDRI)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bupropionb</td><td>+</td><td>0</td><td>+</td><td>0</td><td>0</td></tr><tr><td>Serotonin and α-receptor antagonist
+2</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Mirtazapine</td><td>0</td><td>0</td><td>0</td><td>++</td><td>++</td></tr></table></div><h2>792 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 68-4 Adverse Drug Reactions and Monitoring Parameters Associated with Select Antidepressants</p>
+<p>Drug ADR(s) Monitoring Comments</p>
+<p>Antidepressants from each pharmacologic class</p>
+<p>Common to all</p>
+<p>antidepressants</p>
+<p>Suicidality Behavioral changes (US black box warning) for all antidepressants; caregivers</p>
+<p>Mental status should be alerted to monitor for acute changes in behavior</p>
+<p>(especially early in treatment)</p>
+<p>Selective serotonin reuptake inhibitors (SSRIs)</p>
+<p>Common to all SSRIs</p>
+<p>Anxiety or Assess severity and impact on Most prominent on initial treatment; lower initial doses</p>
+<pre><code>nervousness patient functioning and quality recommended in patients with prominent anxiety</code></pre>
+<p>of life</p>
+<p>Hyponatremia Serum sodium More likely in older females; sodium may decrease within</p>
+<p>72 hours of initiating antidepressant</p>
+<p>Nausea Frequency and severity May improve with slower dose titration</p>
+<p>Sleep changes Sleep patterns Among SSRI class: fluoxetine may be more activating;</p>
+<p>(insomnia and fluvoxamine and paroxetine may be more sedating</p>
+<p>somnolence)</p>
+<p>Sexual Assess severity and impact on Spontaneous self-reporting may be low; clinician should</p>
+<pre><code>dysfunction patient functioning and quality assess symptoms; reversible on drug discontinuation</code></pre>
+<p>of life</p>
+<p>SSRI-specific</p>
+<p>Citalopram (possibly QTc interval Electrocardiogram; electrolytes (eg, Caution use in “at-risk” patients (eg, electrolyte disturbance);</p>
+<p>escitalopram) prolongation potassium, magnesium) discontinue if QTc persistently &gt;500 msec or increased &gt;5</p>
+<p>msec over baseline</p>
+<p>Fluoxetine Anorexia Weight (over time) SSRIs are generally considered weight neutral</p>
+<p>Paroxetine Anticholinergic Symptoms: dry mouth, constipation, Paroxetine possesses relatively more anticholinergic effects</p>
+<p>effects urinary retention, mental status than other SSRIs</p>
+<p>CH68.indd</p>
+<p>792</p>
+<p>20-11-2020</p>
+<p>11:21:54</p>
+<div class="table-container"><table><tr><th>Drug ADR(s) Monitoring Comments</th><th></th><th></th><th></th></tr><tr><td>Antidepressants from each pharmacologic class</td><td></td><td></td><td></td></tr><tr><td>Common to all
+antidepressants</td><td></td><td></td><td></td></tr><tr><td></td><td>Suicidality</td><td>Behavioral changes</td><td>(US black box warning) for all antidepressants; caregivers
+should be alerted to monitor for acute changes in behavior
+(especially early in treatment)</td></tr><tr><td></td><td></td><td>Mental status</td><td></td></tr><tr><td>Selective serotonin reuptake inhibitors (SSRIs)</td><td></td><td></td><td></td></tr><tr><td>Common to all SSRIs</td><td></td><td></td><td></td></tr><tr><td></td><td>Anxiety or
+nervousness</td><td>Assess severity and impact on
+patient functioning and quality
+of life</td><td>Most prominent on initial treatment; lower initial doses
+recommended in patients with prominent anxiety</td></tr><tr><td></td><td>Hyponatremia</td><td>Serum sodium</td><td>More likely in older females; sodium may decrease within
+72 hours of initiating antidepressant</td></tr><tr><td></td><td>Nausea</td><td>Frequency and severity</td><td>May improve with slower dose titration</td></tr><tr><td></td><td>Sleep changes
+(insomnia and
+somnolence)</td><td>Sleep patterns</td><td>Among SSRI class: fluoxetine may be more activating;
+fluvoxamine and paroxetine may be more sedating</td></tr><tr><td></td><td>Sexual
+dysfunction</td><td>Assess severity and impact on
+patient functioning and quality
+of life</td><td>Spontaneous self-reporting may be low; clinician should
+assess symptoms; reversible on drug discontinuation</td></tr><tr><td>SSRI-specific</td><td></td><td></td><td></td></tr><tr><td>Citalopram (possibly
+escitalopram)</td><td>QTc interval
+prolongation</td><td>Electrocardiogram; electrolytes (eg,
+potassium, magnesium)</td><td>Caution use in “at-risk” patients (eg, electrolyte disturbance);
+discontinue if QTc persistently &gt;500 msec or increased &gt;5
+msec over baseline</td></tr><tr><td>Fluoxetine</td><td>Anorexia</td><td>Weight (over time)</td><td>SSRIs are generally considered weight neutral</td></tr><tr><td>Paroxetine</td><td>Anticholinergic
+effects</td><td>Symptoms: dry mouth, constipation,
+urinary retention, mental status</td><td>Paroxetine possesses relatively more anticholinergic effects
+than other SSRIs</td></tr></table></div><p>793</p>
+<p>Depressive</p>
+<p>Disorders</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>68</p>
+<p>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</p>
+<p>Common to all SNRIs</p>
+<p>Cardiovascular Increases in blood pressure; Possibly less likely with duloxetine; may need to lower/</p>
+<p>changes heart rate discontinue dose</p>
+<p>Insomnia Sleep patterns Possibly less likely with duloxetine</p>
+<p>Nausea Frequency and severity May improve with slower dose titration</p>
+<p>Sexual Assess severity and impact on Spontaneous self-reporting may be low; clinicians should</p>
+<pre><code>dysfunction patient functioning and quality assess symptoms; reversible on drug discontinuation</code></pre>
+<p>of life</p>
+<p>Sweating Frequency and severity May require change in therapy</p>
+<p>SNRI-specific</p>
+<p>Desvenlafaxine Dose-related Lipid profile Elevations in total cholesterol, low-density lipoproteins, and</p>
+<p>hyperlipidemia triglycerides</p>
+<pre><code>Duloxetine Liver toxicity Liver function tests May be transient upon initiation or sustained</code></pre>
+<p>Mixed serotonergic effects (mixed 5-HT)</p>
+<pre><code>Nefazodone Liver toxicity Liver function tests Nefazodone black box warning in the United States for</code></pre>
+<p>hepatotoxicity</p>
+<p>Trazodone Orthostatic Blood pressure, pulse May be more severe as compared with other antidepressants;</p>
+<p>hypotension rate-limiting side effect</p>
+<p>Priapism Patient report of sexual side effects, Patient should seek medical attention for prolonged erection</p>
+<p>especially painful erection (ie, &gt;4 hours)</p>
+<p>Vilazodone and vortioxetine Nausea Frequency and severity Most common dose-limiting side effect</p>
+<p>Serotonin and α-adrenergic antagonist</p>
+<p>2</p>
+<p>Mirtazapine Weight gain Body weight Frequently occurring and significant (&gt;7% over baseline)</p>
+<p>weight gain among adults; diet mediated</p>
+<p>Norepinephrine and dopamine reuptake inhibitor (NDRI)</p>
+<p>Bupropion Seizure activity Electroencephalogram if indicated See Table 68-2 for proper dosing, which can help decrease</p>
+<p>seizure risk; caution use in patients with eating disorders or</p>
+<p>alcohol use disorders</p>
+<p>CH68.indd</p>
+<p>793</p>
+<p>20-11-2020</p>
+<p>11:21:55</p>
+<div class="table-container"><table><tr><th>Common to all SNRIs</th><th></th><th></th><th></th></tr><tr><td></td><td>Cardiovascular
+changes</td><td>Increases in blood pressure;
+heart rate</td><td>Possibly less likely with duloxetine; may need to lower/
+discontinue dose</td></tr><tr><td></td><td>Insomnia</td><td>Sleep patterns</td><td>Possibly less likely with duloxetine</td></tr><tr><td></td><td>Nausea</td><td>Frequency and severity</td><td>May improve with slower dose titration</td></tr><tr><td></td><td>Sexual
+dysfunction</td><td>Assess severity and impact on
+patient functioning and quality
+of life</td><td>Spontaneous self-reporting may be low; clinicians should
+assess symptoms; reversible on drug discontinuation</td></tr><tr><td></td><td>Sweating</td><td>Frequency and severity</td><td>May require change in therapy</td></tr><tr><td>SNRI-specific</td><td></td><td></td><td></td></tr><tr><td>Desvenlafaxine</td><td>Dose-related
+hyperlipidemia</td><td>Lipid profile</td><td>Elevations in total cholesterol, low-density lipoproteins, and
+triglycerides</td></tr><tr><td>Duloxetine</td><td>Liver toxicity</td><td>Liver function tests</td><td>May be transient upon initiation or sustained</td></tr><tr><td>Mixed serotonergic effects (mixed 5-HT)</td><td></td><td></td><td></td></tr><tr><td>Nefazodone</td><td>Liver toxicity</td><td>Liver function tests</td><td>Nefazodone black box warning in the United States for
+hepatotoxicity</td></tr><tr><td>Trazodone</td><td>Orthostatic
+hypotension</td><td>Blood pressure, pulse</td><td>May be more severe as compared with other antidepressants;
+rate-limiting side effect</td></tr><tr><td></td><td>Priapism</td><td>Patient report of sexual side effects,
+especially painful erection</td><td>Patient should seek medical attention for prolonged erection
+(ie, &gt;4 hours)</td></tr><tr><td>Vilazodone and vortioxetine</td><td>Nausea</td><td>Frequency and severity</td><td>Most common dose-limiting side effect</td></tr><tr><td>Serotonin and α-adrenergic antagonist</td><td></td><td></td><td></td></tr><tr><td>2
+Mirtazapine</td><td>Weight gain</td><td>Body weight</td><td>Frequently occurring and significant (&gt;7% over baseline)
+weight gain among adults; diet mediated</td></tr><tr><td>Norepinephrine and dopamine reuptake inhibitor (NDRI)</td><td></td><td></td><td></td></tr><tr><td>Bupropion</td><td>Seizure activity</td><td>Electroencephalogram if indicated</td><td>See Table 68-2 for proper dosing, which can help decrease
+seizure risk; caution use in patients with eating disorders or
+alcohol use disorders</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>TABLE 68-5 Pharmacokinetic Properties of Antidepressants</h2>
+<p>Plasma</p>
+<p>Elimination Protein Clinically Important</p>
+<p>Generic Name Half-Lifea Binding (%) Metabolites</p>
+<p>Selective serotonin reuptake inhibitors (SSRIs)</p>
+<p>Citalopram 33 hours 80 None</p>
+<p>Escitalopram 27–32 hours 56 None</p>
+<p>Fluoxetine 4–6 daysb 94 Norfluoxetinec</p>
+<p>Fluvoxamine 15–26 hours 77 None</p>
+<p>Paroxetine 24–31 hours 95 None</p>
+<p>Sertraline 27 hours 99d None</p>
+<p>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</p>
+<p>Desvenlafaxine 11 hours 30 None</p>
+<p>Duloxetine 12 hours 90 None</p>
+<p>Levomilnacipran 12 hours 22 None</p>
+<p>Venlafaxine 5 hours 27–30 O-Desmethyl-</p>
+<p>venlafaxine</p>
+<p>Tricyclic Antidepressants (TCAs)</p>
+<p>Amitriptyline 9–46 hours 90–97 Nortriptyline</p>
+<p>Desipramine 11–46 hours 73–92 2-Hydroxy-desipramine</p>
+<p>Doxepin 8–36 hours 68–82 Desmethyl-doxepin</p>
+<p>Imipramine 6–34 hours 63–96 Desipramine</p>
+<p>Nortriptyline 16–88 hours 87–95 10-Hydroxy-nortriptyline</p>
+<p>Mixed serotonergic (mixed 5-HT)</p>
+<p>Nefazodone 2–4 hours 99 meta-Chlorophenyl-</p>
+<p>piperazine</p>
+<p>Trazodone 6–11 hours 92 meta-Chlorophenyl-</p>
+<p>piperazine</p>
+<p>Vilazodone 25 hours &gt;95</p>
+<p>Vortioxetine 66 hours 98</p>
+<p>Norepinephrine/Dopamine reuptake inhibitor (NDRI)</p>
+<p>Bupropion 10–21 hours 82–88 Hydroxy-bupropion</p>
+<p>Threohydro-bupropion</p>
+<p>Erythrohydro-bupropion</p>
+<p>Serotonin and α-adrenergic antagonists</p>
+<p>2</p>
+<p>Mirtazapine 20–40 hours 85 None</p>
+<p>aBiologic half-life in slowest phase of elimination.</p>
+<p>bFour to 6 days with chronic dosing; norfluoxetine, 4–16 days.</p>
+<p>cTake with food to increase area under the curve concentrations by greater than 60%.</p>
+<p>dIncreases 30%–40% when taken with food.</p>
+<p>794</p>
+<p>CH68.indd 794 20-11-2020 11:21:55</p>
+<div class="table-container"><table><tr><th>TABLE 68-5 Pharmacokinetic Properties of Antidepressants</th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Elimination
+Half-Lifea</td><td>Plasma
+Protein
+Binding (%)</td><td>Clinically Important
+Metabolites</td></tr><tr><td>Selective serotonin reuptake inhibitors (SSRIs)</td><td></td><td></td><td></td></tr><tr><td>Citalopram</td><td>33 hours</td><td>80</td><td>None</td></tr><tr><td>Escitalopram</td><td>27–32 hours</td><td>56</td><td>None</td></tr><tr><td>Fluoxetine</td><td>4–6 daysb</td><td>94</td><td>Norfluoxetinec</td></tr><tr><td>Fluvoxamine</td><td>15–26 hours</td><td>77</td><td>None</td></tr><tr><td>Paroxetine</td><td>24–31 hours</td><td>95</td><td>None</td></tr><tr><td>Sertraline</td><td>27 hours</td><td>99d</td><td>None</td></tr><tr><td>Serotonin–norepinephrine reuptake inhibitors (SNRIs)</td><td></td><td></td><td></td></tr><tr><td>Desvenlafaxine</td><td>11 hours</td><td>30</td><td>None</td></tr><tr><td>Duloxetine</td><td>12 hours</td><td>90</td><td>None</td></tr><tr><td>Levomilnacipran</td><td>12 hours</td><td>22</td><td>None</td></tr><tr><td>Venlafaxine</td><td>5 hours</td><td>27–30</td><td>O-Desmethyl-
+venlafaxine</td></tr><tr><td>Tricyclic Antidepressants (TCAs)</td><td></td><td></td><td></td></tr><tr><td>Amitriptyline</td><td>9–46 hours</td><td>90–97</td><td>Nortriptyline</td></tr><tr><td>Desipramine</td><td>11–46 hours</td><td>73–92</td><td>2-Hydroxy-desipramine</td></tr><tr><td>Doxepin</td><td>8–36 hours</td><td>68–82</td><td>Desmethyl-doxepin</td></tr><tr><td>Imipramine</td><td>6–34 hours</td><td>63–96</td><td>Desipramine</td></tr><tr><td>Nortriptyline</td><td>16–88 hours</td><td>87–95</td><td>10-Hydroxy-nortriptyline</td></tr><tr><td>Mixed serotonergic (mixed 5-HT)</td><td></td><td></td><td></td></tr><tr><td>Nefazodone</td><td>2–4 hours</td><td>99</td><td>meta-Chlorophenyl-
+piperazine</td></tr><tr><td>Trazodone</td><td>6–11 hours</td><td>92</td><td>meta-Chlorophenyl-
+piperazine</td></tr><tr><td>Vilazodone</td><td>25 hours</td><td>&gt;95</td><td></td></tr><tr><td>Vortioxetine</td><td>66 hours</td><td>98</td><td></td></tr><tr><td>Norepinephrine/Dopamine reuptake inhibitor (NDRI)</td><td></td><td></td><td></td></tr><tr><td>Bupropion</td><td>10–21 hours</td><td>82–88</td><td>Hydroxy-bupropion</td></tr><tr><td></td><td></td><td></td><td>Threohydro-bupropion</td></tr><tr><td></td><td></td><td></td><td>Erythrohydro-bupropion</td></tr><tr><td>Serotonin and α-adrenergic antagonists
+2</td><td></td><td></td><td></td></tr><tr><td>Mirtazapine</td><td>20–40 hours</td><td>85</td><td>None</td></tr></table></div><h2>Depressive Disorders | CHAPTER 68</h2>
+<p>TABLE 68-6 Second- and Third-Generation Antidepressants and Cytochrome (CYP) P450</p>
+<p>Enzyme Inhibitory Potential</p>
+<p>CYP Enzyme</p>
+<p>Drug 1A2 2C 2D6 3A4</p>
+<p>Bupropion 0 0 +++ 0</p>
+<p>Citalopram 0 0 + NA</p>
+<p>Duloxetine 0 0 +++ 0</p>
+<p>Escitalopram 0 0 + 0</p>
+<p>Fluoxetine 0 ++ ++++ ++</p>
+<p>Fluvoxamine ++++ ++ 0 +++</p>
+<p>Mirtazapine 0 0 0 0</p>
+<p>Nefazodone 0 0 0 ++++</p>
+<p>Paroxetine 0 0 ++++ 0</p>
+<p>Sertraline 0 ++ + +</p>
+<p>(des)-Venlafaxine 0 0 0/+ 0</p>
+<p>++++, high; +++, moderate; ++, low; +, very low; 0, absent.</p>
+<p>Serotonin–Norepinephrine Reuptake Inhibitors and Antidepressants</p>
+<p>with Mixed Serotonin Effects</p>
+<li>The serotonin–norepinephrine reuptake inhibitors include venlafaxine, desven-</li>
+<p>lafaxine, duloxetine, and levomilnacipran. Some studies suggest a slight efficacy</p>
+<p>advantage for venlafaxine compared to other antidepressants.</p>
+<li>Common side effects for these medications may be dose-related and include</li>
+<pre><code>nausea, sexual dysfunction, activation, and hyperhidrosis.</code></pre>
+<li>Venlafaxine may cause a dose-related increase in diastolic blood pressure. Dosage reduc-</li>
+<p>tion or discontinuation may be necessary if sustained hypertension occurs. Nausea and</p>
+<p>vomiting may be worse with venlafaxine and there may be higher side effect-related</p>
+<p>discontinuation rates with venlafaxine and duloxetine than with the SSRIs.</p>
+<li>The most common side effects of duloxetine are nausea, dry mouth, constipation,</li>
+<p>decreased appetite, insomnia, and increased sweating.</p>
+<li>Mirtazapine enhances central noradrenergic and serotonergic activity by antagonizing</li>
+<p>central presynaptic α-adrenergic autoreceptors and heteroreceptors. It also antagonizes</p>
+<p>2</p>
+<p>5-HT and 5-HT receptors and blocks histamine receptors. It may be an option for</p>
+<p>2 3</p>
+<pre><code>patients who experience sexual dysfunction taking other antidepressants. Mirtazapine’s</code></pre>
+<p>most common adverse effects are somnolence, weight gain, dry mouth, and constipation.</p>
+<li>Levomilnacipran is a single-isomer, extended-release form of milnacipran which is</li>
+<p>FDA-approved to treat fibromyalgia which pharmacologically inhibits NE reuptake</p>
+<p>more than 5HT reuptake. This agent may increase blood pressure and heart rate and</p>
+<p>its place in therapy for MDD is unknown.</p>
+<li>Trazodone and nefazodone antagonize the 5-HT receptor and inhibit the reuptake</li>
+<p>2</p>
+<p>of 5-HT. They can also enhance 5-HT neurotransmission. Trazodone blocks</p>
+<h2>1A</h2>
+<p>α-adrenergic and histaminergic receptors increasing dizziness and sedation.</p>
+<p>✓1</p>
+<p>Trazodone cause minimal anticholinergic effects. Sedation, dizziness, and cog-</p>
+<p>nitive slowing are the most frequent dose-limiting side effects with trazodone.</p>
+<p>Common side effects with nefazodone are dizziness, orthostatic hypotension, and</p>
+<p>somnolence.</p>
+<p>✓ Priapism occurs rarely with trazodone (1 in 6000 male patients). Surgical intervention</p>
+<p>may be required, and impotence may result.</p>
+<p>✓ Nefazodone carries a black box warning for life-threatening liver failure. Do not</p>
+<p>initiate nefazodone in individuals with active liver disease or elevated serum</p>
+<p>transaminases.</p>
+<p>795</p>
+<p>CH68.indd 795 20-11-2020 11:21:56</p>
+<div class="table-container"><table><tr><th>TABLE 68-6 Second- and Third-Generation Antidepressants and Cytochrome (CYP) P450
+Enzyme Inhibitory Potential</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>CYP Enzyme</td><td></td><td></td><td></td></tr><tr><td>Drug</td><td>1A2</td><td>2C</td><td>2D6</td><td>3A4</td></tr><tr><td>Bupropion</td><td>0</td><td>0</td><td>+++</td><td>0</td></tr><tr><td>Citalopram</td><td>0</td><td>0</td><td>+</td><td>NA</td></tr><tr><td>Duloxetine</td><td>0</td><td>0</td><td>+++</td><td>0</td></tr><tr><td>Escitalopram</td><td>0</td><td>0</td><td>+</td><td>0</td></tr><tr><td>Fluoxetine</td><td>0</td><td>++</td><td>++++</td><td>++</td></tr><tr><td>Fluvoxamine</td><td>++++</td><td>++</td><td>0</td><td>+++</td></tr><tr><td>Mirtazapine</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Nefazodone</td><td>0</td><td>0</td><td>0</td><td>++++</td></tr><tr><td>Paroxetine</td><td>0</td><td>0</td><td>++++</td><td>0</td></tr><tr><td>Sertraline</td><td>0</td><td>++</td><td>+</td><td>+</td></tr><tr><td>(des)-Venlafaxine</td><td>0</td><td>0</td><td>0/+</td><td>0</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Vilazodone and vortioxetine are other antidepressants with mixed serotonin effects</li>
+<p>that are a combination SSRI and 5-HT presynaptic receptor partial agonists. Vilazo-</p>
+<h2>1A</h2>
+<p>done may be particularly useful for depressed patients with anxiety, and vortioxetine</p>
+<p>may be helpful for depressed patients with cognitive difficulties.</p>
+<p>✓ Vilazodone is associated with nausea, diarrhea, dizziness, insomnia, and decreased</p>
+<p>libido, especially in men.</p>
+<pre><code>✓ Vortioxetine causes nausea and constipation and sexual dysfunction in men at the</code></pre>
+<p>highest dose (20 mg/day).</p>
+<p>Bupropion</p>
+<li>Bupropion inhibits both the NE and DA reuptake that makes it one of the most</li>
+<p>activating antidepressants.</p>
+<p>✓ The occurrence of seizures with bupropion is dose related and may be increased by</p>
+<p>predisposing factors (eg, history of head trauma or central nervous system [CNS]</p>
+<p>tumor). At the ceiling dose (450 mg/day), the incidence of seizures is 0.4%.</p>
+<p>✓ Other side effects are nausea, vomiting, tremor, insomnia, dry mouth, and skin</p>
+<p>reactions. It is contraindicated in patients with bulimia or anorexia nervosa, as these</p>
+<pre><code>patients have a higher risk for seizures. It causes less sexual dysfunction than SSRIs.</code></pre>
+<p>Tricyclic Antidepressants</p>
+<li>Tricyclic antidepressant (TCA) use has diminished because of the availability of</li>
+<p>equally effective therapies that are safer on overdose and better tolerated. They</p>
+<p>inhibit the reuptake of NE and 5-HT and have affinity for adrenergic, cholinergic,</p>
+<p>and histaminergic receptors.</p>
+<li>TCAs cause anticholinergic side effects (eg, dry mouth, blurred vision, constipation,</li>
+<p>urinary retention, tachycardia, memory impairment, and delirium) and sedation.</p>
+<p>Additional adverse effects include weight gain, orthostatic hypotension, cardiac con-</p>
+<pre><code>duction delay, and sexual dysfunction.</code></pre>
+<li>Desipramine carries an increased risk of death in patients with a family history of</li>
+<p>sudden cardiac death, cardiac dysrhythmias, or cardiac conduction disturbances.</p>
+<li>Abrupt withdrawal of TCAs (especially high doses) may result in cholinergic</li>
+<p>rebound (eg, dizziness, nausea, diarrhea, insomnia, and restlessness).</p>
+<li>Maprotiline, a tetracyclic drug, causes seizures at a higher incidence than do stan-</li>
+<p>dard TCAs and is contraindicated in patients with a history of seizure disorder.</p>
+<li>Metabolism of the TCAs appears to be linear within the usual dosage range. Dose-</li>
+<p>related kinetics cannot be ruled out in older patients. Factors reported to influence</p>
+<pre><code>TCA plasma concentrations include renal or hepatic dysfunction, genetics, age, ciga-</code></pre>
+<p>rette smoking, and concurrent drug administration.</p>
+<li>In acutely depressed patients, there is a correlation between antidepressant effect and</li>
+<p>plasma concentrations for some TCAs (eg, amitriptyline, nortriptyline, imipra-</p>
+<p>mine, and desipramine). The best-established therapeutic range is for nortriptyline,</p>
+<h2>and data suggest a therapeutic window (Table 68-2).</h2>
+<li>Some indications for TCA plasma level monitoring include inadequate response;</li>
+<p>relapse; serious or persistent adverse effects; use of higher than standard doses;</p>
+<p>suspected non-adherence, toxicity, pharmacokinetic interactions; elderly, pediatric,</p>
+<p>and adolescent patients; pregnant patients; patients of African or Asian descent</p>
+<p>(because of slower metabolism); cardiac disease; and changing brands. Plasma</p>
+<p>concentrations should be obtained at steady state, usually after a minimum of</p>
+<p>1 week at constant dosage, during the elimination phase, and usually in the morning</p>
+<p>12 hours after the last dose.</p>
+<li>TCAs may interact with other drugs that modify hepatic cytochrome P450 (CYP450)</li>
+<p>enzyme activity or hepatic blood flow. TCAs also are involved in interactions through</p>
+<p>displacement from protein-binding sites.</p>
+<li>Increased plasma concentrations of TCAs and symptoms of toxicity may occur when</li>
+<p>fluoxetine or paroxetine (both inhibitors of CYP2D6) are added.</p>
+<p>796</p>
+<p>CH68.indd 796 20-11-2020 11:21:56</p>
+<h2>Depressive Disorders | CHAPTER 68</h2>
+<p>Monoamine Oxidase Inhibitors</p>
+<li>Isocarboxazide, phenelzine, and tranylcypromine increase the concentrations of</li>
+<p>NE, 5-HT, and DA within the neuronal synapse through inhibition of monoamine</p>
+<p>oxidase (MAO). They are nonselective inhibitors of MAO-A and MAO-B. Selegiline,</p>
+<p>available as a transdermal patch for treatment of major depression, inhibits brain</p>
+<p>MAO-A and MAO-B but has reduced effects on MAO-A in the gut.</p>
+<li>Table 68-7 shows dietary and medication restrictions for patients taking</li>
+<p>phenelzine or tranylcypromine.</p>
+<li>The most common adverse effect of MAOIs is postural hypotension (more likely</li>
+<p>with phenelzine than tranylcypromine), which can be minimized by divided</p>
+<p>dosing.</p>
+<li>Phenelzine is mildly to moderately sedating, but tranylcypromine is often stimu-</li>
+<p>lating, and the last dose of the day is administered in the early afternoon. Sexual</p>
+<pre><code>dysfunction in both genders is common. Phenelzine has been associated with hepa-</code></pre>
+<p>tocellular damage and weight gain.</p>
+<li>Hypertensive crisis is a potentially fatal reaction that can occur when MAOIs are</li>
+<p>taken concurrently with certain foods, especially those high in tyramine, and with</p>
+<p>certain drugs (see Table 68-7). Symptoms of hypertensive crisis include occipital</p>
+<p>headache, stiff neck, nausea, vomiting, sweating, and sharply elevated blood pres-</p>
+<p>sure. Hypertensive crisis may be treated with agents such as captopril. Education</p>
+<p>of patients taking MAOIs regarding dietary and medication restrictions is critical.</p>
+<p>Patients taking transdermal selegiline patch doses greater than 6 mg/24 hours must</p>
+<p>follow the dietary restrictions.</p>
+<li>Potentially fatal reactions may occur when any SSRI or TCA is coadministered with</li>
+<p>an MAOI. However, TCAs and MAOIs can be combined in refractory patients by</p>
+<p>experienced clinicians with careful monitoring.</p>
+<p>Ketamine</p>
+<li>Ketamine is an older anesthetic agent, which modulates glutamate activity via extra-</li>
+<p>synaptic N-methyl-D-aspartate (NMDA) receptor antagonism resulting in increased</p>
+<p>BDNF activity and synaptogenesis.</p>
+<li>Ketamine has rapid antidepressant effects when used in intravenous doses of 0.5mg/</li>
+<p>kg for treatment refractory MDD.</p>
+<li>Esketamine is the single s-isomer of ketamine that has a higher affinity for the</li>
+<p>NMDA receptor than the r-isomer. Intranasal esketamine is FDA-approved and</p>
+<p>requires supervised, in-clinic self-administration (2–6 sprays per session) followed</p>
+<p>by 2 hours of in-clinic observation. In trials, patients received doses twice weekly for</p>
+<p>4 weeks and variable dosing thereafter.</p>
+<li>Side effects include transient psychotomimetic/dissociative effects and blood pres-</li>
+<p>sure elevation (10–20 mm Hg) with both agents.</p>
+<p>Brexanolone</p>
+<li>Brexanolone (exogenous allopregnanolone) is thought to exert antidepressant</li>
+<p>effect by allosteric modulation of GABA receptors, which may increase 5HT and</p>
+<h2>A</h2>
+<p>NE transmission and is FDA-approved for postpartum depression. Administration</p>
+<p>involves a 60-hour stepped dose, intravenous infusion.</p>
+<li>Common adverse effects are headache, dizziness, and somnolence. It has a manda-</li>
+<p>tory Risk Evaluation and Mitigation Strategies (REMS) program with Elements</p>
+<p>to Ensure Safe Use (ETASU) due to the incidence of excessive sedation or loss of</p>
+<p>consciousness.</p>
+<p>St. John’s Wort</p>
+<li>St. John’s wort, a herb containing hypericum, may be effective for mild-to-moderate</li>
+<p>depression. It is associated with several drug–drug interactions. All antidepressant</p>
+<p>regimens should be overseen by a trained healthcare professional.</p>
+<p>797</p>
+<p>CH68.indd 797 20-11-2020 11:21:56</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 68-7 Dietary and Medication Restrictions for Patients Taking Monoamine Oxidase</p>
+<p>Inhibitorsa</p>
+<p>Approximate Tyramine</p>
+<p>Foods to Avoid Completely Content (mg) Per Ounce</p>
+<p>Aged cheeses (eg, cheddar, blue, Swiss, Camembert) 25–45</p>
+<p>Chicken liver 60</p>
+<p>Dry aged meats (eg, mortadella, salami, prosciutto) 2–45</p>
+<p>Fava beans Unknown</p>
+<p>Kim chee Unknown</p>
+<p>Red wine Variable</p>
+<p>Sauerkraut 1–3</p>
+<p>Smoked or pickled fish (eg, lox, caviar, pickled herring) 0–80</p>
+<p>Soy sauce, fermented soy, miso Varies</p>
+<p>Tap beer 20–40</p>
+<p>Yeast extract 2–60</p>
+<p>Foods to Eat in Moderation</p>
+<p>American cheese, Parmesan cheese &lt;2</p>
+<p>Canned, filtered beer &lt;2 per 12 oz (355 mL)</p>
+<p>Havarti, brie Thought to be low</p>
+<p>Pepperoni &lt;2</p>
+<p>Pizza (large commercial chains generally safe; avoid gourmet 2 slices</p>
+<p>with aged cheeses and meats)</p>
+<p>White wine &lt;1 per 4 oz (120 mL)</p>
+<p>Foods Without Restrictions</p>
+<p>Fresh dairy products (cottage cheese, cream cheese,</p>
+<p>fresh milk, ice cream, ricotta, sour cream, yogurt)</p>
+<p>Fresh meats (including fresh sausage)</p>
+<p>Processed meats (eg, lunch meat, hot dogs, ham)</p>
+<p>Spirits (eg, bourbon, gin, rum, vodka)</p>
+<p>Yeast bread products</p>
+<p>Medications to Avoid Completely</p>
+<p>Antidepressantsa Dopamine Methylphenidate</p>
+<p>Amphetamines Ephedrine Reserpine</p>
+<p>Appetite suppressants Epinephrine Sympathomimetics</p>
+<p>Asthma inhalants Guanethidine Tryptophan</p>
+<p>Buspirone Levodopa</p>
+<p>Carbamazepine Local anestheticsb</p>
+<p>Decongestants Meperidine</p>
+<p>Dextromethorphan Methyldopa</p>
+<p>aTricyclic antidepressants may be used with caution by experienced clinicians in treatment-refractory</p>
+<p>populations.</p>
+<p>bThose containing sympathomimetic vasoconstrictors.</p>
+<p>798</p>
+<p>CH68.indd 798 20-11-2020 11:21:57</p>
+<div class="table-container"><table><tr><th>TABLE 68-7 Dietary and Medication Restrictions for Patients Taking Monoamine Oxidase
+Inhibitorsa</th><th></th><th></th><th></th></tr><tr><td>Foods to Avoid Completely</td><td></td><td>Approximate Tyramine
+Content (mg) Per Ounce</td><td></td></tr><tr><td>Aged cheeses (eg, cheddar, blue, Swiss, Camembert)
+Chicken liver
+Dry aged meats (eg, mortadella, salami, prosciutto)
+Fava beans
+Kim chee
+Red wine
+Sauerkraut
+Smoked or pickled fish (eg, lox, caviar, pickled herring)
+Soy sauce, fermented soy, miso
+Tap beer
+Yeast extract</td><td></td><td>25–45
+60
+2–45
+Unknown
+Unknown
+Variable
+1–3
+0–80
+Varies
+20–40
+2–60</td><td></td></tr><tr><td>Foods to Eat in Moderation</td><td></td><td></td><td></td></tr><tr><td>American cheese, Parmesan cheese
+Canned, filtered beer
+Havarti, brie
+Pepperoni
+Pizza (large commercial chains generally safe; avoid gourmet
+with aged cheeses and meats)
+White wine</td><td></td><td>&lt;2
+&lt;2 per 12 oz (355 mL)
+Thought to be low
+&lt;2
+2 slices
+&lt;1 per 4 oz (120 mL)</td><td></td></tr><tr><td>Foods Without Restrictions</td><td></td><td></td><td></td></tr><tr><td>Fresh dairy products (cottage cheese, cream cheese,
+fresh milk, ice cream, ricotta, sour cream, yogurt)
+Fresh meats (including fresh sausage)
+Processed meats (eg, lunch meat, hot dogs, ham)
+Spirits (eg, bourbon, gin, rum, vodka)
+Yeast bread products</td><td></td><td></td><td></td></tr><tr><td>Medications to Avoid Completely</td><td></td><td></td><td></td></tr><tr><td>Antidepressantsa
+Amphetamines
+Appetite suppressants
+Asthma inhalants
+Buspirone
+Carbamazepine
+Decongestants
+Dextromethorphan</td><td>Dopamine
+Ephedrine
+Epinephrine
+Guanethidine
+Levodopa
+Local anestheticsb
+Meperidine
+Methyldopa</td><td></td><td>Methylphenidate
+Reserpine
+Sympathomimetics
+Tryptophan</td></tr></table></div><h2>Depressive Disorders | CHAPTER 68</h2>
+<h2>SPECIAL POPULATIONS</h2>
+<p>Older Patients</p>
+<li>In older patients, depressed mood may be less prominent than other symptoms, such</li>
+<p>as loss of appetite, cognitive impairment, sleeplessness, fatigue, physical complaints,</p>
+<p>and loss of interest in usual activities.</p>
+<li>The SSRIs are often considered first-choice antidepressants for older patients.</li>
+<p>Bupropion, venlafaxine, and mirtazapine are also effective and well tolerated.</p>
+<li>Hyponatremia is more common in older patients.</li>
+<p>Pediatric Patients</p>
+<li>Symptoms of depression in childhood include boredom, anxiety, failing adjustment,</li>
+<p>and sleep disturbance.</p>
+<li>Data supporting efficacy of antidepressants in children and adolescents are sparse.</li>
+<p>Fluoxetine and escitalopram are the only FDA-approved antidepressants for patients</p>
+<p>below 18 years of age.</p>
+<li>All antidepressants carry a black box warning for caution when using antidepressants</li>
+<p>in this population, and the FDA recommends specific monitoring parameters.</p>
+<li>Several cases of sudden death have been reported in children and adolescents taking</li>
+<p>desipramine and baseline electrocardiogram (ECG) is recommended.</p>
+<p>Pregnancy</p>
+<li>Approximately 14% of pregnant women develop depression during pregnancy and</li>
+<p>women who discontinued antidepressant therapy were five times more likely to have</p>
+<p>a relapse during their pregnancy than were women who continued treatment.</p>
+<li>The absolute risk of antidepressant use in pregnancy is unknown.</li>
+<li>Risks reported with SSRIs use in pregnancy include low birth weight, respiratory</li>
+<p>distress, and congenital heart defects.</p>
+<li>The risks and benefits of drug therapy during pregnancy must be weighed, including</li>
+<p>concerns about untreated depression.</p>
+<li>Lack of current data exists regarding antidepressant exposure to infants during</li>
+<p>breastfeeding; however, sertraline may be preferred. The Motherisk program has the</p>
+<p>most up-to-date information.</p>
+<p>Relative Resistance and Treatment-Resistant Depression</p>
+<li>Most “treatment-resistant” depressed patients have received inadequate therapy.</li>
+<li>The STAR*D study showed that one in three patients who did not achieve remis-</li>
+<p>sion with an antidepressant became symptom-free when an additional medication</p>
+<p>(eg, bupropion SR or buspirone) was added, and one in four achieved remission</p>
+<p>after switching to a different antidepressant (eg, venlafaxine XR or bupropion, or</p>
+<p>sertraline).</p>
+<li>The current antidepressant may be stopped and a trial initiated with different agent</li>
+<p>(eg, mirtazapine or nortriptyline).</p>
+<li>Alternatively, the current antidepressant may be augmented by addition of another</li>
+<p>agent (eg, lithium or triiodothyronine [T]), or another antidepressant can be added.</p>
+<p>3</p>
+<p>An atypical antipsychotic (eg, aripiprazole, quetiapine, brexpiprazole) can be used to</p>
+<p>augment antidepressant response.</p>
+<li>The practice guideline of the American Psychiatric Association recommends that</li>
+<p>after 6–8 weeks of antidepressant treatment, partial responders should consider</p>
+<p>changing the dose, augmenting the antidepressant, or adding psychotherapy or ECT.</p>
+<p>For patients with no response, options include changing to another antidepressant or</p>
+<p>the addition of psychotherapy or ECT. Figure 68-1 is an algorithm for treatment of</p>
+<p>depression including refractory patients.</p>
+<p>799</p>
+<p>CH68.indd 799 20-11-2020 11:21:57</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Several monitoring parameters, in addition to plasma concentrations, are useful.</li>
+<p>Monitor regularly for adverse effects (Table 68-4), remission of target symptoms, and</p>
+<pre><code>changes in social or occupational functioning. Assure regular monitoring for several</code></pre>
+<p>months after discontinuation of antidepressants.</p>
+<li>Regularly monitor blood pressure of patients given serotonin–norepinephrine reup-</li>
+<p>take inhibitors.</p>
+<li>A pretreatment ECG is recommended before starting TCA therapy in children, ado-</li>
+<p>lescents, and patients over 40 years of age, and perform follow-up ECGs periodically.</p>
+<li>Monitor for suicidal ideation after initiation of any antidepressant, especially in the</li>
+<p>first few weeks of treatment and up to 30 days after treatment discontinuation.</p>
+<li>In addition to the clinical interview, use psychometric rating instruments to rapidly</li>
+<p>and reliably measure the nature and severity of depressive and associated symptoms.</p>
+<p>See Chapter 85, Major Depressive Disorder, authored by Amy M. Vandenberg, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>800</p>
+<p>CH68.indd 800 20-11-2020 11:21:57</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

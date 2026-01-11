@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57. Parkinson Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>57. Parkinson Disease</h1>
+        </header>
+        <main>
+            <p>00</p>
+<li>Parkinson disease (PD) has highly characteristic neuropathologic findings and a</li>
+<p>clinical presentation, including motor deficits and, in some cases, mental deterioration.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The true etiology of PD is unknown.</li>
+<li>Two hallmark features in the substantia nigra pars compacta are loss of neurons and</li>
+<p>presence of Lewy bodies. The degree of nigrostriatal dopamine loss correlates posi-</p>
+<p>tively with severity of motor symptoms.</p>
+<li>Reduced activation of dopamine and dopamine receptors results in greater inhibi-</li>
+<p>1 2</p>
+<p>tion of the thalamus and reduced activation of the motor cortex. Clinical improve-</p>
+<p>ment may be tied to restoring activity more at the dopamine receptor than at the</p>
+<p>2</p>
+<p>dopamine receptor.</p>
+<p>1</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>PD develops insidiously and progresses slowly over many years.</li>
+<h2>GENERAL FEATURES</h2>
+<li>The patient exhibits bradykinesia and at least one of the following: resting tremor,</li>
+<p>rigidity, or postural instability. Asymmetry of motor features is supportive.</p>
+<h2>MOTOR SYMPTOMS</h2>
+<li>Only two-thirds of patients with PD have tremor on diagnosis, and some never</li>
+<p>develop this sign. Tremor in PD is present most commonly in the hands, sometimes</p>
+<p>with a characteristic pill-rolling motion.</p>
+<li>The patient experiences hypokinetic movements, decreased manual dexterity, dif-</li>
+<p>ficulty arising from a seated position, diminished arm swing during ambulation,</p>
+<p>dysarthria (slurred speech), dysphagia (difficulty with swallowing), festinating gait</p>
+<p>(tendency to pass from a slow to a quickened pace), flexed posture, “freezing” at ini-</p>
+<p>tiation of movement, hypomimia (reduced facial animation), hypophonia (reduced</p>
+<p>voice volume), and micrographia.</p>
+<h2>AUTONOMIC AND SENSORY SYMPTOMS</h2>
+<li>The patient experiences bladder dysfunction, constipation, diaphoresis, fatigue,</li>
+<p>olfactory impairment, orthostatic intolerance, pain, paresthesia, paroxysmal vascular</p>
+<pre><code>flushing, seborrhea, sexual dysfunction, and sialorrhea (drooling).</code></pre>
+<h2>MENTAL STATUS CHANGES</h2>
+<li>The patient experiences anxiety, apathy, bradyphrenia (slowness of thought</li>
+<p>processes), cognitive impairment, depression, and hallucinosis/psychosis.</p>
+<h2>SLEEP DISTURBANCES</h2>
+<li>The patient experiences excessive daytime sleepiness, insomnia, obstructive sleep</li>
+<p>apnea, and rapid eye movement (REM) sleep behavior disorder.</p>
+<h2>DIAGNOSIS</h2>
+<li>The clinical diagnosis of PD is based on the presence of bradykinesia and at least one</li>
+<p>of the three other features: muscular rigidity, resting tremor, and postural instability</p>
+<h2>(Table 57-1).</h2>
+<li>There are no laboratory tests available to diagnose PD, including genetic testing.</li>
+<li>Neuroimaging may be useful for excluding other diagnoses.</li>
+<li>Medication history should be obtained to rule out drug-induced parkinsonism.</li>
+<p>656</p>
+<h2>RETPAHC</h2>
+<p>57</p>
+<p>Parkinson Disease</p>
+<p>ch57.indd 656 19-11-2020 17:51:08</p>
+<div class="table-container"><table><tr><th>Parkinson Disease</th><th>57
+00</th><th>RETPAHC</th></tr></table></div><h2>Parkinson Disease | CHAPTER 57</h2>
+<p>TABLE 57-1 Diagnostic Criteria and Differential Diagnosis for Parkinson Disease</p>
+<p>Parkinson disease</p>
+<li>Step 1: Presence of bradykinesia and at least one of the following: resting tremor, rigidity, or</li>
+<p>postural instability</p>
+<li>Step 2: Exclude other types of parkinsonism or tremor disorders (see “Differential</li>
+<p>Diagnosis”)</p>
+<li>Step 3: Presence of at least three supportive positive criteria:</li>
+<li>Asymmetry of motor signs/symptoms</li>
+<li>Unilateral onset</li>
+<li>Progressive disorder</li>
+<li>Resting tremor</li>
+<li>Excellent response to carbidopa/levodopa</li>
+<li>levodopa response for 5 years or longer</li>
+<li>Presence of levodopa dyskinesias</li>
+<p>Differential diagnosis</p>
+<li>Essential tremor</li>
+<li>Pharmacotoxicity (drug-induced)</li>
+<li>Antiemetics (eg, metoclopramide, prochlorperazine)</li>
+<li>Antipsychotics (eg, chlorpromazine, fluphenazine, haloperidol, olanzapine, risperidone,</li>
+<p>thioridazine)</p>
+<li>Other drugs (α-methyldopa, cinnarizine, flunarizine, tetrabenazine)</li>
+<li>Environmental toxicity (eg, manganese, organophosphates)</li>
+<li>Infections (eg, human immunodeficiency virus, subacute sclerosing panencephalitis)</li>
+<li>Metabolic disorder (eg, hypothyroidism, parathyroid abnormalities)</li>
+<li>Neoplasms, strokes, traumatic lesions involving the nigrostriatal pathways</li>
+<li>Normal-pressure hydrocephalus</li>
+<li>Parkinsonism with other neuronal system degenerations</li>
+<li>Corticobasal ganglionic degeneration</li>
+<li>Multiple-system atrophies</li>
+<li>Progressive supranuclear palsy</li>
+<li>Familial (hereditary) parkinsonism</li>
+<li>Autosomal dominant</li>
+<li>α-Synuclein gene mutation (PARK1 and PARK4)</li>
+<li>l-responsive dystonia</li>
+<li>Leucine-rich repeat kinase 2 (LRRK2) mutation</li>
+<li>Rapid-onset dystonia parkinsonism (DYT12)</li>
+<li>Spinocerebellar ataxias (SCA2, SCA3)</li>
+<li>Autosomal recessive</li>
+<li>Wilson disease</li>
+<li>Young-onset parkinsonism (DJ-1, parkin, PINK1)</li>
+<li>X-linked recessive</li>
+<li>Fragile X tremor/ataxia syndrome (FXTAS)</li>
+<li>Lubag (DYT3 or Filipino dystonia parkinsonism)</li>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals of treatment are to minimize symptoms, disability, and</li>
+<p>side effects while maintaining quality of life. Education of patients and caregivers,</p>
+<p>exercise, and proper nutrition are essential.</p>
+<li>To date, no treatments have been shown to effectively change the course of PD by</li>
+<p>slowing or halting its progression (disease modification).</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Surgery should be considered an adjunct to pharmacotherapy when patients are</li>
+<p>experiencing frequent motor fluctuations or disabling dyskinesia or tremor despite</p>
+<p>an optimized medical regimen</p>
+<p>657</p>
+<p>ch57.indd 657 19-11-2020 17:51:08</p>
+<div class="table-container"><table><tr><th>TABLE 57-1 Diagnostic Criteria and Differential Diagnosis for Parkinson Disease</th></tr><tr><td>Parkinson disease
+• Step 1: Presence of bradykinesia and at least one of the following: resting tremor, rigidity, or
+postural instability
+• Step 2: Exclude other types of parkinsonism or tremor disorders (see “Differential
+Diagnosis”)
+• Step 3: Presence of at least three supportive positive criteria:
+• Asymmetry of motor signs/symptoms
+• Unilateral onset
+• Progressive disorder
+• Resting tremor
+• Excellent response to carbidopa/levodopa
+• levodopa response for 5 years or longer
+• Presence of levodopa dyskinesias
+Differential diagnosis
+• Essential tremor
+• Pharmacotoxicity (drug-induced)
+• Antiemetics (eg, metoclopramide, prochlorperazine)
+• Antipsychotics (eg, chlorpromazine, fluphenazine, haloperidol, olanzapine, risperidone,
+thioridazine)
+• Other drugs (α-methyldopa, cinnarizine, flunarizine, tetrabenazine)
+• Environmental toxicity (eg, manganese, organophosphates)
+• Infections (eg, human immunodeficiency virus, subacute sclerosing panencephalitis)
+• Metabolic disorder (eg, hypothyroidism, parathyroid abnormalities)
+• Neoplasms, strokes, traumatic lesions involving the nigrostriatal pathways
+• Normal-pressure hydrocephalus
+• Parkinsonism with other neuronal system degenerations
+• Corticobasal ganglionic degeneration
+• Multiple-system atrophies
+• Progressive supranuclear palsy
+• Familial (hereditary) parkinsonism
+• Autosomal dominant
+• α-Synuclein gene mutation (PARK1 and PARK4)
+• l-responsive dystonia
+• Leucine-rich repeat kinase 2 (LRRK2) mutation
+• Rapid-onset dystonia parkinsonism (DYT12)
+• Spinocerebellar ataxias (SCA2, SCA3)
+• Autosomal recessive
+• Wilson disease
+• Young-onset parkinsonism (DJ-1, parkin, PINK1)
+• X-linked recessive
+• Fragile X tremor/ataxia syndrome (FXTAS)
+• Lubag (DYT3 or Filipino dystonia parkinsonism)</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>Other biotherapies, such as stem cell and gene-based approaches, are currently under</li>
+<p>investigation and remain highly experimental.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>General Approach</p>
+<li>An algorithm for management of early to advanced PD is shown in Figure 57-1.</li>
+<p>Table 57-2 is a summary of available antiparkinson medications and their dosing,</p>
+<h2>and Table 57-3 shows side effect monitoring.</h2>
+<p>Diagnosis of Parkinson</p>
+<p>disease</p>
+<p>No significant Identify presence and Identify and manage</p>
+<p>impairment symptoms of impairment nonmotor symptoms</p>
+<p>Consider rasagiline</p>
+<p>Consider &lt;65 years* ≥65 years*</p>
+<p>Tremor</p>
+<p>anticholinergic</p>
+<p>Carbidopa/levodopa Carbidopa/levodopa</p>
+<p>&lt;65 years* ≥65 years*</p>
+<p>Dopamine agonist Bradykinesia, rigidity</p>
+<p>Dopamine agonist &lt;65 years* Postural instability/gait ≥65 years* Carbidopa/levodopa</p>
+<p>impairment</p>
+<p>Physical therapy Physical therapy</p>
+<p>Development of motor</p>
+<p>complications</p>
+<p>Pharmacotherapy</p>
+<p>Surgery (deep brain</p>
+<p>stimulation)</p>
+<pre><code>Age is not the sole determinant for drug choice. Other factors such as cognitive function and overall toler-</code></pre>
+<p>ability of drug (especially in older patients) should be considered.</p>
+<p>FIGURE 57-1. General approach to the management of early to advanced</p>
+<p>Parkinson disease.</p>
+<p>658</p>
+<p>ch57.indd 658 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>Identify pr
+symptoms o</th><th>esence and
+f impairment</th></tr></table></div><div class="table-container"><table><tr><th>Tre</th><th>mor</th></tr></table></div><div class="table-container"><table><tr><th>Bradykine</th><th>sia, rigidity</th></tr></table></div><div class="table-container"><table><tr><th>Dopamine agonist</th></tr><tr><td>Physical therapy</td></tr></table></div><div class="table-container"><table><tr><th>Carbidopa/levodopa</th></tr><tr><td>Physical therapy</td></tr></table></div><div class="table-container"><table><tr><th>Postural ins
+impair</th><th>tability/gait
+ment</th></tr></table></div><div class="table-container"><table><tr><th>Developme
+compli</th><th>nt of motor
+cations</th></tr></table></div><div class="table-container"><table><tr><th>Pharmac</th><th>otherapy</th></tr></table></div><h2>Parkinson Disease | CHAPTER 57</h2>
+<h2>TABLE 57-2 Dosing of Drugs Used in Parkinson Diseasea</h2>
+<p>Starting Maintenance</p>
+<p>Doseb Doseb (mg/ Dosage Forms</p>
+<p>Generic Name Trade Name (mg/day) day) (mg)</p>
+<p>Anticholinergic drugs</p>
+<p>Benztropine Cogentin 0.5–1 1–6 0.5, 1, 2</p>
+<p>Trihexyphenidyl Artane 1–2 6–15 2, 5, 2/5 mL</p>
+<p>Carbidopa/Levodopa products</p>
+<p>Carbidopa/ Sinemet 300c 300–2000c 10/100, 25/100,</p>
+<p>levodopa 25/250</p>
+<p>Carbidopa/ Parcopa 300c 300–2000c 10/100, 25/100,</p>
+<p>levodopa ODT 25/250</p>
+<p>Carbidopa/ Sinemet CR 400c 400–2000c 25/100, 50/200</p>
+<p>levodopa CR</p>
+<p>Carbidopa/ Rytary 435c 435–2450c 23.75/95, 36.25/145,</p>
+<p>levodopa 48.75/195,</p>
+<p>IR/ER 61.25/245d</p>
+<p>Carbidopa/ Duopa 1000c 1000–2000c 4.63/20 per mL</p>
+<p>levodopa</p>
+<p>enteral</p>
+<p>suspension</p>
+<p>Carbidopa/ Stalevo 600e 600–1600e 12.5/50/200,</p>
+<p>levodopa/ 18.75/75/200,</p>
+<p>entacapone 25/100/200,</p>
+<p>31.25/125/200,</p>
+<p>37.5/150/200,</p>
+<p>50/200/200</p>
+<p>Carbidopa Lodosyn 25 25–75 25</p>
+<p>Levodopa Inbrija 84 84–420 42f</p>
+<p>Dopamine agonists</p>
+<p>Apomorphine Apokyn 1–3 3–12 30/3 mLg</p>
+<p>Bromocriptine Parlodel 2.5–5 15–40 2.5, 5</p>
+<p>Pramipexole Mirapex 0.125 1.5–4.5 0.125, 0.25, 0.5, 1, 1.5</p>
+<p>Pramipexole ER Mirapex ER 0.375 1.5–4.5 0.375, 0.75, 1.5, 3, 4.5</p>
+<p>Ropinirole Requip 0.75 9–24 0.25, 0.5, 1, 2, 3, 4, 5</p>
+<p>Ropinirole XL Requip XL 2 8–24 2, 4, 6, 8, 12</p>
+<p>Rotigotine Neupro 2 2–8 1, 2, 3, 4, 6, 8</p>
+<p>COMT inhibitors</p>
+<p>Entacapone Comtan 200–600 200–1600 200</p>
+<p>Tolcapone Tasmar 300 300–600 100, 200</p>
+<p>MAO-B inhibitors</p>
+<p>Rasagiline Azilect 0.5–1 0.5–1 0.5, 1</p>
+<p>Safinamide Xadago 50 50–100 50, 100</p>
+<p>Selegiline Eldepryl 5–10 5–10 5</p>
+<p>Selegiline ODT Zelapar 1.25 1.25–2.5 1.25, 2.5</p>
+<p>(Continued )</p>
+<p>659</p>
+<p>ch57.indd 659 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>TABLE 57-2 Dosing of Drugs Used in Parkinson Diseasea</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Trade Name</td><td>Starting
+Doseb
+(mg/day)</td><td>Maintenance
+Doseb (mg/
+day)</td><td>Dosage Forms
+(mg)</td></tr><tr><td>Anticholinergic drugs</td><td></td><td></td><td></td><td></td></tr><tr><td>Benztropine</td><td>Cogentin</td><td>0.5–1</td><td>1–6</td><td>0.5, 1, 2</td></tr><tr><td>Trihexyphenidyl</td><td>Artane</td><td>1–2</td><td>6–15</td><td>2, 5, 2/5 mL</td></tr><tr><td>Carbidopa/Levodopa products</td><td></td><td></td><td></td><td></td></tr><tr><td>Carbidopa/
+levodopa</td><td>Sinemet</td><td>300c</td><td>300–2000c</td><td>10/100, 25/100,
+25/250</td></tr><tr><td>Carbidopa/
+levodopa ODT</td><td>Parcopa</td><td>300c</td><td>300–2000c</td><td>10/100, 25/100,
+25/250</td></tr><tr><td>Carbidopa/
+levodopa CR</td><td>Sinemet CR</td><td>400c</td><td>400–2000c</td><td>25/100, 50/200</td></tr><tr><td>Carbidopa/
+levodopa
+IR/ER</td><td>Rytary</td><td>435c</td><td>435–2450c</td><td>23.75/95, 36.25/145,
+48.75/195,
+61.25/245d</td></tr><tr><td>Carbidopa/
+levodopa
+enteral
+suspension</td><td>Duopa</td><td>1000c</td><td>1000–2000c</td><td>4.63/20 per mL</td></tr><tr><td>Carbidopa/
+levodopa/
+entacapone</td><td>Stalevo</td><td>600e</td><td>600–1600e</td><td>12.5/50/200,
+18.75/75/200,
+25/100/200,
+31.25/125/200,
+37.5/150/200,
+50/200/200</td></tr><tr><td>Carbidopa</td><td>Lodosyn</td><td>25</td><td>25–75</td><td>25</td></tr><tr><td>Levodopa</td><td>Inbrija</td><td>84</td><td>84–420</td><td>42f</td></tr><tr><td>Dopamine agonists</td><td></td><td></td><td></td><td></td></tr><tr><td>Apomorphine</td><td>Apokyn</td><td>1–3</td><td>3–12</td><td>30/3 mLg</td></tr><tr><td>Bromocriptine</td><td>Parlodel</td><td>2.5–5</td><td>15–40</td><td>2.5, 5</td></tr><tr><td>Pramipexole</td><td>Mirapex</td><td>0.125</td><td>1.5–4.5</td><td>0.125, 0.25, 0.5, 1, 1.5</td></tr><tr><td>Pramipexole ER</td><td>Mirapex ER</td><td>0.375</td><td>1.5–4.5</td><td>0.375, 0.75, 1.5, 3, 4.5</td></tr><tr><td>Ropinirole</td><td>Requip</td><td>0.75</td><td>9–24</td><td>0.25, 0.5, 1, 2, 3, 4, 5</td></tr><tr><td>Ropinirole XL</td><td>Requip XL</td><td>2</td><td>8–24</td><td>2, 4, 6, 8, 12</td></tr><tr><td>Rotigotine</td><td>Neupro</td><td>2</td><td>2–8</td><td>1, 2, 3, 4, 6, 8</td></tr><tr><td>COMT inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td>Entacapone</td><td>Comtan</td><td>200–600</td><td>200–1600</td><td>200</td></tr><tr><td>Tolcapone</td><td>Tasmar</td><td>300</td><td>300–600</td><td>100, 200</td></tr><tr><td>MAO-B inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td>Rasagiline</td><td>Azilect</td><td>0.5–1</td><td>0.5–1</td><td>0.5, 1</td></tr><tr><td>Safinamide</td><td>Xadago</td><td>50</td><td>50–100</td><td>50, 100</td></tr><tr><td>Selegiline</td><td>Eldepryl</td><td>5–10</td><td>5–10</td><td>5</td></tr><tr><td>Selegiline ODT</td><td>Zelapar</td><td>1.25</td><td>1.25–2.5</td><td>1.25, 2.5
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<p>TABLE 57-2 Dosing of Drugs Used in Parkinson Diseasea(Continued )</p>
+<p>Starting Maintenance</p>
+<p>Doseb Doseb (mg/ Dosage Forms</p>
+<p>Generic Name Trade Name (mg/day) day) (mg)</p>
+<p>Miscellaneous</p>
+<p>Amantadine Symmetrel 100 200–300 100, 50/5 mL</p>
+<p>Amantadine ER Gocovri 137 274 68.5, 137</p>
+<p>Amantadine ER Osmolex 129 129–258 129, 193, 258</p>
+<p>aMarketed in the United States for Parkinson disease.</p>
+<p>bDosages may vary.</p>
+<p>cDosages expressed as levodopa component.</p>
+<p>dDosages of Rytary were developed to avoid confusion with other oral carbidopa/levodopa products</p>
+<p>that contain levodopa in multiples of 50 mg.</p>
+<p>eDosages expressed as entacapone component.</p>
+<p>fCapsule containing levodopa dry powder for inhalation</p>
+<p>gSterile solution of subcutaneous injection with supplied pen injector.</p>
+<p>COMT, catechol-O-methyltransferase; CR, controlled-release; IR, immediate-release; ER, extended-</p>
+<p>release; MAO, monoamine oxidase; ODT, orally disintegrating tablet.</p>
+<p>TABLE 57-3 Monitoring of Potential Adverse Reactions to Drug Therapy for Parkinson</p>
+<p>Disease</p>
+<p>Adverse Drug Monitoring</p>
+<p>Generic Name Reaction Parameter Comments</p>
+<p>Amantadine Confusion Mental status; renal Reduce dosage; adjust dose</p>
+<pre><code>function for renal impairment</code></pre>
+<p>Livedo reticularis Lower extremity Reversible upon drug</p>
+<p>examination; discontinuation</p>
+<p>ankle edema</p>
+<p>Benztropine and Anticholinergic Dry mouth, Reduce dosage; avoid in</p>
+<p>Trihexyphenidyl effects, mental status, elderly and in those with</p>
+<p>confusion, constipation, a history of constipation,</p>
+<p>drowsiness urinary memory impairment,</p>
+<p>retention, vision urinary retention</p>
+<p>Carbidopa/ Drowsiness Mental status Reduce dose</p>
+<p>levodopa Dyskinesias Abnormal Reduce dose; add</p>
+<p>Nausea involuntary amantadine</p>
+<p>movements</p>
+<p>Nausea Take with food (eg,</p>
+<p>nonprotein snack)</p>
+<p>COMT inhibitors</p>
+<p>Entacapone Augmentation of See carbidopa/ Reduce dose of levodopa;</p>
+<p>levodopa side levodopa; antidiarrheal agents</p>
+<p>effects; also also bowel</p>
+<p>diarrhea movements</p>
+<p>Tolcapone See entacapone; See carbidopa/ See carbidopa/levodopa; also</p>
+<p>also liver levodopa; also at start of therapy and for</p>
+<p>toxicity ALT/AST every dose increase, ALT</p>
+<p>and AST levels at baseline</p>
+<p>and every 2–4 weeks</p>
+<p>for the first 6 months of</p>
+<p>therapy; afterward monitor</p>
+<p>based on clinical judgment.</p>
+<p>(Continued )</p>
+<p>660</p>
+<p>ch57.indd 660 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>TABLE 57-2 Dosing of Drugs Used in Parkinson Diseasea(Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Trade Name</td><td>Starting
+Doseb
+(mg/day)</td><td>Maintenance
+Doseb (mg/
+day)</td><td>Dosage Forms
+(mg)</td></tr><tr><td>Miscellaneous</td><td></td><td></td><td></td><td></td></tr><tr><td>Amantadine</td><td>Symmetrel</td><td>100</td><td>200–300</td><td>100, 50/5 mL</td></tr><tr><td>Amantadine ER</td><td>Gocovri</td><td>137</td><td>274</td><td>68.5, 137</td></tr><tr><td>Amantadine ER</td><td>Osmolex</td><td>129</td><td>129–258</td><td>129, 193, 258</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 57-3 Monitoring of Potential Adverse Reactions to Drug Therapy for Parkinson
+Disease</th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameter</td><td>Comments</td></tr><tr><td>Amantadine</td><td>Confusion</td><td>Mental status; renal
+function</td><td>Reduce dosage; adjust dose
+for renal impairment</td></tr><tr><td></td><td>Livedo reticularis</td><td>Lower extremity
+examination;
+ankle edema</td><td>Reversible upon drug
+discontinuation</td></tr><tr><td>Benztropine and
+Trihexyphenidyl</td><td>Anticholinergic
+effects,
+confusion,
+drowsiness</td><td>Dry mouth,
+mental status,
+constipation,
+urinary
+retention, vision</td><td>Reduce dosage; avoid in
+elderly and in those with
+a history of constipation,
+memory impairment,
+urinary retention</td></tr><tr><td>Carbidopa/
+levodopa</td><td>Drowsiness
+Dyskinesias
+Nausea</td><td>Mental status
+Abnormal
+involuntary
+movements
+Nausea</td><td>Reduce dose
+Reduce dose; add
+amantadine
+Take with food (eg,
+nonprotein snack)</td></tr><tr><td>COMT inhibitors</td><td></td><td></td><td></td></tr><tr><td>Entacapone</td><td>Augmentation of
+levodopa side
+effects; also
+diarrhea</td><td>See carbidopa/
+levodopa;
+also bowel
+movements</td><td>Reduce dose of levodopa;
+antidiarrheal agents</td></tr><tr><td>Tolcapone</td><td>See entacapone;
+also liver
+toxicity</td><td>See carbidopa/
+levodopa; also
+ALT/AST</td><td>See carbidopa/levodopa; also
+at start of therapy and for
+every dose increase, ALT
+and AST levels at baseline
+and every 2–4 weeks
+for the first 6 months of
+therapy; afterward monitor
+based on clinical judgment.
+(Continued )</td></tr></table></div><h2>Parkinson Disease | CHAPTER 57</h2>
+<p>TABLE 57-3 Monitoring of Potential Adverse Reactions to Drug Therapy for Parkinson</p>
+<p>Disease(Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Generic Name Reaction Parameter Comments</p>
+<p>Dopamine agonists</p>
+<p>Apomorphine Drowsiness Mental status Reduce dose</p>
+<p>Nausea Nausea Premedicate with</p>
+<p>Orthostatic Blood pressure, trimethobenzamide</p>
+<p>hypotension dizziness upon Reduce dose</p>
+<p>standing</p>
+<p>Bromocriptine See pramipexole; Mental status; Reduce dose; chest</p>
+<p>also pulmonary also chest radiograph at baseline</p>
+<p>fibrosis radiograph and once yearly</p>
+<p>Pramipexole and Confusion Mental status Reduce dose</p>
+<p>Ropinirole Drowsiness Mental status Reduce dose</p>
+<p>Edema Lower extremity Reduce dose or discontinue</p>
+<p>Hallucinations/ swelling medication</p>
+<p>delusions Behavior, mental Reduce dose or discontinue</p>
+<p>Impulsivity status medication</p>
+<p>Nausea Behavior Discontinue medication</p>
+<p>Orthostatic Nausea Titrate dose upward slowly;</p>
+<p>hypotension Blood pressure, take with food</p>
+<p>dizziness upon Reduce dose</p>
+<p>standing</p>
+<p>Rotigotine See pramipexole; See pramipexole; See pramipexole; rotate</p>
+<p>also skin also skin patch application site</p>
+<p>irritation at examination</p>
+<p>site of patch</p>
+<p>application</p>
+<p>MAO-B inhibitors</p>
+<p>Rasagiline Nausea Nausea Take with food</p>
+<p>Selegiline Agitation/ Mental status Reduce dose</p>
+<p>Confusion Sleep Administer dose earlier in</p>
+<p>Insomnia Behavior, mental day</p>
+<p>Hallucinations status Reduce dose</p>
+<p>Orthostatic Blood pressure, Reduce dose</p>
+<p>hypotension dizziness upon</p>
+<p>standing</p>
+<p>ALT, alanine aminotransferase; AST, aspartate aminotransferase; COMT, catechol-O-methyltransferase;</p>
+<p>MAO, monoamine oxidase.</p>
+<li>Initial monotherapy usually begins with a monoamine oxidase-B (MAO-B) inhibitor.</li>
+<li>Ultimately, all patients will require the use of carbidopa/levodopa either as mono-</li>
+<p>therapy or in combination with other agents.</p>
+<li>With the development of motor fluctuations, patients should administer carbidopa/</li>
+<p>levodopa more frequently or addition of a COMT inhibitor, MAO-B inhibitor, or</p>
+<p>dopamine agonist to the carbidopa/levodopa regimen should be considered.</p>
+<li>For management of carbidopa/levodopa–induced peak-dose dyskinesias, a reduction</li>
+<p>in levodopa dose and/or addition of amantadine should be considered.</p>
+<p>661</p>
+<p>ch57.indd 661 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>TABLE 57-3 Monitoring of Potential Adverse Reactions to Drug Therapy for Parkinson
+Disease(Continued )</th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameter</td><td>Comments</td></tr><tr><td>Dopamine agonists</td><td></td><td></td><td></td></tr><tr><td>Apomorphine</td><td>Drowsiness
+Nausea
+Orthostatic
+hypotension</td><td>Mental status
+Nausea
+Blood pressure,
+dizziness upon
+standing</td><td>Reduce dose
+Premedicate with
+trimethobenzamide
+Reduce dose</td></tr><tr><td>Bromocriptine</td><td>See pramipexole;
+also pulmonary
+fibrosis</td><td>Mental status;
+also chest
+radiograph</td><td>Reduce dose; chest
+radiograph at baseline
+and once yearly</td></tr><tr><td>Pramipexole and
+Ropinirole</td><td>Confusion
+Drowsiness
+Edema
+Hallucinations/
+delusions
+Impulsivity
+Nausea
+Orthostatic
+hypotension</td><td>Mental status
+Mental status
+Lower extremity
+swelling
+Behavior, mental
+status
+Behavior
+Nausea
+Blood pressure,
+dizziness upon
+standing</td><td>Reduce dose
+Reduce dose
+Reduce dose or discontinue
+medication
+Reduce dose or discontinue
+medication
+Discontinue medication
+Titrate dose upward slowly;
+take with food
+Reduce dose</td></tr><tr><td>Rotigotine</td><td>See pramipexole;
+also skin
+irritation at
+site of patch
+application</td><td>See pramipexole;
+also skin
+examination</td><td>See pramipexole; rotate
+patch application site</td></tr><tr><td>MAO-B inhibitors</td><td></td><td></td><td></td></tr><tr><td>Rasagiline</td><td>Nausea</td><td>Nausea</td><td>Take with food</td></tr><tr><td>Selegiline</td><td>Agitation/
+Confusion
+Insomnia
+Hallucinations
+Orthostatic
+hypotension</td><td>Mental status
+Sleep
+Behavior, mental
+status
+Blood pressure,
+dizziness upon
+standing</td><td>Reduce dose
+Administer dose earlier in
+day
+Reduce dose
+Reduce dose</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<p>Anticholinergic Medications</p>
+<li>Anticholinergic drugs can improve tremor and sometimes dystonic features in some</li>
+<p>patients, but they rarely substantially improve bradykinesia or other disabilities. They</p>
+<p>can be used as monotherapy or in conjunction with other antiparkinson drugs.</p>
+<li>Anticholinergic side effects include dry mouth, blurred vision, constipation, and</li>
+<p>urinary retention. More serious reactions include forgetfulness, confusion, sedation,</p>
+<p>depression, and anxiety (see Table 57-3). Patients with preexisting cognitive deficits</p>
+<p>and the elderly are at greater risk for central anticholinergic side effects.</p>
+<p>Amantadine</p>
+<li>Amantadine often provides modest benefit for tremor, rigidity, and bradykinesia, but</li>
+<p>is most often used for levodopa-induced dyskinesia.</p>
+<li>Doses should be reduced in patients with renal dysfunction (100 mg/day with cre-</li>
+<p>atinine clearances of 30–50 mL/min [0.50–0.84 mL/sec], 100 mg every other day</p>
+<p>for creatinine clearances of 15–29 mL/min [0.25–0.49 mL/sec], and 200 mg every</p>
+<p>7 days for creatinine clearances less than 15 mL/min [0.25 mL/sec]) and those on</p>
+<p>hemodialysis.</p>
+<li>Adverse effects include sedation, dry mouth, hallucinations, dizziness, and confu-</li>
+<p>sion. Livedo reticularis (a diffuse mottling of the skin in the upper or lower extremi-</p>
+<p>ties) is a common but reversible side effect.</p>
+<p>Levodopa and Carbidopa/Levodopa</p>
+<li>Levodopa is the immediate precursor of dopamine and, in combination with a</li>
+<p>peripherally acting l-amino acid decarboxylase (l-AAD) inhibitor (carbidopa or</p>
+<p>benserazide), remains the most effective drug for the symptomatic treatment of PD.</p>
+<li>In the central nervous system (CNS) and peripherally, levodopa is converted by</li>
+<p>l-AAD to dopamine. In the periphery, carbidopa or benserazide can block l-AAD,</p>
+<p>thus increasing CNS penetration of administered levodopa and decreasing dopamine</p>
+<p>adverse effects (eg, nausea, cardiac arrhythmias, postural hypotension, and vivid</p>
+<p>dreams). Benserazide is unavailable in the United States.</p>
+<li>The usual maximal dose of levodopa tolerated is approximately 1000 to 1500 mg/day.</li>
+<li>About 75 mg of carbidopa is required to effectively block peripheral l-AAD, but</li>
+<p>some patients need more. Carbidopa/levodopa 25/100 mg tablet three times daily is</p>
+<p>the usual initial maintenance dose. Also available are the 25/250 mg and 10/100 mg</p>
+<p>dosage forms. Controlled-release preparations of carbidopa/levodopa are also avail-</p>
+<p>able (Table 57-2). For patients with difficulty swallowing, an orally disintegrating</p>
+<p>tablet is available, and a capsule containing beads is available which can be sprinkled</p>
+<p>on food (Rytary).</p>
+<li>After oral levodopa administration, time to peak plasma concentrations varies</li>
+<p>intra- and intersubject. Meals delay gastric emptying, but antacids promote gastric</p>
+<p>emptying. Levodopa is absorbed primarily in the proximal duodenum via a saturable</p>
+<p>large neutral amino acid transport system, thus high-protein meals can interfere with</p>
+<p>bioavailability.</p>
+<li>Levodopa is not bound to plasma proteins, and the elimination half-life is approxi-</li>
+<p>mately 1 hour. Adding carbidopa or benserazide can extend the half-life to 1.5 hours,</p>
+<p>and adding a COMT inhibitor (eg, entacapone) can extend it to approximately</p>
+<p>2–2.5 hours.</p>
+<li>Sinemet CR and Rytary are 70% and 75% bioavailable compared to the standard</li>
+<p>immediate release carbidopa/levodopa formulation.</p>
+<p>✓ Long-term, levodopa-associated motor complications can be disabling. The most</p>
+<p>common of these are “end-of-dose wearing off” and “peak-dose dyskinesias.” The</p>
+<p>risk of developing motor fluctuations or dyskinesias is approximately 10% per year</p>
+<p>of levodopa therapy. However, motor complications can occur 5–6 months after</p>
+<p>starting levodopa, especially when excessive doses are used initially. Table 57-4</p>
+<p>shows these motor complications and suggests management strategies.</p>
+<p>662</p>
+<p>ch57.indd 662 19-11-2020 17:51:09</p>
+<h2>Parkinson Disease | CHAPTER 57</h2>
+<p>TABLE 57-4 Common Motor Complications and Possible Initial Treatments</p>
+<p>Effects Possible Treatments</p>
+<p>End-of-dose “wearing Increase frequency of carbidopa/levodopa doses; add either</p>
+<p>off” (motor COMT inhibitor or MAO-B inhibitor or dopamine agonist; add</p>
+<p>fluctuation) or switch to extended-release carbidopa/levodopa (ie, Rytary);</p>
+<p>use levodopa inhalation</p>
+<p>“Delayed on” or “no on” Give carbidopa/levodopa on empty stomach; use carbidopa/</p>
+<p>response levodopa ODT; avoid carbidopa/levodopa SR; use apomorphine</p>
+<p>subcutaneous or levodopa inhalation</p>
+<p>Start hesitation Increase carbidopa/levodopa dose; add a dopamine agonist or</p>
+<p>(“freezing”) MAO-B inhibitor; utilize physical therapy along with assistive</p>
+<p>walking devices or sensory cues (eg, rhythmic commands,</p>
+<p>stepping over objects)</p>
+<p>Peak-dose dyskinesia Provide smaller doses of carbidopa/levodopa; reduce dose of</p>
+<p>adjunctive dopamine agonist; add amantadine</p>
+<p>COMT, catechol-O-methyltransferase; MAO, monoamine oxidase; ODT, orally disintegrating tablet; SR,</p>
+<p>sustained release.</p>
+<p>✓ End-of-dose “wearing off” is related to the increasing loss of neuronal dopamine</p>
+<p>storage capability and the short half-life of levodopa. Bedtime administration of</p>
+<p>a dopamine agonist or a drug formulation that provides sustained drug levels</p>
+<p>overnight (eg, carbidopa/levodopa CR or IR/ER, ropinirole XL, pramipexole ER,</p>
+<p>rotigotine transdermal patch) can help reduce nocturnal off episodes and improve</p>
+<pre><code>functioning upon awakening. Administration of Rytary may also be useful, as</code></pre>
+<p>therapeutic levels of levodopa are rapidly achieved and maintained for 4–5 hours</p>
+<h2>(see Table 57-4).</h2>
+<p>✓ “Delayed-on” or “no-on” can result from delayed gastric emptying or decreased</p>
+<p>absorption in the duodenum. Chewing or crushing carbidopa/levodopa tablets</p>
+<p>and taking with a glass of water or using the orally disintegrating tablet on an</p>
+<p>empty stomach may help. Subcutaneous apomorphine may be used as rescue</p>
+<p>therapy.</p>
+<pre><code>✓ “Freezing,” an episodic inhibition of lower extremity motor function, may be wors-</code></pre>
+<p>ened by anxiety and may increase falls.</p>
+<p>✓ Dyskinesias, involuntary choreiform movements usually involving the neck,</p>
+<p>trunk, and extremities, are usually associated with peak striatal dopamine levels.</p>
+<p>Less commonly, dyskinesias can develop during the rise and fall of levodopa effects</p>
+<p>(the dyskinesias-improvement-dyskinesias or diphasic pattern of response).</p>
+<p>✓ “Off-period” dystonia muscle contractions occur most commonly in distal lower</p>
+<p>extremities (eg, feet or toes), often in the early morning. Consider bedtime admin-</p>
+<p>istration of sustained-release products, use of baclofen, or selective denervation</p>
+<p>with botulinum toxin. If dystonia occurs as part of an levodopa peak dose effect,</p>
+<p>management is similar to that of dyskinesias.</p>
+<p>Monoamine Oxidase B Inhibitors</p>
+<li>Three selective MAO-B inhibitors (rasagiline, safinamide, selegiline) are available</li>
+<p>for management of PD.</p>
+<li>Rasagiline and selegiline contain a propargylamine moiety, which is essential for con-</li>
+<p>ferring irreversible (“suicide”) inhibition of MAO-B, in contrast to safinamide, which</p>
+<p>is a reversible MAO-B inhibitor. At therapeutic doses, all three agents preferentially</p>
+<p>inhibit MAO-B over MAO-A.</p>
+<li>Concomitant use of MAO-B inhibitors with meperidine and other selected opioid</li>
+<p>analgesics is contraindicated due to the small risk of serotonin syndrome. However,</p>
+<p>drugs with serotonergic antidepressants can be used concomitantly when clinically</p>
+<p>warranted.</p>
+<p>663</p>
+<p>ch57.indd 663 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>TABLE 57-4 Common Motor Complications and Possible Initial Treatments</th><th></th></tr><tr><td>Effects</td><td>Possible Treatments</td></tr><tr><td>End-of-dose “wearing
+off” (motor
+fluctuation)</td><td>Increase frequency of carbidopa/levodopa doses; add either
+COMT inhibitor or MAO-B inhibitor or dopamine agonist; add
+or switch to extended-release carbidopa/levodopa (ie, Rytary);
+use levodopa inhalation</td></tr><tr><td>“Delayed on” or “no on”
+response</td><td>Give carbidopa/levodopa on empty stomach; use carbidopa/
+levodopa ODT; avoid carbidopa/levodopa SR; use apomorphine
+subcutaneous or levodopa inhalation</td></tr><tr><td>Start hesitation
+(“freezing”)</td><td>Increase carbidopa/levodopa dose; add a dopamine agonist or
+MAO-B inhibitor; utilize physical therapy along with assistive
+walking devices or sensory cues (eg, rhythmic commands,
+stepping over objects)</td></tr><tr><td>Peak-dose dyskinesia</td><td>Provide smaller doses of carbidopa/levodopa; reduce dose of
+adjunctive dopamine agonist; add amantadine</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>As monotherapy in early PD, both selegiline and rasagiline provide modest improve-</li>
+<pre><code>ments in motor function.</code></pre>
+<li>As add-on therapy, all three MAO-B inhibitors can provide up to 1 hour of extra “on”</li>
+<p>time for patients</p>
+<li>Selegiline also increases the peak effects of levodopa and can worsen preexisting</li>
+<p>dyskinesias or psychiatric symptoms, such as delusions. Metabolites of selegiline are</p>
+<p>l-methamphetamine and l-amphetamine. The oral disintegrating tablet may provide</p>
+<p>improved response and fewer side effects than the conventional formulation.</p>
+<li>Both rasagiline and safinamide are well tolerated with minimal GI or neuropsychi-</li>
+<p>atric side effects</p>
+<p>Catechol-O-Methyltransferase Inhibitors</p>
+<li>Tolcapone and entacapone are used in conjunction with carbidopa/levodopa to</li>
+<p>prevent the peripheral conversion of levodopa to dopamine (increasing the area</p>
+<p>under the curve of levodopa by approximately 35%). Thus, “on” time is increased</p>
+<p>by approximately 1–2 hours, and dosage requirements of levodopa are decreased.</p>
+<p>Avoid concomitant use of nonselective MAO inhibitors to prevent inhibition of the</p>
+<p>pathways for normal catecholamine metabolism.</p>
+<li>Tolcapone’s use is limited by the potential for fatal liver toxicity, requiring strict</li>
+<pre><code>monitoring of liver function. Reserve tolcapone for patients with fluctuations unre-</code></pre>
+<p>sponsive to other therapies.</p>
+<li>Because entacapone has a shorter half-life, 200 mg is given with each dose of</li>
+<p>carbidopa/levodopa up to eight times a day.</p>
+<li>Dopaminergic adverse effects may occur and are managed by reducing the</li>
+<p>carbidopa/levodopa dose. Brownish orange urine discoloration may occur (as with</p>
+<p>tolcapone), but hepatotoxicity is not reported with entacapone.</p>
+<p>Dopamine Agonists</p>
+<li>The ergot derivative bromocriptine and the nonergots pramipexole, rotigotine, and</li>
+<p>ropinirole are beneficial adjuncts in patients experiencing fluctuation in response to</p>
+<p>levodopa. They decrease the frequency of “off” periods and provide an levodopa-</p>
+<p>sparing effect.</p>
+<li>Titrate the dose of dopamine agonists slowly to enhance tolerability, and find the least</li>
+<h2>dose that provides optimal benefit (see Table 57-2).</h2>
+<li>The nonergots are safer and are effective as monotherapy in mild-to-moderate PD</li>
+<p>and as adjuncts to levodopa in patients with motor fluctuations.</p>
+<li>There is less risk of developing motor complications from monotherapy with</li>
+<p>dopamine agonists than from levodopa. Because younger patients are more likely</p>
+<p>to develop motor fluctuations, dopamine agonists are preferred in this population.</p>
+<p>Older patients are more likely to experience psychosis and orthostatic hypoten-</p>
+<p>sion from dopamine agonists; therefore, carbidopa/levodopa may be the best initial</p>
+<p>medication in elderly patients. For patients with cognitive problems or dementia,</p>
+<p>dopamine agonists are best avoided.</p>
+<li>Common side effects of dopamine agonists are shown in Table 57-3. Other side</li>
+<p>effects include vivid dreams and sleep attacks. When added to levodopa, dopamine</p>
+<p>agonists may worsen dyskinesias. Hallucinations or delusions should be managed by</p>
+<p>dosage reduction or discontinuation and if needed addition of an atypical antipsy-</p>
+<p>chotic, such as clozapine, quetiapine, or pimavanserin (FDA approved for psychosis</p>
+<p>in PD).</p>
+<li>Bromocriptine is not commonly used because of its safety profile, which includes a</li>
+<p>risk of pulmonary fibrosis.</p>
+<li>Pramipexole is primarily renally excreted, and the initial dose must be adjusted in</li>
+<p>renal insufficiency. A once-daily extended-release formulation is available.</p>
+<li>Ropinirole is metabolized by cytochrome P4501A2; fluoroquinolones and smoking</li>
+<p>may alter ropinirole clearance. A once-daily formulation is available.</p>
+<li>Rotigotine patch provides continuous release over 24 hours, and disposition is not</li>
+<p>affected by hepatic or renal impairment.</p>
+<p>664</p>
+<p>ch57.indd 664 19-11-2020 17:51:09</p>
+<h2>Parkinson Disease | CHAPTER 57</h2>
+<li>Apomorphine is a nonergot dopamine agonist given as a subcutaneous “rescue”</li>
+<p>injection. For patients with advanced PD with intermittent “off” episodes despite</p>
+<p>optimized therapy, subcutaneous apomorphine triggers an “on” response within</p>
+<p>20 minutes, and duration of effect is up to 100 minutes. Most patients require</p>
+<p>0.06 mg/kg. Prior to injection, patients should be premedicated with the antiemetic</p>
+<p>trimethobenzamide. It is contraindicated with the serotonin-3-receptor blockers</p>
+<p>(eg, ondansetron).</p>
+<h2>TABLE 57-5 Monitoring Parkinson Disease Therapy</h2>
+<p>1. Monitor medication administration times. Educate the patient that immediate-release</p>
+<p>carbidopa/levodopa is absorbed best on an empty stomach but is commonly taken</p>
+<p>with food (preferably nonprotein snack) to minimize nausea. Avoid administration of</p>
+<p>conventional selegiline in the late afternoon or evening to minimize insomnia.</p>
+<p>2. Monitor to ensure that the patient and/or caregivers understand the prescribed</p>
+<p>medication regimen. For example, they should understand that catechol-O-</p>
+<p>methyltransferase inhibitors work by enhancing the effect of levodopa and that the</p>
+<p>patient should not discontinue medication without notifying the clinician.</p>
+<p>3. Monitor and inquire specifically about dose-by-dose effects of medication, including</p>
+<p>response to doses of medication and the presence of dyskinesias, “wearing-off” effects,</p>
+<p>dizziness, nausea, orthostasis, or visual hallucinations. Offer suggestions to help alleviate</p>
+<p>these, or encourage the patient to discuss them with the clinician.</p>
+<p>4. Monitor caregiver involvement and facilitation for early detection of abnormal behaviors,</p>
+<p>dyskinesias, falls, hallucinations, impulsivity, memory problems, mood changes, and sleep</p>
+<p>disorders.</p>
+<p>5. Monitor for nonadherence and, if present, inquire for possible reasons (eg, dosing</p>
+<p>convenience, financial issues, and adverse effects) and offer suggestions.</p>
+<p>6. Monitor for presence of drugs that can exacerbate idiopathic Parkinson disease motor</p>
+<p>features (eg, D-receptor blockers).</p>
+<p>2</p>
+<p>7. Monitor for presence of drugs that can exacerbate nonmotor symptoms. Evaluate</p>
+<p>whether the presence of an anticholinergic agent is causing confusion or cognitive</p>
+<p>impairment.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Comprehensive monitoring is essential to achieve desired outcomes (Table 57-5).</li>
+<p>Educate patients and caregivers about recording medication doses and administra-</p>
+<p>tion times and duration of “on” and “off” periods.</p>
+<li>Monitor symptoms, side effects, and activities of daily living, and individualize</li>
+<p>therapy. Concomitant medications that may worsen motor symptoms, memory, falls,</p>
+<p>or behavioral symptoms should be discontinued if possible.</p>
+<p>See Chapter 76, Parkinson Disease, authored by Jack J. Chen and Khashayar Dashtipour,</p>
+<p>for a more detailed discussion of this topic.</p>
+<p>665</p>
+<p>ch57.indd 665 19-11-2020 17:51:09</p>
+<div class="table-container"><table><tr><th>TABLE 57-5 Monitoring Parkinson Disease Therapy</th></tr><tr><td>1. Monitor medication administration times. Educate the patient that immediate-release
+carbidopa/levodopa is absorbed best on an empty stomach but is commonly taken
+with food (preferably nonprotein snack) to minimize nausea. Avoid administration of
+conventional selegiline in the late afternoon or evening to minimize insomnia.
+2. Monitor to ensure that the patient and/or caregivers understand the prescribed
+medication regimen. For example, they should understand that catechol-O-
+methyltransferase inhibitors work by enhancing the effect of levodopa and that the
+patient should not discontinue medication without notifying the clinician.
+3. Monitor and inquire specifically about dose-by-dose effects of medication, including
+response to doses of medication and the presence of dyskinesias, “wearing-off” effects,
+dizziness, nausea, orthostasis, or visual hallucinations. Offer suggestions to help alleviate
+these, or encourage the patient to discuss them with the clinician.
+4. Monitor caregiver involvement and facilitation for early detection of abnormal behaviors,
+dyskinesias, falls, hallucinations, impulsivity, memory problems, mood changes, and sleep
+disorders.
+5. Monitor for nonadherence and, if present, inquire for possible reasons (eg, dosing
+convenience, financial issues, and adverse effects) and offer suggestions.
+6. Monitor for presence of drugs that can exacerbate idiopathic Parkinson disease motor
+features (eg, D-receptor blockers).
+2
+7. Monitor for presence of drugs that can exacerbate nonmotor symptoms. Evaluate
+whether the presence of an anticholinergic agent is causing confusion or cognitive
+impairment.</td></tr></table></div><p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51. Urinary Tract Infections and Prostatitis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>51. Urinary Tract Infections and Prostatitis</h1>
+        </header>
+        <main>
+            <p>558</p>
+<h2>RETPAHC</h2>
+<p>51</p>
+<p>Urinary Tract Infections</p>
+<p>and Prostatitis</p>
+<li>Infections of the urinary tract represent a wide variety of clinical syndromes includ-</li>
+<p>ing urethritis, cystitis, prostatitis, and pyelonephritis.</p>
+<li>A urinary tract infection (UTI) is defined as the presence of microorganisms in the</li>
+<p>urine that cannot be accounted for by contamination. The organisms have the poten-</p>
+<p>tial to invade the tissues of the urinary tract and adjacent structures.</p>
+<li>Lower tract infections include cystitis (bladder), urethritis (urethra), prostatitis</li>
+<p>(prostate gland), and epididymitis. Upper tract infections involve the kidney and are</p>
+<p>referred to as pyelonephritis.</p>
+<li>Uncomplicated UTIs are not associated with structural or functional abnormali-</li>
+<p>ties that may interfere with the normal flow of urine or the voiding mechanism.</p>
+<p>Complicated UTIs are the result of a predisposing lesion of the urinary tract, such as</p>
+<p>a congenital abnormality or distortion of the urinary tract, stone, indwelling catheter,</p>
+<p>prostatic hypertrophy, obstruction, or neurologic deficit that interferes with the nor-</p>
+<p>mal flow of urine and urinary tract defenses.</p>
+<li>Recurrent UTIs, two or more UTIs occurring within 6 months or three or more</li>
+<p>within 1 year, are characterized by multiple symptomatic episodes with asymptomatic</p>
+<p>periods occurring between these episodes. These infections are due to reinfection or</p>
+<p>to relapse. Reinfections are caused by a different organism and account for the major-</p>
+<p>ity of recurrent UTIs. Relapse represents the development of repeated infections</p>
+<p>caused by the same initial organism.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The bacteria causing UTIs usually originate from bowel flora of the host. Organisms</li>
+<p>typically gain entry into the urinary tract via three routes: the ascending, hematog-</p>
+<p>enous (descending), and lymphatic pathways.</p>
+<li>The most common cause of uncomplicated UTIs is E. coli, accounting for more</li>
+<p>than 80%–90% of community-acquired infections. Additional causative organisms</p>
+<p>are Staphylococcus saprophyticus, Klebsiella pneumoniae, Proteus spp., Pseudomonas</p>
+<p>aeruginosa, and Enterococcus spp.</p>
+<li>The urinary pathogens in complicated or nosocomial infections may include E. coli,</li>
+<p>which accounts for less than 50% of these infections, Proteus spp., K. pneumoniae,</p>
+<p>Enterobacter spp., P. aeruginosa, staphylococci, and enterococci. Enterococci repre-</p>
+<p>sent the second most frequently isolated organisms in hospitalized patients.</p>
+<li>Most UTIs are caused by a single organism; however, in patients with stones,</li>
+<p>indwelling urinary catheters, or chronic renal abscesses, multiple organisms may</p>
+<p>be isolated.</p>
+<li>Vancomycin-resistant E. faecalis and E. faecium (vancomycin-resistant enterococci)</li>
+<p>have become more widespread, especially in patients with long-term hospitalizations</p>
+<p>or underlying malignancies.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The typical signs and symptoms of urinary tract infections are:</li>
+<p>✓ Lower UTI: Dysuria, urgency, frequency, nocturia, and suprapubic heaviness,</p>
+<p>gross hematuria, and costovertebral tenderness.</p>
+<p>✓ Upper UTI: Flank pain, fever, nausea, vomiting, and malaise.</p>
+<li>Symptoms alone are unreliable for the diagnosis of bacterial UTIs. The key to the</li>
+<p>diagnosis of a UTI is the ability to demonstrate significant numbers of microorgan-</p>
+<p>isms present in an appropriate urine specimen to distinguish contamination from</p>
+<p>infection.</p>
+<p>ch51.indd 558 20-11-2020 12:54:17</p>
+<div class="table-container"><table><tr><th>Urinary Tract Infections
+and Prostatitis</th><th>51</th><th>RETPAHC</th></tr></table></div><h2>Urinary Tract Infections and Prostatitis | CHAPTER 51</h2>
+<li>Older patients frequently do not experience specific urinary symptoms, but they will</li>
+<p>present with altered mental status, change in eating habits, or gastrointestinal (GI)</p>
+<p>symptoms.</p>
+<li>A standard urinalysis should be obtained in the initial assessment of a patient. Micro-</li>
+<p>scopic examination of the urine should be performed by preparation of a Gram stain of</p>
+<p>unspun or centrifuged urine. The presence of at least one organism per oil-i mmersion</p>
+<p>field in a properly collected uncentrifuged specimen correlates with greater than</p>
+<p>100,000 colony-forming units (CFU)/mL (105 CFU/mL [&gt;108 CFU/L]) of urine.</p>
+<li>A quantitative count of 105 CFU/mL (108 CFU/L) or more is considered indicative of</li>
+<p>a UTI; however, up to 50% of women will present with clinical symptoms of a UTI</p>
+<p>with lower counts (103 CFU/mL [106CFU/L]).</p>
+<li>The presence of pyuria (>10 white blood cells/mm3 [10 × 106/L]) in a symptom-</li>
+<p>atic patient correlates with significant bacteriuria. A count of 5–10 WBC/mm3</p>
+<p>(5 × 106–10 × 106/L) is accepted as the upper limit of normal.</p>
+<li>The nitrite test can be used to detect the presence of nitrate-reducing bacteria in the</li>
+<p>urine (eg, E. coli). The leukocyte esterase test is a rapid dipstick test to detect pyuria.</p>
+<li>The most reliable method of diagnosing UTIs is by quantitative urine culture.</li>
+<p>Patients with infection usually have more than 105 bacteria/mL (108/L) of urine,</p>
+<p>although as many as one-third of women with symptomatic infection have less than</p>
+<p>105 bacteria/mL (108/L).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Eradicate the invading organisms, prevent or treat systemic con-</li>
+<p>sequences of infection, prevent recurrence of infection, and decrease the potential for</p>
+<p>collateral damage with excessively broad antimicrobial therapy.</p>
+<li>The management of a patient with a UTI includes initial evaluation, selection of an</li>
+<p>antibacterial agent and duration of therapy, and follow-up evaluation.</p>
+<li>The initial selection of an antimicrobial agent for the treatment of UTI is primarily</li>
+<p>based on the severity of the presenting signs and symptoms, the site of infection,</p>
+<p>and whether the infection is determined to be complicated or uncomplicated. Other</p>
+<p>considerations include antibiotic susceptibility, side-effect potential, cost, current</p>
+<p>antimicrobial exposure, and the comparative inconvenience of different therapies.</p>
+<h2>PHARMACOLOGIC TREATMENT</h2>
+<li>Eradication of bacteria from the urinary tract is directly related to the sensitivity</li>
+<p>of the organism and the achievable concentration of the antimicrobial agent in the</p>
+<p>urine.</p>
+<li>Management of UTIs is best accomplished by first categorizing the type of infection:</li>
+<p>acute uncomplicated cystitis, symptomatic abacteriuria, asymptomatic bacteriuria,</p>
+<p>complicated UTIs, recurrent infections, or prostatitis.</p>
+<li>Most E. coli remain susceptible to trimethoprim–sulfamethoxazole, although resis-</li>
+<p>tance is increasing. In light of rising resistance and in order to decrease the overuse</p>
+<p>of broad-spectrum antimicrobials, agents such as nitrofurantoin and fosfomycin are</p>
+<p>now considered first-line treatments along with trimethoprim–sulfamethoxazole in</p>
+<p>acute uncomplicated cystitis.</p>
+<li>Table 51-1 lists the most common agents used to treat lower UTIs in adults, along</li>
+<p>with comments concerning their general use.</p>
+<li>Table 51-2 presents an overview of various therapeutic options for outpatient therapy</li>
+<p>for UTI.</p>
+<li>Table 51-3 describes empiric treatment regimens for specific clinical situations.</li>
+<p>Acute Uncomplicated Cystitis</p>
+<li>These infections are predominantly caused by E. coli, and antimicrobial therapy</li>
+<p>should be directed against this organism initially. Because the causative organisms</p>
+<p>559</p>
+<p>ch51.indd 559 20-11-2020 12:54:18</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reactions Parameters Comments</p>
+<p>Oral therapy</p>
+<p>Trimethoprim– Rash, Stevens– Serum creatinine, Highly effective against</p>
+<p>sulfamethoxazole Johnson BUN, most aerobic enteric</p>
+<p>syndrome, electrolytes, bacteria except</p>
+<p>renal failure, signs of rash, P. aeruginosa. High</p>
+<p>photosensitivity, and CBC urinary tract tissue</p>
+<p>hematologic concentrations and</p>
+<p>(neutropenia, urine concentrations</p>
+<p>anemia, etc.) are achieved, which</p>
+<p>may be important</p>
+<p>in complicated</p>
+<p>infection treatment.</p>
+<p>Also effective as</p>
+<p>prophylaxis for</p>
+<p>recurrent infections</p>
+<p>Nitrofurantoin GI intolerance, Baseline serum Effective as both a</p>
+<p>neuropathies, creatinine and therapeutic and</p>
+<p>and pulmonary BUN prophylactic agent in</p>
+<p>reactions patients with recurrent</p>
+<p>UTIs. Main advantage</p>
+<p>is the lack of resistance</p>
+<p>even after long courses</p>
+<p>of therapy</p>
+<p>Fosfomycin Diarrhea, No routine tests Single-dose therapy</p>
+<p>trometamol headache, and recommended for uncomplicated</p>
+<p>angioedema infections, low</p>
+<p>levels of resistance,</p>
+<p>use with caution in</p>
+<p>patients with hepatic</p>
+<pre><code>dysfunction</code></pre>
+<p>Fluoroquinolones</p>
+<p>Ciprofloxacin Hypersensitivity, CBC, baseline Greater spectrum of</p>
+<p>Levofloxacin photosensitivity, serum activity, including</p>
+<p>GI symptoms, creatinine, P. aeruginosa. Effective</p>
+<p>dizziness, and BUN for pyelonephritis</p>
+<p>confusion, and and prostatitis. Avoid</p>
+<p>tendonitis (black in pregnancy and</p>
+<p>box warning) children. Moxifloxacin</p>
+<p>should not be used</p>
+<p>owing to inadequate</p>
+<p>urinary concentrations</p>
+<p>Penicillins</p>
+<p>Amoxicillin– Hypersensitivity CBC, signs Due to increasing E. coli</p>
+<p>clavulanate (rash, of rash, or resistance, amoxicillin–</p>
+<p>anaphylaxis), hypersensitivity clavulanate is the</p>
+<p>diarrhea, preferred penicillin for</p>
+<p>superinfections, uncomplicated cystitis</p>
+<p>and seizures</p>
+<p>(Continued )</p>
+<p>ch51.indd 560 20-11-2020 12:54:18</p>
+<div class="table-container"><table><tr><th>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reactions</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Oral therapy</td><td></td><td></td><td></td></tr><tr><td>Trimethoprim–
+sulfamethoxazole</td><td>Rash, Stevens–
+Johnson
+syndrome,
+renal failure,
+photosensitivity,
+hematologic
+(neutropenia,
+anemia, etc.)</td><td>Serum creatinine,
+BUN,
+electrolytes,
+signs of rash,
+and CBC</td><td>Highly effective against
+most aerobic enteric
+bacteria except
+P. aeruginosa. High
+urinary tract tissue
+concentrations and
+urine concentrations
+are achieved, which
+may be important
+in complicated
+infection treatment.
+Also effective as
+prophylaxis for
+recurrent infections</td></tr><tr><td>Nitrofurantoin</td><td>GI intolerance,
+neuropathies,
+and pulmonary
+reactions</td><td>Baseline serum
+creatinine and
+BUN</td><td>Effective as both a
+therapeutic and
+prophylactic agent in
+patients with recurrent
+UTIs. Main advantage
+is the lack of resistance
+even after long courses
+of therapy</td></tr><tr><td>Fosfomycin
+trometamol</td><td>Diarrhea,
+headache, and
+angioedema</td><td>No routine tests
+recommended</td><td>Single-dose therapy
+for uncomplicated
+infections, low
+levels of resistance,
+use with caution in
+patients with hepatic
+dysfunction</td></tr><tr><td>Fluoroquinolones</td><td></td><td></td><td></td></tr><tr><td>Ciprofloxacin
+Levofloxacin</td><td>Hypersensitivity,
+photosensitivity,
+GI symptoms,
+dizziness,
+confusion, and
+tendonitis (black
+box warning)</td><td>CBC, baseline
+serum
+creatinine,
+and BUN</td><td>Greater spectrum of
+activity, including
+P. aeruginosa. Effective
+for pyelonephritis
+and prostatitis. Avoid
+in pregnancy and
+children. Moxifloxacin
+should not be used
+owing to inadequate
+urinary concentrations</td></tr><tr><td>Penicillins</td><td></td><td></td><td></td></tr><tr><td>Amoxicillin–
+clavulanate</td><td>Hypersensitivity
+(rash,
+anaphylaxis),
+diarrhea,
+superinfections,
+and seizures</td><td>CBC, signs
+of rash, or
+hypersensitivity</td><td>Due to increasing E. coli
+resistance, amoxicillin–
+clavulanate is the
+preferred penicillin for
+uncomplicated cystitis
+(Continued )</td></tr></table></div><h2>Urinary Tract Infections and Prostatitis | CHAPTER 51</h2>
+<p>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs ((CCoonnttiinnuueedd ))</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reactions Parameters Comments</p>
+<p>Cephalosporins</p>
+<p>Cefaclor Hypersensitivity CBC, signs No major advantages</p>
+<p>Cefpodoxime- (rash, of rash, or over other agents for</p>
+<p>proxetil anaphylaxis), hypersensitivity treating UTIs, and they</p>
+<p>diarrhea, are more expensive.</p>
+<p>superinfections, Not active against</p>
+<p>and seizures enterococci</p>
+<p>Parenteral therapy</p>
+<p>Aminoglycosides</p>
+<p>Gentamicin Ototoxicity, Serum creatinine Renally excreted</p>
+<p>Tobramycin nephrotoxicity and BUN, and achieve good</p>
+<p>serum drug concentrations in</p>
+<p>Amikacin concentrations, the urine. Amikacin</p>
+<p>and individual generally is reserved</p>
+<p>pharmacokinetic for multidrug-resistant</p>
+<p>monitoring bacteria</p>
+<p>Penicillins</p>
+<p>Ampicillin– Hypersensitivity CBC, signs Generally are equally</p>
+<p>sulbactam (rash, of rash, or effective for</p>
+<p>Piperacillin– anaphylaxis), hypersensitivity susceptible bacteria.</p>
+<p>tazobactam diarrhea, The extended-</p>
+<p>superinfections, spectrum penicillins</p>
+<p>and seizures are more active</p>
+<p>against P. aeruginosa</p>
+<p>and enterococci and</p>
+<p>often are preferred</p>
+<p>over cephalosporins.</p>
+<p>They are very useful</p>
+<p>in renally impaired</p>
+<p>patients or when an</p>
+<p>aminoglycoside is to</p>
+<p>be avoided</p>
+<p>Cephalosporins</p>
+<p>Ceftriaxone Hypersensitivity CBC, signs Second- and third-</p>
+<p>Ceftazidime (rash, of rash, or generation</p>
+<p>anaphylaxis), hypersensitivity cephalosporins have</p>
+<p>Cefepime diarrhea, a broad spectrum of</p>
+<p>Ceftozolane/ superinfections, activity against gram-</p>
+<p>Tazobactam and seizures negative bacteria, but</p>
+<p>Ceftazidime/ are not active against</p>
+<p>Avabactam enterococci and</p>
+<p>have limited activity</p>
+<p>against P. aeruginosa.</p>
+<p>Ceftazidime and</p>
+<p>cefepime are active</p>
+<p>against P. aeruginosa.</p>
+<p>They are useful for</p>
+<p>nosocomial infections</p>
+<p>and urosepsis due to</p>
+<p>susceptible pathogens</p>
+<p>(Continued )</p>
+<p>561</p>
+<p>ch51.indd 561 20-11-2020 12:54:18</p>
+<div class="table-container"><table><tr><th>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs ((CCoonnttiinnuueedd ))</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reactions</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Cephalosporins</td><td></td><td></td><td></td></tr><tr><td>Cefaclor
+Cefpodoxime-
+proxetil</td><td>Hypersensitivity
+(rash,
+anaphylaxis),
+diarrhea,
+superinfections,
+and seizures</td><td>CBC, signs
+of rash, or
+hypersensitivity</td><td>No major advantages
+over other agents for
+treating UTIs, and they
+are more expensive.
+Not active against
+enterococci</td></tr><tr><td>Parenteral therapy</td><td></td><td></td><td></td></tr><tr><td>Aminoglycosides</td><td></td><td></td><td></td></tr><tr><td>Gentamicin
+Tobramycin
+Amikacin</td><td>Ototoxicity,
+nephrotoxicity</td><td>Serum creatinine
+and BUN,
+serum drug
+concentrations,
+and individual
+pharmacokinetic
+monitoring</td><td>Renally excreted
+and achieve good
+concentrations in
+the urine. Amikacin
+generally is reserved
+for multidrug-resistant
+bacteria</td></tr><tr><td>Penicillins</td><td></td><td></td><td></td></tr><tr><td>Ampicillin–
+sulbactam
+Piperacillin–
+tazobactam</td><td>Hypersensitivity
+(rash,
+anaphylaxis),
+diarrhea,
+superinfections,
+and seizures</td><td>CBC, signs
+of rash, or
+hypersensitivity</td><td>Generally are equally
+effective for
+susceptible bacteria.
+The extended-
+spectrum penicillins
+are more active
+against P. aeruginosa
+and enterococci and
+often are preferred
+over cephalosporins.
+They are very useful
+in renally impaired
+patients or when an
+aminoglycoside is to
+be avoided</td></tr><tr><td>Cephalosporins</td><td></td><td></td><td></td></tr><tr><td>Ceftriaxone
+Ceftazidime
+Cefepime
+Ceftozolane/
+Tazobactam
+Ceftazidime/
+Avabactam</td><td>Hypersensitivity
+(rash,
+anaphylaxis),
+diarrhea,
+superinfections,
+and seizures</td><td>CBC, signs
+of rash, or
+hypersensitivity</td><td>Second- and third-
+generation
+cephalosporins have
+a broad spectrum of
+activity against gram-
+negative bacteria, but
+are not active against
+enterococci and
+have limited activity
+against P. aeruginosa.
+Ceftazidime and
+cefepime are active
+against P. aeruginosa.
+They are useful for
+nosocomial infections
+and urosepsis due to
+susceptible pathogens
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs(Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reactions Parameters Comments</p>
+<p>Carbapenems/</p>
+<p>Monobactams</p>
+<p>Imipenem– Hypersensitivity CBC, signs Carbapenems have a</p>
+<p>cilistatin (rash, of rash, or broad spectrum of</p>
+<p>Meropenem anaphylaxis), hypersensitivity activity, including</p>
+<p>diarrhea, gram-positive,</p>
+<p>Meropenem/ superinfections, gram-negative,</p>
+<p>Vaborbactam and seizures and anaerobic</p>
+<p>Doripenem bacteria. Imipenem,</p>
+<p>Ertapenem meropenem, and</p>
+<p>doripenem are active</p>
+<p>Aztreonam against</p>
+<p>P. aeruginosa and</p>
+<p>enterococci, but</p>
+<p>ertapenem is not.</p>
+<p>Aztreonam is a</p>
+<p>monobactam that is</p>
+<p>only active against</p>
+<p>gram-negative</p>
+<p>bacteria, including</p>
+<p>some strains of P.</p>
+<p>aeruginosa. Generally</p>
+<p>useful for nosocomial</p>
+<p>infections when</p>
+<p>aminoglycosides are</p>
+<p>to be avoided and in</p>
+<p>penicillin-sensitive</p>
+<p>patients</p>
+<p>Fluoroquinolones</p>
+<p>Ciprofloxacin Hypersensitivity, CBC, baseline Broad-spectrum</p>
+<p>Levofloxacin photosensitivity, serum activity against</p>
+<p>GI symptoms, creatinine, and both gram-negative</p>
+<p>dizziness, BUN and gram-positive</p>
+<p>confusion, and bacteria. They provide</p>
+<p>tendonitis (black urine and high-tissue</p>
+<p>box warning) concentrations and</p>
+<p>are actively secreted</p>
+<p>in reduced renal</p>
+<pre><code>function</code></pre>
+<p>BUN, blood urea nitrogen; CBC, complete blood count; GI, gastrointestinal; UTIs, urinary tract</p>
+<p>infections.</p>
+<p>and their susceptibilities are generally known, a cost-effective approach to manage-</p>
+<p>ment is recommended that includes a urinalysis and initiation of empiric therapy</p>
+<h2>without a urine culture (Figure 51-1).</h2>
+<li>Short-course therapy (3-day therapy) with trimethoprim–sulfamethoxazole or a</li>
+<p>fluoroquinolone (eg, ciprofloxacin or levofloxacin, but not moxifloxacin) is supe-</p>
+<p>rior to single-dose therapy for uncomplicated infection. Fluoroquinolones should be</p>
+<p>reserved for patients with suspected or possible pyelonephritis due to the collateral</p>
+<p>damage risk. Instead, a 3-day course of trimethoprim–sulfamethoxazole, a 5-day</p>
+<p>course of nitrofurantoin, or a one-time dose of fosfomycin should be considered</p>
+<p>ch51.indd 562 20-11-2020 12:54:19</p>
+<div class="table-container"><table><tr><th>TABLE 51-1 Commonly Used Antimicrobial Agents in the Treatment of UTIs(Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reactions</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Carbapenems/
+Monobactams</td><td></td><td></td><td></td></tr><tr><td>Imipenem–
+cilistatin
+Meropenem
+Meropenem/
+Vaborbactam
+Doripenem
+Ertapenem
+Aztreonam</td><td>Hypersensitivity
+(rash,
+anaphylaxis),
+diarrhea,
+superinfections,
+and seizures</td><td>CBC, signs
+of rash, or
+hypersensitivity</td><td>Carbapenems have a
+broad spectrum of
+activity, including
+gram-positive,
+gram-negative,
+and anaerobic
+bacteria. Imipenem,
+meropenem, and
+doripenem are active
+against
+P. aeruginosa and
+enterococci, but
+ertapenem is not.
+Aztreonam is a
+monobactam that is
+only active against
+gram-negative
+bacteria, including
+some strains of P.
+aeruginosa. Generally
+useful for nosocomial
+infections when
+aminoglycosides are
+to be avoided and in
+penicillin-sensitive
+patients</td></tr><tr><td>Fluoroquinolones</td><td></td><td></td><td></td></tr><tr><td>Ciprofloxacin
+Levofloxacin</td><td>Hypersensitivity,
+photosensitivity,
+GI symptoms,
+dizziness,
+confusion, and
+tendonitis (black
+box warning)</td><td>CBC, baseline
+serum
+creatinine, and
+BUN</td><td>Broad-spectrum
+activity against
+both gram-negative
+and gram-positive
+bacteria. They provide
+urine and high-tissue
+concentrations and
+are actively secreted
+in reduced renal
+function</td></tr></table></div><h2>Urinary Tract Infections and Prostatitis | CHAPTER 51</h2>
+<p>TABLE 51-2 Overview of Outpatient Antimicrobial Therapy for Lower Tract Infections in Adults</p>
+<p>Indications Antibiotic Oral Dose Intervala Duration</p>
+<p>Lower tract infections</p>
+<h2>Uncomplicated Trimethoprim– 1 DS tablet Twice a day 3 days</h2>
+<p>sulfamethoxazole</p>
+<p>Nitrofurantoin 100 mg Twice a day 5 days</p>
+<p>monohydrate</p>
+<p>Fosfomycin trometamol 3 g Single dose 1 day</p>
+<p>Ciprofloxacin 250 mg Twice a day 3 days</p>
+<p>Levofloxacin 250 mg Once a day 3 days</p>
+<p>Amoxicillin–clavulanate 500 mg Every 8 5–7 days</p>
+<p>hours</p>
+<p>Pivmecillinam 400 mg Twice a day 3 days</p>
+<h2>Complicated Trimethoprim– 1 DS tablet Twice a day 7–10 days</h2>
+<p>sulfamethoxazole</p>
+<p>Ciprofloxacin 250–500 mg Twice a day 7–10 days</p>
+<p>Levofloxacin 250 mg Once a day 10 days</p>
+<p>750 mg Once a day 5 days</p>
+<p>Amoxicillin–clavulanate 500 mg Every 8 7–10 days</p>
+<p>hours</p>
+<p>Recurrent Nitrofurantoin 50 mg Once a day 6 months</p>
+<p>infections</p>
+<h2>Trimethoprim– 1/2 SS tablet Once a day 6 months</h2>
+<p>sulfamethoxazole</p>
+<h2>Acute Trimethoprim– 1 DS tablet Twice a day 14 days</h2>
+<p>pyelonephritis sulfamethoxazole</p>
+<p>Ciprofloxacin 500 mg Twice a day 14 days</p>
+<p>1000 mg ER Once a day 7 days</p>
+<p>Levofloxacin 250 mg Once a day 10 days</p>
+<p>750 mg Once a day 5 days</p>
+<p>Amoxicillin–clavulanate 500 mg Every 8 14 days</p>
+<p>hours</p>
+<pre><code>aDosing intervals for normal renal function.</code></pre>
+<p>DS, double strength; SS, single strength.</p>
+<p>as first-line therapy. In areas where there is more than 20% resistance of E. coli to</p>
+<p>trimethoprim–sulfamethoxazole, nitrofurantoin or fosfomycin should be utilized.</p>
+<p>Amoxicillin or ampicillin is not recommended because of the high incidence of</p>
+<p>resistant E. coli. Follow-up urine cultures are not necessary in patients who respond.</p>
+<p>Complicated Urinary Tract Infections</p>
+<p>Acute Pyelonephritis</p>
+<li>The presentation of high-grade fever (>38.3°C [100.9°F]) and severe flank pain</li>
+<p>should be treated as acute pyelonephritis, and aggressive management is warranted.</p>
+<p>Severely ill patients with pyelonephritis should be hospitalized and IV drugs admin-</p>
+<p>istered initially. Milder cases may be managed with oral antibiotics in an outpatient</p>
+<p>setting.</p>
+<p>563</p>
+<p>ch51.indd 563 20-11-2020 12:54:19</p>
+<div class="table-container"><table><tr><th>TABLE 51-2 Overview of Outpatient Antimicrobial Therapy for Lower Tract Infections in Adults</th><th></th><th></th><th></th><th></th></tr><tr><td>Indications</td><td>Antibiotic</td><td>Oral Dose</td><td>Intervala</td><td>Duration</td></tr><tr><td>Lower tract infections</td><td></td><td></td><td></td><td></td></tr><tr><td>Uncomplicated</td><td>Trimethoprim–
+sulfamethoxazole</td><td>1 DS tablet</td><td>Twice a day</td><td>3 days</td></tr><tr><td></td><td>Nitrofurantoin
+monohydrate</td><td>100 mg</td><td>Twice a day</td><td>5 days</td></tr><tr><td></td><td>Fosfomycin trometamol</td><td>3 g</td><td>Single dose</td><td>1 day</td></tr><tr><td></td><td>Ciprofloxacin</td><td>250 mg</td><td>Twice a day</td><td>3 days</td></tr><tr><td></td><td>Levofloxacin</td><td>250 mg</td><td>Once a day</td><td>3 days</td></tr><tr><td></td><td>Amoxicillin–clavulanate
+Pivmecillinam</td><td>500 mg
+400 mg</td><td>Every 8
+hours
+Twice a day</td><td>5–7 days
+3 days</td></tr><tr><td>Complicated</td><td>Trimethoprim–
+sulfamethoxazole</td><td>1 DS tablet</td><td>Twice a day</td><td>7–10 days</td></tr><tr><td></td><td>Ciprofloxacin</td><td>250–500 mg</td><td>Twice a day</td><td>7–10 days</td></tr><tr><td></td><td>Levofloxacin</td><td>250 mg</td><td>Once a day</td><td>10 days</td></tr><tr><td></td><td></td><td>750 mg</td><td>Once a day</td><td>5 days</td></tr><tr><td></td><td>Amoxicillin–clavulanate</td><td>500 mg</td><td>Every 8
+hours</td><td>7–10 days</td></tr><tr><td>Recurrent
+infections</td><td>Nitrofurantoin</td><td>50 mg</td><td>Once a day</td><td>6 months</td></tr><tr><td></td><td>Trimethoprim–
+sulfamethoxazole</td><td>1/2 SS tablet</td><td>Once a day</td><td>6 months</td></tr><tr><td>Acute
+pyelonephritis</td><td>Trimethoprim–
+sulfamethoxazole</td><td>1 DS tablet</td><td>Twice a day</td><td>14 days</td></tr><tr><td></td><td>Ciprofloxacin</td><td>500 mg</td><td>Twice a day</td><td>14 days</td></tr><tr><td></td><td></td><td>1000 mg ER</td><td>Once a day</td><td>7 days</td></tr><tr><td></td><td>Levofloxacin</td><td>250 mg</td><td>Once a day</td><td>10 days</td></tr><tr><td></td><td></td><td>750 mg</td><td>Once a day</td><td>5 days</td></tr><tr><td></td><td>Amoxicillin–clavulanate</td><td>500 mg</td><td>Every 8
+hours</td><td>14 days</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>sititatsorP</p>
+<p>dna</p>
+<p>sITU</p>
+<p>fo</p>
+<p>tnemtaerT</p>
+<p>laciripmE</p>
+<p>desaB-ecnedivE</p>
+<p>3-15</p>
+<h2>ELBAT</h2>
+<p>stnemmoC</p>
+<p>noitadnemmoceR</p>
+<p>tnemtaerT</p>
+<p>snegohtaP</p>
+<p>sisongaiD</p>
+<p>esod</p>
+<p>elgnis</p>
+<p>naht</p>
+<p>evitceffe</p>
+<p>erom</p>
+<p>ypareht</p>
+<p>esruoc-trohS</p>
+<p>a)I,A(</p>
+<p>syad</p>
+<p>5 ×</p>
+<p>niotnarufortiN</p>
+<p>.1</p>
+<p>,iloc</p>
+<p>aihcirehcsE</p>
+<p>detacilpmocnu</p>
+<p>etucA</p>
+<p>tnempoleved</p>
+<p>ot</p>
+<p>sevitanretla</p>
+<p>sa</p>
+<p>senoloniuqoroufl</p>
+<p>evreseR</p>
+<p>a)I,A(</p>
+<p>syad</p>
+<p>3</p>
+<p>× elozaxohtemaflus–mirpohtemirT</p>
+<p>.2</p>
+<p>succocolyhpatS</p>
+<p>sititsyc</p>
+<p>sucityhporpas</p>
+<p>a)III-A(</p>
+<p>ecnatsiser</p>
+<p>fo</p>
+<p>a)I,A(</p>
+<p>esod</p>
+<p>1 ×</p>
+<p>lomatemort</p>
+<p>nicymofsoF</p>
+<p>.3</p>
+<p>etuca</p>
+<p>ni</p>
+<p>evitceffe</p>
+<p>sa ton</p>
+<p>era</p>
+<p>puorg</p>
+<p>a sa smatcaL-β</p>
+<p>a)I,A( syad</p>
+<p>3</p>
+<p>× enoloniuqoroulF</p>
+<p>.4</p>
+<p>eht</p>
+<p>ro</p>
+<p>elozaxohtemaflus–mirpohtemirt</p>
+<p>naht sititsyc</p>
+<p>a)I,B(</p>
+<p>syad</p>
+<p>7–3</p>
+<p>×</p>
+<p>smatcaL-β</p>
+<p>.5</p>
+<p>anillicipma</p>
+<p>ro</p>
+<p>nillicixoma</p>
+<p>esu ton</p>
+<p>od</p>
+<p>,senoloniuqoroufl</p>
+<p>)I,A( syad</p>
+<p>7–3</p>
+<p>×</p>
+<p>manillicemviP</p>
+<p>.6</p>
+<p>setatS</p>
+<p>detinU</p>
+<p>eht</p>
+<p>ni elbaliava</p>
+<p>ton manillicemviP</p>
+<p>driht</p>
+<p>eht</p>
+<p>gnirud</p>
+<p>elozaxohtemaflus–mirpohtemirt</p>
+<p>diovA</p>
+<p>syad</p>
+<p>7 ×</p>
+<p>etanaluvalc–nillicixomA</p>
+<p>.1</p>
+<p>evoba</p>
+<p>sA</p>
+<p>ycnangerP</p>
+<p>retsemirt</p>
+<p>syad</p>
+<p>7 ×</p>
+<p>niropsolahpeC</p>
+<p>.2</p>
+<p>syad</p>
+<p>7</p>
+<p>× elozaxohtemaflus–mirpohtemirT</p>
+<p>.3</p>
+<p>sitirhpenoleyp</p>
+<p>etucA</p>
+<p>tneitaptuo</p>
+<p>sa</p>
+<p>deganam</p>
+<p>eb</p>
+<p>naC</p>
+<p>a)I,A( syad</p>
+<p>7</p>
+<p>× enoloniuqoroulF</p>
+<p>.1</p>
+<p>iloc</p>
+<h2>.E</h2>
+<p>detacilpmocnU</p>
+<p>a)I,A(</p>
+<p>syad</p>
+<p>41</p>
+<p>×</p>
+<p>)elbitpecsus</p>
+<p>fi( elozaxohtemaflus–mirpohtemirT</p>
+<p>.2</p>
+<p>syad</p>
+<p>41</p>
+<p>×</p>
+<p>dica</p>
+<p>cinaluvalc–nillicixoma</p>
+<p>ro</p>
+<p>nillicixomA</p>
+<p>.1</p>
+<p>airetcab</p>
+<p>evitisop-marG</p>
+<p>;ypareht</p>
+<h2>VI</h2>
+<p>fo</p>
+<p>noitarud</p>
+<p>enimreted</p>
+<p>lliw</p>
+<p>ssenlli fo</p>
+<p>ytireveS</p>
+<p>syad</p>
+<p>41</p>
+<p>×</p>
+<p>enoloniuQ</p>
+<p>.1</p>
+<p>iloc</p>
+<h2>.E</h2>
+<p>detacilpmoC</p>
+<p>ypareht</p>
+<p>tcerid</p>
+<p>dluohs</p>
+<p>stluser erutluc</p>
+<p>edisocylgonima</p>
+<p>sulp</p>
+<p>nillicinep</p>
+<p>murtceps-dednetxE</p>
+<p>.2</p>
+<p>silibarim</p>
+<h2>.P</h2>
+<p>ypareht</p>
+<p>fo</p>
+<p>syad</p>
+<p>41 etelpmoc</p>
+<p>yam ypareht</p>
+<p>larO</p>
+<p>eainomuenp</p>
+<h2>.K</h2>
+<p>asonigurea</p>
+<h2>.P</h2>
+<p>silaceaf</p>
+<p>succocoretnE</p>
+<p>yllaitini</p>
+<p>ypareht</p>
+<p>VI eriuqer</p>
+<p>yam</p>
+<p>sititatsorp</p>
+<p>etucA</p>
+<p>skeew</p>
+<p>6–4</p>
+<p>× elozaxohtemaflus–mirpohtemirT</p>
+<p>.1</p>
+<p>iloc</p>
+<h2>.E</h2>
+<p>sititatsorP</p>
+<p>sdoirep</p>
+<p>tnemtaert</p>
+<p>regnol</p>
+<p>eriuqer</p>
+<p>yam</p>
+<p>sititatsorp</p>
+<p>cinorhC</p>
+<p>skeew</p>
+<p>6–4</p>
+<p>enoloniuqoroulF</p>
+<p>.2</p>
+<p>eainomuenp</p>
+<h2>.K</h2>
+<p>yregrus</p>
+<p>ro</p>
+<p>.pps</p>
+<p>suetorP</p>
+<p>asonigurea</p>
+<h2>.P</h2>
+<p>:ecnedive</p>
+<p>fo</p>
+<p>ytilauQ</p>
+<p>.tsniaga</p>
+<p>ecnedive</p>
+<p>doog ,E ;tsniaga</p>
+<p>etaredom</p>
+<h2>,D</h2>
+<p>;tsniaga</p>
+<p>dna</p>
+<p>rof</p>
+<p>ecnedive</p>
+<p>roop ,C</p>
+<p>;rof</p>
+<p>ecnedive</p>
+<p>etaredom</p>
+<h2>,B</h2>
+<p>;rof</p>
+<p>ecnedive</p>
+<p>doog</p>
+<h2>,A</h2>
+<p>:snoitadnemmocer</p>
+<p>fo</p>
+<p>htgnertSa</p>
+<p>.seettimmoc</p>
+<p>trepxe</p>
+<p>dna ,ecneirepxe</p>
+<p>lacinilc</p>
+<p>,snoinipo</p>
+<p>morf</p>
+<p>ecnedive</p>
+<h2>,III</h2>
+<p>;lairt lacinilc</p>
+<p>dengised-llew</p>
+<p>eno</p>
+<h2>,II</h2>
+<p>;yduts</p>
+<p>dellortnoc</p>
+<p>,dezimodnar</p>
+<p>reporp</p>
+<p>eno</p>
+<p>tsael</p>
+<p>ta</p>
+<h2>,I</h2>
+<p>.noitcefni</p>
+<p>tcart</p>
+<p>yraniru</p>
+<h2>,ITU</h2>
+<p>ch51.indd 564 20-11-2020 12:54:19</p>
+<div class="table-container"><table><tr><th>stnemmoC
+noitadnemmoceR
+sititatsorP
+dna
+sITU tnemtaerT
+fo
+tnemtaerT
+laciripmE
+desaB-ecnedivE snegohtaP
+3-15
+ELBAT sisongaiD</th><th>tnempoleved anillicipma
+eht
+esod
+ro
+etuca
+elgnis elozaxohtemaflus–mirpohtemirt setatS
+ro
+ot ni nillicixoma
+naht sevitanretla evitceffe detinU
+evitceffe
+eht
+sa esu
+erom sa ton ton ni elbaliava
+senoloniuqoroufl era
+od
+ypareht a)III-A( puorg ,senoloniuqoroufl
+ton
+esruoc-trohS ecnatsiser a sa naht manillicemviP
+smatcaL-β sititsyc
+evreseR
+fo</th><th>driht
+eht
+gnirud
+elozaxohtemaflus–mirpohtemirt
+retsemirt
+diovA</th><th></th><th>tneitaptuo
+sa
+deganam
+eb
+naC</th><th></th><th>;ypareht
+VI ypareht
+fo
+noitarud
+ypareht fo
+syad
+enimreted
+tcerid 41
+etelpmoc
+dluohs
+lliw
+ssenlli stluser yam
+ypareht
+fo erutluc
+ytireveS
+larO</th><th>sdoirep
+tnemtaert
+yllaitini
+ypareht
+regnol
+VI eriuqer
+eriuqer
+yam
+yam
+sititatsorp
+sititatsorp
+yregrus
+cinorhC
+etucA ro</th></tr><tr><td></td><td>a)I,A(
+syad
+a)I,A(
+3
+×
+elozaxohtemaflus–mirpohtemirT esod
+a)I,A( )I,A(
+a)I,A( 1 × syad a)I,B( syad
+syad lomatemort syad
+3 7–3
+5 × × enoloniuqoroulF 7–3 ×
+niotnarufortiN × manillicemviP
+nicymofsoF smatcaL-β
+.1 .2 .3 .4 .5 .6</td><td>syad
+7
+×
+syad elozaxohtemaflus–mirpohtemirT
+7
+×
+etanaluvalc–nillicixomA syad
+7
+×
+niropsolahpeC
+.1 .2 .3</td><td></td><td>a)I,A(
+syad
+41
+×
+)elbitpecsus
+fi(
+elozaxohtemaflus–mirpohtemirT
+a)I,A(
+syad
+7
+×
+enoloniuqoroulF
+.1 .2</td><td>syad
+41
+×
+dica
+cinaluvalc–nillicixoma
+ro
+nillicixomA
+.1</td><td>edisocylgonima
+sulp
+nillicinep
+syad
+murtceps-dednetxE
+41
+×
+enoloniuQ
+.1 .2</td><td>skeew
+6–4
+×
+elozaxohtemaflus–mirpohtemirT
+skeew
+6–4
+enoloniuqoroulF
+.1 .2</td></tr><tr><td></td><td>succocolyhpatS
+sucityhporpas
+,iloc
+aihcirehcsE</td><td>evoba
+sA</td><td></td><td>iloc
+.E</td><td>airetcab
+evitisop-marG</td><td>silaceaf
+eainomuenp
+asonigurea succocoretnE
+silibarim
+iloc
+.E .P .K .P</td><td>eainomuenp
+asonigurea
+.pps
+suetorP
+iloc
+.E .K .P</td></tr><tr><td></td><td>detacilpmocnu
+sititsyc
+etucA</td><td>ycnangerP</td><td>sitirhpenoleyp
+etucA</td><td>detacilpmocnU</td><td></td><td>detacilpmoC</td><td>sititatsorP</td></tr></table></div><h2>Urinary Tract Infections and Prostatitis | CHAPTER 51</h2>
+<p>Lower tract symptoms</p>
+<p>Urinalysis/Gram stain</p>
+<p>Significant bacteriuria</p>
+<p>Yes No</p>
+<p>Upper tract symptoms Symptomatic</p>
+<p>acute pyelonephritis abacteriuria</p>
+<p>Yes No</p>
+<p>Obtain urine culture Short-course therapy</p>
+<p>Acutely ill</p>
+<p>high-risk patient Clinical cure Clinical failure</p>
+<p>No Yes</p>
+<p>Urine culture</p>
+<p>Oral therapy 2 weeks Hospitalization</p>
+<p>parenteral antibiotics</p>
+<p>Negative Positive</p>
+<p>Symptomatic Retreat 2 weeks</p>
+<p>abacteriuria</p>
+<p>Urine culture</p>
+<p>2 weeks posttherapy</p>
+<p>Positive Negative</p>
+<p>Recurrence Clinical cure</p>
+<p>Relapse Reinfection</p>
+<p>Urologic</p>
+<p>work-up</p>
+<p>Frequent Infrequent</p>
+<p>episodes episodes</p>
+<p>Consider suppressive Treat each</p>
+<p>therapy postcoital therapy episode</p>
+<p>FIGURE 51-1. Management of urinary tract infections in women.</p>
+<li>At the time of presentation, a Gram stain of the urine should be performed, along</li>
+<p>with urinalysis, culture, and sensitivities.</p>
+<li>In the mild to moderately symptomatic patient for whom oral therapy is consid-</li>
+<p>ered, an effective agent should be administered for 7–14 days, depending on the</p>
+<p>agent used. Fluoroquinolones (ciprofloxacin or levofloxacin) orally for 7–10 days</p>
+<p>are the first-line choice in mild-to-moderate pyelonephritis. Other options include</p>
+<p>565</p>
+<p>ch51.indd 565 20-11-2020 12:54:20</p>
+<div class="table-container"><table><tr><th>Oral therapy 2 weeks</th><th>Hospitalization
+parenteral antibiotics</th></tr></table></div><div class="table-container"><table><tr><th>Positive</th><th>Negative</th></tr></table></div><div class="table-container"><table><tr><th>Recurrence</th><th>Clinical cure</th></tr></table></div><div class="table-container"><table><tr><th>Consider suppressive
+therapy postcoital therapy</th><th>Treat each
+episode</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>Lower tract symptoms</p>
+<p>Signs of acute prostatitis</p>
+<p>or pyelonephritis</p>
+<p>Yes No</p>
+<li>Hospitalization • Complicated infection</li>
+<li>Parenteral antibiotics • Urine culture</li>
+<p>2 weeks</p>
+<p>Treat for 2 weeks</p>
+<p>Follow-up urine culture</p>
+<p>2 weeks posttherapy Clinical cure</p>
+<p>Positive Negative</p>
+<p>Prostatic source Clinical cure</p>
+<p>treat for 6 weeks</p>
+<p>Yes No</p>
+<p>No further workup • Repeat urine culture</p>
+<li>Consider urologic</li>
+<p>evaluation</p>
+<p>Treat for prostatic source</p>
+<p>6 weeks of therapy</p>
+<p>Repeat urine culture</p>
+<p>Negative Positive</p>
+<p>No further treatment Consider long-term</p>
+<p>supression/surgery</p>
+<h2>FIGURE 51-2. Management of urinary tract infections in men.</h2>
+<p>trimethoprim– sulfamethoxazole for 14 days. If a Gram stain reveals gram-positive</p>
+<p>cocci, Streptococcus faecalis should be considered and treatment directed against this</p>
+<p>pathogen (ampicillin).</p>
+<li>In the seriously ill patient, the traditional initial therapy is an IV fluoroquinolone, an</li>
+<p>aminoglycoside with or without ampicillin, or an extended-spectrum cephalosporin</p>
+<p>with or without an aminoglycoside.</p>
+<li>If the patient has been hospitalized in the last 6 months, has a urinary catheter, or is</li>
+<p>in a nursing home, the possibility of P. aeruginosa and enterococci infection, as well</p>
+<p>as multiple-resistant organisms, should be considered. In this setting, ceftazidime,</p>
+<p>ticarcillin–clavulanic acid, piperacillin, aztreonam, meropenem, or imipenem,</p>
+<p>in combination with an aminoglycoside, is recommended. If the patient responds to</p>
+<p>initial combination therapy, the aminoglycoside may be discontinued after 3 days.</p>
+<li>Follow-up urine cultures should be obtained 2 weeks after the completion of therapy</li>
+<p>to ensure a satisfactory response and to detect possible relapse.</p>
+<p>Urinary Tract Infections in Men</p>
+<li>Therapy in men requires prolonged treatment (Figure 51-2).</li>
+<li>A urine culture should be obtained before treatment, because the cause of infection</li>
+<h2>in men is not as predictable as in women.</h2>
+<p>ch51.indd 566 20-11-2020 12:54:21</p>
+<h2>Urinary Tract Infections and Prostatitis | CHAPTER 51</h2>
+<li>If gram-negative bacteria are presumed, trimethoprim–sulfamethoxazole or a</li>
+<p>fluoroquinolone is a preferred agent. Initial therapy is for 10–14 days. For recur-</p>
+<p>rent infections in men, cure rates are much higher with a 6-week regimen of</p>
+<p>trimethoprim–sulfamethoxazole.</p>
+<p>Recurrent Infections</p>
+<li>Recurrent episodes of UTI (reinfections and relapses) account for a significant por-</li>
+<p>tion of all UTIs. These patients are most commonly women and can be divided into</p>
+<p>two groups: those with fewer than two or three episodes per year and those who</p>
+<p>develop more frequent infections.</p>
+<li>In patients with infrequent infections (ie, fewer than three infections per year), each</li>
+<p>episode should be treated as a separately occurring infection. Short-course therapy</p>
+<p>should be used in symptomatic female patients with lower tract infection.</p>
+<li>In patients who have frequent symptomatic infections, long-term prophylactic anti-</li>
+<p>microbial therapy may be instituted (see Table 51-2). Therapy is generally given for</p>
+<p>6 months, with urine cultures followed monthly.</p>
+<li>In women who experience symptomatic reinfections in association with sexual activ-</li>
+<p>ity, voiding after intercourse may help prevent infection. Also, self-administered,</p>
+<p>single-dose prophylactic therapy with trimethoprim–sulfamethoxazole taken</p>
+<p>after intercourse significantly reduces the incidence of recurrent infection in these</p>
+<p>patients.</p>
+<li>Women who relapse after short-course therapy should receive a 2-week course of</li>
+<p>therapy. In patients who relapse after 2 weeks, therapy should be continued for</p>
+<p>another 2–4 weeks. If relapse occurs after 6 weeks of treatment, urologic examination</p>
+<p>should be performed, and therapy for 6 months or even longer may be considered.</p>
+<h2>SPECIAL CONDITIONS</h2>
+<h2>URINARY TRACT INFECTION IN PREGNANCY</h2>
+<li>In patients with significant bacteriuria, symptomatic or asymptomatic treatment</li>
+<p>is recommended to avoid possible complications during the pregnancy. Therapy</p>
+<p>should consist of an agent with a relatively low adverse-effect potential (cephalexin,</p>
+<p>amoxicillin, or amoxicillin/clavulanate) administered for 7 days.</p>
+<li>Tetracyclines should be avoided because of teratogenic effects and sulfonamides</li>
+<p>should not be administered during the third trimester because of the possible devel-</p>
+<p>opment of kernicterus and hyperbilirubinemia. Also, the fluoroquinolones should</p>
+<p>not be given because of their potential to inhibit cartilage and bone development in</p>
+<p>the newborn.</p>
+<h2>CATHETERIZED PATIENTS</h2>
+<li>When bacteriuria occurs in asymptomatic, short-term catheterized patients</li>
+<p>(&lt;30 days), the use of systemic antibiotic therapy should be withheld and the cath-</p>
+<p>eter removed as soon as possible. If the patient becomes symptomatic, the catheter</p>
+<p>should again be removed, and treatment as described for complicated infections</p>
+<p>should be started.</p>
+<li>The use of prophylactic systemic antibiotics in patients with short-term catheteriza-</li>
+<p>tion reduces the incidence of infection over the first 4–7 days. In long-term catheter-</p>
+<p>ized patients, however, antibiotics only postpone the development of bacteriuria and</p>
+<p>lead to emergence of resistant organisms.</p>
+<p>See Chapter 134, Urinary Tract Infections and Prostatitis, authored by Julianna M.</p>
+<p>Fernandez and Elizabeth A. Coyle, for a more detailed discussion of this topic.</p>
+<p>567</p>
+<p>ch51.indd 567 20-11-2020 12:54:21</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. Shock Syndromes</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>12. Shock Syndromes</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>138</p>
+<h2>RETPAHC</h2>
+<p>12</p>
+<p>Shock Syndromes</p>
+<li>Shock involves a group of syndromes that cause acute, generalized circulatory failure</li>
+<p>associated with inadequate tissue and organ perfusion. Shock is characterized by</p>
+<p>systolic blood pressure (SBP) &lt;90 mm Hg (or reduction of at least 40 mm Hg from</p>
+<p>baseline) or mean arterial blood pressure (MAP) &lt;70 mm Hg with tachycardia and</p>
+<p>organ perfusion abnormalities.</p>
+<li>Classes of shock based on etiologic mechanisms include (1) hypovolemic, (2) cardio-</li>
+<p>genic, (3) obstructive, and (4) vasodilatory/distributive. Patients may have compo-</p>
+<p>nents of more than one shock syndrome upon presentation.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Circulatory shock develops when the cardiovascular system is unable to deliver an</li>
+<pre><code>adequate oxygen supply to meet tissue demands, resulting in cellular dysfunction,</code></pre>
+<p>a shift in cellular metabolism to anaerobic pathways, and elevated blood lactate</p>
+<p>concentrations.</p>
+<li>Hypovolemic shock is caused by inadequate venous return because of internal or</li>
+<p>external loss of intravascular fluids (eg, trauma, surgery, hemorrhage), resulting in</p>
+<p>insufficient cardiac preload and decreased stroke volume.</p>
+<li>Cardiogenic shock results from loss of pump function because of decreased cardiac</li>
+<p>contractility (eg, acute myocardial infarction [AMI]), acute valvular abnormality, or</p>
+<p>arrhythmia (eg, ventricular tachycardia).</p>
+<li>Obstructive shock results from extracardiac obstruction to blood flow into or out</li>
+<p>of the heart, such as tension pneumothorax, cardiac tamponade, or pulmonary</p>
+<p>embolism.</p>
+<li>Vasodilatory/distributive shock is characterized by loss of vascular tone; this involves</li>
+<p>tissue hypoperfusion due to decreased systemic vascular resistance (or hypoperfusion</p>
+<p>despite normal or elevated cardiac output). Distributive shock is a subset of vasodila-</p>
+<p>tory shock characterized by maldistribution of blood flow in organ microcirculation.</p>
+<p>Most cases of vasodilatory shock result in distributive shock. Almost all cases of</p>
+<p>septic shock result in vasodilatory/distributive shock.</p>
+<li>The body responds to an abrupt decrease in tissue perfusion with subsequent</li>
+<p>restoration of perfusion, leading to a systemic inflammatory response syndrome</p>
+<p>(SIRS) with release of numerous mediators that interact to cause further injury. This</p>
+<p>“ischemia-reperfusion injury” results in edematous obstruction of capillaries, oxygen</p>
+<p>free-radical damage of cell membranes, activation of cellular (eg, white blood cells,</p>
+<p>platelets) and humoral (eg, procoagulants, anticoagulants, complement, kinins) com-</p>
+<p>ponents, release of other inflammatory mediators, and formation of microthrombi.</p>
+<li>As part of the stress response, anti-inflammatory pathways are also activated to</li>
+<p>counterbalance the proinflammatory effects on tissues. Vagal nerve-mediated release</p>
+<p>of acetylcholine leads to suppression of proinflammatory cytokines by macrophages.</p>
+<p>The renin–angiotensin–aldosterone and hypothalamic–pituitary–adrenocortical</p>
+<p>systems are activated, with release of angiotensin II, vasopressin, and cortisol to</p>
+<p>maintain blood pressure (BP) via vasoconstriction and renal sodium and water</p>
+<p>retention. Cortisol and catecholamine release from the adrenal glands also inhibits</p>
+<p>proinflammatory cytokine production.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients may report dizziness, lightheadedness, confusion, and low urine production.</li>
+<li>Symptoms related to the underlying shock etiology will be present (eg, cough, fever,</li>
+<p>malaise with pneumonia; chest pain with AMI).</p>
+<p>ch12.indd 138 18-11-2020 16:23:20</p>
+<div class="table-container"><table><tr><th>Shock Syndromes</th><th>12
+00</th><th>RETPAHC</th></tr></table></div><h2>Shock Syndromes | CHAPTER 12</h2>
+<li>Vital signs may reveal tachycardia (eg, >120 bpm), tachypnea (eg, >30 breaths/min),</li>
+<p>hypotension (eg, SBP &lt;90 mm Hg), and low or normal body temperature (eg,</p>
+<p>36°C–37°C [96.8°F–98.6°F]) in the absence of infection. Temperature may be</p>
+<p>elevated if infection is present (eg, &gt;38.3°C [101°F]).</p>
+<li>Physical exam findings of tissue hypoperfusion may include neurologic (eg, confu-</li>
+<p>sion, obtundation), cutaneous (eg, warm skin with vasodilation and cool, clammy</p>
+<p>skin with vasoconstriction), and renal (eg, low urine production) system abnormali-</p>
+<p>ties. Capillary refill is usually impaired.</p>
+<li>Laboratory test abnormalities may include elevated blood lactate concentration</li>
+<p>(&gt;2 mmol/L), increased blood urea nitrogen (BUN) and serum creatinine and</p>
+<pre><code>decreased urine output (&lt;0.5 to 1 mL/kg/hour) with renal dysfunction, elevated</code></pre>
+<pre><code>transaminase levels with hepatic dysfunction, decreased hemoglobin/hematocrit</code></pre>
+<p>with hemorrhage, and elevated cardiac troponin concentration with AMI. In septic</p>
+<p>shock, the white blood cell (WBC) count is usually &gt;12,000 cells/mm3 (12 × 109/L),</p>
+<p>and thrombocytopenia may occur. In hemorrhagic and septic shock, the prothrom-</p>
+<p>bin time (PT) and international normalized ratio (INR) may increase over time.</p>
+<h2>DIAGNOSIS AND MONITORING</h2>
+<li>Rapid assessment by cardiac echocardiography is indicated when the shock etiol-</li>
+<p>ogy is unclear. Transthoracic echocardiograms can lead to rapid (within 5 minutes)</p>
+<p>diagnosis of the shock type.</p>
+<li>Initial monitoring in suspected circulatory shock should include vital signs, blood lactate</li>
+<p>concentration, urine production, and physical examination, including mental status.</p>
+<li>Advanced hemodynamic monitoring (eg, central venous catheterization) may be</li>
+<p>needed to measure central venous pressure (CVP), obtain venous samples for labora-</p>
+<p>tory testing (including central venous oxygen saturation or ScvO), and administer</p>
+<p>2</p>
+<p>drugs (including vasopressors) or fluids directly into the central circulation.</p>
+<li>Tissue metabolic requirements are met by both adequate MAP and adequate oxygen</li>
+<p>delivery (Do). MAP is the driving pressure for peripheral blood flow and end-organ</p>
+<p>2</p>
+<p>perfusion and is a surrogate estimate of tissue blood flow. Because the components</p>
+<p>of BP are cardiac output (CO) and systemic vascular resistance (SVR) and CO is a</p>
+<p>determinant of Do, BP is integrally related to Do. However, compensatory mecha-</p>
+<p>2 2</p>
+<p>nisms such as vasoconstriction may preserve BP while tissue perfusion is inadequate.</p>
+<p>Therefore, while low BP is commonly present in patients with shock, it is not required</p>
+<p>to define shock.</p>
+<li>Inadequate Do leads to organ damage in critical illness. In normal individuals,</li>
+<p>2</p>
+<p>oxygen consumption (Vo) depends on Do up to a certain critical level (Vo flow</p>
+<p>2 2 2</p>
+<p>dependency). At this point, tissue oxygen requirements are satisfied and further</p>
+<p>increases in Do will not alter Vo (Vo flow independency). The point that Vo</p>
+<p>2 2 2 2</p>
+<p>becomes dependent on Do represents a pathologic transition from aerobic to</p>
+<p>2</p>
+<p>anaerobic cellular metabolism and lactate production. However, studies in critically</p>
+<p>ill patients show a continuous, pathologic dependence relationship of Vo with Do.</p>
+<p>2 2</p>
+<p>The parameters are calculated as follows:</p>
+<p>Do = CO × Cao and Vo = CO× (Cao -CVo)</p>
+<p>2 2 2 2 2</p>
+<p>where CO = cardiac output, Cao = arterial oxygen content determined by hemoglobin</p>
+<p>2</p>
+<p>concentration and arterial oxygen saturation (Sao), and Cvo = mixed venous oxy-</p>
+<p>2 2</p>
+<p>gen content determined by hemoglobin concentration and venous oxygen saturation</p>
+<p>(Svo).</p>
+<p>2</p>
+<li>Venous oximetry (ie, venous oxygen saturations) reflects the adequacy of tissue oxy-</li>
+<p>genation. Svo and central venous oxygen saturation (Scvo) are the oxyhemoglobin</p>
+<p>2 2</p>
+<p>saturation of venous blood obtained from the pulmonary artery and a central vein</p>
+<p>in the thorax, respectively, and are expressed as a percentage. When tissue oxygen</p>
+<p>demand exceeds supply, the oxygen extraction ratio (OER) increases and values of</p>
+<p>2</p>
+<p>139</p>
+<p>ch12.indd 139 18-11-2020 16:23:21</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Svo and Scvo are low. When hemoglobin, Sao, and Vo are stable, Svo or Scvo</p>
+<p>2 2 2 2 2 2</p>
+<p>values reflect CO. Thus, venous oximetry may be used as a surrogate for CO and can</p>
+<p>be useful in shock state differentiation.</p>
+<li>Generally, Svo values >70% (0.70) are considered adequate and normal. However,</li>
+<p>2</p>
+<p>Svo values &lt;50% (0.50) are low and may approach the critical OER where anaero-</p>
+<p>2 2</p>
+<p>bic metabolism occurs and lactate concentrations increase. High Svo (&gt;80% [0.80])</p>
+<p>2</p>
+<p>can represent a high CO but may also be a poor prognostic sign indicating adequate</p>
+<p>Do but poor capacity of tissues to extract oxygen.</p>
+<p>2</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The desired outcome is to reduce morbidity and mortality</li>
+<p>by preventing organ damage and, to the extent possible, halt or reverse existing</p>
+<pre><code>organ dysfunction. Treatment of circulatory shock can be divided into four phases,</code></pre>
+<p>each with different (but sometimes overlapping) treatment goals and strategies: (1)</p>
+<p>Salvage, with goals of obtaining a minimum perfusion pressure and CO to ensure</p>
+<p>survival and treating the underlying shock etiology (eg, hemostasis, antimicrobi-</p>
+<p>als, coronary revascularization); (2) optimization, ensuring adequate organ perfu-</p>
+<pre><code>sion and Do; (3) stabilization, to prevent further end-organ dysfunction; and (4)</code></pre>
+<p>2</p>
+<p>de-escalation, which targets patient recovery with goals of weaning (or stopping)</p>
+<p>vasoactive medications and fluids. This chapter focuses on salvage and optimization,</p>
+<p>but recognizing the phase of a patient’s circulatory shock is necessary to establish</p>
+<p>treatment goals and therapeutic approaches.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Figure 12-1 presents an algorithm for managing patients with shock using a stepwise</li>
+<p>approach to optimize MAP, first with crystalloid fluid resuscitation followed by the</p>
+<p>vasopressor norepinephrine if appropriate.</p>
+<li>Hospitalization is indicated for patients with circulatory insufficiency that does not</li>
+<p>respond readily to fluid resuscitation.</p>
+<li>Venous access is generally obtained during the initial examination process. Large-</li>
+<p>bore peripheral IV lines are preferred over central lines for initial fluid resuscitation,</p>
+<p>but vasopressors should preferentially be administered via a central venous catheter.</p>
+<li>The stabilization phase should include general supportive care measures such as</li>
+<p>assessment and management of pain, anxiety/agitation, delirium, immobility, sleep</p>
+<p>disturbances, nutrition, glycemic control, and thromboembolism prophylaxis.</p>
+<li>A goal MAP >65 mm Hg is often targeted to maintain adequate perfusion to critical</li>
+<p>organs.</p>
+<li>Consider patient-specific characteristics when establishing a BP goal and determin-</li>
+<p>ing an adequate perfusion response to resuscitation.</p>
+<li>If MAP or SBP remains below goal, then initiate vasopressors to ensure tissue</li>
+<p>perfusion.</p>
+<li>Determine adequacy of Do by assessing markers of end-organ perfusion (eg, urine</li>
+<p>2</p>
+<p>production) and lactate concentrations. Obtain serial lactate concentrations in the</p>
+<p>early treatment phases because lactate clearance and normalization correspond with</p>
+<p>improved global tissue perfusion.</p>
+<li>After the salvage treatment phase, give fluids only to patients with ineffective tissue</li>
+<p>perfusion who are predicted or known to be fluid responsive. The benefits of con-</p>
+<p>tinued fluid administration (improved CO and tissue perfusion) must be balanced</p>
+<p>against the risks of fluid overload (eg, pulmonary edema).</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Give all patients the basic life support measures of a secure airway with appropriate</li>
+<p>oxygenation.</p>
+<li>For hypovolemic shock, additional measures may include surgery, control of blood</li>
+<p>loss, blood component transfusion, and prevention of heat loss with hypothermia or</p>
+<p>cooling measures with heat exposure (eg, heat stroke).</p>
+<p>140</p>
+<p>ch12.indd 140 18-11-2020 16:23:22</p>
+<h2>Shock Syndromes | CHAPTER 12</h2>
+<p>Signs and symptoms of shock</p>
+<p>(tissue/organ hypoperfusion, MAP</p>
+<p>&lt;70 mm Hg, SBP &lt;90 mm Hg, etc.)</p>
+<p>Continue Evaluate and treat the</p>
+<p>monitoring No Yes underlying cause</p>
+<p>Initial assessment</p>
+<p>and clinical condition consistent with</p>
+<p>fluid responsiveness?</p>
+<p>Yes No</p>
+<p>Give fluid Assess fluid</p>
+<p>challenge Positive responsiveness</p>
+<p>Negative</p>
+<p>Continued Start norepinephrine 0.05–0.1</p>
+<p>No signs of tissue Yes mcg/kg/min and titrate</p>
+<p>hypoperfusion? to goal MAP or SBP</p>
+<p>Continued Echocardiography</p>
+<p>No signs of tissue Yes and/or advanced</p>
+<p>hyoperfusion?</p>
+<p>monitoring</p>
+<p>Continue titrating norepinephrine</p>
+<li>Consider adding vasopressin up to 0.04 units/min</li>
+<li>If tachydysrhythmia consider replacing Evidence of</li>
+<p>No inadequate cardiac</p>
+<p>norepinephrine with phenylephrine</p>
+<p>output?</p>
+<li>If septic shock requiring moderate-to high-dose</li>
+<p>norepinephrine a) add corticosteroids and b) Yes</p>
+<p>consider adding angiotensin II or epinephrine</p>
+<p>Add dobutamine or</p>
+<p>consider mechanical</p>
+<p>circulatory support</p>
+<p>FIGURE 12-1. Algorithm for the management of patients with shock.</p>
+<li>For patients with thermal injuries, cover wound sites with cool, moist sterile dressings</li>
+<p>until more definitive care can be provided.</p>
+<li>Patients with cardiogenic shock secondary to AMI should undergo emergent</li>
+<p>coronary revascularization and be considered for CO augmentation via mechanical</p>
+<p>device (eg, intra-aortic balloon pump or extracorporeal life support).</p>
+<li>Measures for obstructive shock may include pericardiocentesis or surgical evacua-</li>
+<p>tion of fluid for cardiac tamponade, needle decompression and/or chest tube tho-</p>
+<p>racostomy for tension pneumothorax, and surgical or catheter thrombectomy for</p>
+<p>pulmonary embolism.</p>
+<li>Patients with vasodilatory/distributive shock secondary to septic shock should have</li>
+<p>infectious source control with consideration given to fever control via external</p>
+<p>cooling.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Intravenous Fluids and Blood Products</p>
+<li>The goal of administering IV fluids is to increase venous return in order to increase</li>
+<p>stroke volume, cardiac output, Do, and BP. Blood products may also be administered</p>
+<p>2</p>
+<p>to replace cellular and plasma losses with the added benefit of increasing venous</p>
+<p>return.</p>
+<p>141</p>
+<p>ch12.indd 141 18-11-2020 16:23:22</p>
+<div class="table-container"><table><tr><th>g</th><th>at</th></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Crystalloids:</p>
+<li>Isotonic (or near isotonic) crystalloid solutions (eg, lactated Ringer’s and 0.9% sodium</li>
+<p>chloride [normal saline]) are the initial fluid of choice for resuscitation, and large vol-</p>
+<p>umes should be administered (except for patients with cardiogenic shock). Balanced salt</p>
+<p>solutions (eg, lactated Ringer’s) and multiple electrolytes injection (eg, Plasma-Lyte A)</p>
+<p>and normal saline have similar efficacy in expanding plasma volume, but balanced salt</p>
+<p>solutions may be safer. Excess chloride administration with normal saline may be more</p>
+<p>likely to lead to hyperchloremic metabolic acidosis and possibly acute kidney injury</p>
+<p>(AKI). However, balanced salt solutions may aggravate preexisting hyperkalemia or</p>
+<p>exacerbate cerebral edema in brain-injured patients. If there are signs of tissue hypoper-</p>
+<p>fusion and the clinical syndrome is consistent with a shock state that is fluid responsive</p>
+<p>(eg, hypovolemic), administer an initial fluid challenge of at least 500 mL of crystalloid.</p>
+<li>3% sodium chloride (hypertonic saline) causes redistribution of fluid from the</li>
+<p>intracellular space, resulting in rapid expansion of the intravascular compartment;</p>
+<p>however, its use is not associated with improved outcomes when used for initial fluid</p>
+<p>resuscitation in shock. In addition, potential dosing and administration errors can</p>
+<p>lead to adverse events, and dramatic fluid shifts may be associated with hypernatre-</p>
+<p>mia, metabolic acidosis from hyperchloremia, and peripheral vein damage due to</p>
+<p>high osmolality (1026 mOsm/L).</p>
+<p>Colloids:</p>
+<li>Albumin (5% or 25%), hydroxyethyl starch, and dextran are large molecular weight</li>
+<p>solutions that have a prolonged intravascular retention time compared to crystalloid</p>
+<p>solutions; colloids remain in the intravascular space for hours or days, depending</p>
+<p>on the size of the colloid molecules and capillary permeability. However, colloids</p>
+<pre><code>are expensive and have been associated with fluid overload, renal dysfunction, and</code></pre>
+<p>bleeding. When compared with alternative resuscitation solutions, hydroxyethyl</p>
+<p>starch was associated with increased mortality, AKI, and need for renal replacement</p>
+<p>therapy. Consequently, the US product labeling was changed in 2013 to state that</p>
+<p>starch products are contraindicated in critically ill patients; therefore, they should not</p>
+<p>be used for fluid resuscitation.</p>
+<p>Blood products:</p>
+<li>Some patients require blood products (packed red blood cells, fresh frozen plasma,</li>
+<p>platelets, or cryoprecipitate) to ensure maintenance of O-carrying capacity, as well</p>
+<p>2</p>
+<p>as clotting factors and platelets for blood hemostasis. Blood products may be asso-</p>
+<p>ciated with circulatory overload, transfusion-related reactions, virus transmission</p>
+<p>(rarely), hypocalcemia from added citrate, increased blood viscosity from supra-</p>
+<p>normal hematocrit elevations, and hypothermia from failure to appropriately warm</p>
+<p>solutions before administration.</p>
+<p>Fluid Resuscitation in Distributive (Septic) Shock</p>
+<li>The initial fluid challenge volume is unclear; the Surviving Sepsis Campaign recommends</li>
+<p>30 mL/kg crystalloids given within the first 3 hours of shock recognition, but support-</p>
+<p>ing evidence for this specific volume is of low quality. Several approaches exist for fluid</p>
+<p>resuscitation during the first 6 hours: (1) liberal fluid administration (50–75 mL/kg) while</p>
+<p>reserving vasopressors; and (2) relatively restrictive initial fluid administration (≤30 mL/</p>
+<p>kg) with earlier vasopressor use to maintain tissue perfusion. More than 30 mL/kg of crys-</p>
+<p>talloid fluids may be needed to obtain goal MAP, reverse global hypoperfusion (lactate</p>
+<p>clearance, SCVo ≥70% [0.70]), or achieve clinical indication of regional organ-specific</p>
+<p>2</p>
+<p>perfusion (eg, urine production). An isolated bolus (eg, 250–500 mL) in an adult patient</p>
+<p>is unlikely to cause a substantial change in BP or acid–base balance. Therefore, multiple</p>
+<p>fluid boluses are often needed to achieve hemodynamic stability. However, excessive fluid</p>
+<p>administration has been associated with higher mortality, and overly aggressive fluid</p>
+<p>administration should be avoided, especially in patients with heart failure or impending</p>
+<p>pulmonary edema. Because intravenous medication diluents can contribute significantly</p>
+<p>to total fluid volume, the total fluid administration should be accounted for, and dynamic</p>
+<p>fluid response with clinical assessment should occur frequently after each fluid challenge.</p>
+<p>142</p>
+<p>ch12.indd 142 18-11-2020 16:23:23</p>
+<h2>Shock Syndromes | CHAPTER 12</h2>
+<p>Fluid Resuscitation in Hypovolemic (Hemorrhagic/Traumatic) Shock</p>
+<li>Immediate treatment of hemorrhagic shock with plasma expanders (crystalloids or</li>
+<p>colloids) seems logical, but no large, well-controlled clinical trials have supported</p>
+<p>this practice. In fact, some evidence suggests that fluid resuscitation beyond minimal</p>
+<p>levels (ie, MAP ≥60 mm Hg) is harmful in patients with abdominal trauma due to</p>
+<p>hemodilution and clot destabilization.</p>
+<li>Instead of immediate plasma expansion in all preoperative patients with circulatory</li>
+<p>insufficiency caused by hemorrhage, the initial priority should be surgical control of</p>
+<p>the bleeding source; until this is possible, fluids should be given in small aliquots to</p>
+<p>yield a palpable pulse and to maintain MAP values no more than 60 mm Hg and SBP</p>
+<p>no more than 90 mm Hg.</p>
+<li>Isotonic crystalloids are the fluid of choice because they are equal in efficacy to</li>
+<p>hypertonic sodium chloride solutions with a lower risk of adverse effects. Lactated</p>
+<p>Ringer’s solution may be used as an alternative to normal saline but should be used</p>
+<p>cautiously in patients with traumatic brain injury because it may worsen cerebral</p>
+<p>edema. Hypotonic solutions should be avoided in this population given their rela-</p>
+<p>tively poor intravascular expansion and association with poor outcomes in animal</p>
+<p>models of closed head injury.</p>
+<li>Once hemostasis has been achieved in a patient with hemorrhage, a relatively</li>
+<p>restrictive transfusion strategy (ie, transfusion if hemoglobin ≤7 g/dL [70 g/L; 4.34</p>
+<p>mmol/L]) is indicated unless a patient has active cardiac ischemia. Additional blood</p>
+<p>product administration should be guided by laboratory parameters (eg, PT/INR,</p>
+<p>platelets) or viscoelastic testing (eg, thromboelastography). Reversal of antithrom-</p>
+<p>botic therapy (eg, prothrombin complex concentrates for warfarin) may also be used</p>
+<p>for severe bleeding.</p>
+<p>Vasopressors and Inotropes</p>
+<li>Vasopressors and inotropes are required when volume resuscitation fails to maintain</li>
+<p>adequate BP (MAP ≥65 mm Hg) and organs and tissues remain hypoperfused.</p>
+<p>Vasopressors may also be needed temporarily to treat life-threatening hypotension</p>
+<p>when tissue perfusion is inadequate despite ongoing aggressive fluid resuscitation.</p>
+<pre><code>Inotropes are frequently used to optimize Do in septic shock and cardiac function</code></pre>
+<p>2</p>
+<p>in cardiogenic shock.</p>
+<li>Table 12-1 lists the usual dosage range, receptor selectivity, and potential adverse</li>
+<p>effects of vasopressors and inotropes used in shock.</p>
+<li>Norepinephrine has combined strong α-agonist activity and less potent β-agonist</li>
+<p>1 1</p>
+<p>effects while maintaining weak vasodilatory effects of β-receptor stimulation. It</p>
+<p>2</p>
+<p>produces vasoconstriction primarily via its more prominent α-effects on all vascular</p>
+<p>beds, thus increasing SVR; it also produces a small (10%–15%) increase in stroke</p>
+<p>volume. Norepinephrine is the vasopressor of choice in patients in most shock</p>
+<p>states because (1) it may decrease mortality in septic shock; (2) it reverses inappro-</p>
+<p>priate vasodilation and low global oxygen extraction; (3) it attenuates myocardial</p>
+<p>depression at unchanged or increased CO and increased coronary blood flow; (4)</p>
+<p>it improves renal perfusion pressure and renal filtration; (5) it enhances splanchnic</p>
+<p>perfusion; and (6) it is less likely than many other vasopressors to cause tachydys-</p>
+<p>rhythmias. Norepinephrine 0.1–2 mcg/kg/min improves hemodynamic parameters</p>
+<p>to “normal” values in most patients with shock. As with other vasopressors, norepi-</p>
+<p>nephrine dosages exceeding those recommended by most references are frequently</p>
+<p>needed in critically ill patients with shock to achieve predetermined goals. A signifi-</p>
+<p>cant increase in MAP is caused by an increase in SVR. Heart rate generally decreases</p>
+<p>because of reflex bradycardia from increased SVR. Increasing doses to maintain</p>
+<p>higher MAPs may increase heart rate, cardiac index, Do, and cutaneous blood flow,</p>
+<p>2</p>
+<p>but these results are inconsistent. Norepinephrine may be associated with tachydys-</p>
+<p>rhythmias, which is more common with higher doses. The primary limitation to use</p>
+<p>is that norepinephrine is not commercially available as premixed ready-to-use solu-</p>
+<p>tions, so its use requires preparation time.</p>
+<p>143</p>
+<p>ch12.indd 143 18-11-2020 16:23:23</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>TABLE 12-1 Receptor Pharmacology and Adverse Events of Selected Vasopressor and</p>
+<p>Inotropic Agents Used in Shocka</p>
+<p>Agent (Adverse</p>
+<p>Events) α α β β D V V</p>
+<p>1 2 1 2 1 2</p>
+<p>Angiotensin II Tachycardia, thrombosis, peripheral ischemia, lactic acidosis,</p>
+<p>(5000–10,000 ng/ bronchospasm, infection</p>
+<p>mL NS)</p>
+<p>1.25–80 ng/ 0 0 0 0 0 0 0</p>
+<p>kg/min</p>
+<p>Dobutamine Tachycardia, dysrhythmias, hypotension</p>
+<p>(500–4000 mcg/</p>
+<p>mL DW or NS)</p>
+<p>5</p>
+<p>2–10 mcg/kg/min + 0 ++++ ++ 0 0 0</p>
+<p>&gt;10–20 mcg/ ++ 0 ++++ +++ 0 0 0</p>
+<p>kg/min</p>
+<p>Dopamine (800–3200 Tachycardia, dysrhythmias, decreased Pao, mesenteric</p>
+<p>2</p>
+<p>mcg/mL DW hypoperfusion, gastrointestinal motility inhibition, T-cell inhibition</p>
+<p>5</p>
+<p>or NS)</p>
+<p>1–3 mcg/kg/min 0 0 + 0 ++++ 0 0</p>
+<p>3–10 mcg/kg/min 0/+ 0 ++++ + ++++ 0 0</p>
+<p>&gt;10–20 mcg/ +++ 0 ++++ + 0 0 0</p>
+<p>kg/min</p>
+<p>Epinephrine (8–16 Tachycardia, dysrhythmias, decreased Pao, mesenteric</p>
+<p>2</p>
+<p>mcg/mL DW hypoperfusion, increased lactate, hyperglycemia,</p>
+<p>5</p>
+<p>or NS) immunomodulation</p>
+<p>0.01–0.05 mcg/ ++ ++ ++++ +++ 0 0 0</p>
+<p>kg/min</p>
+<p>0.05–3 mcg/ ++++ ++++ +++ + 0 0 0</p>
+<p>kg/min</p>
+<p>Norepinephrine Mixed effects on myocardial performance and mesenteric perfusion,</p>
+<p>(16–64 mcg/ peripheral ischemia</p>
+<p>mL DW)</p>
+<p>5</p>
+<p>0.02–3 mcg/ +++ +++ +++ +/++ 0 0 0</p>
+<p>kg/min</p>
+<p>Phenylephrine Mixed effects on myocardial performance, peripheral ischemia</p>
+<p>(100–400 mcg/mL</p>
+<p>DW or NS)</p>
+<p>5</p>
+<p>0.5–9 mcg/kg/min +++ + + 0 0 0 0</p>
+<p>Vasopressin (0.2–1 Mixed effects on myocardial performance, mesenteric</p>
+<p>units/mL DW hypoperfusion, peripheral ischemia, hyponatremia,</p>
+<p>5</p>
+<p>or NS) thrombocytopenia, hyperbilirubinemia</p>
+<p>0.01–0.1 units/min 0 0 0 0 0 +++ +++</p>
+<p>AT, angiotensin; D, dopamine; DW, dextrose 5% in water; NS, normal saline; Pao, partial pressure of</p>
+<p>5 2</p>
+<p>arterial oxygen; V, vasopressin.</p>
+<p>aActivity ranges from no activity (0) to maximal (++++) activity. Angiotensin II has ++++ activity</p>
+<p>at AT-1 and AT-2 receptors but no activity at other receptors.</p>
+<p>144</p>
+<p>ch12.indd 144 18-11-2020 16:23:23</p>
+<div class="table-container"><table><tr><th>TABLE 12-1 Receptor Pharmacology and Adverse Events of Selected Vasopressor and
+Inotropic Agents Used in Shocka</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Agent (Adverse
+Events)</td><td>α
+1</td><td>α
+2</td><td>β
+1</td><td>β
+2</td><td>D</td><td>V
+1</td><td>V
+2</td></tr><tr><td>Angiotensin II
+(5000–10,000 ng/
+mL NS)</td><td>Tachycardia, thrombosis, peripheral ischemia, lactic acidosis,
+bronchospasm, infection</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1.25–80 ng/
+kg/min</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Dobutamine
+(500–4000 mcg/
+mL DW or NS)
+5</td><td>Tachycardia, dysrhythmias, hypotension</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2–10 mcg/kg/min</td><td>+</td><td>0</td><td>++++</td><td>++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>&gt;10–20 mcg/
+kg/min</td><td>++</td><td>0</td><td>++++</td><td>+++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Dopamine (800–3200
+mcg/mL DW
+5
+or NS)</td><td>Tachycardia, dysrhythmias, decreased Pao, mesenteric
+2
+hypoperfusion, gastrointestinal motility inhibition, T-cell inhibition</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1–3 mcg/kg/min</td><td>0</td><td>0</td><td>+</td><td>0</td><td>++++</td><td>0</td><td>0</td></tr><tr><td>3–10 mcg/kg/min</td><td>0/+</td><td>0</td><td>++++</td><td>+</td><td>++++</td><td>0</td><td>0</td></tr><tr><td>&gt;10–20 mcg/
+kg/min</td><td>+++</td><td>0</td><td>++++</td><td>+</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Epinephrine (8–16
+mcg/mL DW
+5
+or NS)</td><td>Tachycardia, dysrhythmias, decreased Pao, mesenteric
+2
+hypoperfusion, increased lactate, hyperglycemia,
+immunomodulation</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0.01–0.05 mcg/
+kg/min</td><td>++</td><td>++</td><td>++++</td><td>+++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>0.05–3 mcg/
+kg/min</td><td>++++</td><td>++++</td><td>+++</td><td>+</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Norepinephrine
+(16–64 mcg/
+mL DW)
+5</td><td>Mixed effects on myocardial performance and mesenteric perfusion,
+peripheral ischemia</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0.02–3 mcg/
+kg/min</td><td>+++</td><td>+++</td><td>+++</td><td>+/++</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Phenylephrine
+(100–400 mcg/mL
+DW or NS)
+5</td><td>Mixed effects on myocardial performance, peripheral ischemia</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0.5–9 mcg/kg/min</td><td>+++</td><td>+</td><td>+</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Vasopressin (0.2–1
+units/mL DW
+5
+or NS)</td><td>Mixed effects on myocardial performance, mesenteric
+hypoperfusion, peripheral ischemia, hyponatremia,
+thrombocytopenia, hyperbilirubinemia</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>0.01–0.1 units/min</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>+++</td><td>+++</td></tr></table></div><h2>Shock Syndromes | CHAPTER 12</h2>
+<li>Epinephrine has combined α- and β-agonist effects. At low doses (0.01–0.05 mcg/</li>
+<p>kg/min) β-adrenergic effects predominate with an increase in stroke volume and CO.</p>
+<p>For this reason, low doses may be used as an inotrope after cardiac surgery. When</p>
+<p>higher dosages are used, α-adrenergic effects are predominant and SVR and MAP</p>
+<p>are increased. Epinephrine is an acceptable choice for hemodynamic support of</p>
+<p>patients with shock because of its combined vasoconstrictor and inotropic effects. It</p>
+<p>is as effective as norepinephrine for MAP response in vasodilatory/distributive shock.</p>
+<p>Epinephrine doses of 0.04–1 mcg/kg/min alone increase hemodynamic and oxygen-</p>
+<p>transport variables to “supranormal” values in shock patients without coronary artery</p>
+<p>disease. Large doses (0.5–3 mcg/kg/min) are often required, particularly for patients</p>
+<p>with septic shock. Smaller doses (0.1–0.5 mcg/kg/min) are effective when epineph-</p>
+<p>rine is added to other vasopressors and inotropes. In addition, younger patients</p>
+<p>appear to respond better to epinephrine, possibly due to greater β-adrenergic reac-</p>
+<p>tivity. Despite rapid improvement of hemodynamic variables and Do, it can have</p>
+<p>2</p>
+<p>deleterious effects on the splanchnic circulation. Like norepinephrine, epinephrine is</p>
+<p>not commercially available as a premixed ready-to-use solution.</p>
+<li>Phenylephrine is a pure α-agonist and increases BP primarily through vasoconstric-</li>
+<p>1</p>
+<p>tion. It improves MAP by increasing SVR and stroke index through enhanced venous</p>
+<p>return to the heart. Given the presence of cardiac α-receptors, phenylephrine may</p>
+<p>1</p>
+<p>also increase contractility and CO. Tachydysrhythmias are infrequent, particularly</p>
+<p>when phenylephrine is used as a single agent or at higher doses because it exerts little</p>
+<p>activity on β-adrenergic receptors. Phenylephrine may be a useful alternative in</p>
+<p>1</p>
+<p>patients who cannot tolerate tachycardia or tachydysrhythmias from norepinephrine</p>
+<p>or epinephrine and in patients who are refractory to those agents. Phenylephrine is</p>
+<p>also an attractive agent for vasodilatory/distributive shock because of its selective</p>
+<p>α-agonism with primarily vascular effects. As with other vasopressors, the doses</p>
+<p>required to achieve therapeutic goals are significantly higher than those tradition-</p>
+<p>ally recommended. Phenylephrine 0.5–9 mcg/kg/min, used alone or in combination</p>
+<p>with dobutamine or low dopamine doses, improves BP and myocardial performance</p>
+<p>in fluid-resuscitated patients with vasodilatory/distributive shock. In septic shock,</p>
+<p>phenylephrine does not significantly impair the cardiac index, pulmonary artery</p>
+<p>occlusion pressure (PAOP), or peripheral perfusion. Like norepinephrine and epi-</p>
+<p>nephrine, phenylephrine is not commercially available as a premixed ready-to-use</p>
+<p>solution.</p>
+<li>Dopamine has been described as having dose-related receptor activity at D-, D-,</li>
+<p>1 2</p>
+<p>β-, and α-receptors, but this dose-response relationship has not been confirmed in</p>
+<p>1 1</p>
+<p>critically ill patients. In patients with shock, great overlap of hemodynamic effects</p>
+<p>occurs, even at doses as low as 3 mcg/kg/min. Clinical trials and a meta-analysis indi-</p>
+<pre><code>cate that low-dose dopamine does not enhance renal function or survival in critically</code></pre>
+<p>ill patients. Dopamine is a natural precursor to norepinephrine and epinephrine but</p>
+<p>is generally not as effective for achieving goal MAP in patients with shock. Doses of</p>
+<p>5–10 mcg/kg/min increase CO by improving contractility and heart rate, primarily</p>
+<p>from β effects. At higher doses (&gt;10 mcg/kg/min) it increases MAP as a result of</p>
+<p>1</p>
+<p>both increased CO and SVR due to its combined β and α effects. The clinical utility</p>
+<p>1 1</p>
+<p>of dopamine as a vasopressor in shock is limited because large doses are frequently</p>
+<p>necessary to maintain CO and MAP. At doses &gt;20 mcg/kg/min, further improve-</p>
+<p>ment in cardiac performance and regional hemodynamics is limited. In addition, its</p>
+<p>clinical use is often hampered by tachycardia and tachydysrhythmias, which may lead</p>
+<p>to myocardial ischemia. For these reasons, dopamine is no longer considered a first-</p>
+<p>line therapy for shock. Dopamine is commercially available as premixed ready-to-use</p>
+<p>solution of various concentrations.</p>
+<li>Dobutamine is primarily a selective β-agonist with mild β- and vascular</li>
+<p>1 2</p>
+<p>α-activity, resulting in strong positive inotropic activity without concomitant</p>
+<p>1</p>
+<p>vasoconstriction. Compared to dopamine, dobutamine produces a larger increase</p>
+<p>in CO and is less arrhythmogenic. β-induced vasodilation and increased myo-</p>
+<p>2</p>
+<p>cardial contractility with subsequent reflex reduction in sympathetic tone lead to</p>
+<p>decreased SVR. Optimal uses of dobutamine in shock are for patients with low CO</p>
+<p>145</p>
+<p>ch12.indd 145 18-11-2020 16:23:24</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<pre><code>and high filling pressures (eg, left ventricular dysfunction on echocardiography) or</code></pre>
+<p>ongoing signs of global or regional hypoperfusion despite adequate resuscitation;</p>
+<p>however, vasopressors may be needed to counteract arterial vasodilation. Dobu-</p>
+<p>tamine is an inotrope with vasodilatory properties (an “inodilator”). It is used for</p>
+<p>treatment of septic and cardiogenic shock to increase CO, typically by 25%–50%.</p>
+<p>Dobutamine increases stroke volume, left ventricular stroke work index, and thus</p>
+<p>cardiac index and Do without increasing PAOP. Because dobutamine increases</p>
+<p>2</p>
+<p>myocardial oxygen demand, it should be used cautiously in patients with cardio-</p>
+<p>genic shock. The combination of dobutamine and norepinephrine results in a lower</p>
+<p>increase in heart rate than use of epinephrine alone. Dobutamine is commercially</p>
+<p>available as a premixed ready-to-use solution.</p>
+<li>Vasopressin causes rapid and sustained vasoconstriction that increases SVR and BP,</li>
+<p>which allows for reductions in the dosage requirements of catecholamines and adren-</p>
+<p>ergic agents in vasodilatory/distributive shock. These effects occur with doses up</p>
+<p>to 0.04 units/min. Doses &gt;0.04 units/min may be associated with negative changes</p>
+<p>in CO and mesenteric mucosal perfusion. Cardiac ischemia occurs rarely with low</p>
+<pre><code>doses; use of higher doses in septic shock patients with cardiac dysfunction warrants</code></pre>
+<p>extreme caution. Vasopressin decreases heart rate after initiation because of reflex</p>
+<p>bradycardia from increased SVR. Unlike adrenergic agonists, the vasoconstrictive</p>
+<p>effects are preserved during hypoxemia and severe acidemia, and pulmonary arte-</p>
+<p>rial pressures do not increase. After treatment initiation, organ-specific vasodilation</p>
+<pre><code>may preserve cardiac and renal function. Whereas V stimulation promotes water</code></pre>
+<p>2</p>
+<p>retention from the distal kidney tubules and collecting ducts, V-receptors constrict</p>
+<p>1</p>
+<p>efferent arterioles and dilate afferent arterioles to increase glomerular perfusion pres-</p>
+<p>sure and filtration rate, enhancing urine production. Vasopressin is not available as a</p>
+<p>premixed ready-to-use solution.</p>
+<li>Angiotensin II increases SVR and may be used for vasodilatory/distributive shock.</li>
+<p>BP rapidly increases after initiation in patients with low SVR. The starting dose is</p>
+<p>10–20 ng/kg/min with rapid titration (as quickly as every 5 minutes) to MAP goal.</p>
+<p>In the first 3 hours of treatment, the dose may be increased up to 80 ng/kg/min;</p>
+<p>thereafter, the dose should not exceed 40 ng/kg/min. The effects of angiotensin II on</p>
+<p>myocardial performance, oxygen transport parameters, and regional organ perfusion</p>
+<p>are unclear. However, it may have a deleterious effect on regional tissue perfusion</p>
+<p>because its risk of lactic acidosis and delirium are higher. Angiotensin II has only</p>
+<p>been evaluated in patients without depressed CO so it should be used with extreme</p>
+<pre><code>caution in patients with impaired left ventricular systolic function. Angiotensin II</code></pre>
+<p>also increases glomerular perfusion pressure and filtration, but its effects on kidney</p>
+<pre><code>function are unclear. Heart rate increases significantly after initiation, so it should</code></pre>
+<p>be used cautiously in vulnerable patients (eg, older patients with coronary artery</p>
+<p>disease). Because it increases the risk of thromboembolic events, concurrent throm-</p>
+<p>boembolism prophylaxis should be employed. Patients receiving angiotensin II have</p>
+<p>a higher risk for secondary infection. It has been associated with bronchospasm and</p>
+<p>should be avoided in patients with asthma or current bronchospasm.</p>
+<p>Use of Vasopressors and Inotropes in Distributive (Septic) Shock</p>
+<li>Norepinephrine should be started when a MAP ≥65 mm Hg and/or adequate tissue</li>
+<p>perfusion are not achieved with fluid resuscitation. Infusions are initiated at 0.05–0.1</p>
+<p>mcg/kg/min and rapidly titrated to preset BP goals (usually MAP ≥65 mm Hg) and/</p>
+<p>or improvement in global and regional peripheral perfusion (eg, decrease blood lac-</p>
+<p>tate or restore urine production).</p>
+<li>Epinephrine is second-line or adjunctive therapy to norepinephrine because it is</li>
+<p>associated with tachydysrhythmias, lactate elevation, and variable pH values.</p>
+<li>Phenylephrine improves myocardial performance in hyperdynamic, normotensive</li>
+<p>patients with sepsis but worsens myocardial performance in patients with cardio-</p>
+<p>genic shock because of decreased CO and increased SVR. Therefore, phenylephrine</p>
+<p>use warrants caution, and it should not be used as an initial vasopressor in shock</p>
+<p>patients with impaired myocardial performance.</p>
+<p>146</p>
+<p>ch12.indd 146 18-11-2020 16:23:25</p>
+<h2>Shock Syndromes | CHAPTER 12</h2>
+<li>Dopamine is no longer recommended as a first-line vasopressor because of the limi-</li>
+<p>tations described previously.</p>
+<li>Current guidelines recommend a trial of dobutamine for patients with septic shock</li>
+<pre><code>in the presence of myocardial dysfunction. However, administration of dobutamine</code></pre>
+<p>purely to achieve a normal CO, Do, or SCVo in the absence of other signs of tissue</p>
+<p>2 2</p>
+<p>hypoperfusion (eg, low urine production) is not recommended. Dobutamine should</p>
+<p>be started at doses ranging from 2.5 to 5 mcg/kg/min up to a maximum of 20 mcg/</p>
+<p>kg/min. Doses &gt;20 mcg/kg/min are limited by tachycardia, myocardial ischemia,</p>
+<p>hypertension, and tachydysrhythmias. Like other inotropes, dobutamine is usually</p>
+<pre><code>given until improvement in myocardial function with resolution of the underlying</code></pre>
+<p>etiology or dose-limiting side effects are observed.</p>
+<li>Vasopressin may be considered as add-on therapy to catecholamine adrenergic</li>
+<p>agents rather than as first-line therapy. Adjunctive use may obviate the need for</p>
+<p>dose escalation of adrenergic agents, decrease norepinephrine dosage, and increase</p>
+<p>MAP. In patients with septic shock, doses are generally fixed at 0.03–0.04 units/min,</p>
+<p>with higher doses reserved for salvage therapy. Increased arterial pressure should</p>
+<p>be evident within the first hour of vasopressin therapy, at which time the dose(s) of</p>
+<p>adrenergic agent(s) should be reduced while maintaining goal MAP.</p>
+<li>The role of angiotensin II is currently unclear, but it will most likely be used as an</li>
+<p>adjunctive therapy to catecholamines and vasopressin.</p>
+<li>Corticosteroid therapy in septic shock improves hemodynamic variables and allows</li>
+<p>lower catecholamine vasopressor dosages with minimal adverse effects on patient</p>
+<p>safety. Corticosteroids should be considered when fluids and moderate- to high-</p>
+<p>dose vasopressors are unable to restore hemodynamic stability, or when weaning</p>
+<p>of vasopressor therapy proves futile. They should also be started in cases of shock</p>
+<p>when adrenal insufficiency is suspected (eg, patients receiving long-term corticoste-</p>
+<p>roid therapy for other indications prior to the onset of shock); however, assessment</p>
+<pre><code>of adrenal function to guide therapy is not recommended. Adverse events are few</code></pre>
+<p>because corticosteroids are administered for a short period, usually 7 days. Studies</p>
+<p>suggest that short-term, low-dose corticosteroids do not increase rates of gastro-</p>
+<p>intestinal bleeding and superinfections but do increase the risk for hypernatremia,</p>
+<p>hyperglycemia, and perhaps neuromuscular weakness. Acutely elevated serum BUN</p>
+<p>and WBC count may also occur.</p>
+<p>Use of Vasopressors and Inotropes in Hypovolemic (Hemorrhagic/</p>
+<p>Traumatic) Shock</p>
+<li>In contrast to other forms of shock, medications are a distant alternative to fluid</li>
+<p>resuscitation, which is the primary therapy for hypovolemic shock. In hypovolemic</p>
+<p>shock, peripheral resistance is high due to compensatory mechanisms aimed at main-</p>
+<p>taining tissue perfusion. Early or overzealous use of vasopressors in lieu of fluids may</p>
+<p>exacerbate this resistance to the point that flow is stopped.</p>
+<li>Vasopressors are only used as a temporizing measure or as a last resort when all other</li>
+<p>measures to maintain perfusion have been exhausted. Few studies have compared the</p>
+<p>various agents, but norepinephrine is considered the first-line vasopressor of choice.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The initial goals of therapy are to restore effective tissue and organ perfusion. Place</li>
+<p>priority on the ABCs of life support (ie, airway, breathing, and circulation), assessing</p>
+<p>vital signs and mental status, and determining tissue perfusion (eg, urine production</p>
+<p>after catheterization).</p>
+<li>Evaluate the underlying cause of tissue hypoperfusion to identify the correct treat-</li>
+<p>ment approach.</p>
+<li>For patients with sepsis, measure blood lactate concentration and administer 30 mL/kg</li>
+<p>of crystalloid for hypotension within 3 hours of presentation and obtain MAP</p>
+<p>≥65 mm Hg with vasopressors, reassess volume status, and remeasure serum lactate</p>
+<p>147</p>
+<p>ch12.indd 147 18-11-2020 16:23:25</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>if the initial concentration was elevated within 6 hours of presentation. Usual care</p>
+<p>must include rapid (ie, within 1 hour of recognition) antibiotic administration and</p>
+<p>aggressive fluid resuscitation.</p>
+<li>Initial fluid resuscitation should include crystalloids if the patient is fluid responsive,</li>
+<p>vasopressors to achieve MAP at least 65 mm Hg (or SBP 80–90 mm Hg in trauma</p>
+<p>patients), and frequent clinical assessments to meet perfusion goals (eg, additional</p>
+<p>fluid challenge or inotropic therapy to achieve lactate clearance ≥20%, SCVo ≥70%</p>
+<p>2</p>
+<p>(0.70), or urine production ≥0.5 mL/kg/hr).</p>
+<li>Initiate vasopressors/inotropes if tissue perfusion is not responding to fluid chal-</li>
+<p>lenges. Titration and monitoring should be guided by the “best clinical response”</p>
+<p>and lactate clearance. Although doses required for efficacy may be much higher than</p>
+<p>recommended by most references, use the lowest effective dosage while minimiz-</p>
+<p>ing evidence of global hypoperfusion (lactate, SCVo) and regional hypoperfusion</p>
+<p>2</p>
+<p>such as myocardial (eg, tachydysrhythmias, electrocardiographic changes, troponin</p>
+<p>elevations), renal (decreased glomerular filtration rate and/or urine production),</p>
+<p>splanchnic/gastric (bowel ischemia, elevated transaminases), pulmonary (worsening</p>
+<p>Pao), or peripheral (cold extremities) ischemia. Continue vasopressors/inotropes</p>
+<p>2</p>
+<p>until myocardial depression and/or BP improve, usually measured in hours to days.</p>
+<li>Monitor patients frequently for their response to therapy. If perfusion is not restored</li>
+<p>with the initial treatment approach, perform echocardiography with additional treat-</p>
+<p>ment options implemented based on the findings.</p>
+<li>Consider hemodynamic monitoring with a pulmonary artery (Swan-Ganz) catheter</li>
+<p>in complex patients (eg, mixed shock states) or when the validity of measurements</p>
+<p>from other monitoring devices is in question. The catheter provides multiple car-</p>
+<p>diovascular parameters, including CVP, pulmonary artery pressure, PAOP (wedge</p>
+<p>pressure), CO, SVR, and SVo. However, the pulmonary artery catheter should not</p>
+<p>2</p>
+<p>be used routinely for patients with shock because it is more invasive (leading to a</p>
+<p>higher risk of complications) than a central venous catheter and is not associated with</p>
+<p>improved clinical outcomes.</p>
+<li>Laboratory tests for monitoring of shock include serum electrolytes, BUN, serum</li>
+<p>creatinine, and complete blood count to identify possible infection (WBC count),</p>
+<p>oxygen-carrying capacity of the blood (hemoglobin, hematocrit), and ongoing bleed-</p>
+<p>ing (hemoglobin, hematocrit, platelet count). Hepatic transaminases may be acutely</p>
+<p>elevated when blood flow to the liver is reduced because of sustained hypotension</p>
+<p>(“shock liver”), although the concentrations should decrease over time with recovery.</p>
+<li>In bleeding patients, monitor coagulation function via PT/INR, platelets, and per-</li>
+<p>haps viscoelastic tests (eg, thromboelastography) with initiation of appropriate sup-</p>
+<p>port measures as indicated.</p>
+<li>Observe for an increasing blood lactate concentration and arterial base deficit or a</li>
+<p>decreasing bicarbonate concentration, which indicate inadequate perfusion leading</p>
+<p>to anaerobic metabolism.</p>
+<li>In patients responding to initial therapy, the goal is to discontinue vasopressors and</li>
+<p>inotropes as soon as the patient is hemodynamically stable. However, taper vasopres-</p>
+<p>sor/inotrope therapy slowly, and monitor the patient carefully to avoid worsening</p>
+<p>hemodynamics. Reevaluate fluid responsiveness frequently so the patient can be</p>
+<p>weaned from the vasopressor as soon as possible. Titrate doses downward approxi-</p>
+<p>mately every 10 minutes to determine if the patient can tolerate gradual withdrawal</p>
+<p>and eventual discontinuation. Shock requiring vasopressor and/or inotropic support</p>
+<p>usually resolves within several days to 1 week.</p>
+<p>See Chapter 41, Shock Syndromes, authored by Seth R. Bauer, Robert MacLaren, and</p>
+<p>Brian L. Erstad, for a more detailed discussion of this topic.</p>
+<p>148</p>
+<p>ch12.indd 148 18-11-2020 16:23:26</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

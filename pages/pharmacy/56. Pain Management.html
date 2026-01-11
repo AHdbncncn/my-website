@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>56. Pain Management</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>56. Pain Management</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>630</p>
+<h2>RETPAHC</h2>
+<p>56</p>
+<p>Pain Management</p>
+<li>Pain is a subjective, unpleasant, sensory, and emotional experience associated with</li>
+<pre><code>actual or potential tissue damage or abnormal functioning of nerves. It may be clas-</code></pre>
+<p>sified as acute, chronic, or cancer pain.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<h2>ADAPTIVE (PHYSIOLOGIC) PAIN</h2>
+<li>Nociceptive (eg, from touching something too hot, too cold, or sharp) and inflammatory</li>
+<p>pain (eg, trauma or surgery) are both adaptive and protective.</p>
+<li>The steps in processing pain are:</li>
+<p>✓ Transduction—Stimulation of nociceptors.</p>
+<p>ο Nociceptors, found in both somatic and visceral structures, are activated by</p>
+<p>mechanical, thermal, and chemical stimuli. Noxious stimuli may cause release of</p>
+<p>cytokines and chemokines that sensitize and/or activate nociceptors.</p>
+<p>✓ Conduction—Receptor activation leads to action potentials that continue along</p>
+<p>afferent fibers to the spinal cord. Stimulation of large-diameter, sparsely myelin-</p>
+<p>ated fibers evokes sharp, well-localized pain. Stimulation of small-diameter, unmy-</p>
+<p>elinated fibers produces aching, poorly localized pain.</p>
+<p>✓ Transmission—Afferent nociceptive fibers synapse in the spinal cord’s dorsal horn,</p>
+<p>releasing excitatory neurotransmitters (eg, glutamate and substance P). The spinotha-</p>
+<p>lamic tract and other pathways bring the signal to the brain’s higher cortical structures.</p>
+<p>✓ Perception—The experience of pain occurs when signals reach higher cortical</p>
+<p>structures. Relaxation, meditation, and distraction can lessen pain, and anxiety</p>
+<p>and depression can worsen pain.</p>
+<p>✓ Modulation—Possible modulating factors include glutamate, substance P, endog-</p>
+<p>enous opioids, γ-aminobutyric acid (GABA), norepinephrine, and serotonin.</p>
+<li>The interface between neurons and immune cells in the central nervous system</li>
+<p>(CNS) may facilitate maintenance of chronic pain.</p>
+<h2>MALADAPTIVE (PATHOLOGIC) PAIN</h2>
+<li>Pathophysiologic pain (eg, postherpetic neuralgia, diabetic neuropathy, fibromyalgia,</li>
+<p>irritable bowel syndrome, chronic headaches) is often described as chronic pain. It</p>
+<pre><code>results from damage or abnormal functioning of nerves in the CNS or peripheral</code></pre>
+<p>nervous system (PNS). Pain circuits sometimes rewire themselves anatomically and</p>
+<p>biochemically, resulting in chronic pain, hyperalgesia, or allodynia.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<h2>ACUTE PAIN</h2>
+<p>Symptoms</p>
+<li>Acute pain can be sharp or dull, burning, shock-like, tingling, shooting, radiating,</li>
+<p>fluctuating in intensity, varying in location, and occurring in a temporal relationship</p>
+<p>with an obvious noxious stimulus. Infants and older individuals may present differently.</p>
+<p>Signs</p>
+<li>Hypertension, tachycardia, diaphoresis, mydriasis, and pallor. In some cases there are</li>
+<p>not obvious physical signs. There are no laboratory tests for pain.</p>
+<h2>CHRONIC PAIN</h2>
+<p>Symptoms</p>
+<li>Symptoms can be very similar to acute pain, and may change over time (ie, sharp to</li>
+<p>dull). Attention must also be given to emotional factors that alter the pain threshold.</p>
+<p>ch56.indd 630 19-11-2020 17:44:55</p>
+<div class="table-container"><table><tr><th>5060</th><th>RETPAHC</th></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<p>Signs</p>
+<li>In most cases there are no obvious signs. Depression, sleep disturbances, and</li>
+<p>anxiety are often present. No laboratory tests are diagnostic, but may identify</p>
+<p>etiology.</p>
+<h2>DIAGNOSIS</h2>
+<li>Pain is always subjective and best diagnosed based on patient description, history,</li>
+<p>and physical examination. A baseline description of pain can be obtained using a</p>
+<p>symptom assessment mnemonic (ie, OLDCARTS or SOCRATES). Ongoing assess-</p>
+<p>ment should include a consistent and validated scale.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment:</li>
+<pre><code>✓ Acute pain: pain relief that allows for attainment of defined functional goals.</code></pre>
+<pre><code>✓ Chronic or noncancer pain: improve level of functioning, decrease pain, reduce</code></pre>
+<p>medication use if possible, and improve quality of life.</p>
+<p>✓ Cancer pain: pain relief that enables patients to tolerate diagnostic and therapeu-</p>
+<pre><code>tic manipulations and preserves function as much as possible while minimizing</code></pre>
+<p>adverse effects.</p>
+<li>Figures 56-1 and 56-2 are algorithms for management of acute pain and pain in</li>
+<p>oncology patients, respectively.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Multimodal therapy, with concomitant use of different nonpharmacologic and phar-</li>
+<p>macologic interventions to obtain additive therapeutic effects, should be employed</p>
+<p>to optimize management.</p>
+<li>Use of pharmacogenomic testing results may be beneficial in making therapeutic</li>
+<p>decisions among agents, because genetic variability in the CYP450 isoenzymes and</p>
+<p>opioid receptors may affect response and side effects.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>The use of nonpharmacologic therapies should always be considered first-line</li>
+<p>therapy, either alone or in combination with appropriate analgesics.</p>
+<li>Physical therapy, exercise programs, weight loss, and electroanalgesia as well as</li>
+<p>complementary and integrative approaches (ie, acupuncture, Tai chi, yoga, mindful-</p>
+<p>ness, meditation, relaxation, and biofeedback).</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Nonopioid Agents</p>
+<p>Acetaminophen and Nonsteroidal Anti-Inflammatory Drugs</p>
+<li>Initiate treatment with the most effective analgesic with the fewest side effects. See</li>
+<p>Table 56-1 for adult dosages of Food and Drug Administration (FDA)–approved</p>
+<p>nonopioid analgesics.</p>
+<li>Acetaminophen and nonsteroidal anti-inflammatory drugs (NSAIDS) are often</li>
+<p>preferred over opioids for mild to moderate pain. The NSAIDs reduce prostaglan-</p>
+<p>dins, decreasing the number of pain impulses received by the CNS.</p>
+<li>NSAIDs may be particularly useful for cancer-related bone pain and chronic low</li>
+<p>back pain. An adequate trial of an NSAID is about 1 month in duration. Chronic use</p>
+<p>may cause gastrointestinal (GI), cardiac, and renal toxicities.</p>
+<li>Topical NSAIDs may have similar efficacy as oral NSAIDs with improved safety</li>
+<p>when treating small or superficial joint arthritis.</p>
+<p>631</p>
+<p>ch56.indd 631 19-11-2020 17:44:55</p>
+<h2>SECTION 9 | Neurologic Disorders</h2>
+<p>Identify pain source and treat underlying disease/trauma when possible</p>
+<p>Is there pain? No Monitor patient</p>
+<p>Yes</p>
+<p>Assess pain severity</p>
+<p>Is pain mild? No Is pain moderate? No Is pain severe?</p>
+<p>Yes Yes Yes</p>
+<li>Acetaminophen • Combination opioid • Opioid analgesics</li>
+<p>and/or nonsteroidal and acetaminophen • Always consider</p>
+<p>anti-inflammatory or nonsteroidal around-the-clock</p>
+<p>drugs when risk anti-inflammatory regimens</p>
+<p>does not outweigh drugs • Use as needed</p>
+<p>benefits • Always consider regimes for</p>
+<li>Always consider around-the- breakthrough pain or</li>
+<p>around-the clock clock regimens when pain displays</p>
+<p>regimens • Use as needed great variability of</p>
+<li>Use as needed regimes for has greatly subsided</li>
+<p>regimes for breakthrough pain • Use route of</p>
+<p>breakthrough pain or when pain displays administration</p>
+<p>or when pain displays great variability of to fit needs of patient</p>
+<p>great variability or has greatly subsided • Avoid excessive</p>
+<p>has greatly subsided • May use nonsteroidal sedation when</p>
+<li>Titrate to maximum anti-inflammatory risks do not outweigh</li>
+<p>No–Add No–Add</p>
+<p>dose drugs around the benefits</p>
+<p>or or</p>
+<li>Adjuvant analgesics clock with an opioid • ± Adjuvant analgesics</li>
+<p>substitute substitute</p>
+<p>as appropriate as needed when risk as appropriate</p>
+<p>does not outweigh</p>
+<p>benefits</p>
+<li>± Adjuvant analgesics</li>
+<p>as appropriate</p>
+<p>Is pain relief Is pain relief Is pain relief</p>
+<p>No</p>
+<p>adequate? adequate? adequate?</p>
+<p>Use pain</p>
+<p>Yes Yes Yes assessment</p>
+<p>tools</p>
+<p>Monitor patient Monitor patient Monitor patient and TITRATE</p>
+<p>to relief</p>
+<p>1. Recognize the side effects of all analgesics</p>
+<p>2. Properly titrate (ASSESS and RE-ASSESS!!) the dose for each individual</p>
+<p>patient and administer for an adequate duration</p>
+<p>3. Use the most effective analgesic with the fewest side effects that best</p>
+<p>fits the clinical situation</p>
+<p>4. Use the oral route whenever possible</p>
+<h2>FIGURE 56-1. Algorithm for acute pain.</h2>
+<p>632</p>
+<p>ch56.indd 632 19-11-2020 17:44:56</p>
+<h2>Pain Management | CHAPTER 56</h2>
+<p>Uncontrolled</p>
+<p>Cancer pain</p>
+<p>*Opioid tolerant</p>
+<p>No Opioid Yes considered 60 mg</p>
+<p>Tolerant* of oral morphine</p>
+<p>Pain 4 or Pain 4 or equivalents for</p>
+<p>greater greater 7 days or longer</p>
+<p>Oral IV Oral IV</p>
+<p>Administer Administer</p>
+<p>Administer Administer</p>
+<p>10–20% of 10–20%</p>
+<p>5–15 mg oral 2–5 mg IV</p>
+<p>previous of previous</p>
+<p>morphine or morphine or</p>
+<p>24 hr oral 24 hr IV</p>
+<p>equivalent. equivalent.</p>
+<p>opioid dose. opioid dose.</p>
+<p>Reassess in Reassess</p>
+<p>Reassess Reassess</p>
+<p>60 min in 15 min</p>
+<p>in 60 min in 15 min</p>
+<p>(expected (expected</p>
+<p>(expected (expected</p>
+<p>peak effect) peak effect)</p>
+<p>peak effect) peak effect)</p>
+<p>Reassessment Outcome</p>
+<p>Pain decreased Pain improved</p>
+<p>Pain unchanged</p>
+<p>but inadequately and adequately</p>
+<p>or increased</p>
+<p>controlled controlled</p>
+<p>Continue at</p>
+<p>Increase</p>
+<p>Repeat same current effective</p>
+<p>dose by</p>
+<p>dose dose PRN for 24</p>
+<p>50–100%</p>
+<p>hours</p>
+<p>After 2–3 cycles of dosing, consider</p>
+<p>Inititate regular schedule</p>
+<p>switching to IV opioid (if titration</p>
+<p>of opioid with dosing as</p>
+<p>occurred with PO), maximize adjuvant</p>
+<p>needed every 3 (IV) to</p>
+<p>analgesics, consider opioid rotation,</p>
+<p>4 (PO) hours</p>
+<p>consider pain specialist consultation</p>
+<p>* Other daily oral opioid doses for consideration of tolerance includes codeine 150 mg,</p>
+<p>fentanyl transdermal 25 mcg, hydromorphone 8 mg, methadone 20 mg,</p>
+<p>oxycodone 30 mg, oxymorphone 20 mg</p>
+<h2>Table adapted from reference 31</h2>
+<h2>FIGURE 56-2. Algorithm for cancer pain crisis.</h2>
+<p>Anticonvulsants</p>
+<li>Anticonvulsants carbamazepine and oxcarbazepine block voltage-gated sodium</li>
+<p>channels and potentiate the effects of GABA and are considered the drugs of choice</p>
+<h2>for trigeminal neuralgia (Table 56-2).</h2>
+<p>✓ Common side effects during initiation include dizziness, drowsiness, unsteadiness,</p>
+<p>nausea, and vomiting and can be avoided with low starting doses.</p>
+<p>✓ Serious dermatologic reactions can occur, including toxic epidermal necrolysis</p>
+<p>and Stevens–Johnson syndrome (SJS). The risk of dermatological adverse effects</p>
+<p>633</p>
+<p>ch56.indd 633 19-11-2020 17:44:57</p>
+<div class="table-container"><table><tr><th>Opioid</th></tr><tr><td>Tolerant*</td></tr></table></div><div class="table-container"><table><tr><th>Pain unc
+or incr</th><th>hanged
+eased</th></tr></table></div><div class="table-container"><table><tr><th>Pain de
+but inad
+contr</th><th>creased
+equately
+olled</th></tr></table></div><div class="table-container"><table><tr><th>Pain im
+and ade
+contr</th><th>proved
+quately
+olled</th></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 56-1 Nonopioid Analgesics (Continued )</h2>
+<p>Maximal</p>
+<p>Class and Generic Name Approximate Usual Dosage Dose</p>
+<p>(Brand Name) Half-Life (hr) Range (mg) (mg/day)</p>
+<p>Salicylates</p>
+<p>Acetylsalicylic acida— 0.25 325–1000 every 4-6 hr 4000</p>
+<p>aspirin (various)</p>
+<p>Choline and magnesium 9–17 1000–1500 every 12 hr 3000</p>
+<p>trisalicylate (various) 750 every 8 hr (elderly)</p>
+<p>Diflunisal (Dolobid, 8–12 500–1000 initial, 250–500 1500</p>
+<p>various) every 8–12 hr</p>
+<p>Salsalate (various) 1 1000 every 12 hr or 500 3000</p>
+<p>every 6 hr</p>
+<p>Para-aminophenol</p>
+<p>Acetaminophena (oral: 2–3 325–1000 every 4–6 hr 4000b</p>
+<p>Tylenol, various; Dosing for</p>
+<p>parenteral: Ofirmev) peds lower</p>
+<p>based on</p>
+<p>weight</p>
+<p>Fenamates</p>
+<p>Meclofenamate (various) 0.8–3.3 50–100 every 4–6 hr 400</p>
+<p>Mefenamic acid (Ponstel) 2 Initial 500, 250 every 6 hr 1000c</p>
+<p>(max. 7 days)</p>
+<p>Pyranocarboxylic acid</p>
+<p>Etodolac (various) 7.3 200–400 every 6–8 hr 1000 (1200</p>
+<p>(immediate release) with</p>
+<p>extended-</p>
+<p>release</p>
+<p>product)</p>
+<p>Acetic acid</p>
+<p>Diclofenac potassium 1.9 In some patients, initial 150d</p>
+<p>(Cataflam, various, Flector 100, 50 three times</p>
+<p>[patch] Voltaren Gel, per day</p>
+<p>Pennsaid [solution]) Patch available: to be</p>
+<p>applied twice daily</p>
+<p>to painful area (intact</p>
+<p>skin only), gel and</p>
+<p>solution dosing joint</p>
+<p>specific</p>
+<p>Propionic acids</p>
+<p>Ibuprofena (Motrin, Caldolor, 2–2.5 200–400 every 4–6 hr 3200e, 2400e,</p>
+<h2>various) injectable, 400–800 1200f</h2>
+<p>every 6 hr (infused</p>
+<p>over 30 min)</p>
+<p>Fenoprofen (Nalfon, various) 3 200 every 4–6 hr 3200</p>
+<p>(Continued )</p>
+<p>634</p>
+<p>ch56.indd 634 19-11-2020 17:44:57</p>
+<div class="table-container"><table><tr><th>TABLE 56-1 Nonopioid Analgesics</th><th></th><th>(Continued )</th><th></th><th></th><th></th></tr><tr><td>Class and Generic Name
+(Brand Name)</td><td>Approximate
+Half-Life (hr)</td><td></td><td>Usual Dosage
+Range (mg)</td><td></td><td>Maximal
+Dose
+(mg/day)</td></tr><tr><td>Salicylates</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Acetylsalicylic acida—
+aspirin (various)</td><td>0.25</td><td></td><td>325–1000 every 4-6 hr</td><td></td><td>4000</td></tr><tr><td>Choline and magnesium
+trisalicylate (various)</td><td>9–17</td><td></td><td>1000–1500 every 12 hr</td><td></td><td>3000</td></tr><tr><td></td><td></td><td></td><td>750 every 8 hr (elderly)</td><td></td><td></td></tr><tr><td>Diflunisal (Dolobid,
+various)</td><td>8–12</td><td></td><td>500–1000 initial, 250–500
+every 8–12 hr</td><td></td><td>1500</td></tr><tr><td>Salsalate (various)</td><td>1</td><td></td><td>1000 every 12 hr or 500
+every 6 hr</td><td></td><td>3000</td></tr><tr><td>Para-aminophenol</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Acetaminophena (oral:
+Tylenol, various;
+parenteral: Ofirmev)</td><td>2–3</td><td></td><td>325–1000 every 4–6 hr</td><td></td><td>4000b</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>Dosing for
+peds lower
+based on
+weight</td></tr><tr><td>Fenamates</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Meclofenamate (various)</td><td>0.8–3.3</td><td></td><td>50–100 every 4–6 hr</td><td></td><td>400</td></tr><tr><td>Mefenamic acid (Ponstel)</td><td>2</td><td></td><td>Initial 500, 250 every 6 hr
+(max. 7 days)</td><td></td><td>1000c</td></tr><tr><td>Pyranocarboxylic acid</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Etodolac (various)
+(immediate release)</td><td>7.3</td><td></td><td>200–400 every 6–8 hr</td><td></td><td>1000 (1200
+with
+extended-
+release
+product)</td></tr><tr><td>Acetic acid</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Diclofenac potassium
+(Cataflam, various, Flector
+[patch] Voltaren Gel,
+Pennsaid [solution])</td><td>1.9</td><td></td><td>In some patients, initial
+100, 50 three times
+per day</td><td></td><td>150d</td></tr><tr><td></td><td></td><td></td><td>Patch available: to be
+applied twice daily
+to painful area (intact
+skin only), gel and
+solution dosing joint
+specific</td><td></td><td></td></tr><tr><td>Propionic acids</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Ibuprofena (Motrin, Caldolor,
+various)</td><td>2–2.5</td><td></td><td>200–400 every 4–6 hr
+injectable, 400–800
+every 6 hr (infused
+over 30 min)</td><td></td><td>3200e, 2400e,
+1200f</td></tr><tr><td>Fenoprofen (Nalfon, various)</td><td>3</td><td></td><td>200 every 4–6 hr</td><td></td><td>3200
+(Continued )</td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-1 Nonopioid Analgesics (Continued )</h2>
+<p>Maximal</p>
+<p>Class and Generic Name Approximate Usual Dosage Dose</p>
+<p>(Brand Name) Half-Life (hr) Range (mg) (mg/day)</p>
+<p>Propionic acids (continued)</p>
+<p>Ketoprofen (various) 2 25–50 every 6–8 hr 300</p>
+<p>(200 with</p>
+<p>extended-</p>
+<p>release</p>
+<p>product)</p>
+<p>Naproxen (Naprosyn, 12–17 500 initial 1000c</p>
+<p>Anaprox, various) 500 every 12 hr or</p>
+<p>250 every 6–8 hr</p>
+<p>Naproxen sodiuma (Aleve, 12–17 In some patients, 440 660f</p>
+<p>various, combined with initialf, 220 every</p>
+<p>esomeprazole [Vimovo]) 8–12 hrf</p>
+<p>Pyrrolizine carboxylic acid</p>
+<p>Ketorolac–parenteral 5–6 30g–60 (single IM 30g–60</p>
+<p>(Toradol, various) dose only)</p>
+<p>15g–30 (single IV 15g–30</p>
+<p>dose only)</p>
+<p>10g–30 every 6 hr (IV 60g–120</p>
+<p>dose) (max. 5 days)</p>
+<p>Ketorolac—oral, indicated 5–6 10 every 4–6 hr (max. 40</p>
+<p>for continuation with 5 days, which includes</p>
+<p>parenteral only (various) parenteral doses)</p>
+<p>In non-elderly patients, 126</p>
+<p>initial oral dose of 20</p>
+<p>1 spray (15.75 mg) in</p>
+<p>Ketorolac—nasal spray,</p>
+<p>each nostril every 6–8</p>
+<p>indicated for acute,</p>
+<p>hr in adults &lt;65 years</p>
+<p>moderate to moderately</p>
+<p>and weight ≥50 kg</p>
+<p>severe pain</p>
+<p>Pyrazols</p>
+<p>Celecoxib (Celebrex) 11 Initial 400 followed 400</p>
+<p>by another 200 on</p>
+<p>first day, then 200</p>
+<p>twice daily (note</p>
+<p>some recommend</p>
+<p>maintenance doses</p>
+<p>of 200 mg/day due</p>
+<p>to cardiovascular</p>
+<p>concerns)</p>
+<p>aAvailable both as an over-the-counter preparation and as a prescription drug.</p>
+<p>bFood and Drug Administration maximum dose. OTC maximum dose 3000 mg daily. Lower with</p>
+<p>weight-based dosing in pediatric patients.</p>
+<p>cUp to 1250 mg on the first day.</p>
+<p>dUp to 200 mg on the first day.</p>
+<p>eSome individuals may respond better to 3200 mg as opposed to 2400 mg, although well-controlled</p>
+<p>trials show no better response; consider risk versus benefits when using 3200 mg/day.</p>
+<p>fOver-the-counter dose.</p>
+<p>gDose for elderly and those under 50 kg (110 lb).</p>
+<p>FDA, Food and Drug Administration; hr, hours; IM, intramuscular; IV, intravenous; ND, no data.</p>
+<p>635</p>
+<p>ch56.indd 635 19-11-2020 17:44:57</p>
+<div class="table-container"><table><tr><th>TABLE 56-1 Nonopioid Analgesics (Continued )</th><th></th><th></th><th></th></tr><tr><td>Class and Generic Name
+(Brand Name)</td><td>Approximate
+Half-Life (hr)</td><td>Usual Dosage
+Range (mg)</td><td>Maximal
+Dose
+(mg/day)</td></tr><tr><td>Propionic acids (continued)</td><td></td><td></td><td></td></tr><tr><td>Ketoprofen (various)</td><td>2</td><td>25–50 every 6–8 hr</td><td>300</td></tr><tr><td></td><td></td><td></td><td>(200 with
+extended-
+release
+product)</td></tr><tr><td>Naproxen (Naprosyn,
+Anaprox, various)</td><td>12–17</td><td>500 initial</td><td>1000c</td></tr><tr><td></td><td></td><td>500 every 12 hr or</td><td></td></tr><tr><td></td><td></td><td>250 every 6–8 hr</td><td></td></tr><tr><td>Naproxen sodiuma (Aleve,
+various, combined with
+esomeprazole [Vimovo])</td><td>12–17</td><td>In some patients, 440
+initialf, 220 every
+8–12 hrf</td><td>660f</td></tr><tr><td>Pyrrolizine carboxylic acid</td><td></td><td></td><td></td></tr><tr><td>Ketorolac–parenteral
+(Toradol, various)</td><td>5–6</td><td>30g–60 (single IM
+dose only)</td><td>30g–60</td></tr><tr><td></td><td></td><td>15g–30 (single IV
+dose only)</td><td>15g–30</td></tr><tr><td></td><td></td><td>10g–30 every 6 hr (IV
+dose) (max. 5 days)</td><td>60g–120</td></tr><tr><td>Ketorolac—oral, indicated
+for continuation with
+parenteral only (various)</td><td>5–6</td><td>10 every 4–6 hr (max.
+5 days, which includes
+parenteral doses)</td><td>40</td></tr><tr><td>Ketorolac—nasal spray,
+indicated for acute,
+moderate to moderately
+severe pain</td><td></td><td>In non-elderly patients,
+initial oral dose of 20</td><td>126</td></tr><tr><td></td><td></td><td>1 spray (15.75 mg) in
+each nostril every 6–8
+hr in adults &lt;65 years
+and weight ≥50 kg</td><td></td></tr><tr><td>Pyrazols</td><td></td><td></td><td></td></tr><tr><td>Celecoxib (Celebrex)</td><td>11</td><td>Initial 400 followed
+by another 200 on
+first day, then 200
+twice daily (note
+some recommend
+maintenance doses
+of 200 mg/day due
+to cardiovascular
+concerns)</td><td>400</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 56-2 Co-analgesics: Oral Anticonvulsants (Continued )</h2>
+<p>Medication Dosing Notes</p>
+<p>Carbamazepine and Initial dose: 100 mg Significant drug–drug</p>
+<p>carbamazepine XR twice daily interactions</p>
+<p>Titrate dose by 100 mg Monitor CBC, LFTs, sodium level</p>
+<p>twice daily Recommended testing</p>
+<p>Target dose: 300–900 HLA-Ba1502 in patients with</p>
+<p>mg/day Asian ancestry</p>
+<p>Maximum dose: 1200 mg/day Therapeutic drug levels only</p>
+<p>indicated for high-dose</p>
+<p>therapy to avoid toxicity.</p>
+<p>No correlation between</p>
+<p>analgesia and serum drug</p>
+<p>concentration</p>
+<p>Gabapentin 100–300 mg Median dose for response</p>
+<p>steps 1600–2400 mg/day</p>
+<p>Increase every Risk of misuse/abuse</p>
+<p>3–5 days as tolerated by Requires renal dose adjustment</p>
+<p>100–300 mg increments</p>
+<p>Gabapentin (Gralise) Take once daily with evening Refer to gabapentin</p>
+<p>meal</p>
+<p>Day 1: 300 mg</p>
+<p>Day 2: 600 mg</p>
+<p>Day 3–6: 900 mg</p>
+<p>Days 7–10: 1200 mg</p>
+<p>Days 11–14: 1500 mg</p>
+<p>Day 15: 1800 mg</p>
+<p>Maximum dose: 1800 mg/day</p>
+<p>Gabapentin enacarbil Initial dose: 600 mg every Refer to gabapentin</p>
+<p>morning × 3 days</p>
+<p>Titrate dose: 600 mg</p>
+<p>twice daily</p>
+<p>Maximum dose: 1200 mg/day</p>
+<p>Lamotrigine Initial 25 mg daily Stevens–Johnson syndrome</p>
+<p>Titrate every 2 weeks to 50</p>
+<p>mg/day, 100 mg/day, and</p>
+<p>200 mg/day</p>
+<p>Maximum dose: 400 mg/day</p>
+<p>Oxcarbazepine Initial: 150 mg BID Improved tolerability and less</p>
+<p>drug–drug interactions</p>
+<p>Titrate by 300 mg every</p>
+<p>compared to CBZ</p>
+<p>3 days</p>
+<p>Target dose: 300–600 mg</p>
+<p>twice daily</p>
+<p>Max dose: 1800 mg/day</p>
+<p>Oxcarbamazepine XR Initial dose: 600 mg daily Refer to oxcarbazepine</p>
+<p>Titrate by 600 mg/day weekly</p>
+<p>Maximum: 2400 mg/day</p>
+<p>Pregabalin Initial dose: 150 mg/day in 2 Refer to gabapentin</p>
+<p>or 3 divided doses</p>
+<p>Titrate dose by 300 mg/day</p>
+<p>at 1 week</p>
+<p>Maximum dose: varies by</p>
+<p>indication. Overall 600</p>
+<p>mg/day (Continued )</p>
+<p>636</p>
+<p>ch56.indd 636 19-11-2020 17:44:58</p>
+<div class="table-container"><table><tr><th>TABLE 56-2 Co-analgesics: Oral Anticonvulsants</th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>Medication</td><td>Dosing</td><td></td><td>Notes</td><td></td></tr><tr><td>Carbamazepine and
+carbamazepine XR</td><td>Initial dose: 100 mg
+twice daily
+Titrate dose by 100 mg
+twice daily
+Target dose: 300–900
+mg/day
+Maximum dose: 1200 mg/day</td><td></td><td>Significant drug–drug
+interactions
+Monitor CBC, LFTs, sodium level
+Recommended testing
+HLA-Ba1502 in patients with
+Asian ancestry
+Therapeutic drug levels only
+indicated for high-dose
+therapy to avoid toxicity.
+No correlation between
+analgesia and serum drug
+concentration</td><td></td></tr><tr><td>Gabapentin</td><td>100–300 mg
+steps
+Increase every
+3–5 days as tolerated by
+100–300 mg increments</td><td></td><td>Median dose for response
+1600–2400 mg/day
+Risk of misuse/abuse
+Requires renal dose adjustment</td><td></td></tr><tr><td>Gabapentin (Gralise)</td><td>Take once daily with evening
+meal
+Day 1: 300 mg
+Day 2: 600 mg
+Day 3–6: 900 mg
+Days 7–10: 1200 mg
+Days 11–14: 1500 mg
+Day 15: 1800 mg
+Maximum dose: 1800 mg/day</td><td></td><td>Refer to gabapentin</td><td></td></tr><tr><td>Gabapentin enacarbil</td><td>Initial dose: 600 mg every
+morning × 3 days
+Titrate dose: 600 mg
+twice daily
+Maximum dose: 1200 mg/day</td><td></td><td>Refer to gabapentin</td><td></td></tr><tr><td>Lamotrigine</td><td>Initial 25 mg daily
+Titrate every 2 weeks to 50
+mg/day, 100 mg/day, and
+200 mg/day
+Maximum dose: 400 mg/day</td><td></td><td>Stevens–Johnson syndrome</td><td></td></tr><tr><td>Oxcarbazepine</td><td>Initial: 150 mg BID
+Titrate by 300 mg every
+3 days
+Target dose: 300–600 mg
+twice daily
+Max dose: 1800 mg/day</td><td></td><td>Improved tolerability and less
+drug–drug interactions
+compared to CBZ</td><td></td></tr><tr><td>Oxcarbamazepine XR</td><td>Initial dose: 600 mg daily
+Titrate by 600 mg/day weekly
+Maximum: 2400 mg/day</td><td></td><td>Refer to oxcarbazepine</td><td></td></tr><tr><td>Pregabalin</td><td>Initial dose: 150 mg/day in 2
+or 3 divided doses
+Titrate dose by 300 mg/day
+at 1 week
+Maximum dose: varies by
+indication. Overall 600
+mg/day</td><td></td><td>Refer to gabapentin
+(Continued )</td><td></td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-2 Co-analgesics: Oral Anticonvulsants (Continued )</h2>
+<p>Medication Dosing Notes</p>
+<p>Pregabalin CR Initial dose: 165 mg daily Refer to gabapentin</p>
+<p>Maximum dose: 330 mg/day</p>
+<p>(DPN) or 330–660 mg/</p>
+<p>day (PHN)</p>
+<p>Topiramate and Initial dose: 25 mg daily Monitor serum bicarbonate and</p>
+<pre><code>Topiramate XR × 1 week renal function</code></pre>
+<p>Titrate by 25–50 mg week Increase risk for kidney stones</p>
+<p>Target dose: 50 mg twice Weight loss</p>
+<p>daily (migraine) or Decreased sweating/</p>
+<p>200–400 mg/day hyperthermia</p>
+<p>neuropathic pain</p>
+<p>Hyperammonemia</p>
+<p>aFDA-approved indication.</p>
+<p>DPN, diabetic peripheral neuropathy; PHN, postherpetic neuralgia.</p>
+<p>All anticonvulsants associated with increased risk for suicidal thoughts and behaviors.</p>
+<p>is higher in patients who come from Asian descent with an inherited variant,</p>
+<p>HLA-B*1502, so in at-risk ethnicities, patients should be tested for this allele</p>
+<p>before initiation of carbamazepine.</p>
+<p>✓ Cardiovascular effects include hyper/hypotension, congestive heart failure, edema,</p>
+<p>arrhythmias, atrioventricular block. Elevation in hepatic enzymes should be moni-</p>
+<p>tored periodically during treatment.</p>
+<p>✓ The primary metabolic pathway for carbamazepine is CYP3A4. Additionally, car-</p>
+<p>bamazepine autoinduces its own metabolism, making titration difficult also result-</p>
+<p>ing in many drug–drug interactions through induction of CYP3A4, CYP1A2,</p>
+<p>CYP2B6, CYP2C9, and CYP2C19.</p>
+<p>✓ Oxcarbazepine is the keto-derivative of carbamazepine which has similar adverse</p>
+<p>reactions.</p>
+<li>Gabapentinoids, including gabapentin and pregabalin, are commonly used for</li>
+<p>treating neuropathic pain. Pharmacologically they decrease release of excitatory</p>
+<p>neurotransmitters glutamate, norepinephrine, and substance P.</p>
+<p>✓ Common adverse effects, namely dizziness and sedation, can be mitigated with</p>
+<p>slow dose titration.</p>
+<p>✓ All anticonvulsants are associated with increased risk for suicidal thoughts and</p>
+<p>behavior. Recent reports of misuse and abuse, resulted in them being controlled</p>
+<p>substances.</p>
+<li>Lamotrigine is a fourth-line agent for use in a specialist setting due to risk of life-</li>
+<p>threatening rash requiring increased monitoring and careful dose titration (Table 56-2).</p>
+<p>✓ Additional side effects include dizziness, nausea, headache, insomnia, somno-</p>
+<p>lence, fatigue, rhinitis, abdominal pain diplopia, ataxia, and blurred vision.</p>
+<li>Topirmate is also listed as a fourth-line agent for migraines and low back pain.</li>
+<p>Antidepressants</p>
+<li>Tricyclic antidepressants (TCAs) are often used for the treatment of neuropathic</li>
+<p>pain (Table 56-3) and some guidelines list them as first line.</p>
+<li>Duloxetine, venlafaxine, and milnacipran are serotonin norepinephrine reuptake</li>
+<p>inhibitors (SNRIs) that have evidence to support their use in various chronic pain</p>
+<p>syndromes.</p>
+<p>Skeletal Muscle Relaxants</p>
+<li>Skeletal muscle relaxants (SMRs) include antispasmodic and antispasticity medica-</li>
+<h2>tions (Table 56-4).</h2>
+<p>637</p>
+<p>ch56.indd 637 19-11-2020 17:44:58</p>
+<div class="table-container"><table><tr><th>Medication</th><th>Dosing</th></tr><tr><td>Pregabalin CR</td><td>Initial dose: 165 mg daily
+Maximum dose: 330 mg/day
+(DPN) or 330–660 mg/
+day (PHN)</td></tr><tr><td>Topiramate and
+Topiramate XR</td><td>Initial dose: 25 mg daily
+× 1 week
+Titrate by 25–50 mg week
+Target dose: 50 mg twice
+daily (migraine) or
+200–400 mg/day
+neuropathic pain</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>Medications used for spasticity include baclofen, dantrolene, diazepam, and</li>
+<p>tizanidine.</p>
+<li>Antispasmodics include carisoprodol, chlorzoxazone, cyclobenzaprine, diazepam,</li>
+<p>metaxalone, methocarbamol, orphenadrine, and tizanidine.</p>
+<p>Topicals</p>
+<li>Topicals address local symptoms while minimizing systemic exposure and risk for</li>
+<p>adverse effects (Table 56-5) and guidelines suggest use of topical NSAIDS before oral</p>
+<p>treatment for knee or hand osteoarthritis.</p>
+<li>Capsaicin is recommended for peripheral neuropathic pain. Capsaicin is more effec-</li>
+<p>tive if used on a schedule basis, and the burning that may occur with initial applica-</p>
+<p>tion also decreases over time with repeated, scheduled use.</p>
+<li>Lidocaine may also be applied topically and may be the treatment of choice when</li>
+<p>CNS adverse effects are a concern.</p>
+<li>For managing cancer pain, radiopharmaceuticals (eg, strontium-89 or samarium),</li>
+<p>corticosteroids, denosumab, and certain bisphosphonates are useful co-analgesics</p>
+<p>in treating bone pain.</p>
+<p>Emerging Agents</p>
+<li>Cannabis has been primarily studied in the treatment of neuropathic pain; however,</li>
+<p>the route of administration, dose, and monitoring recommendations are still unclear.</p>
+<li>Guidelines for the use of ketamine for treating maladaptive pain syndrome are available,</li>
+<p>but appropriate dose, duration, and patient selection for chronic pain are still unclear.</p>
+<p>Opioid Agents</p>
+<li>Limited data support the safety and efficacy of opioids for chronic noncancer</li>
+<p>pain. If used it should follow a complete assessment of the pain complaint, the patient’s</p>
+<pre><code>functionality goals, and risk factors for opioid misuse, abuse, diversion, or overdose.</code></pre>
+<li>For definitions of physical dependence, substance abuse, substance dependence,</li>
+<h2>tolerance, and withdrawal, see Chapters 69 and 72.</h2>
+<li>The onset of action of oral opioids is about 45 minutes, and peak effect usually is seen</li>
+<p>in about 1–2 hours.</p>
+<li>Equianalgesic doses, dosing guidelines, and major adverse effects are shown in</li>
+<p>Tables 56-6, 56-7, and 56-8. Equianalgesic doses are only a guide, and doses must</p>
+<p>be individualized.</p>
+<li>Combining opioid analgesics with alcohol or other CNS depressants amplifies CNS</li>
+<p>depression and is potentially lethal.</p>
+<li>Partial agonists and antagonists (eg, nalbuphine) compete with agonists for opioid</li>
+<p>receptor sites and exhibit mixed agonist–antagonist activity. They may produce anal-</p>
+<p>gesia with fewer side effects.</p>
+<li>Initially give analgesics around-the-clock for acute pain. As pain subsides, as-needed</li>
+<p>schedules can be used. Around-the-clock administration is also useful for manage-</p>
+<p>ment of chronic pain.</p>
+<li>Patients with severe pain may receive high doses of opioids with no unwanted side</li>
+<p>effects, but as pain subsides, patients may not tolerate even low doses.</p>
+<li>Most opioid-related itching or rash is due to histamine release from cutaneous mast</li>
+<p>cells, and is not a true allergic response. When opioid allergies occur, an opioid from</p>
+<p>a different structural class may be cautiously tried. For these purposes, the mixed</p>
+<p>agonist–antagonist class behaves most like the morphine-like agonists.</p>
+<li>With patient-controlled analgesia (PCA), patients self-administer preset amounts of</li>
+<p>IV opioids via a syringe pump electronically interfaced with a timing device. PCA</p>
+<p>provides better pain control, improved patient satisfaction, and relatively few differ-</p>
+<p>ences in side effects compared to traditional as needed administration.</p>
+<li>Administration of opioids directly into the CNS (see Table 56-9) (eg, epidural and</li>
+<p>intrathecal/subarachnoid routes) is commonly used by anesthesiology pain consult</p>
+<p>services for acute pain, chronic noncancer pain, and cancer pain. These methods</p>
+<p>require very careful monitoring as marked sedation, respiratory depression, pruritus,</p>
+<p>638</p>
+<p>ch56.indd 638 19-11-2020 17:44:58</p>
+<h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-3 Co-analgesics: Antidepressants (Continued )</h2>
+<p>Medication Role Dosing Notes</p>
+<p>Tricyclic antidepressants (TCAs)</p>
+<p>Amitriptyline Fibromyalgia Initial: 10–25 mg Secondary amines</p>
+<p>at bedimte (desipramine,</p>
+<p>Desipramine Low back pain</p>
+<p>nortriptyline) less</p>
+<p>Titrate by 10–25</p>
+<p>Imipramine Migraine anticholinergic</p>
+<p>mg every</p>
+<p>Nortriptyline prophylaxis 3–7 days activity = less ADE</p>
+<p>Neuropathic Multiple cardiac</p>
+<p>Maximum:</p>
+<p>pain ADE (including</p>
+<p>150 mg</p>
+<p>QTc prolongation,</p>
+<p>orthostatic</p>
+<p>hypotension,</p>
+<p>arrhythmias,</p>
+<p>tachycardia)</p>
+<p>Doses &gt;100 mg/</p>
+<p>day associated</p>
+<p>with sudden</p>
+<p>cardiac death</p>
+<p>Lowers seizure</p>
+<p>threshold</p>
+<p>Serotonin norepinephrine reuptake inhibitors (SNRIs)</p>
+<p>Duloxetine Chronic Initial: Avoid CrCl &lt;30</p>
+<p>musculoskeletal 30 mg daily mL/min</p>
+<p>pain (low back × 1 week (0.50 mL/sec)</p>
+<p>pain [LBP], (2 weeks if</p>
+<p>Avoid chronic liver</p>
+<p>osteoarthritis)a elderly)</p>
+<p>disease or cirrhosis</p>
+<p>Diabetic peripheral Target dose:</p>
+<p>Hypertension</p>
+<p>neuropathy 60 mg daily</p>
+<p>(DPN)a</p>
+<p>Maximum dose:</p>
+<p>Hyponatremia</p>
+<p>Fibromyalgiaa 120 mg/ Increased risk of</p>
+<p>day though bleeding</p>
+<p>Chemotherapy-</p>
+<p>limited (GI and CNS)</p>
+<p>induced</p>
+<p>evidence</p>
+<p>neuropathic pain</p>
+<p>for doses</p>
+<h2>(CINP)</h2>
+<p>&gt;60 mg</p>
+<p>providing</p>
+<p>additional</p>
+<p>benefit</p>
+<p>in pain</p>
+<p>Milnacipran Fibromyalgiaa Day 1: Avoid CrCl &lt;30 mL/</p>
+<p>12.5 mg daily min (0.50 mL/sec)</p>
+<p>Days 2–3: Caution with severe</p>
+<p>12.5 mg BID hepatic impairment</p>
+<p>Days 4–7: Increase risk for</p>
+<p>25 mg BID bleeding</p>
+<p>Then increase to</p>
+<p>50 mg BID</p>
+<p>Target dose: 100</p>
+<p>mg/day</p>
+<p>Maximum dose:</p>
+<p>200 mg/day (Continued )</p>
+<p>639</p>
+<p>ch56.indd 639 19-11-2020 17:44:59</p>
+<div class="table-container"><table><tr><th>TABLE 56-3 Co-analgesics: Antidepressants</th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>Medication</td><td>Role</td><td>Dosing</td><td></td><td>Notes</td></tr><tr><td>Tricyclic antidepressants (TCAs)</td><td></td><td></td><td></td><td></td></tr><tr><td>Amitriptyline
+Desipramine
+Imipramine
+Nortriptyline</td><td>Fibromyalgia
+Low back pain
+Migraine
+prophylaxis
+Neuropathic
+pain</td><td>Initial: 10–25 mg
+at bedimte
+Titrate by 10–25
+mg every
+3–7 days
+Maximum:
+150 mg</td><td></td><td>Secondary amines
+(desipramine,
+nortriptyline) less
+anticholinergic
+activity = less ADE
+Multiple cardiac
+ADE (including
+QTc prolongation,
+orthostatic
+hypotension,
+arrhythmias,
+tachycardia)
+Doses &gt;100 mg/
+day associated
+with sudden
+cardiac death
+Lowers seizure
+threshold</td></tr><tr><td>Serotonin norepinephrine reuptake inhibitors (SNRIs)</td><td></td><td></td><td></td><td></td></tr><tr><td>Duloxetine</td><td>Chronic
+musculoskeletal
+pain (low back
+pain [LBP],
+osteoarthritis)a
+Diabetic peripheral
+neuropathy
+(DPN)a
+Fibromyalgiaa
+Chemotherapy-
+induced
+neuropathic pain
+(CINP)</td><td>Initial:
+30 mg daily
+× 1 week
+(2 weeks if
+elderly)
+Target dose:
+60 mg daily
+Maximum dose:
+120 mg/
+day though
+limited
+evidence
+for doses
+&gt;60 mg
+providing
+additional
+benefit
+in pain</td><td></td><td>Avoid CrCl &lt;30
+mL/min
+(0.50 mL/sec)
+Avoid chronic liver
+disease or cirrhosis
+Hypertension
+Hyponatremia
+Increased risk of
+bleeding
+(GI and CNS)</td></tr><tr><td>Milnacipran</td><td>Fibromyalgiaa</td><td>Day 1:
+12.5 mg daily
+Days 2–3:
+12.5 mg BID
+Days 4–7:
+25 mg BID
+Then increase to
+50 mg BID
+Target dose: 100
+mg/day
+Maximum dose:
+200 mg/day</td><td></td><td>Avoid CrCl &lt;30 mL/
+min (0.50 mL/sec)
+Caution with severe
+hepatic impairment
+Increase risk for
+bleeding
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 56-3 Co-analgesics: Antidepressants (Continued )</h2>
+<p>Medication Role Dosing Notes</p>
+<p>Serotonin norepinephrine reuptake inhibitors (SNRIs) (continued)</p>
+<p>Venlafaxine CINP Initial: Higher doses needed to</p>
+<p>DPN venlafaxine achieve SNRI effect</p>
+<p>Fibromyalgia S 3 A 7. 5 mg daily Do w se i t a h d r j e u n st a m l/h en ep ts a tic</p>
+<p>LBP Titrate: by no impairment</p>
+<p>Migraine prophylaxis more than Hypertension</p>
+<p>Painful polyneuropathy 7 ev 5 e m ry g 4 / d d a a y y s Hyponatremia</p>
+<p>Tension-type headache Maximum dose: QTc prolongation</p>
+<p>225 mg/day Increased bleeding risk</p>
+<p>aFDA-approved indication(s).</p>
+<p>ADE, adverse drug event; GI, gastrointestinal; and CNS central nervous system.</p>
+<h2>TABLE 56-4 Skeletal Muscle Relaxants (Continued )</h2>
+<p>Medication Dosing Notes</p>
+<p>Baclofen Initial: 5 mg 3 times daily Withdrawal syndrome (hallucinations,</p>
+<p>Titrate: every 3 days to seizures)</p>
+<p>effect Respiratory depression</p>
+<p>Maximum: 80 mg/day Requires renal dose adjustment</p>
+<p>Carisoprodol 250–300 mg 4 Meprobamate (a barbiturate) is primary</p>
+<p>times daily metabolite and has abuse potential</p>
+<p>Schedule IV controlled substance</p>
+<p>Withdrawal syndrome</p>
+<p>Respiratory depression with opioids,</p>
+<p>benzodiazepines, or barbiturates</p>
+<p>Metabolized by CYP2C19 which has genetic</p>
+<p>variabilities</p>
+<p>Chlorzoxazone Initial: 250–500 mg 3–4 Rare hepatotoxicity</p>
+<p>times daily Urine discoloration</p>
+<p>Maximum dose: 750 mg Respiratory depression when combined</p>
+<p>3–4 times daily with opioids, benzodiazepines, or</p>
+<p>barbiturates</p>
+<p>Cyclobenzaprine Initial: 5 mg 3 times daily Anticholinergic effects</p>
+<p>Titrate: increase to Avoid in elderly</p>
+<p>7.5–10 mg Caution in patients with cardiac</p>
+<p>3 times daily × conduction/arrhythmias</p>
+<p>2–3 weeks</p>
+<p>Avoid closed angle glaucoma</p>
+<p>Elderly: 5 mg dose with</p>
+<p>less frequent doses Hepatic dose adjustments</p>
+<p>(Continued )</p>
+<p>640</p>
+<p>ch56.indd 640 19-11-2020 17:44:59</p>
+<div class="table-container"><table><tr><th>TABLE 56-3 Co-analgesics: Antidepressants (Continued )</th><th></th><th></th><th></th></tr><tr><td>Medication</td><td>Role</td><td>Dosing</td><td>Notes</td></tr><tr><td>Serotonin norepinephrine reuptake inhibitors (SNRIs) (continued)</td><td></td><td></td><td></td></tr><tr><td>Venlafaxine</td><td>CINP
+DPN
+Fibromyalgia
+LBP
+Migraine prophylaxis
+Painful polyneuropathy
+Tension-type headache</td><td>Initial:
+venlafaxine
+SA
+37.5 mg daily
+Titrate: by no
+more than
+75 mg/day
+every 4 days
+Maximum dose:
+225 mg/day</td><td>Higher doses needed to
+achieve SNRI effect
+Dose adjustments
+with renal/hepatic
+impairment
+Hypertension
+Hyponatremia
+QTc prolongation
+Increased bleeding risk</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 56-4 Skeletal Muscle Relaxants</th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>Medication</td><td>Dosing</td><td></td><td>Notes</td><td></td></tr><tr><td>Baclofen</td><td>Initial: 5 mg 3 times daily
+Titrate: every 3 days to
+effect
+Maximum: 80 mg/day</td><td></td><td>Withdrawal syndrome (hallucinations,
+seizures)
+Respiratory depression
+Requires renal dose adjustment</td><td></td></tr><tr><td>Carisoprodol</td><td>250–300 mg 4
+times daily</td><td></td><td>Meprobamate (a barbiturate) is primary
+metabolite and has abuse potential
+Schedule IV controlled substance
+Withdrawal syndrome
+Respiratory depression with opioids,
+benzodiazepines, or barbiturates
+Metabolized by CYP2C19 which has genetic
+variabilities</td><td></td></tr><tr><td>Chlorzoxazone</td><td>Initial: 250–500 mg 3–4
+times daily
+Maximum dose: 750 mg
+3–4 times daily</td><td></td><td>Rare hepatotoxicity
+Urine discoloration
+Respiratory depression when combined
+with opioids, benzodiazepines, or
+barbiturates</td><td></td></tr><tr><td>Cyclobenzaprine</td><td>Initial: 5 mg 3 times daily
+Titrate: increase to
+7.5–10 mg
+3 times daily ×
+2–3 weeks
+Elderly: 5 mg dose with
+less frequent doses</td><td></td><td>Anticholinergic effects
+Avoid in elderly
+Caution in patients with cardiac
+conduction/arrhythmias
+Avoid closed angle glaucoma
+Hepatic dose adjustments
+(Continued )</td><td></td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-4 Skeletal Muscle Relaxants (Continued )</h2>
+<p>Medication Dosing Notes</p>
+<p>Dantrolene Initial: 25 mg PO daily Black box warning—hepatitis</p>
+<p>× 1 week (dose-dependent)</p>
+<p>Titrate dose: Discontinue at 45 days if no benefit</p>
+<p>25 mg 3 times daily</p>
+<p>× 7 days</p>
+<p>50 mg 3 times daily</p>
+<p>× 7 days</p>
+<p>100 mg three times daily</p>
+<p>Maximum dose: 400</p>
+<p>mg/day</p>
+<p>Diazepam Adults: 2–10 mg 3–4 Long half-life</p>
+<p>times daily Avoid in elderly and renal/hepatic</p>
+<p>impairment</p>
+<p>Withdrawal with abrupt discontinuation</p>
+<p>Methocarbamol Initial: 1500 mg 4 times Urine discoloration</p>
+<p>daily × 2–3 days Respiratory depression with opioids,</p>
+<p>Then: 750–1000 mg benzodiazepines, or barbiturates</p>
+<p>4 times daily</p>
+<p>Metaxalone 800 mg 3–4 times daily Respiratory depression when used with</p>
+<p>opioids, benzodiazepines, or barbiturates</p>
+<p>Contraindicated in severe liver/renal</p>
+<p>impairment</p>
+<p>Orphenadrine 100 mg twice daily Anticholinergic effects</p>
+<p>Rare aplastic anemia</p>
+<p>Tizanidine Initial: 4 mg Hypotension</p>
+<p>Titrate by 2–4 mg every Hepatotoxicity</p>
+<h2>6–8 hours Tablets and capsules not bioequivalent</h2>
+<p>Maximum: 36 mg/day Withdrawal syndrome with abrupt</p>
+<p>discontinuation</p>
+<p>vomiting, urinary retention, and hypotension can occur. All agents administered</p>
+<p>directly into the CNS should be preservative-free.</p>
+<li>Naloxone is used to reverse respiratory depression, but continuous infusion may</li>
+<pre><code>be required. Monitor respiratory function for at least 24 hours after a single dose of</code></pre>
+<p>intrathecal or epidural morphine with standing orders for naloxone if n ee de d.</p>
+<p>M or ph ine and Congeners (Phenanthrenes)</p>
+<li>Many clinicians consider morphine the first-line agent for moderate-to-severe pain.</li>
+<p>It may be used for pain associated with myocardial infarction, as it decreases myocar-</p>
+<p>dial oxygen demand, but this is controversial.</p>
+<p>✓ Tidal exchange and minute volume can be affected by opioids. Patients with</p>
+<pre><code>underlying pulmonary dysfunction are at increased risk for respiratory depression,</code></pre>
+<p>which can be reversed by naloxone.</p>
+<p>✓ Morphine-induced respiratory depression can increase intracranial pressure and</p>
+<p>cloud the neurologic examination results.</p>
+<p>✓ Hypovolemic patients are at risk for morphine-induced orthostatic hypotension.</p>
+<p>641</p>
+<p>ch56.indd 641 19-11-2020 17:44:59</p>
+<div class="table-container"><table><tr><th>TABLE 56-4 Skeletal Muscle Relaxants (Continued )</th><th></th><th></th></tr><tr><td>Medication</td><td>Dosing</td><td>Notes</td></tr><tr><td>Dantrolene</td><td>Initial: 25 mg PO daily
+× 1 week
+Titrate dose:
+25 mg 3 times daily
+× 7 days
+50 mg 3 times daily
+× 7 days
+100 mg three times daily
+Maximum dose: 400
+mg/day</td><td>Black box warning—hepatitis
+(dose-dependent)
+Discontinue at 45 days if no benefit</td></tr><tr><td>Diazepam</td><td>Adults: 2–10 mg 3–4
+times daily</td><td>Long half-life
+Avoid in elderly and renal/hepatic
+impairment
+Withdrawal with abrupt discontinuation</td></tr><tr><td>Methocarbamol</td><td>Initial: 1500 mg 4 times
+daily × 2–3 days
+Then: 750–1000 mg
+4 times daily</td><td>Urine discoloration
+Respiratory depression with opioids,
+benzodiazepines, or barbiturates</td></tr><tr><td>Metaxalone</td><td>800 mg 3–4 times daily</td><td>Respiratory depression when used with
+opioids, benzodiazepines, or barbiturates
+Contraindicated in severe liver/renal
+impairment</td></tr><tr><td>Orphenadrine</td><td>100 mg twice daily</td><td>Anticholinergic effects
+Rare aplastic anemia</td></tr><tr><td>Tizanidine</td><td>Initial: 4 mg
+Titrate by 2–4 mg every
+6–8 hours
+Maximum: 36 mg/day</td><td>Hypotension
+Hepatotoxicity
+Tablets and capsules not bioequivalent
+Withdrawal syndrome with abrupt
+discontinuation</td></tr></table></div><h2>642 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-5 Topical Analgesics</h2>
+<p>Medication Uses Mechanism of Action Dosing Notes</p>
+<p>Capsaicin cream (various) Temporary relief of minor aches Transient receptor potential vanilloid 1 Apply 3–4 times daily Continue scheduled use for 2–4</p>
+<p>and pains of muscles and joints (TRPV1) receptor agonist weeks for best results</p>
+<p>Localized neuropathic pain</p>
+<p>Capsaicin 8% patch PHN Transient receptor potential vanilloid 1 Apply 1–4 patches to Administer under supervision of</p>
+<p>(Qutenza) (TRPV1) receptor agonist affected area for 60 min physician</p>
+<p>Repeat no more frequently Specific administration directions</p>
+<p>than every 3 months in packaging information</p>
+<p>Max: 4 patches Apply topical anesthetic before</p>
+<p>applying</p>
+<p>Monitor blood pressure due to</p>
+<p>transient increase in blood</p>
+<p>pressure during application</p>
+<p>Diclofenac 1% gel (Voltaren) Pain of osteoarthritis of joints Nonsteroid anti-inflammatory drugs Lower extremities: Same black box warnings as PO</p>
+<p>amenable to topical treatment (NSAIDs) 4 g four times daily, NSAIDs despite low systemic</p>
+<p>(knees, hands) max. 16 g/day bioavailability (6% of systemic</p>
+<p>Upper extremities: exposure from oral diclofenac)</p>
+<p>2 g 4 times daily, max. Use dosing card to measure</p>
+<p>8 g/day amount</p>
+<p>Total dose maximum:</p>
+<p>32 g/day</p>
+<p>Diclofenac epolamine 1.3% Topical treatment of acute pain NSAIDs 1 patch to most painful Systemic effects were &lt;1% after</p>
+<p>patch (Flector) due to minor strains, sprains, area twice daily 4 days of repeated dosing</p>
+<p>and contusions</p>
+<p>ch56.indd</p>
+<p>642</p>
+<p>19-11-2020</p>
+<p>17:45:00</p>
+<div class="table-container"><table><tr><th>TABLE 56-5 Topical Analgesics</th><th></th><th></th><th></th><th></th></tr><tr><td>Medication</td><td>Uses</td><td>Mechanism of Action</td><td>Dosing</td><td>Notes</td></tr><tr><td>Capsaicin cream (various)</td><td>Temporary relief of minor aches
+and pains of muscles and joints
+Localized neuropathic pain</td><td>Transient receptor potential vanilloid 1
+(TRPV1) receptor agonist</td><td>Apply 3–4 times daily</td><td>Continue scheduled use for 2–4
+weeks for best results</td></tr><tr><td>Capsaicin 8% patch
+(Qutenza)</td><td>PHN</td><td>Transient receptor potential vanilloid 1
+(TRPV1) receptor agonist</td><td>Apply 1–4 patches to
+affected area for 60 min
+Repeat no more frequently
+than every 3 months
+Max: 4 patches</td><td>Administer under supervision of
+physician
+Specific administration directions
+in packaging information
+Apply topical anesthetic before
+applying
+Monitor blood pressure due to
+transient increase in blood
+pressure during application</td></tr><tr><td>Diclofenac 1% gel (Voltaren)</td><td>Pain of osteoarthritis of joints
+amenable to topical treatment
+(knees, hands)</td><td>Nonsteroid anti-inflammatory drugs
+(NSAIDs)</td><td>Lower extremities:
+4 g four times daily,
+max. 16 g/day
+Upper extremities:
+2 g 4 times daily, max.
+8 g/day
+Total dose maximum:
+32 g/day</td><td>Same black box warnings as PO
+NSAIDs despite low systemic
+bioavailability (6% of systemic
+exposure from oral diclofenac)
+Use dosing card to measure
+amount</td></tr><tr><td>Diclofenac epolamine 1.3%
+patch (Flector)</td><td>Topical treatment of acute pain
+due to minor strains, sprains,
+and contusions</td><td>NSAIDs</td><td>1 patch to most painful
+area twice daily</td><td>Systemic effects were &lt;1% after
+4 days of repeated dosing</td></tr></table></div><p>643</p>
+<p>Pain</p>
+<p>Management</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>56</p>
+<p>Diclofenac topical solution Pain from osteoarthritis of NSAIDs 1.5%: 40 drops to each Same black box warnings as PO</p>
+<p>(Pennsaid) the knee affected knee 4 times NSAIDs</p>
+<p>daily. Apply 10 drops</p>
+<p>at a time 2%: 2 pumps</p>
+<p>(40 mg) on each painful</p>
+<p>knee twice daily</p>
+<p>Lidocaine gel/Ointment/ Neuropathic pain Sodium channel blocker Cream/Ointment: Apply Apply to intact skin only</p>
+<p>Patch (various) to affected area 3</p>
+<p>times daily</p>
+<p>Patch: apply 1 patch to</p>
+<p>affected area up to 12 hr</p>
+<p>Lidocaine 5% patch PHN Sodium channel blocker Apply 1–3 patches to site May cut lidocaine patches</p>
+<p>(Lidoderm) of pain for 12 hr Apply to intact skin only</p>
+<p>Maximum: 3 patches Severe hepatic impairment</p>
+<p>increases risk of side effects</p>
+<p>Menthol/Methyl salicylate Minor aches and pains of muscles Rubefacient Apply topically 3–4 times a Do not apply to damaged skin</p>
+<p>(various) and joints (simple backache, day to affected area</p>
+<p>arthritis, strains, bruises, sprains)</p>
+<p>Trolamine salicylate cream Aches and pains of muscles Rubefacient Apply topically 3–4 times a Do not apply to damaged skin</p>
+<p>10% (various) and joints (arthritis, simple day to affected area</p>
+<p>backache, bruises, sprains,</p>
+<p>strains)</p>
+<p>ch56.indd</p>
+<p>643</p>
+<p>19-11-2020</p>
+<p>17:45:00</p>
+<div class="table-container"><table><tr><th>Diclofenac topical solution
+(Pennsaid)</th><th>Pain from osteoarthritis of
+the knee</th><th>NSAIDs</th><th>1.5%: 40 drops to each
+affected knee 4 times
+daily. Apply 10 drops
+at a time 2%: 2 pumps
+(40 mg) on each painful
+knee twice daily</th><th>Same black box warnings as PO
+NSAIDs</th></tr><tr><td>Lidocaine gel/Ointment/
+Patch (various)</td><td>Neuropathic pain</td><td>Sodium channel blocker</td><td>Cream/Ointment: Apply
+to affected area 3
+times daily
+Patch: apply 1 patch to
+affected area up to 12 hr</td><td>Apply to intact skin only</td></tr><tr><td>Lidocaine 5% patch
+(Lidoderm)</td><td>PHN</td><td>Sodium channel blocker</td><td>Apply 1–3 patches to site
+of pain for 12 hr
+Maximum: 3 patches</td><td>May cut lidocaine patches
+Apply to intact skin only
+Severe hepatic impairment
+increases risk of side effects</td></tr><tr><td>Menthol/Methyl salicylate
+(various)</td><td>Minor aches and pains of muscles
+and joints (simple backache,
+arthritis, strains, bruises, sprains)</td><td>Rubefacient</td><td>Apply topically 3–4 times a
+day to affected area</td><td>Do not apply to damaged skin</td></tr><tr><td>Trolamine salicylate cream
+10% (various)</td><td>Aches and pains of muscles
+and joints (arthritis, simple
+backache, bruises, sprains,
+strains)</td><td>Rubefacient</td><td>Apply topically 3–4 times a
+day to affected area</td><td>Do not apply to damaged skin</td></tr></table></div><h2>644 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-6 Opioid Analgesics</h2>
+<p>Equianalgesic Approximate</p>
+<p>Class and Generic Name Dose in Onset (min)/</p>
+<p>(Brand Name) Chemical Source Metabolic Pathway/Metabolites Routea Adults (mg) Half-Life (hr)b</p>
+<p>Phenanthrenes (morphine-like agonists)</p>
+<p>Morphine (Embedaj, Arymo ERj, Naturally occurring Phase II via glucuronidation/M3Gj (inactive) and IM/IV 10 10–20/2</p>
+<p>MorphaBondj) M6Gl (active)</p>
+<h2>PO 25–30</h2>
+<p>Hydromorphone (Dilaudid, Exalgo, Semisynthetic Phase II via glucuronidation/H3G (active)m, H6Gn IM/IV 7.5 10–20/2–3</p>
+<p>various) PO</p>
+<p>Oxymorphone (Numorphan, Opana) Semisynthetic Phase II via glucuronidation/O3G (inactive)o IM/IVa 1 10–20/2–3</p>
+<h2>PO 10</h2>
+<p>Levorphanol (various) Semisynthetic Phase II via glucuronidation/Levorphanol- PO Variable 10–20/12–16</p>
+<p>3-glucuronide (inactive)</p>
+<p>Codeine (various) Naturally occurring CYP2D6/Morphine (active), Phase II PO 15–30c 10–30/3</p>
+<p>glucuronidation/codeine-6-glucuronide</p>
+<p>(unknown), CYP3A4/norcodeine (inactive)</p>
+<p>Hydrocodone (available as combination, Semisynthetic CYP3A4/Norhydrocodone (inactive); CYP2D6/ PO 5–10c 30–60/4</p>
+<p>single entity extended release— hydromorphone (active)</p>
+<p>Hysingla ERj, Zohydro ER)</p>
+<p>Oxycodone (OxyContinj, Xtampzaj, Semisynthetic CYP3A4/Noroxycodone (active), CYP2D6/ PO 15–30d 30–60/2–3</p>
+<p>RoxyBondj Troxyco ERj [oxycodone and oxymorphone (active)</p>
+<p>acetaminophen])</p>
+<p>Phenylpiperidines (meperidine-like agonists)</p>
+<p>Meperidine (Demerol, various) Synthetic Phase II hydrolysis/Meperidinic acid, CYP2B6, IM / IV 75 10–20/3–5</p>
+<p>CYP3A4, and CYP2C19/normeperidine</p>
+<p>PO 300d; not</p>
+<p>recommended</p>
+<p>ch56.indd</p>
+<p>644</p>
+<p>19-11-2020</p>
+<p>17:45:00</p>
+<div class="table-container"><table><tr><th>TABLE 56-6 Opioid Analgesics
+Equianalgesic Approximate
+Class and Generic Name Dose in Onset (min)/
+(Brand Name) Chemical Source Metabolic Pathway/Metabolites Routea Adults (mg) Half-Life (hr)b</th><th></th><th></th><th></th><th></th><th></th><th>CTION
+9
+|
+Neurologic
+Disorders</th></tr><tr><td>Phenanthrenes (morphine-like agonists)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Morphine (Embedaj, Arymo ERj,
+MorphaBondj)</td><td>Naturally occurring</td><td>Phase II via glucuronidation/M3Gj (inactive) and
+M6Gl (active)</td><td>IM/IV</td><td>10</td><td>10–20/2</td><td></td></tr><tr><td></td><td></td><td></td><td>PO</td><td>25–30</td><td></td><td></td></tr><tr><td>Hydromorphone (Dilaudid, Exalgo,
+various)</td><td>Semisynthetic</td><td>Phase II via glucuronidation/H3G (active)m, H6Gn</td><td>IM/IV
+PO</td><td>7.5</td><td>10–20/2–3</td><td></td></tr><tr><td>Oxymorphone (Numorphan, Opana)</td><td>Semisynthetic</td><td>Phase II via glucuronidation/O3G (inactive)o</td><td>IM/IVa</td><td>1</td><td>10–20/2–3</td><td></td></tr><tr><td></td><td></td><td></td><td>PO</td><td>10</td><td></td><td></td></tr><tr><td>Levorphanol (various)</td><td>Semisynthetic</td><td>Phase II via glucuronidation/Levorphanol-
+3-glucuronide (inactive)</td><td>PO</td><td>Variable</td><td>10–20/12–16</td><td></td></tr><tr><td>Codeine (various)</td><td>Naturally occurring</td><td>CYP2D6/Morphine (active), Phase II
+glucuronidation/codeine-6-glucuronide
+(unknown), CYP3A4/norcodeine (inactive)</td><td>PO</td><td>15–30c</td><td>10–30/3</td><td></td></tr><tr><td>Hydrocodone (available as combination,
+single entity extended release—
+Hysingla ERj, Zohydro ER)</td><td>Semisynthetic</td><td>CYP3A4/Norhydrocodone (inactive); CYP2D6/
+hydromorphone (active)</td><td>PO</td><td>5–10c</td><td>30–60/4</td><td></td></tr><tr><td>Oxycodone (OxyContinj, Xtampzaj,
+RoxyBondj Troxyco ERj [oxycodone and
+acetaminophen])</td><td>Semisynthetic</td><td>CYP3A4/Noroxycodone (active), CYP2D6/
+oxymorphone (active)</td><td>PO</td><td>15–30d</td><td>30–60/2–3</td><td></td></tr><tr><td>Phenylpiperidines (meperidine-like agonists)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Meperidine (Demerol, various)</td><td>Synthetic</td><td>Phase II hydrolysis/Meperidinic acid, CYP2B6,
+CYP3A4, and CYP2C19/normeperidine</td><td>IM / IV</td><td>75</td><td>10–20/3–5</td><td></td></tr><tr><td></td><td></td><td></td><td>PO</td><td>300d; not
+recommended</td><td></td><td></td></tr></table></div><p>645</p>
+<p>Pain</p>
+<p>Management</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>56</p>
+<p>Fentanyl (Sublimaze, Duragesic, Lazanda, Synthetic CYP3A4/Norfentanyl (inactive) IM/IV 0.125e 7–15/3–4</p>
+<p>Abstral, Fentora, Subsys, OTFC, various)</p>
+<p>Transdermal, Variablef</p>
+<p>buccal,</p>
+<p>transmucosal,</p>
+<p>sublingual,</p>
+<p>nasal,</p>
+<p>nebulized</p>
+<p>Variablef</p>
+<p>Diphenylheptanes (methadone-like agonists)</p>
+<p>Methadone (Dolophine, various) Synthetic CYP3A4, CYP2B6, CYP2C19, CYP2C9, CYP2D6/ IM/IV Variableg (acute)</p>
+<p>EDDP (inactive)p</p>
+<p>PO Variableg (acute) 30–60/12–190</p>
+<p>Phenylpropanolamines</p>
+<p>Tramadol (Ultram, Rybix, Ryzolt, ConZip, Synthetic CYP3A4/Nortramadol (inactive), PO 50–100c,h,i &lt;60/5–7</p>
+<p>various) CYP2D6/O-desmethyltramadol (active)</p>
+<p>Tapentadol (Nucynta) Synthetic Phase II glucuronidation/ PO 50–10c,h,i Within 60/4</p>
+<p>tapentadol-o-glucuronide (inactive), CYP2C9</p>
+<p>and CYP2C19/N-desmethyltapentadol</p>
+<p>(inactive), CYP2D6/hydroxytapentadol</p>
+<p>Agonist–antagonist derivatives</p>
+<p>Pentazocine (Talwin, various) Synthetic Liver/Alcoholic and carboxylic acid derivatives IM Not recommended</p>
+<p>(inactive), pentazocine glucuronide (inactive)</p>
+<p>PO 50c 15–30/2–3</p>
+<p>Butorphanol (Stadol, various) Synthetic CYP3A4/Hydroxybutorphanol (active), IM/IV 2 10–20/3–4</p>
+<p>norbutorphanol (inactive)</p>
+<p>Intranasal 1c (one spray) (Continued )</p>
+<p>ch56.indd</p>
+<p>645</p>
+<p>19-11-2020</p>
+<p>17:45:00</p>
+<div class="table-container"><table><tr><th>Fentanyl (Sublimaze, Duragesic, Lazanda,
+Abstral, Fentora, Subsys, OTFC, various)</th><th>Synthetic</th><th>CYP3A4/Norfentanyl (inactive)</th><th>IM/IV</th><th>0.125e</th><th>7–15/3–4</th></tr><tr><td></td><td></td><td></td><td>Transdermal,
+buccal,
+transmucosal,
+sublingual,
+nasal,
+nebulized</td><td>Variablef</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>Variablef</td><td></td></tr><tr><td>Diphenylheptanes (methadone-like agonists)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Methadone (Dolophine, various)</td><td>Synthetic</td><td>CYP3A4, CYP2B6, CYP2C19, CYP2C9, CYP2D6/
+EDDP (inactive)p</td><td>IM/IV</td><td>Variableg (acute)</td><td></td></tr><tr><td></td><td></td><td></td><td>PO</td><td>Variableg (acute)</td><td>30–60/12–190</td></tr><tr><td>Phenylpropanolamines</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tramadol (Ultram, Rybix, Ryzolt, ConZip,
+various)</td><td>Synthetic</td><td>CYP3A4/Nortramadol (inactive),
+CYP2D6/O-desmethyltramadol (active)</td><td>PO</td><td>50–100c,h,i</td><td>&lt;60/5–7</td></tr><tr><td>Tapentadol (Nucynta)</td><td>Synthetic</td><td>Phase II glucuronidation/
+tapentadol-o-glucuronide (inactive), CYP2C9
+and CYP2C19/N-desmethyltapentadol
+(inactive), CYP2D6/hydroxytapentadol</td><td>PO</td><td>50–10c,h,i</td><td>Within 60/4</td></tr><tr><td>Agonist–antagonist derivatives</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Pentazocine (Talwin, various)</td><td>Synthetic</td><td>Liver/Alcoholic and carboxylic acid derivatives
+(inactive), pentazocine glucuronide (inactive)</td><td>IM</td><td>Not recommended</td><td></td></tr><tr><td></td><td></td><td></td><td>PO</td><td>50c</td><td>15–30/2–3</td></tr><tr><td>Butorphanol (Stadol, various)</td><td>Synthetic</td><td>CYP3A4/Hydroxybutorphanol (active),
+norbutorphanol (inactive)</td><td>IM/IV</td><td>2</td><td>10–20/3–4</td></tr><tr><td></td><td></td><td></td><td>Intranasal</td><td>1c (one spray)</td><td>(Continued )</td></tr></table></div><h2>646 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-6 Opioid Analgesics (Continued )</h2>
+<p>Equianalgesic Approximate</p>
+<p>Class and Generic Name Dose in Onset (min)/</p>
+<p>(Brand Name) Chemical Source Metabolic Pathway/Metabolites Routea Adults (mg) Half-Life (hr)b</p>
+<p>Agonist–antagonist derivatives (continued)</p>
+<p>Nalbuphine (Nubain, various) Synthetic CYP3A4 CYP2C19/Nornalbuphine, IM/IV 10 &lt;15/5</p>
+<p>6-ketonalbuphine</p>
+<p>Buprenorphine (Buprenex, Butrans, Synthetic CYP3A4/Norbuprenorphine (active) IM/IV 0.3 10–20/2–3</p>
+<p>Suboxone, Belbuca, Subutex, various)</p>
+<p>Transdermal Variable</p>
+<p>Sublingual</p>
+<p>aThe IM route should be avoided whenever possible—produces significant pain with administration and rate and extent of absorption is highly variable. If IV route is unavailable then</p>
+<p>administer subcutaneously (SC).</p>
+<p>bER/LA formulations may vary greatly in terms of onset and duration of analgesia. The reader should consult individual prescribing labels.</p>
+<p>cStarting dose only (equianalgesia not shown).</p>
+<p>dStarting doses lower (oxycodone 5–10 mg, meperidine 50–150 mg).</p>
+<p>eEquivalent PO morphine dose = variable.</p>
+<p>fFor breakthrough pain only. Equianalgesic dose conversion should be avoided for Transmucosal Immediate Release Fentanyl (TIRF) products.</p>
+<p>gThe equianalgesic dose of methadone when compared with other opioids will decrease progressively the higher the previous opioid dose. Caution should be exercised when initiating in</p>
+<p>opioid naïve patients.</p>
+<p>hFirst day of dosing may administer second dose 1 hour after first dose.</p>
+<p>iOnset of action may differ for long-acting formulations. Ceiling dose recommendations exist and may differ from immediate release dosing recommendations.</p>
+<p>jFDA approved as abuse-deterrent formulation.</p>
+<p>kMorphine-3-glucuronide (accumulates in renal failure).</p>
+<p>lMorphine-6-glucuronide (accumulates in renal failure).</p>
+<p>mHydromorphone-3-glucuronide (accumulates in renal failure).</p>
+<p>nHydromorphone-6-glucuronide.</p>
+<p>oOxymorphone-3-glucuronide.</p>
+<p>p2-ethylidene-1,5-dimethyl-3,3-diphenylpyrrolidene (EDDP).</p>
+<p>qOral transmucosal fentanyl citrate (OTFC).</p>
+<p>IM, intramuscular; IV, intravenous; PO, oral.</p>
+<p>ch56.indd</p>
+<p>646</p>
+<p>19-11-2020</p>
+<p>17:45:00</p>
+<div class="table-container"><table><tr><th>TABLE 56-6 Opioid Analgesics (Continued )</th><th></th><th></th><th></th><th></th><th></th><th>ECTION
+9
+|
+Neurologic
+Disorders</th></tr><tr><td>Class and Generic Name
+(Brand Name)</td><td>Chemical Source</td><td>Metabolic Pathway/Metabolites</td><td>Routea</td><td>Equianalgesic
+Dose in
+Adults (mg)</td><td>Approximate
+Onset (min)/
+Half-Life (hr)b</td><td></td></tr><tr><td>Agonist–antagonist derivatives (continued)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Nalbuphine (Nubain, various)</td><td>Synthetic</td><td>CYP3A4 CYP2C19/Nornalbuphine,
+6-ketonalbuphine</td><td>IM/IV</td><td>10</td><td>&lt;15/5</td><td></td></tr><tr><td>Buprenorphine (Buprenex, Butrans,
+Suboxone, Belbuca, Subutex, various)</td><td>Synthetic</td><td>CYP3A4/Norbuprenorphine (active)</td><td>IM/IV</td><td>0.3</td><td>10–20/2–3</td><td></td></tr><tr><td></td><td></td><td></td><td>Transdermal</td><td>Variable</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>Sublingual</td><td></td><td></td><td></td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<p>✓ Most clinicians avoid morphine in patients with creatinine clearance less than or</p>
+<p>equal to 30ml/min [0.5 ml/sec] due to accumulation of active metabolites.</p>
+<li>Counsel patients to take the extended-release oxymorphone without food, as high-</li>
+<p>fat meals can greatly increase absorption, increasing risk of toxicity.</p>
+<li>Hydromorphone may have fewer side effects, especially pruritus, compared with</li>
+<p>other opioids and levorphanol has an extended half-life and purported NMDA</p>
+<p>glutamate receptor activity.</p>
+<li>Codeine, alone or combined with other analgesics (eg, acetaminophen), is com-</li>
+<p>monly used for mild-to-moderate pain. Oxycodone is useful for moderate-to-severe</p>
+<p>pain, especially when combined with nonopioids.</p>
+<p>Meperidine and Congeners (Phenylpiperidines)</p>
+<li>Meperidine is less potent and has a shorter duration of action than morphine.</li>
+<p>✓ With high doses or in patients with renal failure, the metabolite normeperidine</p>
+<p>accumulates, causing tremor, muscle twitching, and possibly seizures. In most set-</p>
+<p>tings, meperidine offers no advantages over morphine.</p>
+<p>✓ Do not combine meperidine with monoamine oxidase inhibitors because severe</p>
+<p>respiratory depression or serotonin syndrome may occur.</p>
+<li>Fentanyl, often used as an adjunct to general anesthesia, is more potent and faster</li>
+<p>acting than meperidine.</p>
+<p>Methadone and Congeners (Diphenylheptanes)</p>
+<li>Methadone has extended duration of action. Studies show a growing number of</li>
+<p>methadone-related deaths. High doses cause cardiac arrhythmias. Do not titrate</p>
+<p>more frequently than every 5–7 days. Although effective for acute pain, it is used for</p>
+<p>chronic cancer pain.</p>
+<li>There is a growing number of methadone-related deaths. The equianalgesic dose of</li>
+<p>methadone may decrease with higher doses of the previous opioid.</p>
+<p>Opioid Agonist–Antagonist Derivatives</p>
+<li>This analgesic class may cause less respiratory depression than opioids and may have</li>
+<p>lower abuse potential than morphine. However, psychotomimetic responses (eg, hal-</p>
+<p>lucinations and dysphoria), a limited analgesic effect, and the propensity to initiate</p>
+<p>withdrawal in opioid-dependent patients have limited their use.</p>
+<li>Buprenorphine is a pharmacologically complex opioid. When used with or without</li>
+<p>naloxone, for opioid use disorder, a special DEA license is required by the prescriber.</p>
+<p>Centrally Acting Opioids</p>
+<li>Tramadol and tapentadol are indicated for relief of moderate to moderately severe pain.</li>
+<p>✓ Their side effects are similar to other opioids, although the seizure risk with tra-</p>
+<p>madol may be higher.</p>
+<p>Opioid Antagonists</p>
+<li>Naloxone, a pure opioid antagonist that binds competitively to opioid receptors, does</li>
+<p>not produce analgesia or opioid side effects. It reverses the toxic effects of agonist</p>
+<p>and agonist–antagonist opioids. In some states in the United States, pharmacists are</p>
+<p>assuming greater roles in administering or dispensing naloxone for patients who have</p>
+<p>experienced opioid overdoses.</p>
+<li>Opioid antagonists may act centrally (eg, naloxone or naltrexone) or be limited to</li>
+<p>peripheral action only (eg, naloxegol, methylnaltrexone, or naldemedine).</p>
+<li>Table 56-10 lists dosing for central and peripheral opioid antagonists.</li>
+<p>647</p>
+<p>ch56.indd 647 19-11-2020 17:45:01</p>
+<h2>648 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-7 Dosing Guidelines</h2>
+<p>Doses (Use Lowest Effective Dose, Titrate Up or Down</p>
+<p>Based on Patient Response, Opioid-Tolerant Patients</p>
+<p>Agent(s) May Need Dose Modification) Notes</p>
+<p>NSAIDs/Acetaminophen/Aspirin Use lowest effective dose for the shortest Used in mild-to-moderate pain</p>
+<p>duration possible May use in conjunction with opioid agents to decrease doses of each</p>
+<p>Regular alcohol use and of acetaminophen may result in liver toxicity</p>
+<p>Care must be exercised to avoid overdose when combination products</p>
+<p>containing these agents are used</p>
+<p>Underlying renal impairment, hypovolemia, and CHF may predispose to</p>
+<p>nephrotoxicity</p>
+<p>Morphine PO 5–30 mg every 4 hra Drug of choice in severe pain</p>
+<p>IM 5–20 mg every 4 hra Use immediate-release product with SR product to control</p>
+<p>breakthrough pain in cancer patients</p>
+<p>IV 5–15 mg every 4 hra Typical patient controlled analgesia IV dose is 1 mg with a 10-min</p>
+<p>lock-out interval</p>
+<p>SR 15–30 mg every 12 hr (may need to be every Every 24-hr products available</p>
+<p>8 hr in some patients)</p>
+<p>Rectal 10–20 mg every 4 hra</p>
+<p>Hydromorphone PO 2–4 mg every 4–6 hra Use in severe pain</p>
+<p>XR 8 mg to 64 mg every 24 hr More potent than morphine; otherwise, no advantages</p>
+<p>ch56.indd</p>
+<p>648</p>
+<p>19-11-2020</p>
+<p>17:45:01</p>
+<div class="table-container"><table><tr><th>TABLE 56-7 Dosing Guidelines
+Doses (Use Lowest Effective Dose, Titrate Up or Down
+Based on Patient Response, Opioid-Tolerant Patients
+Agent(s) May Need Dose Modification) Notes</th><th></th><th></th></tr><tr><td>NSAIDs/Acetaminophen/Aspirin</td><td>Use lowest effective dose for the shortest
+duration possible</td><td>Used in mild-to-moderate pain
+May use in conjunction with opioid agents to decrease doses of each
+Regular alcohol use and of acetaminophen may result in liver toxicity
+Care must be exercised to avoid overdose when combination products
+containing these agents are used
+Underlying renal impairment, hypovolemia, and CHF may predispose to
+nephrotoxicity</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>Morphine</td><td>PO 5–30 mg every 4 hra</td><td>Drug of choice in severe pain</td></tr><tr><td></td><td>IM 5–20 mg every 4 hra</td><td>Use immediate-release product with SR product to control
+breakthrough pain in cancer patients</td></tr><tr><td></td><td>IV 5–15 mg every 4 hra</td><td>Typical patient controlled analgesia IV dose is 1 mg with a 10-min
+lock-out interval</td></tr><tr><td></td><td>SR 15–30 mg every 12 hr (may need to be every
+8 hr in some patients)</td><td>Every 24-hr products available</td></tr><tr><td></td><td>Rectal 10–20 mg every 4 hra</td><td></td></tr><tr><td>Hydromorphone</td><td>PO 2–4 mg every 4–6 hra</td><td>Use in severe pain</td></tr><tr><td></td><td>XR 8 mg to 64 mg every 24 hr</td><td>More potent than morphine; otherwise, no advantages</td></tr></table></div><p>649</p>
+<p>Pain</p>
+<p>Management</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>56</p>
+<p>IM 1–2 mg every 4–6 hra</p>
+<p>IV 0.5–2 mg every 4 hra Typical patient-controlled analgesia IV dose is 0.2 mg with a 10-min</p>
+<p>lock-out interval</p>
+<p>Rectal 3 mg every 6–8 hra Every 24-hr product (Exalgo) available</p>
+<p>Oxymorphone IM 1–1.5 mg every 4–6 hra Use in severe pain</p>
+<p>IV 0.5 mg every 4–6 hra No advantages over morphine</p>
+<p>PO immediate-release 5–10 mg every 4–6 hra Use immediate-release product with controlled-release product to</p>
+<p>control breakthrough pain in cancer or chronic pain patients</p>
+<p>PO extended-release 5–10 mg every 12 hra Manufacturer recommends 5 mg every 12 hr in opioid-naïve patients</p>
+<p>Take ER on empty stomach</p>
+<p>Levorphanol PO 2–3 mg every 6–8 hra (Levo-Dromoran) Use in severe pain</p>
+<p>PO 2 mg every 3–6 hra (Levorphanol Tartrate) Extended half-life useful in cancer patients</p>
+<p>IM 1–2 mg every 6–8 hra In chronic pain, wait 3 days between dosage adjustments</p>
+<p>IV 1 mg every 3–6 hra</p>
+<p>Codeine PO 15–60 mg every 4–6 hra Use in mild-to-moderate pain</p>
+<p>IM 15–60 mg every 4–6 hra Weak analgesic; analgesic prodrug</p>
+<p>Hydrocodone PO 5–10 mg every 4–6 hra Use in moderate/severe pain</p>
+<p>Oxycodone PO 5–15 mg every 4–6 hra Use in moderate/severe pain</p>
+<p>Controlled release 10–20 mg every 12 hr Use immediate-release product with controlled-release product to</p>
+<p>control breakthrough pain in cancer or chronic pain patients</p>
+<p>CR reformulated to deter abuse</p>
+<p>(Continued )</p>
+<p>ch56.indd</p>
+<p>649</p>
+<p>19-11-2020</p>
+<p>17:45:01</p>
+<div class="table-container"><table><tr><th></th><th>IM 1–2 mg every 4–6 hra</th><th></th></tr><tr><td></td><td>IV 0.5–2 mg every 4 hra</td><td>Typical patient-controlled analgesia IV dose is 0.2 mg with a 10-min
+lock-out interval</td></tr><tr><td></td><td>Rectal 3 mg every 6–8 hra</td><td>Every 24-hr product (Exalgo) available</td></tr><tr><td>Oxymorphone</td><td>IM 1–1.5 mg every 4–6 hra</td><td>Use in severe pain</td></tr><tr><td></td><td>IV 0.5 mg every 4–6 hra</td><td>No advantages over morphine</td></tr><tr><td></td><td>PO immediate-release 5–10 mg every 4–6 hra</td><td>Use immediate-release product with controlled-release product to
+control breakthrough pain in cancer or chronic pain patients</td></tr><tr><td></td><td>PO extended-release 5–10 mg every 12 hra</td><td>Manufacturer recommends 5 mg every 12 hr in opioid-naïve patients</td></tr><tr><td></td><td></td><td>Take ER on empty stomach</td></tr><tr><td>Levorphanol</td><td>PO 2–3 mg every 6–8 hra (Levo-Dromoran)</td><td>Use in severe pain</td></tr><tr><td></td><td>PO 2 mg every 3–6 hra (Levorphanol Tartrate)</td><td>Extended half-life useful in cancer patients</td></tr><tr><td></td><td>IM 1–2 mg every 6–8 hra</td><td>In chronic pain, wait 3 days between dosage adjustments</td></tr><tr><td></td><td>IV 1 mg every 3–6 hra</td><td></td></tr><tr><td>Codeine</td><td>PO 15–60 mg every 4–6 hra</td><td>Use in mild-to-moderate pain</td></tr><tr><td></td><td>IM 15–60 mg every 4–6 hra</td><td>Weak analgesic; analgesic prodrug</td></tr><tr><td>Hydrocodone</td><td>PO 5–10 mg every 4–6 hra</td><td>Use in moderate/severe pain</td></tr><tr><td>Oxycodone</td><td>PO 5–15 mg every 4–6 hra</td><td>Use in moderate/severe pain
+Use immediate-release product with controlled-release product to
+control breakthrough pain in cancer or chronic pain patients
+CR reformulated to deter abuse
+(Continued )</td></tr><tr><td></td><td>Controlled release 10–20 mg every 12 hr</td><td></td></tr><tr><td></td><td></td><td></td></tr></table></div><h2>650 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-7 Dosing Guidelines (Continued )</h2>
+<p>Doses (Use Lowest Effective Dose, Titrate Up or Down</p>
+<p>Based on Patient Response, Opioid-Tolerant Patients</p>
+<p>Agent(s) May Need Dose Modification) Notes</p>
+<p>Meperidine IM 50–150 mg every 3–4 hra Use in severe pain</p>
+<p>IV 5–10 mg every 5 min prna Oral not recommended</p>
+<p>Do not use in renal failure</p>
+<p>May precipitate tremors, myoclonus, and seizures</p>
+<p>Monoamine oxidase inhibitors can induce hyperpyrexia and/or seizures</p>
+<p>or opioid overdose symptoms</p>
+<p>Fentanyl IV 25–50 mcg/hr Used in severe pain</p>
+<p>IM 50–100 mcg every 1–2 hra Do not use transdermal in acute pain</p>
+<p>Transdermal 25 mcg/h every 72 hr Transmucosal for breakthrough cancer pain in patients already receiving</p>
+<p>or tolerant to opioids</p>
+<p>Transmucosal (Actiq/OTFC Lozenge and Onsolis buccal film) Always start with lowest dose despite daily opioid intake;</p>
+<p>200 mcg may repeat × 1, 30 min after first dose is started, product-specific titration recommendations exist</p>
+<p>then titrate</p>
+<p>Transmucosal (Fentora Buccal Tablet) 100 mcg, may repeat × 1,</p>
+<p>30 min after first dose is started, then titrate</p>
+<p>Intranasal (Lazanda Spray) 100 mcg (one spray) in one nostril.</p>
+<p>Wait 2 hr prior to redosing</p>
+<p>Sublingual (Subsys Spray) 100 mcg (1 spray). Wait 4 hr rprior to</p>
+<p>redosing</p>
+<p>Sublingual (Abstral Tablet) 100 mcg tablets placed sublingually.</p>
+<p>Must wait 2 hr prior to redosing</p>
+<p>ch56.indd</p>
+<p>650</p>
+<p>19-11-2020</p>
+<p>17:45:01</p>
+<div class="table-container"><table><tr><th>TABLE 56-7 Dosing Guidelines (Continued )</th><th></th><th></th></tr><tr><td>Agent(s)</td><td>Doses (Use Lowest Effective Dose, Titrate Up or Down
+Based on Patient Response, Opioid-Tolerant Patients
+May Need Dose Modification)</td><td>Notes</td></tr><tr><td>Meperidine</td><td>IM 50–150 mg every 3–4 hra</td><td>Use in severe pain</td></tr><tr><td></td><td>IV 5–10 mg every 5 min prna</td><td>Oral not recommended</td></tr><tr><td></td><td></td><td>Do not use in renal failure</td></tr><tr><td></td><td></td><td>May precipitate tremors, myoclonus, and seizures</td></tr><tr><td></td><td></td><td>Monoamine oxidase inhibitors can induce hyperpyrexia and/or seizures
+or opioid overdose symptoms</td></tr><tr><td>Fentanyl</td><td>IV 25–50 mcg/hr</td><td>Used in severe pain</td></tr><tr><td></td><td>IM 50–100 mcg every 1–2 hra</td><td>Do not use transdermal in acute pain</td></tr><tr><td></td><td>Transdermal 25 mcg/h every 72 hr</td><td>Transmucosal for breakthrough cancer pain in patients already receiving
+or tolerant to opioids</td></tr><tr><td></td><td>Transmucosal (Actiq/OTFC Lozenge and Onsolis buccal film)
+200 mcg may repeat × 1, 30 min after first dose is started,
+then titrate</td><td>Always start with lowest dose despite daily opioid intake;
+product-specific titration recommendations exist</td></tr><tr><td></td><td>Transmucosal (Fentora Buccal Tablet) 100 mcg, may repeat × 1,
+30 min after first dose is started, then titrate</td><td></td></tr><tr><td></td><td>Intranasal (Lazanda Spray) 100 mcg (one spray) in one nostril.
+Wait 2 hr prior to redosing</td><td></td></tr><tr><td></td><td>Sublingual (Subsys Spray) 100 mcg (1 spray). Wait 4 hr rprior to
+redosing</td><td></td></tr><tr><td></td><td>Sublingual (Abstral Tablet) 100 mcg tablets placed sublingually.
+Must wait 2 hr prior to redosing</td><td></td></tr></table></div><p>651</p>
+<p>Pain</p>
+<p>Management</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>56</p>
+<p>Methadoneg PO 2.5–10 mg every 8–12 hra Effective in severe chronic pain</p>
+<p>IM 2.5–10 mg every 8–12 hra Some chronic pain patients can be dosed every 12 hr</p>
+<p>Equianalgesic dose of methadone when compared with other opioids</p>
+<p>will decrease progressively the higher the previous opioid dose.</p>
+<p>Avoid dose titrations more frequently than weekly in chronic pain</p>
+<p>maintenance</p>
+<p>Pentazocine PO 50–100 mg every 3–4 hrb (max. 600 mg daily, for those Second-line agent for moderate-to-severe pain; may precipitate</p>
+<p>50 mg tablet containing 0.5 mg of naloxone) withdrawal in opiate-dependent patients; parenteral doses not</p>
+<p>recommended</p>
+<p>PO 25 mg every 4 hrb (max. 150 mg daily, for those 25 mg</p>
+<h2>tablet containing 325 mg of acetaminophen)</h2>
+<p>Butorphanol IM 1–4 mg every 3–4 hrb Second-line agent for moderate-to-severe pain</p>
+<p>IV 0.5–2 mg every 3–4 hrb May precipitate withdrawal in opiate-dependent patients</p>
+<p>Intranasal 1 mg (1 spray) every 3–4 hrb</p>
+<p>If inadequate relief after initial spray, may repeat in other nostril</p>
+<p>× 1 in 60–90 min</p>
+<p>Max. 2 sprays (one per nostril) every 3–4 hrb</p>
+<p>Nalbuphine IM/IV 10 mg every 3–6 hrb (max. 20 mg dose, Second-line agent for moderate-to-severe pain; may precipitate</p>
+<p>160 mg daily) withdrawal in opiate-dependent patients</p>
+<p>Used frequently in low doses to treat/prevent opioid-induced pruritus</p>
+<p>Buprenorphine IM 0.3 mg every 6 hrb Second-line agent for moderate-to-severe pain</p>
+<p>(Continued )</p>
+<p>ch56.indd</p>
+<p>651</p>
+<p>19-11-2020</p>
+<p>17:45:01</p>
+<div class="table-container"><table><tr><th>Methadoneg</th><th>PO 2.5–10 mg every 8–12 hra</th><th>Effective in severe chronic pain</th></tr><tr><td></td><td>IM 2.5–10 mg every 8–12 hra</td><td>Some chronic pain patients can be dosed every 12 hr
+Equianalgesic dose of methadone when compared with other opioids
+will decrease progressively the higher the previous opioid dose.
+Avoid dose titrations more frequently than weekly in chronic pain
+maintenance</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>Pentazocine</td><td>PO 50–100 mg every 3–4 hrb (max. 600 mg daily, for those
+50 mg tablet containing 0.5 mg of naloxone)</td><td>Second-line agent for moderate-to-severe pain; may precipitate
+withdrawal in opiate-dependent patients; parenteral doses not
+recommended</td></tr><tr><td></td><td>PO 25 mg every 4 hrb (max. 150 mg daily, for those 25 mg
+tablet containing 325 mg of acetaminophen)</td><td></td></tr><tr><td>Butorphanol</td><td>IM 1–4 mg every 3–4 hrb</td><td>Second-line agent for moderate-to-severe pain</td></tr><tr><td></td><td>IV 0.5–2 mg every 3–4 hrb</td><td>May precipitate withdrawal in opiate-dependent patients</td></tr><tr><td></td><td>Intranasal 1 mg (1 spray) every 3–4 hrb</td><td></td></tr><tr><td></td><td>If inadequate relief after initial spray, may repeat in other nostril
+× 1 in 60–90 min</td><td></td></tr><tr><td></td><td>Max. 2 sprays (one per nostril) every 3–4 hrb</td><td></td></tr><tr><td>Nalbuphine</td><td>IM/IV 10 mg every 3–6 hrb (max. 20 mg dose,
+160 mg daily)</td><td>Second-line agent for moderate-to-severe pain; may precipitate
+withdrawal in opiate-dependent patients</td></tr><tr><td></td><td></td><td>Used frequently in low doses to treat/prevent opioid-induced pruritus</td></tr><tr><td>Buprenorphine</td><td>IM 0.3 mg every 6 hrb</td><td>Second-line agent for moderate-to-severe pain
+(Continued )</td></tr></table></div><h2>652 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-7 Dosing Guidelines (Continued )</h2>
+<p>Doses (Use Lowest Effective Dose, Titrate Up or Down</p>
+<p>Based on Patient Response, Opioid-Tolerant Patients</p>
+<p>Agent(s) May Need Dose Modification) Notes</p>
+<p>Buprenorphine (continued)</p>
+<p>Slow IV 0.3 mg every 6 hrb May precipitate withdrawal in opiate-dependent patients</p>
+<p>Transdermal delivery systems (5, 7.5, 10, 15, 20 micrograms/h) available</p>
+<p>for every 7 day administration. Detailed manufacturer dosing</p>
+<p>conversion recommendations exist</p>
+<p>May repeat × 1, 30–60 min after initial dose Naloxone may not be effective in reversing respiratory depression</p>
+<p>Naloxone IV/IM 0.4–2 mg When reversing opiate side effects in patients needing analgesia, dilute</p>
+<p>and titrate (0.1–0.2 mg every 2–3 min) so as not to reverse analgesia</p>
+<p>Tramadol PO 50–100 mg every 4–6 hra Maximum dose for nonextended-release, 400 mg/24 hr maximum for</p>
+<p>extended release, 300 mg/24 hr</p>
+<p>If rapid onset not required, start 25 mg/day and Decrease dose in patient with renal impairment and in the elderly</p>
+<p>titrate over several days</p>
+<p>Extended release PO 100 mg every 24 hr</p>
+<p>Tapentadol PO 50–100 mg every 4–6 hra First day of therapy may administer second dose after the first within</p>
+<p>1 hr, maximum dose first day 700 mg, max. dose thereafter 600 mg</p>
+<p>(maximum dose for CR 500 mg)</p>
+<p>aMay start with an around-the-clock regimen and switch to prn if/when the painful signal subsides or is episodic.</p>
+<p>bMay reach a ceiling analgesic effect.</p>
+<p>CR, controlled release; HCL, hydrochloride; IM, intramuscular; IV, intravenous; ; mcg, microgram; mg, milligram; NSAID, nonsteroidal anti-inflammatory drug; OTFC, Oral transmucosal fentanyl</p>
+<p>citrate; PO, oral; prn, as needed; SR, sustained release; XR, extended release.</p>
+<p>ch56.indd</p>
+<p>652</p>
+<p>19-11-2020</p>
+<p>17:45:01</p>
+<div class="table-container"><table><tr><th>TABLE 56-7 Dosing Guidelines (Continued )</th><th></th><th></th></tr><tr><td>Agent(s)</td><td>Doses (Use Lowest Effective Dose, Titrate Up or Down
+Based on Patient Response, Opioid-Tolerant Patients
+May Need Dose Modification)</td><td>Notes</td></tr><tr><td>Buprenorphine (continued)</td><td></td><td></td></tr><tr><td></td><td>Slow IV 0.3 mg every 6 hrb</td><td>May precipitate withdrawal in opiate-dependent patients</td></tr><tr><td></td><td></td><td>Transdermal delivery systems (5, 7.5, 10, 15, 20 micrograms/h) available
+for every 7 day administration. Detailed manufacturer dosing
+conversion recommendations exist</td></tr><tr><td></td><td>May repeat × 1, 30–60 min after initial dose</td><td>Naloxone may not be effective in reversing respiratory depression</td></tr><tr><td>Naloxone</td><td>IV/IM 0.4–2 mg</td><td>When reversing opiate side effects in patients needing analgesia, dilute
+and titrate (0.1–0.2 mg every 2–3 min) so as not to reverse analgesia</td></tr><tr><td>Tramadol</td><td>PO 50–100 mg every 4–6 hra</td><td>Maximum dose for nonextended-release, 400 mg/24 hr maximum for
+extended release, 300 mg/24 hr</td></tr><tr><td></td><td>If rapid onset not required, start 25 mg/day and
+titrate over several days</td><td>Decrease dose in patient with renal impairment and in the elderly</td></tr><tr><td></td><td>Extended release PO 100 mg every 24 hr</td><td></td></tr><tr><td>Tapentadol</td><td>PO 50–100 mg every 4–6 hra</td><td>First day of therapy may administer second dose after the first within
+1 hr, maximum dose first day 700 mg, max. dose thereafter 600 mg
+(maximum dose for CR 500 mg)</td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-8 Major Adverse Effects of the Opioid Analgesics</h2>
+<p>Effect Manifestation</p>
+<p>Mood changes Dysphoria, euphoria</p>
+<p>Somnolence Sedation, inability to concentrate</p>
+<p>Stimulation of chemoreceptor Nausea, vomiting</p>
+<p>trigger zone</p>
+<p>Respiratory depression Decreased respiratory rate, periodic breathing, oxygen</p>
+<p>desaturation</p>
+<p>Decreased gastrointestinal Constipation</p>
+<p>motility</p>
+<p>Increase in sphincter tone Biliary spasm, urinary retention (varies among agents)</p>
+<p>Histamine release Urticaria, pruritus, rarely exacerbation of asthma due to</p>
+<p>bronchospasm (varies among agents)</p>
+<p>Tolerance Larger doses for same effect</p>
+<p>Dependence Withdrawal symptoms upon abrupt discontinuation</p>
+<p>Addiction Genetic predisposition leads to loss of control of drug</p>
+<p>use, continued use despite harm, compulsion to use,</p>
+<p>cravings</p>
+<pre><code>Hypogonadism Fatigue, depression, loss of analgesia, sexual dysfunction,</code></pre>
+<p>amenorrhea (women)</p>
+<p>Sleep Disrupts sleep–wake cycle, causes dose-dependent rapid</p>
+<p>eye movement (REM) suppression</p>
+<h2>TABLE 56-9 Intraspinal Opioids</h2>
+<p>Duration Continual</p>
+<p>Single Onset of Pain of Pain Infusion Dose</p>
+<p>Agent Dose (mg) Relief (min) Relief (hr) (mg/hr)</p>
+<p>Epidural route</p>
+<p>Morphine 1–6 30 6–24 0.1–1</p>
+<p>Hydromorphone 0.8–1.5 5–8 4–8 0.1–0.3</p>
+<p>Fentanyl 0.025–0.1 5 2–8 0.025–0.1</p>
+<p>Sufentanil 0.01–0.06 5 2–4 0.01–0.05</p>
+<p>Subarachnoid route</p>
+<p>Morphine 0.1–0.3 15 8–34 –</p>
+<p>Fentanyl 0.005–0.025 5 3–6 –</p>
+<p>Doses above should not be interpreted as equianalgesic doses for conversion to or from the specific</p>
+<p>opioid or route of administration.</p>
+<h2>REGIONAL ANALGESIA</h2>
+<li>Regional analgesia with local anesthetics (Table 56-11) is useful for both acute and</li>
+<p>chronic pain. Anesthetics can be positioned by injection (eg, in the joints, epidural or</p>
+<p>intrathecal space, nerve plexus, or along nerve roots), or applied topically.</p>
+<li>High plasma concentrations of local anesthetics can cause dizziness, tinnitus, drowsi-</li>
+<p>ness, seizures, and respiratory arrest. Cardiovascular effects include myocardial</p>
+<p>depression, heart block, hypotension, bradycardia, and cardiac arrest. Skillful appli-</p>
+<p>cation, frequent administration, and specialized follow-up are required.</p>
+<p>653</p>
+<p>ch56.indd 653 19-11-2020 17:45:02</p>
+<div class="table-container"><table><tr><th>TABLE 56-8 Major Adverse Effects of the Opioid Analgesics</th><th></th></tr><tr><td>Effect</td><td>Manifestation</td></tr><tr><td>Mood changes</td><td>Dysphoria, euphoria</td></tr><tr><td>Somnolence</td><td>Sedation, inability to concentrate</td></tr><tr><td>Stimulation of chemoreceptor
+trigger zone</td><td>Nausea, vomiting</td></tr><tr><td>Respiratory depression</td><td>Decreased respiratory rate, periodic breathing, oxygen
+desaturation</td></tr><tr><td>Decreased gastrointestinal
+motility</td><td>Constipation</td></tr><tr><td>Increase in sphincter tone</td><td>Biliary spasm, urinary retention (varies among agents)</td></tr><tr><td>Histamine release</td><td>Urticaria, pruritus, rarely exacerbation of asthma due to
+bronchospasm (varies among agents)</td></tr><tr><td>Tolerance</td><td>Larger doses for same effect</td></tr><tr><td>Dependence</td><td>Withdrawal symptoms upon abrupt discontinuation</td></tr><tr><td>Addiction</td><td>Genetic predisposition leads to loss of control of drug
+use, continued use despite harm, compulsion to use,
+cravings</td></tr><tr><td>Hypogonadism</td><td>Fatigue, depression, loss of analgesia, sexual dysfunction,
+amenorrhea (women)</td></tr><tr><td>Sleep</td><td>Disrupts sleep–wake cycle, causes dose-dependent rapid
+eye movement (REM) suppression</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 56-9 Intraspinal Opioids</th><th></th><th></th><th></th><th></th></tr><tr><td>Agent</td><td>Single
+Dose (mg)</td><td>Onset of Pain
+Relief (min)</td><td>Duration
+of Pain
+Relief (hr)</td><td>Continual
+Infusion Dose
+(mg/hr)</td></tr><tr><td>Epidural route</td><td></td><td></td><td></td><td></td></tr><tr><td>Morphine</td><td>1–6</td><td>30</td><td>6–24</td><td>0.1–1</td></tr><tr><td>Hydromorphone</td><td>0.8–1.5</td><td>5–8</td><td>4–8</td><td>0.1–0.3</td></tr><tr><td>Fentanyl</td><td>0.025–0.1</td><td>5</td><td>2–8</td><td>0.025–0.1</td></tr><tr><td>Sufentanil</td><td>0.01–0.06</td><td>5</td><td>2–4</td><td>0.01–0.05</td></tr><tr><td>Subarachnoid route</td><td></td><td></td><td></td><td></td></tr><tr><td>Morphine</td><td>0.1–0.3</td><td>15</td><td>8–34</td><td>–</td></tr><tr><td>Fentanyl</td><td>0.005–0.025</td><td>5</td><td>3–6</td><td>–</td></tr></table></div><h2>654 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<h2>TABLE 56-10 Central and Peripheral Opioid Antagonists</h2>
+<p>Generic Name</p>
+<p>(Brand Name) Activity Role Route Dose in Adults (mg) Special Considerations</p>
+<p>Naldemedine (Symproic) Peripheral CNMPa, OICb PO 0.2 mg qday Avoid with severe hepatic impairment</p>
+<p>Naloxone Systemic Opioid reversal IV, IM, IN 0.4–2 mge Onset 1–2 (IV) minutes, 2–5 (IM) minutes</p>
+<p>(Narcan, various) Half-life 0.5–1.3 hr</p>
+<p>Methylnaltrexone (Relistor) Peripheral Cancer and SC (both), PO Variable Renal dose adjustments</p>
+<p>CNMPa OICb (CNMP)</p>
+<p>Naltrexone Systemic AUD,c PO, IM 12 mg Qday-Q12 (PO) Opioid free for 7–10 days before initiation</p>
+<p>(ReVia, Vivitrol) OUDd 380 mg q4weeks (IM)</p>
+<p>Alvimopan Peripheral Postoperative ileus PO 12 mg PO 30 min–5 hr before Limited to 15 doses</p>
+<p>surgery then 12 mg PO BID</p>
+<p>(Entereg)</p>
+<p>starting day after surgery for</p>
+<p>maximum of 7 days</p>
+<p>Naloxegol Peripheral CNMPa, PO 12.5–25 mg qday Renal dose adjustments</p>
+<p>(Movantik) OICb 1 hour before, 2 hours after Avoid with moderate 3A4 inhibitors</p>
+<p>a meal</p>
+<p>aChronic nonmalignant pain.</p>
+<p>bOpioid-induced constipation.</p>
+<p>cAlcohol use disorder.</p>
+<p>dOpioid use disorder.</p>
+<p>eStarting doses to be used in cases of opioid overdose.</p>
+<p>Data from individual package inserts.</p>
+<p>ch56.indd</p>
+<p>654</p>
+<p>19-11-2020</p>
+<p>17:45:02</p>
+<div class="table-container"><table><tr><th>Generic Name
+(Brand Name) Activity Role Route Dose in Adults (mg) Special Considerations</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Naldemedine (Symproic)</td><td>Peripheral</td><td>CNMPa, OICb</td><td>PO</td><td>0.2 mg qday</td><td>Avoid with severe hepatic impairment</td></tr><tr><td>Naloxone
+(Narcan, various)
+Methylnaltrexone (Relistor)
+Naltrexone
+(ReVia, Vivitrol)
+Alvimopan
+(Entereg)
+Naloxegol
+(Movantik)</td><td>Systemic
+Peripheral
+Systemic
+Peripheral
+Peripheral</td><td>Opioid reversal
+Cancer and
+CNMPa OICb
+AUD,c
+OUDd
+Postoperative ileus
+CNMPa,
+OICb</td><td>IV, IM, IN
+SC (both), PO
+(CNMP)
+PO, IM
+PO
+PO</td><td>0.4–2 mge
+Variable
+12 mg Qday-Q12 (PO)
+380 mg q4weeks (IM)
+12 mg PO 30 min–5 hr before
+surgery then 12 mg PO BID
+starting day after surgery for
+maximum of 7 days
+12.5–25 mg qday
+1 hour before, 2 hours after
+a meal</td><td>Onset 1–2 (IV) minutes, 2–5 (IM) minutes
+Half-life 0.5–1.3 hr
+Renal dose adjustments
+Opioid free for 7–10 days before initiation
+Limited to 15 doses
+Renal dose adjustments
+Avoid with moderate 3A4 inhibitors</td></tr></table></div><h2>Pain Management | CHAPTER 56</h2>
+<h2>TABLE 56-11 Local Anestheticsa</h2>
+<p>Agent (Brand Name) Onset (min) Duration (hr)</p>
+<p>Esters</p>
+<p>Procaine (Novocain, various) 2–5 0.25–1</p>
+<p>Chloroprocaine (Nesacaine, various) 6–12 0.5</p>
+<p>Tetracaine (Pontocaine) ≤15 2–3</p>
+<p>Amides</p>
+<p>Mepivacaine (Polocaine, various) 3–5 0.75–1.5</p>
+<p>Bupivacaine (Marcaine, various) 5 2–4</p>
+<p>Bupivacaine liposomal (Exparel— variable 24 local</p>
+<p>wound infiltration only) 96 systemic</p>
+<p>Lidocaine (Xylocaine, various) &lt;2 0.5–1</p>
+<p>Prilocaine (Citanest) &lt;2 1–2</p>
+<p>Ropivacaineb (Naropin) 10–30 0.5–6</p>
+<p>aUnless otherwise indicated, values are for infiltrative anesthesia.</p>
+<p>bEpidural administration.</p>
+<h2>SPECIAL POPULATIONS</h2>
+<li>The elderly and young are at higher risk of undertreatment. In these populations, it</li>
+<p>is important to monitor signs (eg, heart rate) and to talk with parents or caregivers.</p>
+<li>Those with chronic, debilitating, and life-threatening illnesses need specialized pain</li>
+<p>control and palliative care.</p>
+<li>Pharmacologic therapy of cancer pain (see Figure 56-2) should be coupled with</li>
+<p>psychological, surgical, and supportive therapies using an interdisciplinary approach.</p>
+<p>Continuous assessment of pain response, side effects, and behavior are required.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Pain intensity, pain relief, and medication side effects must be assessed regularly. The</li>
+<p>frequency of assessment depends on the type of pain, analgesic used, route of admin-</p>
+<p>istration, and concomitant medications. Postoperative pain and acute exacerbations</p>
+<p>of cancer pain may require hourly assessment. Chronic nonmalignant pain may need</p>
+<p>only daily (or less frequent) monitoring. Quality of life must be assessed regularly.</p>
+<li>The four A’s (eg, analgesia, activity, aberrant drug behavior, and adverse effects) are</li>
+<p>key assessment measures for patients with chronic pain.</p>
+<li>Patients taking opioids should be counseled on proper intake of fluids and fiber, and a</li>
+<p>stimulant laxative should be added with chronic opioid use. Peripherally acting mu-opioid</p>
+<p>receptor antagonists (PAMORAs) are available for treating opioid-induced constipation.</p>
+<li>Concomitant use of CNS depressants should be avoided with opioid analgesics.</li>
+<p>See Chapter 77, Pain Management, authored by Chris M. Herndon, James B. Ray, and</p>
+<p>Courtney M. Kominek, for a more detailed discussion of this topic.</p>
+<p>655</p>
+<p>ch56.indd 655 19-11-2020 17:45:02</p>
+<div class="table-container"><table><tr><th>TABLE 56-11 Local Anestheticsa</th><th></th><th></th></tr><tr><td>Agent (Brand Name)</td><td>Onset (min)</td><td>Duration (hr)</td></tr><tr><td>Esters</td><td></td><td></td></tr><tr><td>Procaine (Novocain, various)</td><td>2–5</td><td>0.25–1</td></tr><tr><td>Chloroprocaine (Nesacaine, various)</td><td>6–12</td><td>0.5</td></tr><tr><td>Tetracaine (Pontocaine)</td><td>≤15</td><td>2–3</td></tr><tr><td>Amides</td><td></td><td></td></tr><tr><td>Mepivacaine (Polocaine, various)</td><td>3–5</td><td>0.75–1.5</td></tr><tr><td>Bupivacaine (Marcaine, various)</td><td>5</td><td>2–4</td></tr><tr><td>Bupivacaine liposomal (Exparel—
+wound infiltration only)</td><td>variable</td><td>24 local</td></tr><tr><td></td><td></td><td>96 systemic</td></tr><tr><td>Lidocaine (Xylocaine, various)</td><td>&lt;2</td><td>0.5–1</td></tr><tr><td>Prilocaine (Citanest)</td><td>&lt;2</td><td>1–2</td></tr><tr><td>Ropivacaineb (Naropin)</td><td>10–30</td><td>0.5–6</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43. Intra-Abdominal Infections</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>43. Intra-Abdominal Infections</h1>
+        </header>
+        <main>
+            <li>Intra-abdominal infections are those contained within the peritoneum or retroperi-</li>
+<p>toneal space. Two general types of intra-abdominal infections are discussed through-</p>
+<h2>out this chapter: peritonitis and abscess.</h2>
+<li>Peritonitis is defined as the acute, inflammatory response of peritoneal lining to</li>
+<p>microorganisms, chemicals, irradiation, or foreign body injury. It may be classified as</p>
+<p>either primary, secondary, or tertiary. With primary peritonitis, an intra-abdominal</p>
+<p>focus of disease may not be evident. In secondary peritonitis, a focal disease process</p>
+<p>is evident within the abdomen. Tertiary peritonitis occurs in critically ill patients and</p>
+<p>is infection that persists or recurs at least 48 hours after apparently adequate manage-</p>
+<p>ment of primary or secondary peritonitis.</p>
+<li>An abscess is a purulent collection of fluid separated from surrounding tissue by a</li>
+<p>wall consisting of inflammatory cells and adjacent organs. It usually contains necrotic</p>
+<p>debris, bacteria, and inflammatory cells.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Table 43-1 summarizes many of the potential causes of bacterial peritonitis. Appen-</li>
+<p>dicitis is the most common cause of intra-abdominal infection. Intra-abdominal</p>
+<p>infection results from entry of bacteria into the peritoneal or retroperitoneal spaces</p>
+<p>or from bacterial collections within intra-abdominal organs. When peritonitis</p>
+<p>results from peritoneal dialysis, skin surface flora are introduced via the peritoneal</p>
+<p>catheter.</p>
+<li>In primary peritonitis, bacteria may enter the abdomen via the bloodstream or the</li>
+<p>lymphatic system, by transmigration through the bowel wall, through an indwelling</p>
+<p>peritoneal dialysis catheter, or via the fallopian tubes in female patients.</p>
+<li>In secondary peritonitis, bacteria most often enter the peritoneum or retroperito-</li>
+<p>neum as a result of disruption of the integrity of the gastrointestinal (GI) tract caused</p>
+<p>by diseases or traumatic injuries.</p>
+<li>When bacteria become dispersed throughout the peritoneum, the inflammatory</li>
+<p>process involves the majority of the peritoneal lining. Fluid and protein shift into</p>
+<p>the abdomen (called “third spacing”) may decrease circulating blood volume and</p>
+<p>cause shock.</p>
+<li>Peritonitis often results in death because of the effects on major organ systems.</li>
+<p>Fluid shifts, cytokines, and microorganism toxins may result in hypovolemia,</p>
+<p>hypoperfusion, and shock.</p>
+<li>An abscess begins by the combined action of inflammatory cells (eg, neutrophils),</li>
+<p>bacteria, fibrin, and other inflammatory components. Within the abscess, oxygen</p>
+<p>tension is low, and anaerobic bacteria thrive.</p>
+<h2>MICROBIOLOGY</h2>
+<li>Primary bacterial peritonitis is often caused by a single organism. In children, the</li>
+<p>pathogen is usually group A Streptococcus, Escherichia coli, Streptococcus pneumoniae,</p>
+<p>or Bacteroides species. When peritonitis occurs in association with cirrhotic ascites,</p>
+<p>E. coli is isolated most frequently.</p>
+<li>Peritonitis in patients undergoing peritoneal dialysis is most often caused by com-</li>
+<p>mon skin organisms: coagulase negative staphylococci, Staphylococcus aureus, strep-</p>
+<p>tococci, and enterococci. Gram-negative bacteria associated with peritoneal dialysis</p>
+<p>infections include E. coli, Klebsiella, and Pseudomonas.</p>
+<p>447</p>
+<h2>RETPAHC</h2>
+<p>43</p>
+<p>Intra-Abdominal Infections</p>
+<h2>CH43.INDD 447 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>43</th><th>Intra-Abdominal Infections</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 43-1 Causes of Bacterial Peritonitis</h2>
+<p>Primary (spontaneous) bacterial peritonitis</p>
+<p>Cirrhosis with ascites</p>
+<p>Nephrotic syndrome</p>
+<p>Peritoneal dialysis (may be secondary to catheter site infection)</p>
+<p>Secondary bacterial peritonitis</p>
+<p>Miscellaneous causes</p>
+<p>Divertic ulitis</p>
+<p>Appendicitis</p>
+<p>Inflammatory bowel diseases</p>
+<p>Salpingitis</p>
+<p>Biliary tract infections</p>
+<p>Necrotizing pancreatitis</p>
+<p>Neoplasms</p>
+<p>Intestinal obstruction</p>
+<p>Perforation</p>
+<p>Mechanical GI problems</p>
+<p>Any cause of small bowel obstruction (adhesions, hernia)</p>
+<p>Vascular causes</p>
+<p>Mesenteric arterial or venous occlusion (atrial fibrillation)</p>
+<p>Mesenteric ischemia without occlusion</p>
+<p>Trauma</p>
+<p>Blunt abdominal trauma with rupture of intestine</p>
+<p>Penetrating abdominal trauma</p>
+<p>Iatrogenic intestinal perforation (endoscopy)</p>
+<p>Intraoperative events</p>
+<p>Solid organ transplant in the abdomen</p>
+<p>Peritoneal contamination during abdominal operation</p>
+<p>Leakage from GI anastomosis</p>
+<p>GI, gastrointestinal.</p>
+<li>Secondary intra-abdominal infections are often polymicrobial. The mean number</li>
+<p>of isolates of microorganisms from infected intra-abdominal sites has ranged</p>
+<p>from 2.9–3.7, including an average of 1.3–1.6 aerobes and 1.7–2.1 anaerobes. The</p>
+<p>frequencies with which specific bacteria were isolated in intra-abdominal infections</p>
+<h2>are given in Table 43-2.</h2>
+<li>The combination of aerobic and anaerobic organisms appears to greatly the severity</li>
+<p>of infection. In intra-abdominal infections, facultative bacteria may provide an envi-</p>
+<p>ronment conducive to the growth of anaerobic bacteria.</p>
+<li>Aerobic enteric bacteria and anaerobic bacteria are both pathogens in intra-</li>
+<p>abdominal infection. Aerobic bacteria, particularly E. coli, appear responsible for the</p>
+<p>early mortality from peritonitis, whereas anaerobic bacteria are major pathogens in</p>
+<p>abscesses, with Bacteroides fragilis predominating.</p>
+<p>448</p>
+<h2>CH43.INDD 448 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>TABLE 43-1 Causes of Bacterial Peritonitis</th></tr><tr><td>Primary (spontaneous) bacterial peritonitis
+Cirrhosis with ascites
+Nephrotic syndrome
+Peritoneal dialysis (may be secondary to catheter site infection)
+Secondary bacterial peritonitis
+Miscellaneous causes
+Divertic ulitis
+Appendicitis
+Inflammatory bowel diseases
+Salpingitis
+Biliary tract infections
+Necrotizing pancreatitis
+Neoplasms
+Intestinal obstruction
+Perforation
+Mechanical GI problems
+Any cause of small bowel obstruction (adhesions, hernia)
+Vascular causes
+Mesenteric arterial or venous occlusion (atrial fibrillation)
+Mesenteric ischemia without occlusion
+Trauma
+Blunt abdominal trauma with rupture of intestine
+Penetrating abdominal trauma
+atrogenic intestinal perforation (endoscopy)
+ntraoperative events
+Solid organ transplant in the abdomen
+Peritoneal contamination during abdominal operation
+Leakage from GI anastomosis</td></tr></table></div><h2>Intra-Abdominal Infections | CHAPTER 43</h2>
+<p>TABLE 43-2 Pathogens Isolated from Patients with Intra-Abdominal Infection</p>
+<p>Secondary Community-Acquired Nosocomial</p>
+<p>Peritonitis (%) Infection (%) Infection (%)</p>
+<p>Gram-negative bacteria</p>
+<p>Escherichia coli 32–61 29 22.5</p>
+<p>Enterobacter 8–26 5.2 8.0</p>
+<p>Klebsiella 6–26 2.8 4.5</p>
+<p>Proteus 4–23 1.7 2.4</p>
+<p>Pseudomonas 5–13 5 13</p>
+<p>Gram-positive bacteria</p>
+<p>Enterococcus 18–24 10.6 18</p>
+<p>Streptococcus 6–55 13.7 10</p>
+<p>Staphylococcus 6–16 3.1 4.8</p>
+<p>Anaerobic bacteria</p>
+<p>Bacteroides 25–80 13.7 10.3</p>
+<p>Clostridium 5–18 3.5 3.4</p>
+<p>Fungi 2–5 3 4</p>
+<li>The role of Enterococcus as a pathogen is not clear. Enterococcal infection occurs</li>
+<p>more commonly in postoperative peritonitis, in the presence of specific risk factors</p>
+<p>indicating failure of the host defenses, or with the use of broad-spectrum antibiotics.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Intra-abdominal infections have a wide spectrum of clinical features often depending</li>
+<p>on the specific disease process, the location and the magnitude of bacterial contami-</p>
+<p>nation, and concurrent host factors. Patients with primary and secondary peritonitis</p>
+<h2>present quite differently (Table 43-3).</h2>
+<li>If peritonitis continues untreated, the patient may experience hypovolemic shock</li>
+<p>from fluid loss into the peritoneum, bowel wall, and lumen. This may be accom-</p>
+<p>panied by sepsis. Intra-abdominal abscess may pose a diagnostic challenge, as the</p>
+<p>symptoms are neither specific nor dramatic.</p>
+<li>The overall outcome from intra-abdominal infection depends on five key factors:</li>
+<p>inoculum size, virulence of the organisms, the presence of adjuvants within the peri-</p>
+<p>toneal cavity that facilitate infection, the adequacy of host defenses, and the adequacy</p>
+<p>of initial treatment.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Correction of intra-abdominal disease processes or injuries</li>
+<p>that have caused infection and the drainage of collections of purulent material</p>
+<p>(eg, abscess). A secondary objective is to achieve resolution of infection without</p>
+<p>major organ system complications or adverse treatment effects.</p>
+<li>The three major modalities for the treatment of intra-abdominal infection are prompt</li>
+<p>surgical control and drainage of the infected site, hemodynamic resuscitation and</p>
+<pre><code>support of vital functions, and early administration of appropriate antimicrobial</code></pre>
+<p>therapy to treat infection not removed by surgery.</p>
+<p>449</p>
+<h2>CH43.INDD 449 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>TABLE 43-2 Pathogens Isolated from Patients with Intra-Abdominal Infection</th><th></th><th></th><th></th></tr><tr><td></td><td>Secondary
+Peritonitis (%)</td><td>Community-Acquired
+Infection (%)</td><td>Nosocomial
+Infection (%)</td></tr><tr><td>Gram-negative bacteria</td><td></td><td></td><td></td></tr><tr><td>Escherichia coli</td><td>32–61</td><td>29</td><td>22.5</td></tr><tr><td>Enterobacter</td><td>8–26</td><td>5.2</td><td>8.0</td></tr><tr><td>Klebsiella</td><td>6–26</td><td>2.8</td><td>4.5</td></tr><tr><td>Proteus</td><td>4–23</td><td>1.7</td><td>2.4</td></tr><tr><td>Pseudomonas</td><td>5–13</td><td>5</td><td>13</td></tr><tr><td>Gram-positive bacteria</td><td></td><td></td><td></td></tr><tr><td>Enterococcus</td><td>18–24</td><td>10.6</td><td>18</td></tr><tr><td>Streptococcus</td><td>6–55</td><td>13.7</td><td>10</td></tr><tr><td>Staphylococcus</td><td>6–16</td><td>3.1</td><td>4.8</td></tr><tr><td>Anaerobic bacteria</td><td></td><td></td><td></td></tr><tr><td>Bacteroides</td><td>25–80</td><td>13.7</td><td>10.3</td></tr><tr><td>Clostridium</td><td>5–18</td><td>3.5</td><td>3.4</td></tr><tr><td>Fungi</td><td>2–5</td><td>3</td><td>4</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TABLE 43-3 Clinical Presentation of Peritonitis</h2>
+<p>Primary Peritonitis</p>
+<p>General</p>
+<p>The patient may not be in acute distress, particularly with peritoneal dialysis</p>
+<p>Signs and symptoms</p>
+<p>The patient may complain of loss of appetite, bloating, nausea, vomiting (sometimes with</p>
+<p>diarrhea), and abdominal tenderness</p>
+<p>Temperature may be only mildly elevated or not elevated in patients undergoing peritoneal</p>
+<p>dialysis</p>
+<p>Bowel sounds are hypoactive</p>
+<p>The cirrhotic patient may have worsening encephalopathy</p>
+<p>Cloudy dialysate fluid with peritoneal dialysis</p>
+<p>Laboratory tests</p>
+<p>The patient’s WBC count may be only mildly elevated</p>
+<p>Ascitic fluid usually contains greater than 250 leukocytes/mm3 (0.25 × 109/L), and bacteria</p>
+<p>may be evident on gram stain of a centrifuged specimen</p>
+<p>In 60%–80% of patients with cirrhotic ascites, the gram stain is negative</p>
+<p>Other diagnostic tests</p>
+<p>Culture of peritoneal dialysate or ascitic fluid should be positive, particularly if collected prior</p>
+<p>to initiation of antibiotics</p>
+<p>Procalcitonin in conjunction with clinical findings is a sensitive test for bacterial peritonitis</p>
+<p>Secondary Peritonitis</p>
+<p>Signs and symptoms</p>
+<p>Generalized abdominal pain</p>
+<p>Tachypnea</p>
+<p>Tachycardia</p>
+<p>Nausea and vomiting</p>
+<p>Temperature is normal initially then increases to 37.8–38.9°C (100–102°F) within the first few</p>
+<p>hours and may continue to rise for the next several hours</p>
+<p>Hypotension, hypoperfusion, and shock if volume is not restored</p>
+<p>Decreased urine output due to vascular volume depletion</p>
+<p>Physical examination</p>
+<p>Voluntary abdominal guarding changing to involuntary guarding and a “board-like</p>
+<p>abdomen”</p>
+<p>Abdominal tenderness and distension</p>
+<p>Faint bowel sounds that cease over time</p>
+<p>Laboratory tests</p>
+<p>Leukocytosis (15,000–20,000 WBC/mm3 [15 × 109 to 20 × 109/L]), with neutrophils</p>
+<p>predominating and an elevated percentage of immature neutrophils (bands)</p>
+<p>Elevated hematocrit and blood urea nitrogen because of dehydration</p>
+<p>Patient progresses from early alkalosis because of hyperventilation and vomiting to</p>
+<p>metabolic acidosis</p>
+<p>Other diagnostic tests</p>
+<p>Abdominal radiographs may be useful because free air in the abdomen (indicating intestinal</p>
+<p>perforation) or distension of the small or large bowel is often evident</p>
+<p>WBC, white blood cell.</p>
+<p>450</p>
+<h2>CH43.INDD 450 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>TABLE 43-3 Clinical Presentation of Peritonitis</th></tr><tr><td>Primary Peritonitis</td></tr><tr><td>General
+The patient may not be in acute distress, particularly with peritoneal dialysis</td></tr><tr><td>Signs and symptoms
+The patient may complain of loss of appetite, bloating, nausea, vomiting (sometimes with
+diarrhea), and abdominal tenderness
+Temperature may be only mildly elevated or not elevated in patients undergoing peritoneal
+dialysis
+Bowel sounds are hypoactive
+The cirrhotic patient may have worsening encephalopathy
+Cloudy dialysate fluid with peritoneal dialysis</td></tr><tr><td>Laboratory tests
+The patient’s WBC count may be only mildly elevated
+Ascitic fluid usually contains greater than 250 leukocytes/mm3 (0.25 × 109/L), and bacteria
+may be evident on gram stain of a centrifuged specimen
+In 60%–80% of patients with cirrhotic ascites, the gram stain is negative</td></tr><tr><td>Other diagnostic tests
+Culture of peritoneal dialysate or ascitic fluid should be positive, particularly if collected prior
+to initiation of antibiotics
+Procalcitonin in conjunction with clinical findings is a sensitive test for bacterial peritonitis</td></tr><tr><td>Secondary Peritonitis</td></tr><tr><td>Signs and symptoms
+Generalized abdominal pain
+Tachypnea
+Tachycardia
+Nausea and vomiting
+Temperature is normal initially then increases to 37.8–38.9°C (100–102°F) within the first few
+hours and may continue to rise for the next several hours
+Hypotension, hypoperfusion, and shock if volume is not restored
+Decreased urine output due to vascular volume depletion</td></tr><tr><td>Physical examination
+Voluntary abdominal guarding changing to involuntary guarding and a “board-like
+abdomen”
+Abdominal tenderness and distension
+Faint bowel sounds that cease over time</td></tr><tr><td>Laboratory tests
+Leukocytosis (15,000–20,000 WBC/mm3 [15 × 109 to 20 × 109/L]), with neutrophils
+predominating and an elevated percentage of immature neutrophils (bands)
+Elevated hematocrit and blood urea nitrogen because of dehydration
+Patient progresses from early alkalosis because of hyperventilation and vomiting to
+metabolic acidosis</td></tr><tr><td>Other diagnostic tests
+Abdominal radiographs may be useful because free air in the abdomen (indicating intestinal
+perforation) or distension of the small or large bowel is often evident</td></tr></table></div><h2>Intra-Abdominal Infections | CHAPTER 43</h2>
+<li>Antimicrobials are an important adjunct to drainage procedures in the treatment of</li>
+<p>intra-abdominal infections; however, the use of antimicrobial agents without surgical</p>
+<p>source control is usually inadequate. For most cases of primary peritonitis, drainage</p>
+<p>procedures may not be required, and antimicrobial agents become the mainstay of</p>
+<p>therapy.</p>
+<li>In the early phase of serious intra-abdominal infections, attention should be</li>
+<pre><code>given to the maintenance of organ system functions. With generalized peri-</code></pre>
+<p>tonitis, large volumes of IV fluids are required to restore vascular volume, to</p>
+<pre><code>improve cardiovascular function, and to maintain adequate tissue perfusion and</code></pre>
+<p>oxygenation.</p>
+<li>An important component of therapy is nutrition. Enteral or parenteral nutrition</li>
+<pre><code>as indicated facilitates improved immune function and wound healing to ensure</code></pre>
+<p>recovery.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Secondary peritonitis is treated surgically; this is called “source control,” which refers</li>
+<p>to the physical measures undertaken to eradicate the focus of infection. Abdominal</p>
+<p>laparotomy may be used to correct the cause of peritonitis. After an abscess is located,</p>
+<p>it must be drained.</p>
+<li>Aggressive fluid repletion and management are required for the purposes of achiev-</li>
+<p>ing or maintaining proper intravascular volume to ensure adequate cardiac output,</p>
+<p>tissue perfusion, and correction of acidosis.</p>
+<li>The Surviving Sepsis Campaign recommends that resuscitation should be guided by</li>
+<p>normalization of lactate (weak recommendation, low quality of evidence). Further-</p>
+<p>more, in patients with septic shock requiring vasopressors, an initial mean arterial</p>
+<p>pressure (MAP) of 65 mm Hg should be targeted (strong recommendation, moderate</p>
+<p>quality of evidence). Urine output should equal or exceed 0.5 mL/kg of body weight</p>
+<p>per hour.</p>
+<li>In patients with sepsis hypoperfusion or septic shock, IV fluids should consist</li>
+<p>of a 30 mL/kg bolus of crystalloids with additional fluids targeting predefined</p>
+<p>therapeutic goals. Initial fluid resuscitation should be completed within 3 hours of</p>
+<p>hypoperfusion recognition. Thereafter, fluids may be required at a rate of 1 L/hr</p>
+<p>or higher. Once targeted therapeutic goals are reached, judicious use of fluids</p>
+<p>should be used as a sustained positive fluid balance after initial resuscitation may</p>
+<p>be harmful.</p>
+<li>Maintenance fluids should be instituted with 0.9% sodium chloride and potassium</li>
+<p>chloride (20 mEq/L [mmol/L]) or 5% dextrose and 0.45% sodium chloride with</p>
+<p>potassium chloride (20 mEq/L [mmol/L]). The administration rate should be based</p>
+<p>on estimated daily fluid loss through urine and nasogastric suction, including 0.5–1 L</p>
+<p>for insensible fluid loss.</p>
+<li>In patients with significant blood loss (hematocrit ≤25%), blood should be given.</li>
+<p>This is generally in the form of packed red blood cells.</p>
+<li>Enteral or parenteral nutrition facilitates improved immune function and wound</li>
+<p>healing to ensure recovery.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>The goals of antimicrobial therapy are: (a) to eliminate the intra-abdominal</li>
+<p>infection and prevent the establishment of metastatic foci of infection or bactere-</p>
+<p>mia, (b) to reduce suppurative complications (eg, abscess formation) after bacterial</p>
+<p>contamination, and (c) to prevent local spread of existing infection.</p>
+<li>An empiric antimicrobial regimen should be started as soon as the presence of intra-</li>
+<p>abdominal infection is suspected on the basis of likely pathogens. Antimicrobial</p>
+<p>therapy should be administered within 1 hour of the recognition of sepsis or septic</p>
+<p>shock (strong recommendation, moderate quality of evidence).</p>
+<p>451</p>
+<h2>CH43.INDD 451 19-11-2020 15:27:19</h2>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 43-4 Recommended Agents for the Treatment of Community-Acquired Complicated</p>
+<p>Intra-Abdominal Infections in Adults</p>
+<p>Agents Recommended for Mild-to- Agents Recommended for High</p>
+<p>Moderate Infections Severity Infections</p>
+<p>Single agent</p>
+<p>Cefoxitina Piperacillin–tazobactam</p>
+<p>Moxifloxacinb Imipenem–cilastatin,c meropenem,c doripenemc</p>
+<p>Ertapenemc</p>
+<p>Combination regimens</p>
+<p>Cefazolin,a cefuroxime,a ceftriaxone, or Cefepime, ceftazidime, ceftazidime/avibactam,d or</p>
+<p>cefotaxime each in combination with ceftolozane/tazobactame each in combination</p>
+<p>metronidazole with metronidazole</p>
+<p>Ciprofloxacinb or levofloxacinb each in Ciprofloxacinb or levofloxacinb each in</p>
+<p>combination with metronidazole combination with metronidazole</p>
+<p>aEmpiric first- and second-generation cephalosporin use should be avoided unless local antibiograms</p>
+<p>show &gt;80%–90% susceptibility of E. coli to these agents.</p>
+<p>bUse of quinolones may be associated with treatment failure due to increasing resistance of enteric</p>
+<p>pathogens including E. coli. Empiric quinolone use should be avoided unless local antibiograms</p>
+<p>show &gt;80%–90% susceptibility of E. coli to quinolones.</p>
+<p>cCarbapenems should be reserved for settings where there is a high risk of resistance to other agents</p>
+<p>(ie, extended-spectrum β-lactamase [ESBL]-producing pathogens).</p>
+<p>dCeftazidime/Avibactam should be reserved for patients infected with Enterobacteriaceae that are</p>
+<p>resistant to all other β-lactams including carbapenems, and in particular, Klebsiella pneumoniae</p>
+<p>carbapenemase (KPC)-producing pathogens.</p>
+<p>eCeftolozane/Tazobactam should be reserved for patients infected with gram-negative bacteria that</p>
+<p>are resistant to all other β-lactams. Ceftolozane/tazobactam may have activity against multidrug-</p>
+<p>resistant Pseudomonas, however susceptibility must be confirmed.</p>
+<p>Recommendations</p>
+<li>For most Intra-abdominal infections, the antimicrobial regimen should be effective</li>
+<p>against both aerobic and anaerobic bacteria. Table 43-4 presents recommended and</p>
+<p>alternative regimens for community-acquired complicated intra-abdominal infec-</p>
+<p>tions. Guidelines for initial antimicrobial treatment of specific intra-abdominal infec-</p>
+<h2>tions are presented in Table 43-5.</h2>
+<li>Evidence-based treatment principles for complicated intra-abdominal infections are</li>
+<h2>given in Table 43-6.</h2>
+<li>For established intra-abdominal infections, most patients are adequately treated with</li>
+<p>4–7 days of antimicrobial therapy.</p>
+<li>For peritonitis that occurs from chronic peritoneal dialysis the selection of a specific</li>
+<p>agent or combination should be based on culture and susceptibility data. If microbio-</p>
+<p>logic data are unavailable, empiric therapy should be initiated.</p>
+<li>Intraperitoneal administration of antibiotics is preferred over IV therapy in the</li>
+<p>treatment of peritonitis that occurs in patients undergoing continuous ambulatory</p>
+<p>peritoneal dialysis. For empiric intraperitoneal therapy, cefazolin or vancomycin in</p>
+<p>cases of high prevalence of methicillin-resistant S. aureus (MRSA) or β-lactam allergy</p>
+<p>may be used for gram-positive coverage.</p>
+<li>Antimicrobial therapy should typically be continued for 14–21 days.</li>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The patient should be continually reassessed to determine the success or failure of</li>
+<p>therapies.</p>
+<li>Once antimicrobials are initiated and other important therapies described earlier</li>
+<p>in the Treatment section are used, most patients should show improvement within</p>
+<p>452</p>
+<h2>CH43.INDD 452 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>TABLE 43-4 Recommended Agents for the Treatment of Community-Acquired Complicated
+Intra-Abdominal Infections in Adults</th><th></th></tr><tr><td>Agents Recommended for Mild-to-
+Moderate Infections</td><td>Agents Recommended for High
+Severity Infections</td></tr><tr><td>Single agent</td><td></td></tr><tr><td>Cefoxitina</td><td>Piperacillin–tazobactam</td></tr><tr><td>Moxifloxacinb</td><td>Imipenem–cilastatin,c meropenem,c doripenemc</td></tr><tr><td>Ertapenemc</td><td></td></tr><tr><td>Combination regimens</td><td></td></tr><tr><td>Cefazolin,a cefuroxime,a ceftriaxone, or
+cefotaxime each in combination with
+metronidazole</td><td>Cefepime, ceftazidime, ceftazidime/avibactam,d or
+ceftolozane/tazobactame each in combination
+with metronidazole</td></tr><tr><td>Ciprofloxacinb or levofloxacinb each in
+combination with metronidazole</td><td>Ciprofloxacinb or levofloxacinb each in
+combination with metronidazole</td></tr></table></div><h2>Intra-Abdominal Infections | CHAPTER 43</h2>
+<p>TABLE 43-5 Guidelines for Empiric Antimicrobial Agents for Intra-abdominal Infections</p>
+<p>Primary Agents Alternatives</p>
+<p>Primary (spontaneous) bacterial peritonitis</p>
+<p>Cirrhosis Ceftriaxone, cefotaxime 1. Piperacillin–tazobactam,</p>
+<p>carbapenems</p>
+<p>2. Aztreonam combined with</p>
+<p>an agent active against</p>
+<p>Streptococcus spp. (eg,</p>
+<p>vancomycin) or quinolones</p>
+<p>with significant Streptococcus</p>
+<p>spp. activity (levofloxacin,</p>
+<p>moxifloxacin)</p>
+<p>Peritoneal dialysis Initial empiric regimens should 1. Cefepime or carbapenems</p>
+<p>be active against both may be used alone</p>
+<p>gram-positive (including 2. Aztreonam or an</p>
+<p>S. aureus) and gram-negative aminoglycoside may be</p>
+<p>pathogens: gram-positive used in place of ceftazidime</p>
+<p>agent (first-generation or cefepime as long as</p>
+<p>cephalosporin or vancomycin) combined with a gram-</p>
+<p>plus a gram-negative agent positive agent</p>
+<p>(third-generation cephalosporin</p>
+<p>or aminoglycoside) 3. Quinolones may be used</p>
+<p>in place of gram-negative</p>
+<p>agents if local susceptibilities</p>
+<p>allow</p>
+<p>1. Staphylococcus spp.: oxacillin/ 1. Vancomycin should be</p>
+<p>nafcillin or first-generation used for methicillin-resistant</p>
+<p>cephalosporin Staphylococcus spp.</p>
+<p>2. May consider addition of</p>
+<p>rifampin for 5–7 days with</p>
+<p>vancomycin for methicillin-</p>
+<p>resistant S. aureus</p>
+<p>2. Streptococcus or Enterococcus: 1. Daptomycin or linezolid</p>
+<p>ampicillin should ideally be used to</p>
+<p>treat vancomycin-resistant</p>
+<p>Enterococcus spp. not</p>
+<p>susceptible to ampicillin</p>
+<p>3. Aerobic gram-negative bacilli: 1. The regimen should be</p>
+<p>ceftazidime or cefepime based on in vitro sensitivity</p>
+<p>tests</p>
+<p>4. Pseudomonas aeruginosa:</p>
+<p>two agents with differing</p>
+<p>mechanisms of action, such as</p>
+<p>an intraperitoneal ceftazidime</p>
+<p>or cefepime each combined</p>
+<p>with either tobramycin or oral</p>
+<p>ciprofloxacin</p>
+<p>Secondary bacterial peritonitis</p>
+<p>Perforated peptic ulcer First-generation cephalosporins 1. Ceftriaxone, cefotaxime,</p>
+<p>or antianaerobic</p>
+<p>cephalosporinsa</p>
+<p>(Continued )</p>
+<p>453</p>
+<h2>CH43.INDD 453 19-11-2020 15:27:19</h2>
+<div class="table-container"><table><tr><th>TABLE 43-5 Guidelines for Empiric Antimicrobial Agents for Intra-abdominal Infections</th><th></th><th></th></tr><tr><td></td><td>Primary Agents</td><td>Alternatives</td></tr><tr><td>Primary (spontaneous) bacterial peritonitis</td><td></td><td></td></tr><tr><td>Cirrhosis</td><td>Ceftriaxone, cefotaxime</td><td>1. Piperacillin–tazobactam,
+carbapenems
+2. Aztreonam combined with
+an agent active against
+Streptococcus spp. (eg,
+vancomycin) or quinolones
+with significant Streptococcus
+spp. activity (levofloxacin,
+moxifloxacin)</td></tr><tr><td>Peritoneal dialysis</td><td>Initial empiric regimens should
+be active against both
+gram-positive (including
+S. aureus) and gram-negative
+pathogens: gram-positive
+agent (first-generation
+cephalosporin or vancomycin)
+plus a gram-negative agent
+(third-generation cephalosporin
+or aminoglycoside)</td><td>1. Cefepime or carbapenems
+may be used alone
+2. Aztreonam or an
+aminoglycoside may be
+used in place of ceftazidime
+or cefepime as long as
+combined with a gram-
+positive agent
+3. Quinolones may be used
+in place of gram-negative
+agents if local susceptibilities
+allow</td></tr><tr><td></td><td>1. Staphylococcus spp.: oxacillin/
+nafcillin or first-generation
+cephalosporin</td><td>1. Vancomycin should be
+used for methicillin-resistant
+Staphylococcus spp.
+2. May consider addition of
+rifampin for 5–7 days with
+vancomycin for methicillin-
+resistant S. aureus</td></tr><tr><td></td><td>2. Streptococcus or Enterococcus:
+ampicillin</td><td>1. Daptomycin or linezolid
+should ideally be used to
+treat vancomycin-resistant
+Enterococcus spp. not
+susceptible to ampicillin</td></tr><tr><td></td><td>3. Aerobic gram-negative bacilli:
+ceftazidime or cefepime</td><td>1. The regimen should be
+based on in vitro sensitivity
+tests</td></tr><tr><td></td><td>4. Pseudomonas aeruginosa:
+two agents with differing
+mechanisms of action, such as
+an intraperitoneal ceftazidime
+or cefepime each combined
+with either tobramycin or oral
+ciprofloxacin</td><td></td></tr><tr><td>Secondary bacterial peritonitis</td><td></td><td></td></tr><tr><td>Perforated peptic ulcer</td><td>First-generation cephalosporins</td><td>1. Ceftriaxone, cefotaxime,
+or antianaerobic
+cephalosporinsa
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 43-5 Guidelines for Empiric Antimicrobial Agents for Intra-abdominal Infections(Continued )</p>
+<p>Primary Agents Alternatives</p>
+<p>Other Third- or fourth-generation 1. Ciprofloxacinb or levofloxacinb</p>
+<p>cephalosporin with each with metronidazole or</p>
+<p>metronidazole, piperacillin– moxifloxacinb alone</p>
+<p>tazobactam or carbapenem 2. Aztreonam with vancomycin</p>
+<p>and metronidazole</p>
+<p>3. Antianaerobic</p>
+<p>cephalosporinsa</p>
+<p>Abscess</p>
+<p>General Third- or fourth-generation 1. Imipenem–cilastatin,</p>
+<p>cephalosporin with meropenem, doripenem, or</p>
+<p>metronidazole or piperacillin– ertapenem</p>
+<p>tazobactam 2. Ciprofloxacinb or levofloxacinb</p>
+<p>each with metronidazole or</p>
+<p>moxifloxacin alone</p>
+<p>Liver As above Use metronidazole if amoebic</p>
+<p>liver abscess is suspected</p>
+<p>Spleen Ceftriaxone or cefotaxime Moxifloxacinb or levofloxacinb</p>
+<p>Other intra-abdominal</p>
+<p>infections</p>
+<p>Appendicitis Same management as for</p>
+<p>community-acquired</p>
+<p>complicated intra-abdominal</p>
+<h2>infections as listed in Table 43-4</h2>
+<p>Community-acquired Ceftriaxone or cefotaxime Severe infection, piperacillin/</p>
+<p>acute cholecystitis tazobactam, antipseudomonal</p>
+<p>carbapenem, aztreonam with</p>
+<p>metronidazole</p>
+<p>Cholangitis Ceftriaxone or cefotaxime Vancomycin with aztreonam</p>
+<p>each with or without with or without</p>
+<p>metronidazole metronidazole</p>
+<p>Acute contamination Antianaerobic cephalosporinsa 1. Piperacillin/tazobactam or a</p>
+<p>from abdominal or metronidazole with either carbapenem</p>
+<p>trauma ceftriaxone or cefotaxime 2. Ciprofloxacinb or levofloxacinb</p>
+<p>each with metronidazole or</p>
+<p>moxifloxacin alone</p>
+<p>aCefoxitin or ceftizoxime; these agents should be avoided empirically unless local antibiograms show</p>
+<p>&gt;80%–90% susceptibility of E. coli to these agents.</p>
+<p>bUse of quinolones may be associated with treatment failure due to increasing resistance of enteric</p>
+<p>pathogens including E. coli. Empiric quinolone use should be avoided unless local antibiograms</p>
+<p>show &gt;80%–90% susceptibility of E. coli to quinolones.</p>
+<p>2–3 days. Usually, temperature will return to near normal, vital signs should stabilize,</p>
+<p>and the patient should not appear in distress, with the exception of recognized dis-</p>
+<p>comfort and pain from incisions, drains, and nasogastric tube.</p>
+<li>Within 24–48 hours, aerobic bacterial culture results should return. If a suspected</li>
+<p>pathogen is not sensitive to the antimicrobial agents being given, the regimen should</p>
+<p>typically be changed to active therapy. If the isolated pathogen is susceptible to a</p>
+<p>narrower spectrum agent, therapy should be deescalated.</p>
+<li>With present anaerobic culturing techniques and the slow growth of these organ-</li>
+<p>isms, anaerobes are often not identified until 4–7 days after culture, and sensitivity</p>
+<p>information is difficult to obtain. A report indicating that anaerobes were not isolated</p>
+<p>should not be the sole justification for discontinuing antianaerobic drugs.</p>
+<p>454</p>
+<h2>CH43.INDD 454 19-11-2020 15:27:20</h2>
+<div class="table-container"><table><tr><th>TABLE 43-5 Guidelines for Empiric Antimicrobial Agents for Intra-abdominal Infections(Continued )</th><th></th><th></th></tr><tr><td></td><td>Primary Agents</td><td>Alternatives</td></tr><tr><td>Other</td><td>Third- or fourth-generation
+cephalosporin with
+metronidazole, piperacillin–
+tazobactam or carbapenem</td><td>1. Ciprofloxacinb or levofloxacinb
+each with metronidazole or
+moxifloxacinb alone
+2. Aztreonam with vancomycin
+and metronidazole
+3. Antianaerobic
+cephalosporinsa</td></tr><tr><td>Abscess</td><td></td><td></td></tr><tr><td>General</td><td>Third- or fourth-generation
+cephalosporin with
+metronidazole or piperacillin–
+tazobactam</td><td>1. Imipenem–cilastatin,
+meropenem, doripenem, or
+ertapenem
+2. Ciprofloxacinb or levofloxacinb
+each with metronidazole or
+moxifloxacin alone</td></tr><tr><td>Liver</td><td>As above</td><td>Use metronidazole if amoebic
+liver abscess is suspected</td></tr><tr><td>Spleen</td><td>Ceftriaxone or cefotaxime</td><td>Moxifloxacinb or levofloxacinb</td></tr><tr><td>Other intra-abdominal
+infections</td><td></td><td></td></tr><tr><td>Appendicitis</td><td>Same management as for
+community-acquired
+complicated intra-abdominal
+infections as listed in Table 43-4</td><td></td></tr><tr><td>Community-acquired
+acute cholecystitis</td><td>Ceftriaxone or cefotaxime</td><td>Severe infection, piperacillin/
+tazobactam, antipseudomonal
+carbapenem, aztreonam with
+metronidazole</td></tr><tr><td>Cholangitis</td><td>Ceftriaxone or cefotaxime
+each with or without
+metronidazole</td><td>Vancomycin with aztreonam
+with or without
+metronidazole</td></tr><tr><td>Acute contamination
+from abdominal
+trauma</td><td>Antianaerobic cephalosporinsa
+or metronidazole with either
+ceftriaxone or cefotaxime</td><td>1. Piperacillin/tazobactam or a
+carbapenem
+2. Ciprofloxacinb or levofloxacinb
+each with metronidazole or
+moxifloxacin alone</td></tr></table></div><h2>Intra-Abdominal Infections | CHAPTER 43</h2>
+<p>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated</p>
+<p>Intra-Abdominal Infections</p>
+<p>Grade of</p>
+<p>Recommendationa</p>
+<p>Elements of appropriate intervention</p>
+<p>An appropriate source control procedure to drain infected foci, control B-2</p>
+<p>ongoing peritoneal contamination by diversion or resection, and</p>
+<pre><code>restore anatomic and physiological function to the extent feasible is</code></pre>
+<p>recommended for nearly all patients with intra-abdominal infection</p>
+<p>Community-acquired infections of mild-to-moderate severity in adults</p>
+<p>Antibiotics used for empiric treatment of community-acquired A-1</p>
+<p>intra-abdominal infections should be active against enteric</p>
+<p>gram-negative aerobic and facultative bacilli and enteric</p>
+<p>gram-positive streptococci</p>
+<p>For patients with mild-to-moderate community-acquired A-1</p>
+<p>infections, regimens with substantial anti-pseudomonal</p>
+<h2>activity are not required (Table 43-4)</h2>
+<p>Empiric coverage of Enterococcus is not necessary in patients A-1</p>
+<p>with mild-to-moderate community-acquired intra-abdominal</p>
+<p>infection</p>
+<p>The use of agents listed as appropriate for high-severity B-2</p>
+<p>community-acquired infection and healthcare-associated</p>
+<p>infection is not recommended for patients with mild-to-</p>
+<p>moderate community-acquired infection, because such</p>
+<p>regimens may carry a greater risk of toxicity and facilitate</p>
+<p>acquisition of more resistant organisms</p>
+<p>High-severity community-acquired infections in adultsb</p>
+<p>The empiric use of antimicrobial regimens with broad-spectrum A-1</p>
+<p>activity against gram-negative organisms including</p>
+<p>Pseudomonas spp., such as meropenem, imipenem–</p>
+<p>cilastatin, doripenem, piperacillin–tazobactam, ciprofloxacin</p>
+<p>or levofloxacin in combination with metronidazole, or</p>
+<p>ceftazidime or cefepime in combination with metronidazole,</p>
+<p>is recommended for patients with high-severity community-</p>
+<h2>acquired intra-abdominal infection (Table 43-4)</h2>
+<p>Aztreonam plus metronidazole is an alternative, but addition of an B-3</p>
+<p>agent effective against gram-positive cocci is recommended</p>
+<p>Healthcare-associated infections in adultsc</p>
+<p>Empiric antibiotic therapy for healthcare-associated A-2</p>
+<p>intra-abdominal infection should be driven by local</p>
+<p>microbiologic results</p>
+<p>To achieve empiric coverage of likely pathogens, multidrug B-3</p>
+<p>regimens that include agents with expanded spectra of</p>
+<p>activity against gram-negative aerobic and facultative</p>
+<p>bacilli may be needed. These agents include meropenem,</p>
+<p>imipenem–cilastatin, doripenem, piperacillin–tazobactam, or</p>
+<p>metronidazole combined with either cefepime or ceftazidime.</p>
+<p>For multidrug-resistant aerobic gram-negative pathogens,</p>
+<p>aminoglycosides, colistin, polymyxin B, ceftazidime/avibactam,</p>
+<p>or ceftolozane/tazobactam may be required</p>
+<p>(Continued )</p>
+<p>455</p>
+<h2>CH43.INDD 455 19-11-2020 15:27:20</h2>
+<div class="table-container"><table><tr><th>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated
+Intra-Abdominal Infections</th><th></th></tr><tr><td></td><td>Grade of
+Recommendationa</td></tr><tr><td>Elements of appropriate intervention</td><td></td></tr><tr><td>An appropriate source control procedure to drain infected foci, control
+ongoing peritoneal contamination by diversion or resection, and
+restore anatomic and physiological function to the extent feasible is
+recommended for nearly all patients with intra-abdominal infection</td><td>B-2</td></tr><tr><td>Community-acquired infections of mild-to-moderate severity in adults</td><td></td></tr><tr><td>Antibiotics used for empiric treatment of community-acquired
+intra-abdominal infections should be active against enteric
+gram-negative aerobic and facultative bacilli and enteric
+gram-positive streptococci</td><td>A-1</td></tr><tr><td>For patients with mild-to-moderate community-acquired
+infections, regimens with substantial anti-pseudomonal
+activity are not required (Table 43-4)</td><td>A-1</td></tr><tr><td>Empiric coverage of Enterococcus is not necessary in patients
+with mild-to-moderate community-acquired intra-abdominal
+infection</td><td>A-1</td></tr><tr><td>The use of agents listed as appropriate for high-severity
+community-acquired infection and healthcare-associated
+infection is not recommended for patients with mild-to-
+moderate community-acquired infection, because such
+regimens may carry a greater risk of toxicity and facilitate
+acquisition of more resistant organisms</td><td>B-2</td></tr><tr><td>High-severity community-acquired infections in adultsb</td><td></td></tr><tr><td>The empiric use of antimicrobial regimens with broad-spectrum
+activity against gram-negative organisms including
+Pseudomonas spp., such as meropenem, imipenem–
+cilastatin, doripenem, piperacillin–tazobactam, ciprofloxacin
+or levofloxacin in combination with metronidazole, or
+ceftazidime or cefepime in combination with metronidazole,
+is recommended for patients with high-severity community-
+acquired intra-abdominal infection (Table 43-4)</td><td>A-1</td></tr><tr><td>Aztreonam plus metronidazole is an alternative, but addition of an
+agent effective against gram-positive cocci is recommended</td><td>B-3</td></tr><tr><td>Healthcare-associated infections in adultsc</td><td></td></tr><tr><td>Empiric antibiotic therapy for healthcare-associated
+intra-abdominal infection should be driven by local
+microbiologic results</td><td>A-2</td></tr><tr><td>To achieve empiric coverage of likely pathogens, multidrug
+regimens that include agents with expanded spectra of
+activity against gram-negative aerobic and facultative
+bacilli may be needed. These agents include meropenem,
+imipenem–cilastatin, doripenem, piperacillin–tazobactam, or
+metronidazole combined with either cefepime or ceftazidime.
+For multidrug-resistant aerobic gram-negative pathogens,
+aminoglycosides, colistin, polymyxin B, ceftazidime/avibactam,
+or ceftolozane/tazobactam may be required</td><td>B-3
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated</p>
+<p>Intra-Abdominal Infections(Continued )</p>
+<p>Grade of</p>
+<p>Recommendationa</p>
+<p>Antimicrobial agents not recommended</p>
+<p>Ampicillin–sulbactam is not recommended for use because of high B-2</p>
+<p>rates of resistance to this agent among community-acquired E. coli</p>
+<p>Quinolone-resistant E. coli have become common in some A-2</p>
+<p>communities, and quinolones should not be used unless hospital</p>
+<p>surveys indicate 90% susceptibility of E. coli to quinolones</p>
+<p>Cefotetan and clindamycin are not recommended for use because B-2</p>
+<p>of increasing prevalence of resistance to these agents among</p>
+<p>Bacteroides fragilis</p>
+<p>Because of the availability of less toxic agents demonstrated B-2</p>
+<p>to be at least equally effective, aminoglycosides are not</p>
+<p>recommended for routine use in adults with community-</p>
+<p>acquired intra-abdominal infection</p>
+<p>Oral completion therapy</p>
+<p>For adults recovering from intra-abdominal infection, completion of the B-2</p>
+<p>antimicrobial course with oral forms of moxifloxacin, ciprofloxacin</p>
+<p>plus metronidazole, levofloxacin plus metronidazole, an oral</p>
+<p>cephalosporin with metronidazole, or amoxicillin–clavulanic acid is</p>
+<p>acceptable in patients able to tolerate an oral diet and in patients in</p>
+<p>whom susceptibility studies do not demonstrate resistance</p>
+<p>Duration of therapy</p>
+<p>Antimicrobial therapy of established infection should be limited to A-1</p>
+<p>4 days, unless it is difficult to achieve adequate source control.</p>
+<p>Longer durations of therapy have not been associated with</p>
+<p>improved outcome</p>
+<p>For acute stomach and proximal jejunum perforations, in the absence B-2</p>
+<p>of acid-reducing therapy or malignancy and when source control</p>
+<p>is achieved within 24 hours, prophylactic anti-infective therapy</p>
+<p>directed at aerobic gram-positive cocci for 24 hours is adequate</p>
+<p>Bowel injuries attributable to penetrating, blunt, or iatrogenic A-1</p>
+<p>trauma that are repaired within 12 hours and any other</p>
+<p>intraoperative contamination of the operative field by enteric</p>
+<p>contents should be treated with antibiotics for ≤24 hours</p>
+<p>Acute appendicitis without evidence of perforation, abscess, A-1</p>
+<p>or local peritonitis requires only prophylactic administration</p>
+<p>of narrow spectrum regimens active against aerobic and</p>
+<p>facultative and obligate anaerobes; treatment should be</p>
+<p>discontinued within 24 hours</p>
+<p>The administration of prophylactic antibiotics to patients with A-1</p>
+<p>severe necrotizing pancreatitis prior to the diagnosis of</p>
+<p>infection is not recommended</p>
+<p>Anaerobic coverage</p>
+<p>Coverage for obligate anaerobic bacilli should be provided for A-1</p>
+<p>distal small bowel, appendiceal, and colon-derived infection</p>
+<p>and for more proximal GI perforations in the presence of</p>
+<p>obstruction or paralytic ileus</p>
+<p>(Continued )</p>
+<p>456</p>
+<h2>CH43.INDD 456 19-11-2020 15:27:20</h2>
+<div class="table-container"><table><tr><th>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated
+Intra-Abdominal Infections(Continued )</th><th></th></tr><tr><td></td><td>Grade of
+Recommendationa</td></tr><tr><td>Antimicrobial agents not recommended</td><td></td></tr><tr><td>Ampicillin–sulbactam is not recommended for use because of high
+rates of resistance to this agent among community-acquired E. coli</td><td>B-2</td></tr><tr><td>Quinolone-resistant E. coli have become common in some
+communities, and quinolones should not be used unless hospital
+surveys indicate 90% susceptibility of E. coli to quinolones</td><td>A-2</td></tr><tr><td>Cefotetan and clindamycin are not recommended for use because
+of increasing prevalence of resistance to these agents among
+Bacteroides fragilis</td><td>B-2</td></tr><tr><td>Because of the availability of less toxic agents demonstrated
+to be at least equally effective, aminoglycosides are not
+recommended for routine use in adults with community-
+acquired intra-abdominal infection</td><td>B-2</td></tr><tr><td>Oral completion therapy</td><td></td></tr><tr><td>For adults recovering from intra-abdominal infection, completion of the
+antimicrobial course with oral forms of moxifloxacin, ciprofloxacin
+plus metronidazole, levofloxacin plus metronidazole, an oral
+cephalosporin with metronidazole, or amoxicillin–clavulanic acid is
+acceptable in patients able to tolerate an oral diet and in patients in
+whom susceptibility studies do not demonstrate resistance</td><td>B-2</td></tr><tr><td>Duration of therapy</td><td></td></tr><tr><td>Antimicrobial therapy of established infection should be limited to
+4 days, unless it is difficult to achieve adequate source control.
+Longer durations of therapy have not been associated with
+improved outcome</td><td>A-1</td></tr><tr><td>For acute stomach and proximal jejunum perforations, in the absence
+of acid-reducing therapy or malignancy and when source control
+is achieved within 24 hours, prophylactic anti-infective therapy
+directed at aerobic gram-positive cocci for 24 hours is adequate</td><td>B-2</td></tr><tr><td>Bowel injuries attributable to penetrating, blunt, or iatrogenic
+trauma that are repaired within 12 hours and any other
+intraoperative contamination of the operative field by enteric
+contents should be treated with antibiotics for ≤24 hours</td><td>A-1</td></tr><tr><td>Acute appendicitis without evidence of perforation, abscess,
+or local peritonitis requires only prophylactic administration
+of narrow spectrum regimens active against aerobic and
+facultative and obligate anaerobes; treatment should be
+discontinued within 24 hours</td><td>A-1</td></tr><tr><td>The administration of prophylactic antibiotics to patients with
+severe necrotizing pancreatitis prior to the diagnosis of
+infection is not recommended</td><td>A-1</td></tr><tr><td>Anaerobic coverage</td><td></td></tr><tr><td>Coverage for obligate anaerobic bacilli should be provided for
+distal small bowel, appendiceal, and colon-derived infection
+and for more proximal GI perforations in the presence of
+obstruction or paralytic ileus</td><td>A-1
+(Continued )</td></tr></table></div><h2>Intra-Abdominal Infections | CHAPTER 43</h2>
+<p>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated</p>
+<p>Intra-Abdominal Infections(Continued )</p>
+<p>Grade of</p>
+<p>Recommendationa</p>
+<p>Antifungal therapy</p>
+<p>Antifungal therapy for patients with high-severity community- B-2</p>
+<p>acquired or healthcare-associated infection is recommended if</p>
+<p>Candida is grown from intra-abdominal cultures</p>
+<p>Anti-MRSA therapy</p>
+<p>Empiric antimicrobial coverage directed against MRSA should be B-2</p>
+<p>provided to patients with healthcare-associated intra-abdominal</p>
+<p>infection who are known to be colonized with the organism or</p>
+<p>who are at risk of having an infection due to this organism because</p>
+<p>of prior treatment failure and significant antibiotic exposure</p>
+<p>Vancomycin is recommended for treatment of suspected or A-3</p>
+<p>proven intra-abdominal infection due to MRSA</p>
+<p>Antienterococcal therapy</p>
+<p>Antimicrobial therapy for enterococci should be given when B-III</p>
+<p>enterococci are recovered from patients with high-severity</p>
+<p>community-acquired or healthcare-associated infection</p>
+<p>Empiric antienterococcal therapy is recommended for patients with B-II</p>
+<p>high-severity community-acquired infections and healthcare-</p>
+<p>associated intra-abdominal infections, particularly those with</p>
+<p>postoperative infection, those who have previously received</p>
+<p>cephalosporins or other antimicrobial agents selected for</p>
+<p>Enterococcus species, immunocompromised patients, and those</p>
+<p>with valvular heart disease or prosthetic intravascular materials</p>
+<p>Initial empiric antienterococcal therapy should be directed B-III</p>
+<p>against Enterococcus faecalis. Antibiotics that can potentially</p>
+<p>be used against this organism, on the basis of susceptibility</p>
+<p>testing of the individual isolate, include ampicillin, piperacillin/</p>
+<p>tazobactam, and vancomycin</p>
+<p>Empiric therapy directed against vancomycin-resistant B-III</p>
+<p>Enterococcus faecium is not recommended unless the patient</p>
+<p>is at very high risk for an infection due to this organism, such</p>
+<p>as a liver transplant recipient with an intra-abdominal infection</p>
+<p>originating in the hepatobiliary tree or a patient known to be</p>
+<p>colonized with vancomycin-resistant E. faecium</p>
+<p>aStrength of recommendations: A, B, C, good, moderate, and poor evidence to support</p>
+<p>recommendation, respectively. Quality of evidence: 1, evidence from ≥1 properly randomized,</p>
+<p>controlled trial; 2, evidence from ≥1 well-designed clinical trial without randomization, from</p>
+<p>cohort or case-controlled analytic studies, from multiple time series, or from dramatic results from</p>
+<p>uncontrolled experiments; 3, evidence from opinions of respected authorities, based on clinical</p>
+<p>experience, descriptive studies, or reports of expert communities.</p>
+<p>bCriteria for high-severity community-acquired infection: sepsis or septic shock, APACHE II score ≥15,</p>
+<pre><code>delay in initial intervention &gt;24 hours, advanced age, comorbidity and degree of organ dysfunction,</code></pre>
+<p>low albumin level, poor nutritional status, degree of peritoneal involvement or diffuse peritonitis,</p>
+<p>inability to achieve adequate debridement or control of drainage, and presence of malignancy.</p>
+<p>cCriteria for classification of intra-abdominal infections as healthcare-associated infection varies.</p>
+<p>However, patients who develop an infection after surgery, reside in a long-term care facility, who</p>
+<p>were recently hospitalized, or who have other significant healthcare exposure can be considered</p>
+<p>to have a healthcare-associated intra-abdominal infection.</p>
+<p>MRSA, methicillin-resistant Staphylococcus aureus.</p>
+<p>457</p>
+<h2>CH43.INDD 457 19-11-2020 15:27:20</h2>
+<div class="table-container"><table><tr><th>TABLE 43-6 Evidence-Based Recommendations for Treatment of Complicated
+Intra-Abdominal Infections(Continued )</th><th></th></tr><tr><td></td><td>Grade of
+Recommendationa</td></tr><tr><td>Antifungal therapy</td><td></td></tr><tr><td>Antifungal therapy for patients with high-severity community-
+acquired or healthcare-associated infection is recommended if
+Candida is grown from intra-abdominal cultures</td><td>B-2</td></tr><tr><td>Anti-MRSA therapy</td><td></td></tr><tr><td>Empiric antimicrobial coverage directed against MRSA should be
+provided to patients with healthcare-associated intra-abdominal
+infection who are known to be colonized with the organism or
+who are at risk of having an infection due to this organism because
+of prior treatment failure and significant antibiotic exposure</td><td>B-2</td></tr><tr><td>Vancomycin is recommended for treatment of suspected or
+proven intra-abdominal infection due to MRSA</td><td>A-3</td></tr><tr><td>Antienterococcal therapy</td><td></td></tr><tr><td>Antimicrobial therapy for enterococci should be given when
+enterococci are recovered from patients with high-severity
+community-acquired or healthcare-associated infection</td><td>B-III</td></tr><tr><td>Empiric antienterococcal therapy is recommended for patients with
+high-severity community-acquired infections and healthcare-
+associated intra-abdominal infections, particularly those with
+postoperative infection, those who have previously received
+cephalosporins or other antimicrobial agents selected for
+Enterococcus species, immunocompromised patients, and those
+with valvular heart disease or prosthetic intravascular materials</td><td>B-II</td></tr><tr><td>Initial empiric antienterococcal therapy should be directed
+against Enterococcus faecalis. Antibiotics that can potentially
+be used against this organism, on the basis of susceptibility
+testing of the individual isolate, include ampicillin, piperacillin/
+tazobactam, and vancomycin</td><td>B-III</td></tr><tr><td>Empiric therapy directed against vancomycin-resistant
+Enterococcus faecium is not recommended unless the patient
+is at very high risk for an infection due to this organism, such
+as a liver transplant recipient with an intra-abdominal infection
+originating in the hepatobiliary tree or a patient known to be
+colonized with vancomycin-resistant E. faecium</td><td>B-III</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>Superinfection in patients being treated for intra-abdominal infection is often due</li>
+<p>to Candida; however, enterococci or opportunistic gram-negative bacilli such as</p>
+<p>Pseudomonas may be involved.</p>
+<li>Treatment regimens for intra-abdominal infection can be judged successful if the</li>
+<p>patient recovers from the infection without recurrent peritonitis or intra-abdominal</p>
+<p>abscess and without the need for additional antimicrobials. A regimen can be con-</p>
+<p>sidered unsuccessful if a significant adverse drug reaction occurs, if reoperation is</p>
+<p>necessary, or if patient improvement is delayed beyond 1 or 2 weeks.</p>
+<p>See Chapter 132, Intra-abdominal Infections, authored by Alan E. Gross and Keith M.</p>
+<p>Olsen, for a more detailed discussion of this topic.</p>
+<p>458</p>
+<h2>CH43.INDD 458 19-11-2020 15:27:20</h2>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

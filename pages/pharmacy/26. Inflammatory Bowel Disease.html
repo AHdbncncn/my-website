@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26. Inflammatory Bowel Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>26. Inflammatory Bowel Disease</h1>
+        </header>
+        <main>
+            <li>There are two forms of idiopathic inflammatory bowel disease (IBD): ulcerative colitis</li>
+<p>(UC), a mucosal inflammatory condition confined to the rectum and colon, and</p>
+<p>Crohn disease (CD), a transmural inflammation of gastrointestinal (GI) mucosa that</p>
+<p>may occur in any part of the GI tract. The etiologies of both conditions are unknown,</p>
+<p>but they may have a common pathogenic mechanism.</p>
+<h2>ETIOLOGY AND PATHOPHYSIOLOGY</h2>
+<li>Factors that cause IBD include infectious agents, genetics, the environment, and</li>
+<p>the immune system. This may involve abnormal regulation of the innate immune</p>
+<p>response or a reaction to various antigens. The microflora of the GI tract may pro-</p>
+<p>vide an environmental trigger to activate inflammation in genetically susceptible</p>
+<p>individuals and is highly implicated in the development of IBD.</p>
+<li>Suspect infectious agents include viruses, protozoans, mycobacteria such as Myco-</li>
+<p>bacterium paratuberculosis or avium, and other bacteria such as Ruminococcus</p>
+<p>gnavus, Ruminococcus torques, Listeria monocytogenes, Chlamydia trachomatis, and</p>
+<p>Escherichia coli.</p>
+<li>Th1 cytokine activity is excessive in CD, and increased expression of interferon-γ in the</li>
+<p>intestinal mucosa and production of IL-12 are features of the immune response in CD.</p>
+<p>In contrast, Th2 cytokine activity is excessive with UC (with excess production of</p>
+<p>IL-13). Tumor necrosis factor-α (TNF-α) is a pivotal proinflammatory cytokine that</p>
+<p>is increased in the mucosa and intestinal lumen of patients with CD and UC.</p>
+<li>Antineutrophil cytoplasmic antibodies are found in a high percentage of patients</li>
+<p>with UC and less frequently with CD.</p>
+<li>Smoking appears to be protective for UC but associated with increased frequency</li>
+<p>of CD. Use of nonsteroidal anti-inflammatory drugs (NSAIDs) may trigger disease</p>
+<p>occurrence or lead to disease flares.</p>
+<li>UC and CD differ in two general respects: anatomical sites and depth of involvement</li>
+<p>within the bowel wall. There is, however, overlap between the two conditions, with a</p>
+<p>small fraction of patients showing features of both diseases (Table 26-1).</p>
+<h2>ULCERATIVE COLITIS</h2>
+<li>UC is confined to the colon and rectum and affects primarily the mucosa and</li>
+<p>the submucosa. The primary lesion occurs in the crypts of the mucosa (crypts of</p>
+<p>Lieberkühn) in the form of a crypt abscess.</p>
+<li>Local complications (involving the colon) occur in the majority of patients with UC.</li>
+<p>Relatively minor complications include hemorrhoids, anal fissures, and perirectal</p>
+<p>abscesses.</p>
+<li>A major complication is toxic megacolon, a severe condition that occurs in up to</li>
+<p>7.9% of UC patients admitted to hospitals. Patients with toxic megacolon usually</p>
+<p>have a high fever, tachycardia, distended abdomen, elevated white blood cell count,</p>
+<p>and a dilated colon.</p>
+<li>The risk of colonic carcinoma is much greater in patients with UC than in the general</li>
+<p>population.</p>
+<li>Patients with UC may have hepatobiliary complications, including fatty liver, peri-</li>
+<p>cholangitis, chronic active hepatitis, cirrhosis, sclerosing cholangitis, cholangiocar-</p>
+<p>cinoma, and gallstones.</p>
+<li>Arthritis commonly occurs in patients with IBD and is typically asymptomatic and</li>
+<p>migratory. Arthritis typically involves one or a few large joints, such as the knees,</p>
+<p>hips, ankles, wrists, and elbows.</p>
+<li>Ocular complications (iritis, episcleritis, and conjunctivitis) occur in some patients.</li>
+<p>Skin and mucosal lesions associated with IBD include erythema nodosum, pyoderma</p>
+<p>gangrenosum, aphthous ulceration, and Sweet syndrome.</p>
+<p>269</p>
+<h2>RETPAHC</h2>
+<p>26</p>
+<p>Inflammatory Bowel Disease</p>
+<p>ch26.indd 269 19-11-2020 12:44:10</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>26</th></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 26-1 Comparison of the Clinical and Pathologic Features of Crohn Disease and</p>
+<p>Ulcerative Colitis</p>
+<p>Feature Crohn Disease Ulcerative Colitis</p>
+<p>Clinical</p>
+<p>Malaise, fever Common Uncommon</p>
+<p>Rectal bleeding Common Common</p>
+<p>Abdominal tenderness Common May be present</p>
+<p>Abdominal mass Common Absent</p>
+<p>Abdominal pain Common Unusual</p>
+<p>Abdominal wall and internal fistulas Common Absent</p>
+<p>Distribution Discontinuous Continuous</p>
+<p>Aphthous or linear ulcers Common Rare</p>
+<p>Pathologic</p>
+<p>Rectal involvement Rare Common</p>
+<p>Ileal involvement Very common Rare</p>
+<p>Strictures Common Rare</p>
+<p>Fistulas Common Rare</p>
+<p>Transmural involvement Common Rare</p>
+<p>Crypt abscesses Rare Very common</p>
+<p>Granulomas Common Rare</p>
+<p>Linear clefts Common Rare</p>
+<p>Cobblestone appearance Common Absent</p>
+<h2>CROHN DISEASE</h2>
+<li>CD is a transmural inflammatory process. The terminal ileum is the most common</li>
+<p>site, but it may occur in any part of the GI tract. Most patients have some colonic</p>
+<p>involvement. Patients often have normal bowel separating segments of diseased</p>
+<p>bowel; that is, the disease is often discontinuous.</p>
+<li>Complications of CD may involve the intestinal tract or organs unrelated to it. Small</li>
+<p>bowel stricture with subsequent obstruction is a complication that may require sur-</p>
+<p>gery. Fistula formation is common and occurs much more frequently than with UC.</p>
+<li>Systemic complications of CD are common and similar to those found with UC.</li>
+<p>Arthritis, iritis, skin lesions, and liver disease often accompany CD.</p>
+<li>Nutritional deficiencies are common with CD (including deficiencies of folate,</li>
+<p>vitamin B , vitamins A to D, calcium, magnesium, iron, and zinc).</p>
+<p>12</p>
+<h2>CLINICAL PRESENTATION</h2>
+<h2>ULCERATIVE COLITIS</h2>
+<li>There is a wide range of presenting symptoms in UC, from mild a bdominal cramping</li>
+<p>with frequent small-volume bowel movements to profuse diarrhea (Table 26-2).</p>
+<p>Many patients have disease confined to the rectum (proctitis).</p>
+<li>Most patients with UC experience intermittent bouts of illness after varying intervals</li>
+<p>of no symptoms.</p>
+<li>Mild disease, which afflicts two-thirds of patients, has been defined as fewer than</li>
+<p>four stools daily, with or without blood, with no systemic disturbance and a normal</p>
+<p>erythrocyte sedimentation rate (ESR &lt;30 mm/hr).</p>
+<li>Patients with moderate disease have more than four stools per day but with minimal</li>
+<p>systemic disturbance.</p>
+<p>270</p>
+<p>ch26.indd 270 19-11-2020 12:44:11</p>
+<div class="table-container"><table><tr><th>TABLE 26-1 Comparison of the Clinical and Pathologic Features of Crohn Disease and
+Ulcerative Colitis</th><th></th><th></th></tr><tr><td>Feature</td><td>Crohn Disease</td><td>Ulcerative Colitis</td></tr><tr><td>Clinical</td><td></td><td></td></tr><tr><td>Malaise, fever</td><td>Common</td><td>Uncommon</td></tr><tr><td>Rectal bleeding</td><td>Common</td><td>Common</td></tr><tr><td>Abdominal tenderness</td><td>Common</td><td>May be present</td></tr><tr><td>Abdominal mass</td><td>Common</td><td>Absent</td></tr><tr><td>Abdominal pain</td><td>Common</td><td>Unusual</td></tr><tr><td>Abdominal wall and internal fistulas</td><td>Common</td><td>Absent</td></tr><tr><td>Distribution</td><td>Discontinuous</td><td>Continuous</td></tr><tr><td>Aphthous or linear ulcers</td><td>Common</td><td>Rare</td></tr><tr><td>Pathologic</td><td></td><td></td></tr><tr><td>Rectal involvement</td><td>Rare</td><td>Common</td></tr><tr><td>Ileal involvement</td><td>Very common</td><td>Rare</td></tr><tr><td>Strictures</td><td>Common</td><td>Rare</td></tr><tr><td>Fistulas</td><td>Common</td><td>Rare</td></tr><tr><td>Transmural involvement</td><td>Common</td><td>Rare</td></tr><tr><td>Crypt abscesses</td><td>Rare</td><td>Very common</td></tr><tr><td>Granulomas</td><td>Common</td><td>Rare</td></tr><tr><td>Linear clefts</td><td>Common</td><td>Rare</td></tr><tr><td>Cobblestone appearance</td><td>Common</td><td>Absent</td></tr></table></div><h2>Inflammatory Bowel Disease | CHAPTER 26</h2>
+<h2>TABLE 26-2 Clinical Presentation of Ulcerative Colitis</h2>
+<p>Signs and symptoms</p>
+<li>Abdominal cramping</li>
+<li>Frequent bowel movements, often with blood in the stool</li>
+<li>Weight loss</li>
+<li>Fever and tachycardia in severe disease</li>
+<li>Blurred vision, eye pain, and photophobia with ocular involvement</li>
+<li>Arthritis</li>
+<li>Raised, red, tender nodules that vary in size from 1 cm to several centimeters</li>
+<p>Physical examination</p>
+<li>Hemorrhoids, anal fissures, or perirectal abscesses may be present</li>
+<li>Iritis, uveitis, episcleritis, and conjunctivitis with ocular involvement</li>
+<li>Dermatologic findings with erythema nodosum, pyoderma gangrenosum, or aphthous</li>
+<p>ulceration</p>
+<p>Laboratory tests</p>
+<li>Decreased hematocrit/hemoglobin</li>
+<li>Increased ESR, CRP, and fecal calprotectin</li>
+<li>Leukocytosis and hypoalbuminemia with severe disease</li>
+<li>(+) perinuclear antineutrophil cytoplasmic antibodies</li>
+<li>With severe disease, the patient has more than six stools per day with blood, with</li>
+<p>systemic manifestations of fever, tachycardia, anemia, or ESR greater than 30 mm/hr</p>
+<p>(8.3 μm/sec). With fulminant disease there are more than 10 bowel movements per day</p>
+<p>with continuous bleeding, toxicity, abdominal tenderness, requirement for transfusion,</p>
+<p>and colonic dilation.</p>
+<h2>CROHN DISEASE</h2>
+<li>As with UC, the presentation of CD is highly variable (Table 26-3). A patient</li>
+<p>may present with diarrhea and abdominal pain or a perirectal or perianal lesion.</p>
+<p>Patients with mild-to-moderate CD are typically ambulatory and have no evidence</p>
+<p>of dehydration, systemic toxicity, less than 10% loss of body weight, or abdominal</p>
+<p>tenderness, mass, or obstruction.</p>
+<li>The course of CD is characterized by periods of remission and exacerbation. Some</li>
+<p>patients may be free of symptoms for years, whereas others experience chronic</p>
+<p>problems despite medical therapy.</p>
+<li>The Crohn Disease Activity Index (CDAI) is used to gauge response to therapy and</li>
+<p>determine remission. Disease activity may be assessed and correlated by evaluation</p>
+<p>of serum C-reactive protein concentrations.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Resolution of acute inflammatory processes, resolution of</li>
+<p>attendant complications (eg, fistulas or abscesses), alleviation of systemic manifesta-</p>
+<p>tions (eg, arthritis), maintenance of remission from acute inflammation, or surgical</p>
+<p>palliation or cure.</p>
+<li>Treatment often involves use of specific targets, such as mucosal healing and endo-</li>
+<p>scopic remission, or resolution of symptoms such as abdominal pain and diarrhea, as</p>
+<p>the main indicators of treatment efficacy (referred to as “Treat to Target”).</p>
+<h2>NONPHARMACOLOGIC TREATMENT</h2>
+<li>Protein–energy malnutrition and suboptimal weight are reported in up to 85% of</li>
+<p>patients with CD. The nutritional needs of the majority of patients can be adequately</p>
+<p>addressed with enteral supplementation.</p>
+<p>271</p>
+<p>ch26.indd 271 19-11-2020 12:44:11</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>TABLE 26-3 Clinical Presentation of Crohn Disease</h2>
+<p>Signs and symptoms</p>
+<li>Malaise and fever</li>
+<li>Abdominal pain</li>
+<li>Frequent bowel movements</li>
+<li>Hematochezia</li>
+<li>Fistula</li>
+<li>Weight loss and malnutrition</li>
+<li>Arthritis</li>
+<p>Physical examination</p>
+<li>Abdominal mass and tenderness</li>
+<li>Perianal fissure or fistula</li>
+<p>Laboratory tests</p>
+<li>Increased white blood cell count, ESR, CRP, and fecal calprotectin</li>
+<li>(+) anti–Saccharomyces cerevisiae antibodies</li>
+<li>Elimination of specific foods that appear to exacerbate symptoms can be tried; how-</li>
+<p>ever, exclusion diets are generally not endorsed, even in the setting of severe disease.</p>
+<li>Parenteral nutrition is generally reserved for patients with severe malnutrition or</li>
+<p>those who fail enteral therapy or have a contraindication to receiving enteral therapy,</p>
+<p>such as perforation, protracted vomiting, short bowel syndrome, or severe intestinal</p>
+<p>stenosis.</p>
+<li>While probiotics are considered to be generally safe in patients with IBD, the added</li>
+<p>cost and requirement to often take multiple doses per day, coupled with the lack of</p>
+<p>quality data to support their use, should weigh into the decision to use them in IBD.</p>
+<li>Colectomy may be necessary for UC patients with disease uncontrolled by maximum</li>
+<p>medical therapy or when there are disease complications such as colonic perforation,</p>
+<p>toxic megacolon, uncontrolled colonic hemorrhage, or colonic strictures.</p>
+<li>Surgery in patients with CD is usually reserved for patients with intractable hemor-</li>
+<p>rhage, perforation, persistent or recurrent obstruction, abscess, dysplasia, cancer, or</p>
+<p>medically refractory disease. CD has a high recurrence rate after surgery.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>The major drug therapies used in IBD are aminosalicylates; corticosteroids; immu-</li>
+<p>nomodulators (azathioprine, mercaptopurine, and methotrexate); immunosup-</p>
+<p>pressive agents (cyclosporine and tacrolimus); antimicrobials (metronidazole and</p>
+<p>ciprofloxacin); and agents to inhibit TNF-α (anti–TNF-α antibodies), leukocyte</p>
+<pre><code>adhesion and migration (natalizumab and vedolizumab), interleukin function</code></pre>
+<pre><code>(ustekinumab), or Janus kinase function (tofacitinib).</code></pre>
+<li>Sulfasalazine combines a sulfonamide (sulfapyridine) antibiotic and mesalamine</li>
+<p>(5-aminosalicylic acid) in the same molecule. Oral mesalamine derivatives are alter-</p>
+<p>natives to sulfasalazine for treatment of mild-to-moderate UC with similar rates of</p>
+<p>efficacy. Mesalamine-based products are listed in Table 26-4.</p>
+<li>Oral corticosteroids in doses of 40–60 mg/day prednisone equivalent can be used for</li>
+<p>patients with moderate to extensive disease who are refractory to oral aminosalicy-</p>
+<p>lates or require more rapid control of symptoms.</p>
+<li>Immunomodulators such as azathioprine, mercaptopurine (a metabolite of azathio-</li>
+<p>prine), methotrexate, or cyclosporine are used in the long-term treatment of IBD.</p>
+<p>These agents are generally reserved for patients who fail aminosalicylate therapy or</p>
+<p>are refractory to or dependent on corticosteroids.</p>
+<li>Cyclosporine has a short-term benefit in the treatment of acute, severe UC to avoid</li>
+<p>colectomy in patients failing corticosteroids but has little efficacy in CD.</p>
+<li>Methotrexate 15–25 mg intramuscularly or subcutaneously once weekly is useful for</li>
+<p>treatment and maintenance of CD and may be steroid sparing.</p>
+<p>272</p>
+<p>ch26.indd 272 19-11-2020 12:44:11</p>
+<div class="table-container"><table><tr><th>TABLE 26-3 Clinical Presentation of Crohn Disease</th></tr><tr><td>Signs and symptoms
+• Malaise and fever
+• Abdominal pain
+• Frequent bowel movements
+• Hematochezia
+• Fistula
+• Weight loss and malnutrition
+• Arthritis</td></tr><tr><td>Physical examination
+• Abdominal mass and tenderness
+• Perianal fissure or fistula</td></tr><tr><td>Laboratory tests
+• Increased white blood cell count, ESR, CRP, and fecal calprotectin
+• (+) anti–Saccharomyces cerevisiae antibodies</td></tr></table></div><h2>Inflammatory Bowel Disease | CHAPTER 26</h2>
+<p>TABLE 26-4 Agents for the Treatment of Inflammatory Bowel Disease</p>
+<p>Drug Brand Name Initial Dose (g) Usual Range</p>
+<p>Sulfasalazine Azulfidine 500 mg–1 g 4–6 g/day</p>
+<p>Azulfidine EN 500 mg–1 g 4–6 g/day</p>
+<p>Mesalamine Rowasa 1 g 1 g daily to three</p>
+<p>suppository times weekly</p>
+<p>Mesalamine enema Canasa 4 g 4 g daily to three</p>
+<p>times weekly</p>
+<p>Mesalamine (oral) Asacol HD 1.6 g/day 2.8–4.8 g/day</p>
+<p>Apriso 1.5 g/day 1.5 g/day once daily</p>
+<p>Lialda 1.2–2.4 g/day 1.2–4.8 g/day once</p>
+<p>daily</p>
+<p>Pentasa 2 g/day 2–4 g/day</p>
+<p>Delzicol 1.2 g/day 2.4–4.8 g/day</p>
+<p>Olsalazine Dipentum 1.5 g/day 1.5–3 g/day</p>
+<p>Balsalazide Colazal 2.25 g/day 2.25–6.75 g/day</p>
+<p>Azathioprine Imuran, Azasan 50–100 mg 1–2.5 mg/kg/day</p>
+<p>Cyclosporine Gengraf 2–4 mg/kg/day IV 2–4 mg/kg/day IV</p>
+<p>Neoral, Sandimmune 2–8 mg/kg/day oral</p>
+<p>Mercaptopurine Purinethol 50–100 mg 1–2.5 mg/kg/day</p>
+<p>Methotrexate No branded IM 15–25 mg IM weekly 15–25 mg IM weekly</p>
+<p>injection</p>
+<p>Adalimumab Humira 160 mg SC day 1 80 mg SC 2 (day 15),</p>
+<p>Adalimumab-atto Amjevita and then 40 mg</p>
+<p>every 2 weeks</p>
+<p>Adalimumab-abdm Cyltezo</p>
+<p>Certolizumab Cimzia 400 mg SC 400 mg SC weeks</p>
+<p>2 and 4, and</p>
+<p>then 400 mg SC</p>
+<p>monthly</p>
+<p>Infliximab Remicade 5 mg/kg IV 5 mg/kg weeks 2</p>
+<p>Infliximab-dyyb Inflectra and 6, 5–10 mg/</p>
+<p>kg every 8 weeks</p>
+<p>Infliximab-abda Renflexis</p>
+<p>Infliximab-qbtx IXIFI</p>
+<p>Natalizumab Tysabri 300 mg IV 300 mg IV every</p>
+<p>4 weeks</p>
+<p>Budesonide Entocort EC capsule, 9 mg orally once 6–9 mg daily</p>
+<h2>Uceris tablet daily</h2>
+<p>Uceris rectal foam 2 mg twice daily 2 mg daily</p>
+<p>Vedolizumab Entyvio 300 mg IV 300 mg IV weeks 2</p>
+<p>and 6 and then</p>
+<p>every 8 weeks</p>
+<p>(Continued )</p>
+<p>273</p>
+<p>ch26.indd 273 19-11-2020 12:44:11</p>
+<div class="table-container"><table><tr><th>TABLE 26-4 Agents for the Treatment of Inflammatory Bowel Disease</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose (g)</td><td>Usual Range</td></tr><tr><td>Sulfasalazine</td><td>Azulfidine</td><td>500 mg–1 g</td><td>4–6 g/day</td></tr><tr><td></td><td>Azulfidine EN</td><td>500 mg–1 g</td><td>4–6 g/day</td></tr><tr><td>Mesalamine
+suppository</td><td>Rowasa</td><td>1 g</td><td>1 g daily to three
+times weekly</td></tr><tr><td>Mesalamine enema</td><td>Canasa</td><td>4 g</td><td>4 g daily to three
+times weekly</td></tr><tr><td>Mesalamine (oral)</td><td>Asacol HD</td><td>1.6 g/day</td><td>2.8–4.8 g/day</td></tr><tr><td></td><td>Apriso</td><td>1.5 g/day</td><td>1.5 g/day once daily</td></tr><tr><td></td><td>Lialda</td><td>1.2–2.4 g/day</td><td>1.2–4.8 g/day once
+daily</td></tr><tr><td></td><td>Pentasa</td><td>2 g/day</td><td>2–4 g/day</td></tr><tr><td></td><td>Delzicol</td><td>1.2 g/day</td><td>2.4–4.8 g/day</td></tr><tr><td>Olsalazine</td><td>Dipentum</td><td>1.5 g/day</td><td>1.5–3 g/day</td></tr><tr><td>Balsalazide</td><td>Colazal</td><td>2.25 g/day</td><td>2.25–6.75 g/day</td></tr><tr><td>Azathioprine</td><td>Imuran, Azasan</td><td>50–100 mg</td><td>1–2.5 mg/kg/day</td></tr><tr><td>Cyclosporine</td><td>Gengraf</td><td>2–4 mg/kg/day IV</td><td>2–4 mg/kg/day IV</td></tr><tr><td></td><td>Neoral, Sandimmune</td><td>2–8 mg/kg/day oral</td><td></td></tr><tr><td>Mercaptopurine</td><td>Purinethol</td><td>50–100 mg</td><td>1–2.5 mg/kg/day</td></tr><tr><td>Methotrexate</td><td>No branded IM
+injection</td><td>15–25 mg IM weekly</td><td>15–25 mg IM weekly</td></tr><tr><td>Adalimumab
+Adalimumab-atto
+Adalimumab-abdm</td><td>Humira
+Amjevita
+Cyltezo</td><td>160 mg SC day 1</td><td>80 mg SC 2 (day 15),
+and then 40 mg
+every 2 weeks</td></tr><tr><td>Certolizumab</td><td>Cimzia</td><td>400 mg SC</td><td>400 mg SC weeks
+2 and 4, and
+then 400 mg SC
+monthly</td></tr><tr><td>Infliximab
+Infliximab-dyyb
+Infliximab-abda
+Infliximab-qbtx</td><td>Remicade
+Inflectra
+Renflexis
+IXIFI</td><td>5 mg/kg IV</td><td>5 mg/kg weeks 2
+and 6, 5–10 mg/
+kg every 8 weeks</td></tr><tr><td>Natalizumab</td><td>Tysabri</td><td>300 mg IV</td><td>300 mg IV every
+4 weeks</td></tr><tr><td>Budesonide</td><td>Entocort EC capsule,
+Uceris tablet</td><td>9 mg orally once
+daily</td><td>6–9 mg daily</td></tr><tr><td></td><td>Uceris rectal foam</td><td>2 mg twice daily</td><td>2 mg daily</td></tr><tr><td>Vedolizumab</td><td>Entyvio</td><td>300 mg IV</td><td>300 mg IV weeks 2
+and 6 and then
+every 8 weeks
+(Continued )</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>TABLE 26-4 Agents for the Treatment of Inflammatory Bowel Disease(Continued )</p>
+<p>Drug Brand Name Initial Dose (g) Usual Range</p>
+<p>Golimumab Simponi 200 mg SC 100 mg SC weeks</p>
+<p>2 and 4</p>
+<p>Ustekinumab Stelara Weight-based initial 90 mg SC every</p>
+<p>IV dose &lt;55 kg 8 weeks</p>
+<p>(260 mg), 55–85</p>
+<p>kg (390 mg), &gt;85</p>
+<p>kg (520 mg)</p>
+<p>Tofacitinib Xeljanz 10 mg twice daily 5 mg twice daily</p>
+<p>for 8 weeks; may</p>
+<p>continue for</p>
+<p>maximum of 16</p>
+<p>weeks</p>
+<p>IM, intramuscular; SC, subcutaneous.</p>
+<li>Antimicrobial agents, particularly metronidazole and ciprofloxacin, are frequently</li>
+<p>used in attempts to control CD, particularly when it involves the perineal area or</p>
+<p>fistulas.</p>
+<li>Infliximab is an anti-TNFα antibody that is useful in moderate-to-severe active</li>
+<p>CD and UC as well as steroid-dependent or fistulizing disease, both as induction</p>
+<p>and maintenance therapy. Adalimumab is another anti-TNFα (fully humanized)</p>
+<p>antibody that is an option for patients with moderate-to-severe active CD or UC</p>
+<p>previously treated with infliximab who have lost response.</p>
+<li>Natalizumab and vedolizumab are leukocyte adhesion and migration inhibitors that</li>
+<p>are used for patients with CD who are unresponsive to other therapies.</p>
+<p>Ulcerative Colitis</p>
+<p>Mild-to-Moderate Disease</p>
+<li>Most patients with mild-to-moderate active UC can be managed on an outpatient</li>
+<p>basis with oral and/or topical aminosalicylates (Fig. 26-1). For patients with exten-</p>
+<p>sive disease, oral once-daily mesalamine is generally preferred in doses of 2–3 g/day.</p>
+<p>Doses greater than 3 g/day can be used in patients who are unresponsive to standard</p>
+<p>doses and generally should be combined with a rectal mesalamine formulation at a</p>
+<p>dose of 1 g/day.</p>
+<li>Oral mesalamine derivatives (see Table 26-4) are reasonable alternatives to sulfasala-</li>
+<p>zine for treatment of UC because they are better tolerated. Topical mesalamine in an</p>
+<p>enema or suppository formulation is more effective than oral mesalamine or topical</p>
+<p>steroids for distal disease.</p>
+<li>Budesonide 9 mg/day is preferred for patients who are unresponsive to optimized</li>
+<p>doses of mesalamine.</p>
+<p>Moderate-to-Severe Disease</p>
+<li>Oral mesalamine products may be effective for moderately severe UC, but budesonide</li>
+<p>is an alternative before using more systemic corticosteroids and is preferred for mod-</p>
+<p>erate disease.</p>
+<li>Steroids have a place in the treatment of moderate-to-severe UC or in patients who</li>
+<p>are unresponsive to maximal doses of oral and topical mesalamine. Oral corticoste-</p>
+<p>roids in doses of 40–60 mg prednisone equivalent daily are recommended for adults.</p>
+<li>TNF-α inhibitors are an option for patients with moderate-to-severe disease who</li>
+<p>are unresponsive to aminosalicylates, corticosteroids, or other immunosuppressive</p>
+<p>agents. In general infliximab, adalimumab, and golimumab and their respective bio-</p>
+<p>similars have similar rates of efficacy when used as monotherapy in UC.</p>
+<p>274</p>
+<p>ch26.indd 274 19-11-2020 12:44:11</p>
+<div class="table-container"><table><tr><th>TABLE 26-4 Agents for the Treatment of Inflammatory Bowel Disease(Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial Dose (g)</td><td>Usual Range</td></tr><tr><td>Golimumab</td><td>Simponi</td><td>200 mg SC</td><td>100 mg SC weeks
+2 and 4</td></tr><tr><td>Ustekinumab</td><td>Stelara</td><td>Weight-based initial
+IV dose &lt;55 kg
+(260 mg), 55–85
+kg (390 mg), &gt;85
+kg (520 mg)</td><td>90 mg SC every
+8 weeks</td></tr><tr><td>Tofacitinib</td><td>Xeljanz</td><td>10 mg twice daily
+for 8 weeks; may
+continue for
+maximum of 16
+weeks</td><td>5 mg twice daily</td></tr></table></div><h2>Inflammatory Bowel Disease | CHAPTER 26</h2>
+<p>Disease severity Distal Consider reducing oral</p>
+<p>Oral sulfasalazine or mesalamine or</p>
+<p>mesalamine, or mesalamine Remission sulfasalazine dose to</p>
+<p>Mild enema (2–3 g/day left sided), or 2–3 g/day, or mesalamine</p>
+<p>suppository 1 g/day (proctitis) enema 4 g every 1–2 days,</p>
+<p>or suppository 1 g every</p>
+<p>1–2 days</p>
+<p>Extensive</p>
+<p>oral mesalamine 2-3 g/day Reduce sulfasalazine or</p>
+<p>or Remission mesalamine dose to</p>
+<p>controlled release 2–3 g/day or</p>
+<p>Moderate budesonide 9 mg/day continue budesonide for</p>
+<p>up to 8 weeks</p>
+<p>Remission Taper prednisone,</p>
+<p>Budesonide MMX 9 mg/day or then after 1–2 mo or</p>
+<p>prednisone 40–60 mg/day continue Budesonide</p>
+<p>for 8 weeks</p>
+<p>Severe</p>
+<p>Infliximab plus azathioprine,</p>
+<p>Inadequate or no response OR certolizumab, adalimumab,</p>
+<p>vedolizumab, or tofaciitinib.</p>
+<p>Methylprednisolone 40–60mg Remission</p>
+<p>or hydrocortisone IV Change to prednisone</p>
+<p>100 mg every 6–8 h</p>
+<p>Fulminant</p>
+<p>No response in 3–5 days Add azathioprine,</p>
+<p>Infliximab mercaptopurine, infliximab,</p>
+<p>or cyclosporine IV certolizumab, adalimumab,</p>
+<p>4 mg/kg/day vedolizumb or tofacitinib</p>
+<p>attempt to withdraw</p>
+<p>Remission steroids after 1–2 mo</p>
+<p>Change to oral cyclosporine Remission</p>
+<p>and add AZA/MP or</p>
+<p>vedolizumab OR continue Maintain TNF-α inhibitor</p>
+<p>Infliximab or immunomodulator</p>
+<p>AZA, azathioprine; MMX, Multi-Matrix System; MP, mercaptopurine; TNF, tumor necrosis factor.</p>
+<h2>FIGURE 26-1. Treatment approaches for ulcerative colitis.</h2>
+<h2>Severe or Intractable Disease</h2>
+<li>Patients with uncontrolled severe UC or incapacitating symptoms require hospital-</li>
+<p>ization for effective management. Most medications are given parenterally. Patients</p>
+<p>should be tested for Clostridoidies difficile infection and receive venous thromboem-</p>
+<p>bolism (VTE) prophylaxis.</p>
+<li>IV hydrocortisone 300 mg daily in three divided doses or methylprednisolone</li>
+<p>60 mg once daily for 3–5 days is considered a first-line agent. A trial of corticosteroids</p>
+<p>is warranted in most patients before proceeding to colectomy, unless the condition is</p>
+<p>grave or rapidly deteriorating.</p>
+<li>Patients who are unresponsive to parenteral corticosteroids after 3–7 days can receive</li>
+<p>cyclosporine or infliximab. A continuous IV infusion of cyclosporine 2–4 mg/kg/day</p>
+<p>is the typical dose range used and may delay the need for colectomy.</p>
+<p>Maintenance of Remission</p>
+<li>Once remission from active disease has been achieved, the goal of therapy is to</li>
+<p>maintain the remission.</p>
+<li>The major agents used for maintenance of remission are sulfasalazine and the newer</li>
+<p>mesalamine derivatives, infliximab, adalimumab and its biosimilars, golimumab, and</p>
+<p>azathioprine or mercaptopurine.</p>
+<p>275</p>
+<p>ch26.indd 275 19-11-2020 12:44:12</p>
+<h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<li>Oral agents, including sulfasalazine, mesalamine, and balsalazide, are all effective</li>
+<p>options for maintenance therapy. The optimal dose to prevent relapse is 2–2.4 g/day</p>
+<p>of mesalamine equivalent, with rates of relapse over 6–12 months reported as 40%.</p>
+<li>Steroids do not have a role in the maintenance of remission with UC because they</li>
+<p>are ineffective. Steroids should be withdrawn gradually over 2–4 weeks after remis-</p>
+<p>sion is induced.</p>
+<p>Crohn Disease</p>
+<p>Active Crohn Disease</p>
+<li>Mesalamine derivatives have not demonstrated significant efficacy in CD. They</li>
+<p>are often tried as an initial therapy for mild-to-moderate CD given their favorable</p>
+<p>adverse effect profile.</p>
+<li>Mesalamine derivatives that release mesalamine in the small bowel (eg, Pentasa) may</li>
+<p>be more effective than sulfasalazine for ileal involvement.</p>
+<li>Systemic corticosteroids are frequently used for treating moderate-to-severe active</li>
+<p>CD; however, controlled-release budesonide (Entocort) 9 mg daily is a preferred</p>
+<p>first-line option for patients with mild-to-moderate ileal or right-sided (ascending</p>
+<p>colonic) disease.</p>
+<li>Oral corticosteroids, such as prednisone 40−60 mg/day, are generally considered</li>
+<p>first-line therapy and are frequently used for moderate-to-severe CD unresponsive</p>
+<p>to aminosalicylates.</p>
+<li>Metronidazole 10−20 mg/kg/day orally in divided doses may be useful in some</li>
+<p>patients with CD, particularly for patients with colonic or ileocolonic involvement,</p>
+<p>those with perineal disease, or those who are unresponsive to sulfasalazine.</p>
+<li>Azathioprine, mercaptopurine, and methotrexate are not recommended to induce</li>
+<p>remission in moderate-to-severe CD; however, they are effective in maintaining</p>
+<p>steroid-induced remission and are generally limited to use for patients not achiev-</p>
+<p>ing adequate response to standard medical therapy or in the setting of steroid</p>
+<p>dependency.</p>
+<li>Clinical response to azathioprine and mercaptopurine may be related to whole-blood</li>
+<p>concentrations of the metabolite 6-thioguanine (TGN). Concentrations of TGN</p>
+<p>greater than 230−450 pmol/8 × 108 erythrocytes have beneficial effects, but monitor-</p>
+<p>ing is not routinely performed or may not be available at some sites.</p>
+<li>Patients deficient in thiopurine S-methyltransferase (TPMT) are at greater risk of</li>
+<p>bone marrow suppression from azathioprine and mercaptopurine. Determination of</p>
+<p>TPMT or TPMT genotype is recommended to guide dosage.</p>
+<li>Methotrexate given weekly intramuscularly or subcutaneously in doses of 15−25 mg</li>
+<p>is effective in reducing steroid dependency and maintaining remission, and may be</p>
+<p>considered as an alternative to azathioprine or mercaptopurine.</p>
+<li>The TNF-α inhibitors are the most effective and thus the preferred agents in</li>
+<p>managing moderate to severe CD. All agents in this class, with the exception of goli-</p>
+<p>mumab, which is not approved for use in CD in the United States, have similar rates</p>
+<p>of efficacy. The use of TNF-α inhibitors in combination with thiopurines has quickly</p>
+<p>become the preferred approach to treatment of moderate-to-severe CD.</p>
+<li>The integrin antagonists are options for patients who do not respond to steroids</li>
+<p>or TNF-α inhibitors, and vedolizumab is also considered a first-line alternative to</p>
+<p>TNF-α inhibitors for moderate-to-severe disease.</p>
+<p>Maintenance of Remission</p>
+<li>Prevention of recurrence of disease is more difficult with CD than with UC. There is</li>
+<p>minimal evidence that sulfasalazine and oral mesalamine derivatives are effective for</p>
+<p>maintenance of CD remission following medically induced remission, and therefore</p>
+<p>these agents are not preferred (Fig. 26-2).</p>
+<li>Systemic steroids have no role in the maintenance of remission or prevention of</li>
+<p>recurrence of CD; these agents do not appear to alter the long-term course of the</p>
+<p>disease. Budesonide can be considered for maintenance therapy for up to 4 months.</p>
+<p>276</p>
+<p>ch26.indd 276 19-11-2020 12:44:12</p>
+<h2>Inflammatory Bowel Disease | CHAPTER 26</h2>
+<p>Disease severity</p>
+<p>Mild</p>
+<p>Perianal Small bowel</p>
+<p>Metronidazole Budesonide 9 mg/day for</p>
+<p>Sulfasalazine 3–6 g/day up to 10–20 mg/kg/day terminal ileal or ascending</p>
+<p>+/– infliximab colonic disease</p>
+<p>Response Taper prednisone</p>
+<p>Moderate after 2–4 weeks</p>
+<p>Prednisone + infliximab, adalimumab, Add azathioprine, mercapto-</p>
+<p>certolizumab, methotrexate, purine, or methotrexate if not</p>
+<p>azathioprine, mercaptopurine, already receiving; change to</p>
+<p>or vedolizumab natalizumab or vedolizumab</p>
+<p>if no response to TNF-α</p>
+<p>inhibitor. immunomodulator</p>
+<p>Severe Inadequate or consider TNF-alpha trough</p>
+<p>or monitoring ustekimumab</p>
+<p>no response may be considered</p>
+<p>as a last line option</p>
+<p>Hydrocortisone 100 mg Consider infliximab prior</p>
+<p>IV every 6–8 hr No response in to surgery as last option</p>
+<p>Fulminant 5–7 days</p>
+<h2>FIGURE 26-2. Treatment approaches for Crohn disease.</h2>
+<li>All of the TNF-α inhibitors currently approved for use in CD are viable options for</li>
+<p>maintenance of remission. Combination therapy with a thiopurine should be highly</p>
+<p>considered to further improve efficacy and to extend the duration of TNF-α inhibitor</p>
+<p>efficacy by reducing immunogenicity.</p>
+<li>There is weak evidence to suggest that methotrexate is effective in maintaining remis-</li>
+<p>sion in CD.</p>
+<h2>SELECT COMPLICATIONS</h2>
+<p>Toxic Megacolon</p>
+<li>The treatment required for toxic megacolon includes general supportive measures</li>
+<pre><code>to maintain vital functions, consideration for early surgical intervention, and</code></pre>
+<p>antimicrobials.</p>
+<li>Aggressive fluid and electrolyte management are required for dehydration. When the</li>
+<p>patient has lost significant amounts of blood (through the rectum), blood transfusion</p>
+<p>may be necessary.</p>
+<li>Steroids in high doses (eg, hydrocortisone 100 mg every 8 hours) should be admin-</li>
+<p>istered IV to reduce acute inflammation.</p>
+<li>Broad-spectrum antimicrobials that include coverage for gram-negative bacilli and</li>
+<p>intestinal anaerobes should be used as preemptive therapy if perforation occurs.</p>
+<p>Extraintestinal Manifestations</p>
+<li>For arthritis, aspirin or another NSAID may be beneficial, as are corticosteroids.</li>
+<p>However, NSAID use may exacerbate the underlying IBD and predispose patients</p>
+<p>to GI bleeding.</p>
+<li>Anemia secondary to blood loss from the GI tract can be treated with oral ferrous</li>
+<p>sulfate. Vitamin B or folic acid may also be required.</p>
+<li>If the patient is de 12 emed high risk for osteoporosis or exhibits a reduced serum</li>
+<p>vitamin D concentration, vitamin D and calcium should be administered. If</p>
+<p>osteoporosis is present, then calcium, vitamin D, and a bisphosphonate or possibly</p>
+<p>teriparatide are recommended.</p>
+<h2>ALGRAWANY</h2>
+<p>277</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch26.indd 277 19-11-2020 12:44:12</p>
+<div class="table-container"><table><tr><th>Taper prednisone
+after 2–4 weeks</th></tr><tr><td>Add azathioprine, mercapto-
+purine, or methotrexate if not
+already receiving; change to
+natalizumab or vedolizumab
+if no response to TNF-α
+inhibitor. immunomodulator
+or consider TNF-alpha trough
+monitoring ustekimumab
+may be considered
+as a last line option</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<h2>• See Table 26-5 for drug monitoring guidelines.</h2>
+<li>Patients receiving sulfasalazine should receive oral folic acid supplementation</li>
+<p>because sulfasalazine inhibits folic acid absorption.</p>
+<h2>TABLE 26-5 Drug Monitoring Guidelines</h2>
+<p>Adverse Drug Monitoring</p>
+<p>Drug(s) Reaction Parameters Comments</p>
+<p>Sulfasalazine Nausea, vomiting, Folate, complete blood Increase the dose</p>
+<p>headache count slowly, over 1−2</p>
+<pre><code>Rash, anemia, Liver function tests, weeks</code></pre>
+<p>pneumonitis Scr, BUN</p>
+<p>Hepatotoxicity,</p>
+<p>nephritis</p>
+<p>Thrombocytopenia,</p>
+<p>lymphoma</p>
+<p>Mesalamine Nausea, vomiting, GI disturbances</p>
+<p>headache</p>
+<p>Corticosteroids Hyperglycemia, Blood pressure, Avoid long-term use if</p>
+<p>dyslipidemia fasting lipid panel possible or consider</p>
+<p>Osteoporosis, Glucose, vitamin D, budesonide</p>
+<p>hypertension, bone density</p>
+<p>acne</p>
+<p>Edema, infection,</p>
+<p>myopathy,</p>
+<p>psychosis</p>
+<p>Azathioprine/ Bone marrow Complete blood count Check TPMT activity</p>
+<p>Mercaptopurine suppression, Scr, BUN, liver May monitor TGN</p>
+<pre><code>pancreatitis, function tests,</code></pre>
+<p>Lymphoma genotype/</p>
+<pre><code>Liver dysfunction, phenotype</code></pre>
+<p>rash, arthralgia</p>
+<p>Methotrexate Bone marrow Complete blood Check baseline</p>
+<p>suppression, count, Scr, BUN pregnancy test</p>
+<pre><code>pancreatitis Liver function tests Chest x-ray</code></pre>
+<p>Pneumonitis,</p>
+<p>pulmonary</p>
+<p>fibrosis, hepatitis</p>
+<p>Infliximab Infusion-related Blood pressure/heart Need negative PPD and</p>
+<p>Adalimumab reactions rate (infliximab) viral serologies</p>
+<p>Certolizumab (infliximab), Neurologic exam,</p>
+<p>Golimumab infection mental status</p>
+<p>Heart failure, Trough concentrations</p>
+<p>optic neuritis, (infliximab)</p>
+<p>demyelination, Antidrug antibodies (all</p>
+<p>injection site agents)</p>
+<p>reaction, signs of</p>
+<p>infection</p>
+<p>(Continued )</p>
+<p>278</p>
+<p>ch26.indd 278 19-11-2020 12:44:12</p>
+<div class="table-container"><table><tr><th>TABLE 26-5 Drug Monitoring Guidelines</th><th></th><th></th><th></th></tr><tr><td>Drug(s)</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Sulfasalazine</td><td>Nausea, vomiting,
+headache
+Rash, anemia,
+pneumonitis
+Hepatotoxicity,
+nephritis
+Thrombocytopenia,
+lymphoma</td><td>Folate, complete blood
+count
+Liver function tests,
+Scr, BUN</td><td>Increase the dose
+slowly, over 1−2
+weeks</td></tr><tr><td>Mesalamine</td><td>Nausea, vomiting,
+headache</td><td>GI disturbances</td><td></td></tr><tr><td>Corticosteroids</td><td>Hyperglycemia,
+dyslipidemia
+Osteoporosis,
+hypertension,
+acne</td><td>Blood pressure,
+fasting lipid panel
+Glucose, vitamin D,
+bone density</td><td>Avoid long-term use if
+possible or consider
+budesonide</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Edema, infection,
+myopathy,
+psychosis</td><td></td><td></td></tr><tr><td>Azathioprine/
+Mercaptopurine</td><td>Bone marrow
+suppression,
+pancreatitis,
+Lymphoma</td><td>Complete blood count
+Scr, BUN, liver
+function tests,
+genotype/
+phenotype</td><td>Check TPMT activity
+May monitor TGN</td></tr><tr><td></td><td>Liver dysfunction,
+rash, arthralgia</td><td></td><td></td></tr><tr><td>Methotrexate</td><td>Bone marrow
+suppression,
+pancreatitis</td><td>Complete blood
+count, Scr, BUN
+Liver function tests</td><td>Check baseline
+pregnancy test
+Chest x-ray</td></tr><tr><td></td><td>Pneumonitis,
+pulmonary
+fibrosis, hepatitis</td><td></td><td></td></tr><tr><td>Infliximab
+Adalimumab
+Certolizumab
+Golimumab</td><td>Infusion-related
+reactions
+(infliximab),
+infection
+Heart failure,
+optic neuritis,
+demyelination,
+injection site
+reaction, signs of
+infection</td><td>Blood pressure/heart
+rate (infliximab)
+Neurologic exam,
+mental status
+Trough concentrations
+(infliximab)
+Antidrug antibodies (all
+agents)</td><td>Need negative PPD and
+viral serologies
+(Continued )</td></tr></table></div><h2>Inflammatory Bowel Disease | CHAPTER 26</h2>
+<h2>TABLE 26-5 Drug Monitoring Guidelines (Continued )</h2>
+<p>Adverse Drug Monitoring</p>
+<p>Drug(s) Reaction Parameters Comments</p>
+<p>Natalizumab Infusion-related Brain MRI, mental status, Vedolizumab not</p>
+<p>Vedolizumab reactions progressive multifocal associated with PML</p>
+<p>leukoencephalopathy</p>
+<p>Ustekinumab Infections, skin Signs/symptoms of Rare instances of</p>
+<p>cancers infection, annual reversible posterior</p>
+<p>skin exam leukoencephalopathy</p>
+<p>syndrome (RPLS)</p>
+<p>Avoid live vaccines</p>
+<p>Tofacitinib Infection, Symptoms of infection Avoid live vaccines</p>
+<p>thrombosis, or thrombosis Screen for baseline TB</p>
+<p>lymphoma, Do not initiate in</p>
+<p>elevated patients with</p>
+<p>cholesterol, lymphocytes &lt;500/</p>
+<p>CK, LFTs, mm3, ANC &lt;1000/</p>
+<p>lymphopenia, mm3, or hemoglobin</p>
+<p>neutropenia, &lt;9 g/dL</p>
+<p>anemia Monitor lipids and LFTs</p>
+<p>every 4−8 weeks</p>
+<p>Gastrointestinal</p>
+<p>perforation has been</p>
+<p>reported with use of</p>
+<p>the XR formulation</p>
+<p>Drug interactions with</p>
+<p>CYP3A4 and 2C19</p>
+<p>inhibitors</p>
+<p>ANC, absolute neutrophil count; BUN, blood urea nitrogen; CK, creatine kinase; GI, gastrointestinal;</p>
+<pre><code>LFTs, liver function tests; MRI, magnetic resonance imaging; PML, progressive multifocal</code></pre>
+<p>leukoencephalopathy; PPD, purified protein derivative; SCr, serum creatinine; TGN, thioguanine;</p>
+<p>TPMT, thiopurine methyltransferase; XR, extended-release.</p>
+<li>The success of therapeutic regimens to treat IBDs can be measured by patient-</li>
+<p>reported complaints, signs and symptoms, direct physician examination (including</p>
+<p>endoscopy), history and physical examination, select laboratory tests, and quality of</p>
+<p>life measures.</p>
+<li>Adverse effects of corticosteroids include hyperglycemia, hypertension, osteoporosis,</li>
+<p>acne, fluid retention, electrolyte disturbances, myopathies, muscle wasting, increased</p>
+<p>appetite, psychosis, infection, and adrenocortical suppression. To minimize corti-</p>
+<p>costeroid effects, clinicians may use alternate-day steroid therapy; however, some</p>
+<p>patients do not do well clinically on the days when no steroid is given.</p>
+<li>To create more objective measures, disease-rating scales or indices have been cre-</li>
+<p>ated. CDAI is a commonly used scale, particularly for evaluation of patients during</p>
+<p>clinical trials. The scale incorporates eight elements: (1) number of stools in the past</p>
+<p>7 days, (2) sum of abdominal pain ratings from the past 7 days, (3) rating of general</p>
+<p>279</p>
+<p>ch26.indd 279 19-11-2020 12:44:12</p>
+<div class="table-container"><table><tr><th>TABLE 26-5 Drug Monitoring Guidelines (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug(s)</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Natalizumab
+Vedolizumab</td><td>Infusion-related
+reactions</td><td>Brain MRI, mental status,
+progressive multifocal
+leukoencephalopathy</td><td>Vedolizumab not
+associated with PML</td></tr><tr><td>Ustekinumab</td><td>Infections, skin
+cancers</td><td>Signs/symptoms of
+infection, annual
+skin exam</td><td>Rare instances of
+reversible posterior
+leukoencephalopathy
+syndrome (RPLS)</td></tr><tr><td></td><td></td><td></td><td>Avoid live vaccines</td></tr><tr><td>Tofacitinib</td><td>Infection,
+thrombosis,
+lymphoma,
+elevated
+cholesterol,
+CK, LFTs,
+lymphopenia,
+neutropenia,
+anemia</td><td>Symptoms of infection
+or thrombosis</td><td>Avoid live vaccines
+Screen for baseline TB
+Do not initiate in
+patients with
+lymphocytes &lt;500/
+mm3, ANC &lt;1000/
+mm3, or hemoglobin
+&lt;9 g/dL
+Monitor lipids and LFTs
+every 4−8 weeks
+Gastrointestinal
+perforation has been
+reported with use of
+the XR formulation
+Drug interactions with
+CYP3A4 and 2C19
+inhibitors</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>well-being in the past 7 days, (4) use of antidiarrheals, (5) body weight, (6) hemato-</p>
+<p>crit, (7) finding of abdominal mass, and (8) a sum of symptoms present in the past</p>
+<p>week.</p>
+<li>Standardized assessment tools have also been constructed for UC. Elements in these</li>
+<p>scales include: (1) stool frequency; (2) presence of blood in the stool; (3) mucosal</p>
+<p>appearance (from endoscopy); and (4) physician’s global assessment based on physi-</p>
+<p>cal examination, endoscopy, and laboratory data.</p>
+<p>See Chapter 51, Inflammatory Bowel Disease, authored by Brian A. Hemstreet, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>280</p>
+<p>ch26.indd 280 19-11-2020 12:44:12</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

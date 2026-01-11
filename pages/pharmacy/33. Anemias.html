@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33. Anemias</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>33. Anemias</h1>
+        </header>
+        <main>
+            <h2>SECTION 7</h2>
+<h2>HEMATOLOGIC DISORDERS</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>357</p>
+<h2>RETPAHC</h2>
+<p>33</p>
+<p>Anemias</p>
+<li>Anemia is a group of diseases characterized by a decrease in either hemoglobin (Hb)</li>
+<p>or the volume of red blood cells (RBCs), resulting in decreased oxygen-carrying</p>
+<p>capacity of blood. The World Health Organization defines anemia as Hb less than</p>
+<p>13 g/dL (130 g/L; 8.07 mmol/L) in men or less than 12 g/dL (120 g/L; 7.45 mmol/L)</p>
+<p>in women.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The functional classification of anemias is found in Fig. 33-1. The most common</li>
+<h2>anemias are included in this chapter.</h2>
+<li>Morphologic classifications are based on cell size. Macrocytic cells are larger than</li>
+<p>normal and are associated with deficiencies of vitamin B or folic acid. Microcytic</p>
+<p>12</p>
+<p>cells are smaller than normal and are associated with iron deficiency, whereas nor-</p>
+<p>mocytic anemia may be associated with recent blood loss or chronic disease.</p>
+<li>Iron-deficiency anemia (IDA), characterized by decreased levels of ferritin (most</li>
+<p>sensitive marker) and serum iron, and decreased transferrin saturation, can be</p>
+<p>caused by inadequate dietary intake, inadequate gastrointestinal (GI) absorption,</p>
+<p>increased iron demand (eg, pregnancy), blood loss, and chronic diseases.</p>
+<li>Vitamin B – and folic acid–deficiency anemias, macrocytic in nature, can be</li>
+<p>12</p>
+<p>caused by inadequate dietary intake, malabsorption syndromes, and inadequate</p>
+<p>utilization. Deficiency of intrinsic factor causes decreased absorption of vitamin B</p>
+<p>12</p>
+<p>(ie, pernicious anemia). Folic acid–deficiency anemia can be caused by hyperuti-</p>
+<p>lization due to pregnancy, hemolytic anemia, myelofibrosis, malignancy, chronic</p>
+<p>inflammatory disorders, long-term dialysis, or growth spurt. Drugs can cause anemia</p>
+<p>by reducing absorption of folate (eg, phenytoin) or through folate antagonism</p>
+<p>(eg, methotrexate).</p>
+<li>Anemia of inflammation (AI) is a newer term used to describe both anemia of</li>
+<p>chronic disease and anemia of critical illness. A diagnosis of exclusion, AI is an</p>
+<p>anemia that traditionally has been associated with malignant, infectious, or inflam-</p>
+<p>matory processes, tissue injury, and conditions associated with release of proinflam-</p>
+<p>matory cytokines. Serum iron is decreased but in contrast to IDA, the serum ferritin</p>
+<p>concentration is normal or increased. See Table 33-1 for diseases associated with AI.</p>
+<p>For information on anemia of chronic kidney disease, see Chapter 75.</p>
+<li>Age-related reductions in bone marrow reserve can render elderly patients more</li>
+<p>susceptible to anemia caused by multiple minor and often unrecognized diseases (eg,</p>
+<p>nutritional deficiencies) that negatively affect erythropoiesis.</p>
+<li>Pediatric anemias are often due to a primary hematologic abnormality. The risk of</li>
+<p>IDA is increased by rapid growth spurts and dietary deficiency.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Signs and symptoms depend on rate of development and age and cardiovascular</li>
+<p>status of the patient. Acute-onset anemia is characterized by cardiorespiratory symp-</p>
+<p>toms such as palpitations, angina, orthostatic light-headedness, and breathlessness.</p>
+<p>Chronic anemia is characterized by weakness, fatigue, headache, orthopnea, dyspnea</p>
+<p>on exertion, vertigo, faintness, cold sensitivity, pallor, and loss of skin tone.</p>
+<p>ch33.indd 357 19-11-2020 13:21:14</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>3</th><th>3</th><th>Anemias</th></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><h2>SECTION 7 | Hematologic Disorders</h2>
+<p>Anemia</p>
+<p>Hypoproliferative Maturation Hemorrhage/</p>
+<p>disorders hemolysis</p>
+<p>Marrow damage</p>
+<p>Cytoplasmic Blood loss</p>
+<p>Iron deficiency defects</p>
+<li>Thalassemia Intravascular</li>
+<p>Stimulation • Iron deficiency hemolysis</p>
+<li>Renal disease • Sideroblastic</li>
+<li>Inflammation Autoimmune disease</li>
+<li>Metabolic disease Nuclear maturation</li>
+<p>defect Hemoglobinopathy</p>
+<li>Folate deficiency</li>
+<li>Vitamin B deficiency Metabolic/membrane</li>
+<li>Refractory 12 a nemia defect</li>
+<p>FIGURE 33-1. Functional classification of anemia. Each of the major categories of</p>
+<p>anemia (hypoproliferative, maturation disorders, and hemorrhage/hemolysis) can be</p>
+<pre><code>further subclassified according to the functional defect in the several components of</code></pre>
+<p>normal erythropoiesis.</p>
+<li>IDA is characterized by glossal pain, smooth tongue, reduced salivary flow, pica</li>
+<p>(compulsive eating of nonfood items), and pagophagia (compulsive eating of ice).</p>
+<li>Neurologic effects (eg, numbness and paraesthesisas) of vitamin B deficiency may</li>
+<p>12</p>
+<p>precede hematologic changes. Psychiatric findings, including irritability, depression,</p>
+<p>and memory impairment, may also occur with vitamin B deficiency. Anemia with</p>
+<p>12</p>
+<p>folate deficiency is not associated with neurologic symptoms.</p>
+<h2>DIAGNOSIS</h2>
+<li>Rapid diagnosis is essential because anemia is often a sign of underlying pathology.</li>
+<p>Severity of symptoms does not always correlate with the degree of anemia.</p>
+<li>Initial evaluation of anemia involves a complete blood cell count (CBC), reticulocyte</li>
+<p>index, and examination of the stool for occult blood. Figure 33-2 shows a broad,</p>
+<p>general algorithm for the diagnosis of anemia based on laboratory data.</p>
+<li>The earliest and most sensitive laboratory change for IDA is decreased serum ferritin</li>
+<p>(storage iron), which should be interpreted in conjunction with decreased transferrin</p>
+<p>saturation and increased total iron-binding capacity (TIBC). Hb, hematocrit (Hct),</p>
+<p>and RBC indices usually remain normal until later stages of IDA.</p>
+<li>In macrocytic anemias, mean corpuscular volume is usually elevated to greater</li>
+<p>than 100 fL. Vitamin B and folate concentrations can be measured to differentiate</p>
+<p>12</p>
+<p>between the two deficiency anemias. A vitamin B value less than 200 pg/mL (148</p>
+<p>12</p>
+<p>pmol/L), together with appropriate peripheral smear and clinical symptoms, is diag-</p>
+<p>nostic of vitamin B –deficiency anemia. A decreased RBC folate concentration (less</p>
+<p>12</p>
+<p>than 150 ng/mL [340 nmol/L]) appears to be a better indicator of folate-deficiency</p>
+<p>anemia than a decreased serum folate concentration (less than 3 ng/mL [7 nmol/L]).</p>
+<li>The diagnosis of AI is usually one of exclusion, with consideration of coexisting</li>
+<p>iron and folate deficiencies. Serum iron is usually decreased, but, unlike IDA, serum</p>
+<p>ferritin is normal or increased, and TIBC is decreased. The bone marrow reveals an</p>
+<p>abundance of iron; the peripheral smear reveals normocytic anemia.</p>
+<p>358</p>
+<p>ch33.indd 358 19-11-2020 13:21:14</p>
+<h2>Anemias | CHAPTER 33</h2>
+<h2>TABLE 33-1 Diseases Causing Anemia of Inflammation</h2>
+<p>Common causes</p>
+<p>Chronic infections</p>
+<p>Tuberculosis</p>
+<p>Other chronic lung infections (eg, lung abscess, bronchiectasis)</p>
+<p>Human immunodeficiency virus</p>
+<p>Subacute bacterial endocarditis</p>
+<p>Osteomyelitis</p>
+<p>Chronic urinary tract infections</p>
+<p>Chronic inflammation</p>
+<p>Rheumatoid arthritis</p>
+<p>Systemic lupus erythematosus</p>
+<p>Inflammatory bowel disease</p>
+<p>Inflammatory osteoarthritis</p>
+<p>Gout</p>
+<p>Other (collagen vascular) diseases</p>
+<p>Chronic inflammatory liver diseases</p>
+<p>Malignancies</p>
+<p>Carcinoma</p>
+<p>Lymphoma</p>
+<p>Leukemia</p>
+<p>Multiple myeloma</p>
+<p>Less common causes</p>
+<p>Alcoholic liver disease</p>
+<p>Congestive heart failure</p>
+<p>Thrombophlebitis</p>
+<p>Chronic obstructive pulmonary disease</p>
+<p>Ischemic heart disease</p>
+<li>Elderly patients with symptoms of anemia should undergo a CBC with peripheral</li>
+<p>smear and reticulocyte count and other laboratory studies as needed to determine</p>
+<p>the etiology of anemia.</p>
+<li>The diagnosis of anemia in pediatric populations requires use of age- and sex-</li>
+<p>adjusted norms for laboratory values.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to return hematologic parameters to normal,</li>
+<pre><code>restore normal function and quality of life, and prevent long-term complications.</code></pre>
+<h2>IRON-DEFICIENCY ANEMIA</h2>
+<li>Oral iron therapy with soluble ferrous iron salts, which are not enteric coated and not</li>
+<p>slow or sustained release, is recommended at a daily dosage of 150–200 mg elemental</p>
+<h2>iron in two or three divided doses (see Table 33-2).</h2>
+<p>359</p>
+<p>ch33.indd 359 19-11-2020 13:21:15</p>
+<div class="table-container"><table><tr><th>TABLE 33-1 Diseases Causing Anemia of Inflammation</th></tr><tr><td>Common causes
+Chronic infections
+Tuberculosis
+Other chronic lung infections (eg, lung abscess, bronchiectasis)
+Human immunodeficiency virus
+Subacute bacterial endocarditis
+Osteomyelitis
+Chronic urinary tract infections
+Chronic inflammation
+Rheumatoid arthritis
+Systemic lupus erythematosus
+Inflammatory bowel disease
+Inflammatory osteoarthritis
+Gout
+Other (collagen vascular) diseases
+Chronic inflammatory liver diseases
+Malignancies
+Carcinoma
+Lymphoma
+Leukemia
+Multiple myeloma</td></tr><tr><td>Less common causes
+Alcoholic liver disease
+Congestive heart failure
+Thrombophlebitis
+Chronic obstructive pulmonary disease
+Ischemic heart disease</td></tr></table></div><h2>SECTION 7 | Hematologic Disorders</h2>
+<h2>MCV</h2>
+<p>High Low</p>
+<p>Normal B level Serum ferritin</p>
+<p>12</p>
+<p>↓ folate level</p>
+<p>Normal or high Low</p>
+<p>Folic acid deficiency</p>
+<p>Norm ↓ a B l 1 f 2 o l l e a v te e l level N N o o rm rm al a l f o B la 12 t e l e l v e e v l el TIBC Iron a d n e e fi m c i i a ency</p>
+<p>Consider:</p>
+<p>Low High/normal</p>
+<p>Vitamin B • Hepatic disease</p>
+<p>12</p>
+<p>deficiency • Drug-induced Further work-up for:</p>
+<p>anemia Anemia of • Lead intoxication</p>
+<li>Hypothyroidism inflammation • Thalassemias</li>
+<li>Reticulocytosis • Sideroblastic</li>
+<p>Normal</p>
+<p>Reticulocyte</p>
+<p>count</p>
+<p>High Low</p>
+<p>Consider:</p>
+<li>Acute blood loss</li>
+<li>Hemolysis WBC</li>
+<li>Splenic and</li>
+<p>sequestration platelets</p>
+<p>Low Normal or high</p>
+<p>Bone marrow failure Consider:</p>
+<li>Aplastic anemia • Chronic infection</li>
+<li>Leukemia • Chronic inflammation</li>
+<li>Malignancy</li>
+<li>Chronic renal disease</li>
+<p>(↓, decreased; MCV, mean corpuscular volume; TIBC, total iron-binding capacity; WBC, white blood cells.)</p>
+<h2>FIGURE 33-2. General algorithm for diagnosis of anemias.</h2>
+<li>Iron is best absorbed from meat, fish, and poultry. Administer iron at least 1 hour</li>
+<p>before meals because food interferes with absorption, but administration with food</p>
+<p>may be needed to improve tolerability.</p>
+<li>Consider parenteral iron for patients with iron malabsorption, intolerance of oral</li>
+<p>iron therapy, or nonadherence. The following formula can be used to estimate the</p>
+<p>total dose of parenteral iron needed to correct anemia:</p>
+<p>Dose of iron (mg) = whole blood hemoglobin deficit (g/dL) × body weight (lb)</p>
+<p>or Dose of iron (mg) = whole blood hemoglobin deficit (g/L) × body weight</p>
+<p>(kg) × 0.22</p>
+<li>An additional quantity of iron to replenish stores should be added (about 600 mg for</li>
+<p>women and 1000 mg for men).</p>
+<p>360</p>
+<p>ch33.indd 360 19-11-2020 13:21:15</p>
+<h2>Anemias | CHAPTER 33</h2>
+<h2>TABLE 33-2 Oral Iron Products</h2>
+<p>Percent Common Formulations and</p>
+<p>Iron Salt Elemental Iron Elemental Iron Provided</p>
+<h2>Ferrous sulfate 20 60–65 mg/324–325 mg tablet</h2>
+<p>60 mg/5 mL syrup</p>
+<p>44 mg/5 mL elixir</p>
+<p>15 mg/1 mL drops</p>
+<h2>Ferrous sulfate 30 65 mg/200 mg tablet</h2>
+<h2>(exsiccated) 50 mg/160 mg tablet</h2>
+<h2>Ferrous gluconate 12 38 mg/325 mg tablet</h2>
+<h2>28–29 mg/240–246 mg tablet</h2>
+<h2>Ferrous fumarate 33 66 mg/200 mg tablet</h2>
+<h2>106 mg/324–325 mg tablet</h2>
+<li>Iron dextran, sodium ferric gluconate, iron sucrose, ferumoxytol, and ferric</li>
+<p>carboxymaltose are available parenteral iron preparations with similar efficacy but</p>
+<p>different molecular size, pharmacokinetics, bioavailability, and adverse effect profiles</p>
+<h2>(see Table 75–2).</h2>
+<h2>VITAMIN B –DEFICIENCY ANEMIA</h2>
+<p>12</p>
+<li>Oral vitamin B supplementation is as effective as parenteral, even in patients with</li>
+<p>12</p>
+<p>pernicious anemia, because the alternate vitamin B absorption pathway is inde-</p>
+<p>12</p>
+<p>pendent of intrinsic factor. Initiate oral cobalamin at 1–2 mg daily for 1–2 weeks,</p>
+<p>followed by 1 mg daily.</p>
+<li>Parenteral therapy acts more rapidly than oral therapy and is recommended if</li>
+<p>neurologic symptoms are present. A popular regimen is IM cyanocobalamin,</p>
+<p>1000 mcg daily for 1 week, then weekly for 1 month, and then monthly for mainte-</p>
+<p>nance therapy. Initiate daily oral cobalamin administration after symptoms resolve.</p>
+<li>Continue vitamin B for life in patients with pernicious anemia.</li>
+<p>12</p>
+<h2>FOLATE-DEFICIENCY ANEMIA</h2>
+<li>Oral folic acid, 1 mg daily for 4 months, is usually sufficient for treatment of folic</li>
+<p>acid–deficiency anemia, unless the etiology cannot be corrected. If malabsorption</p>
+<p>is present, a dose of 1–5 mg daily may be necessary. Parenteral folic acid is available</p>
+<p>but rarely necessary.</p>
+<h2>ANEMIA OF INFLAMMATION</h2>
+<li>Treatment of AI is less specific than that of other anemias and should focus on cor-</li>
+<p>recting reversible causes. Reserve iron therapy for an established IDA; iron is not</p>
+<p>effective when inflammation is present. RBC transfusions are effective but should be</p>
+<p>limited to episodes of inadequate oxygen transport and Hb of 7–8 g/dL (70–80 g/L;</p>
+<p>4.34–4.97 mmol/L).</p>
+<li>Erythropoiesis-stimulating agents (ESAs) can be considered, but response can be</li>
+<p>impaired in patients with AI. The initial dosage for epoetin alfa is 50–100 units/kg</p>
+<p>three times weekly and darbepoetin alfa 0.45 mcg/kg once weekly. Iron, cobalamin,</p>
+<p>and folic acid supplementation may improve response to ESA treatment.</p>
+<li>Potential toxicities of exogenous ESA administration include increases in blood pres-</li>
+<p>sure, nausea, headache, fever, bone pain, and fatigue. Hb must be monitored during</p>
+<p>361</p>
+<p>ch33.indd 361 19-11-2020 13:21:15</p>
+<div class="table-container"><table><tr><th>TABLE 33-2 Oral Iron Products</th><th></th><th></th></tr><tr><td>Iron Salt</td><td>Percent
+Elemental Iron</td><td>Common Formulations and
+Elemental Iron Provided</td></tr><tr><td>Ferrous sulfate</td><td>20</td><td>60–65 mg/324–325 mg tablet
+60 mg/5 mL syrup
+44 mg/5 mL elixir
+15 mg/1 mL drops</td></tr><tr><td>Ferrous sulfate
+(exsiccated)</td><td>30</td><td>65 mg/200 mg tablet
+50 mg/160 mg tablet</td></tr><tr><td>Ferrous gluconate</td><td>12</td><td>38 mg/325 mg tablet
+28–29 mg/240–246 mg tablet</td></tr><tr><td>Ferrous fumarate</td><td>33</td><td>66 mg/200 mg tablet
+106 mg/324–325 mg tablet</td></tr></table></div><h2>SECTION 7 | Hematologic Disorders</h2>
+<p>ESA therapy. An increase in Hb greater than 12 g/dL (120 g/L; 7.45 mmol/L) with</p>
+<p>treatment or a rise of greater than 1 g/dL (10 g/L; 0.62 mmol/L) every 2 weeks has</p>
+<p>been associated with increased mortality and cardiovascular events.</p>
+<li>In patients with anemia of critical illness, parenteral iron is often used but is associ-</li>
+<p>ated with a theoretical risk of infection.</p>
+<h2>ANEMIA IN PEDIATRIC POPULATIONS</h2>
+<li>Infants aged 9–12 months: Administer ferrous sulfate 3–6 mg/kg/day (elemental</li>
+<p>iron) divided once or twice daily between meals for 4 weeks. Continue for two addi-</p>
+<p>tional months in responders to replace storage iron pools. The dose and schedule of</p>
+<p>vitamin B should be titrated according to clinical and laboratory response. The daily</p>
+<p>12</p>
+<p>dose of folic acid is 1 mg.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>IDA: Positive response to oral iron therapy is characterized by modest reticulocy-</li>
+<p>tosis in a few days with an increase in Hb seen at 2 weeks. Reevaluate the patient if</p>
+<p>reticulocytosis does not occur. Hb should return to normal after 2 months; continue</p>
+<p>iron therapy until iron stores are replenished and serum ferritin normalized (up to</p>
+<p>12 months).</p>
+<li>Megaloblastic anemia: Signs and symptoms usually improve within a few days after</li>
+<p>starting vitamin B or folic acid therapy. Neurologic symptoms can take longer to</p>
+<p>12</p>
+<p>improve or can be irreversible, but should not progress during therapy. Reticulocyto-</p>
+<p>sis should occur within 3–5 days. Hb begins to rise a week after starting vitamin B</p>
+<p>12</p>
+<p>therapy and should normalize in 1–2 months. Hct should rise within 2 weeks after</p>
+<p>starting folic acid therapy and should normalize within 2 months.</p>
+<li>ESAs: Reticulocytosis should occur within a few days. Monitor iron, TIBC, transfer-</li>
+<p>rin saturation, and ferritin levels at baseline and periodically during therapy. The</p>
+<p>optimal form and schedule of iron supplementation are unknown. Discontinue ESAs</p>
+<p>if a clinical response does not occur after 8 weeks.</p>
+<li>Pediatrics: Monitor Hb, Hct, and RBC indices 4–8 weeks after initiation of iron</li>
+<p>therapy. Monitor Hb or Hct weekly in premature infants.</p>
+<p>See Chapter 100, Anemias, authored by Kristen Cook and Devon M. Greer, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>362</p>
+<p>ch33.indd 362 19-11-2020 13:21:16</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

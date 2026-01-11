@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Pharmacy Handbook - Dashboard</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #3b82f6;
+            --success: #10b981;
+            --bg: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-card h3 {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .search-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .file-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+
+        .file-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .file-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .file-card h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 3.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background 0.2s;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .footer {
+            margin-top: 80px;
+            text-align: center;
+            color: var(--text-muted);
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Pharmacy Digital Library</h1>
+            <p>Quick and organized access to all chapters of the Clinical Pharmacy Handbook converted with high precision.</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Files</h3>
+                <p id="total-files">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Last Updated</h3>
+                <p>January 2026</p>
+            </div>
+            <div class="stat-card">
+                <h3>Status</h3>
+                <p style="color: var(--success);">Ready</p>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for a specific chapter (e.g., Diabetes, Heart, Asthma)...">
+        </div>
+
+        <div class="grid" id="files-grid">
+            <!-- Cards will be generated here by script -->
+        </div>
+
+        <footer class="footer">
+            <p>Designed and Converted by Manus &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const files = [
+            {"name": "1. Gout and Hyperuricemia", "url": "1. Gout and Hyperuricemia.html"},
+            {"name": "10. Hypertension", "url": "10. Hypertension.html"},
+            {"name": "11. Ischemic Heart Disease", "url": "11. Ischemic Heart Disease.html"},
+            {"name": "12. Shock Syndromes", "url": "12. Shock Syndromes.html"},
+            {"name": "13. Stroke", "url": "13. Stroke.html"},
+            {"name": "14. Venous Thromboembolism", "url": "14. Venous Thromboembolism.html"},
+            {"name": "15. Acne Vulgaris", "url": "15. Acne Vulgaris.html"},
+            {"name": "16. Dermatologic Drug Reactions and Common Skin Conditions", "url": "16. Dermatologic Drug Reactions and Common Skin Conditions.html"},
+            {"name": "17. Psoriasis", "url": "17. Psoriasis.html"},
+            {"name": "18. Adrenal Gland Disorders", "url": "18. Adrenal Gland Disorders.html"},
+            {"name": "19. Diabetes Mellitus", "url": "19. Diabetes Mellitus.html"},
+            {"name": "2. Osteoarthritis", "url": "2. Osteoarthritis.html"},
+            {"name": "20. Thyroid Disorders", "url": "20. Thyroid Disorders.html"},
+            {"name": "21. Cirrhosis and Portal Hypertension", "url": "21. Cirrhosis and Portal Hypertension.html"},
+            {"name": "22. Constipation", "url": "22. Constipation.html"},
+            {"name": "23. Diarrhea", "url": "23. Diarrhea.html"},
+            {"name": "24. Gastroesophageal Reflux Disease", "url": "24. Gastroesophageal Reflux Disease.html"},
+            {"name": "25. Hepatitis, Viral", "url": "25. Hepatitis, Viral.html"},
+            {"name": "26. Inflammatory Bowel Disease", "url": "26. Inflammatory Bowel Disease.html"},
+            {"name": "27. Nausea and Vomiting", "url": "27. Nausea and Vomiting.html"},
+            {"name": "28. Pancreatitis", "url": "28. Pancreatitis.html"},
+            {"name": "29. Peptic Ulcer Disease", "url": "29. Peptic Ulcer Disease.html"},
+            {"name": "3. Osteoporosis", "url": "3. Osteoporosis.html"},
+            {"name": "30. Contraception", "url": "30. Contraception.html"},
+            {"name": "31. Hormone Therapy in Women", "url": "31. Hormone Therapy in Women.html"},
+            {"name": "32. Pregnancy and Lactation", "url": "32. Pregnancy and Lactation.html"},
+            {"name": "33. Anemias", "url": "33. Anemias.html"},
+            {"name": "34. Sickle Cell Disease", "url": "34. Sickle Cell Disease.html"},
+            {"name": "35. Antimicrobial Regimen Selection", "url": "35. Antimicrobial Regimen Selection.html"},
+            {"name": "36. Central Nervous System Infections", "url": "36. Central Nervous System Infections.html"},
+            {"name": "37. Endocarditis", "url": "37. Endocarditis.html"},
+            {"name": "38. Fungal Infections, Invasive", "url": "38. Fungal Infections, Invasive.html"},
+            {"name": "39. Fungal Infections, Superficial", "url": "39. Fungal Infections, Superficial.html"},
+            {"name": "4. Rheumatoid Arthritis", "url": "4. Rheumatoid Arthritis.html"},
+            {"name": "40. Gastrointestinal Infections", "url": "40. Gastrointestinal Infections.html"},
+            {"name": "41. Human Immunodeficiency Virus Infection", "url": "41. Human Immunodeficiency Virus Infection.html"},
+            {"name": "42. Influenza", "url": "42. Influenza.html"},
+            {"name": "43. Intra-Abdominal Infections", "url": "43. Intra-Abdominal Infections.html"},
+            {"name": "44. Respiratory Tract Infections, Lower", "url": "44. Respiratory Tract Infections, Lower.html"},
+            {"name": "45. Respiratory Tract Infections, Upper", "url": "45. Respiratory Tract Infections, Upper.html"},
+            {"name": "46. Sepsis and Septic Shock", "url": "46. Sepsis and Septic Shock.html"},
+            {"name": "47. Sexually Transmitted Diseases", "url": "47. Sexually Transmitted Diseases.html"},
+            {"name": "48. Skin and Soft-Tissue Infections", "url": "48. Skin and Soft-Tissue Infections.html"},
+            {"name": "49. Surgical Prophylaxis", "url": "49. Surgical Prophylaxis.html"},
+            {"name": "5. Acute Coronary Syndromes", "url": "5. Acute Coronary Syndromes.html"},
+            {"name": "50. Tuberculosis", "url": "50. Tuberculosis.html"},
+            {"name": "51. Urinary Tract Infections and Prostatitis", "url": "51. Urinary Tract Infections and Prostatitis.html"},
+            {"name": "52. Vaccines, Toxoids, and Other Immunobiologics", "url": "52. Vaccines, Toxoids, and Other Immunobiologics.html"},
+            {"name": "53. Alzheimer Disease", "url": "53. Alzheimer Disease.html"},
+            {"name": "54. Epilepsy and Status Epilepticus", "url": "54. Epilepsy and Status Epilepticus.html"},
+            {"name": "55. Headache Migraine and Tension-Type", "url": "55. Headache Migraine and Tension-Type.html"},
+            {"name": "56. Pain Management", "url": "56. Pain Management.html"},
+            {"name": "57. Parkinson Disease", "url": "57. Parkinson Disease.html"},
+            {"name": "58. Obesity", "url": "58. Obesity.html"},
+            {"name": "59. Nutrition Assessment and Support", "url": "59. Nutrition Assessment and Support.html"},
+            {"name": "6. Arrhythmias", "url": "6. Arrhythmias.html"},
+            {"name": "60. Breast Cancer", "url": "60. Breast Cancer.html"},
+            {"name": "61. Colorectal Cancer", "url": "61. Colorectal Cancer.html"},
+            {"name": "62. Lung Cancer", "url": "62. Lung Cancer.html"},
+            {"name": "63. Lymphomas", "url": "63. Lymphomas.html"},
+            {"name": "64. Prostate Cancer", "url": "64. Prostate Cancer.html"},
+            {"name": "65. Glaucoma", "url": "65. Glaucoma.html"},
+            {"name": "66. Anxiety Disorders", "url": "66. Anxiety Disorders.html"},
+            {"name": "67. Bipolar Disorder", "url": "67. Bipolar Disorder.html"},
+            {"name": "68. Depressive Disorder", "url": "68. Depressive Disorder.html"},
+            {"name": "69. Opioid Use Disorder", "url": "69. Opioid Use Disorder.html"},
+            {"name": "7. Cardiac Arrest", "url": "7. Cardiac Arrest.html"},
+            {"name": "70. Schizophrenia", "url": "70. Schizophrenia.html"},
+            {"name": "71. Sleep–Wake Disorders", "url": "71. Sleep–Wake Disorders.html"},
+            {"name": "72. Substance Use Disorders Alcohol, CNS Depressants, Stimulants, Nicotine", "url": "72. Substance Use Disorders Alcohol, CNS Depressants, Stimulants, Nicotine.html"},
+            {"name": "73. Acid–Base Disorders", "url": "73. Acid–Base Disorders.html"},
+            {"name": "74. Acute Kidney Injury", "url": "74. Acute Kidney Injury.html"},
+            {"name": "75. Chronic Kidney Disease", "url": "75. Chronic Kidney Disease.html"},
+            {"name": "76. Electrolyte Homeostasis", "url": "76. Electrolyte Homeostasis.html"},
+            {"name": "77. Allergic Rhinitis", "url": "77. Allergic Rhinitis.html"},
+            {"name": "78. Asthma", "url": "78. Asthma.html"},
+            {"name": "79. Chronic Obstructive Pulmonary Disease", "url": "79. Chronic Obstructive Pulmonary Disease.html"},
+            {"name": "8. Dyslipidemia", "url": "8. Dyslipidemia.html"},
+            {"name": "80. Benign Prostatic Hyperplasia", "url": "80. Benign Prostatic Hyperplasia.html"},
+            {"name": "81. Erectile Dysfunction", "url": "81. Erectile Dysfunction.html"},
+            {"name": "82. Urinary Incontinence", "url": "82. Urinary Incontinence.html"},
+            {"name": "9. Heart Failure", "url": "9. Heart Failure.html"},
+            {"name": "Appendix 1. Pediatric Pharmacotherapy, Nutrition, and Neonatal Critical Care", "url": "Appendix 1. Pediatric Pharmacotherapy, Nutrition, and Neonatal Critical Care.html"},
+            {"name": "Appendix 2. Geriatric Assessment and Pharmacotherapy", "url": "Appendix 2. Geriatric Assessment and Pharmacotherapy.html"},
+            {"name": "Appendix 3. Critical Care Patient Assessment and Pharmacotherapy", "url": "Appendix 3. Critical Care Patient Assessment and Pharmacotherapy.html"},
+            {"name": "Appendix 4. Drug Allergy", "url": "Appendix 4. Drug Allergy.html"},
+            {"name": "Appendix 5. Drug-Induced Hematologic Disorders", "url": "Appendix 5. Drug-Induced Hematologic Disorders.html"},
+            {"name": "Appendix 6. Drug-Induced Liver Disease", "url": "Appendix 6. Drug-Induced Liver Disease.html"},
+            {"name": "Appendix 7. Drug-Induced Pulmonary Disease", "url": "Appendix 7. Drug-Induced Pulmonary Disease.html"},
+            {"name": "Appendix 8. Drug-Induced Kidney Disease", "url": "Appendix 8. Drug-Induced Kidney Disease.html"},
+            {"name": "Appendix 9. Drug-Induced Ophthalmic Disorders", "url": "Appendix 9. Drug-Induced Ophthalmic Disorders.html"},
+            {"name": "The Patient Care Process", "url": "The Patient Care Process.html"}
+        ];
+
+        const grid = document.getElementById('files-grid');
+        const searchInput = document.getElementById('search-input');
+        const totalFilesEl = document.getElementById('total-files');
+
+        totalFilesEl.textContent = files.length;
+
+        function renderFiles(filter = '') {
+            grid.innerHTML = '';
+            const filtered = files.filter(f => f.name.toLowerCase().includes(filter.toLowerCase()));
+            
+            filtered.forEach(file => {
+                const card = document.createElement('div');
+                card.className = 'file-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h2>${file.name}</h2>
+                    </div>
+                    <a href="${file.url}" class="btn">
+                        <span>Open File</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => renderFiles(e.target.value));
+        renderFiles();
+    </script>
+</body>
+</html>

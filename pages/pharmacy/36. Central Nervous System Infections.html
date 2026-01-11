@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36. Central Nervous System Infections</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>36. Central Nervous System Infections</h1>
+        </header>
+        <main>
+            <li>Central nervous system (CNS) infections include a wide variety of clinical conditions</li>
+<p>and etiologies: meningitis, meningoencephalitis, encephalitis, brain and meningeal</p>
+<p>abscesses, and shunt infections. The focus of this chapter is meningitis.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The development of bacterial meningitis involves four main processes: (1) mucosal</li>
+<p>colonization and bacterial invasion of the host and CNS, (2) bacterial replication</p>
+<p>in the subarachnoid space, (3) pathophysiologic alterations resulting in progressive</p>
+<p>inflammation, and (4) increased intracranial pressure (ICP) and cerebral edema lead-</p>
+<p>ing to neuronal damage.</p>
+<li>The critical first step in the acquisition of acute bacterial meningitis is nasopharyn-</li>
+<p>geal colonization of the host by the bacterial pathogen. Most cases of acute bacterial</p>
+<p>meningitis probably occur following bacteremia, but the high incidence of pneu-</p>
+<p>mococcal meningitis in patients with sinusitis and otitis media suggests that direct</p>
+<p>spread to the CNS can also occur.</p>
+<li>CNS infections may be caused by a variety of bacteria, fungi, viruses, and parasites.</li>
+<p>The most common causes of bacterial meningitis are Streptococcus pneumoniae,</p>
+<p>group B Streptococcus, Neisseria meningitidis, Haemophilus influenzae, and Listeria</p>
+<p>monocytogenes.</p>
+<li>A common characteristic of most CNS bacterial pathogens (eg, H. influenzae,</li>
+<p>Escherichia coli, N. meningitidis) is the presence of an extensive polysaccharide</p>
+<p>capsule that is resistant to neutrophil phagocytosis and complement opsonization.</p>
+<li>The neurologic sequelae of meningitis occur due to the activation of host inflam-</li>
+<p>matory pathways. Bacterial cell lysis causes the release of cell wall components such</p>
+<p>as lipopolysaccharide, lipid A (endotoxin), lipoteichoic acid, teichoic acid, and pep-</p>
+<p>tidoglycan, depending on whether the pathogen is gram-positive or gram-negative.</p>
+<li>These cell wall components cause capillary endothelial cells and CNS macrophages</li>
+<p>to release cytokines (interleukin-1, tumor necrosis factor, and other inflammatory</p>
+<p>mediators). Proteolytic products and toxic oxygen radicals cause an alteration of</p>
+<p>the blood–brain barrier, whereas platelet-activating factor activates coagulation,</p>
+<p>and arachidonic acid metabolites stimulate vasodilation. These events lead to cere-</p>
+<p>bral edema, elevated intracranial pressure, cerebrospinal fluid (CSF) pleocytosis,</p>
+<p>decreased cerebral blood flow, cerebral ischemia, and death.</p>
+<li>Passive and active exposure to cigarette smoke and the presence of a cochlear implant</li>
+<p>that includes a positioner both increase the risk of bacterial meningitis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Signs and symptoms of acute bacterial meningitis include fever, nuchal rigidity,</li>
+<p>altered mental status, chills, vomiting, photophobia, and severe headache. Up to</p>
+<p>95% of patients exhibit at least two of the following symptoms: fever, nuchal rigidity,</p>
+<p>headache, and altered mental status. Kernig and Brudzinski signs may be present but</p>
+<p>are poorly sensitive and frequently absent in children.</p>
+<li>Clinical signs and symptoms in young children may include bulging fontanelle, apnea</li>
+<p>purpuric rash, and convulsions.</p>
+<li>Purpuric and petechial skin lesions typically indicate meningococcal involvement,</li>
+<p>although the lesions may be present with H. influenzae meningitis. Rashes rarely</p>
+<p>occur with pneumococcal meningitis.</p>
+<li>Meningitis causes changes in CSF fluid, and these changes can be used as diagnostic</li>
+<h2>markers of infection (Table 36-1).</h2>
+<p>379</p>
+<h2>RETPAHC</h2>
+<p>36</p>
+<p>Central Nervous System</p>
+<p>Infections</p>
+<p>ch36.indd 379 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>36</th><th>Central Nervous System
+Infections</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 36-1 Mean Values of the Components of Normal and Abnormal Cerebrospinal Fluid</p>
+<p>Type Normal Bacterial Viral Fungal Tuberculosis</p>
+<p>WBC (cells/ &lt;5 (&lt;30 in 1000–5000 50–1000 20–500 25–500</p>
+<p>mm3 or newborns)</p>
+<h2>106/L)</h2>
+<p>Differentiala Monocytes Neutrophils Lymphocytes Lymphocytes Lymphocytes</p>
+<p>Protein &lt;50 (&lt;500 Elevated Mild Elevated Elevated</p>
+<p>(mg/dL) mg/L) elevation</p>
+<p>Glucose 45–80 Low Normal Low Low</p>
+<p>(mg/dL) (2.5–4.4</p>
+<p>mmol/L)</p>
+<p>CSF/blood 50%–60% Decreased Normal Decreased Decreased</p>
+<p>glucose</p>
+<p>ratio</p>
+<p>aInitial cerebrospinal fluid (CSF), while blood cell (WBC) count may reveal a predominance of</p>
+<p>polymorphonuclear neutrophils (PMNs). In CNS infection due to tuberculosis, “therapeutic</p>
+<p>paradox” may occur in which a lymphocytic predominance becomes neutrophilic during</p>
+<p>antituberculous treatment.</p>
+<li>CSF culture is the gold standard for diagnosis of bacterial meningitis and is positive</li>
+<p>in 80%–90% of patients with community-acquired bacterial meningitis if the CSF</p>
+<p>sample is obtained before the start of antimicrobial therapy.</p>
+<li>Gram stain is a rapid, inexpensive, and accurate method to assess the presence of</li>
+<p>bacteria in CSF. However, prior antibiotic therapy may cause the Gram stain and CSF</p>
+<p>culture to be negative, but the antibiotic therapy rarely affects CSF protein or glucose.</p>
+<p>The sensitivity of the Gram stain depends on the causative microorganism, so that its</p>
+<p>aggregate diagnostic yield is 90% in pneumococcal meningitis, 70%–90% in menin-</p>
+<p>gococcal, 50% in H. influenza, and only 25%–35% in L. monocytogenes meningitis.</p>
+<li>Polymerase chain reaction (PCR) techniques can rapidly diagnose CNS infections</li>
+<p>and may be particularly useful in patients who have received antimicrobial therapy</p>
+<p>before lumbar puncture, have negative cultures, or when the organism is fastidious</p>
+<p>or fails to grow in conventional culture.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Eradication of infection with amelioration of signs and symp-</li>
+<p>toms preventing morbidity and mortality.</p>
+<li>Key elements include initiating appropriate antimicrobials, providing support-</li>
+<p>ive care, and preventing disease through timely introduction of vaccination and</p>
+<p>chemoprophylaxis.</p>
+<li>Administration of fluids, electrolytes, antipyretics, and analgesics may be indicated</li>
+<p>for patients presenting with a possible CNS infection. Additionally, venous throm-</p>
+<p>boembolism prophylaxis, antiepileptic therapy, and ICP monitoring may be needed.</p>
+<h2>PHARMACOLOGIC TREATMENT</h2>
+<li>Empiric antimicrobial therapy should be instituted as soon as possible to eradicate</li>
+<p>the causative organism (Table 36-2). Antimicrobial therapy should last at least 48–72</p>
+<p>hours or until the diagnosis of bacterial meningitis can be ruled out. The first dose of</p>
+<p>antibiotic should not be withheld even when lumbar puncture is delayed or neuro-</p>
+<p>imaging is being performed. The time period from suspected diagnosis to initiation</p>
+<p>of antibiotic treatment should not exceed 1 hour.</p>
+<li>Continued therapy should be based on the assessment of clinical improvement,</li>
+<p>cultures, and susceptibility testing results. Once a pathogen is identified, antibiotic</p>
+<p>therapy should be tailored to the specific pathogen.</p>
+<p>380</p>
+<p>ch36.indd 380 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>TABLE 36-1 Mean Values of the Components of Normal and Abnormal Cerebrospinal Fluid</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Type</td><td>Normal</td><td>Bacterial</td><td>Viral</td><td>Fungal</td><td>Tuberculosis</td></tr><tr><td>WBC (cells/
+mm3 or
+106/L)</td><td>&lt;5 (&lt;30 in
+newborns)</td><td>1000–5000</td><td>50–1000</td><td>20–500</td><td>25–500</td></tr><tr><td>Differentiala</td><td>Monocytes</td><td>Neutrophils</td><td>Lymphocytes</td><td>Lymphocytes</td><td>Lymphocytes</td></tr><tr><td>Protein
+(mg/dL)</td><td>&lt;50 (&lt;500
+mg/L)</td><td>Elevated</td><td>Mild
+elevation</td><td>Elevated</td><td>Elevated</td></tr><tr><td>Glucose
+(mg/dL)</td><td>45–80
+(2.5–4.4
+mmol/L)</td><td>Low</td><td>Normal</td><td>Low</td><td>Low</td></tr><tr><td>CSF/blood
+glucose
+ratio</td><td>50%–60%</td><td>Decreased</td><td>Normal</td><td>Decreased</td><td>Decreased</td></tr></table></div><h2>Central Nervous System Infections | CHAPTER 36</h2>
+<p>TABLE 36-2 Bacterial Meningitis: Most Likely Etiologies and Empiric Therapy by Age Group</p>
+<p>Age Most Likely Organisms Empirical Therapya</p>
+<p>&lt;1 month S. agalactiae Ampicillin + cefotaxime</p>
+<p>Gram-negative entericsb or ampicillin +</p>
+<p>aminoglycoside</p>
+<p>L. monocytogenes</p>
+<p>1–23 months S. pneumoniae Vancomycinc + 3rd</p>
+<p>N. meningitidis generation cephalosporin</p>
+<p>(cefotaxime or</p>
+<p>H. influenzae</p>
+<p>ceftriaxone)</p>
+<p>S. agalactiae</p>
+<p>2–50 years N. meningitidis Vancomycinc + 3rd</p>
+<p>S. pneumoniae generation cephalosporin</p>
+<p>(cefotaxime or</p>
+<p>ceftriaxone)</p>
+<p>&gt;50 years S. pneumoniae Vancomycinc + ampicillin</p>
+<p>N. meningitidis + 3rd generation</p>
+<p>cephalosporin (cefotaxime</p>
+<p>Gram-negative entericsb</p>
+<p>or ceftriaxone)</p>
+<p>L. monocytogenes</p>
+<p>aAll recommendations are A-III.</p>
+<p>bE. coli, Klebsiella spp., Enterobacter spp. common.</p>
+<p>cVancomycin use should be based on local incidence of penicillin-resistant S. pneumoniae and until</p>
+<p>cefotaxime or ceftriaxone minimum inhibitory concentration results are available.</p>
+<p>Strength of recommendation: (A) Good evidence to support a recommendation for use; should</p>
+<p>always be offered. (B) Moderate evidence to support a recommendation for use; should generally</p>
+<p>be offered.</p>
+<p>Quality of evidence: (I) Evidence from one or more properly randomized, controlled trial. (II)</p>
+<p>Evidence from one or more well-designed clinical trial, without randomization; from cohort or</p>
+<p>case-controlled analytic studies (preferably from one or more center) or from multiple time-series.</p>
+<p>(III) Evidence from opinions of respected authorities, based on clinical experience, descriptive</p>
+<p>studies, or reports of expert committees.</p>
+<li>With increased meningeal inflammation, there will be greater antibiotic penetration</li>
+<p>(Table 36-3). Problems of CSF penetration can be overcome by direct instillation of</p>
+<p>antibiotics intrathecally or intraventricularly. Advantages of direct instillation, how-</p>
+<p>ever, must be weighed against the risks of invasive CNS procedures and adverse effects.</p>
+<p>Intraventricular delivery may be necessary in patients who have shunt infections that</p>
+<p>are difficult to eradicate or who cannot undergo the surgical components of therapy.</p>
+<li>See Table 36-4 for antimicrobial agents of first choice and alternatives for treatment</li>
+<p>of meningitis caused by gram-positive and gram-negative microorganisms.</p>
+<li>Meningitis caused by S. pneumoniae has been treated successfully with 10–14 days of</li>
+<p>antibiotic therapy, while cases caused by N. meningitidis or H. influenzae usually can</p>
+<p>be treated with a 7-day course. In contrast, a longer duration (21 days or more) has</p>
+<p>been recommended for patients with L. monocytogenes, Gram-negative or pseudo-</p>
+<p>monal meningitis. Nonetheless, antibiotic treatments for bacterial meningitis should</p>
+<p>be individualized, and some patients may require enduring courses.</p>
+<p>Dexamethasone as an Adjunctive Treatment for Meningitis</p>
+<li>In addition to antibiotics, dexamethasone is a commonly used adjunctive therapy in</li>
+<p>the treatment of acute bacterial meningitis to immunomodulate the inflammatory</p>
+<p>response.</p>
+<li>Recommendations by the Infectious Diseases Society of America (IDSA) call for the</li>
+<p>use of adjunctive dexamethasone in infants and children (6 weeks of age and older)</p>
+<p>with H. influenzae meningitis. The recommended intravenous dose is 0.15 mg/kg</p>
+<p>381</p>
+<p>ch36.indd 381 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>TABLE 36-2 Bacterial Meningitis: Most Likely Etiologies and Empiric Therapy by Age Group</th><th></th><th></th></tr><tr><td>Age</td><td>Most Likely Organisms</td><td>Empirical Therapya</td></tr><tr><td>&lt;1 month</td><td>S. agalactiae
+Gram-negative entericsb
+L. monocytogenes</td><td>Ampicillin + cefotaxime
+or ampicillin +
+aminoglycoside</td></tr><tr><td>1–23 months</td><td>S. pneumoniae
+N. meningitidis
+H. influenzae
+S. agalactiae</td><td>Vancomycinc + 3rd
+generation cephalosporin
+(cefotaxime or
+ceftriaxone)</td></tr><tr><td>2–50 years</td><td>N. meningitidis
+S. pneumoniae</td><td>Vancomycinc + 3rd
+generation cephalosporin
+(cefotaxime or
+ceftriaxone)</td></tr><tr><td>&gt;50 years</td><td>S. pneumoniae
+N. meningitidis
+Gram-negative entericsb
+L. monocytogenes</td><td>Vancomycinc + ampicillin
++ 3rd generation
+cephalosporin (cefotaxime
+or ceftriaxone)</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 36-3 Penetration of Anti-infective Agents into the CSFa</p>
+<p>Therapeutic Levels in CSF With or Without Inflammation of Meninges</p>
+<p>Acyclovir Levofloxacin</p>
+<p>Chloramphenicol Linezolid</p>
+<p>Ciprofloxacin Metronidazole</p>
+<p>Fluconazole Moxifloxacin</p>
+<p>Flucytosine Pyrazinamide</p>
+<p>Foscarnet Rifampin</p>
+<p>Fosfomycin Sulfonamides</p>
+<p>Ganciclovir Trimethoprim</p>
+<p>Isoniazid Voriconazole</p>
+<p>Therapeutic Levels in CSF With Inflammation of Meninges</p>
+<p>Ampicillin ± sulbactam Imipenem</p>
+<p>Aztreonam Meropenem</p>
+<p>Cefepime Nafcillin</p>
+<p>Cefotaxime Ofloxacin</p>
+<p>Ceftazidime Penicillin G</p>
+<p>Ceftriaxone Piperacillin/Tazobactamb</p>
+<p>Cefuroxime Pyrimethamine</p>
+<p>Colistin Quinupristin/Dalfopristin</p>
+<p>Daptomycin Ticarcillin ± clavulanic acidb</p>
+<p>Ethambutol Vancomycin</p>
+<p>Nontherapeutic Levels in CSF With or Without Inflammation of Meninges</p>
+<p>Aminoglycosides Cephalosporins (second generation)d</p>
+<p>Amphotericin B Doxycyclinee</p>
+<p>β-Lactamase inhibitorsc Itraconazolef</p>
+<p>Cephalosporins (first generation)</p>
+<p>aUsing recommended CNS dosing and compared to MIC of target pathogens.</p>
+<p>bMay not achieve therapeutic levels against organisms with higher MIC, as in P. aeruginosa.</p>
+<p>Tazobactam does not penetrate the blood-brain barrier.</p>
+<p>cIncludes clavulanic acid, sulbactam, and tazobactam.</p>
+<p>dCefuroxime is an exception.</p>
+<p>eDocumented effectiveness for B. burgdorferi.</p>
+<p>fAchieves therapeutic concentrations for Cryptococcus neoformans therapy.</p>
+<p>every 6 hours for 2–4 days, initiated 10–20 minutes prior to or concomitant with</p>
+<p>the first dose of antibiotics. In infants and children with pneumococcal meningitis,</p>
+<p>adjunctive dexamethasone may be considered after weighing the potential benefits</p>
+<p>and possible risks. If pneumococcal meningitis is suspected or proven, adults should</p>
+<p>receive dexamethasone 0.15 mg/kg (up to 10 mg) every 6 hours for 2–4 days with the</p>
+<p>first dose administered 10–20 minutes prior to first dose of antibiotics.</p>
+<p>Neisseria meningitidis (Meningococcus)</p>
+<li>N. meningitidis is a leading cause of bacterial meningitis among children and young</li>
+<p>adults in the United States and around the world. It is spread by direct person-</p>
+<p>to-person close contact, including respiratory droplets and pharyngeal secretions.</p>
+<p>382</p>
+<p>ch36.indd 382 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>TABLE 36-3 Penetration of Anti-infective Agents into the CSFa</th><th></th></tr><tr><td>Therapeutic Levels in CSF With or Without Inflammation of Meninges</td><td></td></tr><tr><td>Acyclovir</td><td>Levofloxacin</td></tr><tr><td>Chloramphenicol</td><td>Linezolid</td></tr><tr><td>Ciprofloxacin</td><td>Metronidazole</td></tr><tr><td>Fluconazole</td><td>Moxifloxacin</td></tr><tr><td>Flucytosine</td><td>Pyrazinamide</td></tr><tr><td>Foscarnet</td><td>Rifampin</td></tr><tr><td>Fosfomycin</td><td>Sulfonamides</td></tr><tr><td>Ganciclovir</td><td>Trimethoprim</td></tr><tr><td>Isoniazid</td><td>Voriconazole</td></tr><tr><td>Therapeutic Levels in CSF With Inflammation of Meninges</td><td></td></tr><tr><td>Ampicillin ± sulbactam</td><td>Imipenem</td></tr><tr><td>Aztreonam</td><td>Meropenem</td></tr><tr><td>Cefepime</td><td>Nafcillin</td></tr><tr><td>Cefotaxime</td><td>Ofloxacin</td></tr><tr><td>Ceftazidime</td><td>Penicillin G</td></tr><tr><td>Ceftriaxone</td><td>Piperacillin/Tazobactamb</td></tr><tr><td>Cefuroxime</td><td>Pyrimethamine</td></tr><tr><td>Colistin</td><td>Quinupristin/Dalfopristin</td></tr><tr><td>Daptomycin</td><td>Ticarcillin ± clavulanic acidb</td></tr><tr><td>Ethambutol</td><td>Vancomycin</td></tr><tr><td>Nontherapeutic Levels in CSF With or Without Inflammation of Meninges</td><td></td></tr><tr><td>Aminoglycosides</td><td>Cephalosporins (second generation)d</td></tr><tr><td>Amphotericin B</td><td>Doxycyclinee</td></tr><tr><td>β-Lactamase inhibitorsc</td><td>Itraconazolef</td></tr><tr><td>Cephalosporins (first generation)</td><td></td></tr></table></div><h2>Central Nervous System Infections | CHAPTER 36</h2>
+<p>TABLE 36-4 Antimicrobial Agents of First Choice and Alternative Choice for Treating</p>
+<p>Meningitis Caused by Gram-Positive and Gram-Negative Microorganisms</p>
+<p>Recommended</p>
+<p>Antibiotics of First Alternative Duration of</p>
+<p>Organism Choice Antibiotics Therapy</p>
+<p>Gram-Positive</p>
+<p>Organisms</p>
+<p>Streptococcus 10–14 days</p>
+<p>pneumoniaea</p>
+<p>Penicillin Penicillin G or Cefotaxime (A-III),</p>
+<p>susceptible ampicillin (A-III) ceftriaxone (A-III),</p>
+<p>MIC ≤0.06 mcg/ cefepime (B-II), or</p>
+<p>mL (mg/L) meropenem (B-II)</p>
+<p>Penicillin resistant Vancomycinb,c + Moxifloxacin (B-II)</p>
+<p>MIC &gt;0.06 mcg/ cefotaxime or</p>
+<p>mL (mg/L) ceftriaxone (A-III)</p>
+<p>Ceftriaxone Vancomycinb,c + Moxifloxacin (B-II)</p>
+<p>resistant cefotaxime or</p>
+<p>MIC &gt;0.5 mcg/ ceftriaxone (A-III)</p>
+<p>mL (mg/L)</p>
+<p>Staphylococcus 14–21 days</p>
+<p>aureus</p>
+<p>Methicillin Nafcillin or oxacillin Vancomycin (A-III) or</p>
+<p>susceptible (A-III) meropenem (B-III)</p>
+<p>Methicillin Vancomycinb,c (A-III) Trimethoprim-</p>
+<p>resistant sulfamethoxazole</p>
+<p>or linezolid (B-III)</p>
+<p>Group B Penicillin G or Ceftriaxone or 14–21 days</p>
+<p>Streptococcus ampicillin (A-III) ± cefotaxime (B-III)</p>
+<p>gentamicinb,c</p>
+<p>S. epidermidis Vancomycinb,c (A-III) Linezolid (B-III) 14–21 daysd</p>
+<p>L. monocytogenes Penicillin G or Trimethoprim- ≥21 days</p>
+<p>ampicillin ± sulfamethoxazole</p>
+<p>gentamicinb,c,e (A-III),</p>
+<p>(A-III) meropenem (B-III)</p>
+<p>Gram-Negative</p>
+<p>Organisms</p>
+<p>Neisseria meningitis 7–10 days</p>
+<p>Penicillin Penicillin G or Cefotaxime or</p>
+<p>susceptible ampicillin (A-III) ceftriaxone (A-III)</p>
+<p>Penicillin resistant Cefotaxime or Meropenem or</p>
+<p>ceftriaxone (A-III) moxifloxacin (A-III)</p>
+<p>Haemophilus 7–10 days</p>
+<p>influenzae</p>
+<p>β-lactamase Ampicillin (A-III) Cefotaxime (A-III),</p>
+<p>negative ceftriaxone (A-III),</p>
+<p>cefepime (A-III) or</p>
+<p>moxifloxacin (A-III)</p>
+<p>(Continued )</p>
+<p>383</p>
+<p>ch36.indd 383 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>TABLE 36-4 Antimicrobial Agents of First Choice and Alternative Choice for Treating
+Meningitis Caused by Gram-Positive and Gram-Negative Microorganisms</th><th></th><th></th><th></th></tr><tr><td>Organism</td><td>Antibiotics of First
+Choice</td><td>Alternative
+Antibiotics</td><td>Recommended
+Duration of
+Therapy</td></tr><tr><td>Gram-Positive
+Organisms</td><td></td><td></td><td></td></tr><tr><td>Streptococcus
+pneumoniaea</td><td></td><td></td><td>10–14 days</td></tr><tr><td>Penicillin
+susceptible
+MIC ≤0.06 mcg/
+mL (mg/L)</td><td>Penicillin G or
+ampicillin (A-III)</td><td>Cefotaxime (A-III),
+ceftriaxone (A-III),
+cefepime (B-II), or
+meropenem (B-II)</td><td></td></tr><tr><td>Penicillin resistant
+MIC &gt;0.06 mcg/
+mL (mg/L)</td><td>Vancomycinb,c +
+cefotaxime or
+ceftriaxone (A-III)</td><td>Moxifloxacin (B-II)</td><td></td></tr><tr><td>Ceftriaxone
+resistant
+MIC &gt;0.5 mcg/
+mL (mg/L)</td><td>Vancomycinb,c +
+cefotaxime or
+ceftriaxone (A-III)</td><td>Moxifloxacin (B-II)</td><td></td></tr><tr><td>Staphylococcus
+aureus</td><td></td><td></td><td>14–21 days</td></tr><tr><td>Methicillin
+susceptible</td><td>Nafcillin or oxacillin
+(A-III)</td><td>Vancomycin (A-III) or
+meropenem (B-III)</td><td></td></tr><tr><td>Methicillin
+resistant</td><td>Vancomycinb,c (A-III)</td><td>Trimethoprim-
+sulfamethoxazole
+or linezolid (B-III)</td><td></td></tr><tr><td>Group B
+Streptococcus</td><td>Penicillin G or
+ampicillin (A-III) ±
+gentamicinb,c</td><td>Ceftriaxone or
+cefotaxime (B-III)</td><td>14–21 days</td></tr><tr><td>S. epidermidis</td><td>Vancomycinb,c (A-III)</td><td>Linezolid (B-III)</td><td>14–21 daysd</td></tr><tr><td>L. monocytogenes</td><td>Penicillin G or
+ampicillin ±
+gentamicinb,c,e
+(A-III)</td><td>Trimethoprim-
+sulfamethoxazole
+(A-III),
+meropenem (B-III)</td><td>≥21 days</td></tr><tr><td>Gram-Negative
+Organisms</td><td></td><td></td><td></td></tr><tr><td>Neisseria meningitis</td><td></td><td></td><td>7–10 days</td></tr><tr><td>Penicillin
+susceptible</td><td>Penicillin G or
+ampicillin (A-III)</td><td>Cefotaxime or
+ceftriaxone (A-III)</td><td></td></tr><tr><td>Penicillin resistant</td><td>Cefotaxime or
+ceftriaxone (A-III)</td><td>Meropenem or
+moxifloxacin (A-III)</td><td></td></tr><tr><td>Haemophilus
+influenzae</td><td></td><td></td><td>7–10 days</td></tr><tr><td>β-lactamase
+negative</td><td>Ampicillin (A-III)</td><td>Cefotaxime (A-III),
+ceftriaxone (A-III),
+cefepime (A-III) or
+moxifloxacin (A-III)</td><td>(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 36-4 Antimicrobial Agents of First Choice and Alternative Choice for Treating</p>
+<p>Meningitis Caused by Gram-Positive and Gram-Negative Microorganisms(Continued )</p>
+<p>Recommended</p>
+<p>Antibiotics of First Alternative Duration of</p>
+<p>Organism Choice Antibiotics Therapy</p>
+<p>β-lactamase Cefotaxime or Cefepime (A-I) or</p>
+<p>positive ceftriaxone (A-I) moxifloxacin (A-III)</p>
+<p>Enterobacteriaceaef Cefotaxime or Cefepime (A-III), 21 days</p>
+<p>ceftriaxone (A-II) moxifloxacin</p>
+<h2>(A-III),</h2>
+<p>meropenem (A-III)</p>
+<p>or aztreonam</p>
+<h2>(A-III)</h2>
+<p>Pseudomonas Cefepime or Ciprofloxacin (A-III), 21 days</p>
+<p>aeruginosa ceftazidime (A-II) meropenem</p>
+<p>± tobramycinb,c (A-III), piperacillin</p>
+<p>(A-III) plus tobramycina,b</p>
+<p>(A-III), colistin</p>
+<p>sulfomethateg</p>
+<p>(B-III), aztreonam</p>
+<h2>(A-III)</h2>
+<p>aEuropean Guidelines recommend considering the addition of rifampin to vancomycin therapy.</p>
+<p>bDirect CNS administration may be considered if failed conventional treatment.</p>
+<p>cMonitor serum drug levels.</p>
+<p>dBased on clinical experience; no clear recommendations.</p>
+<p>eEuropean guidelines recommend adding gentamicin for the first 7 days of treatment.</p>
+<p>fIncludes E. coli and Klebsiella spp.</p>
+<p>gShould be reserved for multidrug-resistant pseudomonal or Acinetobacter infections for which all</p>
+<p>other therapeutic options have been exhausted.</p>
+<h2>See Table 36-2 footnotes for rating scale of evidence.</h2>
+<li>The presence of petechiae may be the primary clue that the underlying pathogen is N.</li>
+<p>meningitidis. Patients may also have an obvious or subclinical picture of disseminated</p>
+<p>intravascular coagulation (DIC).</p>
+<li>Deafness unilaterally, or more commonly bilaterally, may develop early or late in the</li>
+<p>disease course.</p>
+<li>Third-generation cephalosporins (ie, cefotaxime and ceftriaxone) are the recom-</li>
+<p>mended empiric treatment for meningococcal meningitis. Penicillin G or ampicillin</p>
+<p>is recommended for penicillin-susceptible isolates. The recommended duration of</p>
+<p>therapy is typically 7 days if there is good clinical response.</p>
+<li>Antimicrobial chemoprophylaxis of close contacts should be started as soon as pos-</li>
+<p>sible (ideally &lt;24 hours after identification of the index patient). In general, rifampin,</p>
+<p>ceftriaxone, and ciprofloxacin are recommended for prophylaxis; however, there is an</p>
+<p>increase in rifampin-resistant and ciprofloxacin-resistant isolates.</p>
+<li>For full details on vaccine availability and vaccination recommendations in various</li>
+<p>age groups and for those with significant risk factors, readers are referred to the cur-</p>
+<p>rent recommendations from the Advisory Committee on Immunization Practices.</p>
+<p>Streptococcus pneumoniae (Pneumococcus or Diplococcus)</p>
+<li>Streptococcus group B (GBS) is a leading cause of neonatal meningitis in the United</li>
+<p>States and around the world.</p>
+<li>Neurologic sequelae include sight or hearing loss and cerebral palsy.</li>
+<li>Universal prenatal screening and intrapartum antimicrobial prophylaxis of GBS-</li>
+<p>colonized pregnant women decreases the rate of early onset invasive disease.</p>
+<p>384</p>
+<p>ch36.indd 384 19-11-2020 14:55:54</p>
+<div class="table-container"><table><tr><th>TABLE 36-4 Antimicrobial Agents of First Choice and Alternative Choice for Treating
+Meningitis Caused by Gram-Positive and Gram-Negative Microorganisms(Continued )</th><th></th><th></th><th></th></tr><tr><td>Organism</td><td>Antibiotics of First
+Choice</td><td>Alternative
+Antibiotics</td><td>Recommended
+Duration of
+Therapy</td></tr><tr><td>β-lactamase
+positive</td><td>Cefotaxime or
+ceftriaxone (A-I)</td><td>Cefepime (A-I) or
+moxifloxacin (A-III)</td><td></td></tr><tr><td>Enterobacteriaceaef</td><td>Cefotaxime or
+ceftriaxone (A-II)</td><td>Cefepime (A-III),
+moxifloxacin
+(A-III),
+meropenem (A-III)
+or aztreonam
+(A-III)</td><td>21 days</td></tr><tr><td>Pseudomonas
+aeruginosa</td><td>Cefepime or
+ceftazidime (A-II)
+± tobramycinb,c
+(A-III)</td><td>Ciprofloxacin (A-III),
+meropenem
+(A-III), piperacillin
+plus tobramycina,b
+(A-III), colistin
+sulfomethateg
+(B-III), aztreonam
+(A-III)</td><td>21 days</td></tr></table></div><h2>Central Nervous System Infections | CHAPTER 36</h2>
+<p>Recommended agents for intrapartum prophylaxis are penicillin or ampicillin,</p>
+<p>cefazolin (if penicillin allergy and not at high risk for anaphylaxis), or vancomycin (if</p>
+<p>penicillin allergy and at high risk for anaphylaxis).</p>
+<li>Ampicillin plus an aminoglycoside is the treatment of choice for a newborn infant</li>
+<p>with presumptive early-onset GBS meningitis. For empirical therapy of late-onset</p>
+<p>meningitis, ampicillin and an aminoglycoside or cefotaxime is recommended.</p>
+<p>Ampicillin or penicillin G is the recommended agent in adults. Addition of an ami-</p>
+<p>noglycoside could also be considered. For infants with uncomplicated meningitis, 14</p>
+<p>days of treatment is satisfactory, but longer periods of treatment may be necessary</p>
+<p>for patients with prolonged or complicated courses. For adults, the recommended</p>
+<p>duration of antibiotics is 14–21 days.</p>
+<li>Refer to Chapter 52 for information on pneumococcal vaccines.</li>
+<p>Haemophilus influenzae</p>
+<li>Widespread vaccination of infants and children has effectively decreased the inci-</li>
+<p>dence of bacterial meningitis due to Hib in children between the ages of 1 month and</p>
+<p>5 years, resulting in a significant decline in all cases of bacterial meningitis.</p>
+<li>Third-generation cephalosporins (cefotaxime and ceftriaxone) are the drugs of</li>
+<p>choice for empirical therapy for H. influenzae type b meningitis as they are active</p>
+<p>against β-lactamase–producing and non-β-lactamase–producing strains. Cefepime</p>
+<p>and fluoroquinolones are suitable alternatives regardless of β-lactamase activity.</p>
+<li>Recommended duration of treatment is 7 days (adults) or 7–10 days (children).</li>
+<li>Dexamethasone is beneficial for treatment of infants and children with Hib menin-</li>
+<p>gitis to diminish the risk of hearing loss, if given before or concurrently with the first</p>
+<p>dose of antimicrobial agent(s).</p>
+<li>Chemoprophylaxis with rifampin is indicated to reduce the risk of secondary inva-</li>
+<p>sive Hib disease in close contacts by eliminating nasopharyngeal and oropharyngeal</p>
+<p>carriages of H. influenzae. Rifampin should be administered orally, once a day for 4</p>
+<p>days (20 mg/kg/dose; maximum, 600 mg). For information on who should receive</p>
+<p>prophylaxis (adults and children), refer to the recommendations of the American</p>
+<p>Academy of Pediatrics.</p>
+<li>Refer to Chapter 52 for information on H. influenzae vaccination.</li>
+<p>Listeria monocytogenes</p>
+<li>L. monocytogenes is implicated in approximately 10% of meningitis cases in patients</li>
+<p>older than 65 years of age and carries a case-fatality rate of approximately 18% in the</p>
+<p>United States.</p>
+<li>Treatment of L. monocytogenes meningitis should consist of penicillin G or ampicil-</li>
+<p>lin. The addition of aminoglycoside is also recommended in proven infection in both</p>
+<p>children and adults. Patients should be treated a minimum of 21 days.</p>
+<li>Trimethoprim–sulfamethoxazole and meropenem may be effective alternatives</li>
+<p>because adequate CSF penetration is achieved with these agents.</p>
+<p>See Chapter 124, Central Nervous System Infections, authored by Christina Koutsari,</p>
+<p>Thomas J. Dilworth, Jessica S. Holt, Ramy H. Elshaboury, and John C. Rotschafer, for a</p>
+<p>more detailed discussion of this topic.</p>
+<p>385</p>
+<p>ch36.indd 385 19-11-2020 14:55:54</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

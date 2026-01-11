@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23. Diarrhea</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>23. Diarrhea</h1>
+        </header>
+        <main>
+            <p>245</p>
+<h2>RETPAHC</h2>
+<p>23</p>
+<p>Diarrhea</p>
+<li>Diarrhea is an increased frequency and decreased consistency of fecal discharge as</li>
+<p>compared with an individual’s normal bowel pattern. Diarrhea can be thought of as</p>
+<p>both a symptom and a sign of a systemic disease.</p>
+<li>Acute diarrhea is commonly defined as shorter than 14 days’ duration, persistent</li>
+<p>diarrhea as longer than 14 days’ duration, and chronic diarrhea as longer than</p>
+<p>30 days’ duration. Most cases of acute diarrhea are caused by infections with viruses,</p>
+<p>bacteria, or protozoa, and are generally self-limited.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Although viruses are more commonly associated with acute gastroenteritis, bacteria</li>
+<p>are responsible for more cases of acute diarrhea. Common causative bacterial organ-</p>
+<p>isms include Shigella, Salmonella, Campylobacter, Staphylococcus, and Escherichia</p>
+<p>coli. Acute viral infections are attributed mostly to the Norwalk and rotavirus</p>
+<p>groups.</p>
+<li>Diarrhea is an imbalance in absorption and secretion of water and electrolytes. It may</li>
+<p>be associated with a specific disease of the gastrointestinal (GI) tract or with a disease</p>
+<p>outside the GI tract.</p>
+<li>Four general pathophysiologic mechanisms disrupt water and electrolyte balance,</li>
+<p>leading to diarrhea: (1) a change in active ion transport by either decreased sodium</p>
+<p>absorption or increased chloride secretion, (2) a change in intestinal motility, (3) an</p>
+<p>increase in luminal osmolarity, and (4) an increase in tissue hydrostatic pressure.</p>
+<p>These mechanisms have been related to four broad clinical diarrheal groups: secre-</p>
+<p>tory, osmotic, exudative, and altered intestinal transit.</p>
+<li>Secretory diarrhea occurs when a stimulating substance (eg, vasoactive intestinal</li>
+<p>peptide [VIP] from a pancreatic tumor, unabsorbed dietary fat in steatorrhea, laxa-</p>
+<p>tives, hormones [such as secretion], bacterial toxins, and excessive bile salts) increases</p>
+<p>secretion or decreases absorption of large amounts of water and electrolytes.</p>
+<li>Inflammatory diseases of the GI tract can cause exudative diarrhea by discharge of</li>
+<p>mucus, proteins, or blood into the gut. With altered intestinal transit, intestinal motil-</p>
+<p>ity is altered by reduced contact time in the small intestine, premature emptying of</p>
+<p>the colon, or bacterial overgrowth.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Acute diarrhea is usually self-limiting and subsides within 72 hours of onset, whereas</li>
+<p>chronic diarrhea involves frequent attacks over extended time periods. However,</p>
+<p>infants, young children, the elderly, and debilitated persons are at risk for morbid and</p>
+<p>mortal events in prolonged or voluminous diarrhea.</p>
+<li>Signs and symptoms include:</li>
+<p>✓ Abrupt onset of nausea, vomiting, abdominal pain, headache, fever, chills, and</p>
+<p>malaise</p>
+<p>✓ Bowel movements are frequent and never bloody, and diarrhea lasts 12–60 hours</p>
+<p>✓ Intermittent periumbilical or lower right quadrant pain with cramps and audible</p>
+<p>bowel sounds is characteristic of small intestinal disease</p>
+<p>✓ When pain is present in large intestinal diarrhea, it is a gripping, aching sensation</p>
+<p>with tenesmus (straining, ineffective, and painful stooling)</p>
+<p>✓ In chronic diarrhea, a history of previous bouts, weight loss, anorexia, and chronic</p>
+<p>weakness are important findings</p>
+<li>Physical examination typically demonstrates hyperperistalsis with borborygmi and</li>
+<p>generalized or local tenderness.</p>
+<p>ch23.indd 245 19-11-2020 11:55:58</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>23</th><th>Diarrhea</th></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<li>Laboratory tests:</li>
+<p>✓ Stool analysis studies include examination for microorganisms, blood, mucus, fat,</p>
+<p>osmolality, pH, electrolyte and mineral concentration, and cultures</p>
+<p>✓ Stool test kits are useful for detecting GI viruses, particularly rotavirus</p>
+<p>✓ Antibody serologic testing shows rising titers over a 3- to 6-day period, but this test</p>
+<p>is not practical and is nonspecific</p>
+<p>✓ Occasionally, total daily stool volume is also determined</p>
+<p>✓ Direct endoscopic visualization and biopsy of the colon may be undertaken to</p>
+<p>assess for the presence of conditions such as colitis or cance</p>
+<li>Radiographic studies are helpful in neoplastic and inflammatory conditions.</li>
+<li>Many agents, including antibiotics and other drugs, cause diarrhea (Table 23-1).</li>
+<p>Laxative abuse for weight loss may also result in diarrhea.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: To manage the diet, prevent excessive water, electrolyte, and</li>
+<p>acid–base disturbances; provide symptomatic relief; treat curable causes of diar-</p>
+<p>rhea; and manage secondary disorders causing diarrhea. Diarrhea, like a cough,</p>
+<p>may be a body defense mechanism for ridding itself of harmful substances or</p>
+<p>pathogens. The correct therapeutic response is not necessarily to stop diarrhea</p>
+<p>at all costs. If diarrhea is secondary to another illness, controlling the primary</p>
+<p>condition is necessary.</p>
+<h2>GENERAL APPROACH TO TREATMENT</h2>
+<li>Management of the diet is a first priority for treatment of diarrhea (Figs. 23-1 and</li>
+<p>23-2). Most clinicians recommend stopping solid foods for 24 hours and avoiding</p>
+<p>dairy products.</p>
+<li>Dietary management is a first priority in the treatment of diarrhea. Feeding should</li>
+<p>continue in children with acute bacterial diarrhea.</p>
+<li>If vomiting is present and is uncontrollable with antiemetics, nothing is taken by</li>
+<p>mouth. As bowel movements decrease, a bland diet is begun.</p>
+<li>Rehydration and maintenance of water and electrolytes are the primary treatment</li>
+<p>measures until the diarrheal episode ends. If vomiting and dehydration are not</p>
+<p>severe, enteral feeding is the less costly and preferred method. In the United States,</p>
+<p>many commercial oral rehydration preparations are available (Table 23-2). The</p>
+<p>WHO now recommends an oral rehydration solution (ORS) with a lower osmolarity,</p>
+<h2>sodium content, and glucose load (see Table 23-2).</h2>
+<li>Oral supplementation of zinc 20 mg daily for 10 days in addition to ORS significantly</li>
+<p>reduces the severity and duration of acute diarrhea in developing countries.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Drugs used to treat diarrhea (Table 23-3) are grouped into several categories: anti-</li>
+<p>motility, adsorbents, antisecretory compounds, antibiotics, enzymes, and intestinal</p>
+<p>microflora. Usually, these drugs are not curative but palliative.</p>
+<li>Opiates and opioid derivatives delay the transit of intraluminal content or increase</li>
+<p>gut capacity, prolonging contact and absorption. The limitations of the opiates are</p>
+<p>addiction potential (a real concern with long-term use) and worsening of diarrhea in</p>
+<p>selected infectious diarrheas.</p>
+<li>Loperamide is often recommended for managing acute (including traveler’s diar-</li>
+<p>rhea) and chronic diarrhea. Diarrhea lasting 48 hours beyond initiating loperamide</p>
+<p>warrants medical attention.</p>
+<li>Diphenoxylate and difenoxin (a diphenoxylate derivative) are combined with atro-</li>
+<p>pine and have the same uses, precautions, and side effects.</p>
+<li>Bismuth subsalicylate is often used for treatment or prevention of diarrhea (trav-</li>
+<p>eler’s diarrhea) and has antisecretory, anti-inflammatory, and antibacterial effects.</p>
+<p>246</p>
+<p>ch23.indd 246 19-11-2020 11:55:59</p>
+<h2>Diarrhea | CHAPTER 23</h2>
+<h2>TABLE 23-1 Drugs Causing Diarrhea</h2>
+<p>Laxatives Guanadrel</p>
+<p>Antacids containing magnesium Angiotensin-converting enzyme inhibitors</p>
+<p>Antineoplastics Cholinergics</p>
+<p>Auranofin (gold salt) Bethanechol</p>
+<p>Antibiotics Neostigmine</p>
+<p>Clindamycin Cardiac agents</p>
+<p>Tetracyclines Quinidine</p>
+<p>Sulfonamides Digitalis</p>
+<p>Any broad-spectrum antibiotic Digoxin</p>
+<p>Antihypertensives Nonsteroidal anti-inflammatory drugs</p>
+<p>Reserpine Misoprostol</p>
+<p>Guanethidine Colchicine</p>
+<p>Methyldopa Proton pump inhibitors</p>
+<p>Guanabenz H-receptor blockers</p>
+<p>2</p>
+<p>Diarrhea</p>
+<p>History and physical</p>
+<p>examination</p>
+<p>Acute diarrhea Chronic diarrhea</p>
+<p>(&lt;3 days) (&gt;14 days)</p>
+<h2>Go to Figure 23-2</h2>
+<p>No fever or systemic Fever or systemic</p>
+<p>symptoms symptoms</p>
+<p>Symptomatic therapy Check feces for WBC/RBC/</p>
+<p>a. Fluid/electrolyte ova and parasites</p>
+<p>replacement</p>
+<p>b. Loperamide, Negative Positive</p>
+<p>diphenoxylate,</p>
+<p>or bismuth Symptomatic therapy Use appropriate</p>
+<p>subsalicylate antibiotic and</p>
+<p>c. Diet symptomatic therapy</p>
+<p>(RBC, red blood cells; WBC, white blood cells.)</p>
+<p>FIGURE 23-1. Recommendations for treating acute diarrhea. Follow these steps:</p>
+<p>(1) Perform a complete history and physical examination. (2) Is the diarrhea acute or</p>
+<p>chronic? If chronic diarrhea, go to Figure 23-2. (3) If acute diarrhea, check for fever</p>
+<p>and/or systemic signs and symptoms (ie, toxic patient). If systemic illness (fever,</p>
+<p>anorexia, or volume depletion), check for an infectious source. If positive for infec-</p>
+<p>tious diarrhea, use the appropriate antibiotic/anthelmintic drug and symptomatic</p>
+<p>therapy. If negative for infectious cause, use only symptomatic treatment. (4) If no</p>
+<p>systemic findings, use symptomatic therapy based on severity of volume depletion,</p>
+<p>oral or parenteral fluid/electrolytes, antidiarrheal agents (see Table 23-3), and diet.</p>
+<p>247</p>
+<p>ch23.indd 247 19-11-2020 11:56:00</p>
+<div class="table-container"><table><tr><th>TABLE 23-1 Drugs Causing Diarrhea</th><th></th></tr><tr><td>Laxatives</td><td>Guanadrel</td></tr><tr><td>Antacids containing magnesium</td><td>Angiotensin-converting enzyme inhibitors</td></tr><tr><td>Antineoplastics</td><td>Cholinergics</td></tr><tr><td>Auranofin (gold salt)</td><td>Bethanechol</td></tr><tr><td>Antibiotics</td><td>Neostigmine</td></tr><tr><td>Clindamycin</td><td>Cardiac agents</td></tr><tr><td>Tetracyclines</td><td>Quinidine</td></tr><tr><td>Sulfonamides</td><td>Digitalis</td></tr><tr><td>Any broad-spectrum antibiotic</td><td>Digoxin</td></tr><tr><td>Antihypertensives</td><td>Nonsteroidal anti-inflammatory drugs</td></tr><tr><td>Reserpine</td><td>Misoprostol</td></tr><tr><td>Guanethidine</td><td>Colchicine</td></tr><tr><td>Methyldopa</td><td>Proton pump inhibitors</td></tr><tr><td>Guanabenz</td><td>H-receptor blockers
+2</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<p>Chronic diarrhea</p>
+<p>Lasting &gt;14 days</p>
+<p>Possible causes: History and</p>
+<p>a. Intestinal infection physical examination</p>
+<p>b. Inflammatory bowel</p>
+<p>disease</p>
+<p>c. Malabsorption</p>
+<p>d. Secretory hormonal</p>
+<p>tumor</p>
+<p>e. Drug, factitious</p>
+<p>f. Motility disturbance</p>
+<p>Select appropriate</p>
+<p>diagnostic studies</p>
+<p>For example,</p>
+<p>a. Stool culture/ova/</p>
+<p>parasites/WBC/RBC/</p>
+<p>fat</p>
+<p>b. Sigmoidoscopy</p>
+<p>c. Intestinal biopsy</p>
+<p>No diagnosis, Diagnosis</p>
+<p>symptomatic therapy a. Treat specific cause</p>
+<p>a. Replete hydration</p>
+<p>b. Discontinue potential</p>
+<p>drug inducer</p>
+<p>c. Adjust diet</p>
+<p>d. Loperamide or</p>
+<p>absorbent</p>
+<p>(RBC, red blood cells; WBC, white blood cells.)</p>
+<p>FIGURE 23-2. Recommendations for treating chronic diarrhea. Follow these</p>
+<p>steps: (1) Perform a careful history and physical examination. (2) The possible causes</p>
+<p>of chronic diarrhea are many. These can be classified into intestinal infections</p>
+<p>(bacterial or protozoal), inflammatory disease (Crohn disease or ulcerative colitis),</p>
+<p>malabsorption (lactose intolerance), secretory hormonal tumor (intestinal carcinoid</p>
+<p>tumor or vasoactive intestinal peptide [VIP]–secreting tumors), drug (antacid),</p>
+<p>factitious (laxative abuse), or motility disturbance (diabetes mellitus, irritable bowel</p>
+<p>syndrome, or hyperthyroidism). (3) If the diagnosis is uncertain, appropriate diag-</p>
+<p>nostic studies should be ordered. (4) Once diagnosed, treatment is planned for the</p>
+<p>underlying cause with symptomatic antidiarrheal therapy. (5) If no specific cause</p>
+<p>can be identified, symptomatic therapy is prescribed.</p>
+<p>Bismuth subsalicylate contains multiple components that might be toxic if given in</p>
+<p>excess to prevent or treat diarrhea.</p>
+<li>Probiotics, including microorganisms such as Saccharomyces boulardii, Lactobacillus</li>
+<p>GG, and Lactobacillus acidophilus decrease the duration of infectious and antibiotic-</p>
+<p>induced diarrhea in adults and children. The dosage of probiotic preparations var-</p>
+<p>ies depending on the brand used. Intestinal flatus is the primary patient complaint</p>
+<p>experienced with this modality.</p>
+<p>248</p>
+<p>ch23.indd 248 19-11-2020 11:56:00</p>
+<h2>Diarrhea | CHAPTER 23</h2>
+<h2>TABLE 23-2 Oral Rehydration Solutions</h2>
+<p>CeraLyte Enfalyte</p>
+<p>Pedialyteb (Cera (Mead</p>
+<p>WHO-ORSYTa (Ross) Products) Johnson)</p>
+<p>Osmolality (mOsm/ 245 250 220 167</p>
+<p>kg or mmol/kg)</p>
+<p>Carbohydratesb (g/L) 13.5 25 40c 30c</p>
+<p>Calories (cal/L [J/L]) 65 (272) 100 (418) 160 (670) 126 (527)</p>
+<p>Electrolytes (mEq/L;</p>
+<p>mmol/L)</p>
+<p>Sodium 75 45 50–90 50</p>
+<p>Potassium 20 20 20 25</p>
+<p>Chloride 65 35 40–80 45</p>
+<p>Citrate — 30 30 34</p>
+<p>Bicarbonate 30 — — —</p>
+<p>Calcium — — — —</p>
+<p>Magnesium — — — —</p>
+<p>Sulfate — — — —</p>
+<p>Phosphate — — — —</p>
+<p>aWorld Health Organization reduced osmolarity oral rehydration solution.</p>
+<p>bCarbohydrate is glucose.</p>
+<p>cRice syrup solids are carbohydrate source.</p>
+<h2>TABLE 23-3 Selected Antidiarrheal Preparations</h2>
+<p>Dose Form Adult Dose</p>
+<p>Antimotility</p>
+<h2>Diphenoxylate 2.5 mg/tablet 5 mg four times daily; do not</h2>
+<p>2.5 mg/5 mL exceed 20 mg/day</p>
+<p>Loperamide 2 mg/capsule Initially 4 mg, and then 2 mg</p>
+<p>after each loose stool; do not</p>
+<p>exceed 16 mg/day</p>
+<p>Paregoric 2 mg/5 mL (morphine) 5–10 mL one to four times daily</p>
+<p>Opium tincture 10 mg/mL (morphine) 0.6 mL four times daily</p>
+<h2>Difenoxin 1 mg/tablet Two tablets, and then one tablet</h2>
+<p>after each loose stool; up to</p>
+<h2>eight tablets per day</h2>
+<p>Antisecretory</p>
+<p>Bismuth subsalicylate 1050 mg/30 mL Two tablets or 30 mL every 30</p>
+<p>262 mg/15 mL minutes to 1 hour as needed</p>
+<p>up to eight doses per day</p>
+<p>524 mg/15 mL</p>
+<h2>262 mg/tablet</h2>
+<p>(Continued )</p>
+<h2>ALGRAWANY</h2>
+<p>249</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch23.indd 249 19-11-2020 11:56:01</p>
+<div class="table-container"><table><tr><th>TABLE 23-2 Oral Rehydration Solutions</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>WHO-ORSYTa</td><td>Pedialyteb
+(Ross)</td><td>CeraLyte
+(Cera
+Products)</td><td>Enfalyte
+(Mead
+Johnson)</td></tr><tr><td>Osmolality (mOsm/
+kg or mmol/kg)</td><td>245</td><td>250</td><td>220</td><td>167</td></tr><tr><td>Carbohydratesb (g/L)</td><td>13.5</td><td>25</td><td>40c</td><td>30c</td></tr><tr><td>Calories (cal/L [J/L])</td><td>65 (272)</td><td>100 (418)</td><td>160 (670)</td><td>126 (527)</td></tr><tr><td>Electrolytes (mEq/L;
+mmol/L)</td><td></td><td></td><td></td><td></td></tr><tr><td>Sodium</td><td>75</td><td>45</td><td>50–90</td><td>50</td></tr><tr><td>Potassium</td><td>20</td><td>20</td><td>20</td><td>25</td></tr><tr><td>Chloride</td><td>65</td><td>35</td><td>40–80</td><td>45</td></tr><tr><td>Citrate</td><td>—</td><td>30</td><td>30</td><td>34</td></tr><tr><td>Bicarbonate</td><td>30</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Calcium</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Magnesium</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Sulfate</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Phosphate</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table></div><div class="table-container"><table><tr><th>TABLE 23-3 Selected Antidiarrheal Preparations</th><th></th><th></th></tr><tr><td></td><td>Dose Form</td><td>Adult Dose</td></tr><tr><td>Antimotility</td><td></td><td></td></tr><tr><td>Diphenoxylate</td><td>2.5 mg/tablet
+2.5 mg/5 mL</td><td>5 mg four times daily; do not
+exceed 20 mg/day</td></tr><tr><td>Loperamide</td><td>2 mg/capsule</td><td>Initially 4 mg, and then 2 mg
+after each loose stool; do not
+exceed 16 mg/day</td></tr><tr><td>Paregoric</td><td>2 mg/5 mL (morphine)</td><td>5–10 mL one to four times daily</td></tr><tr><td>Opium tincture</td><td>10 mg/mL (morphine)</td><td>0.6 mL four times daily</td></tr><tr><td>Difenoxin</td><td>1 mg/tablet</td><td>Two tablets, and then one tablet
+after each loose stool; up to
+eight tablets per day</td></tr><tr><td>Antisecretory</td><td></td><td></td></tr><tr><td>Bismuth subsalicylate</td><td>1050 mg/30 mL
+262 mg/15 mL
+524 mg/15 mL
+262 mg/tablet</td><td>Two tablets or 30 mL every 30
+minutes to 1 hour as needed
+up to eight doses per day
+(Continued )</td></tr></table></div><h2>SECTION 5 | Gastrointestinal Disorders</h2>
+<h2>TABLE 23-3 Selected Antidiarrheal Preparations(Continued )</h2>
+<p>Dose Form Adult Dose</p>
+<p>Enzymes (lactase)</p>
+<p>125 0 neutral lactase Three to four drops taken with</p>
+<p>units/4 drops milk or dairy product</p>
+<p>330 0 FCC lactase units</p>
+<h2>per tablet</h2>
+<h2>Bacterial replacement Two tablets or one granule</h2>
+<p>(Lactobacillus packet three to four times</p>
+<p>acidophilus, daily; give with milk, juice,</p>
+<p>Lactobacillus or water</p>
+<p>bulgaricus)</p>
+<p>Octreotide 0.05 mg/mL Initial: 50 mcg subcutaneously</p>
+<p>0.1 mg/mL On e to two times per day</p>
+<p>0.5 mg/mL and titrate dose based</p>
+<p>on indication up to 600</p>
+<p>mcg/day in two to four</p>
+<p>divided doses</p>
+<li>Octreotide, a synthetic octapeptide analogue of endogenous somatostatin, is pre-</li>
+<p>scribed for the symptomatic treatment of carcinoid tumors and other peptide secret-</p>
+<p>ing tumors, dumping syndrome, and chemotherapy-induced diarrhea. The dosage</p>
+<p>range for managing diarrhea associated with carcinoid tumors is 100–600 mcg daily</p>
+<p>in two to four divided doses, subcutaneously, for 2 weeks. Octreotide is associated</p>
+<p>with adverse effects such as cholelithiasis, nausea, diarrhea, and abdominal pain.</p>
+<li>Vaccines. An oral vaccine for cholera (Vaxchora®) is licensed and available in the</li>
+<p>United States. The Advisory Committee for Immunization Practices (ACIP) recom-</p>
+<p>mends the vaccine for adults aged 18–64 years old who are traveling to an endemic</p>
+<p>area. Two orally administered rotavirus vaccines (RotaTeq and Rotarix) prevent</p>
+<p>gastroenteritis due to rotavirus infection in infants and children.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Therapeutic outcomes are directed to key symptoms, signs, and laboratory stud-</li>
+<p>ies. The constitutional symptoms usually improve within 24–72 hours. Monitoring</p>
+<p>for changes in the frequency and character of bowel movements on a daily basis in</p>
+<p>conjunction with vital signs and improvement in appetite are of utmost importance.</p>
+<li>Monitor body weight, serum osmolality, serum electrolytes, complete blood cell</li>
+<p>count, urinalysis, and cultures (if appropriate). With an urgent or emergency situa-</p>
+<p>tion, any change in the volume status of the patient is the most important outcome.</p>
+<li>In the urgent/emergent situation, restoration of the patient’s volume status is the</li>
+<p>most important outcome. Toxic patients (fever dehydration, hematochezia, or</p>
+<p>hypotension) require hospitalization, IV fluids and electrolyte administration, and</p>
+<p>empiric antibiotic therapy while awaiting culture and sensitivity results. With timely</p>
+<p>management, these patients usually recover within a few days.</p>
+<p>See Chapter 53, Diarrhea, Constipation, and Irritable Bowel Syndrome, authored by</p>
+<p>Patricia H. Fabel and Kayce M. Shealy, for a more detailed discussion of this topic.</p>
+<p>250</p>
+<p>ch23.indd 250 19-11-2020 11:56:01</p>
+<div class="table-container"><table><tr><th>TABLE 23-3 Selected Antidiarrheal Preparations(Continued )</th><th></th><th></th></tr><tr><td></td><td>Dose Form</td><td>Adult Dose</td></tr><tr><td>Enzymes (lactase)</td><td></td><td></td></tr><tr><td></td><td>125 0 neutral lactase
+units/4 drops</td><td>Three to four drops taken with
+milk or dairy product</td></tr><tr><td></td><td>330 0 FCC lactase units
+per tablet</td><td></td></tr><tr><td>Bacterial replacement
+(Lactobacillus
+acidophilus,
+Lactobacillus
+bulgaricus)</td><td></td><td>Two tablets or one granule
+packet three to four times
+daily; give with milk, juice,
+or water</td></tr><tr><td>Octreotide</td><td>0.05 mg/mL
+0.1 mg/mL
+0.5 mg/mL</td><td>Initial: 50 mcg subcutaneously
+On e to two times per day
+and titrate dose based
+on indication up to 600
+mcg/day in two to four
+divided doses</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

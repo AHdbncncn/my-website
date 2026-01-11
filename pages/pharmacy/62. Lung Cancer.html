@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>62. Lung Cancer</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>62. Lung Cancer</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>712</p>
+<h2>RETPAHC</h2>
+<p>62</p>
+<p>Lung Cancer</p>
+<li>Lung cancer is a solid tumor originating from the bronchial epithelial cells. This chapter</li>
+<p>distinguishes between nonsmall cell lung cancer (NSCLC) and small cell lung</p>
+<p>cancer (SCLC) because they have different natural histories and responses to therapy.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Lung carcinomas arise from normal bronchial epithelial cells that have acquired</li>
+<p>multiple genetic lesions and are capable of expressing a variety of phenotypes.</p>
+<li>Activation of proto-oncogenes, inhibition or mutation of tumor suppressor genes,</li>
+<p>and production of autocrine (self-stimulatory) growth factors contribute to cellular</p>
+<p>proliferation and malignant transformation. Molecular changes, such as overexpres-</p>
+<p>sion of c-KIT in SCLC and epidermal growth factor receptor (EGFR) in NSCLC, also</p>
+<p>affect disease prognosis and response to therapy.</p>
+<li>Smoking is responsible for approximately 80% of lung cancer cases. Other risk factors</li>
+<p>are exposure to environmental respiratory carcinogens (eg, asbestos, benzene, and</p>
+<p>arsenic), genetic risk factors, and history of other lung diseases (eg, chronic obstruc-</p>
+<p>tive pulmonary disease [COPD] and asthma).</p>
+<li>The major cell types are SCLC (~15% of all lung cancers), adenocarcinoma (~50%),</li>
+<p>squamous cell carcinoma (&lt;30%), and large cell carcinoma. The last three types are</p>
+<p>grouped together and referred to as NSCLC.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The most common initial signs and symptoms are cough, dyspnea, chest pain, or dis-</li>
+<p>comfort, with or without hemoptysis. Many patients also exhibit systemic symptoms</p>
+<p>such as anorexia, weight loss, and fatigue.</p>
+<li>Disseminated disease can cause neurologic deficits from CNS metastases, bone pain,</li>
+<pre><code>or pathologic fractures secondary to bone metastases, or liver dysfunction from</code></pre>
+<p>hepatic involvement.</p>
+<li>Paraneoplastic syndromes are signs and symptoms that occur at sites away from the</li>
+<p>primary tumor or its metastases and are not associated with direct tumor involve-</p>
+<p>ment. They occur more frequently with lung cancer than any other tumor, and more</p>
+<p>frequently with SCLC than with NSCLC.</p>
+<h2>DIAGNOSIS</h2>
+<li>Chest radiographs, endobronchial ultrasound, computed tomography (CT) scan, and</li>
+<p>positron emission tomography (PET) scan are the most valuable diagnostic tests.</p>
+<p>Integrated CT–PET technology appears to improve diagnostic accuracy in staging</p>
+<p>NSCLC over CT or PET alone.</p>
+<li>Pathologic confirmation is established by examination of sputum cytology and/or</li>
+<p>tumor biopsy by bronchoscopy, mediastinoscopy, percutaneous needle biopsy, or</p>
+<p>open-lung biopsy.</p>
+<li>All patients must have a thorough history and physical examination to detect signs</li>
+<p>and symptoms of the primary tumor, regional spread of the tumor, distant metas-</p>
+<p>tases, paraneoplastic syndromes, and ability to withstand aggressive surgery or</p>
+<p>chemotherapy.</p>
+<p>CH62.indd 712 20-11-2020 09:49:36</p>
+<h2>Lung Cancer | CHAPTER 62</h2>
+<h2>STAGING</h2>
+<li>The World Health Organization has established a TNM staging classification for</li>
+<p>NSCLC based on primary tumor size and extent (T), regional lymph node involve-</p>
+<p>ment (N), and presence or absence of distant metastases (M).</p>
+<li>A simpler system is commonly used to compare therapeutic modalities. Stage I</li>
+<p>includes tumors confined to the lung without lymphatic spread, stage II includes</p>
+<p>large tumors with ipsilateral peribronchial or hilar lymph node involvement,</p>
+<p>stage III includes other lymph node and regional involvement, and stage IV includes</p>
+<p>any tumor with distant metastases.</p>
+<li>A two-stage classification is widely used for SCLC. Limited disease is confined to one</li>
+<p>hemithorax and can be encompassed by a single radiation port. All other disease is</p>
+<p>classified as extensive.</p>
+<h2>TREATMENT</h2>
+<h2>NONSMALL CELL LUNG CANCER</h2>
+<li>Goals of Treatment: Definitive cure is the desired outcome with early-stage disease.</li>
+<p>Prolongation of survival is desired in patients with advanced-stage disease.</p>
+<li>The stage of NSCLC and the patient’s comorbidities and performance status (ie, the</li>
+<p>ability to perform activities of daily living) determine which treatment modalities</p>
+<p>will be used. The intent of treatment—curative or palliative—influences the aggres-</p>
+<p>siveness of therapy.</p>
+<p>Recommendations for Chemotherapy, Radiation Therapy, and Surgery</p>
+<li>Genetic testing of tumors should be performed at the time of diagnosis in all patients,</li>
+<p>including those with localized disease.</p>
+<li>Local disease (stages IA and IB) is associated with a favorable prognosis. Surgery is</li>
+<p>the mainstay of treatment and may be used alone or in some situations with radiation</p>
+<p>therapy (RT) and/or chemotherapy.</p>
+<li>Stage IIA and IIB diseases are primarily treated with surgery followed by adjuvant</li>
+<p>chemotherapy (Table 62-1). Platinum-based regimens are preferred and should be</p>
+<p>given concurrently rather than sequentially with RT. Chemoradiotherapy is recom-</p>
+<p>mended for medically inoperable patients who can tolerate combined modality</p>
+<p>therapy.</p>
+<li>Optimal outcomes for stage III disease are achieved with multimodality therapy.</li>
+<p>Patients with operable disease should be considered for surgery preceded or followed</p>
+<p>by systemic chemotherapy. Current recommendations for patients with resectable</p>
+<p>stage IIIA disease include chemotherapy followed by surgery or radiation, depending</p>
+<p>on individual patient and tumor features.</p>
+<li>Patients with stage IIIA disease who are not surgical candidates or have a tumor</li>
+<p>that cannot be resected, and nearly all stage IIIB patients, are typically treated with</p>
+<p>both an active platinum-containing regimen and concurrent radiotherapy. Patients</p>
+<p>who respond to chemotherapy should then receive maintenance therapy with</p>
+<p>durvalumab, a programmed death ligand-1 (PD-L1) inhibitor that significantly</p>
+<p>improves 2-year survival and median progression-free survival (PFS).</p>
+<li>Patients with stage III disease who are not candidates for radiation are treated like</li>
+<p>those with stage IV disease. Chemotherapy is administered to palliate symptoms,</p>
+<p>improve quality of life, and increase duration of survival. Therapy depends on patient-</p>
+<p>specific factors (performance status is most important) and tumor characteristics.</p>
+<li>Three pathways have been identified for advanced NSCLC: (1) immune sensitive</li>
+<p>(PD-L1+), (2) targetable genetic mutation-driven, which is further divided based on</p>
+<p>the mutation (EGFR, ALK, BRAF, NTRK, and ROS1), and (3) nonbiomarker-driven</p>
+<p>therapy treatment, which is further classified as squamous histology or nonsqua-</p>
+<p>mous histology due to drug toxicity and efficacy. Select regimens for each group are</p>
+<h2>outlined in Table 62-2.</h2>
+<p>713</p>
+<p>CH62.indd 713 20-11-2020 09:49:36</p>
+<h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 62-1 Common Chemotherapy Regimens Used in the Adjuvant Treatment of</p>
+<p>Nonsmall Cell Lung Cancer</p>
+<p>Frequency and</p>
+<p>Regimen Drugs and Doses Number of Cycles</p>
+<p>Cisplatin/ Cisplatin 100 mg/m2 IV day 1 Every 28 days for 4 cycles</p>
+<p>Etoposide Etoposide 100 mg/m2 IV daily on</p>
+<p>days 1, 2, and 3</p>
+<p>Cisplatin/ Cisplatin 50 mg/m2 IV days 1 and 8 Every 28 days for 4 cycles</p>
+<p>Vinorelbine Vinorelbine 25 mg/m2 IV days 1, 8,</p>
+<p>15, and 22</p>
+<p>Cisplatin 100 mg/m2 IV day 1 Every 28 days for 4 cycles</p>
+<p>Vinorelbine 30 mg/m2 IV days 1, 8,</p>
+<p>15, and 22</p>
+<p>Carboplatin/ Carboplatin AUC 6 IV day 1 Every 21 days for 4 cycles</p>
+<p>Paclitaxel Paclitaxel 200 mg/m2 IV day 1</p>
+<p>Cisplatin/ Cisplatin 75 mg/m2 IV day 1 Every 21 days for 4 cycles</p>
+<p>Pemetrexed Pemetrexed 500 mg/m2 IV day 1 (for nonsquamous</p>
+<p>histology only)</p>
+<li>First-line therapy for patients with NSCLC with PD-L1+ tumors is pembrolizumab,</li>
+<p>an immune checkpoint inhibitor that binds to the programmed death-1 (PD-1)</p>
+<p>receptor on T cells. As compared with a platinum doublet chemotherapy regimen,</p>
+<p>pembrolizumab demonstrated increased median PFS. Use chemotherapy as second-</p>
+<p>line therapy after failing pembrolizumab.</p>
+<li>Treatment options for patients with advanced lung cancer and a targetable genetic</li>
+<p>driver mutation include:</p>
+<p>(1) Patients with a tumor that harbors a mutation in the EGFR receptor should receive</p>
+<p>first-line EGFR tyrosine kinase inhibitor therapy with osimertinib. Osimertinib,</p>
+<p>a third-generation EGFR tyrosine kinase inhibitor, shows the most impressive</p>
+<p>activity in patients with EGFR-positive tumors. In addition to significantly</p>
+<p>longer PFS, osimertinib has improved CNS penetration resulting in improved</p>
+<p>CNS response rates and less CNS disease as the cause of progression. First- and</p>
+<p>second-generation EGFR tyrosine kinase inhibitors include afatinib, erlotinib,</p>
+<p>or gefitinib. A meta-analysis suggests that these three agents have similar PFS</p>
+<p>results and response rates about two times higher than chemotherapy. Sub-</p>
+<p>sequent therapy after progression during treatment with an EGFR inhibitor</p>
+<p>depends on initial treatment and further genetic evaluation of the tumor. Most</p>
+<p>patients will proceed to a platinum doublet chemotherapy with or without an</p>
+<p>immunotherapy agent.</p>
+<p>(2) Patients with a tumor with an ALK rearrangement should receive initial treat-</p>
+<p>ment with an ALK inhibitor, with a preference for alectinib. Other ALK</p>
+<p>inhibitors approved for first-line therapy are ceritinib and crizotinib. Lorlatinib</p>
+<p>was recently approved as second-line therapy after failure on a first-line ALK</p>
+<p>inhibitor.</p>
+<p>(3) Patients with a tumor with a mutation in ROS1 should be treated with crizotinib.</p>
+<p>Patients should receive lorlatinib as second-line therapy.</p>
+<p>(4) Patients with a tumor with the BRAF V600E mutation should receive combina-</p>
+<p>tion therapy with two kinase inhibitors, trametinib and dabrafenib.</p>
+<p>(5) Patients with a tumor with a neurotrophic receptor kinases (NTRK) gene fusion</p>
+<p>should receive larotrectinib.</p>
+<li>Combination chemotherapy is the preferred option for patients with metastatic</li>
+<p>NSCLC who are not candidates for targeted therapies or have progressed despite</p>
+<p>714</p>
+<p>CH62.indd 714 20-11-2020 09:49:37</p>
+<div class="table-container"><table><tr><th>TABLE 62-1 Common Chemotherapy Regimens Used in the Adjuvant Treatment of
+Nonsmall Cell Lung Cancer</th><th></th><th></th></tr><tr><td>Regimen</td><td>Drugs and Doses</td><td>Frequency and
+Number of Cycles</td></tr><tr><td>Cisplatin/
+Etoposide</td><td>Cisplatin 100 mg/m2 IV day 1
+Etoposide 100 mg/m2 IV daily on
+days 1, 2, and 3</td><td>Every 28 days for 4 cycles</td></tr><tr><td>Cisplatin/
+Vinorelbine</td><td>Cisplatin 50 mg/m2 IV days 1 and 8
+Vinorelbine 25 mg/m2 IV days 1, 8,
+15, and 22</td><td>Every 28 days for 4 cycles</td></tr><tr><td></td><td>Cisplatin 100 mg/m2 IV day 1
+Vinorelbine 30 mg/m2 IV days 1, 8,
+15, and 22</td><td>Every 28 days for 4 cycles</td></tr><tr><td>Carboplatin/
+Paclitaxel</td><td>Carboplatin AUC 6 IV day 1
+Paclitaxel 200 mg/m2 IV day 1</td><td>Every 21 days for 4 cycles</td></tr><tr><td>Cisplatin/
+Pemetrexed</td><td>Cisplatin 75 mg/m2 IV day 1
+Pemetrexed 500 mg/m2 IV day 1</td><td>Every 21 days for 4 cycles
+(for nonsquamous
+histology only)</td></tr></table></div><p>715</p>
+<p>Lung</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>62</p>
+<p>TABLE 62-2 Selected Regimens Used to Treat Advanced-Stage Nonsmall cell Lung Cancer</p>
+<p>Nonbiomarker Driven</p>
+<p>Nonsquamous Squamous Cell EGFR Mutation Positive ALK Rearrangement Positive</p>
+<p>Drugs,</p>
+<p>Place in Drugs, Doses, Drugs, Doses, Doses, Drugs, Doses,</p>
+<p>Therapy Regimen Frequency Regimen Frequency Regimen Frequency Regimen Frequency</p>
+<p>First line Carboplatin/ Carboplatin AUC 6 IV Gemcitabine/ Gemcitabine 1250 Erlotinib Erlotinib Crizotinib Crizotinib 250 mg</p>
+<p>Paclitaxel/ on day 1 Cisplatin mg/m2 IV on 150 mg (one (one 250 mg</p>
+<p>Bevacizumab Paclitaxel 200 mg/m2 days 1 and 8 150 mg capsule) twice</p>
+<p>IV on day 1 Cisplatin 75 mg/m2 capsule) daily daily without</p>
+<p>Bevacizumab 15 mg/ IV on day 1 o st n o m an a c e h mpty regard to meals</p>
+<p>kg IV on day 1 Repeat cycle</p>
+<p>Repeat cycle every 21 days</p>
+<p>every 3 weeks × 6 cycles</p>
+<p>× 6 cycles—</p>
+<p>bevacizumab</p>
+<p>maintenance until</p>
+<p>progression</p>
+<p>Carboplatin/ Carboplatin AUC 5 IV Carboplatin/ Carboplatin AUC 6 Afatinib Afatinib 40 mg Alectinib Alectinib 600 mg</p>
+<p>Pemetrexed on day 1 Paclitaxel/ IV on day 1 (one 40 mg (four 150 mg</p>
+<p>Pemetrexed 500 Pembrolizumab Paclitaxel 200 tablet) daily capsules) twice</p>
+<p>mg/m2 IV on day 1 mg/m2 IV on an empty daily with food</p>
+<p>Repeat cycle every on day 1 or stomach</p>
+<p>3 weeks nab-paclitaxel</p>
+<p>100 mg/m2 IV</p>
+<p>on days 1, 8, 15</p>
+<p>Pembrolizumab</p>
+<p>200 mg IV</p>
+<p>on day 1 (Continued )</p>
+<p>CH62.indd</p>
+<p>715</p>
+<p>20-11-2020</p>
+<p>09:49:37</p>
+<div class="table-container"><table><tr><th>TABLE 62-2 Selected Regimens Used to Treat Advanced-Stage Nonsmall cell Lung Cancer</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Nonbiomarker Driven</td><td></td><td></td><td></td><td>EGFR Mutation Positive</td><td></td><td>ALK Rearrangement Positive</td><td></td></tr><tr><td></td><td>Nonsquamous</td><td></td><td>Squamous Cell</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Place in
+Therapy</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td><td>Regimen</td><td>Drugs,
+Doses,
+Frequency</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td></tr><tr><td>First line</td><td>Carboplatin/
+Paclitaxel/
+Bevacizumab</td><td>Carboplatin AUC 6 IV
+on day 1
+Paclitaxel 200 mg/m2
+IV on day 1
+Bevacizumab 15 mg/
+kg IV on day 1
+Repeat cycle
+every 3 weeks
+× 6 cycles—
+bevacizumab
+maintenance until
+progression</td><td>Gemcitabine/
+Cisplatin</td><td>Gemcitabine 1250
+mg/m2 IV on
+days 1 and 8
+Cisplatin 75 mg/m2
+IV on day 1
+Repeat cycle
+every 21 days
+× 6 cycles</td><td>Erlotinib</td><td>Erlotinib
+150 mg (one
+150 mg
+capsule) daily
+on an empty
+stomach</td><td>Crizotinib</td><td>Crizotinib 250 mg
+(one 250 mg
+capsule) twice
+daily without
+regard to meals</td></tr><tr><td></td><td>Carboplatin/
+Pemetrexed</td><td>Carboplatin AUC 5 IV
+on day 1
+Pemetrexed 500
+mg/m2 IV on day 1
+Repeat cycle every
+3 weeks</td><td>Carboplatin/
+Paclitaxel/
+Pembrolizumab</td><td>Carboplatin AUC 6
+IV on day 1
+Paclitaxel 200
+mg/m2 IV
+on day 1 or
+nab-paclitaxel
+100 mg/m2 IV
+on days 1, 8, 15
+Pembrolizumab
+200 mg IV
+on day 1</td><td>Afatinib</td><td>Afatinib 40 mg
+(one 40 mg
+tablet) daily
+on an empty
+stomach</td><td>Alectinib</td><td>Alectinib 600 mg
+(four 150 mg
+capsules) twice
+daily with food
+(Continued )</td></tr></table></div><h2>716 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 62-2 Selected Regimens Used to Treat Advanced-Stage Nonsmall Cell Lung Cancer (Continued )</p>
+<p>Nonbiomarker Driven</p>
+<p>Nonsquamous Squamous Cell EGFR Mutation Positive ALK Rearrangement Positive</p>
+<p>Drugs,</p>
+<p>Place in Drugs, Doses, Drugs, Doses, Doses, Drugs, Doses,</p>
+<p>Therapy Regimen Frequency Regimen Frequency Regimen Frequency Regimen Frequency</p>
+<p>Repeat cycle</p>
+<p>every 3 weeks</p>
+<p>× 4 cycles—</p>
+<p>pembrolizumab</p>
+<p>maintenance up</p>
+<p>to 31 additional</p>
+<p>doses or until</p>
+<p>progression</p>
+<p>Platinum/ Cisplatin 75 mg/m2 Osimertinib Osimertinib</p>
+<p>Pemetrexed/ or carboplatin 80 mg (one</p>
+<h2>Pembrolizumab AUC 5 IV on day 1 80 mg tablet)</h2>
+<p>daily without</p>
+<p>Pemetrexed 500</p>
+<p>mg/m2 IV on day 1 regard</p>
+<p>to meals</p>
+<p>Pembrolizumab</p>
+<p>200 mg IV</p>
+<p>on day 1</p>
+<p>Repeat cycle</p>
+<p>every 3 weeks</p>
+<p>× 4 cycles—</p>
+<p>pembrolizumab</p>
+<p>maintenance up</p>
+<p>to 31 additional</p>
+<p>doses or until (Continued )</p>
+<p>progression</p>
+<p>CH62.indd</p>
+<p>716</p>
+<p>20-11-2020</p>
+<p>09:49:37</p>
+<div class="table-container"><table><tr><th>Nonbiomarker Driven
+Nonsquamous Squamous Cell EGFR Mutation Positive ALK Rearrangement Positive</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Nonsquamous</td><td></td><td>Squamous Cell</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Place in
+Therapy</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td><td></td><td>Regimen</td><td>Drugs,
+Doses,
+Frequency</td><td>Regimen</td><td>Drugs, Doses,
+Frequency</td></tr><tr><td></td><td></td><td></td><td></td><td>Repeat cycle
+every 3 weeks
+× 4 cycles—
+pembrolizumab
+maintenance up
+to 31 additional
+doses or until
+progression</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Platinum/
+Pemetrexed/
+Pembrolizumab</td><td>Cisplatin 75 mg/m2
+or carboplatin
+AUC 5 IV on day 1
+Pemetrexed 500
+mg/m2 IV on day 1
+Pembrolizumab
+200 mg IV
+on day 1
+Repeat cycle
+every 3 weeks
+× 4 cycles—
+pembrolizumab
+maintenance up
+to 31 additional
+doses or until
+progression</td><td></td><td></td><td></td><td>Osimertinib</td><td>Osimertinib
+80 mg (one
+80 mg tablet)
+daily without
+regard
+to meals</td><td></td><td>(Continued )</td></tr></table></div><p>717</p>
+<p>Lung</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>62</p>
+<p>Carboplatin/ Carboplatin AUC 6 IV</p>
+<p>Paclitaxel/ on day 1</p>
+<p>Bevacizumab/ Paclitaxel 200 mg/m2</p>
+<p>Atezolizumab IV on day 1</p>
+<p>Bevacizumab 15 mg/</p>
+<p>kg IV on day 1</p>
+<p>Atezolizumab</p>
+<p>1200 mg IV</p>
+<p>on day 1</p>
+<p>Repeat cycle every</p>
+<p>3 weeks × 4</p>
+<p>or 6 cycles—</p>
+<p>atezolizumab and</p>
+<p>bevacizumab</p>
+<p>maintenance until</p>
+<p>progression</p>
+<p>Second line Docetaxel/ Docetaxel 75 mg/m2 Docetaxel/ Docetaxel 75 mg/ Osimertinib Osimertinib Brigatinib Brigatinib 90 mg</p>
+<p>Ramucirumab IV day 1 Ramucirumab m2 IV day 1 (if patient 80 mg (one (one 90 mg</p>
+<p>Ramucirumab 10 Ramucirumab 10 has not 80 mg tablet) tablet) daily for</p>
+<p>mg/kg IV day 1 mg/kg IV day 1 previously daily without 7 days, then</p>
+<p>received) regard 180 mg (one</p>
+<h2>Repeat every 21 days Repeat every to meals 180 mg tablet)</h2>
+<p>21 days daily. Take</p>
+<p>without regards</p>
+<p>to meals</p>
+<p>Nivolumab Nivolumab 3 mg/kg Nivolumab Nivolumab 3</p>
+<p>IV day 1 mg/kg IV day 1</p>
+<p>Repeat every Repeat every</p>
+<p>2 weeks 2 weeks</p>
+<p>Pembrolizumab Pembrolizumab 2 Pembrolizumab Pembrolizumab 2</p>
+<p>mg/kg IV day 1 mg/kg IV day 1</p>
+<p>Repeat every Repeat every</p>
+<p>3 weeks 3 weeks</p>
+<p>CH62.indd</p>
+<p>717</p>
+<p>20-11-2020</p>
+<p>09:49:37</p>
+<div class="table-container"><table><tr><th></th><th>Carboplatin/
+Paclitaxel/
+Bevacizumab/
+Atezolizumab</th><th>Carboplatin AUC 6 IV
+on day 1
+Paclitaxel 200 mg/m2
+IV on day 1</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td>Bevacizumab 15 mg/
+kg IV on day 1
+Atezolizumab
+1200 mg IV
+on day 1
+Repeat cycle every
+3 weeks × 4
+or 6 cycles—
+atezolizumab and
+bevacizumab
+maintenance until
+progression</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Second line</td><td>Docetaxel/
+Ramucirumab</td><td>Docetaxel 75 mg/m2
+IV day 1
+Ramucirumab 10
+mg/kg IV day 1
+Repeat every 21 days</td><td>Docetaxel/
+Ramucirumab</td><td>Docetaxel 75 mg/
+m2 IV day 1
+Ramucirumab 10
+mg/kg IV day 1
+Repeat every
+21 days</td><td>Osimertinib
+(if patient
+has not
+previously
+received)</td><td>Osimertinib
+80 mg (one
+80 mg tablet)
+daily without
+regard
+to meals</td><td>Brigatinib</td><td>Brigatinib 90 mg
+(one 90 mg
+tablet) daily for
+7 days, then
+180 mg (one
+180 mg tablet)
+daily. Take
+without regards
+to meals</td></tr><tr><td></td><td>Nivolumab</td><td>Nivolumab 3 mg/kg
+IV day 1
+Repeat every
+2 weeks</td><td>Nivolumab</td><td>Nivolumab 3
+mg/kg IV day 1
+Repeat every
+2 weeks</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Pembrolizumab</td><td>Pembrolizumab 2
+mg/kg IV day 1
+Repeat every
+3 weeks</td><td>Pembrolizumab</td><td>Pembrolizumab 2
+mg/kg IV day 1
+Repeat every
+3 weeks</td><td></td><td></td><td></td><td></td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>targeted therapies and are candidates for further therapy. Platinum-based chemo-</p>
+<p>therapy doublets consisting of cisplatin or carboplatin combined with paclitaxel (or</p>
+<p>nab-paclitaxel), docetaxel, gemcitabine, pemetrexed, or vinorelbine are considered</p>
+<p>standard care and equally effective in nonsquamous NSCLC.</p>
+<li>Guidelines recommend adding bevacizumab, a recombinant, humanized monoclonal</li>
+<p>antibody that neutralizes vascular endothelial growth factor (VEGF) to chemo-</p>
+<p>therapy for patients with advanced NSCLC of nonsquamous cell histology, no history</p>
+<p>of recent significant hemoptysis, no CNS metastasis, and not receiving therapeutic</p>
+<p>anticoagulation.</p>
+<li>The most recent treatment advance for metastatic NSCLC is the addition of PD-1</li>
+<p>(nivolumab, pembrolizumab) or PD-L1 (atezolizumab) inhibitors, regardless of the</p>
+<p>level of PD-L1 expression. Clinical guidelines recommend the combination of PD-1</p>
+<p>or PD-L1 directed therapy and chemotherapy as first-line therapy for patients with</p>
+<p>nonbiomarker-driven NSCLC.</p>
+<li>Maintenance therapy is the ongoing use of one or more agents after a positive tumor</li>
+<p>response to four to six cycles of an initial chemotherapy regimen until disease pro-</p>
+<p>gression. Continuation or switch maintenance therapy improves survival of NSCLC</p>
+<p>patients with nonsquamous histology. In continuation maintenance therapy, patients</p>
+<p>receive ongoing treatment with at least one of the agents used in the initial chemo-</p>
+<p>therapy regimen. Alternatively, switch maintenance therapy starts a new agent not</p>
+<p>included in the initial regimen. Pemetrexed is the most established maintenance</p>
+<p>chemotherapy option.</p>
+<li>Monotherapy with nivolumab, pembrolizumab, atezolizumab, docetaxel, or</li>
+<p>pemetrexed is the most commonly considered option for second-line therapy in</p>
+<p>patients with a good performance status who progress during or after first-line che-</p>
+<p>motherapy. Nivolumab, pembrolizumab, and atezolizumab are options in the second-</p>
+<p>line setting for patients who have not previously received one of the drugs in the</p>
+<p>class.</p>
+<li>The efficacy of docetaxel has recently been improved with the addition of ramu-</li>
+<p>cirumab which binds to VEGF. Guidelines list nivolumab, pembrolizumab, or</p>
+<p>atezolizumab as preferred second-line regimens but docetaxel with or without ramu-</p>
+<p>cirumab has emerged as a standard second-line option because immunotherapy and</p>
+<p>pemetrexed are commonly used as first-line and maintenance therapy.</p>
+<h2>SMALL CELL LUNG CANCER</h2>
+<li>Goals of Treatment: The goals include cure or prolonged survival, which requires</li>
+<p>aggressive combination chemotherapy.</p>
+<p>Limited Disease</p>
+<li>Use of surgery in SCLC is limited to solitary nodules without evidence of metastasis</li>
+<p>to lymph nodes.</p>
+<li>SCLC is very radiosensitive; radiation is preferred for treatment of local disease over</li>
+<p>surgery. Radiation is given concurrently with chemotherapy, and the regimen of</p>
+<p>choice is etoposide and cisplatin (EP regimen; see Table 62-3).</p>
+<li>Radiotherapy is used to prevent and treat brain metastases, a frequent occurrence</li>
+<p>with SCLC. Prophylactic cranial irradiation (PCI) is used in patients with limited or</p>
+<p>extensive disease to reduce the risk of brain metastases.</p>
+<p>Extensive Disease</p>
+<li>The EP regimen is the regimen of choice to treat extensive-stage SCLC, with irino-</li>
+<p>tecan and cisplatin as an acceptable alternative. The addition of the PD-L1 inhibitor</p>
+<p>atezolizumab to carboplatin/etoposide improved median PFS and overall survival</p>
+<p>and is the first significant improvement over standard platinum plus etoposide</p>
+<p>chemotherapy.</p>
+<li>Concurrent radiotherapy is not routinely used in extensive disease.</li>
+<p>718</p>
+<p>CH62.indd 718 20-11-2020 09:49:37</p>
+<h2>Lung Cancer | CHAPTER 62</h2>
+<p>TABLE 62-3 Chemotherapy Regimens Used in the Treatment of SCLC</p>
+<p>Regimen Drugs and Doses</p>
+<p>First line Etoposide/Cisplatin (EP) Cisplatin 75 mg/m2 IV on day 1</p>
+<p>Etoposide 100 mg/m2 IV on days 1–3; repeat</p>
+<p>cycle every 3 weeks for 4–6 cycles</p>
+<p>or</p>
+<p>Cisplatin 60 mg/m2 IV on day 1</p>
+<p>Etoposide 120 mg/m2 IV on days 1–3; repeat cycle</p>
+<p>every 3 weeks for 4–6 cycles</p>
+<p>Etoposide/Carboplatin (EC) Carboplatin AUC 5–6 IV on day 1</p>
+<p>Etoposide 120 mg/m2 IV on days 1–3; repeat cycle</p>
+<p>every 3 weeks for 4–6 cycles</p>
+<p>Cisplatin/Irinotecan (IP) Cisplatin 60 mg/m2 IV on day 1</p>
+<p>Irinotecan 60 mg/m2 IV on days 1, 8, 15; repeat</p>
+<p>cycle every 4 weeks for 4–6 cycles</p>
+<p>or</p>
+<p>Cisplatin 30 mg/m2 IV on day 1</p>
+<p>Irinotecan 65 mg/m2 IV on days 1 and 8; repeat</p>
+<p>cycle every 3 weeks for 4–6 cycles</p>
+<p>EC + atezolizumaba Carboplatin AUC 5 IV on day 1</p>
+<p>Etoposide 100 mg/m2 IV on days 1–3</p>
+<p>Atezolizumab 1200 mg IV on day 1; repeat cycle</p>
+<p>every 3 weeks for 4 cycles followed by</p>
+<p>Atezolizumab 1200 mg every 3 weeks as</p>
+<p>maintenance</p>
+<p>Second Topotecan Topotecan 1.5 mg/m2/day IV days 1–5; repeat</p>
+<p>line every 3 weeks</p>
+<p>Nivolumab Nivolumab 3 mg/kg IV; repeat every 2 weeks</p>
+<p>aExtensive stage only.</p>
+<p>Relapsed Disease</p>
+<li>Relapsed SCLC is usually less sensitive to chemotherapy. Topotecan (IV and oral)</li>
+<p>is considered the second-line treatment of choice, but other agents should be con-</p>
+<p>sidered because of its modest efficacy. If relapse occurs more than 3 months after</p>
+<p>first-line chemotherapy, national guidelines recommend single-agent topotecan,</p>
+<p>gemcitabine, irinotecan, paclitaxel, docetaxel, oral etoposide, temozolomide, and</p>
+<p>vinorelbine; CAV regimen (cyclophosphamide, doxorubicin, and vincristine); and</p>
+<p>participation in a clinical trial.</p>
+<li>Nivolumab was recently approved for relapsed SCLC.</li>
+<li>SCLC that recurs within 3 months of first-line chemotherapy is considered refractory</li>
+<p>to chemotherapy and unlikely to respond to a second-line regimen. Patients should</p>
+<p>receive best supportive care or be enrolled in a clinical trial.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Evaluate tumor response to chemotherapy for NSCLC at the end of the second</li>
+<p>or third cycle and at the end of every second cycle thereafter. Patients with stable</p>
+<p>719</p>
+<p>CH62.indd 719 20-11-2020 09:49:38</p>
+<div class="table-container"><table><tr><th>TABLE 62-3 Chemotherapy Regimens Used in the Treatment of SCLC</th><th></th><th></th></tr><tr><td></td><td>Regimen</td><td>Drugs and Doses</td></tr><tr><td>First line</td><td>Etoposide/Cisplatin (EP)</td><td>Cisplatin 75 mg/m2 IV on day 1
+Etoposide 100 mg/m2 IV on days 1–3; repeat
+cycle every 3 weeks for 4–6 cycles
+or
+Cisplatin 60 mg/m2 IV on day 1
+Etoposide 120 mg/m2 IV on days 1–3; repeat cycle
+every 3 weeks for 4–6 cycles</td></tr><tr><td></td><td>Etoposide/Carboplatin (EC)</td><td>Carboplatin AUC 5–6 IV on day 1
+Etoposide 120 mg/m2 IV on days 1–3; repeat cycle
+every 3 weeks for 4–6 cycles</td></tr><tr><td></td><td>Cisplatin/Irinotecan (IP)</td><td>Cisplatin 60 mg/m2 IV on day 1
+Irinotecan 60 mg/m2 IV on days 1, 8, 15; repeat
+cycle every 4 weeks for 4–6 cycles
+or
+Cisplatin 30 mg/m2 IV on day 1
+Irinotecan 65 mg/m2 IV on days 1 and 8; repeat
+cycle every 3 weeks for 4–6 cycles</td></tr><tr><td></td><td>EC + atezolizumaba</td><td>Carboplatin AUC 5 IV on day 1
+Etoposide 100 mg/m2 IV on days 1–3
+Atezolizumab 1200 mg IV on day 1; repeat cycle
+every 3 weeks for 4 cycles followed by
+Atezolizumab 1200 mg every 3 weeks as
+maintenance</td></tr><tr><td>Second
+line</td><td>Topotecan</td><td>Topotecan 1.5 mg/m2/day IV days 1–5; repeat
+every 3 weeks</td></tr><tr><td></td><td>Nivolumab</td><td>Nivolumab 3 mg/kg IV; repeat every 2 weeks</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>disease, objective response, or measurable decrease in tumor size should continue</p>
+<p>treatment until four to six cycles have been administered. Consider maintenance</p>
+<p>therapy with pemetrexed in responding patients with nonsquamous histology.</p>
+<li>Evaluate efficacy of first-line therapy for SCLC after two or three cycles of chemo-</li>
+<p>therapy. If there is no response or progressive disease, therapy can be discontinued</p>
+<p>or changed to a non–cross-resistant regimen. If responsive to chemotherapy, the</p>
+<p>induction regimen should be administered for four to six cycles. Responding patients</p>
+<p>benefit from the addition of PCI following initial therapy.</p>
+<li>Intensive therapeutic monitoring is required for all patients with lung cancer to</li>
+<p>avoid drug-related and radiotherapy-related toxicities. These patients frequently have</p>
+<p>numerous concurrent medical problems requiring close attention.</p>
+<li>References should be consulted for management of common toxicities associated</li>
+<p>with the aggressive chemotherapy regimens used for lung cancer.</p>
+<p>See Chapter 146, Lung Cancer, authored by Val R. Adams and Keith A. Hecht, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>720</p>
+<p>CH62.indd 720 20-11-2020 09:49:38</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

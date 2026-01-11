@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. Heart Failure</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>9. Heart Failure</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>96</p>
+<h2>RETPAHC</h2>
+<p>9</p>
+<p>Heart Failure</p>
+<li>Heart failure (HF) is a progressive syndrome that can result from any changes in car-</li>
+<pre><code>diac structure or function that impair the ability of the ventricle to fill with or eject</code></pre>
+<pre><code>blood. HF may be caused by an abnormality in systolic function, diastolic function,</code></pre>
+<pre><code>or both. HF with reduced systolic function (ie, reduced left ventricular ejection frac-</code></pre>
+<p>tion, LVEF) is referred to as HF with reduced ejection fraction (HFrEF). Preserved</p>
+<pre><code>LV systolic function (ie, normal LVEF) with presumed diastolic dysfunction is</code></pre>
+<p>termed HF with preserved ejection fraction (HFpEF).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Causes of systolic dysfunction (decreased contractility) include reduced muscle mass</li>
+<p>(eg, myocardial infarction [MI]), dilated cardiomyopathies, and ventricular hyper-</p>
+<p>trophy. Ventricular hypertrophy can be caused by pressure overload (eg, systemic or</p>
+<p>pulmonary hypertension and aortic or pulmonic valve stenosis) or volume overload</p>
+<p>(eg, valvular regurgitation, shunts, high-output states).</p>
+<li>Causes of diastolic dysfunction (restriction in ventricular filling) include increased</li>
+<p>ventricular stiffness, ventricular hypertrophy, infiltrative myocardial diseases, myo-</p>
+<p>cardial ischemia and MI, mitral or tricuspid valve stenosis, and pericardial disease</p>
+<p>(eg, pericarditis and pericardial tamponade).</p>
+<li>The leading causes of HF are coronary artery disease and hypertension.</li>
+<li>Regardless of the index event, decreased cardiac output (CO) results in activation</li>
+<p>of compensatory responses to maintain circulation: (1) tachycardia and increased</p>
+<p>contractility through sympathetic nervous system activation, (2) the Frank–S tarling</p>
+<p>mechanism, whereby increased preload (through sodium and water retention)</p>
+<p>increases stroke volume, (3) vasoconstriction, and (4) ventricular hypertrophy and</p>
+<p>remodeling. Although these compensatory mechanisms initially maintain cardiac</p>
+<pre><code>function, they are responsible for the symptoms of HF and contribute to disease</code></pre>
+<p>progression.</p>
+<li>In the neurohormonal model of HF, an initiating event (eg, acute MI) leads to</li>
+<p>decreased CO; the HF state then becomes a systemic disease whose progression</p>
+<p>is mediated largely by neurohormones and autocrine/paracrine factors that drive</p>
+<p>myocyte injury, oxidative stress, inflammation, and extracellular matrix remodeling.</p>
+<p>These substances include angiotensin II, norepinephrine, aldosterone, natriuretic</p>
+<p>peptides, and arginine vasopressin (AVP).</p>
+<li>Chronic activation of the neurohormonal systems results in a cascade of events that</li>
+<p>affect the myocardium at the molecular and cellular levels. These events lead to</p>
+<p>changes in ventricular size (left ventricular hypertrophy), shape, structure, and func-</p>
+<pre><code>tion known as ventricular remodeling. The alterations in ventricular function result in</code></pre>
+<pre><code>further deterioration in cardiac systolic and diastolic functions that further promotes</code></pre>
+<p>the remodeling process.</p>
+<li>Common precipitating factors that may cause a previously compensated HF patient</li>
+<p>to decompensate include myocardial ischemia and MI, pulmonary infections, non-</p>
+<p>adherence with diet or drug therapy, and inappropriate medication use. Drugs may</p>
+<p>precipitate or exacerbate HF through negative inotropic effects, direct cardiotoxicity,</p>
+<p>or increased sodium and water retention.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patient presentation may range from asymptomatic to cardiogenic shock.</li>
+<li>Primary symptoms are dyspnea (especially on exertion) and fatigue, which lead to</li>
+<p>exercise intolerance. Other pulmonary symptoms include orthopnea, paroxysmal</p>
+<p>nocturnal dyspnea (PND), tachypnea, and cough.</p>
+<p>ch09.indd 96 19-11-2020 11:38:18</p>
+<div class="table-container"><table><tr><th>Heart Failure</th><th>9
+00</th><th>RETPAHC</th></tr></table></div><h2>Heart Failure | CHAPTER 9</h2>
+<li>Fluid overload can result in pulmonary congestion and peripheral edema.</li>
+<li>Nonspecific symptoms may include fatigue, nocturia, hemoptysis, abdominal pain,</li>
+<p>anorexia, nausea, bloating, ascites, poor appetite or early satiety, and weight gain or</p>
+<p>loss.</p>
+<li>Physical examination may reveal pulmonary crackles, S gallop, cool extremities,</li>
+<p>3</p>
+<p>Cheyne–Stokes respiration, tachycardia, narrow pulse pressure, cardiomegaly, symp-</p>
+<p>toms of pulmonary edema (extreme breathlessness and anxiety, sometimes with</p>
+<p>coughing and pink, frothy sputum), peripheral edema, jugular venous distention</p>
+<p>(JVD), hepatojugular reflux (HJR), hepatomegaly, and mental status changes.</p>
+<h2>DIAGNOSIS</h2>
+<li>Consider the diagnosis of HF in patients with characteristic signs and symptoms. A</li>
+<p>complete history and physical examination with appropriate laboratory testing are</p>
+<p>essential in evaluating patients with suspected HF.</p>
+<li>Laboratory tests for identifying disorders that may cause or worsen HF include</li>
+<p>complete blood cell count; serum electrolytes (including calcium and magnesium);</p>
+<pre><code>renal, hepatic, thyroid function tests, and iron studies; urinalysis; lipid profile;</code></pre>
+<p>and A1C. Hyponatremia (serum sodium &lt;130 mEq/L [mmol/L]) may indicate</p>
+<p>worsening volume overload and/or disease progression and is associated with</p>
+<p>reduced survival. Serum creatinine may be increased due to hypoperfusion; pre-</p>
+<pre><code>existing renal dysfunction can contribute to volume overload. B-type natriuretic</code></pre>
+<p>peptide (BNP) is usually &gt;100 pg/mL (29 pmol/L) and NT-proBNP &gt;300 pg/mL</p>
+<p>(35 pmol/L).</p>
+<li>Ventricular hypertrophy can be demonstrated on chest radiograph or electrocardio-</li>
+<p>gram (ECG). Chest radiograph may also show pleural effusions or pulmonary edema.</p>
+<li>Echocardiogram can identify abnormalities of the pericardium, myocardium, or</li>
+<pre><code>heart valves and quantify LVEF to determine if systolic or diastolic dysfunction is</code></pre>
+<p>present.</p>
+<li>The New York Heart Association Functional Classification System is intended</li>
+<p>primarily to classify symptoms according to the physician’s subjective evaluation.</p>
+<p>Functional class (FC)-I patients have no limitation of physical activity, FC-II patients</p>
+<p>have slight limitation, FC-III patients have marked limitation, and FC-IV patients are</p>
+<p>unable to carry on physical activity without discomfort.</p>
+<li>The American College of Cardiology/American Heart Association (ACC/AHA) stag-</li>
+<p>ing system provides a more comprehensive framework for evaluating, preventing,</p>
+<p>and treating HF (see further discussion below).</p>
+<h2>TREATMENT OF CHRONIC HEART FAILURE</h2>
+<li>Goals of Treatment: Improve quality of life, relieve or reduce symptoms, prevent or</li>
+<p>minimize hospitalizations, slow disease progression, and prolong survival.</p>
+<h2>GENERAL APPROACH</h2>
+<li>The first step is to determine the etiology or precipitating factors. Treatment of</li>
+<p>underlying disorders (eg, hyperthyroidism) may obviate the need for treating HF.</p>
+<li>ACC/AHA Stage A: These are patients at high risk for developing HF. Identify and</li>
+<p>modify risk factors to prevent development of structural heart disease and subse-</p>
+<p>quent HF. Strategies include smoking cessation and control of hypertension, diabetes</p>
+<p>mellitus, and dyslipidemia. Although treatment must be individualized, angiotensin-</p>
+<p>converting enzyme (ACE) inhibitors or angiotensin receptor blockers (ARBs) are</p>
+<p>recommended for HF prevention in patients with multiple vascular risk factors.</p>
+<li>ACC/AHA Stage B: These patients have structural heart disease but no HF signs or</li>
+<p>symptoms. Treatment is targeted at minimizing additional injury and preventing</p>
+<p>or slowing the remodeling process. In addition to treatment measures outlined</p>
+<p>for stage A, patients with reduced LVEF (&lt;40%) should receive an ACE inhibitor</p>
+<p>97</p>
+<p>ch09.indd 97 19-11-2020 11:38:18</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>(or ARB) and an evidence-based β-blocker to prevent development of HF, regard-</p>
+<p>less of whether they have had an MI. Patients with a previous MI and reduced</p>
+<p>LVEF should also receive an ACE inhibitor or ARB, evidence-based β-blockers,</p>
+<p>and a statin.</p>
+<li>ACC/AHA Stage C: These patients have structural heart disease and previous or cur-</li>
+<p>rent HF symptoms and include both HFrEF and HFpEF. In addition to treatments</p>
+<p>for stages A and B, patients with HFrEF in stage C should receive guideline-directed</p>
+<p>medical therapy (GDMT) that includes an ACE inhibitor, ARB, or angiotensin</p>
+<p>receptor–neprilysin inhibitor (ARNI; valsartan–sacubitril) together with an evi-</p>
+<p>dence-based β-blocker, and an aldosterone antagonist in eligible patients to reduce</p>
+<p>morbidity and mortality (Fig. 9-1). Loop diuretics, hydralazine–isosorbide dinitrate</p>
+<p>(ISDN), digoxin, and ivabradine are also used in select patients.</p>
+<li>ACC/AHA Stage D HFrEF: These patients have persistent HF symptoms despite</li>
+<p>maximally tolerated GDMT. They should be considered for specialized interven-</p>
+<p>tions, including mechanical circulatory support, continuous IV positive inotropic</p>
+<p>therapy, cardiac transplantation, or hospice care (when no additional treatments are</p>
+<p>appropriate).</p>
+<h2>NONPHARMACOLOGIC THERAPY OF CHRONIC HEART FAILURE</h2>
+<li>Interventions include cardiac rehabilitation and restriction of fluid intake and dietary</li>
+<p>sodium intake (&lt;2–3 g of sodium/day) with daily weight measurements.</p>
+<li>In patients with hyponatremia (serum sodium <130 mEq/L [mmol/L]) or persistent</li>
+<p>volume retention despite high diuretic doses and sodium restriction, limit daily fluid</p>
+<p>intake to 2 L/day from all sources.</p>
+<li>Revascularization or anti-ischemic therapy in patients with coronary disease may</li>
+<p>reduce HF symptoms.</p>
+<li>Drugs that can aggravate HF should be discontinued if possible.</li>
+<p>PHARMACOLOGIC THERAPY FOR STAGE C HFrEF</p>
+<li>In general, patients with stage C HFrEF should receive an ACE inhibitor, ARB, or</li>
+<p>ARNI along with an evidence-based β-blocker, plus an aldosterone antagonist in</p>
+<p>select patients (Fig. 9-1). Administer a diuretic if there is evidence of fluid retention.</p>
+<p>A hydralazine–nitrate combination, ivabradine, or digoxin may be considered in</p>
+<p>select patients. Drug dosing recommendations are provided in Table 9-1.</p>
+<p>Diuretics</p>
+<li>Compensatory mechanisms in HF stimulate excessive sodium and water reten-</li>
+<p>tion, often leading to systemic and pulmonary congestion. Consequently, diuretic</p>
+<p>therapy (in addition to sodium restriction) is recommended for all patients with</p>
+<p>clinical evidence of fluid retention. However, because they do not alter disease</p>
+<p>progression or prolong survival, diuretics are not required for patients without</p>
+<p>fluid retention.</p>
+<li>Thiazide diuretics (eg, hydrochlorothiazide) are relatively weak and are infrequently</li>
+<p>used alone in HF. However, thiazides or the thiazide-like diuretic metolazone can be</p>
+<p>used in combination with a loop diuretic to promote very effective diuresis. Thiazides</p>
+<p>may be preferred over loop diuretics in patients with only mild fluid retention and</p>
+<p>elevated BP because of their more persistent antihypertensive effects.</p>
+<li>Loop diuretics (furosemide, bumetanide, and torsemide) are usually necessary to</li>
+<p>restore and maintain euvolemia in HF. In addition to acting in the thick ascending</p>
+<p>limb of the loop of Henle, they induce a prostaglandin-mediated increase in renal</p>
+<p>blood flow that contributes to their natriuretic effect. Unlike thiazides, loop diuret-</p>
+<pre><code>ics maintain their effectiveness in the presence of impaired renal function, although</code></pre>
+<p>higher doses may be necessary.</p>
+<li>Adverse effects of diuretics include hypovolemia, hypotension, hyponatremia, hypo-</li>
+<pre><code>kalemia, hypomagnesemia, hyperuricemia, and renal dysfunction.</code></pre>
+<p>98</p>
+<p>ch09.indd 98 19-11-2020 11:38:19</p>
+<h2>Heart Failure | CHAPTER 9</h2>
+<p>GDMT for HFrEF Stage C</p>
+<p>ACEI or ARB (Class I Evidence A)</p>
+<h2>AND</h2>
+<p>GDMT β-blocker (Class I Evidence A)</p>
+<p>Loop diuretic if needed for volume overload (Class I Evidence C)</p>
+<p>Aldosterone antagonista (Class I Evidence A)</p>
+<p>ARNIb (sacubitril/valsartan) (Class I Evidence B-R)</p>
+<p>Isosorbide dinitrate/hydralazine (Class I Evidence A if African-American and</p>
+<p>persistently symptomatic on GDMT)</p>
+<p>(Class IIa Evidence B if ACEI/ARB intolerant)</p>
+<p>Ivabradinec (Class II Evidence B-R)</p>
+<p>Digoxind (Class IIa Evidence B if persistently symptomatic on GDMT)</p>
+<p>aNYHA class II-IV symptoms, estimated creatinine clearance &gt;30 mL/min</p>
+<p>and K+ &lt;5.0 mEq/L</p>
+<p>bNYHA class II-III symptoms tolerating an ACEI or ARB – switching to ARNI can</p>
+<p>further reduce morbidity/mortality</p>
+<p>cNYHA class II-III symptoms in normal sinus rhythm and HR ≥70 bpm on</p>
+<p>maximally tolerated β-blocker dose</p>
+<p>dIndication is to reduce hospitalizations</p>
+<p>(ACEI, angiotensin-converting enzyme inhibitor; ARB, angiotensin receptor blocker; ARNI, angiotensin recep-</p>
+<p>tor–neprilysin inhibitor; bpm, beats per minute; GDMT, guideline-directed medical therapy; HFrEF, heart</p>
+<p>failure with reduced ejection fraction; K+, serum potassium.)</p>
+<p>FIGURE 9-1. Guideline-directed treatment algorithm for patients with ACC/</p>
+<p>AHA stage C heart failure with reduced ejection fraction. (Adapted from</p>
+<p>Yancy CW, Jessup M, B ozkurt B, et al. 2013 ACCF/AHA guideline for the manage-</p>
+<p>ment of heart failure: A report of the American College of Cardiology Foundation/</p>
+<p>American Heart Association Task Force on Practice Guidelines. J Am Coll Cardiol.</p>
+<p>2013;62:e147–e239.)</p>
+<p>Angiotensin-Converting Enzyme Inhibitors</p>
+<li>ACE inhibitors decrease angiotensin II and aldosterone, attenuating many of their</li>
+<p>deleterious effects that drive HF initiation and progression. ACE inhibitors also</p>
+<p>inhibit the breakdown of bradykinin, which increases vasodilation and also leads to</p>
+<p>cough. ACE inhibitors improve symptoms, slow disease progression, and decrease</p>
+<p>mortality in patients with HFrEF. Current guidelines recommend that all patients</p>
+<p>with HFrEF, regardless of whether or not symptoms are present, should receive an</p>
+<p>ACE inhibitor to reduce morbidity and mortality, unless there are contraindications.</p>
+<li>Clinical trials have documented favorable effects of ACE inhibitors on symptoms,</li>
+<p>HF progression, hospitalizations, and quality of life. ACE inhibitors improve survival</p>
+<p>99</p>
+<p>ch09.indd 99 19-11-2020 11:38:19</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>TABLE 9-1 Drug Dosing Recommendations for Stage C Heart Failure with Reduced Ejection</p>
+<p>Fraction (HFrEF)</p>
+<p>Usual Range with Normal</p>
+<p>Generic (Brand) Name Initial Dose Renal Function</p>
+<p>Loop Diuretics</p>
+<p>Furosemide (Lasix) 20–40 mg once or twice daily 20–160 mg once or twice daily</p>
+<p>Bumetanide (Bumex) 0.5–1 mg once or twice daily 1–2 mg once or twice daily</p>
+<p>Torsemide (Demadex) 10–20 mg once daily 10–80 mg once daily</p>
+<p>ACE Inhibitors</p>
+<p>Captopril (Capoten) 6.25 mg three times daily 50 mg three times dailya</p>
+<p>Enalapril (Vasotec) 2.5 mg twice daily 10–20 mg twice dailya</p>
+<p>Lisinopril (Prinivil, Zestril) 2.5–5 mg once daily 20–40 mg once dailya</p>
+<p>Quinapril (Accupril) 5 mg twice daily 20–40 mg twice daily</p>
+<p>Ramipril (Altace) 1.25–2.5 mg once daily 10 mg once dailya</p>
+<p>Fosinopril (Monopril) 5–10 mg once daily 40 mg once daily</p>
+<p>Trandolapril (Mavik) 1 mg once daily 4 mg once dailya</p>
+<p>Perindopril (Aceon) 2 mg once daily 8–16 mg once daily</p>
+<p>Angiotensin Receptor Blockers</p>
+<p>Candesartan (Atacand) 4–8 mg once daily 32 mg once dailya</p>
+<p>Valsartan (Diovan) 20–40 mg twice daily 160 mg twice dailya</p>
+<p>Losartan (Cozaar) 25–50 mg once daily 150 mg once dailya</p>
+<p>Angiotensin Receptor Blocker–Neprilysin Inhibitor</p>
+<p>Sacubitril/Valsartan 49/51 mg sacubitril–valsartan 97/103 mg sacubitril–valsartan</p>
+<p>(Entresto) twice daily twice dailya</p>
+<p>β-Blockers</p>
+<p>Bisoprolol (Zebeta) 1.25 mg once daily 10 mg once dailya</p>
+<p>Carvedilol (Coreg) 3.125 mg twice daily 25 mg twice dailya</p>
+<p>Carvedilol phosphate 10 mg once daily 80 mg once daily</p>
+<p>(Coreg CR)</p>
+<p>Metoprolol succinate 12.5–25 mg once daily 200 mg once dailya</p>
+<p>CR/XL (Toprol-XL)</p>
+<p>Aldosterone Antagonists</p>
+<p>Spironolactone 12.5–25 mg once daily 25–50 mg once dailya</p>
+<p>(Aldactone)</p>
+<p>Eplerenone (Inspra) 25 mg once daily 50 mg once dailya</p>
+<p>Other</p>
+<p>Hydralazine–Isosorbide Hydralazine 37.5 mg 3 times daily Hydralazine 75 mg 3 times dailya</p>
+<p>Dinitrate (Bidil) Isosorbide dinitrate 20 mg 3 Isosorbide dinitrate 40 mg 3</p>
+<p>times daily times dailya</p>
+<p>Digoxin (Lanoxin) 0.125–0.25 mg once daily 0.125–0.25 mg once daily</p>
+<p>Ivabradine (Corlanor) 5 mg twice daily 5–7.5 mg twice daily</p>
+<p>aRegimens proven in large clinical trials to reduce mortality.</p>
+<p>ACEI, angiotensin-converting enzyme inhibitor; ARB, angiotensin receptor blocker.</p>
+<p>Data from Brater DC. Pharmacology of diuretics. Am J Med Sci. 2000;319:38-50; Yancy CW, Jessup M,</p>
+<p>Bozkurt B, et al. 2013 ACCF/AHA guideline for the management of heart failure: A report of the</p>
+<p>American College of Cardiology Foundation/American Heart Association Task Force on Practice</p>
+<p>Guidelines. J Am Coll Cardiol. 2013;62:e147–e239.</p>
+<p>100</p>
+<p>ch09.indd 100 19-11-2020 11:38:20</p>
+<div class="table-container"><table><tr><th>TABLE 9-1 Drug Dosing Recommendations for Stage C Heart Failure with Reduced Ejection
+Fraction (HFrEF)</th><th></th><th></th></tr><tr><td>Generic (Brand) Name</td><td>Initial Dose</td><td>Usual Range with Normal
+Renal Function</td></tr><tr><td>Loop Diuretics</td><td></td><td></td></tr><tr><td>Furosemide (Lasix)</td><td>20–40 mg once or twice daily</td><td>20–160 mg once or twice daily</td></tr><tr><td>Bumetanide (Bumex)</td><td>0.5–1 mg once or twice daily</td><td>1–2 mg once or twice daily</td></tr><tr><td>Torsemide (Demadex)</td><td>10–20 mg once daily</td><td>10–80 mg once daily</td></tr><tr><td>ACE Inhibitors</td><td></td><td></td></tr><tr><td>Captopril (Capoten)</td><td>6.25 mg three times daily</td><td>50 mg three times dailya</td></tr><tr><td>Enalapril (Vasotec)</td><td>2.5 mg twice daily</td><td>10–20 mg twice dailya</td></tr><tr><td>Lisinopril (Prinivil, Zestril)</td><td>2.5–5 mg once daily</td><td>20–40 mg once dailya</td></tr><tr><td>Quinapril (Accupril)</td><td>5 mg twice daily</td><td>20–40 mg twice daily</td></tr><tr><td>Ramipril (Altace)</td><td>1.25–2.5 mg once daily</td><td>10 mg once dailya</td></tr><tr><td>Fosinopril (Monopril)</td><td>5–10 mg once daily</td><td>40 mg once daily</td></tr><tr><td>Trandolapril (Mavik)</td><td>1 mg once daily</td><td>4 mg once dailya</td></tr><tr><td>Perindopril (Aceon)</td><td>2 mg once daily</td><td>8–16 mg once daily</td></tr><tr><td>Angiotensin Receptor Blockers</td><td></td><td></td></tr><tr><td>Candesartan (Atacand)</td><td>4–8 mg once daily</td><td>32 mg once dailya</td></tr><tr><td>Valsartan (Diovan)</td><td>20–40 mg twice daily</td><td>160 mg twice dailya</td></tr><tr><td>Losartan (Cozaar)</td><td>25–50 mg once daily</td><td>150 mg once dailya</td></tr><tr><td>Angiotensin Receptor Blocker–Neprilysin Inhibitor</td><td></td><td></td></tr><tr><td>Sacubitril/Valsartan
+(Entresto)</td><td>49/51 mg sacubitril–valsartan
+twice daily</td><td>97/103 mg sacubitril–valsartan
+twice dailya</td></tr><tr><td>β-Blockers</td><td></td><td></td></tr><tr><td>Bisoprolol (Zebeta)</td><td>1.25 mg once daily</td><td>10 mg once dailya</td></tr><tr><td>Carvedilol (Coreg)</td><td>3.125 mg twice daily</td><td>25 mg twice dailya</td></tr><tr><td>Carvedilol phosphate
+(Coreg CR)</td><td>10 mg once daily</td><td>80 mg once daily</td></tr><tr><td>Metoprolol succinate
+CR/XL (Toprol-XL)</td><td>12.5–25 mg once daily</td><td>200 mg once dailya</td></tr><tr><td>Aldosterone Antagonists</td><td></td><td></td></tr><tr><td>Spironolactone
+(Aldactone)</td><td>12.5–25 mg once daily</td><td>25–50 mg once dailya</td></tr><tr><td>Eplerenone (Inspra)</td><td>25 mg once daily</td><td>50 mg once dailya</td></tr><tr><td>Other</td><td></td><td></td></tr><tr><td>Hydralazine–Isosorbide
+Dinitrate (Bidil)</td><td>Hydralazine 37.5 mg 3 times daily</td><td>Hydralazine 75 mg 3 times dailya</td></tr><tr><td></td><td>Isosorbide dinitrate 20 mg 3
+times daily</td><td>Isosorbide dinitrate 40 mg 3
+times dailya</td></tr><tr><td>Digoxin (Lanoxin)</td><td>0.125–0.25 mg once daily</td><td>0.125–0.25 mg once daily</td></tr><tr><td>Ivabradine (Corlanor)</td><td>5 mg twice daily</td><td>5–7.5 mg twice daily</td></tr></table></div><h2>Heart Failure | CHAPTER 9</h2>
+<p>by 20%–30% compared with placebo. The benefits are independent of HF etiology</p>
+<p>(ischemic vs nonischemic) and are greatest in patients with the most severe</p>
+<p>symptoms.</p>
+<li>Start therapy with low doses followed by gradual titration as tolerated to the target</li>
+<p>or maximally tolerated doses (Table 9-1). Dose titration is usually accomplished by</p>
+<pre><code>doubling the dose every 2 weeks. Evaluate blood pressure (BP), renal function, and</code></pre>
+<p>serum potassium at baseline and within 1–2 weeks after the start of therapy and after</p>
+<p>each dose increase. Although symptoms may improve within a few days of starting</p>
+<p>therapy, it may take weeks to months before the full benefits are apparent. Even if</p>
+<p>symptoms do not improve, continue long-term therapy to reduce mortality and</p>
+<p>hospitalizations.</p>
+<li>The most common adverse effects include hypotension, renal dysfunction, and</li>
+<p>hyperkalemia. A dry, nonproductive cough (occurring in 15%–20% of patients)</p>
+<p>is the most common reason for discontinuation. Because cough is a bradykinin-</p>
+<p>mediated effect, replacement with an ARB is reasonable; however, caution is required</p>
+<p>because crossreactivity has been reported. Angioedema occurs in approximately 1%</p>
+<p>of patients and is potentially life threatening; ACE inhibitors are contraindicated in</p>
+<p>patients with a history of angioedema. ACE inhibitors are contraindicated in preg-</p>
+<p>nancy due to various congenital defects.</p>
+<p>Angiotensin Receptor Blockers</p>
+<li>The ARBs block the angiotensin II receptor subtype AT, preventing the deleterious</li>
+<p>1</p>
+<p>effects of angiotensin II on ventricular remodeling. Because they do not affect the</p>
+<p>ACE enzyme, ARBs do not affect bradykinin, which is linked to ACE inhibitor cough</p>
+<p>and angioedema.</p>
+<li>ARBs are now a guideline-recommended alternative in patients who are unable to</li>
+<p>tolerate an ACE inhibitor due to cough or angioedema. Although numerous ARBs</p>
+<p>are available, only candesartan, valsartan, and losartan are recommended in the</p>
+<p>guidelines because efficacy has been demonstrated in clinical trials. As with ACE</p>
+<p>inhibitors, initiate therapy with low doses and then titrate to target doses. Evaluate</p>
+<pre><code>BP, renal function, and serum potassium within 1–2 weeks after starting therapy</code></pre>
+<p>and after dosage increases, with these parameters used to guide subsequent dose</p>
+<p>changes.</p>
+<li>ARBs are not suitable alternatives in patients with hypotension, hyperkalemia, or</li>
+<p>renal insufficiency due to ACE inhibitors because they are just as likely to cause these</p>
+<p>adverse effects. Careful monitoring is required when an ARB is used with another</p>
+<p>inhibitor of the renin-angiotensin-aldosterone (RAAS) system (eg, ACE inhibitor or</p>
+<p>aldosterone antagonist) because this combination increases the risk of these adverse</p>
+<p>effects. Because ARBs do not affect bradykinin, they are not associated with cough</p>
+<p>and have a lower risk of angioedema than ACE inhibitors. Caution should be exer-</p>
+<p>cised when ARBs are used in patients with angioedema from ACE inhibitors because</p>
+<p>crossreactivity has been reported. Similar to ACE inhibitors, ARBs are contraindi-</p>
+<p>cated in pregnancy.</p>
+<p>Angiotensin Receptor–Neprilysin Inhibitor</p>
+<li>Valsartan/Sacubitril is an ARNI approved to reduce the risk of cardiovascular death</li>
+<p>and hospitalization for HF in patients with NYHA class II–IV HF and reduced LVEF.</p>
+<p>Neprilysin is an enzyme that degrades bradykinin and other endogenous vasodila-</p>
+<p>tor and natriuretic peptides. By reducing neprilysin-mediated breakdown of these</p>
+<p>compounds, vasodilation, diuresis, and natriuresis are enhanced, and renin and</p>
+<p>aldosterone secretion is inhibited.</p>
+<li>In patients with HFrEF and NYHA class II–III symptoms tolerating an ACE inhibi-</li>
+<p>tor or ARB, current guidelines recommend replacing those drugs with the ARNI to</p>
+<p>further reduce morbidity and mortality. Discontinue ACE inhibitors 36 hours prior</p>
+<p>to initiating the ARNI; no waiting period is needed in patients receiving an ARB.</p>
+<p>101</p>
+<p>ch09.indd 101 19-11-2020 11:38:20</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Titrate the initial starting dose to the target dose after 2–4 weeks (see Table 9-1).</p>
+<pre><code>Closely monitor BP, serum potassium, and renal function after the start of therapy</code></pre>
+<p>and after each titration step.</p>
+<li>The most common adverse effects include hypotension, dizziness, hyperkalemia,</li>
+<pre><code>worsening renal function, and cough. Angioedema is most common with sacubitril/</code></pre>
+<p>valsartan than with enalapril (0.5% vs 0.2%, respectively). Sacubitril/valsartan is</p>
+<p>contraindicated in patients with a history of angioedema associated with an ACE</p>
+<p>inhibitor or ARB. It is also contraindicated in pregnancy and should not be used</p>
+<p>concurrently with ACE inhibitors or other ARBs.</p>
+<p>β-Blockers</p>
+<li>β-Blockers antagonize the detrimental effects of the sympathetic nervous systems in</li>
+<p>HF and slow disease progression. Clinical trial evidence demonstrated that certain</p>
+<p>β-blockers reduce HF mortality, all-cause hospitalizations, and hospitalizations for</p>
+<p>worsening HF, among other endpoints.</p>
+<li>The ACC/AHA guidelines recommend use of β-blockers in all stable patients with</li>
+<p>HFrEF in the absence of contraindications or a clear history of β-blocker intolerance.</p>
+<p>Patients should receive a β-blocker even if symptoms are mild or well controlled with</p>
+<p>ACE inhibitor and diuretic therapy. It is not essential that ACE inhibitor doses be</p>
+<p>optimized before a β-blocker is started because the addition of a β-blocker is likely to</p>
+<p>be of greater benefit than an increase in ACE inhibitor dose.</p>
+<li>β-Blockers are also recommended for asymptomatic persons with a reduced LVEF</li>
+<p>(stage B) to decrease the risk of progression to HF.</p>
+<li>Carvedilol, metoprolol succinate (CR/XL), and bisoprolol are the only β-blockers</li>
+<p>shown to reduce mortality in large HF trials. Because bisoprolol is not available in the</p>
+<p>necessary starting dose of 1.25 mg, the choice is typically limited to either carvedilol</p>
+<p>or metoprolol succinate. Target doses are those associated with reductions in mortal-</p>
+<h2>ity in placebo-controlled clinical trials (Table 9-1).</h2>
+<li>Initiate β-blockers in stable patients who have no or minimal evidence of fluid over-</li>
+<p>load. Because of their negative inotropic effects, start β-blockers in very low doses</p>
+<p>with slow upward dose titration to avoid symptomatic worsening or acute decom-</p>
+<p>pensation. Doses should be doubled no more often than every 2 weeks, as tolerated,</p>
+<p>until the target or maximally tolerated dose is reached.</p>
+<li>Inform patients that β-blocker therapy is expected to positively influence disease</li>
+<p>progression and survival even if there is little symptomatic improvement. In addition,</p>
+<p>dose titration is a long, gradual process; response to therapy may be delayed; and HF</p>
+<p>symptoms may actually worsen during the initiation period.</p>
+<li>Adverse effects include bradycardia or heart block, hypotension, fatigue, impaired</li>
+<p>glycemic control in diabetic patients, bronchospasm in patients with asthma, and</p>
+<p>worsening HF. Absolute contraindications include uncontrolled bronchospastic dis-</p>
+<p>ease, symptomatic bradycardia, advanced heart block without a pacemaker, and acute</p>
+<p>decompensated HF. However, β-blockers may be tried with caution in patients with</p>
+<p>asymptomatic bradycardia, COPD, or well-controlled asthma.</p>
+<p>Aldosterone Antagonists</p>
+<li>Spironolactone and eplerenone block mineralocorticoid receptors, the target for</li>
+<p>aldosterone. In the kidney, aldosterone antagonists inhibit sodium reabsorption and</p>
+<p>potassium excretion. However, diuretic effects with low doses are minimal, suggest-</p>
+<p>ing that their therapeutic benefits result from other actions. In the heart, aldosterone</p>
+<p>antagonists inhibit cardiac extracellular matrix and collagen deposition, thereby</p>
+<p>attenuating cardiac fibrosis and ventricular remodeling. Aldosterone antagonists</p>
+<p>also attenuate the systemic proinflammatory state, atherogenesis, and oxidative stress</p>
+<p>caused by aldosterone.</p>
+<li>Current guidelines recommend adding a low-dose aldosterone antagonist to standard</li>
+<p>therapy to improve symptoms, reduce the risk of HF hospitalization, and increase</p>
+<pre><code>survival in select patients provided that serum potassium and renal function can</code></pre>
+<p>be carefully monitored. Based on clinical trial data in HFrEF, low-dose aldosterone</p>
+<p>102</p>
+<p>ch09.indd 102 19-11-2020 11:38:20</p>
+<h2>Heart Failure | CHAPTER 9</h2>
+<p>antagonists may be appropriate for: (1) patients with mild to moderately severe</p>
+<p>HFrEF (NYHA class II–IV) who are receiving standard therapy, and (2) those with</p>
+<pre><code>LV dysfunction and either acute HF or diabetes early after MI.</code></pre>
+<li>Start with low doses (spironolactone 12.5 mg/day or eplerenone 25 mg/day) espe-</li>
+<p>cially in older persons and those with diabetes or a creatinine clearance &lt;50 mL/</p>
+<h2>min/1.73m2 (0.48 mL/sec/m2 (Table 9-1).</h2>
+<li>Avoid aldosterone antagonists in patients with renal impairment, elevated serum</li>
+<p>potassium (&gt;5 mEq/L [mmol/L]), or history of severe hyperkalemia. Spironolactone</p>
+<p>also interacts with androgen and progesterone receptors, which may lead to gyneco-</p>
+<p>mastia, impotence, and menstrual irregularities in some patients.</p>
+<p>Nitrates and Hydralazine</p>
+<li>Isosorbide dinitrate (ISDN) is a venodilator that reduces preload, whereas hydrala-</li>
+<p>zine is a direct arterial vasodilator that reduces systemic vascular resistance (SVR)</p>
+<p>and increases stroke volume and CO. The beneficial effects of combining a nitrate</p>
+<p>with hydralazine extend beyond their complementary hemodynamic actions and</p>
+<p>are likely related to attenuating the biochemical processes driving HF progression.</p>
+<li>Guidelines recommend addition of hydralazine/ISDN to self-described African</li>
+<p>Americans with HFrEF and NYHA class III–IV symptoms treated with ACE inhibi-</p>
+<p>tors (or ARBs) and β-blockers. The combination can also be useful in patients unable</p>
+<p>to tolerate either an ACE inhibitor or ARB because of renal insufficiency, hyperka-</p>
+<p>lemia, or hypotension.</p>
+<li>Obstacles to successful therapy with the combination include the need for frequent</li>
+<p>dosing (ie, three times daily with the fixed-dose combination product), high fre-</p>
+<p>quency of adverse effects (eg, headache, dizziness, and GI distress), and increased</p>
+<p>cost for the fixed-dose combination product.</p>
+<p>Ivabradine</p>
+<li>Ivabradine inhibits the I current in the sinoatrial node that is responsible for con-</li>
+<p>f</p>
+<p>trolling HR, thereby slowing spontaneous depolarization of the sinus node and</p>
+<p>resulting in a dose-dependent slowing of the HR. It does not affect AV conduction,</p>
+<p>BP, or myocardial contractility. Elevated resting heart rate (HR) (&gt;70–80 bpm) is an</p>
+<p>independent risk factor for adverse HFrEF outcomes, and β-blockers are frequently</p>
+<p>underdosed in clinical practice for a variety of reasons. Because of the clear benefits</p>
+<p>of β-blockers on mortality, clinicians should titrate to the maximum tolerated doses</p>
+<p>before considering use of ivabradine.</p>
+<li>Ivabradine is indicated to reduce the risk of hospitalization for worsening HF in</li>
+<p>patients with LVEF ≤35% who are in sinus rhythm with resting HR ≥70 bpm and</p>
+<p>are either on a maximally tolerated dose of a β-blocker or have a contraindication to</p>
+<p>β-blocker use.</p>
+<li>The usual starting dose is 5 mg twice daily with meals (Table 9-1). After 2 weeks of</li>
+<p>treatment, if the resting HR is between 50 and 60 bpm, the dose should be continued.</p>
+<p>If the HR is &gt;60 bpm, the dose can be increased to the maximum of 7.5 mg twice</p>
+<p>daily. If at any point the HR is &lt;50 bpm or the patient has symptomatic bradycardia,</p>
+<p>the dose should be reduced by 2.5 mg twice daily; if the patient is only receiving</p>
+<p>2.5 mg twice daily, ivabradine should be discontinued.</p>
+<li>The most common adverse effects are bradycardia, atrial fibrillation, and visual</li>
+<p>disturbances.</p>
+<p>Digoxin</p>
+<li>Although digoxin has positive inotropic effects, its benefits in HF are related to</li>
+<p>its neurohormonal effects. It attenuates the excessive sympathetic nervous system</p>
+<p>activation in HF and increases parasympathetic activity, thereby decreasing HR and</p>
+<p>enhancing diastolic filling. Observational studies of digoxin conducted in the context</p>
+<p>of contemporary HF therapy showed either neutral effects or reductions in hospital-</p>
+<p>izations and either neutral or detrimental effects of digoxin on mortality.</p>
+<p>103</p>
+<p>ch09.indd 103 19-11-2020 11:38:20</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>Based on available data, digoxin is not considered a first-line agent in HF, but a trial</li>
+<p>may be considered in conjunction with GDMT including ACE inhibitors (or ARBs),</p>
+<p>β-blockers, and diuretics in patients with symptomatic HFrEF to improve symptoms</p>
+<p>and reduce hospitalizations. Digoxin may also be considered to help control ven-</p>
+<p>tricular rate in patients with HFrEF and supraventricular arrhythmias, although</p>
+<p>β-blockers are generally more effective rate control agents, especially during exercise.</p>
+<li>In the absence of digoxin toxicity or serious adverse effects, digoxin should be con-</li>
+<p>tinued in most patients. Digoxin withdrawal may be considered for asymptomatic</p>
+<pre><code>patients who have significant improvement in systolic function with optimal ACE</code></pre>
+<p>inhibitor and β-blocker treatment.</p>
+<li>The target serum digoxin concentration for most patients is 0.5–0.9 ng/mL (0.6–1.2</li>
+<pre><code>nmol/L). Most patients with normal renal function can achieve this level with a dose</code></pre>
+<pre><code>of 0.125 mg/day. Patients with decreased renal function, low body weight, advanced</code></pre>
+<p>age, or interacting drugs (eg, amiodarone) should receive 0.125 mg every other day.</p>
+<p>PHARMACOLOGIC THERAPY FOR HFpEF</p>
+<li>Treatment includes controlling HR and BP, alleviating causes of myocardial ischemia,</li>
+<p>reducing volume, and restoring and maintaining sinus rhythm in patients with atrial</p>
+<p>fibrillation. Many of the drugs are the same as those used to treat HFrEF (eg, diuret-</p>
+<p>ics, β-blockers), but the rationale and dosing may be different.</p>
+<li>A loop or a thiazide diuretic should be considered for patients with volume overload.</li>
+<p>Use a loop diuretic for more severe volume overload or inadequate response to a</p>
+<p>thiazide. Avoid lowering preload excessively, which may reduce stroke volume and</p>
+<p>CO. Start diuretics at low doses to avoid hypotension and fatigue.</p>
+<li>ACE inhibitors may be considered in all patients, especially patients with symptom-</li>
+<p>atic atherosclerotic cardiovascular disease or diabetes and one additional risk factor.</p>
+<li>ARBs may be considered in all patients, especially those who are intolerant of ACE</li>
+<p>inhibitors.</p>
+<li>Aldosterone antagonists can reduce the risk of hospitalization in patients who do not</li>
+<p>have contraindications and are not at risk for hyperkalemia. They may be beneficial</p>
+<p>for patients with elevated BNP or NT-proBNP.</p>
+<li>β-Blockers should be considered in patients with one or more of the following conditions:</li>
+<p>(1) MI, (2) hypertension, and (3) atrial fibrillation requiring ventricular rate control.</p>
+<li>Nondihydropyridine calcium channel blockers (CCB; diltiazem or verapamil)</li>
+<p>should be considered for patients with atrial fibrillation warranting ventricular rate</p>
+<p>control who either are intolerant to or have not responded to a β-blocker. A non-</p>
+<p>dihydropyridine or dihydropyridine (eg, amlodipine) CCB can be considered for</p>
+<p>symptom-limiting angina or hypertension.</p>
+<h2>TREATMENT OF ACUTE DECOMPENSATED HEART FAILURE (ADHF)</h2>
+<h2>GENERAL APPROACH</h2>
+<li>Acute decompensated heart failure involves patients with new or worsening signs or</li>
+<p>symptoms (often resulting from volume overload and/or low CO) requiring medical</p>
+<p>intervention, such as emergency department visit or hospitalization.</p>
+<li>Goals of Treatment: The overall goals are to relieve symptoms, improve hemody-</li>
+<p>namic stability, and reduce short-term mortality so the patient can be discharged in</p>
+<h2>a stable compensated state on oral drug therapy.</h2>
+<li>Consider hospitalization based on clinical findings. Admission to an intensive care</li>
+<p>unit (ICU) may be required if the patient experiences hemodynamic instability</p>
+<p>requiring frequent monitoring of vital signs, invasive hemodynamic monitoring, or</p>
+<p>rapid titration of IV medications with close monitoring.</p>
+<li>Focus the history and physical exam on potential etiologies of ADHF; presence of</li>
+<p>precipitating factors (eg, arrhythmias, hypertension, myocardial ischemia or infarc-</p>
+<p>tion, anemia, and thyroid disorders); onset, duration, and severity of symptoms; and</p>
+<p>a careful medication history.</p>
+<p>104</p>
+<p>ch09.indd 104 19-11-2020 11:38:20</p>
+<h2>Heart Failure | CHAPTER 9</h2>
+<li>Symptoms of volume overload include dyspnea, orthopnea, PND, ascites, GI symp-</li>
+<p>toms (poor appetite, nausea, early satiety), peripheral edema, and weight gain. Low</p>
+<p>output symptoms include altered mental status, fatigue, GI symptoms (similar to</p>
+<p>volume overload), and decreased urine output.</p>
+<li>Signs of volume overload include pulmonary crackles, elevated jugular venous</li>
+<p>pressure, HJR, S gallop, and peripheral edema. Low output signs include tachycar-</p>
+<p>3</p>
+<p>dia, hypotension (more commonly) or hypertension, narrow pulse pressure, cool</p>
+<p>extremities, pallor, and cachexia.</p>
+<li>Laboratory testing may include BNP or NT-proBNP, thyroid function tests, complete</li>
+<p>blood count, cardiac enzymes, and routine serum chemistries (eg, serum creatinine,</p>
+<pre><code>liver function tests).</code></pre>
+<li>Ascertain hemodynamic status to guide initial therapy. Patients may be categorized</li>
+<p>into one of four hemodynamic subsets based on volume status (euvolemic or “dry”</p>
+<p>vs volume overloaded or “wet”) and CO (adequate CO or “warm” vs hypoperfusion</p>
+<p>or “cold”) (Fig. 9-2).</p>
+<li>Reserve invasive hemodynamic monitoring for patients refractory to initial therapy,</li>
+<p>whose volume status is unclear, or who have significant hypotension or worsening</p>
+<pre><code>renal function despite appropriate initial therapy.</code></pre>
+<li>Address and correct reversible or treatable causes of decompensation.</li>
+<li>Assess medications being taken prior to admission and determine whether adjust-</li>
+<p>ment or discontinuation is required.</p>
+<li>If fluid retention is evident on physical exam, pursue aggressive diuresis, preferably</li>
+<p>with IV diuretics.</p>
+<li>In the absence of cardiogenic shock or symptomatic hypotension, strive to continue</li>
+<p>all GDMT for HF. β-blockers may be temporarily held or dose-reduced if recent</p>
+<p>changes are responsible for acute decompensation. Other GDMT (ACE inhibitors,</p>
+<p>ARBs, ARNI, and aldosterone antagonists) may also need to be temporarily withheld</p>
+<pre><code>in the presence of renal dysfunction, with close monitoring of serum potassium. Most</code></pre>
+<p>patients may continue to receive digoxin at doses targeting a trough serum concen-</p>
+<p>tration of 0.5–0.9 ng/mL (mcg/L; 0.6–1.2 nmol/L).</p>
+<h2>NONPHARMACOLOGIC THERAPY FOR ADHF</h2>
+<li>Place all patients with congestive symptoms on sodium restriction (<2 g daily) and</li>
+<p>consider fluid restriction for refractory symptoms.</p>
+<li>Consider noninvasive ventilation for patients in respiratory distress due to acute</li>
+<p>pulmonary edema, particularly those at risk for intubation.</p>
+<li>Provide pharmacologic thromboprophylaxis with unfractionated heparin or low-</li>
+<p>molecular-weight heparin for most patients with limited mobility; consider mechani-</p>
+<p>cal thromboprophylaxis with intermittent pneumatic compression devices in patients</p>
+<p>at high risk for bleeding.</p>
+<li>Most nonpharmacologic therapies for ADHF are reserved for patients failing pharmaco-</li>
+<p>logic therapy. Ultrafiltration and wireless invasive hemodynamic monitoring (W-IHM)</p>
+<p>may be used to manage congestive symptoms. Temporary mechanical circulatory</p>
+<p>support (MCS) with an intra-aortic balloon pump (IABP), ventricular assist device</p>
+<p>(VAD), or extracorporeal membrane oxygenation (ECMO) may be considered for</p>
+<pre><code>hemodynamic stabilization until the underlying etiology of cardiac dysfunction resolves</code></pre>
+<p>or has been corrected (“bridge to recovery”) or until evaluation for definitive therapy</p>
+<p>(eg, durable MCS or cardiac transplantation) can be completed (“bridge to decision”).</p>
+<p>IV vasodilators and inotropes may be used with temporary MCS to maximize hemody-</p>
+<p>namic and clinical benefits or facilitate device removal. Systemic anticoagulant therapy</p>
+<p>is generally required to prevent device thrombosis, regardless of the method selected.</p>
+<li>Durable MCS with temporary device implantation is used for patients awaiting</li>
+<p>heart transplantation who are unlikely to survive until a suitable donor is identified</p>
+<p>(“bridge to transplantation”). Permanent device implantation is used in patients</p>
+<p>ineligible for heart transplantation due to advanced age or comorbid conditions</p>
+<p>(“destination therapy”).</p>
+<p>105</p>
+<p>ch09.indd 105 19-11-2020 11:38:20</p>
+<h2>106 SECTION</h2>
+<p>2</p>
+<p>|</p>
+<p>Cardiovascular</p>
+<p>Disorders</p>
+<p>Subset II (warm and wet)</p>
+<p>Subset I</p>
+<p>(warm and dry) Symptom Persistent</p>
+<p>relief symptoms</p>
+<p>IV loop diuretic</p>
+<p>± IV vasodilator</p>
+<p>Optimize chronic See Subset I Use adjunct strategies</p>
+<p>oral medications to overcome diuretic resistance</p>
+<p>Persistent</p>
+<p>symptoms</p>
+<p>PAC to guide further management</p>
+<p>2.2 Subset III Subset IV</p>
+<p>Orthostatic (cold and dry) (cold and wet) or No orthostasis</p>
+<p>PCWP ≤15 mm Hg PCWP 15-18 mm Hg SBP &lt; 90 mm Hg Assess SBP SBP ≥ 90 mm Hg</p>
+<p>Assess volume status ± PAC</p>
+<p>± PAC SBP IV inotrope No</p>
+<p>SBP ≥ 90 mm Hg (± vasopressor improvement IV diuretic</p>
+<p>IV fluids &lt;90 mm Hg Assess SBP if needed) ± IV vasodilator</p>
+<h2>± PAC +</h2>
+<p>No IV diuretic</p>
+<p>IV inotrope improvement ± PAC</p>
+<p>(± vasopressor if needed) IV vasodilator No</p>
+<p>No improvement improvement</p>
+<h2>MCS MCS</h2>
+<p>18</p>
+<p>Pulmonary capillary wedge pressure (mm Hg)</p>
+<p>)2m/nim/L(</p>
+<p>xedni</p>
+<p>caidraC</p>
+<p>(IV, intravenous; MCS, mechanical circulatory support; PAC, pulmonary artery catheter; PCWP, pulmonary capillary wedge pressure; SBP, systolic BP.)</p>
+<p>FIGURE 9-2. General management algorithm for acute decompensated heart failure based on clinical presentation. Patients may be categorized into</p>
+<p>a hemodynamic subset based on signs and symptoms or invasive hemodynamic monitoring. Adjunct strategies for overcoming diuretic resistance include</p>
+<p>increasing the dose of loop diuretic; switching to a continuous infusion; adding a diuretic with an alternative mechanism of action, an IV vasodilator, or an</p>
+<p>IV inotrope; and in select patients, adding mechanical circulatory support.</p>
+<p>ch09.indd</p>
+<p>106</p>
+<p>19-11-2020</p>
+<p>11:38:21</p>
+<div class="table-container"><table><tr><th>Subset I
+(warm and dry)
+Optimize chronic
+oral medications</th><th>Subset II (warm and wet)
+Symptom Persistent
+relief symptoms
+IV loop diuretic
+± IV vasodilator
+See Subset I Use adjunct strategies
+to overcome diuretic resistance
+Persistent
+symptoms
+PAC to guide further management</th></tr><tr><td>Subset III
+Orthostatic
+(cold and dry)
+or No orthostasis
+PCWP ≤15 mm Hg PCWP 15-18 mm Hg
+Assess volume status
+± PAC
+SBP
+SBP ≥ 90 mm Hg
+IV fluids &lt;90 mm Hg Assess SBP
+± PAC
+No
+IV inotrope
+improvement
+(± vasopressor if needed) IV vaso
+No improvement
+MCS</td><td>Subset IV
+(cold and wet)
+SBP &lt; 90 mm Hg Assess SBP SBP ≥ 90 mm Hg
+± PAC
+IV inotrope No
+(± vasopressor improvement IV diuretic
+if needed) ± IV vasodilator
++
+IV diuretic
+± PAC
+dilator No
+improvement
+MCS</td></tr></table></div><h2>Heart Failure | CHAPTER 9</h2>
+<li>Cardiac transplantation is the best option for patients with irreversible advanced HF.</li>
+<p>New surgical strategies such as ventricular aneurysm resection and myocardial cell</p>
+<p>transplantation offer additional options for patients ineligible for VAD implantation</p>
+<p>or heart transplantation.</p>
+<h2>PHARMACOLOGIC THERAPY FOR ADHF</h2>
+<p>Loop Diuretics</p>
+<li>Current guidelines recommend IV loop diuretics (furosemide, bumetanide) as first-</li>
+<p>line therapy for ADHF patients with volume overload.</p>
+<li>Bolus administration reduces preload by functional venodilation within 5–15</li>
+<p>minutes and later (&gt;20 minutes) via sodium and water excretion, thereby improv-</p>
+<p>ing pulmonary congestion. Although patients with HFrEF can tolerate significant</p>
+<p>reductions in preload without compromising stroke volume, excessive diuresis can</p>
+<p>decrease CO. Excessive reductions in venous return may also compromise CO in</p>
+<pre><code>diastolic dysfunction, intravascular volume depletion, or patients in whom CO is</code></pre>
+<p>significantly dependent on adequate filling pressure (ie, preload-dependent). Reflex</p>
+<p>increases in neurohormonal activation (ie, elevated renin, norepinephrine, and AVP)</p>
+<p>may result in arteriolar and coronary vasoconstriction, tachycardia, and increased</p>
+<p>myocardial oxygen consumption.</p>
+<li>Use low doses (equivalent to IV furosemide 20–40 mg) initially in ADHF patients</li>
+<p>who are naïve to loop diuretics. For patients taking loop diuretics prior to admission,</p>
+<p>a total daily dose of 1- to 2.5-times their home dose is recommended. Higher doses</p>
+<p>are associated with more rapid relief of congestive symptoms but may also increase</p>
+<pre><code>the risk of transient worsening of renal function. Doses may be administered as either</code></pre>
+<p>an IV bolus (ie, divided every 12 hours) or continuous IV infusion. Use diuretic</p>
+<p>therapy judiciously to obtain the desired improvement in congestive symptoms while</p>
+<pre><code>avoiding a reduction in CO, symptomatic hypotension, or worsening renal function.</code></pre>
+<li>Diuretic resistance may be improved by administering larger IV bolus doses, transi-</li>
+<p>tioning from IV bolus to continuous IV infusions, or adding a second diuretic with a</p>
+<p>different mechanism of action, such as a distal tubule blocker (eg, oral metolazone,</p>
+<p>oral hydrochlorothiazide, or IV chlorothiazide). Sequential nephron blockade with</p>
+<p>a loop and thiazide-type diuretic should generally be reserved for inpatients who can</p>
+<p>be monitored closely for development of severe electrolyte and intravascular volume</p>
+<p>depletion. In the outpatient setting, a very low dose of the thiazide-type diuretic or</p>
+<p>infrequent administration (eg, 1–3 times weekly) is recommended.</p>
+<p>Vasopressin Antagonists</p>
+<li>Vasopressin receptor antagonists affect one or two AVP (antidiuretic hormone)</li>
+<p>receptors, V or V. Stimulation of V receptors (located in vascular smooth muscle</p>
+<h2>1A 2 1A</h2>
+<p>cells and myocardium) results in vasoconstriction, myocyte hypertrophy, coronary</p>
+<p>vasoconstriction, and positive inotropic effects. V receptors are located in renal</p>
+<p>2</p>
+<p>tubules, where they regulate water reabsorption.</p>
+<p>✓ Tolvaptan selectively binds to and inhibits the V receptor. It is an oral agent indi-</p>
+<p>2</p>
+<p>cated for hypervolemic and euvolemic hyponatremia in patients with syndrome</p>
+<p>of inappropriate antidiuretic hormone (SIADH), cirrhosis, or HF. Tolvaptan is</p>
+<p>typically initiated at 15 mg orally daily and then titrated to 30 or 60 mg daily as</p>
+<p>needed to resolve hyponatremia. It is a substrate of cytochrome P450-3A4 and is</p>
+<p>contraindicated with potent inhibitors of this enzyme. The most common side</p>
+<p>effects are dry mouth, thirst, urinary frequency, constipation, and hyperglycemia.</p>
+<p>✓ Conivaptan nonselectively inhibits both the V and V receptors. It is an IV agent</p>
+<h2>1A 2</h2>
+<p>indicated for hypervolemic and euvolemic hyponatremia due to a variety of causes</p>
+<p>but is not indicated for patients with HF.</p>
+<li>Monitor patients closely to avoid an excessively rapid rise in serum sodium that could</li>
+<p>cause hypotension or hypovolemia requiring drug discontinuation. Therapy may be</p>
+<p>restarted at a lower dose if hyponatremia recurs or persists and adverse effects resolve.</p>
+<p>107</p>
+<p>ch09.indd 107 19-11-2020 11:38:21</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>The role of vasopressin receptor antagonists in the long-term management of HF</li>
+<p>is unclear. In a clinical trial of hospitalized patients with HF, tolvaptan improved</p>
+<p>hyponatremia, diuresis, and signs/symptoms of congestion. However, the study failed</p>
+<p>to demonstrate improved long-term outcomes, including morbidity and mortality.</p>
+<pre><code>Another randomized trial in patients with ADHF found worsening renal function</code></pre>
+<p>in significantly more patients receiving tolvaptan than placebo. Overall, these two</p>
+<p>trials do not support routine use of tolvaptan in ADHF, and it should be reserved for</p>
+<p>managing severe hyponatremia.</p>
+<p>Vasodilators</p>
+<li>Venodilators reduce preload by increasing venous capacitance, improving symptoms</li>
+<p>of pulmonary congestion in patients with high ventricular filling pressures. Arterial</p>
+<p>vasodilators counteract the peripheral vasoconstriction and impaired CO that can</p>
+<p>result from activation of the sympathetic nervous system, RAAS, and other neuro-</p>
+<p>hormonal mediators in HF. Arterial vasodilators reduce impedance, decreasing after-</p>
+<p>load and causing reflex improvement in LV performance and increased CO. Mixed</p>
+<p>vasodilators act on both arterial resistance and venous capacitance vessels, reducing</p>
+<p>congestive symptoms while increasing CO.</p>
+<li>IV vasodilators should be considered before positive inotropic therapy in patients</li>
+<p>with low CO and elevated SVR (or elevated BP in those without a pulmonary artery</p>
+<p>catheter). However, hypotension may preclude their use in patients with preexisting</p>
+<p>low BP or SVR.</p>
+<li>IV nitroglycerin is often preferred for preload reduction in ADHF, especially in</li>
+<p>patients with pulmonary congestion. It reduces preload and pulmonary capillary</p>
+<pre><code>wedge pressure (PCWP) via functional venodilation and mild arterial vasodilation.</code></pre>
+<p>In higher doses, nitroglycerin displays potent coronary vasodilating properties and</p>
+<p>beneficial effects on myocardial oxygen demand and supply, making it the vasodila-</p>
+<p>tor of choice for patients with severe HF and ischemic heart disease.</p>
+<p>✓ Initiate nitroglycerin at 5–10 mcg/min (0.1 mcg/kg/min) and increase every 5–10</p>
+<p>minutes as necessary and tolerated. Maintenance doses usually range from 35 to</p>
+<p>200 mcg/min (0.5–3 mcg/kg/min). Hypotension and excessive decrease in PCWP</p>
+<p>are important dose-limiting side effects. Tolerance to the hemodynamic effects</p>
+<p>may develop over 12–72 hours of continuous administration.</p>
+<li>Sodium nitroprusside is a mixed arteriovenous vasodilator that increases cardiac</li>
+<p>index (CI) to a similar degree as dobutamine and milrinone despite having no direct</p>
+<p>inotropic activity. However, nitroprusside generally produces greater decreases in</p>
+<p>PCWP, SVR, and BP.</p>
+<p>✓ Hypotension is an important dose-limiting adverse effect of nitroprusside, and its</p>
+<p>use should be primarily reserved for patients with elevated SVR. Close monitoring</p>
+<p>is required because even modest HR increases can have adverse consequences in</p>
+<p>patients with underlying ischemic heart disease or resting tachycardia.</p>
+<p>✓ Nitroprusside is effective in the short-term management of severe HF in a variety</p>
+<p>of settings (eg, acute MI, valvular regurgitation, after coronary bypass surgery, and</p>
+<p>ADHF). It does not usually worsen, and may improve, the balance between myo-</p>
+<p>cardial oxygen demand and supply. However, an excessive decrease in systemic</p>
+<p>arterial pressure can decrease coronary perfusion and worsen ischemia.</p>
+<p>✓ Nitroprusside has a rapid onset and a duration of action &lt;10 minutes, neces-</p>
+<p>sitating continuous IV infusions. Initiate therapy with a low dose (0.1–0.2 mcg/</p>
+<p>kg/min) to avoid excessive hypotension, and increase by small increments</p>
+<p>(0.1–0.2 mcg/kg/min) every 5–10 minutes as tolerated. Usual effective doses</p>
+<p>range from 0.5 to 3 mcg/kg/min. Taper nitroprusside slowly when transitioning</p>
+<p>to oral medications to avoid the rebound phenomenon of reflex neurohormonal</p>
+<p>activation after abrupt withdrawal. Nitroprusside-induced cyanide and thio-</p>
+<p>cyanate toxicity are unlikely when doses &lt;3 mcg/kg/min are administered for</p>
+<p>less than 3 days, except in patients with significant renal impairment (ie, serum</p>
+<p>creatinine &gt;3 mg/dL [265 μmol/L]).</p>
+<p>108</p>
+<p>ch09.indd 108 19-11-2020 11:38:21</p>
+<h2>Heart Failure | CHAPTER 9</h2>
+<p>Inotropes</p>
+<li>Prompt correction of low CO in patients with “cold” subsets (III and IV) is required</li>
+<pre><code>to restore peripheral tissue perfusion and preserve end-organ function. Although IV</code></pre>
+<p>inotropes can improve hypoperfusion by enhancing cardiac contractility, potential</p>
+<p>adverse outcomes limit their use to select patients with refractory ADHF. Inotropes</p>
+<p>should be considered only as a temporizing measure to maintain end-organ perfu-</p>
+<p>sion in patients with cardiogenic shock or severely depressed CO and low systolic</p>
+<p>BP (ie, ineligible for IV vasodilators) until definitive therapy can be initiated, as a</p>
+<p>“bridge” for patients with advanced HF who are eligible for MCS or cardiac trans-</p>
+<p>plantation, or for palliation of symptoms in patients with advanced HF who are</p>
+<p>ineligible for MCS or cardiac transplantation.</p>
+<li>Dobutamine and milrinone produce similar hemodynamic effects, but dobutamine</li>
+<p>usually causes more pronounced increases in HR, and milrinone is associated with</p>
+<p>greater relaxation in arterial smooth muscle.</p>
+<li>Dobutamine is a β- and β-receptor agonist with some α-agonist effects; its</li>
+<p>1 2 1</p>
+<p>positive inotropic effects are due to effects on β-receptors. Stimulation of cardiac</p>
+<p>1</p>
+<p>β-receptors does not generally produce a significant increase in HR. Modest peripheral</p>
+<p>1</p>
+<p>β-receptor-mediated vasodilation tends to offset minor α-receptor-mediated vaso-</p>
+<p>2 1</p>
+<p>constriction; the net vascular effect is usually vasodilation.</p>
+<p>✓ CI is increased because of inotropic stimulation, arterial vasodilation, and a vari-</p>
+<p>able increase in HR. It causes relatively little change in mean arterial pressure</p>
+<p>(MAP) compared with the more consistent increases observed with dopamine.</p>
+<p>Dobutamine should be considered over milrinone when a significant decrease in</p>
+<pre><code>MAP might further compromise hemodynamic function.</code></pre>
+<p>✓ Vasodilation usually reduces PCWP, making dobutamine particularly useful in the</p>
+<p>presence of low CI and an elevated LV filling pressure; however, these effects may</p>
+<p>be detrimental in the presence of reduced filling pressure.</p>
+<p>✓ Initial doses of 2.5–5 mcg/kg/min may be increased progressively to 20 mcg/kg/min</p>
+<p>based on clinical and hemodynamic responses. The dose should be tapered rather</p>
+<p>than abruptly discontinued.</p>
+<p>✓ Dobutamine’s major adverse effects are tachycardia and ventricular arrhythmias.</p>
+<p>Potentially detrimental increases in oxygen consumption have also been observed.</p>
+<li>Milrinone inhibits phosphodiesterase III and produces positive inotropic and arte-</li>
+<p>rial and venous vasodilating effects (an inodilator). It has supplanted use of amri-</p>
+<p>none, which has a higher rate of thrombocytopenia.</p>
+<p>✓ During IV administration, milrinone increases stroke volume and CO with mini-</p>
+<p>mal change in HR. However, the vasodilating effects may predominate, leading to</p>
+<p>decreased BP and a reflex tachycardia. Milrinone also lowers pulmonary PCWP</p>
+<p>by venodilation and is particularly useful in patients with a low CI and elevated LV</p>
+<p>filling pressure. However, this decrease in preload can be hazardous for patients</p>
+<p>without excessive filling pressure, thus blunting the improvement in CO. Use mil-</p>
+<p>rinone cautiously in severely hypotensive HF patients because it does not increase,</p>
+<p>and may even decrease, arterial BP.</p>
+<p>✓ Most patients are started on a continuous IV infusion of 0.1–0.3 mcg/kg/min,</p>
+<p>titrated to a maximum of 0.75 mcg/kg/min. A loading dose of 50 mcg/kg over</p>
+<p>10 minutes can be given if rapid hemodynamic changes are required, but its use is</p>
+<p>uncommon due to an increased risk of hypotension.</p>
+<p>✓ The most notable adverse events are arrhythmia, hypotension, and thrombocyto-</p>
+<p>penia. Measure the platelet count before and during therapy.</p>
+<li>Norepinephrine and dopamine have combined inotropic and vasopressor activ-</li>
+<p>ity. Although therapies that increase SVR are generally avoided in ADHF, they</p>
+<p>may be required in select patients where marked hypotension precludes use of</p>
+<p>traditional inotropes (eg, septic shock, refractory cardiogenic shock). These agents</p>
+<p>are sometimes combined with traditional inotropes so each drug can be adjusted</p>
+<h2>ALGRAWANY</h2>
+<p>109</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch09.indd 109 19-11-2020 11:38:21</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>independently to achieve the desired hemodynamic response, although little data</p>
+<p>exist to support that practice.</p>
+<p>✓ Norepinephrine stimulates α- and β-adrenergic receptors. Stimulation of</p>
+<p>1 1</p>
+<p>β-receptors in myocardial tissue increases HR, contractility, and therefore CO,</p>
+<p>1</p>
+<p>but peripheral α-receptor-induced vasoconstriction is the predominant clinical</p>
+<p>1</p>
+<p>hemodynamic effect. Lack of affinity for β-receptors may be responsible for the</p>
+<p>2</p>
+<p>limited impact of norepinephrine on CO.</p>
+<p>✓ Dopamine is an endogenous precursor of norepinephrine that stimulates α, β,</p>
+<p>1 1</p>
+<p>β, and D (vascular dopaminergic) receptors. Positive inotropic effects mediated</p>
+<p>2 1</p>
+<p>primarily by β-receptors are prominent with doses of 2–5 mcg/kg/min. The CI is</p>
+<p>1</p>
+<p>increased with minimal changes in SVR. At doses between 5 and 10 mcg/kg/min,</p>
+<p>chronotropic and α-mediated vasoconstriction become more prominent and</p>
+<p>1</p>
+<p>MAP usually increases as a result of increases in both CI and SVR.</p>
+<p>✓ Studies of low-dose dopamine (2–5 mcg/kg/min) given with IV loop diuret-</p>
+<p>ics to enhance diuresis demonstrated no improvements in urine output, renal</p>
+<p>protection, or symptom relief, but increased rates of tachycardia. Thus, low-</p>
+<p>dose dopamine may not provide any advantages over traditional inotropes in</p>
+<p>this setting.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<h2>CHRONIC HEART FAILURE</h2>
+<li>Ask patients about the presence and severity of symptoms and how symptoms affect</li>
+<p>daily activities.</p>
+<li>Evaluate efficacy of diuretic treatment by disappearance of the signs and symptoms</li>
+<p>of excess fluid retention. Focus the physical examination on body weight, extent of</p>
+<p>JVD, presence of HJR, and presence and severity of pulmonary congestion (crackles,</p>
+<p>dyspnea on exertion, orthopnea, and PND) and peripheral edema.</p>
+<li>Other outcomes are improvement in exercise tolerance and fatigue, decreased noc-</li>
+<p>turia, and decreased HR.</p>
+<li>Monitor BP to ensure that symptomatic hypotension does not develop as a result of</li>
+<p>drug therapy.</p>
+<li>Body weight is a sensitive marker of fluid loss or retention, and patients should</li>
+<p>weigh themselves daily and report changes of 3–5 lb (1.4–2.3 kg) to their healthcare</p>
+<p>provider so adjustments can be made in diuretic doses.</p>
+<li>Symptoms may worsen initially on β-blocker therapy, and it may take weeks to</li>
+<p>months before patients notice symptomatic improvement.</p>
+<li>Routine monitoring of serum electrolytes (especially potassium and magnesium) and</li>
+<pre><code>renal function (BUN, serum creatinine, eGFR) is mandatory in patients with HF.</code></pre>
+<h2>ACUTE DECOMPENSATED HEART FAILURE</h2>
+<li>Assess the efficacy of drug therapy with daily monitoring of weight, strict fluid intake</li>
+<p>and output measurements, and HF signs/symptoms. Monitor frequently for electro-</p>
+<pre><code>lyte depletion, symptomatic hypotension, and renal dysfunction. Assess vital signs</code></pre>
+<p>frequently throughout the day.</p>
+<li>Patients should not be discharged until optimal volume status is achieved, they have</li>
+<p>been successfully transitioned from IV to oral diuretics, and IV inotropes and vaso-</p>
+<p>dilators have been discontinued for at least 24 hours.</p>
+<li>Optimize GDMT in hemodynamically stable patients without contraindications,</li>
+<p>including reinitiation of therapies withheld earlier in the admission. Low-dose</p>
+<p>β-blockers may be safely initiated at discharge without increasing the risk of read-</p>
+<p>mission. Transitioning eligible patients to the ARNI sacubitril/valsartan may also be</p>
+<p>considered.</p>
+<p>110</p>
+<p>ch09.indd 110 19-11-2020 11:38:21</p>
+<h2>Heart Failure | CHAPTER 9</h2>
+<li>Schedule a follow-up appointment at 7–10 days postdischarge and a nurse visit or</li>
+<p>phone call at 3 days for select patients. Also schedule pertinent follow-up labs (eg,</p>
+<p>potassium, serum creatinine, INR, serum digoxin concentration).</p>
+<li>All patients should be considered for referral to a formal disease management</li>
+<p>program.</p>
+<p>See Chapter 35, Chronic Heart Failure, authored by Robert B. Parker, Jean M. Nappi, and</p>
+<p>Larisa H. Cavallari, and Chapter 36, Acute Decompensated Heart Failure, authored by</p>
+<p>Brent N. Reed and Jo E. Rodgers, for more detailed discussions of these topics.</p>
+<p>111</p>
+<p>ch09.indd 111 19-11-2020 11:38:21</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

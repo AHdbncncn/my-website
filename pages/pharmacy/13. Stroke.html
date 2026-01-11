@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13. Stroke</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>13. Stroke</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>149</p>
+<h2>RETPAHC</h2>
+<p>13</p>
+<p>Stroke</p>
+<li>Stroke involves the abrupt onset of focal neurologic dysfunction that lasts at least</li>
+<p>24 hours and is caused by cerebral, spinal, or retinal infarction. Stroke can be either</p>
+<p>ischemic or hemorrhagic. Transient ischemic attacks (TIAs) are focal ischemic</p>
+<p>neurologic deficits lasting &lt;24 hours and usually &lt;30 minutes.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<h2>ISCHEMIC STROKE</h2>
+<li>Ischemic stroke (87% of all strokes) results from occlusion of a cerebral artery that</li>
+<p>reduces cerebral blood flow. Ischemic strokes are due either to local thrombus forma-</p>
+<p>tion or emboli from a distant site. Atherosclerosis of large intracranial or extracranial</p>
+<p>arteries or small artery disease can result in ischemic stroke. Emboli can arise from</p>
+<p>the heart in patients with atrial fibrillation, valvular heart disease, or other prothrom-</p>
+<p>botic heart problems and cause about 25% of ischemic strokes. The stroke cause is</p>
+<p>undetermined in some cases.</p>
+<li>Decreased cerebral blood flow can lead to infarction of cerebral tissue with a sur-</li>
+<p>rounding area that is ischemic but may maintain membrane integrity (the ischemic</p>
+<p>penumbra). This penumbra is an area of brain tissue that is potentially salvageable</p>
+<p>with urgent pharmacologic and endovascular treatment interventions.</p>
+<li>Insufficient oxygen supply in ischemic tissue leads to adenosine triphosphate (ATP)</li>
+<p>depletion with lactate buildup due to anaerobic metabolism and accumulation of</p>
+<p>intracellular sodium and water, leading to cytotoxic edema and eventual cell lysis. An</p>
+<p>influx of calcium intracellularly activates lipases and proteases, resulting in protein</p>
+<p>degradation and free fatty acid release from cellular membranes. Release of excitatory</p>
+<p>amino acids (eg, glutamate, aspartate) in ischemic tissue perpetuates neuronal dam-</p>
+<p>age and produces damaging prostaglandins, leukotrienes, and reactive oxygen spe-</p>
+<p>cies. These processes occur within 2–3 hours of the onset of ischemia and ultimately</p>
+<p>lead to cellular apoptosis and necrosis.</p>
+<li>The most common modifiable risk factors for ischemic stroke include hypertension,</li>
+<p>cigarette smoking, diabetes, atrial fibrillation, and dyslipidemia.</p>
+<h2>HEMORRHAGIC STROKE</h2>
+<li>Hemorrhagic strokes (13% of strokes) include subarachnoid hemorrhage (SAH) and</li>
+<p>intracerebral hemorrhage (ICH). SAH may result from trauma or rupture of an intra-</p>
+<p>cranial aneurysm or arteriovenous malformation (AVM). ICH occurs when bleeding</p>
+<p>in the brain parenchyma results in hematoma formation.</p>
+<li>Intracranial hematoma causes mechanical compression of brain parenchyma. Early</li>
+<p>hematoma expansion often occurs within 3 hours of hemorrhage onset, contributing</p>
+<pre><code>to worsened functional outcome and increased mortality.</code></pre>
+<li>Secondary mechanisms of injury are mediated by the subsequent inflammatory</li>
+<p>response, cerebral edema, and damage from blood product degradation.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Patients may be unable to provide a reliable history because of cognitive or language</li>
+<p>deficits. Family members or other witnesses may need to provide this information.</p>
+<li>Symptoms include unilateral weakness, inability to speak, loss of vision, vertigo, or</li>
+<p>falling. Ischemic stroke is not usually painful, but some patients complain of head-</p>
+<p>ache. Pain and headache are more common and severe in hemorrhagic stroke.</p>
+<li>Neurologic deficits on physical examination depend on the brain area involved.</li>
+<p>Hemi- or monoparesis and hemisensory deficits are common. Patients with posterior</p>
+<p>circulation involvement may have vertigo and diplopia. Anterior circulation strokes</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch13.indd 149 18-11-2020 16:21:00</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>13
+00</th><th>Stroke</th></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>commonly result in aphasia. Patients may experience dysarthria, visual field defects,</p>
+<p>and altered levels of consciousness.</p>
+<h2>DIAGNOSIS</h2>
+<li>Blood glucose, platelet count, and coagulation parameters (eg, prothrombin time,</li>
+<p>aPTT) are used in stroke assessment to determine treatment eligibility.</p>
+<li>Tests for hypercoagulable states (protein C and S deficiency, antiphospholipid anti-</li>
+<p>body) should be done only when the etiology cannot be determined based on pres-</p>
+<p>ence of well-known risk factors.</p>
+<li>Computed tomography (CT) and magnetic resonance imaging (MRI) head scans can</li>
+<p>reveal areas of hemorrhage and infarction.</p>
+<li>Vascular imaging with computed tomography angiography (CTA) is recommended</li>
+<p>in patients with endovascular treatment indications.</p>
+<li>Carotid Doppler (CD), electrocardiogram (ECG), transthoracic echocardiogram</li>
+<p>(TTE), and transcranial Doppler (TCD) studies can each provide valuable diagnostic</p>
+<p>information.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to: (1) reduce ongoing neurologic injury acutely</li>
+<p>to reduce mortality and long-term disability; (2) prevent complications secondary to</p>
+<pre><code>immobility and neurologic dysfunction; and (3) prevent stroke recurrence.</code></pre>
+<h2>GENERAL APPROACH</h2>
+<li>Ensure adequate respiratory and cardiac support and determine quickly from CT</li>
+<p>scan whether the lesion is ischemic or hemorrhagic.</p>
+<li>Evaluate ischemic stroke patients presenting within hours of symptom onset for</li>
+<p>pharmacologic and mechanical reperfusion therapy.</p>
+<li>Patients with TIA require urgent assessment and intervention to reduce the risk of</li>
+<p>stroke, which is highest in the first few days after TIA.</p>
+<li>Assess patients with hemorrhagic stroke to determine whether they are candidates</li>
+<p>for surgical intervention.</p>
+<li>After the acute phase, focus on preventing progressive deficits, minimizing complica-</li>
+<p>tions, and instituting secondary prevention strategies.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<p>Ischemic Stroke</p>
+<li>Endovascular intervention and thrombectomy with retrievable stents to reperfuse</li>
+<p>ischemic brain tissue is recommended by the American Heart Association (AHA)</p>
+<p>and American Stroke Association (ASA). Thrombectomy is strongly recom-</p>
+<p>mended for patients with anterior circulation occlusion in the internal carotid</p>
+<p>artery (ICA) or the M1 segment of the middle cerebral artery (MCA) who are</p>
+<p>within 6 hours of symptom onset and may be considered in select patients within</p>
+<p>6–24 hours of symptom onset. The benefit of mechanical thrombectomy is less</p>
+<p>clear in posterior circulation occlusions and should be considered on a case-</p>
+<p>by-case basis.</p>
+<li>Decompressive hemicraniectomy is a surgical procedure to reduce intracranial pres-</li>
+<p>sure (typically due to cerebral edema) and can reduce mortality and improve func-</p>
+<p>tional outcome in select patients.</p>
+<li>For all ischemic stroke patients, coordinated care with a multidisciplinary approach</li>
+<p>to assessment and early rehabilitation reduces overall disability due to stroke.</p>
+<li>In secondary prevention, carotid endarterectomy of an ulcerated or stenotic carotid</li>
+<p>artery is effective in reducing stroke incidence and recurrence in appropriate patients</p>
+<p>and in centers where operative morbidity and mortality are low. In patients younger</p>
+<p>than age 70, carotid stenting is a less invasive alternative and can reduce recurrent</p>
+<p>stroke risk when combined with aspirin and clopidogrel therapy.</p>
+<p>150</p>
+<p>ch13.indd 150 18-11-2020 16:21:01</p>
+<h2>Stroke | CHAPTER 13</h2>
+<p>Hemorrhagic Stroke</p>
+<li>In SAH from ruptured intracranial aneurysm or AVM, early intervention with either</li>
+<p>surgical clipping or endovascular coiling of the vascular abnormality reduces mortal-</p>
+<p>ity from rebleeding.</p>
+<li>Early surgical intervention and hematoma removal is recommended for patients</li>
+<p>with cerebellar hemorrhage and neurologic deterioration, brainstem compression, or</p>
+<p>hydrocephalus from ventricular obstruction. The usefulness of surgical hematoma</p>
+<p>evacuation is not well established for patients with cerebral hemorrhage.</p>
+<li>Ventricular drainage with an extraventricular drain (EVD) is reasonable in patients</li>
+<p>with hydrocephalus causing decreased consciousness.</p>
+<p>Temperature Management</p>
+<li>Fever worsens outcomes in patients with both hemorrhagic and ischemic stroke.</li>
+<p>Identification of the source and pharmacologic and/or nonpharmacologic manage-</p>
+<p>ment is recommended to maintain normothermia range. Because of limited sup-</p>
+<p>porting data, induced hypothermia should be done only in the setting of controlled,</p>
+<p>clinical trials.</p>
+<h2>PHARMACOLOGIC THERAPY OF ISCHEMIC STROKE</h2>
+<li>Table 13-1 provides evidence-based recommendations for pharmacotherapy of</li>
+<p>ischemic stroke.</p>
+<li>Alteplase initiated within 4.5 hours of symptom onset improves functional ability</li>
+<p>after ischemic stroke. Adherence to a guideline-recommended protocol is essential</p>
+<p>to achieving positive outcomes: (1) activate the stroke team; (2) obtain CT scan to</p>
+<p>rule out hemorrhage; (3) treat as early as possible within 4.5 hours of symptom onset;</p>
+<p>(4) meet all inclusion criteria with no contraindications (Table 13-2); (5) administer</p>
+<p>alteplase 0.9 mg/kg IV total dose (maximum 90 mg), with 10% infused as an initial</p>
+<p>bolus over 1 minute and the remainder given over 1 hour; (6) avoid anticoagulant and</p>
+<p>antiplatelet therapy for 24 hours after alteplase; and (7) monitor the patient closely for</p>
+<p>elevated blood pressure (BP), neurologic status, and hemorrhage.</p>
+<li>Aspirin 160–325 mg/day started within 24–48 hours of symptom onset (and</li>
+<p>24 hours after alteplase completion) reduces long-term death and disability. An alter-</p>
+<p>nate antiplatelet agent may be considered for patients with aspirin allergy or other</p>
+<p>severe contraindications.</p>
+<li>For patients with elevated BP who are eligible for alteplase, treatment to a goal BP</li>
+<p>&lt;185/110 mm Hg is recommended before thrombolytic administration. While</p>
+<p>data are limited, it is also reasonable to maintain BP &lt;185/110 mm Hg for patients</p>
+<p>undergoing mechanical thrombectomy. For patients not requiring IV thrombolysis</p>
+<p>or endovascular intervention, BP is often allowed to rise as high as 220/120 mm</p>
+<p>Hg for the first 48–72 hours because early BP reduction does not prevent death or</p>
+<p>improve the level of dependency. For patients with comorbid conditions requiring BP</p>
+<p>management, a reduction of 15% is probably safe. If BP is treated, short-acting and</p>
+<p>easily titrated IV agents are preferred:</p>
+<p>✓ Labetalol: 10–20 mg IV over 1–2 minutes; may repeat</p>
+<p>✓ Nicardipine: 5 mg/hr IV; titrate up by 2.5 mg/hr every 5–15 minutes; maximum</p>
+<p>15 mg/hr</p>
+<p>✓ Clevidipine: 1–2 mg/hr IV; titrate by doubling the dose every 2–5 minutes; maximum</p>
+<p>21 mg/hr</p>
+<p>✓ Other potential agents: hydralazine, enalaprilat, nitroprusside IV infusion,</p>
+<p>labetalol IV infusion</p>
+<li>Use of urgent anticoagulation (eg, unfractionated heparin or low-molecular-weight</li>
+<p>heparin) is not routinely recommended in the early phase of acute ischemic stroke</p>
+<p>treatment. Use of immediate anticoagulation for nonstroke indications (eg, prophy-</p>
+<p>laxis of venous thromboembolism) should be weighed against the risk of intracranial</p>
+<p>hemorrhagic conversion.</p>
+<p>151</p>
+<p>ch13.indd 151 18-11-2020 16:21:01</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>TABLE 13-1 Recommendations for Pharmacotherapy of Ischemic Stroke</p>
+<p>Recommendation Evidencea</p>
+<p>Acute treatment Alteplase 0.9 mg/kg IV (maximum 90 mg), 10% as a IA</p>
+<p>bolus with remainder given over 1 hour in select</p>
+<p>patients within 3 hours of onset</p>
+<p>Alteplase 0.9 mg/kg IV (maximum 90 mg), 10% as a IB</p>
+<p>bolus with remainder given over 1 hour in select</p>
+<p>patients between 3 and 4.5 hours of onset</p>
+<p>Aspirin 160–325 mg daily started within 48 hours of onset IA</p>
+<p>Secondary prevention</p>
+<p>Noncardioembolic Antiplatelet therapy</p>
+<p>Aspirin 50–325 mg daily IA</p>
+<p>Aspirin 25 mg + extended-release dipyridamole IB</p>
+<p>200 mg twice daily</p>
+<p>Clopidogrel 75 mg daily IIaB</p>
+<p>Cardioembolic Anticoagulant therapy</p>
+<p>(especially atrial Vitamin K antagonist (warfarin; target INR = 2.5) IA</p>
+<p>fibrillation)</p>
+<p>Apixaban 5 mg twice daily IA</p>
+<p>Dabigatran 150 mg twice daily IB</p>
+<p>Edoxaban 60 mg daily —b</p>
+<p>Rivaroxaban 20 mg daily IIaB</p>
+<p>Age ≤75 years High-intensity statin therapy IB</p>
+<p>Age &gt;75 years Moderate- or high-intensity statin therapy IIaB-R</p>
+<p>BP &gt;140/90 mm Hg BP reduction IB-R</p>
+<p>aClasses: I, evidence or general agreement about usefulness and effectiveness; II, conflicting evidence</p>
+<p>about usefulness; IIa, weight of evidence in favor of the treatment; IIb, usefulness less well</p>
+<p>established; III, not useful and maybe harmful. Levels of evidence: A, multiple randomized clinical</p>
+<p>trials; B, a single randomized trial or nonrandomized studies; C, expert opinion or case studies; B-R,</p>
+<p>moderate-quality evidence from one or more randomized controlled trials or meta-analyses of</p>
+<p>moderate-quality randomized controlled trials.</p>
+<p>bNot graded in current guidelines.</p>
+<p>INR, international normalized ratio; IV, intravenous.</p>
+<li>Secondary prevention of ischemic stroke:</li>
+<p>✓ All patients who have had an acute ischemic stroke or TIA should receive long-</p>
+<p>term antithrombotic therapy for secondary prevention. Antiplatelet therapy</p>
+<p>should be used in noncardioembolic stroke; aspirin, extended-release dipyri-</p>
+<p>damole plus aspirin, and clopidogrel are all first-line agents (Table 13-1). Studies</p>
+<p>of the combination of clopidogrel plus ASA have shown conflicting results on</p>
+<p>reduction of recurrent stroke, and some found an increase in hemorrhagic events.</p>
+<p>✓ For patients with atrial fibrillation and a presumed cardiac source of embolism</p>
+<p>for stroke or TIA, oral anticoagulation with a vitamin K antagonist (warfarin),</p>
+<p>apixaban, dabigatran, edoxaban, or rivaroxaban is recommended.</p>
+<p>✓ Adults with previously treated hypertension who experience a stroke or TIA</p>
+<p>should be restarted on antihypertensive treatment after the first few days of the</p>
+<p>index event to reduce the risk of recurrent stroke and other vascular events. Use-</p>
+<p>ful options include a thiazide diuretic, angiotensin-converting enzyme (ACE)</p>
+<p>152</p>
+<p>ch13.indd 152 18-11-2020 16:21:01</p>
+<div class="table-container"><table><tr><th>TABLE 13-1 Recommendations for Pharmacotherapy of Ischemic Stroke</th><th></th><th></th></tr><tr><td></td><td>Recommendation</td><td>Evidencea</td></tr><tr><td>Acute treatment</td><td>Alteplase 0.9 mg/kg IV (maximum 90 mg), 10% as a
+bolus with remainder given over 1 hour in select
+patients within 3 hours of onset</td><td>IA</td></tr><tr><td></td><td>Alteplase 0.9 mg/kg IV (maximum 90 mg), 10% as a
+bolus with remainder given over 1 hour in select
+patients between 3 and 4.5 hours of onset</td><td>IB</td></tr><tr><td></td><td>Aspirin 160–325 mg daily started within 48 hours of onset</td><td>IA</td></tr><tr><td>Secondary prevention</td><td></td><td></td></tr><tr><td>Noncardioembolic</td><td>Antiplatelet therapy</td><td></td></tr><tr><td></td><td>Aspirin 50–325 mg daily</td><td>IA</td></tr><tr><td></td><td>Aspirin 25 mg + extended-release dipyridamole
+200 mg twice daily</td><td>IB</td></tr><tr><td></td><td>Clopidogrel 75 mg daily</td><td>IIaB</td></tr><tr><td>Cardioembolic
+(especially atrial
+fibrillation)</td><td>Anticoagulant therapy
+Vitamin K antagonist (warfarin; target INR = 2.5)
+Apixaban 5 mg twice daily
+Dabigatran 150 mg twice daily
+Edoxaban 60 mg daily
+Rivaroxaban 20 mg daily</td><td>IA
+IA
+IB
+—b
+IIaB</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>Age ≤75 years</td><td>High-intensity statin therapy</td><td>IB</td></tr><tr><td>Age &gt;75 years</td><td>Moderate- or high-intensity statin therapy</td><td>IIaB-R</td></tr><tr><td>BP &gt;140/90 mm Hg</td><td>BP reduction</td><td>IB-R</td></tr></table></div><h2>Stroke | CHAPTER 13</h2>
+<p>TABLE 13-2 Inclusion Criteria and Contraindications to Alteplase Use in Acute Ischemic Stroke</p>
+<p>Inclusion criteria</p>
+<li>Age 18 years or older</li>
+<li>Clinical diagnosis of ischemic stroke with neurologic deficit</li>
+<li>Time of symptom onset well established to be <4.5 hours before treatment would begin</li>
+<p>Contraindications</p>
+<li>Symptoms/imaging consistent with SAH or acute intracerebral hemorrhage</li>
+<li>Current use of direct thrombin inhibitors or direct factor Xa inhibitors in prior 48 hours</li>
+<li>Use of treatment-dose low-molecular-weight heparin in prior 24 hours</li>
+<li>Infective endocarditis</li>
+<li>Intra-axial, intracranial neoplasm</li>
+<h2>• Aortic arch dissection</h2>
+<li>Active internal bleeding or coagulopathy (platelets <100,000/mm3 [100 x 109/L], INR>1.7,</li>
+<p>aPTT &gt;40 sec, PT &gt;15 sec)</p>
+<li>Severe head trauma in prior 3 months</li>
+<li>Gastrointestinal malignancy or bleeding within prior 21 days</li>
+<p>Warnings/Use Clinical Judgment</p>
+<li>History of intracranial hemorrhage</li>
+<li>History of ischemic stroke within prior 3 months</li>
+<li>Unruptured/unsecured AVM or aneurysm >10 mm</li>
+<li>Major surgery or nonhead trauma</li>
+<li>History of bleeding diathesis</li>
+<li>Extensive regions of clear hypoattenuation on initial CT scan</li>
+<p>aPTT, activated partial thromboplastin time; AVM, arteriovenous malformation; CT, computed</p>
+<p>tomography; INR, international normalized ratio; PT, prothrombin time; SAH, subarachnoid</p>
+<p>hemorrhage; TT, thrombin time.</p>
+<p>inhibitor, angiotensin receptor blocker, or combination treatment with a thia-</p>
+<p>zide plus ACE inhibitor. Selection of specific drugs should be individualized based</p>
+<p>on patient comorbidities. Adults not previously treated for hypertension who</p>
+<p>experience a stroke or TIA and have a BP ≥140/90 mm Hg should be prescribed</p>
+<p>antihypertensive treatment several days after the index event. A reasonable goal BP</p>
+<p>for patients who experienced a stroke or TIA is &lt;130/80 mm Hg.</p>
+<p>✓ Statin therapy is recommended to prevent stroke recurrence in all ischemic stroke</p>
+<p>patients regardless of baseline lipid levels. Patients ≤75 years of age experiencing isch-</p>
+<p>emic stroke of presumed atherosclerotic origin should be treated with high-intensity</p>
+<p>statin therapy with a target of achieving ≥50% reduction in low-density lipoprotein</p>
+<p>(LDL) cholesterol. For patients older than age 75, moderate- or high-intensity</p>
+<p>statin therapy can be initiated as tolerated. Ezetimibe may be added for patients</p>
+<p>taking maximally tolerated statin therapy but with LDL cholesterol ≥70 mg/dL</p>
+<p>(1.81 mmol/L). A proprotein convertase subtilisin/kexin type 9 (PCSK9) inhibi-</p>
+<p>tor may be considered in very high-risk patients who are taking maximally tolerated</p>
+<p>statins and ezetimibe with LDL cholesterol ≥70 mg/dL (1.81 mmol/L).</p>
+<h2>PHARMACOLOGIC THERAPY OF HEMORRHAGIC STROKE</h2>
+<li>The usefulness of pharmacotherapy is limited in spontaneous ICH.</li>
+<li>Because hypertension in hemorrhagic stroke increases the risk of hematoma expan-</li>
+<p>sion, it is reasonable for patients with a systolic BP &gt;220 mm Hg to receive aggressive</p>
+<p>BP lowering with continuous IV infusion medications. Acute lowering of systolic BP</p>
+<pre><code>to a goal of 140 mm Hg is safe and may improve functional outcome. For patients</code></pre>
+<p>with SAH due to aneurysm rupture, BP control to at least a systolic BP &lt;160 mm Hg</p>
+<p>is reasonable in the period from symptom onset to aneurysm obliteration.</p>
+<li>When intracranial hemorrhage occurs in a patient on anticoagulants, use of rever-</li>
+<p>sal agents to correct the medication-induced coagulopathy should be considered</p>
+<h2>(Table 13-3).</h2>
+<p>153</p>
+<p>ch13.indd 153 18-11-2020 16:21:01</p>
+<div class="table-container"><table><tr><th>TABLE 13-2 Inclusion Criteria and Contraindications to Alteplase Use in Acute Ischemic Stroke</th></tr><tr><td>Inclusion criteria
+• Age 18 years or older
+• Clinical diagnosis of ischemic stroke with neurologic deficit
+• Time of symptom onset well established to be &lt;4.5 hours before treatment would begin</td></tr><tr><td>Contraindications
+• Symptoms/imaging consistent with SAH or acute intracerebral hemorrhage
+• Current use of direct thrombin inhibitors or direct factor Xa inhibitors in prior 48 hours
+• Use of treatment-dose low-molecular-weight heparin in prior 24 hours
+• Infective endocarditis
+• Intra-axial, intracranial neoplasm
+• Aortic arch dissection
+• Active internal bleeding or coagulopathy (platelets &lt;100,000/mm3 [100 x 109/L], INR&gt;1.7,
+aPTT &gt;40 sec, PT &gt;15 sec)
+• Severe head trauma in prior 3 months
+• Gastrointestinal malignancy or bleeding within prior 21 days</td></tr><tr><td>Warnings/Use Clinical Judgment
+• History of intracranial hemorrhage
+• History of ischemic stroke within prior 3 months
+• Unruptured/unsecured AVM or aneurysm &gt;10 mm
+• Major surgery or nonhead trauma
+• History of bleeding diathesis
+• Extensive regions of clear hypoattenuation on initial CT scan</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<h2>TABLE 13-3 Select Anticoagulant Reversal</h2>
+<p>First-Line Reversal</p>
+<p>Drug Recommendation Alternate Treatment</p>
+<p>Warfarin Vitamin K 10 mg IV × 1 Vitamin K 10 mg IV × 1</p>
+<li>and- -and-</li>
+<p>4PCC FFP 10–15 mL/kg</p>
+<p>INR 2 to &lt;4: 25 units/kg, max 2500 units</p>
+<p>INR 4–6: 35 units/kg, max 3500 units</p>
+<p>INR &gt;6: 50 units/kg, max 5000 units</p>
+<p>Dabigatran Idarucizumab 5 g IV × 1 Hemodialysis</p>
+<p>4PCC 50 units/kg</p>
+<p>Rivaroxaban ≤10 mg Andexanet alfa 400 mg IV bolus at rate 4PCC 50 units/kg</p>
+<p>of 30 mg/min, followed by 4 mg/</p>
+<p>min IV infusion up to 120 min</p>
+<p>Rivaroxaban &gt;10 mg If &lt;8 hours since last dose or 4PCC 50 units/kg</p>
+<p>or unknown dose unknown time, andexanet alfa 800</p>
+<p>mg IV bolus at rate of 30 mg/min,</p>
+<p>followed by 8 mg/min IV infusion</p>
+<p>up to 120 min</p>
+<p>If ≥8 hours since last dose, andexanet</p>
+<p>alfa 400 mg IV bolus at rate of 30</p>
+<p>mg/min, followed by 4 mg/min IV</p>
+<p>infusion up to 120 min</p>
+<p>Apixaban ≤5 mg Andexanet alfa 400 mg IV bolus at rate 4PCC 50 units/kg</p>
+<p>of 30 mg/min, followed by 4 mg/</p>
+<p>min IV infusion up to 120 min</p>
+<p>Apixaban &gt;5 mg or If &lt;8 hours since last dose or 4PCC 50 units/kg</p>
+<p>unknown dose unknown time, andexanet alfa 800</p>
+<p>mg IV bolus at rate of 30 mg/min,</p>
+<p>followed by 8 mg/min IV infusion</p>
+<p>up to 120 min</p>
+<p>If ≥8 hours since last dose, andexanet</p>
+<p>alfa 400 mg IV bolus at rate of 30</p>
+<p>mg/min, followed by 4 mg/min IV</p>
+<p>infusion up to 120 min</p>
+<p>Edoxaban Andexanet alfa not studied 4PCC 50 units/kg</p>
+<p>FFP, fresh frozen plasma; IV, intravenous; 4PCC, 4-factor prothrombin complex concentrate; INR,</p>
+<p>international normalized ratio.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor patients with acute stroke intensely for development of neurologic worsen-</li>
+<p>ing (recurrence or extension of stroke), complications (venous thromboembolism,</p>
+<p>infection), and adverse treatment effects.</p>
+<li>The most common reasons for clinical deterioration in stroke patients include: (1)</li>
+<p>extension of the original lesion in the brain; (2) development of cerebral edema and</p>
+<p>raised intracranial pressure; (3) hypertensive emergency; (4) infection (eg, urinary</p>
+<p>and respiratory tract); (5) venous thromboembolism; (6) electrolyte abnormalities</p>
+<p>and rhythm disturbances; and (7) recurrent stroke.</p>
+<p>154</p>
+<p>ch13.indd 154 18-11-2020 16:21:01</p>
+<div class="table-container"><table><tr><th>TABLE 13-3 Select Anticoagulant Reversal</th><th></th><th></th></tr><tr><td>Drug</td><td>First-Line Reversal
+Recommendation</td><td>Alternate Treatment</td></tr><tr><td>Warfarin</td><td>Vitamin K 10 mg IV × 1
+-and-
+4PCC
+INR 2 to &lt;4: 25 units/kg, max 2500 units
+INR 4–6: 35 units/kg, max 3500 units
+INR &gt;6: 50 units/kg, max 5000 units</td><td>Vitamin K 10 mg IV × 1
+-and-
+FFP 10–15 mL/kg</td></tr><tr><td>Dabigatran</td><td>Idarucizumab 5 g IV × 1</td><td>Hemodialysis
+4PCC 50 units/kg</td></tr><tr><td>Rivaroxaban ≤10 mg</td><td>Andexanet alfa 400 mg IV bolus at rate
+of 30 mg/min, followed by 4 mg/
+min IV infusion up to 120 min</td><td>4PCC 50 units/kg</td></tr><tr><td>Rivaroxaban &gt;10 mg
+or unknown dose</td><td>If &lt;8 hours since last dose or
+unknown time, andexanet alfa 800
+mg IV bolus at rate of 30 mg/min,
+followed by 8 mg/min IV infusion
+up to 120 min
+If ≥8 hours since last dose, andexanet
+alfa 400 mg IV bolus at rate of 30
+mg/min, followed by 4 mg/min IV
+infusion up to 120 min</td><td>4PCC 50 units/kg</td></tr><tr><td>Apixaban ≤5 mg</td><td>Andexanet alfa 400 mg IV bolus at rate
+of 30 mg/min, followed by 4 mg/
+min IV infusion up to 120 min</td><td>4PCC 50 units/kg</td></tr><tr><td>Apixaban &gt;5 mg or
+unknown dose</td><td>If &lt;8 hours since last dose or
+unknown time, andexanet alfa 800
+mg IV bolus at rate of 30 mg/min,
+followed by 8 mg/min IV infusion
+up to 120 min
+If ≥8 hours since last dose, andexanet
+alfa 400 mg IV bolus at rate of 30
+mg/min, followed by 4 mg/min IV
+infusion up to 120 min</td><td>4PCC 50 units/kg</td></tr><tr><td>Edoxaban</td><td>Andexanet alfa not studied</td><td>4PCC 50 units/kg</td></tr></table></div><h2>Stroke | CHAPTER 13</h2>
+<li>For patients receiving alteplase therapy, monitor for bleeding with neurologic exami-</li>
+<p>nation and BP every 15 minutes for 1 hour, then every half-hour for 6 hours, then</p>
+<p>every hour for 17 hours, then once every shift thereafter.</p>
+<li>For aspirin, clopidogrel, extended-release dipyridamole plus aspirin, warfarin, and</li>
+<p>other oral anticoagulants, monitor for bleeding daily.</p>
+<li>For patients receiving warfarin, check the PT/INR and hemoglobin/hematocrit daily.</li>
+<p>See Chapter 38, Stroke, authored by Melody Ryan and Melisa Nestor, for a more detailed</p>
+<p>discussion of this topic.</p>
+<p>155</p>
+<p>ch13.indd 155 18-11-2020 16:21:01</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

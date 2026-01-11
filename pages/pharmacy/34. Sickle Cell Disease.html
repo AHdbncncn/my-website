@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34. Sickle Cell Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>34. Sickle Cell Disease</h1>
+        </header>
+        <main>
+            <p>363</p>
+<h2>RETPAHC</h2>
+<p>34</p>
+<p>Sickle Cell Disease</p>
+<li>Sickle cell syndromes, which can be divided into sickle cell trait (SCT) and sickle</li>
+<p>cell disease (SCD), are hereditary conditions characterized by the presence of sickle</p>
+<p>hemoglobin (HbS) in red blood cells (RBCs).</p>
+<li>SCT is the heterozygous inheritance of one normal β-globin gene producing hemo-</li>
+<p>globin A (HbA) and one sickle gene producing HbS (HbAS) gene. Individuals with</p>
+<p>SCT are asymptomatic.</p>
+<li>SCD can be of homozygous or compounded heterozygous inheritance. Homozygous</li>
+<p>HbS (HbSS) has historically been referred to as sickle cell anemia (SCA), which</p>
+<p>now also includes HbSβ0-thal due to similarities in clinical severity. The heterozy-</p>
+<p>gous inheritance of HbS with another qualitative or quantitative β-globin mutation</p>
+<p>results in sickle cell hemoglobin C (HbSC), sickle cell β-thalassemia (HbSβ+-thal and</p>
+<p>HbSβ0-thal), and some other rare phenotypes.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Clinical manifestations of SCD are due to impaired circulation, RBC destruction, and</li>
+<p>stasis of blood flow and ongoing inflammatory responses. These changes result from</p>
+<p>disturbances in RBC polymerization and membrane damage. In addition to sickling,</p>
+<pre><code>other factors contributing to the clinical manifestations include functional asplenia</code></pre>
+<p>(and increased risk of infection by encapsulated organisms), deficient opsonization,</p>
+<p>and coagulation abnormalities.</p>
+<li>Polymerization allows deoxygenated hemoglobin to exist as a semisolid gel that</li>
+<p>protrudes into the cell membrane, distorting RBCs into sickle shapes. Sickle-shaped</p>
+<p>RBCs increase blood viscosity and encourage sludging in the capillaries and small</p>
+<p>vessels, leading to local tissue hypoxia that accentuates the pathologic process.</p>
+<li>Repeated cycles of sickling, upon deoxygenation, and unsickling, upon oxygenation,</li>
+<p>damage the RBC membrane and cause irreversible sickling. Rigid, sickled RBCs are</p>
+<p>easily trapped, resulting in shortened circulatory survival and chronic hemolysis.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>SCD involves multiple organ systems. Clinical manifestations depend on the geno-</li>
+<h2>type (Table 34-1).</h2>
+<li>Cardinal features of SCD are hemolytic anemia and vasoocclusion. Symptoms are</li>
+<p>delayed until 4–6 months of age when HbS replaces fetal hemoglobin (HbF). Com-</p>
+<p>mon findings include pain with fever, pneumonia, splenomegaly, and, in infants,</p>
+<p>pain and swelling of the hands and feet (eg, hand-and-foot syndrome or dactylitis).</p>
+<li>Usual clinical signs and symptoms of SCD include chronic anemia; fever; pallor;</li>
+<p>arthralgia; scleral icterus; abdominal pain; weakness; anorexia; fatigue; enlarged liver,</p>
+<p>spleen, and heart; and hematuria.</p>
+<li>Acute complications of SCD include fever and infection (eg, sepsis caused by encap-</li>
+<p>sulated pathogens such as Streptococcus pneumoniae), stroke, acute chest syndrome,</p>
+<p>and priapism. Acute chest syndrome is characterized by pulmonary infiltration,</p>
+<p>respiratory symptoms, and equivocal response to antibiotic therapy.</p>
+<li>Acute episodes of pain can be precipitated by fever, infection, dehydration, hypoxia,</li>
+<p>acidosis, and sudden temperature changes. The most common type is vasoocclusive</p>
+<p>pain, which is manifested by pain over the involved areas without change in Hb.</p>
+<p>Aplastic crisis is characterized by acute decrease in Hb with decreased reticulocyte</p>
+<p>count manifested as fatigue, dyspnea, pallor, and tachycardia. Acute splenic seques-</p>
+<p>tration is the sudden massive enlargement of the spleen due to sequestration of</p>
+<p>sickled RBCs. The trapping of sickled RBCs by the spleen leads to hypotension and</p>
+<p>ch34.indd 363 19-11-2020 14:15:56</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>34</th><th>Sickle Cell Disease</th></tr></table></div><h2>SECTION 7 | Hematologic Disorders</h2>
+<p>TABLE 34-1 Clinical Features of Sickle Cell Trait and Common Types of Sickle Cell Disease</p>
+<p>Type Clinical Features</p>
+<p>Sickle cell trait (SCT) Rare painless hematuria; heavy exercise under extreme</p>
+<p>conditions can provoke gross hematuria and</p>
+<p>complications (normal Hb)</p>
+<p>Sickle cell anemia Pain episodes, microvascular disruption of organs (spleen,</p>
+<p>(SCA-HbSS) liver, bone marrow, kidney, brain, and lung), gallstones,</p>
+<p>priapism, leg ulcers; anemia (Hb 6–9 g/dL [60–90 g/L;</p>
+<p>3.72–5.59 mmol/L])</p>
+<p>Sickle cell hemoglobin C Painless hematuria and rare aseptic necrosis of bone; pain</p>
+<p>(HbSC) episodes are less common and occur later in life; other</p>
+<p>complications are ocular disease and pregnancy-related</p>
+<p>problems; mild anemia (Hb 9–14 g/dL [90–140 g/L;</p>
+<p>5.59–8.69 mmol/L])</p>
+<p>Sickle cell β+-thalassemia Rare pain; milder severity than HbSS because production</p>
+<p>(HbSβ+-thal) of some HbA; Hb 9–12 g/dL (90–120 g/L; 5.59–7.45</p>
+<p>mmol/L) with microcytosis</p>
+<p>Sickle cell β0-thalassemia No HbA production; severity similar to SCA; Hb 7–9 g/dL</p>
+<p>(HbSβ0-thal) (70–90 g/L; 4.34–5.59 mmol/L) with microcytosis</p>
+<p>Hb, hemoglobin; HbA, hemoglobin A.</p>
+<p>shock, and can cause sudden death in young children. Repeated infarctions lead to</p>
+<p>autosplenectomy; therefore, incidence declines as adolescence approaches.</p>
+<li>Chronic complications involve many organs and include pulmonary hypertension,</li>
+<p>airway inflammation and hyperresponsiveness, bone and joint destruction, ocu-</p>
+<p>lar problems, cholelithiasis, cardiovascular abnormalities, depression, hematuria,</p>
+<p>and other renal complications. Children experience delayed growth and sexual</p>
+<p>maturation.</p>
+<li>Patients with SCT are usually asymptomatic, except for rare painless hematuria.</li>
+<p>Other reported complications associated with SCT are delayed hemorrhage after eye</p>
+<p>trauma, venous thromboembolism, particularly pulmonary embolism, and chronic</p>
+<p>kidney disease.</p>
+<h2>DIAGNOSIS</h2>
+<li>SCD is usually identified by routine neonatal screening programs using isoelectric</li>
+<p>focusing, high-performance liquid chromatography, or electrophoresis.</p>
+<li>Laboratory findings include low hemoglobin; increased reticulocyte, platelet, and</li>
+<p>white blood cell counts; and sickled red cell forms on the peripheral smear.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goals are to reduce hospitalizations, complications, and</li>
+<p>mortality.</p>
+<h2>GENERAL PRINCIPLES</h2>
+<li>Patients with SCD require lifelong interprofessional care that combines general</li>
+<p>symptomatic supportive care, preventative medical therapies, and specific disease-</p>
+<p>modifying therapies.</p>
+<li>Routine immunizations plus influenza, meningococcal, and pneumococcal vaccina-</li>
+<p>tions are recommended.</p>
+<p>364</p>
+<p>ch34.indd 364 19-11-2020 14:15:57</p>
+<div class="table-container"><table><tr><th>TABLE 34-1 Clinical Features of Sickle Cell Trait and Common Types of Sickle Cell Disease</th><th></th></tr><tr><td>Type</td><td>Clinical Features</td></tr><tr><td>Sickle cell trait (SCT)</td><td>Rare painless hematuria; heavy exercise under extreme
+conditions can provoke gross hematuria and
+complications (normal Hb)</td></tr><tr><td>Sickle cell anemia
+(SCA-HbSS)</td><td>Pain episodes, microvascular disruption of organs (spleen,
+liver, bone marrow, kidney, brain, and lung), gallstones,
+priapism, leg ulcers; anemia (Hb 6–9 g/dL [60–90 g/L;
+3.72–5.59 mmol/L])</td></tr><tr><td>Sickle cell hemoglobin C
+(HbSC)</td><td>Painless hematuria and rare aseptic necrosis of bone; pain
+episodes are less common and occur later in life; other
+complications are ocular disease and pregnancy-related
+problems; mild anemia (Hb 9–14 g/dL [90–140 g/L;
+5.59–8.69 mmol/L])</td></tr><tr><td>Sickle cell β+-thalassemia
+(HbSβ+-thal)</td><td>Rare pain; milder severity than HbSS because production
+of some HbA; Hb 9–12 g/dL (90–120 g/L; 5.59–7.45
+mmol/L) with microcytosis</td></tr><tr><td>Sickle cell β0-thalassemia
+(HbSβ0-thal)</td><td>No HbA production; severity similar to SCA; Hb 7–9 g/dL
+(70–90 g/L; 4.34–5.59 mmol/L) with microcytosis</td></tr></table></div><h2>Sickle Cell Disease | CHAPTER 34</h2>
+<li>Prophylactic penicillin is recommended until at least 5 years of age. An effective</li>
+<p>regimen is penicillin V potassium, 125 mg orally twice daily until 3 years of age and</p>
+<p>then 250 mg orally twice daily until age 5 years.</p>
+<h2>DISEASE-MODIFYING THERAPIES</h2>
+<li>HbF directly affects polymer formation. Increases in HbF correlate with decreased</li>
+<p>RBC sickling and adhesion. Patients with low HbF levels have more frequent pain</p>
+<p>and higher mortality. HbF levels of 20% or greater reduce the risk of acute sickle cell</p>
+<p>complications.</p>
+<li>Hydroxyurea, a chemotherapeutic agent, stimulates HbF production and increases</li>
+<p>the number of HbF-containing reticulocytes and intracellular HbF. It is indicated for</p>
+<p>patients 2 years of age and older with recurrent moderate to severe painful crises to</p>
+<p>reduce the frequency of pain crises and the need for blood transfusions. The recom-</p>
+<p>mended single daily dose for adults is 15 mg/kg and 20 mg/kg for children (Fig. 34-1).</p>
+<li>l-Glutamine is approved for SCD patients age 5 and older to reduce the acute com-</li>
+<p>plications of SCD. Dose is weight-based: 5 g twice a day for &lt;30 kg; 10 g twice a day</p>
+<p>for 30–65 kg and 15 g twice a day for &gt;65 kg.</p>
+<li>Chronic RBC transfusions are indicated for primary and secondary stroke prevention</li>
+<p>and amelioration of organ damage. Transfusions are usually given every 3–4 weeks or</p>
+<p>as needed to maintain desired HbS levels. The optimal duration of primary prophy-</p>
+<p>lactic transfusion therapy in children is unknown. Risks include alloimmunization,</p>
+<p>hyperviscosity, viral transmission (requiring hepatitis A and B vaccination), volume</p>
+<p>and iron overload, and transfusion reactions.</p>
+<li>Allogeneic hematopoietic stem cell transplantation is the only curative therapy for</li>
+<p>SCD. The best candidates are younger than 16 years, have severe complications, and</p>
+<p>have human leukocyte antigen–matched donors. Risks must be carefully considered</p>
+<p>and include mortality, graft rejection, and secondary malignancies.</p>
+<h2>TREATMENT OF COMPLICATIONS</h2>
+<li>Educate patients to recognize conditions that require urgent evaluation. Balanced</li>
+<p>fluid status and oxygen saturation of at least 92% are important to avoid exacerbation</p>
+<p>during acute illness.</p>
+<li>RBC transfusions are indicated for acute exacerbation of baseline anemia (eg, aplastic</li>
+<p>crisis, hepatic or splenic sequestration, or severe hemolysis), severe vasoocclusive</p>
+<p>episodes, and procedures requiring general anesthesia.</p>
+<li>Promptly evaluate fever of 38.5°C (101.3°F) or higher. Empiric antibiotic therapy</li>
+<p>should provide coverage against encapsulated organisms (eg, ceftriaxone for out-</p>
+<p>patients and cefotaxime for inpatients; clindamycin for cephalosporin-allergic</p>
+<p>patients).</p>
+<li>For acute chest syndrome, initiate incentive spirometry; appropriate fluid therapy;</li>
+<p>broad-spectrum antibiotics, including a macrolide or quinolone; and, for hypoxia</p>
+<p>or acute distress, oxygen therapy. Other potential therapies include steroids and</p>
+<p>nitric oxide.</p>
+<li>Priapism has been treated with analgesics, antianxiety agents, and vasoconstrictors to</li>
+<p>force blood out of the corpus cavernosum (eg, phenylephrine and epinephrine), and</p>
+<p>vasodilators to relax smooth muscle (eg, terbutaline and hydralazine).</p>
+<li>Treatment of aplastic crisis is primarily supportive. Blood transfusions may be indi-</li>
+<p>cated for severe or symptomatic anemia.</p>
+<li>Hydration and blood transfusions are indicated to treat hypovolemia associated with</li>
+<p>splenic sequestration. Manage recurrent episodes with observation and splenectomy.</p>
+<p>Consider chronic transfusions in children younger than 2 years of age to delay sple-</p>
+<p>nectomy until the age of 2 years. Splenectomy is an option for chronic hypersplenism.</p>
+<li>Hydration and analgesics are mainstays of treatment for vasoocclusive (painful)</li>
+<p>crisis. Administer fluids IV or orally at 1–1.5 times the maintenance requirement;</p>
+<p>monitor closely to avoid volume overload. Consider an infectious etiology and initi-</p>
+<p>ate empiric therapy if indicated.</p>
+<p>365</p>
+<p>ch34.indd 365 19-11-2020 14:15:57</p>
+<p>Adults and children with SCD in whom hydroxyurea is indicated</p>
+<p>Baseline laboratory: CBC, reticulocyte, HbF, chemistries (including creatinine,</p>
+<p>bilirubin, ALT), pregnancy test (if menstruating)</p>
+<p>Baseline physical examination and history</p>
+<p>* Pregnancy test negative</p>
+<p>* Use contraception for sexually active men and women</p>
+<p>* Adherence with daily dosing, frequent laboratory monitoring, and medical appointments</p>
+<p>No Yes</p>
+<p>No hydroxyurea</p>
+<p>Hydroxyurea: 15 mg/kg/day for adults and 20 mg/kg/day for children. May increase by</p>
+<p>5 mg/kg/day every 8 weeks up to 35 mg/kg/day</p>
+<p>Monitoring:</p>
+<p>* CBC: every 4 weeks until maximum tolerated dose achieved for 8-12 wks,</p>
+<p>then every 8 weeks</p>
+<p>* HbF every 3 months × 2 then every 6 months</p>
+<p>* Bilirubin, ALT, and creatinine every 12-24 weeks</p>
+<p>* Pregnancy test PRN (if positive, stop therapy and provide teratogen risk counseling)</p>
+<p>* History and PE: every 4 weeks until maximum dose achieved for 8-12 weeks,</p>
+<p>then every 8 weeks</p>
+<p>* Assess compliance if no ↑ MCV or HbF</p>
+<p>Treatment Goals: * Consider inability to respond to therapy</p>
+<p>* Less pain and ACS episodes No response – Cautiously increase dose up to</p>
+<p>* ↑ HbF in more than 35 mg/kg/day. Trial period of</p>
+<p>* ↑ Hgb (if severe anemic) 3-6 months 6-12 months is probably adequate</p>
+<p>* Improved well-being</p>
+<h2>* Acceptable myelotoxicity</h2>
+<p>Yes</p>
+<p>Toxicity develops</p>
+<p>Continue therapy</p>
+<p>Continue monitoring</p>
+<p>Toxicity:</p>
+<p>* ANC &lt;2,000 cells/mm3</p>
+<p>* Platelets &lt;80,000 cells/mm3</p>
+<p>* Absolute reticulocyte count &lt;80,000 cells/mm3 if Hgb &lt;9 g/dL</p>
+<p>* Hgb &lt;5 g/dL or &gt;20% below baseline</p>
+<p>* Increased serum creatinine 50% above baseline</p>
+<p>* Increased ALT 100% above baseline</p>
+<p>Stop hydroxyurea for at least 1 week and until toxicity resolves</p>
+<p>* Resume hydroxyurea at 2.5-5 mg/kg/day less than previous dose</p>
+<p>* May resume previous dose if no toxicity recurs after 12 weeks of the lower dose</p>
+<p>– If toxicity recurs on higher dose, stop hydroxyurea again until resolves,</p>
+<p>then resume at the lowest tolerated dose</p>
+<p>(ACS, acute chest syndrome; ALT, alanine aminotransferase; ANC, absolute neutrophil count; CBC, com-</p>
+<p>plete blood cell count; Hb, hemoglobin; HbF, fetal hemoglobin; HbSS, homozygous sickle cell hemoglobin;</p>
+<p>HbSSβ0, sickle cell β0-thalassemia; MCV, mean corpuscular volume; PE, physical examination; PRN, as</p>
+<p>needed; RBC, red blood cell.)</p>
+<p>FIGURE 34-1. Hydroxyurea use in sickle cell disease. (Data from Alrayyes S, Baghdan</p>
+<p>D, Haddad RY, et al. Sickle cell disease: An overview of the disease and its systemic effects. Dis</p>
+<p>Mon. 2018;64:283–289; Ware RE, de Montalembert M, Tshilolo L, Abboud MR. Sickle cell dis-</p>
+<p>ease. Lancet. 2017;390:311–323; Quinn CT. Sickle cell disease in childhood: From newborn</p>
+<p>screening through transition to adult medical care. Pediatr Clin North Am. 2013;60:1363–</p>
+<p>1381; National Institutes of Health, National Heart Lung and Blood Institute. Evidence-</p>
+<p>Based Management of Sickle Cell Disease: Expert Panel Report. http://www.nhlbi.nih.gov/</p>
+<p>health-pro/guidelines/sickle-cell-disease-guidelines/. Accessed, October 15, 2018.)</p>
+<p>366</p>
+<p>ch34.indd 366 19-11-2020 14:15:57</p>
+<h2>Sickle Cell Disease | CHAPTER 34</h2>
+<li>Tailor analgesic therapy to the individual because of the variable frequency and sever-</li>
+<p>ity of pain. Pain scales should be used to quantify the degree of pain.</p>
+<li>Use nonsteroidal anti-inflammatory drugs (NSAIDs) or acetaminophen for mild</li>
+<p>to moderate pain. Consider adding an opioid if mild to moderate pain persists. (eg,</p>
+<p>codeine or hydrocodone).</p>
+<li>Treat severe pain aggressively with an opioid, such as morphine, hydromorphone,</li>
+<p>fentanyl, or methadone. Avoid meperidine due to accumulation of the normeperi-</p>
+<p>dine metabolite, which can cause neurotoxicity, especially in patients with impaired</p>
+<pre><code>renal function.</code></pre>
+<li>Treat severe pain with an IV opioid titrated to pain relief and then administered on</li>
+<p>a scheduled basis with as-needed dosing for breakthrough pain. Patient-controlled</p>
+<p>analgesia is commonly utilized.</p>
+<li>Treatment of chronic pain in SCD requires an interprofessional team approach.</li>
+<p>Guidelines for chronic pain management are available.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Evaluate patients on a regular basis to establish baseline symptoms, monitor changes,</li>
+<p>and provide age-appropriate education.</p>
+<li>Evaluate CBC and reticulocyte counts every 3–6 months up to 2 years of age, then</li>
+<p>every 6–12 months. Screen HbF level annually until 2 years of age. Evaluate renal,</p>
+<pre><code>hepatobiliary, and pulmonary function annually. Screen patients for retinopathy.</code></pre>
+<li>Assess efficacy of hydroxyurea by monitoring the number, severity, and duration of</li>
+<p>sickle cell crises.</p>
+<p>See Chapter 120, Sickle Cell Disease, authored by C. Y. Jennifer Chan and Melissa</p>
+<p>Frei-Jones, for a more detailed discussion of this topic.</p>
+<p>367</p>
+<p>ch34.indd 367 19-11-2020 14:15:58</p>
+<p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

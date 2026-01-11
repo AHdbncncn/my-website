@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>76. Electrolyte Homeostasis</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>76. Electrolyte Homeostasis</h1>
+        </header>
+        <main>
+            <p>889</p>
+<h2>RETPAHC</h2>
+<p>76</p>
+<p>Electrolyte Homeostasis</p>
+<li>Fluid and electrolyte homeostasis is maintained by feedback mechanisms, hormones,</li>
+<p>and many organ systems, and is necessary for the body’s normal physiologic func-</p>
+<p>tions. Disorders of sodium and water, calcium, phosphorus, potassium, and magne-</p>
+<h2>sium homeostasis are addressed separately in this chapter.</h2>
+<h2>DISORDERS OF SODIUM AND WATER HOMEOSTASIS</h2>
+<li>Total body water (TBW) ranges from 45% to 60% of body weight depending on sex</li>
+<p>and age and is distributed primarily into two compartments: intracellularly (ICF;</p>
+<p>two-thirds [67%] of TBW), and one-third (33%) is contained in the extracellular</p>
+<p>space.</p>
+<li>Effective osmoles are solutes that cannot freely cross cell membranes, such as sodium</li>
+<p>and potassium. Addition of an isotonic solution to the extracellular fluid (ECF)</p>
+<p>does not change ICF volume because there is no change in effective ECF osmolality.</p>
+<p>Adding a hypertonic solution to the ECF decreases ICF volume, whereas adding a</p>
+<p>hypotonic solution increases it. Table 76-1 summarizes the composition of com-</p>
+<p>monly used IV solutions and their expected distribution into the ECF and ICF</p>
+<p>compartments.</p>
+<li>Hypernatremia and hyponatremia can be associated with conditions of high, low,</li>
+<p>or normal ECF sodium and volume. Both conditions are most commonly the result</p>
+<p>of abnormalities of water metabolism. It’s important to understand the difference</p>
+<p>between dehydration (loss of TBW producing hypertonicity) and hypovolemia</p>
+<p>(volume depletion due to a symptomatic deficit in ECF volume).</p>
+<p>HYPONATREMIA (SERUM SODIUM &lt;135 mEq/L [mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Results from an excess of extracellular water relative to sodium because of impaired</li>
+<p>water excretion.</p>
+<li>Causes of nonosmotic release of arginine vasopressin (AVP), commonly known</li>
+<p>as antidiuretic hormone, include hypovolemia and decreased effective circulating</p>
+<p>volume as seen in patients with congestive heart failure (CHF), nephrotic syndrome,</p>
+<p>cirrhosis, and syndrome of inappropriate antidiuretic hormone (SIADH).</p>
+<li>Hyponatremia is classified as isotonic, hypertonic, or hypotonic depending on serum</li>
+<h2>osmolity (Figure 76-1).</h2>
+<li>Hypotonic hyponatremia, the most common form of hyponatremia, can be further</li>
+<p>classified as hypovolemic, euvolemic, or hypervolemic.</p>
+<li>Hypovolemic hypotonic hyponatremia is associated with a loss of ECF volume and</li>
+<p>sodium, with the loss of more sodium than water. It is seen in patients with diarrhea</p>
+<p>or in those taking thiazide diuretics.</p>
+<li>Euvolemic hyponatremia is associated with a normal or slightly decreased ECF</li>
+<p>sodium content and increased TBW and ECF volume. It is most commonly caused</p>
+<p>by SIADH.</p>
+<li>Hypervolemic hyponatremia is associated with an increase in ECF volume in condi-</li>
+<p>tions with impaired renal sodium and water excretion, such as cirrhosis, CHF, and</p>
+<p>kidney failure.</p>
+<p>Clinical Presentation</p>
+<li>Most patients with hyponatremia are asymptomatic.</li>
+<li>Presence and severity of symptoms are related to the magnitude and rapidity of onset</li>
+<p>of hyponatremia. Hyponatremia that is severe or develops rapidly is associated with</p>
+<p>symptoms that progress from nausea and malaise to headache and lethargy and,</p>
+<p>eventually, to seizures, coma, and death.</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>CH76.indd 889 20-11-2020 14:24:13</p>
+<h2>890 SECTION</h2>
+<p>14</p>
+<p>|</p>
+<p>Renal</p>
+<p>Disorders</p>
+<h2>TABLE 76-1 Composition of Common IV Solutions</h2>
+<p>Distribution</p>
+<p>Other Osmolality Free</p>
+<p>Dextrose [Na+] (mEq/L [K+] (mEq/L [Cl−] (mEq/L (mEq/L or (mOsm/kg or water</p>
+<p>Solution g/dL (kcal/L) or mmol/L) or mmol/L) or mmol/L) mmol/L) mmol/kg) Tonicity % ECF % ICF (mL/L)</p>
+<p>Dextrose 5% 5 (170) 0 0 0 — 253 Hypotonic 33 67 1000 mL</p>
+<p>in water</p>
+<p>0.2% NaCla 0 34 0 34 — 68 Hypotonic 50 50 750 mL</p>
+<p>0.45% NaClb 0 77 0 77 — 154 Hypotonic 67 33 500 mL</p>
+<p>0.9% NaClc 0 154 0 154 — 308 Isotonic 100 0 0 mL</p>
+<p>Lactated Ringer’sd 0 130 4 105 Lactate 28 273 Isotonic 97 3 0 mL</p>
+<p>Ca 4.8</p>
+<p>Plasma-Lyte Ae 0.44 (21) 140 5 98 Acetate 27 294 Isotonic 100 0 0 mL</p>
+<p>Mg 3</p>
+<p>Plasma-Lyte 148e</p>
+<p>Normosol-R 0 140 5 98 Acetate 27 294 Isotonic 100 0 0 mL</p>
+<p>(pH 6.6) Mg 3</p>
+<p>Normosol-R</p>
+<p>(pH 7.4)</p>
+<p>3% NaClf 0 513 0 513 — 1026 Hypertonic 100 0 –2331 mL</p>
+<p>aAlso referred to as quarter normal saline.</p>
+<p>bAlso referred to as half normal saline.</p>
+<p>cAlso referred to as normal saline.</p>
+<p>dAlso referred to as LR; also available commercially as Dextrose 5% LR.</p>
+<p>ePlasma-Lyte A pH 7.4; Plasma-Lyte 148 pH 5.5.</p>
+<p>fHypertonic solution; results in osmotic removal of water from the ICF.</p>
+<p>One g/dL is equivalent to 0.1 g/L; one kcal/L is equivalent to 4.18 kJ/L; Ca, calcium; Cl−, chloride; ECF, extracellular fluid; ICF, intracellular fluid; IV, intravenous; K+, potassium; Mg,</p>
+<p>magnesium; NA, not applicable; Na+, sodium; NaCl, sodium chloride.</p>
+<p>CH76.indd</p>
+<p>890</p>
+<p>20-11-2020</p>
+<p>14:24:14</p>
+<div class="table-container"><table><tr><th>TABLE 76-1 Composition of Common IV Solutions</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Distribution</td><td></td><td></td></tr><tr><td>Solution</td><td>Dextrose
+g/dL (kcal/L)</td><td>[Na+] (mEq/L
+or mmol/L)</td><td>[K+] (mEq/L
+or mmol/L)</td><td>[Cl−] (mEq/L
+or mmol/L)</td><td>Other
+(mEq/L or
+mmol/L)</td><td>Osmolality
+(mOsm/kg or
+mmol/kg)</td><td>Tonicity</td><td>% ECF</td><td>% ICF</td><td>Free
+water
+(mL/L)</td></tr><tr><td>Dextrose 5%
+in water</td><td>5 (170)</td><td>0</td><td>0</td><td>0</td><td>—</td><td>253</td><td>Hypotonic</td><td>33</td><td>67</td><td>1000 mL</td></tr><tr><td>0.2% NaCla</td><td>0</td><td>34</td><td>0</td><td>34</td><td>—</td><td>68</td><td>Hypotonic</td><td>50</td><td>50</td><td>750 mL</td></tr><tr><td>0.45% NaClb</td><td>0</td><td>77</td><td>0</td><td>77</td><td>—</td><td>154</td><td>Hypotonic</td><td>67</td><td>33</td><td>500 mL</td></tr><tr><td>0.9% NaClc</td><td>0</td><td>154</td><td>0</td><td>154</td><td>—</td><td>308</td><td>Isotonic</td><td>100</td><td>0</td><td>0 mL</td></tr><tr><td>Lactated Ringer’sd</td><td>0</td><td>130</td><td>4</td><td>105</td><td>Lactate 28
+Ca 4.8</td><td>273</td><td>Isotonic</td><td>97</td><td>3</td><td>0 mL</td></tr><tr><td>Plasma-Lyte Ae</td><td>0.44 (21)</td><td>140</td><td>5</td><td>98</td><td>Acetate 27
+Mg 3</td><td>294</td><td>Isotonic</td><td>100</td><td>0</td><td>0 mL</td></tr><tr><td>Plasma-Lyte 148e</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Normosol-R
+(pH 6.6)</td><td>0</td><td>140</td><td>5</td><td>98</td><td>Acetate 27
+Mg 3</td><td>294</td><td>Isotonic</td><td>100</td><td>0</td><td>0 mL</td></tr><tr><td>Normosol-R
+(pH 7.4)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3% NaClf</td><td>0</td><td>513</td><td>0</td><td>513</td><td>—</td><td>1026</td><td>Hypertonic</td><td>100</td><td>0</td><td>–2331 mL</td></tr></table></div><p>891</p>
+<p>Electrolyte</p>
+<p>Homeostasis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>76</p>
+<p>Hyponatremia</p>
+<p>Assess serum osmolality</p>
+<p>Low (&lt; 280 mOsm/L) Normal (~ 280 mOsm/L) High (&gt; 280 mOsm/L)</p>
+<p>Hypotonic hyponatremia Isotonic hyponatremia Hypertonic hyponatremia</p>
+<p>Assess volume status Pseudohyponatremia Hyperglycemia</p>
+<p>Unmeasured effective osmole (mannitol)</p>
+<p>Hypovolemia Euvolemia Hypervolemia</p>
+<p>Decreased EABV</p>
+<p>Uosm &gt; 450 mOsm/kg Uosm &lt; 100 mOsm/kg Uosm &gt; 100 mOsm/kg</p>
+<p>Uosm &gt; 100 mOsm/kg</p>
+<p>UNa &lt; 20 mEq/L UNa &gt; 20 mEq/L UNa &lt; 20 mEq/L UNa &gt; 20 mEq/L UNa &lt; 20 mEq/L</p>
+<p>Extrarenal losses Renal losses Primary polydipsia Hypothyroidism, hypocortisolism, HF, cirrhosis, nephrotic</p>
+<p>(GI, skin, lung) (diuretics, AI) Low solute intake kidney failure, SIADH syndrome</p>
+<p>Isotonic fluid Isotonic fluid Water ± sodium restriction, treat Water and sodium</p>
+<p>(0.9% NaCI, LR) (0.9% NaCI, LR) Water restriction underlying cause, loop diuretic, VRA restriction, diuretics, VRA</p>
+<p>(AI, adrenal insufficiency; EABV, effective arterial blood volume; GI, gastrointestinal; HF, heart failure; LR, lactated Ringers; NaCl, sodium chloride; SIADH, syndrome of inappropriate antidiuretic</p>
+<p>hormone; UNa, urine sodium concentration [values in mEq/L are numerically equivalent to mmol/L]; Uosm, urine osmolality [values in mOsm/kg are numerically equivalent to mmol/kg]; VRA,</p>
+<p>vasopressin receptor antagonist.)</p>
+<p>FIGURE 76-1. Algorithm for the assessment and treatment of hyponatremia.</p>
+<p>CH76.indd</p>
+<p>891</p>
+<p>20-11-2020</p>
+<p>14:24:15</p>
+<div class="table-container"><table><tr><th></th></tr><tr><td>Assess serum osmolality</td></tr></table></div><div class="table-container"><table><tr><th>UNa &lt; 2</th><th>0 mEq/L</th></tr></table></div><div class="table-container"><table><tr><th>UNa &gt; 2</th><th>0 mEq/L</th></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<li>Patients with hypovolemic hyponatremia present with neurologic symptoms and also</li>
+<p>symptoms of hypovolemia, including decreased skin turgor, orthostatic hypotension,</p>
+<p>tachycardia, and dry mucous membranes.</p>
+<p>Treatment</p>
+<li>Goals of Treatment: Resolve underlying cause of the sodium and ECF volume imbal-</li>
+<p>ance and safely correct the sodium and water derangements. Too rapid correction</p>
+<p>of serum sodium concentration can lead to an acute decrease in brain cell volume,</p>
+<p>contributing to the development of osmotic demyelination syndrome (ODS).</p>
+<p>Acute or Severely Symptomatic Hypotonic Hyponatremia</p>
+<li>Symptomatic patients, regardless of fluid status, should initially be treated with 3%</li>
+<p>NaCl (513 mEq/L [mmol/L]) until symptoms resolve. Resolution of severe symptoms</p>
+<p>may require only a 5% increase in serum sodium; some clinicians suggest an initial</p>
+<p>target serum sodium of ~120 mEq/L (mmol/L).</p>
+<li>Treat SIADH with 3% saline plus, if the urine osmolality exceeds 300 mOsm/kg</li>
+<p>(mmol/kg), a loop diuretic (furosemide, 20–40 mg IV every 6 hours or bumetanide,</p>
+<p>0.5–1 mg IV every 2–3 hours for several doses). Consider a continuous infusion if</p>
+<p>intermittent doses are not sufficient to manage edema.</p>
+<li>Treat hypovolemic hypotonic hyponatremia with 0.9% NaCl.</li>
+<li>Treat hypervolemic hypotonic hyponatremia with 3% NaCl and prompt initiation of</li>
+<p>fluid restriction. Loop diuretic therapy or arginine vasopressin receptor antagonist</p>
+<p>(VRA) is often required to facilitate urinary excretion of free water.</p>
+<p>Nonemergent Hypotonic Hyponatremia</p>
+<li>Treatment of SIADH involves water restriction and correction of the underlying</li>
+<p>cause; discontinue drugs that could be a contributing factor. Restrict water intake to</p>
+<p>approximately 1000–1200 mL/day. Treat patients unable to restrict water sufficiently</p>
+<p>with NaCl tablets and a loop diuretic or demeclocycline (300 mg orally two to four</p>
+<p>times daily; onset of action in 3–6 days).</p>
+<li>VRAs or “vaptans” (eg, conivaptan [available IV only] and tolvaptan [15 mg orally</li>
+<p>daily]) can be used to treat SIADH as well as other causes of euvolemic and hyper-</p>
+<p>volemic hypotonic hyponatremia that has been nonresponsive to other therapeutic</p>
+<p>interventions in patients with heart failure and SIADH. Fluid restriction should be</p>
+<p>avoided for the first 24–48 hours of starting VRA therapy when active sodium cor-</p>
+<p>rection is occurring. Tolvaptan labeling currently includes a warning to NOT use it</p>
+<p>for more than 30 days and should not be used in patients with liver disease, includ-</p>
+<p>ing cirrhosis. The vaptans have dramatic effects on water excretion and represent a</p>
+<p>breakthrough in the therapy of hyponatremia and disorders of fluid homeostasis.</p>
+<li>Treatment of asymptomatic hypervolemic hypotonic hyponatremia involves correc-</li>
+<p>tion of the underlying cause and restriction of water intake to less than 1000–1200</p>
+<p>mL/day. Dietary intake of sodium chloride should be restricted to 1000–2000 mg/day.</p>
+<p>HYPERNATREMIA (SERUM SODIUM &gt;145 mEq/L [mmol/L])</p>
+<p>Pathophysiology and Clinical Presentation</p>
+<li>Hypernatremia results from insensible water loss (evaporative water loss through</li>
+<p>skin and lungs), from hypotonic GI losses, or when patients are exposed to high</p>
+<p>temperatures. Diabetes insipidus (DI) causes a water diuresis. Hypernatremia may</p>
+<p>also result from hypertonic NaCl administration or from excess sodium intake from</p>
+<p>IV and enteral fluids and medications.</p>
+<li>Increase in serum sodium concentration and osmolality causes acute water move-</li>
+<p>ment from the ICF to the ECF. Symptoms are primarily caused by decreased brain cell</p>
+<p>volume and can include weakness, lethargy, restlessness, irritability, twitching, and</p>
+<p>confusion. Symptoms of a more rapidly developing hypernatremia include seizures,</p>
+<p>coma, and death.</p>
+<p>892</p>
+<p>CH76.indd 892 20-11-2020 14:24:15</p>
+<h2>Electrolyte Homeostasis | CHAPTER 76</h2>
+<p>Treatment</p>
+<li>Goals of Treatment: Correct serum sodium concentration at a rate that restores and</li>
+<p>maintains brain cell volume.</p>
+<li>Begin treatment of hypovolemic hypernatremia with 0.9% NaCl. After hemodynamic</li>
+<p>stability is restored and intravascular volume is replaced, replace free-water deficit</p>
+<p>with 5% dextrose or 0.45% NaCl.</p>
+<li>The correction rate should be approximately 1 mEq/L (1 mmol/L) per hour for</li>
+<p>hypernatremia that developed over a few hours and 0.5 mEq/L (0.5 mmol/L) per</p>
+<p>hour for hypernatremia that developed more slowly.</p>
+<li>Treat central DI with intranasal desmopressin, beginning with 10 mcg once daily.</li>
+<p>Titrate to 20 mcg twice daily based on serum sodium concentration. Oral tablets are</p>
+<p>available; poor bioavailability contributes to unpredictable response when transition-</p>
+<p>ing between dosage forms.</p>
+<li>Treat nephrogenic DI by decreasing ECF volume with a thiazide diuretic and</li>
+<p>dietary sodium restriction (2000 mg/day), which can decrease urine volume by as</p>
+<p>much as 50%. Other treatment options include drugs with antidiuretic properties</p>
+<h2>(Table 76-2).</h2>
+<li>Treat sodium overload with loop diuretics (furosemide, 20–40 mg IV every 6 hours)</li>
+<p>and 5% dextrose at an appropriate rate.</p>
+<h2>EDEMA</h2>
+<p>Pathophysiology and Clinical Presentation</p>
+<li>Edema, defined as a clinically detectable increase in interstitial fluid volume, develops</li>
+<p>when excess sodium is retained either as a primary defect in renal sodium excretion</p>
+<p>or as a response to a decrease in the effective circulating volume despite an already</p>
+<p>expanded or normal ECF volume.</p>
+<li>Edema is usually due to heart, kidney, or liver failure, or a combination of these</li>
+<p>conditions.</p>
+<li>Edema is initially detected in the feet or pretibial area in ambulatory patients and</li>
+<p>in the presacral area in bed-bound individuals, and is described as “pitting” when</p>
+<p>a depression caused by briefly exerting pressure over a bony prominence does not</p>
+<p>rapidly refill.</p>
+<p>Treatment</p>
+<li>Diuretics are the primary pharmacologic therapy for edema. Loop diuretics are the</li>
+<p>most potent, followed by thiazide diuretics and then potassium-sparing diuretics.</p>
+<p>TABLE 76-2 Drugs Used in Central and Nephrogenic Diabetes Insipidus</p>
+<p>Drug Indication Dose</p>
+<p>Desmopressin acetate Central and nephrogenic 5–20 mcg intranasally</p>
+<p>q12–24 hr</p>
+<p>Chlorpropamide Central 125–250 mg orally daily</p>
+<p>Carbamazepine Central 100–300 mg orally</p>
+<p>twice daily</p>
+<p>Clofibrate Central 500 mg orally four</p>
+<p>times daily</p>
+<p>Hydrochlorothiazide Central and nephrogenic 25 mg orally q12–24 hr</p>
+<p>Amiloride Nephrogenic 5–10 mg orally daily</p>
+<p>Indomethacin Central and nephrogenic 50 mg orally q8–12 hr</p>
+<p>893</p>
+<p>CH76.indd 893 20-11-2020 14:24:15</p>
+<div class="table-container"><table><tr><th>TABLE 76-2 Drugs Used in Central and Nephrogenic Diabetes Insipidus</th><th></th><th></th></tr><tr><td>Drug</td><td>Indication</td><td>Dose</td></tr><tr><td>Desmopressin acetate</td><td>Central and nephrogenic</td><td>5–20 mcg intranasally
+q12–24 hr</td></tr><tr><td>Chlorpropamide</td><td>Central</td><td>125–250 mg orally daily</td></tr><tr><td>Carbamazepine</td><td>Central</td><td>100–300 mg orally
+twice daily</td></tr><tr><td>Clofibrate</td><td>Central</td><td>500 mg orally four
+times daily</td></tr><tr><td>Hydrochlorothiazide</td><td>Central and nephrogenic</td><td>25 mg orally q12–24 hr</td></tr><tr><td>Amiloride</td><td>Nephrogenic</td><td>5–10 mg orally daily</td></tr><tr><td>Indomethacin</td><td>Central and nephrogenic</td><td>50 mg orally q8–12 hr</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<h2>DISORDERS OF CALCIUM HOMEOSTASIS</h2>
+<li>ECF calcium is moderately bound to plasma proteins (40%), primarily albumin.</li>
+<p>Ionized or free calcium is the physiologically active form that is homeostatically</p>
+<p>regulated.</p>
+<li>Each 1 g/dL (10 g/L) drop in serum albumin concentration less than 4 g/dL (40 g/L)</li>
+<p>decreases total serum calcium concentration by 0.8 mg/dL (0.20 mmol/L).</p>
+<p>HYPERCALCEMIA (TOTAL SERUM CALCIUM &gt;10.2 mg/dL [&gt;2.55 mmol/L])</p>
+<p>Pathophysiology and Clinical Presentation</p>
+<li>Cancer and hyperparathyroidism are the most common causes of hypercalcemia.</li>
+<p>Primary mechanisms include increased bone resorption, increased GI absorption,</p>
+<p>and increased tubular reabsorption by the kidneys.</p>
+<li>Clinical presentation depends on the degree of hypercalcemia and rate of onset.</li>
+<p>Mild-to-moderate hypercalcemia (serum calcium concentration &lt;13 mg/dL [&lt;3.25</p>
+<p>mmol/L] or ionized calcium concentration &lt;6 mg/dL [&lt;1.50 mmol/L]) can be</p>
+<p>asymptomatic.</p>
+<li>Hypercalcemia of malignancy develops quickly and is associated with anorexia,</li>
+<p>nausea and vomiting, constipation, polyuria, polydipsia, and nocturia. Hypercal-</p>
+<p>cemic crisis is characterized by acute elevation of serum calcium to greater than 15</p>
+<p>mg/dL (&gt;3.75 mmol/L), acute kidney injury, and obtundation. Untreated hypercal-</p>
+<p>cemic crisis can progress to oliguric acute kidney injury, coma, and life-threatening</p>
+<p>ventricular arrhythmias.</p>
+<li>Chronic hypercalcemia (ie, hyperparathyroidism) is associated with metastatic</li>
+<p>calcification, hypercalciuria, and chronic kidney disease secondary to interstitial</p>
+<p>nephrocalcinosis.</p>
+<li>Electrocardiographic (ECG) changes include shortening of the QT interval and</li>
+<p>coving of the ST-T wave.</p>
+<p>Treatment</p>
+<li>Treatment approach depends on the degree of hypercalcemia, acuity of onset, and</li>
+<p>presence of symptoms requiring emergent treatment (Figure 76-2).</p>
+<li>Management of asymptomatic, mild-to-moderate hypercalcemia begins with atten-</li>
+<p>tion to the underlying condition and correction of fluid and electrolyte abnormalities.</p>
+<li>Hypercalcemic crisis and acute symptomatic hypercalcemia are medical emergen-</li>
+<p>cies requiring immediate treatment. Rehydration with normal saline followed by</p>
+<p>loop diuretics (eg, furosemide, bumetanide) can be used in patients with normal</p>
+<pre><code>to moderately impaired renal function. Normalization of total calcium may be seen</code></pre>
+<p>within 24–48 hours.</p>
+<li>Initiate treatment with calcitonin in patients in whom saline hydration is contrain-</li>
+<p>dicated (Table 76-3). Onset of action is seen within 1–2 hours; however, the degree</p>
+<h2>and extent of calcium reduction is often unpredictable.</h2>
+<li>Bisphosphonates (eg, pamidronate and zoledronic acid) are indicated for hypercal-</li>
+<p>cemia of malignancy. Total serum calcium decline begins within 2 days and nadirs</p>
+<p>in 7 days. Duration of normocalcemia varies but usually does not exceed 2–3 weeks,</p>
+<p>depending on treatment response of underlying malignancy.</p>
+<li>Denosumab is a monoclonal antibody approved for treatment of hypercalcemia of</li>
+<p>malignancy in patients refractory to bisphosphonate therapy.</p>
+<li>Prednisone or an equivalent agent is usually effective by reducing GI calcium</li>
+<p>absorption when hypercalcemia results from multiple myeloma, leukemia, lym-</p>
+<p>phoma, sarcoidosis, and hypervitaminoses A and D. Onset of action is relatively slow.</p>
+<li>Cinacalcet is approved for management of parathyroid carcinoma, primary hyper-</li>
+<p>thyroidism where parathyroidectomy is indicated but cannot be undertaken, and</p>
+<p>secondary hyperparathyroidism in patients with chronic kidney disease on dialysis.</p>
+<p>894</p>
+<p>CH76.indd 894 20-11-2020 14:24:16</p>
+<p>895</p>
+<p>Electrolyte</p>
+<p>Homeostasis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>76</p>
+<p>Acute onset</p>
+<p>Secondary considerations</p>
+<p>1) parathyroidectomy</p>
+<p>2) reduce tumor load</p>
+<p>3) discontinue offending medications</p>
+<p>Symptomatic Asymptomatic</p>
+<p>Serum calcium Serum calcium</p>
+<p>Life-threatening Non-life-threatening &gt;12 mg/dL &lt;12 mg/dL</p>
+<p>EKG changes Musle weakness,fatigue</p>
+<pre><code>Tetany or pancreatitis Cognitive dysfunction, or abdominal pain</code></pre>
+<p>Functioning kidneys Severe renal insufficiency</p>
+<p>Saline rehydration Observe, correct reversible causes</p>
+<p>Loop diuretic</p>
+<p>Hemodialysis (low calcium bath)</p>
+<p>Saline rehydration Calcitonin</p>
+<p>Calcitonin</p>
+<p>Loop diuretic Glucocorticoid</p>
+<p>Glucocorticoid</p>
+<p>Hemodialysis (low calcium bath) IV bisphophonate</p>
+<p>Calcitonin Mithramycin</p>
+<p>Glucocorticoid</p>
+<p>Gallium nitrate</p>
+<p>FIGURE 76-2. Pharmacotherapeutic options for the acutely hypercalcemic patient. Serum calcium of 12 mg/dL is equivalent to</p>
+<p>3 mmol/L.</p>
+<p>CH76.indd</p>
+<p>895</p>
+<p>20-11-2020</p>
+<p>14:24:17</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<h2>TABLE 76-3 Drug Dosing Table for Hypercalcemia</h2>
+<p>Time Frame</p>
+<p>Drug/ to Initial Monitoring and Special</p>
+<p>Brand Name Starting Dosage Response Population Considerations</p>
+<p>0.9% saline ± 200–300 mL/hr 24–48 hours Electrolyte abnormalities, fluid</p>
+<p>electrolytes overload, CI in advanced</p>
+<p>kidney disease, congestive</p>
+<p>heart failure</p>
+<p>Loop diuretics 40–80 mg IV q 1–4 hr N/A Electrolyte abnormalities</p>
+<p>Furosemide/ of furosemide or (potassium and magnesium),</p>
+<p>Lasix® equivalent CI in patients with allergy to</p>
+<p>sulfas (use ethacrynic acid)</p>
+<p>Bumetandide/</p>
+<p>Bumex®</p>
+<p>Torsemide/</p>
+<p>Demadex®</p>
+<p>Calcitonin/ 4 units/kg q 12 hr 1–2 hours Facial flushing, nausea/vomiting,</p>
+<p>Miacalcin® SC/IM 10–12 allergic reaction, CI in patients</p>
+<p>units/hr IV with allergy to calcitonin</p>
+<p>Pamidronate/ 30–90 mg IV over 2 days Fever, fatigue, skeletal pain</p>
+<p>Aredia® 2–24 hours</p>
+<p>Zoledronate/ 4–8 mg IV over 15 1–2 days Fever, fatigue, skeletal pain, CI in</p>
+<p>Zometa® minutes advanced kidney disease</p>
+<p>Glucocorticoids 40–60 mg oral 3–5 days Diabetes, osteoporosis, infection,</p>
+<p>prednisone CI in patients with serious</p>
+<p>equivalents daily infections, hypersensitivity</p>
+<p>CI, contraindicated; SC, subcutaneous.</p>
+<p>HYPOCALCEMIA (TOTAL SERUM CALCIUM &lt;8.5 mg/dL [&lt;2.13 mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Hypocalcemia results from altered effects of parathyroid hormone and vitamin D on</li>
+<p>the bone, gut, and kidney. Primary causes are postoperative hypoparathyroidism and</p>
+<p>vitamin D deficiency.</p>
+<li>Hypomagnesemia can be associated with severe symptomatic hypocalcemia that is</li>
+<p>unresponsive to calcium replacement therapy. Calcium normalization is dependent</p>
+<p>on magnesium replacement.</p>
+<p>Clinical Presentation</p>
+<li>Clinical manifestations are variable and depend on the onset of hypocalcemia. Tetany</li>
+<p>is the hallmark sign of acute hypocalcemia, which manifests as paresthesias around</p>
+<p>the mouth and in the extremities; muscle spasms and cramps; carpopedal spasms;</p>
+<p>and, rarely, laryngospasm and bronchospasm.</p>
+<li>Cardiovascular manifestations result in ECG changes characterized by a prolonged</li>
+<p>QT interval and symptoms of decreased myocardial contractility often associated</p>
+<p>with CHF.</p>
+<p>Treatment</p>
+<li>Acute, symptomatic hypocalcemia requires IV administration of soluble calcium</li>
+<p>salts (Figure 76-3). Initially, 100–300 mg of elemental calcium (eg, 1 g calcium</p>
+<p>chloride, 2–3 g calcium gluconate) should be given IV over 10–30 minutes (≤60 mg</p>
+<p>of elemental calcium per minute).</p>
+<p>896</p>
+<p>CH76.indd 896 20-11-2020 14:24:17</p>
+<div class="table-container"><table><tr><th>TABLE 76-3 Drug Dosing Table for Hypercalcemia</th><th></th><th></th><th></th></tr><tr><td>Drug/
+Brand Name</td><td>Starting Dosage</td><td>Time Frame
+to Initial
+Response</td><td>Monitoring and Special
+Population Considerations</td></tr><tr><td>0.9% saline ±
+electrolytes</td><td>200–300 mL/hr</td><td>24–48 hours</td><td>Electrolyte abnormalities, fluid
+overload, CI in advanced
+kidney disease, congestive
+heart failure</td></tr><tr><td>Loop diuretics</td><td>40–80 mg IV q 1–4 hr
+of furosemide or
+equivalent</td><td>N/A</td><td>Electrolyte abnormalities
+(potassium and magnesium),
+CI in patients with allergy to
+sulfas (use ethacrynic acid)</td></tr><tr><td>Furosemide/
+Lasix®</td><td></td><td></td><td></td></tr><tr><td>Bumetandide/
+Bumex®</td><td></td><td></td><td></td></tr><tr><td>Torsemide/
+Demadex®</td><td></td><td></td><td></td></tr><tr><td>Calcitonin/
+Miacalcin®</td><td>4 units/kg q 12 hr
+SC/IM 10–12
+units/hr IV</td><td>1–2 hours</td><td>Facial flushing, nausea/vomiting,
+allergic reaction, CI in patients
+with allergy to calcitonin</td></tr><tr><td>Pamidronate/
+Aredia®</td><td>30–90 mg IV over
+2–24 hours</td><td>2 days</td><td>Fever, fatigue, skeletal pain</td></tr><tr><td>Zoledronate/
+Zometa®</td><td>4–8 mg IV over 15
+minutes</td><td>1–2 days</td><td>Fever, fatigue, skeletal pain, CI in
+advanced kidney disease</td></tr><tr><td>Glucocorticoids</td><td>40–60 mg oral
+prednisone
+equivalents daily</td><td>3–5 days</td><td>Diabetes, osteoporosis, infection,
+CI in patients with serious
+infections, hypersensitivity</td></tr></table></div><p>897</p>
+<p>Electrolyte</p>
+<p>Homeostasis</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>76</p>
+<p>Corrected serum calcium is &lt;8.6 mg/dL; ionized calcium &lt;4.4 mg/dL.</p>
+<p>Evaluate possible causes and take corrective action</p>
+<p>Decreased albumin Hypoparathyroidism Concurrent medications Vitamin D deficiency</p>
+<p>Decreased magnesium</p>
+<p>– correct serum calcium or – IV &amp; oral calcium – decrease doses or – oral or IV vitamin D</p>
+<p>– magnesium replacement</p>
+<p>– obtain ionized calcium – oral vitamin D change therapy, if possible replacement</p>
+<p>The corrected serum calcium is still &lt;8.6 mg/dL; ionized calcium &lt;4.4 mg/dL.</p>
+<p>Symptomatic, Acute – IV calcium chloride or Asymptomatic, Acute – Consider IV Asymptomatic, Chronic</p>
+<p>gluconate bolus over 10 minutes. calcium gluconate bolus at 1 gram/hour – oral calcium 1-3 g/day</p>
+<p>Evaluate patient response to IV or oral calcium and current signs and symptoms</p>
+<p>– Evaluate 10-12 hours after IV therapy or sooner for severe symptomatic hypocalcemia</p>
+<p>– Serum calcium every 24-48 hours initially during oral therapy, then 1-2 times weekly</p>
+<p>Symptomatic and calcium &lt;8.6 mg/dL; Asymptomatic and calcium &lt;8.6 mg/dL; Calcium &gt;8.6 mg/dL;</p>
+<p>ionized calcium &lt;4.4 mg/dL. ionized calcium &lt;4.4 mg/dL. ionized calcium &gt;4.4 mg/dL.</p>
+<p>Consider change to oral calcium therapy</p>
+<p>Rebolus IV Rebolus IV or increase dose of oral Evaluate serum calcium or</p>
+<p>product</p>
+<p>ionized calcium in 48 hours</p>
+<p>FIGURE 76-3. Hypocalcemia diagnostic and treatment algorithm. Serum calcium of 8.6 mg/dL is equivalent to 2.15</p>
+<p>mmol/L. Ionized calcium of 4.4 mg/dL is equivalent to 1.1 mmol/L.</p>
+<p>CH76.indd</p>
+<p>897</p>
+<p>20-11-2020</p>
+<p>14:24:18</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<li>The initial bolus dose is effective for only 1–2 hours; therefore, repeat doses should be</li>
+<p>given hourly as needed until severe, symptomatic patients are stabilized.</p>
+<li>Calcium gluconate is preferred over calcium chloride for peripheral administration</li>
+<p>because the latter is more irritating to veins.</p>
+<li>After acute hypocalcemia is corrected, the underlying cause and other electro-</li>
+<p>lyte problems should be corrected. Magnesium supplementation is indicated for</p>
+<p>hypomagnesemia.</p>
+<li>Oral calcium supplementation (eg, 1–3 g/day of elemental calcium initially, then</li>
+<p>2–8 g/day in divided doses) is indicated for chronic hypocalcemia due to hypopara-</p>
+<p>thyroidism and vitamin D deficiency. If serum calcium does not normalize, add a</p>
+<p>vitamin D preparation.</p>
+<h2>DISORDERS OF PHOSPHORUS HOMEOSTASIS</h2>
+<h2>HYPERPHOSPHATEMIA (SERUM PHOSPHORUS</h2>
+<p>&gt;4.5 mg/dL [&gt;1.45 mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Most commonly caused by decreased phosphorus excretion, secondary to decreased</li>
+<p>glomerular filtration rate (GFR).</p>
+<li>Intracellular phosphate release can occur with rhabdomyolysis, hemolysis, and tumor</li>
+<p>lysis syndrome, a complication of chemotherapy associated with massive cell lysis</p>
+<p>with highest incidence in patients with acute leukemia and lymphoma.</p>
+<p>Clinical Presentation</p>
+<li>Acute symptoms include nausea, vomiting, diarrhea, lethargy, obstruction of the</li>
+<p>urinary tract, and, rarely, seizures. Calcium phosphate crystals are likely to form</p>
+<p>when the product of the serum calcium and phosphate concentrations exceeds 50–60</p>
+<p>mg2/dL2 (4–4.8 mmol2/L2).</p>
+<li>The major effect is related to the development of hypocalcemia and damage resulting</li>
+<p>from calcium phosphate crystal precipitation into soft tissues, intrarenal calcification,</p>
+<p>nephrolithiasis, or obstructive uropathy.</p>
+<li>For more information on hyperphosphatemia and renal failure, see Chapter 75.</li>
+<p>Treatment</p>
+<li>The most effective way to treat nonemergent hyperphosphatemia is to decrease</li>
+<p>phosphate absorption from the GI tract with phosphate binders (see Chapter 75,</p>
+<h2>Table 75-5).</h2>
+<li>Severe symptomatic hyperphosphatemia manifesting as hypocalcemia and tetany is</li>
+<p>treated by the IV administration of calcium salts.</p>
+<p>HYPOPHOSPHATEMIA (SERUM PHOSPHORUS &lt;2.7 mg/dL [&lt;0.9 mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Hypophosphatemia results from decreased GI absorption, reduced tubular reabsorp-</li>
+<p>tion, or extracellular to intracellular redistribution.</p>
+<li>Hypophosphatemia is associated with chronic alcoholism, parenteral nutrition with</li>
+<p>inadequate phosphate supplementation, chronic ingestion of antacids, diabetic keto-</p>
+<p>acidosis, and prolonged hyperventilation.</p>
+<p>Clinical Presentation</p>
+<li>Severe hypophosphatemia (serum phosphorus <1.5 mg/dL [<0.5 mmol/L]) has</li>
+<p>diverse clinical manifestations that affect many organ systems, including the</p>
+<p>following:</p>
+<p>✓ Neurologic manifestations: Progressive syndrome of irritability, apprehension,</p>
+<p>weakness, numbness, paresthesias, dysarthria, confusion, obtundation, seizures,</p>
+<p>and coma.</p>
+<p>898</p>
+<p>CH76.indd 898 20-11-2020 14:24:18</p>
+<h2>Electrolyte Homeostasis | CHAPTER 76</h2>
+<p>TABLE 76-4 Oral Phosphorus Replacement Therapy with Phosphate, Potassium, and Sodium</p>
+<h2>Content Per Packet or Tablet</h2>
+<p>Product Phosphate Content Potassium Content Sodium Content</p>
+<p>Packet</p>
+<p>Phos-NaK 250 mg (8 mmol) 280 mg (7.1 mEq) 160 mg (6.9 mEq)</p>
+<h2>Tablet</h2>
+<p>Av-Phos 250 250 mg (8 mmol) 45 mg (1.1 mEq) 298 mg (13 mEq)</p>
+<p>Neutral</p>
+<p>K-Phos Neutral 250 mg (8 mmol) 45 mg (1.1 mEq) 298 mg (13 mEq)</p>
+<p>K-Phos No. 2 250 mg (8 mmol) 88 mg (2.3 mEq) 134 mg (5.8 mEq)</p>
+<p>Phospha 250 250 mg (8 mmol) 45 mg (1.1 mEq) 298 mg (13 mEq)</p>
+<p>Neutral</p>
+<p>Phospho-Trin 250 250 mg (8 mmol) 45 mg (1.1 mEq) 298 mg (13 mEq)</p>
+<p>Neutral</p>
+<p>Virt-Phos 250 250 mg (8 mmol) 45 mg (1.1 mEq) 298 mg (13 mEq)</p>
+<p>Neutral</p>
+<p>Phosphorus 31 mg = 1 mmol; potassium 39 mg = 1 mEq = 1 mmol; sodium 23 mg = 1 mEq =</p>
+<p>1 mmol.</p>
+<pre><code>✓ Skeletal muscle dysfunction: Myalgia, bone pain, weakness, and potentially fatal</code></pre>
+<p>rhabdomyolysis.</p>
+<pre><code>✓ Respiratory muscle weakness and diaphragmatic contractile dysfunction resulting</code></pre>
+<p>in acute respiratory failure.</p>
+<p>✓ Congestive cardiomyopathy, arrhythmias, hemolysis, and increased risk of infec-</p>
+<p>tion can also occur.</p>
+<li>Chronic hypophosphatemia can cause osteopenia and osteomalacia because of</li>
+<p>enhanced osteoclastic resorption of bone.</p>
+<p>Treatment</p>
+<li>Severe (<1.5 mg/dL; <0.5 mmol/L) or symptomatic hypophosphatemia should be</li>
+<p>treated with IV phosphorus replacement at a dose of 0.32–0.64 mmol/kg with nor-</p>
+<pre><code>mal kidney function. In critically ill trauma patients, doses up to 1 mmol/kg have</code></pre>
+<p>been used.</p>
+<li>Asymptomatic patients or those who exhibit mild-to-moderate hypophosphatemia</li>
+<p>(1.5–2.7 mg/dL [0.5–0.9 mmol/L]) can be treated with oral phosphorus supplementa-</p>
+<p>tion in doses of 1–2 g (32–64 mmol) daily in divided doses, with the goal of correct-</p>
+<p>ing serum phosphorus concentration in 7–10 days (Table 76-4).</p>
+<li>Monitor patients with frequent serum phosphorus and calcium determinations, espe-</li>
+<pre><code>cially if phosphorus is given IV or if renal dysfunction is present.</code></pre>
+<h2>DISORDERS OF POTASSIUM HOMEOSTASIS</h2>
+<p>HYPOKALEMIA (SERUM POTASSIUM &lt;3.5 mEq/L [mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Results from a total body potassium deficit or shifting of serum potassium into the</li>
+<p>intracellular compartment.</p>
+<li>Many drugs can cause hypokalemia (Table 76-5), and it is most commonly seen with</li>
+<p>use of loop and thiazide diuretics. Other causes of hypokalemia include diarrhea,</p>
+<p>vomiting, and hypomagnesemia.</p>
+<p>899</p>
+<p>CH76.indd 899 20-11-2020 14:24:18</p>
+<div class="table-container"><table><tr><th>TABLE 76-4 Oral Phosphorus Replacement Therapy with Phosphate, Potassium, and Sodium
+Content Per Packet or Tablet</th><th></th><th></th><th></th></tr><tr><td>Product</td><td>Phosphate Content</td><td>Potassium Content</td><td>Sodium Content</td></tr><tr><td>Packet</td><td></td><td></td><td></td></tr><tr><td>Phos-NaK</td><td>250 mg (8 mmol)</td><td>280 mg (7.1 mEq)</td><td>160 mg (6.9 mEq)</td></tr><tr><td>Tablet</td><td></td><td></td><td></td></tr><tr><td>Av-Phos 250
+Neutral</td><td>250 mg (8 mmol)</td><td>45 mg (1.1 mEq)</td><td>298 mg (13 mEq)</td></tr><tr><td>K-Phos Neutral</td><td>250 mg (8 mmol)</td><td>45 mg (1.1 mEq)</td><td>298 mg (13 mEq)</td></tr><tr><td>K-Phos No. 2</td><td>250 mg (8 mmol)</td><td>88 mg (2.3 mEq)</td><td>134 mg (5.8 mEq)</td></tr><tr><td>Phospha 250
+Neutral</td><td>250 mg (8 mmol)</td><td>45 mg (1.1 mEq)</td><td>298 mg (13 mEq)</td></tr><tr><td>Phospho-Trin 250
+Neutral</td><td>250 mg (8 mmol)</td><td>45 mg (1.1 mEq)</td><td>298 mg (13 mEq)</td></tr><tr><td>Virt-Phos 250
+Neutral</td><td>250 mg (8 mmol)</td><td>45 mg (1.1 mEq)</td><td>298 mg (13 mEq)</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<h2>TABLE 76-5 Mechanism of Drug-Induced Hypokalemia</h2>
+<p>Enhanced Fecal</p>
+<p>Transcellular Shift Enhanced Renal Excretion Elimination</p>
+<p>β-Receptor agonists Diuretics Laxatives</p>
+<p>2</p>
+<p>Epinephrine Acetazolamide Sodium</p>
+<p>Albuterol Thiazides polystyrene sulfonate</p>
+<p>Terbutaline Indapamide Phenolphthalein</p>
+<p>Fomoterol Metolazone Sorbitol</p>
+<p>Salmeterol Furosemide Patiromer</p>
+<p>Isoproterenol Torsemide Sodium zirconium</p>
+<p>cyclosilicate</p>
+<p>Ephedrine Bumetanide</p>
+<p>Pseudoephedrine Ethacrynic acid</p>
+<p>Tocolytic agents High-dose penicillins</p>
+<p>Ritodrine Nafcillin</p>
+<p>Nylidrin Ampicillin</p>
+<p>Theophylline Penicillin</p>
+<p>Levothyroxine Mineralocorticoids</p>
+<p>Decongestants Miscellaneous</p>
+<p>Caffeine Aminoglycosides</p>
+<p>Insulin overdose Amphotericin B</p>
+<p>Verapamil overdose Cisplatin</p>
+<p>Barium overdose</p>
+<p>Clinical Presentation</p>
+<li>Signs and symptoms are nonspecific and variable and depend on the degree of hypo-</li>
+<p>kalemia and rapidity of onset. Mild hypokalemia is often asymptomatic.</p>
+<li>Cardiovascular manifestations include cardiac arrhythmias (eg, heart block, atrial</li>
+<p>flutter, paroxysmal atrial tachycardia, ventricular fibrillation, and digitalis-induced</p>
+<p>arrhythmias). In severe hypokalemia (serum concentration &lt;2.5 mEq/L; mmol/L),</p>
+<p>ECG changes include ST-segment depression or flattening, T-wave inversion, and</p>
+<p>U-wave elevation.</p>
+<li>Moderate hypokalemia is associated with muscle weakness, cramping, malaise, and</li>
+<p>myalgias.</p>
+<p>Treatment</p>
+<li>In general, every 1 mEq/L (mmol/L) decrease in potassium below 3.5 mEq/L</li>
+<p>(mmol/L) corresponds with a total body deficit of 100–400 mEq (mmol). To correct</p>
+<p>mild deficits, patients receiving chronic loop or thiazide diuretics generally need</p>
+<p>40–100 mEq (mmol) of potassium.</p>
+<li>Whenever possible, potassium supplementation should be administered by mouth.</li>
+<p>Of the available salts, potassium chloride is most commonly used because it is the</p>
+<p>most effective for common causes of potassium depletion, use of diuretics, and with</p>
+<p>diarrhea.</p>
+<li>Limit IV administration to severe hypokalemia, patients exhibiting signs and symp-</li>
+<p>toms such as ECG changes or muscle spasms, or inability to tolerate oral therapy.</p>
+<p>IV supplementation is more dangerous than oral therapy due to the potential for</p>
+<p>900</p>
+<p>CH76.indd 900 20-11-2020 14:24:19</p>
+<div class="table-container"><table><tr><th>TABLE 76-5 Mechanism of Drug-Induced Hypokalemia</th><th></th><th></th></tr><tr><td>Transcellular Shift</td><td>Enhanced Renal Excretion</td><td>Enhanced Fecal
+Elimination</td></tr><tr><td>β-Receptor agonists
+2
+Epinephrine
+Albuterol
+Terbutaline
+Fomoterol
+Salmeterol
+Isoproterenol
+Ephedrine
+Pseudoephedrine
+Tocolytic agents
+Ritodrine
+Nylidrin
+Theophylline
+Levothyroxine
+Decongestants
+Caffeine
+Insulin overdose
+Verapamil overdose
+Barium overdose</td><td>Diuretics
+Acetazolamide
+Thiazides
+Indapamide
+Metolazone
+Furosemide
+Torsemide
+Bumetanide
+Ethacrynic acid
+High-dose penicillins
+Nafcillin
+Ampicillin
+Penicillin
+Mineralocorticoids
+Miscellaneous
+Aminoglycosides
+Amphotericin B
+Cisplatin</td><td>Laxatives
+Sodium
+polystyrene sulfonate
+Phenolphthalein
+Sorbitol
+Patiromer
+Sodium zirconium
+cyclosilicate</td></tr></table></div><h2>Electrolyte Homeostasis | CHAPTER 76</h2>
+<p>hyperkalemia, phlebitis, and pain at the infusion site. Potassium should be adminis-</p>
+<p>tered in saline because dextrose can stimulate insulin secretion and worsen intracel-</p>
+<p>lular shifting of potassium. Generally, 10–20 mEq (mmol) of potassium is diluted in</p>
+<p>100 mL of 0.9% NaCl and administered through a peripheral vein over 1 hour. ECG</p>
+<p>monitoring should be performed to detect cardiac changes.</p>
+<p>HYPERKALEMIA (SERUM POTASSIUM &gt;5 mEq/L [mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Hyperkalemia develops when potassium intake exceeds excretion or when the trans-</li>
+<p>cellular distribution of potassium is disturbed.</p>
+<li>Primary causes of true hyperkalemia include increased potassium intake, decreased</li>
+<p>potassium excretion, tubular unresponsiveness to aldosterone, and redistribution of</p>
+<p>potassium to the extracellular space.</p>
+<p>Clinical Presentation</p>
+<li>Hyperkalemia is frequently asymptomatic; patients might complain of heart palpita-</li>
+<p>tions or skipped heartbeats.</p>
+<li>The earliest ECG change (serum potassium 5.5–6 mEq/L; mmol/L) is peaked T</li>
+<p>waves. The sequence of changes with further increases in serum potassium con-</p>
+<p>centration is widening of the PR interval, loss of the P wave, widening of the QRS</p>
+<p>complex, and merging of the QRS complex with the T wave resulting in a sine-wave</p>
+<p>pattern.</p>
+<p>Treatment</p>
+<li>Treatment depends on the desired rapidity and degree of lowering and the patient’s</li>
+<h2>clinical condition (Figure 76-4, Table 76-6).</h2>
+<li>Calcium administration rapidly reverses ECG manifestations and arrhythmias, but it</li>
+<p>does not lower serum potassium concentrations. Calcium is short acting and there-</p>
+<p>fore must be repeated if signs or symptoms recur.</p>
+<li>Rapid correction of hyperkalemia requires administration of drugs that shift potas-</li>
+<p>sium intracellularly (eg, insulin and dextrose, sodium bicarbonate, or albuterol).</p>
+<li>Sodium polystyrene sulfonate is a cation-exchange resin suitable for asymptomatic</li>
+<p>patients with mild-to-moderate hyperkalemia. Each gram of resin exchanges 1 mEq</p>
+<p>(1 mmol) of sodium for 1 mEq (1 mmol) of potassium. The sorbitol component</p>
+<p>promotes excretion of exchanged potassium by inducing diarrhea. The oral route is</p>
+<p>better tolerated and more effective than the rectal route.</p>
+<h2>DISORDERS OF MAGNESIUM HOMEOSTASIS</h2>
+<p>HYPOMAGNESEMIA (SERUM MAGNESIUM &lt;1.4 mEq/L</p>
+<p>[&lt;1.7 mg/dL; &lt;0.70 mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Hypomagnesemia is usually associated with disorders of the intestinal tract or kid-</li>
+<p>neys. Drugs (eg, aminoglycosides, amphotericin B, cyclosporine, diuretics, digitalis,</p>
+<p>and cisplatin) or conditions that interfere with intestinal absorption or increase renal</p>
+<p>excretion of magnesium can cause hypomagnesemia.</p>
+<li>Commonly associated with alcoholism.</li>
+<p>Clinical Presentation</p>
+<li>Although typically asymptomatic, the dominant organ systems involved are the neu-</li>
+<p>romuscular and cardiovascular systems. Symptoms include heart palpitations, tetany,</p>
+<p>twitching, and generalized convulsions.</p>
+<li>Ventricular arrhythmias are the most important and potentially life-threatening</li>
+<p>cardiovascular effect.</p>
+<p>901</p>
+<p>CH76.indd 901 20-11-2020 14:24:19</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<p>Abnormal ECG?</p>
+<p>Yes Administer</p>
+<p>(peaked t-waves, widened QRS</p>
+<p>calcium</p>
+<p>complex)</p>
+<p>gluconate</p>
+<p>No</p>
+<p>Continuous ECG</p>
+<p>monitoring</p>
+<p>Yes Give insulin</p>
+<p>Hyperglycemia? Follow blood</p>
+<p>sugar</p>
+<p>No</p>
+<p>Administer insulin</p>
+<p>&amp; glucose</p>
+<p>Consider albuterol</p>
+<p>Consider</p>
+<p>bicarbonate if</p>
+<p>acidotic</p>
+<p>Give exchange resin or</p>
+<p>consider dialysis</p>
+<p>Follow potassium level every</p>
+<p>2 hours until &lt;5.0 mEq/L</p>
+<p>FIGURE 76-4. Treatment approach for hyperkalemia. Serum potassium of 5.0</p>
+<p>mEq/L is equivalent to 5.0 mmol/L.</p>
+<li>ECG changes include widened QRS complexes and peaked T waves in mild defi-</li>
+<p>ciency. Prolonged PR intervals, progressive widening of the QRS complexes, and</p>
+<p>flattening of T waves occur in moderate-to-severe deficiency.</p>
+<li>Many electrolyte disturbances occur with hypomagnesemia, including hypokalemia</li>
+<p>and hypocalcemia.</p>
+<p>Treatment</p>
+<li>The severity of magnesium depletion and the presence of symptoms dictate the route</li>
+<p>of magnesium supplementation. Intramuscular magnesium is painful and should</p>
+<p>be reserved for patients with severe hypomagnesemia and limited venous access.</p>
+<p>IV bolus injection is associated with flushing, sweating, and a sensation of warmth.</p>
+<li>The optimal oral magnesium regimen is unknown; 8–12 g of magnesium sulfate</li>
+<p>in divided doses over 24 hours followed by 4–6 g/day for 3–5 days is one widely</p>
+<p>accepted regimen when the serum magnesium concentration is greater than 1 mEq/L</p>
+<p>(1.2 mg/dL [0.5 mmol/L]). Sustained-release products are preferred due to improved</p>
+<p>patient compliance and less GI side effects (eg, diarrhea).</p>
+<p>902</p>
+<p>CH76.indd 902 20-11-2020 14:24:20</p>
+<div class="table-container"><table><tr><th>Administer insulin
+&amp; glucose</th><th></th></tr><tr><td></td><td></td></tr><tr><td>Consider albuterol</td><td></td></tr></table></div><h2>Electrolyte Homeostasis | CHAPTER 76</h2>
+<p>903</p>
+<p>aimelakrepyH</p>
+<p>fo</p>
+<p>tnemeganaM</p>
+<p>eht</p>
+<p>rof</p>
+<p>sevitanretlA</p>
+<p>citueparehT</p>
+<p>6-67</p>
+<h2>ELBAT</h2>
+<p>msinahceM</p>
+<p>noitaruD/tesnO</p>
+<p>tluseR</p>
+<p>detcepxE</p>
+<p>noitcA</p>
+<p>fo</p>
+<p>ytiucA</p>
+<p>noitcA</p>
+<p>fo</p>
+<p>noitartsinimdA</p>
+<p>fo</p>
+<p>etuoR</p>
+<p>esoD</p>
+<p>noitacideM</p>
+<p>cihpargoidracortcele</p>
+<p>sesreveR</p>
+<p>caidrac</p>
+<p>sesiaR</p>
+<p>etucA</p>
+<p>03–01/setunim</p>
+<p>2–1</p>
+<p>setunim</p>
+<p>01–5</p>
+<p>revo</p>
+<h2>VI</h2>
+<p>g</p>
+<p>1</p>
+<p>muiclaC</p>
+<p>stceffe</p>
+<p>laitnetop</p>
+<p>dlohserht</p>
+<p>setunim</p>
+<p>ssol</p>
+<h2>+K</h2>
+<p>yraniru</p>
+<p>desaercnI</p>
+<p>+aN</p>
+<p>laner</p>
+<p>stibihnI</p>
+<p>etucA</p>
+<p>6–4/setunim</p>
+<p>51–5</p>
+<h2>VI</h2>
+<p>gm</p>
+<p>04–02</p>
+<p>edimesoruF</p>
+<p>noitprosbaer</p>
+<p>sruoh</p>
+<p>noitubirtsider</p>
+<h2>+K</h2>
+<p>ralullecartnI</p>
+<p>ralullecartni</p>
+<p>setalumitS</p>
+<p>etucA</p>
+<p>sruoh</p>
+<p>6–2/setunim</p>
+<p>03</p>
+<h2>CS</h2>
+<p>ro</p>
+<h2>VI</h2>
+<p>stinu</p>
+<p>01–5</p>
+<p>nilusni</p>
+<p>ralugeR</p>
+<p>ekatpu</p>
+<h2>+K</h2>
+<p>noitubirtsider</p>
+<h2>+K</h2>
+<p>ralullecartnI</p>
+<p>nilusni</p>
+<p>setalumitS</p>
+<p>etucA</p>
+<p>sruoh</p>
+<p>6–2/setunim</p>
+<p>03</p>
+<p>sruoh</p>
+<p>2–1</p>
+<p>revo</p>
+<h2>VI</h2>
+<p>)g</p>
+<p>001(</p>
+<p>Lm 0001</p>
+<p>%01</p>
+<p>esortxeD</p>
+<p>esaeler</p>
+<p>noitubirtsider</p>
+<h2>+K</h2>
+<p>ralullecartnI</p>
+<p>nilusni</p>
+<p>setalumitS</p>
+<p>etucA</p>
+<p>sruoh</p>
+<p>6–2/setunim</p>
+<p>03</p>
+<p>setunim</p>
+<p>5 revo</p>
+<h2>VI</h2>
+<p>)g</p>
+<p>52(</p>
+<p>Lm</p>
+<p>05</p>
+<p>%05</p>
+<p>esortxeD</p>
+<p>esaeler</p>
+<p>noitubirtsider</p>
+<h2>+K</h2>
+<p>ralullecartnI</p>
+<p>Hp</p>
+<p>mures</p>
+<p>sesiaR</p>
+<p>etucA</p>
+<p>sruoh</p>
+<p>6–2/setunim</p>
+<p>03</p>
+<p>setunim</p>
+<p>5–2</p>
+<p>revo</p>
+<h2>VI</h2>
+<p>qEm</p>
+<p>001–05</p>
+<p>etanobracib</p>
+<p>muidoS</p>
+<p>)lomm</p>
+<p>001–05(</p>
+<p>noitubirtsider</p>
+<h2>+K</h2>
+<p>ralullecartnI</p>
+<p>ralullecartni</p>
+<p>setalumitS</p>
+<p>etucA</p>
+<p>sruoh</p>
+<p>2–1/setunim</p>
+<p>03</p>
+<p>setunim</p>
+<p>01</p>
+<p>revo</p>
+<p>dezilubeN</p>
+<p>gm</p>
+<p>02–01</p>
+<p>loretublA</p>
+<p>ekatpu</p>
+<h2>+K</h2>
+<p>noitanimile</p>
+<h2>+K</h2>
+<p>desaercnI</p>
+<p>mures</p>
+<p>morf</p>
+<p>lavomeR</p>
+<p>etucA</p>
+<p>elbairav/etaidemmI</p>
+<h2>A/N</h2>
+<p>sruoh</p>
+<p>4</p>
+<p>sisylaidomeH</p>
+<p>noitanimile</p>
+<h2>+K</h2>
+<p>desaercnI</p>
+<p>+aN</p>
+<p>segnahcxe</p>
+<p>niseR</p>
+<p>etucanoN</p>
+<p>elbairav/ruoh</p>
+<p>1</p>
+<p>latcer</p>
+<p>ro</p>
+<p>larO</p>
+<p>g 06–51</p>
+<p>enerytsylop</p>
+<p>muidoS</p>
+<h2>+K</h2>
+<p>rof</p>
+<p>etanoflus</p>
+<p>noitanimile</p>
+<h2>+K</h2>
+<p>desaercnI</p>
+<p>++aC</p>
+<p>segnahcxe</p>
+<p>niseR</p>
+<p>etucanoN</p>
+<p>elbairav/sruoH</p>
+<p>larO</p>
+<p>g</p>
+<p>2.52–4.8</p>
+<p>remoritaP</p>
+<h2>+K</h2>
+<p>rof</p>
+<p>noitanimile</p>
+<h2>+K</h2>
+<p>desaercnI</p>
+<p>+aN</p>
+<p>segnahcxe</p>
+<p>niseR</p>
+<p>etucanoN</p>
+<p>elbairav/ruoh</p>
+<p>1</p>
+<p>larO</p>
+<p>g 51–5</p>
+<p>muinocriz</p>
+<p>muidoS</p>
+<h2>+K</h2>
+<p>rof</p>
+<p>etacilisolcyc</p>
+<p>CH76.indd 903 20-11-2020 14:24:20</p>
+<div class="table-container"><table><tr><th>aimelakrepyH
+fo
+tnemeganaM
+eht
+rof
+sevitanretlA
+citueparehT
+6-67
+ELBAT</th><th>tluseR
+detcepxE</th><th>cihpargoidracortcele
+sesreveR stceffe</th><th>ssol
++K
+yraniru
+desaercnI</th><th>noitubirtsider
++K
+ralullecartnI</th><th>noitubirtsider
++K
+ralullecartnI</th><th>noitubirtsider
++K
+ralullecartnI</th><th>noitubirtsider
++K
+ralullecartnI</th><th>noitubirtsider
++K
+ralullecartnI</th><th>noitanimile
++K
+desaercnI</th><th>noitanimile
++K
+desaercnI</th><th>noitanimile
++K
+desaercnI</th><th>noitanimile
++K
+desaercnI</th></tr><tr><td></td><td>msinahceM
+noitcA
+fo</td><td>laitnetop
+caidrac
+dlohserht
+sesiaR</td><td>+aN
+noitprosbaer
+laner
+stibihnI</td><td>ralullecartni
+ekatpu
+setalumitS
++K</td><td>nilusni
+setalumitS esaeler</td><td>nilusni
+setalumitS esaeler</td><td>Hp
+mures
+sesiaR</td><td>ralullecartni
+ekatpu
+setalumitS
++K</td><td>mures
+morf
+lavomeR</td><td>+aN
+segnahcxe
++K
+niseR rof</td><td>++aC
+segnahcxe
++K
+niseR rof</td><td>+aN
+segnahcxe
++K
+niseR rof</td></tr><tr><td></td><td>ytiucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucA</td><td>etucanoN</td><td>etucanoN</td><td>etucanoN</td></tr><tr><td></td><td>noitaruD/tesnO
+noitcA
+fo</td><td>03–01/setunim
+setunim
+2–1</td><td>6–4/setunim
+sruoh
+51–5</td><td>sruoh
+6–2/setunim
+03</td><td>sruoh
+6–2/setunim
+03</td><td>sruoh
+6–2/setunim
+03</td><td>sruoh
+6–2/setunim
+03</td><td>sruoh
+2–1/setunim
+03</td><td>elbairav/etaidemmI</td><td>elbairav/ruoh
+1</td><td>elbairav/sruoH</td><td>elbairav/ruoh
+1</td></tr><tr><td></td><td>noitartsinimdA
+fo
+etuoR</td><td>setunim
+01–5
+revo
+VI</td><td>VI</td><td>CS
+ro
+VI</td><td>sruoh
+2–1
+revo
+VI</td><td>setunim
+5
+revo
+VI</td><td>setunim
+5–2
+revo
+VI</td><td>setunim
+01
+revo
+dezilubeN</td><td>A/N</td><td>latcer
+ro
+larO</td><td>larO</td><td>larO</td></tr><tr><td></td><td>esoD</td><td>g
+1</td><td>gm
+04–02</td><td>stinu
+01–5</td><td>)g
+001(
+Lm
+0001</td><td>)g
+52(
+Lm
+05</td><td>)lomm
+qEm
+001–05(
+001–05</td><td>gm
+02–01</td><td>sruoh
+4</td><td>g
+06–51</td><td>g
+2.52–4.8</td><td>g
+51–5</td></tr><tr><td></td><td>noitacideM</td><td>muiclaC</td><td>edimesoruF</td><td>nilusni
+ralugeR</td><td>%01
+esortxeD</td><td>%05
+esortxeD</td><td>etanobracib
+muidoS</td><td>loretublA</td><td>sisylaidomeH</td><td>enerytsylop
+etanoflus
+muidoS</td><td>remoritaP</td><td>muinocriz
+etacilisolcyc
+muidoS</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<li>Administer IV magnesium if serum concentrations are less than 1 mEq/L (<1.2 mg/dL</li>
+<p>[&lt;0.5 mmol/L]) or if signs and symptoms are present regardless of serum concentration.</p>
+<p>Infuse 4–6 g of magnesium over 12–24 hours and repeat as needed to maintain serum</p>
+<p>concentrations above 1 mEq/L (1.2 mg/dL [0.5 mmol/L]). Continue until signs and</p>
+<p>symptoms resolve. Reduce magnesium dose by 25%–50% with renal insufficiency.</p>
+<p>HYPERMAGNESEMIA (SERUM MAGNESIUM &gt;1.8 mEq/L</p>
+<p>[&gt;2.3 mg/dL; &gt;0.9 mmol/L])</p>
+<p>Pathophysiology</p>
+<li>Magnesium concentrations steadily increase as the GFR decreases below 30</li>
+<p>mL/min/1.73 m2 and is generally associated with advanced CKD.</p>
+<li>Other causes include magnesium-containing antacids in patients with renal insuf-</li>
+<p>ficiency, enteral or parenteral nutrition in patients with multiorgan system failure,</p>
+<p>magnesium for treatment of eclampsia, lithium therapy, hypothyroidism, and</p>
+<p>Addison disease.</p>
+<p>Clinical Presentation</p>
+<li>Symptoms are rare when the serum magnesium concentration is less than 4 mEq/L</li>
+<p>(&lt;4.9 mg/dL [&lt;2 mmol/L]).</p>
+<li>The sequence of neuromuscular signs as serum magnesium increases from 5 to 12</li>
+<p>mEq/L (6.1–14.7 mg/dL [2.5–6 mmol/L]) is sedation, hypotonia, hyporeflexia, som-</p>
+<p>nolence, coma, muscular paralysis, and, ultimately, respiratory depression.</p>
+<li>The sequence of cardiovascular signs as serum magnesium increases from 3 to 15 mEq/L</li>
+<p>(3.7–18.4 mg/dL [1.5–7.5 mmol/L]) is hypotension, cutaneous vasodilation, QT-interval</p>
+<p>prolongation, bradycardia, primary heart block, nodal rhythms, bundle branch block,</p>
+<p>QRS- and then PR-interval prolongation, complete heart block, and asystole.</p>
+<p>Treatment</p>
+<li>IV calcium (100–200 mg of elemental calcium; eg, calcium gluconate 2 g IV) is</li>
+<p>indicated to antagonize the neuromuscular and cardiovascular effects of magnesium.</p>
+<p>Doses should be repeated as often as hourly in life-threatening situations.</p>
+<li>Forced diuresis with 0.45% NaCl and loop diuretics (eg, furosemide, 40 mg IV) can</li>
+<pre><code>promote magnesium elimination in patients with normal renal function or stage 1, 2,</code></pre>
+<p>or 3 CKD. In dialysis patients, change to a magnesium-free dialysate.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The primary end point for monitoring treatment of fluid and electrolyte disorders is</li>
+<p>the correction of the abnormal serum electrolyte. In general, monitoring is initially</p>
+<p>performed at frequent intervals and, as homeostasis is restored, subsequently per-</p>
+<p>formed at less frequent intervals.</p>
+<li>Monitor all electrolytes as individual electrolyte abnormalities typically coexist with</li>
+<p>another abnormality (eg, hypomagnesemia with hypokalemia and hypocalcemia, or</p>
+<p>hyperphosphatemia with hypocalcemia).</p>
+<li>Monitor patients for resolution of clinical manifestations of electrolyte disturbances</li>
+<p>and for treatment-related complications.</p>
+<p>See Chapter 66, Disorders of Sodium and Water Homeostasis, authored by Katherine</p>
+<p>H. Chessman and Jason Haney; Chapter 67, Disorders of Calcium and Phosphorus</p>
+<p>Homeostasis, authored by Amy Barton Pai and Angela L. Bingham; and Chapter 68,</p>
+<p>Disorders of Potassium and Magnesium Homeostasis, authored by Rachel W. Flurie, for a</p>
+<p>more detailed discussion of this topic.</p>
+<p>904</p>
+<p>CH76.indd 904 20-11-2020 14:24:20</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

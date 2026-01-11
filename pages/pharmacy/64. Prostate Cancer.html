@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>64. Prostate Cancer</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>64. Prostate Cancer</h1>
+        </header>
+        <main>
+            <p>728</p>
+<h2>RETPAHC</h2>
+<p>64</p>
+<p>Prostate Cancer</p>
+<li>Prostate cancer is a malignant neoplasm that arises from the prostate gland. Prostate</li>
+<p>cancer has an indolent course; localized prostate cancer is curable by surgery or</p>
+<p>radiation therapy, but advanced prostate cancer is not yet curable.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>The normal prostate is composed of acinar secretory cells that are altered when</li>
+<p>invaded by cancer. The major pathologic cell type is adenocarcinoma (&gt;95% of</p>
+<p>cases).</p>
+<li>Prostate cancer can be graded. Well-differentiated tumors grow slowly, whereas</li>
+<p>poorly differentiated tumors grow rapidly and have a poor prognosis.</p>
+<li>Metastatic spread can occur by local extension, lymphatic drainage, or hematogenous</li>
+<p>dissemination. Skeletal metastases from hematogenous spread are the most common</p>
+<p>sites of distant spread. The lung, liver, brain, and adrenal glands are the most com-</p>
+<p>mon sites of visceral involvement, but these organs are not usually involved initially.</p>
+<li>Hormonal regulation of androgen synthesis is mediated through a series of bio-</li>
+<p>chemical interactions between the hypothalamus, pituitary, adrenal glands, and testes</p>
+<h2>(Figure 64-1).</h2>
+<li>The testes and the adrenal glands are the major sources of androgens, specifically</li>
+<p>dihydrotestosterone (DHT).</p>
+<li>Luteinizing hormone–releasing hormone (LHRH) from the hypothalamus stimulates</li>
+<p>the release of luteinizing hormone (LH) and follicle-stimulating hormone (FSH)</p>
+<p>from the anterior pituitary gland.</p>
+<li>LH complexes with receptors on the Leydig cell testicular membrane, stimulating the</li>
+<p>production of testosterone and small amounts of estrogen.</p>
+<li>FSH acts on testicular Sertoli cells to promote maturation of LH receptors and pro-</li>
+<p>duce an androgen-binding protein.</p>
+<li>Circulating testosterone and estradiol influence the synthesis of LHRH, LH, and FSH</li>
+<p>by a negative-feedback loop at the hypothalamic and pituitary level.</p>
+<h2>CHEMOPREVENTION</h2>
+<li>The use of 5-α-reductase inhibitors, finasteride and dutasteride, to prevent prostate</li>
+<p>cancer has been debated for more than a decade. Current guidelines do not recom-</p>
+<p>mend the use of these agents for prostate cancer chemoprevention.</p>
+<h2>SCREENING</h2>
+<li>Screening recommendations for prostate cancer have changed, and digital rectal</li>
+<p>examination (DRE) and prostate-specific antigen (PSA) are no longer recommended</p>
+<p>for patients without a discussion with their clinician about risks versus benefits.</p>
+<p>The American Urologic Association does not recommend routine screening in men</p>
+<p>between the ages of 40 and 54 years of average risk. They recommend that men aged</p>
+<p>55–69 years discuss the risks and benefits of prostate cancer screening. Men who elect</p>
+<p>to have screening should do so no more than every 2 years; a recent study suggests</p>
+<p>that screening every 5 years may be adequate.</p>
+<li>PSA is a glycoprotein produced and secreted by prostate epithelial cells. Acute</li>
+<p>urinary retention, acute prostatitis, and BPH influence PSA, thereby limiting the</p>
+<p>usefulness of PSA alone for early detection, but it is a useful marker for monitoring</p>
+<p>response to therapy.</p>
+<p>CH64.indd 728 20-11-2020 14:09:48</p>
+<div class="table-container"><table><tr><th>Prostate Cancer</th><th>64</th><th>RETPAHC</th></tr></table></div><h2>Prostate Cancer | CHAPTER 64</h2>
+<p>Hypothalamus</p>
+<h2>LHRH</h2>
+<h2>LH ACTH</h2>
+<p>Pituitary</p>
+<h2>FSH</h2>
+<h2>LH</h2>
+<p>Testes FSH Adrenal glands</p>
+<h2>PROL</h2>
+<p>Testosterone GH Androgens</p>
+<p>Testosterone Androgens</p>
+<h2>+ R DHT DHT R</h2>
+<h2>DNA RNA</h2>
+<h2>DHT R</h2>
+<p>Prostate cell</p>
+<p>mRNA</p>
+<p>(ACTH, adrenocorticotropic hormone; DHT, dihydrotestosterone; FSH, follicle-stimulating hormone; GH, growth</p>
+<p>hormone; LH, luteinizing hormone; LHRH, luteinizing hormone–releasing hormone; mRNA, messenger RNA;</p>
+<p>PROL, prolactin; R, receptor.)</p>
+<h2>FIGURE 64-1. Hormonal regulation of the prostate gland.</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Localized prostate cancer is usually asymptomatic.</li>
+<li>Locally invasive prostate cancer is associated with ureteral dysfunction or impinge-</li>
+<p>ment, such as alterations in micturition (eg, urinary frequency, hesitancy, and drib-</p>
+<p>bling), and impotence.</p>
+<li>Advanced disease commonly presents with back pain and stiffness due to osseous</li>
+<p>metastases. Untreated spinal cord lesions can lead to cord compression. Lower</p>
+<p>extremity edema can occur as a result of lymphatic obstruction. Anemia and weight</p>
+<p>loss are nonspecific signs of advanced disease.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: In early-stage prostate cancer, the goal is to minimize morbidity</li>
+<p>and mortality. Surgery and radiation therapy are curative but also associated with</p>
+<p>significant morbidity and mortality. In advanced prostate cancer, treatment focuses</p>
+<p>on providing symptom relief and maintaining quality of life.</p>
+<p>729</p>
+<p>CH64.indd 729 20-11-2020 14:09:49</p>
+<h2>SECTION 11 | Oncologic Disorders</h2>
+<h2>GENERAL APPROACH</h2>
+<li>Initial treatment depends on disease stage, Gleason score, presence of symptoms,</li>
+<p>and patient’s life expectancy. The most appropriate therapy for early-stage prostate</p>
+<p>cancer is unknown. See Table 64-1 for management recommendations based on risk</p>
+<p>of recurrence.</p>
+<li>Initial treatment modality for advanced prostate cancer is androgen ablation</li>
+<p>(eg, orchiectomy or LHRH agonists with or without antiandrogens). After disease</p>
+<p>progression, secondary hormonal manipulations, cytotoxic chemotherapy, and sup-</p>
+<p>portive care are used.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<p>Observation</p>
+<li>Observation or watchful waiting involves monitoring the course of disease and initi-</li>
+<p>ating treatment if the cancer progresses. PSA and DRE are performed every 6 months.</p>
+<li>Advantages include avoiding adverse effects of definitive therapies and minimizing</li>
+<p>risk of unnecessary therapies. The major disadvantage is the risk of cancer progres-</p>
+<p>sion requiring more intense therapy.</p>
+<p>Surgery and Radiation Therapy</p>
+<li>Bilateral orchiectomy rapidly reduces circulating androgens to castrate levels.</li>
+<p>Many patients are not surgical candidates due to advanced age, and other patients</p>
+<p>find this procedure psychologically unacceptable. Orchiectomy is the preferred</p>
+<p>initial treatment for patients with impending spinal cord compression or ureteral</p>
+<p>obstruction.</p>
+<li>Radical prostatectomy and radiation therapy are potentially curative therapies but are</li>
+<p>associated with complications that must be weighed against expected benefit. Conse-</p>
+<p>quently, many patients postpone therapy until symptoms develop.</p>
+<li>Complications of radical prostatectomy include blood loss, stricture formation,</li>
+<p>incontinence, lymphocele, fistula formation, anesthetic risk, and impotence. Nerve-</p>
+<p>sparing techniques facilitate return of sexual potency after prostatectomy.</p>
+<li>Acute complications of radiation therapy include cystitis, proctitis, hematuria,</li>
+<p>urinary retention, penoscrotal edema, and impotence.</p>
+<li>Chronic complications of radiation therapy include proctitis, diarrhea, cystitis,</li>
+<p>enteritis, impotence, urethral stricture, and incontinence.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Drug Treatments of First Choice</p>
+<p>Luteinizing Hormone–Releasing Hormone Agonists</p>
+<li>LHRH agonists are a reversible method of androgen ablation and are as effective as</li>
+<p>orchiectomy.</p>
+<li>There are no comparative trials of LHRH agonists, so the choice is usually based on</li>
+<p>cost and patient and physician preference for a dosing schedule (Table 64-2). Leup-</p>
+<p>rolide acetate, leuprolide depot, leuprolide implant, triptorelin depot, triptorelin</p>
+<p>implant, and goserelin acetate implant are currently available. Dosing intervals</p>
+<p>range from once monthly to every 6 months. Leuprolide implant is a mini-osmotic</p>
+<p>pump that delivers daily doses for 1 year. Testosterone castration levels are achieved</p>
+<p>in 28 days with leuprolide.</p>
+<li>The most common adverse effects of LHRH agonists include disease flare-up during</li>
+<p>the first week of therapy (eg, increased bone pain or urinary symptoms), hot flashes,</p>
+<p>erectile impotence, decreased libido, and injection-site reactions. Use of an antian-</p>
+<p>drogen (eg, flutamide, bicalutamide, or nilutamide) prior to initiation of LHRH</p>
+<p>therapy and for 2–4 weeks after is a strategy to minimize initial tumor flare.</p>
+<p>730</p>
+<p>CH64.indd 730 20-11-2020 14:09:49</p>
+<h2>Prostate Cancer | CHAPTER 64</h2>
+<p>TABLE 64-1 Initial Management of Prostate Cancer Based on Expected Survival and</p>
+<p>Recurrence Risk</p>
+<p>Expected</p>
+<p>Survival</p>
+<p>Recurrence Risk (Years) Initial Therapy</p>
+<p>Very low</p>
+<p>T , Gleason score less &lt;20 Observation</p>
+<p>1c</p>
+<p>than 6 and PSA</p>
+<p>less than 10 ng/mL</p>
+<p>(mcg/L)</p>
+<p>T , Gleason score less 20 or more Observation</p>
+<p>1c</p>
+<p>than 6 and PSA or</p>
+<p>less than 10 ng/mL</p>
+<p>(mcg/L) Radical prostatectomy with or without</p>
+<h2>pelvic lymph node dissection</h2>
+<p>or</p>
+<p>Radiation therapy</p>
+<p>Low</p>
+<p>T–T and Gleason and 10 or more Observation</p>
+<p>1 2a</p>
+<p>PSA less than 10 ng/ or</p>
+<p>mL (mcg/L) and &lt;5%</p>
+<p>tumor in the specimen Radical prostatectomy with or without</p>
+<h2>pelvic lymph node dissection or radiation</h2>
+<p>therapy</p>
+<p>&lt;10 Observation</p>
+<p>Intermediate</p>
+<p>T –T or Gleason 7 or 10 or more Observation</p>
+<p>2b 2c</p>
+<p>PSA 10–20 ng/mL or</p>
+<p>(mcg/L)</p>
+<p>Radical prostatectomy with pelvic lymph</p>
+<h2>node dissection</h2>
+<p>or</p>
+<p>Radiation therapy with or without 4–6</p>
+<p>months of neoadjuvant ADT with or</p>
+<p>without brachytherapy</p>
+<p>T –T or Gleason 7 or 10 or more Radical prostatectomy with pelvic lymph</p>
+<p>2b 2c</p>
+<h2>PSA 10–20 ng/mL node dissection</h2>
+<p>(mcg/L) or</p>
+<p>Radiation therapy with or without 4–6</p>
+<p>months of neoadjuvant ADT with or</p>
+<p>without brachytherapy</p>
+<p>High</p>
+<p>T , Gleason 8–10, PSA 5 years or more Radiation therapy and ADTa (2–3 years) with</p>
+<p>3a</p>
+<p>&gt;20 ng/mL (mcg/L) or without brachytherapy</p>
+<p>or</p>
+<p>Radical prostatectomy and pelvic lymph</p>
+<h2>node dissection</h2>
+<p>(Continued )</p>
+<p>731</p>
+<p>CH64.indd 731 20-11-2020 14:09:49</p>
+<div class="table-container"><table><tr><th>TABLE 64-1 Initial Management of Prostate Cancer Based on Expected Survival and
+Recurrence Risk</th><th></th><th></th></tr><tr><td>Recurrence Risk</td><td>Expected
+Survival
+(Years)</td><td>Initial Therapy</td></tr><tr><td>Very low</td><td></td><td></td></tr><tr><td>T , Gleason score less
+1c
+than 6 and PSA
+less than 10 ng/mL
+(mcg/L)</td><td>&lt;20</td><td>Observation</td></tr><tr><td>T , Gleason score less
+1c
+than 6 and PSA
+less than 10 ng/mL
+(mcg/L)</td><td>20 or more</td><td>Observation
+or
+Radical prostatectomy with or without
+pelvic lymph node dissection
+or
+Radiation therapy</td></tr><tr><td>Low</td><td></td><td></td></tr><tr><td>T–T and Gleason and
+1 2a
+PSA less than 10 ng/
+mL (mcg/L) and &lt;5%
+tumor in the specimen</td><td>10 or more</td><td>Observation
+or
+Radical prostatectomy with or without
+pelvic lymph node dissection or radiation
+therapy</td></tr><tr><td></td><td>&lt;10</td><td>Observation</td></tr><tr><td>Intermediate</td><td></td><td></td></tr><tr><td>T –T or Gleason 7 or
+2b 2c
+PSA 10–20 ng/mL
+(mcg/L)</td><td>10 or more</td><td>Observation
+or
+Radical prostatectomy with pelvic lymph
+node dissection
+or
+Radiation therapy with or without 4–6
+months of neoadjuvant ADT with or
+without brachytherapy</td></tr><tr><td>T –T or Gleason 7 or
+2b 2c
+PSA 10–20 ng/mL
+(mcg/L)</td><td>10 or more</td><td>Radical prostatectomy with pelvic lymph
+node dissection
+or
+Radiation therapy with or without 4–6
+months of neoadjuvant ADT with or
+without brachytherapy</td></tr><tr><td>High</td><td></td><td></td></tr><tr><td>T , Gleason 8–10, PSA
+3a
+&gt;20 ng/mL (mcg/L)</td><td>5 years or more</td><td>Radiation therapy and ADTa (2–3 years) with
+or without brachytherapy
+or
+Radical prostatectomy and pelvic lymph
+node dissection
+(Continued )</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 64-1 Initial Management of Prostate Cancer Based on Expected Survival and</p>
+<p>Recurrence Risk (Continued)</p>
+<p>Expected</p>
+<p>Survival</p>
+<p>Recurrence Risk (Years) Initial Therapy</p>
+<p>Very high</p>
+<p>T –T or Gleason pattern Radiation therapy and ADT (2–3 years) with</p>
+<p>3b 4</p>
+<p>5 or &gt;4 cores with or without brachytherapy</p>
+<p>Gleason score 8–10 or</p>
+<p>Radical prostatectomy and pelvic lymph</p>
+<h2>node dissection</h2>
+<p>or</p>
+<h2>ADT</h2>
+<p>Very high</p>
+<p>Any T, N ADT (2–3 years) with or without</p>
+<p>1</p>
+<p>abiraterone and prednisone</p>
+<p>or</p>
+<p>Radiation therapy and ADT (2–3 years) with</p>
+<p>or without abiraterone and prednisone</p>
+<p>(or methylprednisolone)</p>
+<p>Any T, Any N, M Orchiectomy</p>
+<p>1</p>
+<p>or</p>
+<p>LHRH agonistb with or without an</p>
+<p>antiandrogen</p>
+<p>or</p>
+<p>LHRH antagonist</p>
+<p>or</p>
+<p>Observation</p>
+<p>aAndrogen deprivation therapy to achieve serum testosterone levels &lt;50 ng/dL (1.7 nmol/L).</p>
+<p>bLHRH agonist, medical castration, or surgical castration is equivalent.</p>
+<p>ADT, androgen-deprivation therapy; LHRH, luteinizing hormone–releasing hormone; PSA,</p>
+<p>prostate-specific antigen.</p>
+<li>Decreases in bone mineral density complicate androgen deprivation therapy (ADT),</li>
+<p>resulting in increased risk of osteoporosis, osteopenia, and skeletal fractures. Calcium</p>
+<p>and vitamin D supplements and a baseline bone mineral density are recommended.</p>
+<p>Consider administering an antiresorptive agent (eg, denosumab or zoledronic acid)</p>
+<p>to reduce the risk of skeletal-related events.</p>
+<li>Screen patients receiving ADT for cardiovascular disease and diabetes due to</li>
+<p>increased risk of metabolic effects.</p>
+<p>Gonadotropin-Releasing Hormone Antagonists</p>
+<li>The gonadotropin-releasing hormone (GnRH) antagonist degarelix binds reversibly</li>
+<p>to GnRH receptors in the pituitary gland, reducing the production of testosterone to</p>
+<p>castrate levels in 7 days or less. A major advantage of degarelix over LHRH agonists</p>
+<p>is the lack of tumor flare.</p>
+<li>Degarelix is administered as a subcutaneous injection every 28 days. Injection</li>
+<p>site reactions are the most frequently reported adverse effects and include pain,</p>
+<p>732</p>
+<p>CH64.indd 732 20-11-2020 14:09:50</p>
+<div class="table-container"><table><tr><th>TABLE 64-1 Initial Management of Prostate Cancer Based on Expected Survival and
+Recurrence Risk (Continued)</th><th></th><th></th></tr><tr><td>Recurrence Risk</td><td>Expected
+Survival
+(Years)</td><td>Initial Therapy</td></tr><tr><td>Very high</td><td></td><td></td></tr><tr><td>T –T or Gleason pattern
+3b 4
+5 or &gt;4 cores with
+Gleason score 8–10</td><td></td><td>Radiation therapy and ADT (2–3 years) with
+or without brachytherapy
+or
+Radical prostatectomy and pelvic lymph
+node dissection
+or
+ADT</td></tr><tr><td>Very high</td><td></td><td></td></tr><tr><td>Any T, N
+1</td><td></td><td>ADT (2–3 years) with or without
+abiraterone and prednisone
+or
+Radiation therapy and ADT (2–3 years) with
+or without abiraterone and prednisone
+(or methylprednisolone)</td></tr><tr><td>Any T, Any N, M
+1</td><td></td><td>Orchiectomy
+or
+LHRH agonistb with or without an
+antiandrogen
+or
+LHRH antagonist
+or
+Observation</td></tr></table></div><p>733</p>
+<p>Prostate</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>64</p>
+<h2>TABLE 64-2 Hormonal Therapies for Prostate Cancer</h2>
+<p>Drug Hepatic/Renal</p>
+<p>(Brand Name) Usual Dose Toxicities Adjustments Monitoring Parameters Drug Interactions Administration</p>
+<p>First-Generation Antiandrogens</p>
+<p>Flutamide (Eulexin) 750 mg/day Gynecomastia Contraindicated Monitor serum Substrate of CYP1A2 Administered</p>
+<p>Hot flashes in patients with transaminases prior and CYP3A4 orally in three</p>
+<p>hepatic impairment to start of therapy divided doses;</p>
+<p>GI disturbances (diarrhea) No dosage adjustment and monthly for the capsule may</p>
+<p>Loss of libido necessary in chronic first 4 months, then be opened into</p>
+<p>LFT abnormalities renal impairment periodically thereafter applesauce,</p>
+<p>Breast tenderness Mo r n e i d to u r c t fo io r n t , u t m es o to r sterone/ p ot u h d e d r in so g f , t o fo r ods</p>
+<p>Methemoglobinemia estrogen, and alkaline</p>
+<p>phosphatase serum</p>
+<p>levels</p>
+<p>Bicalutamide 50 mg/day (up to Gynecomastia Discontinue if ALT &gt;2 Monitor serum Inhibits CYP3A4 May be taken with</p>
+<p>(Casodex) 150 mg/day— Hot flashes times upper limit of transaminases prior May increase the or without food</p>
+<p>unlabeled use) GI disturbances (diarrhea) n d o ev rm elo al p o s r j a p u a n ti d e i n c t e t a o n d st a m rt o o n f t h th ly e f r o ap r t y h e c o o f n vi c t e a n m tr in at K io n</p>
+<p>Decreased libido first 4 months, then antagonists</p>
+<p>LFT abnormalities periodically thereafter</p>
+<p>Breast tenderness Periodic monitoring of CBC,</p>
+<p>EKG, echocardiograms,</p>
+<p>serum testosterone,</p>
+<p>luteinizing hormone,</p>
+<p>and PSA</p>
+<p>(Continued )</p>
+<p>CH64.indd</p>
+<p>733</p>
+<p>20-11-2020</p>
+<p>14:09:50</p>
+<div class="table-container"><table><tr><th>TABLE 64-2 Hormonal Therapies for Prostate Cancer</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Drug
+(Brand Name)</td><td>Usual Dose</td><td>Toxicities</td><td>Hepatic/Renal
+Adjustments</td><td>Monitoring Parameters</td><td>Drug Interactions</td><td>Administration</td></tr><tr><td>First-Generation Antiandrogens</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Flutamide (Eulexin)</td><td>750 mg/day</td><td>Gynecomastia
+Hot flashes
+GI disturbances (diarrhea)
+Loss of libido
+LFT abnormalities
+Breast tenderness
+Methemoglobinemia</td><td>Contraindicated
+in patients with
+hepatic impairment
+No dosage adjustment
+necessary in chronic
+renal impairment</td><td>Monitor serum
+transaminases prior
+to start of therapy
+and monthly for the
+first 4 months, then
+periodically thereafter
+Monitor for tumor
+reduction, testosterone/
+estrogen, and alkaline
+phosphatase serum
+levels</td><td>Substrate of CYP1A2
+and CYP3A4</td><td>Administered
+orally in three
+divided doses;
+capsule may
+be opened into
+applesauce,
+pudding, or
+other soft foods</td></tr><tr><td>Bicalutamide
+(Casodex)</td><td>50 mg/day (up to
+150 mg/day—
+unlabeled use)</td><td>Gynecomastia
+Hot flashes
+GI disturbances (diarrhea)
+Decreased libido
+LFT abnormalities
+Breast tenderness</td><td>Discontinue if ALT &gt;2
+times upper limit of
+normal or patient
+develops jaundice</td><td>Monitor serum
+transaminases prior
+to start of therapy
+and monthly for the
+first 4 months, then
+periodically thereafter
+Periodic monitoring of CBC,
+EKG, echocardiograms,
+serum testosterone,
+luteinizing hormone,
+and PSA</td><td>Inhibits CYP3A4
+May increase the
+concentration
+of vitamin K
+antagonists</td><td>May be taken with
+or without food
+(Continued )</td></tr></table></div><h2>734 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 64-2 Hormonal Therapies for Prostate Cancer (Continued)</p>
+<p>Drug Hepatic/Renal</p>
+<p>(Brand Name) Usual Dose Toxicities Adjustments Monitoring Parameters Drug Interactions Administration</p>
+<p>Nilutamide 300 mg/day for Gynecomastia Contraindicated Monitor serum Substrate of May be taken with</p>
+<p>(Nilandron) first month then Hot flashes in patients with transaminases prior CYP2C19 and or without food</p>
+<p>150 mg/day hepatic impairment to start of therapy weak inhibitor of</p>
+<p>GI d (c is o t n u s r t b ip a a n t c io es n ) Dis t c im on e t s in u u p e p i e f r A l L im T &gt; it o 2 f a fi n rs d t 4 m m on o t n h t l h y s f , o t r h t e h n e CYP2C19</p>
+<p>LFT abnormalities normal or patient periodically thereafter</p>
+<p>Breast tenderness develops jaundice Chest x-ray at baseline and</p>
+<p>Visual disturbances consider pulmonary</p>
+<pre><code>(impaired dark function testing (at</code></pre>
+<p>adaptation) baseline)</p>
+<p>Alcohol intolerance</p>
+<p>Interstitial pneumonitis</p>
+<p>Second-Generation Antiandrogens</p>
+<p>Apalutamide 240 mg/day GI disturbances No adjustment CBC baseline and Strong inducer of May be taken with</p>
+<p>(Erleada) (diarrhea, nausea) necessary for periodically CYP3A4 and or without food</p>
+<p>Hot flashes renal or hepatic LFTs baseline and CYP2C19, and a</p>
+<p>Fatigue impairment periodically w CY e P a 2 k C in 9 ducer of</p>
+<p>Hypertension</p>
+<p>Rash</p>
+<p>Decreased weight</p>
+<p>Falls and fractures</p>
+<p>Peripheral edema</p>
+<p>Seizures</p>
+<p>CH64.indd</p>
+<p>734</p>
+<p>20-11-2020</p>
+<p>14:09:50</p>
+<div class="table-container"><table><tr><th>Drug Hepatic/Renal
+(Brand Name) Usual Dose Toxicities Adjustments Monitoring Parameters Drug Interactions Administration</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Nilutamide
+(Nilandron)</td><td>300 mg/day for
+first month then
+150 mg/day</td><td>Gynecomastia
+Hot flashes
+GI disturbances
+(constipation)
+LFT abnormalities
+Breast tenderness
+Visual disturbances
+(impaired dark
+adaptation)
+Alcohol intolerance
+Interstitial pneumonitis</td><td>Contraindicated
+in patients with
+hepatic impairment
+Discontinue if ALT &gt;2
+times upper limit of
+normal or patient
+develops jaundice</td><td>Monitor serum
+transaminases prior
+to start of therapy
+and monthly for the
+first 4 months, then
+periodically thereafter
+Chest x-ray at baseline and
+consider pulmonary
+function testing (at
+baseline)</td><td>Substrate of
+CYP2C19 and
+weak inhibitor of
+CYP2C19</td><td>May be taken with
+or without food</td></tr><tr><td>Second-Generation Antiandrogens</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Apalutamide
+(Erleada)</td><td>240 mg/day</td><td>GI disturbances
+(diarrhea, nausea)
+Hot flashes
+Fatigue
+Hypertension
+Rash
+Decreased weight
+Falls and fractures
+Peripheral edema
+Seizures</td><td>No adjustment
+necessary for
+renal or hepatic
+impairment</td><td>CBC baseline and
+periodically
+LFTs baseline and
+periodically</td><td>Strong inducer of
+CYP3A4 and
+CYP2C19, and a
+weak inducer of
+CYP2C9</td><td>May be taken with
+or without food</td></tr></table></div><p>735</p>
+<p>Prostate</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>64</p>
+<p>Enzalutamide 160 mg/day GI disturbances (diarrhea) No adjustment CBC baseline and Strong CYP3A4 May be taken with</p>
+<p>(Xtandi) Musculoskeletal disorders necessary for periodically and moderate or without food</p>
+<p>(back pain, arthralgias, renal or hepatic LFTs baseline and CYP2C9 and</p>
+<p>muscle pain, weakness) impairment periodically CYP2C19 inducer;</p>
+<p>avoid CYP3A4,</p>
+<p>Asthenia CYP2C9, and</p>
+<p>Peripheral edema CYP2C19 sensitive</p>
+<p>substrates.</p>
+<p>CNS (headache, dizziness)</p>
+<p>CYP2C8 substrate,</p>
+<p>Seizures avoid strong</p>
+<p>LFT abnormalities inducers and</p>
+<p>inhibitors of</p>
+<h2>CYP2C8.</h2>
+<p>If vitamin K</p>
+<p>antagonists</p>
+<p>are necessary,</p>
+<p>conduct</p>
+<p>additional INR</p>
+<p>monitoring</p>
+<p>Darolutamide 1200 mg/day Fatigue For moderate hepatic CBC baseline and Breast cancer Take with food</p>
+<p>(Nubeqa) GI disturbances (diarrhea, impairment or periodically resistance protein</p>
+<p>constipation, nausea) severe renal LFTs baseline and (BCRP) transporter impairment (not periodically Inhibitor</p>
+<p>Rash on dialysis): reduce Darolutamide</p>
+<p>Musculoskeletal disorders dose to 600 mg/day inhibits OATP1B1</p>
+<p>(back pain, arthralgias, and OATP1B3</p>
+<p>pain in an extremity)</p>
+<p>Falls, including accidents/</p>
+<p>bone fractures</p>
+<p>Hypertension</p>
+<p>Seizures</p>
+<p>(Continued )</p>
+<p>CH64.indd</p>
+<p>735</p>
+<p>20-11-2020</p>
+<p>14:09:50</p>
+<div class="table-container"><table><tr><th>Darolutamide
+(Nubeqa)</th><th>1200 mg/day</th><th>Fatigue
+GI disturbances (diarrhea,
+constipation, nausea)
+Rash
+Musculoskeletal disorders
+(back pain, arthralgias,
+pain in an extremity)
+Falls, including accidents/
+bone fractures
+Hypertension
+Seizures</th><th>For moderate hepatic
+impairment or
+severe renal
+impairment (not
+on dialysis): reduce
+dose to 600 mg/day</th><th>CBC baseline and
+periodically
+LFTs baseline and
+periodically</th><th>Breast cancer
+resistance protein
+(BCRP) transporter
+Inhibitor
+Darolutamide
+inhibits OATP1B1
+and OATP1B3</th><th>Take with food
+(Continued )</th></tr></table></div><h2>736 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 64-2 Hormonal Therapies for Prostate Cancer (Continued)</p>
+<p>Drug Hepatic/Renal</p>
+<p>(Brand Name) Usual Dose Toxicities Adjustments Monitoring Parameters Drug Interactions Administration</p>
+<p>Androgen Synthesis Inhibitor</p>
+<p>Abiraterone acetate 1000 mg/day + GI disturbances (diarrhea) 250 mg daily for Monitor serum Substrate of CYP3A4. Take on an empty</p>
+<p>(Zytiga) prednisone Edema Child–Pugh Class B; transaminases prior to Use with caution stomach,</p>
+<p>5 mg BID Hypokalemia a P v u o g i h d C u l s a e s s in C Child– s 2 t a w r e t e o k f s t h fo e r r a 3 p m y, o e n v t e h r s y , w in i h th ib C ito YP rs 3 a A n 4 d a h t o l u e r a b st e 1 fo re</p>
+<p>Hypophosphatemia Withhold treatment if then monthly thereafter inducers or 2 hours</p>
+<p>LFT abnormalities LFTs &gt;5 times the Monitor for signs Inhibits CYP1A2, after food</p>
+<p>Hypertriglyceridemia ULN or bilirubin and symptoms of CYP2C19, CYP2C8,</p>
+<p>&gt;3 ULN adrenocorticoid CYP2C9, CYP2D6,</p>
+<p>insufficiency; monthly CYP3A4, and</p>
+<p>for hypertension, P-glycoprotein</p>
+<p>hypokalemia, and fluid</p>
+<p>retention Use sensitive</p>
+<p>substrates with</p>
+<p>caution</p>
+<p>Luteinizing-Hormone Agonists</p>
+<p>Leuprolide (Lupron) 7.5 mg IM Hot flashes No adjustment Serum testosterone May diminish Vary injection site</p>
+<p>every month Decreased libido necessary for ~4 weeks after initiation, the effects of</p>
+<p>22. 3 5 m m o g n IM th s every Gynecomastia r im en p a a l i o rm r h e e n p t atic P A S 1 A C , p b r l i o o o r d to g i l n u i c t o ia s t e io , n an d a a n g t e i n d t ia s betic</p>
+<p>Osteoporosis and periodically</p>
+<p>30 mg IM every thereafter</p>
+<p>4 months Fatigue</p>
+<p>45 mg IM every Weight gain</p>
+<p>6 months</p>
+<p>CH64.indd</p>
+<p>736</p>
+<p>20-11-2020</p>
+<p>14:09:51</p>
+<div class="table-container"><table><tr><th>Drug Hepatic/Renal
+(Brand Name) Usual Dose Toxicities Adjustments Monitoring Parameters Drug Interactions Administration</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Androgen Synthesis Inhibitor</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Abiraterone acetate
+(Zytiga)</td><td>1000 mg/day +
+prednisone
+5 mg BID</td><td>GI disturbances (diarrhea)
+Edema
+Hypokalemia
+Hypophosphatemia
+LFT abnormalities
+Hypertriglyceridemia</td><td>250 mg daily for
+Child–Pugh Class B;
+avoid use in Child–
+Pugh Class C
+Withhold treatment if
+LFTs &gt;5 times the
+ULN or bilirubin
+&gt;3 ULN</td><td>Monitor serum
+transaminases prior to
+start of therapy, every
+2 weeks for 3 months,
+then monthly thereafter
+Monitor for signs
+and symptoms of
+adrenocorticoid
+insufficiency; monthly
+for hypertension,
+hypokalemia, and fluid
+retention</td><td>Substrate of CYP3A4.
+Use with caution
+with CYP3A4
+inhibitors and
+inducers
+Inhibits CYP1A2,
+CYP2C19, CYP2C8,
+CYP2C9, CYP2D6,
+CYP3A4, and
+P-glycoprotein
+Use sensitive
+substrates with
+caution</td><td>Take on an empty
+stomach,
+at least 1
+hour before
+or 2 hours
+after food</td></tr><tr><td>Luteinizing-Hormone Agonists</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Leuprolide (Lupron)</td><td>7.5 mg IM
+every month
+22.5 mg IM every
+3 months
+30 mg IM every
+4 months
+45 mg IM every
+6 months</td><td>Hot flashes
+Decreased libido
+Gynecomastia
+Osteoporosis
+Fatigue
+Weight gain</td><td>No adjustment
+necessary for
+renal or hepatic
+impairment</td><td>Serum testosterone
+~4 weeks after initiation,
+PSA, blood glucose, and
+A1C prior to initiation
+and periodically
+thereafter</td><td>May diminish
+the effects of
+antidiabetic
+agents</td><td>Vary injection site</td></tr></table></div><p>737</p>
+<p>Prostate</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>64</p>
+<p>Goserelin (Zoladex) 3.6 mg SQ implant Hot flashes No adjustment Monitor bone mineral May diminish Vary injection site</p>
+<p>every month Decreased libido necessary for density, serum calcium, the effects of</p>
+<p>10. i 8 m m pl g a n S t Q e very Gynecomastia r im en p a a l i o rm r h e e n p t atic and cholesterol/lipids a a n g t e i n d t ia s betic</p>
+<p>3 months Osteoporosis</p>
+<p>Fatigue</p>
+<p>Weight gain</p>
+<p>Triptorelin (Trelstar) 3.75 mg IM Hot flashes No adjustment Monitor serum testosterone May diminish Vary injection site</p>
+<p>every month Decreased libido necessary for levels and PSA the effects of</p>
+<p>11. 3 2 5 m m on g t I h M s every Gynecomastia r im en p a a l i o rm r h e e n p t atic a a n g t e i n d t ia s betic</p>
+<p>Osteoporosis</p>
+<p>22.5 mg IM every</p>
+<p>6 months Fatigue</p>
+<p>Weight gain</p>
+<p>Gonadotropin-Releasing Hormone Antagonists</p>
+<p>Degarelix 240 mg SQ Hot flashes Use with caution with PSA periodically, serum Use with caution Vary injection site</p>
+<p>(Firmagon) loading dose Decreased libido CL cr &lt;50 mL/min testosterone monthly with agents that</p>
+<p>80 mg SQ every Gynecomastia (0.83 mL/sec) until castration achieved may increase QTc</p>
+<p>28 days Do not use in patients then every other interval</p>
+<p>(following Osteoporosis with severe hepatic month, LFTs at baseline</p>
+<p>28 days after Fatigue impairment in addition to serum</p>
+<p>loading dose) Weight gain electrolytes and bone</p>
+<p>mineral density</p>
+<p>ALT, alanine aminotransferase; BID, twice daily; CBC, complete blood count; CL, creatinine clearance; CNS, central nervous system; CYP, cytochrome P450; EKG, electrocardiogram; GI,</p>
+<p>cr</p>
+<pre><code>gastrointestinal; IM, intramuscular injection; INR, international normalized ratio; LFT, liver function test; PSA, prostate-specific antigen; SQ, subcutaneous injection; ULN, upper limit</code></pre>
+<p>of normal.</p>
+<p>CH64.indd</p>
+<p>737</p>
+<p>20-11-2020</p>
+<p>14:09:51</p>
+<div class="table-container"><table><tr><th>Goserelin (Zoladex)</th><th>3.6 mg SQ implant
+every month
+10.8 mg SQ
+implant every
+3 months</th><th>Hot flashes
+Decreased libido
+Gynecomastia
+Osteoporosis
+Fatigue
+Weight gain</th><th>No adjustment
+necessary for
+renal or hepatic
+impairment</th><th>Monitor bone mineral
+density, serum calcium,
+and cholesterol/lipids</th><th>May diminish
+the effects of
+antidiabetic
+agents</th><th>Vary injection site</th></tr><tr><td>Triptorelin (Trelstar)</td><td>3.75 mg IM
+every month
+11.25 mg IM every
+3 months
+22.5 mg IM every
+6 months</td><td>Hot flashes
+Decreased libido
+Gynecomastia
+Osteoporosis
+Fatigue
+Weight gain</td><td>No adjustment
+necessary for
+renal or hepatic
+impairment</td><td>Monitor serum testosterone
+levels and PSA</td><td>May diminish
+the effects of
+antidiabetic
+agents</td><td>Vary injection site</td></tr><tr><td>Gonadotropin-Releasing Hormone Antagonists</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Degarelix
+(Firmagon)</td><td>240 mg SQ
+loading dose
+80 mg SQ every
+28 days
+(following
+28 days after
+loading dose)</td><td>Hot flashes
+Decreased libido
+Gynecomastia
+Osteoporosis
+Fatigue
+Weight gain</td><td>Use with caution with
+CL &lt;50 mL/min
+cr
+(0.83 mL/sec)
+Do not use in patients
+with severe hepatic
+impairment</td><td>PSA periodically, serum
+testosterone monthly
+until castration achieved
+then every other
+month, LFTs at baseline
+in addition to serum
+electrolytes and bone
+mineral density</td><td>Use with caution
+with agents that
+may increase QTc
+interval</td><td>Vary injection site</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>erythema, swelling, induration, and nodules. Osteoporosis may develop, and calcium</p>
+<p>and vitamin D supplementation should be considered.</p>
+<p>Antiandrogens</p>
+<li>Monotherapy with flutamide, bicalutamide, and nilutamide is no longer recom-</li>
+<p>mended due to decreased efficacy as compared with patients treated with LHRH</p>
+<p>agonist therapy. Antiandrogens are indicated for advanced prostate cancer only when</p>
+<p>combined with an LHRH agonist (flutamide and bicalutamide]) or orchiectomy</p>
+<p>(nilutamide). In combination, antiandrogens can reduce the LHRH agonist–induced</p>
+<p>flare.</p>
+<li>Apalutamide, enzalutamide, and darolutamide are second-generation antiandro-</li>
+<p>gens. Apalalutamide was initially approved in the nonmetastatic castration naive</p>
+<p>patient population but has since been approved for castrate-resistant prostate cancer</p>
+<p>(CRPC). Enzalutamide may be used in the first-line setting to delay the initiation of</p>
+<p>chemotherapy in both nonmetastatic and metastatic disease</p>
+<li>Adverse effects of antiandrogens are summarized in Table 64-2.</li>
+<p>Combined Androgen Blockade</p>
+<li>The role of combined androgen blockade (CAB), also referred to as maximal andro-</li>
+<p>gen deprivation or total androgen blockade, continues to be evaluated. The combina-</p>
+<p>tion of LHRH agonists or orchiectomy with antiandrogens is the CAB approach most</p>
+<p>extensively studied.</p>
+<li>Some clinicians consider CAB to be the initial hormone therapy of choice for newly</li>
+<p>diagnosed patients because the major benefit is seen in patients with minimal disease.</p>
+<p>Some argue that treatment should not be delayed because combined androgen depri-</p>
+<p>vation trials demonstrate a survival advantage for young patients with good perfor-</p>
+<p>mance status and minimal disease who were initially treated with hormone therapy.</p>
+<p>Alternative Drug Treatments</p>
+<li>Selection of salvage therapy depends on what was used as initial therapy. Radio-</li>
+<p>therapy can be used after failed radical prostatectomy. Androgen ablation can be used</p>
+<p>after progression of disease after radiation therapy or radical prostatectomy.</p>
+<li>An antiandrogen or orchiectomy may be indicated if testosterone levels are not</li>
+<p>suppressed (ie, &gt;20 ng/dL [0.7 nmol/L]) after initial LHRH agonist therapy. If tes-</p>
+<p>tosterone levels are suppressed, the disease is considered androgen-independent and</p>
+<p>palliative androgen-independent salvage therapy can be used.</p>
+<li>Androgen withdrawal should be attempted if initial therapy consists of CAB with</li>
+<p>an LHRH agonist and antiandrogen. Mutations of the androgen receptor may allow</p>
+<p>antiandrogens to become agonists. Androgen withdrawal produces responses lasting</p>
+<p>3–14 months in up to 35% of patients.</p>
+<li>Androgen synthesis inhibitors provide symptomatic but brief relief in approximately</li>
+<p>50% of patients. Aminoglutethimide causes adverse effects in 50% of patients, such</p>
+<p>as lethargy, ataxia, dizziness, and self-limiting rash. The adverse effects of ketocon-</p>
+<pre><code>azole include GI intolerance, transient increases in liver and renal function tests, and</code></pre>
+<p>hypoadrenalism. Abiraterone targets CYP17A1, resulting in decreased circulating</p>
+<p>levels of testosterone (Table 64-2). Review medication profiles for potential drug</p>
+<p>interactions because abiraterone is an inhibitor of CYP2D6.</p>
+<p>Chemotherapy</p>
+<li>Docetaxel, 75 mg/m2 every 3 weeks, combined with prednisone, 5 mg twice daily,</li>
+<p>improves survival in CRPC. The most common adverse events include nausea,</p>
+<h2>alopecia, and myelosuppression (Table 64-3).</h2>
+<li>Cabazitaxel 25 mg/m2 every 3 weeks with prednisone 10 mg daily significantly</li>
+<p>improves progression-free and overall survival in patients previously treated with</p>
+<p>docetaxel and prednisone. Neutropenia, febrile neutropenia, neuropathy, and</p>
+<p>diarrhea are the most significant toxicities.</p>
+<p>738</p>
+<p>CH64.indd 738 20-11-2020 14:09:51</p>
+<p>739</p>
+<p>Prostate</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>64</p>
+<p>TABLE 64-3 Chemotherapy and Immunotherapy for Prostate Cancer</p>
+<p>Drug Hepatic/Renal Monitoring</p>
+<p>(Brand Name) Usual Dose Toxicities Adjustments Parameters Drug Interactions Administration</p>
+<p>Antimicrotubule Agents</p>
+<p>Docetaxel 75 mg/m2 IV every Fluid retention, Do not administer if AST/ CBC with differential, Avoid concomitant Administer IV infusion</p>
+<p>(Taxotere) 3 weeks alopecia, ALT &gt;1.5 times the LFTs, bilirubin, use of CYP3A4 over 1 hour.</p>
+<p>mucositis, upper limit of normal alkaline inhibitors Premedication with</p>
+<p>myelosuppression, and alkaline phosphatase phosphatase, renal corticosteroids for 3</p>
+<pre><code>hypersensitivity &gt;2.5 times the upper function days beginning the</code></pre>
+<p>limit of normal Monitor for day before</p>
+<p>hypersensitivity</p>
+<p>reactions</p>
+<p>Cabazitaxel 25 mg/m2 IV every Fluid retention, Discontinue if ALT &gt;2 times CBC weekly during the Avoid concomitant Administer IV infusion</p>
+<p>(Jevtana) 3 weeks constipation, upper limit of normal or first cycle, then prior use of CYP3A4 over 1 hour</p>
+<p>mucositis, patient develops jaundice to each treatment inducers and</p>
+<p>myelosuppression, Monitor for inhibitors</p>
+<p>hypersensitivity hypersensitivity</p>
+<p>Immunotherapy</p>
+<p>Sipuleucel-T Each injection Hypersensitivity, No dosage adjustment No specific laboratory Immunosuppressants Administer IV infusion</p>
+<p>(Provenge) contains chills, fatigue, necessary for renal or monitoring may decrease the over 1 hour</p>
+<pre><code>&gt;50 million fever, headache, hepatic dysfunction recommended therapeutic effects Observe the patient</code></pre>
+<p>autologous myalgias of sipuleucel-T for 30 minutes after</p>
+<p>CD54+ cells completion of the</p>
+<p>(obtained infusion</p>
+<p>through</p>
+<p>leukapheresis) Premedicate with</p>
+<p>activated with acetaminophen and</p>
+<p>PAP-GM-CSF an antihistamine</p>
+<p>30 minutes prior to</p>
+<p>Dose is given ~ administration</p>
+<p>every 2 weeks</p>
+<p>for 3 total doses</p>
+<pre><code>ALT, alanine aminotransferase; AST, aspartate aminotransferase; CBC, complete blood count; CYP, cytochrome P450; LFT, liver function test; PAP-GM-CSF, prostatic acid phosphatase</code></pre>
+<p>granulocyte-macrophage colony-stimulating factor.</p>
+<p>CH64.indd</p>
+<p>739</p>
+<p>20-11-2020</p>
+<p>14:09:51</p>
+<div class="table-container"><table><tr><th>Drug
+(Brand Name)</th><th>Usual Dose</th><th>Toxicities</th><th>Hepatic/Renal
+Adjustments</th><th>Monitoring
+Parameters</th><th>Drug Interactions</th><th>Administration</th></tr><tr><td>Antimicrotubule Agents</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Docetaxel
+(Taxotere)</td><td>75 mg/m2 IV every
+3 weeks</td><td>Fluid retention,
+alopecia,
+mucositis,
+myelosuppression,
+hypersensitivity</td><td>Do not administer if AST/
+ALT &gt;1.5 times the
+upper limit of normal
+and alkaline phosphatase
+&gt;2.5 times the upper
+limit of normal</td><td>CBC with differential,
+LFTs, bilirubin,
+alkaline
+phosphatase, renal
+function
+Monitor for
+hypersensitivity
+reactions</td><td>Avoid concomitant
+use of CYP3A4
+inhibitors</td><td>Administer IV infusion
+over 1 hour.
+Premedication with
+corticosteroids for 3
+days beginning the
+day before</td></tr><tr><td>Cabazitaxel
+(Jevtana)</td><td>25 mg/m2 IV every
+3 weeks</td><td>Fluid retention,
+constipation,
+mucositis,
+myelosuppression,
+hypersensitivity</td><td>Discontinue if ALT &gt;2 times
+upper limit of normal or
+patient develops jaundice</td><td>CBC weekly during the
+first cycle, then prior
+to each treatment
+Monitor for
+hypersensitivity</td><td>Avoid concomitant
+use of CYP3A4
+inducers and
+inhibitors</td><td>Administer IV infusion
+over 1 hour</td></tr><tr><td>Immunotherapy</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Sipuleucel-T
+(Provenge)</td><td>Each injection
+contains
+&gt;50 million
+autologous
+CD54+ cells
+(obtained
+through
+leukapheresis)
+activated with
+PAP-GM-CSF
+Dose is given ~
+every 2 weeks
+for 3 total doses</td><td>Hypersensitivity,
+chills, fatigue,
+fever, headache,
+myalgias</td><td>No dosage adjustment
+necessary for renal or
+hepatic dysfunction</td><td>No specific laboratory
+monitoring
+recommended</td><td>Immunosuppressants
+may decrease the
+therapeutic effects
+of sipuleucel-T</td><td>Administer IV infusion
+over 1 hour
+Observe the patient
+for 30 minutes after
+completion of the
+infusion
+Premedicate with
+acetaminophen and
+an antihistamine
+30 minutes prior to
+administration</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<p>Immunotherapy</p>
+<li>Sipuleucel-T is a novel autologous cellular immunotherapy indicated for asymptom-</li>
+<p>atic or minimally symptomatic metastatic CRPC. Use is controversial because trials</p>
+<p>have not been done to compare it to standard second-line hormonal interventions.</p>
+<p>Nuclear Medicine</p>
+<li>Radium-223, an alpha emitter, can be used in first-, second-, or third-line therapy in</li>
+<p>patients with metastatic CRPC with symptomatic primary bone metastases. It has not</p>
+<p>been approved for use with concomitant chemotherapy.</p>
+<li>Radium-223 improved survival, pain-related outcomes, quality of life and decreased</li>
+<p>opioid needs. The most common adverse effects include nausea, diarrhea, vomiting,</p>
+<p>peripheral edema, and bone marrow suppression.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor primary tumor size, involved lymph nodes, and tumor marker response</li>
+<p>such as PSA with definitive, curative therapy. PSA level is checked every 6 months</p>
+<p>for the first 5 years, then annually.</p>
+<li>With metastatic disease, clinical benefit can be documented by evaluating perfor-</li>
+<p>mance status, weight, quality of life, analgesic requirements, and PSA or DRE at</p>
+<p>3-month intervals.</p>
+<p>See Chapter 148, Prostate Cancer, authored by LeAnn B. Norris, for a more detailed</p>
+<p>discussion of this topic.</p>
+<p>740</p>
+<p>CH64.indd 740 20-11-2020 14:09:52</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

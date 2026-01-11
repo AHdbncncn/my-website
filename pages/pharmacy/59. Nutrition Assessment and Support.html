@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59. Nutrition Assessment and Support</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>59. Nutrition Assessment and Support</h1>
+        </header>
+        <main>
+            <p>00</p>
+<li>Malnutrition is a consequence of nutrient imbalance resulting from inadequate</li>
+<p>intake, absorption, or utilization of protein and energy. Undernutrition can result in</p>
+<pre><code>changes in subcellular, cellular, or organ function that increase the individual’s risks</code></pre>
+<p>of morbidity and mortality.</p>
+<li>For information on overnutrition or obesity, see Chapter 58.</li>
+<li>Nutrition screening provides a systematic way to identify individuals in any care</li>
+<p>environment with preexisting malnutrition or those at risk for malnutrition for</p>
+<p>whom a detailed nutrition assessment is warranted.</p>
+<li>Nutrition assessment is the first step in developing a nutrition care plan. Goals</li>
+<p>of nutrition assessment are to identify the presence of factors associated with an</p>
+<p>increased risk of developing undernutrition and complications, estimate nutrition</p>
+<p>needs, and establish baseline parameters for assessing the outcome of therapy.</p>
+<li>This assessment should include a comprehensive medical, surgical, and dietary his-</li>
+<p>tory and a nutrition-focused physical exam (NFPE) including anthropometrics and</p>
+<p>laboratory measurements.</p>
+<li>The NFPE uses a system-based approach to assess for abnormal nutrition-related</li>
+<p>clinical and physical findings in each region of the body.</p>
+<h2>NUTRITION ASSESSMENT</h2>
+<h2>ANTHROPOMETRIC MEASUREMENTS</h2>
+<li>Anthropometric measurements are physical measurements of the size, weight, and</li>
+<p>proportions of the human body used to compare an individual with normative popu-</p>
+<p>lation standards. Common measurements are weight, stature, head circumference</p>
+<p>(for children younger than 3 years of age) and waist circumference. Measurements</p>
+<p>of limb size (eg, skinfold thickness and mid-arm muscle and wrist circumfer-</p>
+<p>ences), along with bioelectrical impedance analysis (BIA), may be useful in selected</p>
+<p>individuals.</p>
+<li>Interpretation of actual body weight (ABW) should consider ideal weight (IBW)</li>
+<p>for height, usual body weight (UBW), fluid status, and age. Change over time can</p>
+<p>be calculated as the percentage of UBW. Unintentional weight loss, especially rapid</p>
+<p>weight loss (5% of UBW in 1 month or 10% of UBW in 6 months), increases risk of</p>
+<p>nutrition-related poor clinical outcomes in adults.</p>
+<li>The best indicator of adequate nutrition in children is appropriate growth. Weight,</li>
+<p>stature, head circumference (until 3 years), and body mass index (BMI) (after 2 years)</p>
+<p>should be plotted on the appropriate growth curve. Average weight gain for newborns</p>
+<p>is 10–20 g/kg/day (24–35 g/day for term infants and 10–25 g/day for preterm infants</p>
+<p>depending on gestational age).</p>
+<li>BMI is another index of weight-for-height. Interpretation of BMI should include</li>
+<p>consideration of gender, frame size, race/ethnicity, and age. BMI values greater than</p>
+<p>25 kg/m2 are indicative of overweight, and values less than 18.5 kg/m2 are indicative</p>
+<p>of undernutrition. BMI is calculated as follows:</p>
+<p>Body weight (kg)/[height (m)]2 or [Body weight (lb) × 703]/[height (in.)]2</p>
+<li>Measurements of skinfold thickness estimate subcutaneous fat, mid-arm muscle</li>
+<p>circumference estimates skeletal muscle mass, and waist circumference estimates</p>
+<p>abdominal (visceral) fat content.</p>
+<li>BIA is a simple, noninvasive, and relatively inexpensive way to assess LBM, total body</li>
+<p>water (TBW), and water distribution. It is based on differences between fat tissue</p>
+<p>and lean tissue’s resistance to conductivity. Hydration status should be considered in</p>
+<p>interpretation of BIA results.</p>
+<p>674</p>
+<h2>RETPAHC</h2>
+<p>59</p>
+<p>Nutrition Assessment</p>
+<p>and Support</p>
+<p>ch59.indd 674 20-11-2020 12:33:31</p>
+<div class="table-container"><table><tr><th>Nutrition Assessment
+and Support</th><th></th><th>59
+00</th><th>RETPAHC</th></tr></table></div><h2>Nutrition Assessment and Support | CHAPTER 59</h2>
+<h2>BIOCHEMICAL AND IMMUNE FUNCTION STUDIES</h2>
+<li>LBM can be assessed by measuring serum visceral proteins (Table 59-1). They are</li>
+<p>of greatest value for assessing uncomplicated starvation and recovery, and less useful</p>
+<p>for assessing status during acute stress. Interpret visceral proteins relative to overall</p>
+<p>clinical status because they are affected by many factors other than nutrition.</p>
+<li>Nutrition affects immune status both directly and indirectly. Total lymphocyte count</li>
+<pre><code>and delayed cutaneous hypersensitivity reactions are immune function tests useful in</code></pre>
+<p>nutrition assessment, but their lack of specificity limits their usefulness as nutrition</p>
+<p>status markers.</p>
+<li>Delayed cutaneous hypersensitivity is commonly assessed using antigens to which</li>
+<p>the patient was likely previously sensitized. The recall antigens used most frequently</p>
+<p>are mumps and Candida albicans. Anergy is associated with severe malnutrition;</p>
+<p>immune response can be restored with nutrition repletion.</p>
+<h2>SPECIFIC NUTRIENT DEFICIENCIES</h2>
+<li>Biochemical assessment of trace element, vitamin, and essential fatty acid deficiencies</li>
+<pre><code>should be based on the nutrient’s function, but few practical methods are available.</code></pre>
+<p>Therefore, most assays measure serum concentrations of the individual nutrient.</p>
+<li>Clinical syndromes are associated with deficiencies of the following trace elements:</li>
+<p>zinc, copper, manganese, selenium, chromium, iodine, fluoride, molybdenum, and iron.</p>
+<li>Single vitamin deficiencies are uncommon; multiple vitamin deficiencies more</li>
+<p>commonly occur with malnutrition. For information on iron deficiency and other</p>
+<h2>anemias, see Chapter 33.</h2>
+<p>TABLE 59-1 Serum Proteins Used for Assessment of Lean Body Mass</p>
+<p>Factors</p>
+<p>Resulting in</p>
+<p>Half-Life Increased Factors Resulting in</p>
+<p>Serum Protein (Days) Function Values Decreased Values</p>
+<p>Albumin 18–20 Maintains Dehydration, Fluid overload; edema;</p>
+<pre><code>plasma anabolic kidney dysfunction;</code></pre>
+<p>oncotic steroids, nephrotic syndrome;</p>
+<p>pressure; insulin, poor dietary intake;</p>
+<p>transports infection impaired digestion;</p>
+<p>small burns; heart failure;</p>
+<p>molecules cirrhosis; thyroid,</p>
+<p>adrenal, or pituitary</p>
+<p>hormones; trauma;</p>
+<p>sepsis</p>
+<p>Transferrin 8–9 Binds Fe in Fe deficiency, Chronic infection,</p>
+<p>plasma; pregnancy, cirrhosis, burns,</p>
+<p>transports hypoxia, enteropathies,</p>
+<p>Fe to bone chronic nephrotic syndrome,</p>
+<p>blood loss, cortisone,</p>
+<p>estrogens testosterone</p>
+<p>Prealbumin 2–3 Binds T and, to a Impaired Cirrhosis, hepatitis,</p>
+<p>3</p>
+<p>(transthyretin) lesser extent, kidney stress, surgery,</p>
+<pre><code>T; retinol- function inflammation,</code></pre>
+<p>4</p>
+<p>binding hyperthyroidism,</p>
+<p>protein carrier cystic fibrosis, burns,</p>
+<p>zinc deficiency</p>
+<p>Fe, iron; T, triiodothyronine; T, thyroxine.</p>
+<p>3 4</p>
+<p>675</p>
+<p>ch59.indd 675 20-11-2020 12:33:31</p>
+<div class="table-container"><table><tr><th>TABLE 59-1 Serum Proteins Used for Assessment of Lean Body Mass</th><th></th><th></th><th></th><th></th></tr><tr><td>Serum Protein</td><td>Half-Life
+(Days)</td><td>Function</td><td>Factors
+Resulting in
+Increased
+Values</td><td>Factors Resulting in
+Decreased Values</td></tr><tr><td>Albumin</td><td>18–20</td><td>Maintains
+plasma
+oncotic
+pressure;
+transports
+small
+molecules</td><td>Dehydration,
+anabolic
+steroids,
+insulin,
+infection</td><td>Fluid overload; edema;
+kidney dysfunction;
+nephrotic syndrome;
+poor dietary intake;
+impaired digestion;
+burns; heart failure;
+cirrhosis; thyroid,
+adrenal, or pituitary
+hormones; trauma;
+sepsis</td></tr><tr><td>Transferrin</td><td>8–9</td><td>Binds Fe in
+plasma;
+transports
+Fe to bone</td><td>Fe deficiency,
+pregnancy,
+hypoxia,
+chronic
+blood loss,
+estrogens</td><td>Chronic infection,
+cirrhosis, burns,
+enteropathies,
+nephrotic syndrome,
+cortisone,
+testosterone</td></tr><tr><td>Prealbumin
+(transthyretin)</td><td>2–3</td><td>Binds T and, to a
+3
+lesser extent,
+T; retinol-
+4
+binding
+protein carrier</td><td>Impaired
+kidney
+function</td><td>Cirrhosis, hepatitis,
+stress, surgery,
+inflammation,
+hyperthyroidism,
+cystic fibrosis, burns,
+zinc deficiency</td></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<li>Essential fatty acid deficiency is rare but can occur with prolonged lipid-free</li>
+<p>parenteral nutrition (PN), very low-fat enteral formulations or diets, severe fat</p>
+<p>malabsorption, or severe malnutrition. The body can synthesize all fatty acids except</p>
+<p>for linoleic and α-linolenic acid.</p>
+<li>Carnitine can be synthesized from lysine and methionine, but hepatic synthesis is</li>
+<p>decreased in premature infants. Low carnitine levels can occur in premature infants</p>
+<p>receiving PN or carnitine-free diets.</p>
+<h2>ASSESSMENT OF NUTRIENT REQUIREMENTS</h2>
+<li>Assessment of nutrient requirements must be made in the context of patient-specific</li>
+<p>factors (eg, age, gender, size, disease state, clinical condition, nutrition status, and</p>
+<p>physical activity).</p>
+<li>Adults should consume 45%–65% of total calories from carbohydrates, 20%–35%</li>
+<p>from fat, and 10%–35% from protein. Recommendations are similar for children,</p>
+<p>except that infants should consume 40%–50% of total calories from fat.</p>
+<p>Energy Requirements</p>
+<li>Energy requirements of individuals can be estimated using validated predictive equa-</li>
+<p>tions or directly measured, depending on factors including severity of illness and</p>
+<p>resources available. The simplest method is to use population estimates of calories</p>
+<p>required per kilogram of body weight.</p>
+<li>Healthy adults with normal nutrition status and minimal illness severity require an</li>
+<p>estimated 20–25 kcal ABW/kg/day (84–105 kJ ABW/kg/day). Daily energy require-</p>
+<p>ments for children are approximately 150% of basal metabolic rate with additional</p>
+<p>calories to support activity and growth. Consult references for equations used to</p>
+<p>estimate energy expenditure in adults and children.</p>
+<li>Energy requirements for all ages increase with fever, sepsis, major surgery, trauma,</li>
+<p>burns, long-term growth failure, and chronic conditions (eg, bronchopulmonary</p>
+<p>dysplasia, congenital heart disease, and cystic fibrosis).</p>
+<p>Protein, Fluid, and Micronutrient Requirements</p>
+<p>Protein</p>
+<li>Protein requirements are based on age, gender, nutrition status, disease state, and</li>
+<p>clinical condition. The usual recommended daily protein allowances are 0.8 g/</p>
+<p>kg for adults, 1.5 g/kg for adults over 60 years of age, 1.5–2 g/kg for patients with</p>
+<p>metabolic stress (eg, infection, trauma, and surgery), and 2.5–3 g/kg for patients</p>
+<p>with burns.</p>
+<p>Fluid</p>
+<li>Daily adult fluid requirements are approximately 30–40 mL/kg.</li>
+<li>Fluid requirements for children and preterm infants who weigh less than 10 kg are at</li>
+<p>least 100 mL/kg/day. An additional 50 mL/kg should be provided for each kilogram</p>
+<p>of body weight between 11 and 20 kg, and 20 mL/kg for each kilogram greater than</p>
+<p>20 kg.</p>
+<li>Factors that may result in increased fluid requirements include but are not limited</li>
+<p>to gastrointestinal (GI) losses, fever, sweating, and increased metabolism, whereas</p>
+<p>kidney or heart failure and hypoalbuminemia with starvation are examples of factors</p>
+<p>that may result in decreased fluid requirements.</p>
+<li>Assess fluid status by monitoring urine output and specific gravity, serum electro-</li>
+<p>lytes, and weight changes. An hourly urine output of at least 1 mL/kg for children and</p>
+<p>40–50 mL for adults is needed to ensure tissue perfusion.</p>
+<p>Micronutrients</p>
+<li>Requirements for micronutrients (ie, electrolytes, minerals, trace elements, and</li>
+<p>vitamins) vary with age, sex, route of ingestion, and underlying clinical conditions.</p>
+<p>676</p>
+<p>ch59.indd 676 20-11-2020 12:33:31</p>
+<h2>Nutrition Assessment and Support | CHAPTER 59</h2>
+<li>Sodium, potassium, magnesium, and phosphorus requirements are typically</li>
+<p>decreased in patients with kidney failure, whereas calcium requirements are</p>
+<h2>increased (see Chapters 74 and 75).</h2>
+<p>Drug–Nutrient Interactions</p>
+<li>Concomitant drug therapy can alter serum concentrations of vitamins (Table 59-2),</li>
+<p>minerals, and electrolytes.</p>
+<li>Some drug delivery vehicles contain nutrients. For example, the vehicle for propofol</li>
+<p>is 10% lipid emulsion, and most IV therapies include dextrose or sodium.</p>
+<h2>TABLE 59-2 Drug and Nutrient Interactions</h2>
+<p>Drug Effect</p>
+<p>Angiotensin-converting Increased urinary zinc losses</p>
+<p>enzyme inhibitors</p>
+<p>Angiotensin receptor blockers Increased urinary zinc losses</p>
+<p>Antacids Thiamine deficiency</p>
+<p>Antibiotics Vitamin K deficiency</p>
+<p>Aspirin Folic acid deficiency; increased vitamin C excretion</p>
+<p>Cathartics Increased requirements for vitamins D, C, and B</p>
+<p>6</p>
+<p>Cholestyramine Vitamins A, D, E, and K and β-carotene malabsorption</p>
+<p>Colestipol Vitamins A, D, E, and K and β-carotene malabsorption</p>
+<p>Corticosteroids Decreased vitamins A, D, and C</p>
+<p>Diuretics (loop) Thiamine deficiency</p>
+<p>Diuretics (thiazides) Increased urinary zinc losses</p>
+<p>Efavirenz Vitamin D deficiency caused by increased metabolism of</p>
+<p>25(OH)D and 1,25(OH)D</p>
+<p>2</p>
+<p>Histamine antagonists Vitamin B malabsorption (reduced acid results in impaired</p>
+<p>2 12</p>
+<p>release of B from food)</p>
+<p>12</p>
+<p>Isoniazid Vitamin B and niacin deficiency</p>
+<p>6</p>
+<p>Isotretinoin Vitamin A increases toxicity</p>
+<p>Mercaptopurine Niacin deficiency</p>
+<p>Methotrexate Folic acid inhibits effect</p>
+<p>Orlistat Vitamins A, D, E, and K malabsorption caused by fat</p>
+<p>malabsorption</p>
+<p>Pentamidine Folic acid deficiency</p>
+<p>Phenobarbital Increased vitamin D metabolism</p>
+<p>Phenytoin Increased vitamin D metabolism; decreased folic acid</p>
+<p>concentrations</p>
+<p>Primidone Folic acid deficiency</p>
+<p>Protease inhibitors Vitamin D deficiency (impaired renal hydroxylation)</p>
+<p>Proton pump inhibitors Decreased iron and vitamin B absorption (reduced acid</p>
+<p>12</p>
+<p>results in impaired release of B from food)</p>
+<p>12</p>
+<p>Sulfasalazine Folic acid malabsorption</p>
+<p>Trimethoprim Folic acid depletion</p>
+<p>Warfarin Vitamin K inhibits effect; vitamins A, C, and E may increase effect</p>
+<p>Valproic acid Zinc</p>
+<p>Zidovudine Folic acid and B deficiencies increase myelosuppression</p>
+<p>12</p>
+<p>677</p>
+<p>ch59.indd 677 20-11-2020 12:33:32</p>
+<div class="table-container"><table><tr><th>TABLE 59-2 Drug and Nutrient Interactions</th><th></th></tr><tr><td>Drug</td><td>Effect</td></tr><tr><td>Angiotensin-converting
+enzyme inhibitors</td><td>Increased urinary zinc losses</td></tr><tr><td>Angiotensin receptor blockers</td><td>Increased urinary zinc losses</td></tr><tr><td>Antacids</td><td>Thiamine deficiency</td></tr><tr><td>Antibiotics</td><td>Vitamin K deficiency</td></tr><tr><td>Aspirin</td><td>Folic acid deficiency; increased vitamin C excretion</td></tr><tr><td>Cathartics</td><td>Increased requirements for vitamins D, C, and B
+6</td></tr><tr><td>Cholestyramine</td><td>Vitamins A, D, E, and K and β-carotene malabsorption</td></tr><tr><td>Colestipol</td><td>Vitamins A, D, E, and K and β-carotene malabsorption</td></tr><tr><td>Corticosteroids</td><td>Decreased vitamins A, D, and C</td></tr><tr><td>Diuretics (loop)</td><td>Thiamine deficiency</td></tr><tr><td>Diuretics (thiazides)</td><td>Increased urinary zinc losses</td></tr><tr><td>Efavirenz</td><td>Vitamin D deficiency caused by increased metabolism of
+25(OH)D and 1,25(OH)D
+2</td></tr><tr><td>Histamine antagonists
+2</td><td>Vitamin B malabsorption (reduced acid results in impaired
+12
+release of B from food)
+12</td></tr><tr><td>Isoniazid</td><td>Vitamin B and niacin deficiency
+6</td></tr><tr><td>Isotretinoin</td><td>Vitamin A increases toxicity</td></tr><tr><td>Mercaptopurine</td><td>Niacin deficiency</td></tr><tr><td>Methotrexate</td><td>Folic acid inhibits effect</td></tr><tr><td>Orlistat</td><td>Vitamins A, D, E, and K malabsorption caused by fat
+malabsorption</td></tr><tr><td>Pentamidine</td><td>Folic acid deficiency</td></tr><tr><td>Phenobarbital</td><td>Increased vitamin D metabolism</td></tr><tr><td>Phenytoin</td><td>Increased vitamin D metabolism; decreased folic acid
+concentrations</td></tr><tr><td>Primidone</td><td>Folic acid deficiency</td></tr><tr><td>Protease inhibitors</td><td>Vitamin D deficiency (impaired renal hydroxylation)</td></tr><tr><td>Proton pump inhibitors</td><td>Decreased iron and vitamin B absorption (reduced acid
+12
+results in impaired release of B from food)
+12</td></tr><tr><td>Sulfasalazine</td><td>Folic acid malabsorption</td></tr><tr><td>Trimethoprim</td><td>Folic acid depletion</td></tr><tr><td>Warfarin</td><td>Vitamin K inhibits effect; vitamins A, C, and E may increase effect</td></tr><tr><td>Valproic acid</td><td>Zinc</td></tr><tr><td>Zidovudine</td><td>Folic acid and B deficiencies increase myelosuppression
+12</td></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<h2>NUTRITION SUPPORT</h2>
+<li>The primary objective of nutrition support therapy is to promote positive clinical</li>
+<p>outcomes of an illness and improve quality of life.</p>
+<h2>ENTERAL NUTRITION</h2>
+<li>Enteral nutrition (EN) delivers nutrients by tube or mouth into the GI tract; we</li>
+<p>will focus on delivery through a feeding tube. The goal of EN is to provide calories,</p>
+<p>macronutrients, and micronutrients to those who are unable to achieve these require-</p>
+<p>ments from an oral diet.</p>
+<li>EN is indicated for the patient who cannot or will not eat enough to meet nutritional</li>
+<pre><code>requirements and who has a functioning GI tract and a method of enteral access.</code></pre>
+<pre><code>Potential indications include neoplastic disease, organ dysfunction, hypermetabolic</code></pre>
+<p>states, GI disease, and neurologic impairment.</p>
+<li>Distal mechanical intestinal obstruction, bowel ischemia, and necrotizing enteroco-</li>
+<p>litis are contraindications to EN. Contraindications to tube placement include active</p>
+<p>peritonitis and uncorrectable coagulopathy. Conditions that challenge the success of</p>
+<p>EN include severe diarrhea, protracted vomiting, enteric fistulas, severe GI hemor-</p>
+<p>rhage, hemodynamic instability, and intestinal dysmotility.</p>
+<li>EN has replaced PN as the preferred method for the feeding of critically ill patients</li>
+<p>requiring specialized nutrition support. Advantages of EN over PN include main-</p>
+<pre><code>taining GI tract structure and function; fewer metabolic, infectious, and technical</code></pre>
+<p>complications; and lower costs.</p>
+<li>The timing of initiation of EN in the critically ill patients is of clinical significance.</li>
+<p>Initiation within 24–48 hours of admission to an intensive care unit appears to</p>
+<p>attenuate the stress response and reduce infectious complications and mortality. If</p>
+<p>patients are only mildly to moderately stressed and well nourished, EN initiation can</p>
+<p>be delayed until oral intake is inadequate for 5–7 days.</p>
+<p>Access</p>
+<li>EN can be administered through four routes, which have different indications, tube</li>
+<p>placement options, advantages, and disadvantages (Table 59-3). The choice depends</p>
+<p>on the anticipated duration of use and the feeding site (ie, stomach vs. small bowel).</p>
+<li>The stomach is generally the least expensive and least labor-intensive access site;</li>
+<p>however, patients who have impaired gastric emptying are at risk for aspiration and</p>
+<p>pneumonia.</p>
+<li>Long-term access with gastrostomy and jejunostomy tubes should be considered</li>
+<p>when EN is anticipated for more than 4–6 weeks.</p>
+<p>Administration Methods</p>
+<li>EN can be administered by continuous, cyclic, bolus, and intermittent methods. The</li>
+<p>choice depends on the location of the feeding tube tip, patient’s clinical condition,</p>
+<pre><code>intestinal function, and tolerance to tube feeding.</code></pre>
+<li>Continuous EN is preferred for initiating therapy and has the advantage of being well</li>
+<p>tolerated. Disadvantages include cost and inconvenience associated with pump and</p>
+<p>administration sets.</p>
+<li>Cyclic EN has the advantage of allowing breaks from the infusion system, thereby</li>
+<p>increasing mobility, especially if EN is administered nocturnally.</p>
+<li>Bolus EN is most commonly used in patients in the home or long-term care setting</li>
+<p>who have a gastrostomy. Advantages include short administration time (eg, 5–10</p>
+<p>minutes) and minimal equipment (eg, a syringe). Bolus EN has the potential disad-</p>
+<p>vantages of causing cramping, nausea, vomiting, aspiration, and diarrhea.</p>
+<li>Intermittent EN is similar to bolus EN except that the feeding is administered over</li>
+<p>20–60 minutes, which improves tolerability but requires more equipment (eg, reser-</p>
+<p>voir bag and infusion pump). Like bolus EN, intermittent EN mimics normal eating</p>
+<p>patterns.</p>
+<p>678</p>
+<p>ch59.indd 678 20-11-2020 12:33:32</p>
+<p>679</p>
+<p>Nutrition</p>
+<p>Assessment</p>
+<p>and</p>
+<p>Support</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>59</p>
+<p>TABLE 59-3 Options and Considerations in the Selection of Enteral Access</p>
+<p>EN Duration/Patient Tube Placement</p>
+<p>Access Characteristics Options Advantages Disadvantages</p>
+<p>Nasogastric or Short term Manually at bedside Ease of placement Potential tube displacement</p>
+<p>orogastric Intact gag reflex Allows for all methods of administration Potential increased aspiration risk</p>
+<p>Normal gastric emptying Inexpensive</p>
+<p>Multiple commercially available tubes and sizes</p>
+<p>Nasojejunal Short term Manually at bedside Potential reduced aspiration risk Manual transpyloric passage requires</p>
+<p>Impaired gastric motility or Fluoroscopically Allows for early postinjury or postoperative greater skill</p>
+<p>emptying Endoscopically feeding Potential tube displacement or clogging</p>
+<p>High risk of GER or aspiration Multiple commercially available tubes and sizes Bolus or intermittent feeding not</p>
+<p>tolerated</p>
+<p>Gastrostomy Long term Surgically Allows for all methods of administration Attendant risks associated with each</p>
+<p>Normal gastric emptying Endoscopically Low-profile buttons available type of procedure</p>
+<p>Radiologically Large-bore tubes less likely to clog Potential increased aspiration risk</p>
+<p>Laparoscopically Multiple commercially available tubes and sizes Risk of stoma site complications</p>
+<p>Jejunostomy Long term Surgically Allows for early postinjury or postoperative Attendant risks associated with each</p>
+<p>Impaired gastric motility or Endoscopically feeding type of procedure</p>
+<p>gastric emptying Radiologically Potential reduced aspiration risk Bolus or intermittent feeding not</p>
+<p>High risk of GER or aspiration Laparoscopically Multiple commercially available tubes and sizes tolerated</p>
+<p>Low-profile buttons available Risk of stoma site complications</p>
+<p>EN, enteral nutrition; GER, gastroesophageal reflux.</p>
+<p>ch59.indd</p>
+<p>679</p>
+<p>20-11-2020</p>
+<p>12:33:32</p>
+<div class="table-container"><table><tr><th>TABLE 59-3 Options and Considerations in the Selection of Enteral Access</th><th></th><th></th><th></th><th></th></tr><tr><td>Access</td><td>EN Duration/Patient
+Characteristics</td><td>Tube Placement
+Options</td><td>Advantages</td><td>Disadvantages</td></tr><tr><td>Nasogastric or
+orogastric</td><td>Short term
+Intact gag reflex
+Normal gastric emptying</td><td>Manually at bedside</td><td>Ease of placement
+Allows for all methods of administration
+Inexpensive
+Multiple commercially available tubes and sizes</td><td>Potential tube displacement
+Potential increased aspiration risk</td></tr><tr><td>Nasojejunal</td><td>Short term
+Impaired gastric motility or
+emptying
+High risk of GER or aspiration</td><td>Manually at bedside
+Fluoroscopically
+Endoscopically</td><td>Potential reduced aspiration risk
+Allows for early postinjury or postoperative
+feeding
+Multiple commercially available tubes and sizes</td><td>Manual transpyloric passage requires
+greater skill
+Potential tube displacement or clogging
+Bolus or intermittent feeding not
+tolerated</td></tr><tr><td>Gastrostomy</td><td>Long term
+Normal gastric emptying</td><td>Surgically
+Endoscopically
+Radiologically
+Laparoscopically</td><td>Allows for all methods of administration
+Low-profile buttons available
+Large-bore tubes less likely to clog
+Multiple commercially available tubes and sizes</td><td>Attendant risks associated with each
+type of procedure
+Potential increased aspiration risk
+Risk of stoma site complications</td></tr><tr><td>Jejunostomy</td><td>Long term
+Impaired gastric motility or
+gastric emptying
+High risk of GER or aspiration</td><td>Surgically
+Endoscopically
+Radiologically
+Laparoscopically</td><td>Allows for early postinjury or postoperative
+feeding
+Potential reduced aspiration risk
+Multiple commercially available tubes and sizes
+Low-profile buttons available</td><td>Attendant risks associated with each
+type of procedure
+Bolus or intermittent feeding not
+tolerated
+Risk of stoma site complications</td></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<li>Protocols outlining initiation and advancement criteria are a useful strategy to</li>
+<p>optimize achievement of nutrient goals based on GI tolerance. Clinical signs of</p>
+<p>intolerance include abdominal distention or cramping, high gastric residual volumes,</p>
+<p>aspiration, and diarrhea.</p>
+<li>Continuous EN feedings are typically started in adults at 20–50 mL/hr and advanced</li>
+<p>by 10–25 mL/hr every 4–8 hours until the goal is achieved. Intermittent EN feedings</p>
+<p>are started at 120 mL every 4 hours and advanced by 30–60 mL every 8–12 hours.</p>
+<p>Formulations</p>
+<li>Historically, EN formulations were created to provide essential nutrients, includ-</li>
+<p>ing macronutrients (eg, carbohydrates, fats, and proteins) and micronutrients</p>
+<p>(eg, electrolytes, trace elements, vitamins, and water).</p>
+<li>Over time, formulations have been enhanced to improve tolerance and meet specific</li>
+<p>patient needs. For example, immunonutrients or pharmaconutrients are added to</p>
+<p>modify the disease process or improve clinical outcome; however, these health claims</p>
+<p>are not regulated by the FDA.</p>
+<li>The molecular form of the protein source determines the amount of digestion</li>
+<p>required for absorption within the small bowel. The carbohydrate component usually</p>
+<p>provides the major source of calories; polymeric entities are preferred over elemen-</p>
+<p>tal sugars. Vegetable oils rich in polyunsaturated fatty acids are the most common</p>
+<p>sources of fat in EN formulations.</p>
+<li>Soluble and insoluble fiber has been added to several EN formulations. Potential</li>
+<p>benefits of soluble fiber include trophic effects on colonic mucosa, promotion of</p>
+<pre><code>sodium and water absorption, and regulation of bowel function.</code></pre>
+<li>Osmolality is a function of the size and quantity of ionic and molecular particles</li>
+<p>primarily related to protein, carbohydrate, electrolyte, and mineral content. The</p>
+<p>osmolality of EN formulations for adults ranges from 280 to 875 mOsm/kg</p>
+<p>(mmol/kg). Osmolality is commonly thought to affect GI tolerability, but there is a</p>
+<p>lack of supporting evidence.</p>
+<p>Classification of Enteral Feeding Formulations</p>
+<li>EN formulations are classified by their composition and intended patient population</li>
+<p>(Table 59-4). Formularies should focus on clinically significant characteristics of</p>
+<p>available products, avoid duplicate formulations, and include only specialty formula-</p>
+<p>tions with evidence-based indications.</p>
+<p>Complications and Monitoring</p>
+<li>Monitor patients for metabolic, GI, and mechanical complications of EN (Table 59-5).</li>
+<li>Metabolic complications associated with EN are similar to those of PN, but the</li>
+<p>incidence is lower.</p>
+<li>GI complications include nausea, vomiting, abdominal distention, cramping, aspira-</li>
+<p>tion, diarrhea, and constipation. Gastric residual volume is thought to increase the</p>
+<p>risk of vomiting and aspiration.</p>
+<li>Mechanical complications include tube occlusion or malposition and inadvertent</li>
+<p>nasopulmonary intubation. Techniques for clearing occluded tubes include pancre-</p>
+<p>atic enzymes in sodium bicarbonate and using a declogging device. Techniques for</p>
+<p>maintaining patency include flushing with at least 15–30 mL of water before and</p>
+<p>after medication administration and intermittent feedings and at least every 8 hours</p>
+<p>during continuous feeding.</p>
+<p>Drug Delivery Via Feeding Tube</p>
+<li>Administering drugs via tube feeding is a common practice. If the drug is a solid that</li>
+<p>can be crushed (eg, not a sublingual, sustained-release, or enteric-coated formulation)</p>
+<p>or is a capsule, mix with 15–30 mL of water or other appropriate solvent and admin-</p>
+<p>ister. Otherwise, a liquid dosage preparation should be used. Administer multiple</p>
+<p>medications separately, each followed by flushing the tube with 5–15 mL of water.</p>
+<p>680</p>
+<p>ch59.indd 680 20-11-2020 12:33:32</p>
+<h2>Nutrition Assessment and Support | CHAPTER 59</h2>
+<p>TABLE 59-4 Adult Enteral Feeding Formulation Classification System</p>
+<p>Category Features Indications</p>
+<p>Standard Isotonic Designed to meet the needs of the</p>
+<p>polymeric 1–1.2 kcal/mL (4.2–5 kJ/mL) majority of patients</p>
+<pre><code>NPC:N 125:1–150:1 Patients with functional GI tract</code></pre>
+<h2>May contain fiber Not suitable for oral use</h2>
+<p>High protein NPC:N &lt;125:1 Patients with protein requirements</p>
+<p>&gt;1.5 g/kg/day, such as trauma</p>
+<p>May contain fiber</p>
+<p>patients and those with burns,</p>
+<p>pressure sores, or wounds</p>
+<p>Patients receiving propofol</p>
+<p>High caloric 1.5–2 kcal/mL (6.3–8.4 kJ/mL) Patients requiring fluid and/or</p>
+<p>density Lower electrolyte content per electrolyte restriction, such as</p>
+<p>calorie kidney insufficiency</p>
+<p>Hypertonic</p>
+<p>Elemental High proportion of free amino Patients who require low fat</p>
+<p>acids Use has generally been replaced by</p>
+<p>Low in fat peptide-based formulations</p>
+<p>Peptide-based Contains dipeptides and Indications/benefits not clearly</p>
+<p>tripeptides established</p>
+<p>Contains MCTs Trial may be warranted in patients</p>
+<p>who do not tolerate intact protein</p>
+<p>due to malabsorption</p>
+<p>Disease specific</p>
+<p>Kidney Caloric dense Alternative to high-caloric density</p>
+<p>Protein content varies formulations, but generally more</p>
+<p>expensive</p>
+<p>Low-electrolyte content</p>
+<p>Liver Increased branched-chain and Patients with hepatic encephalopathy</p>
+<p>decreased aromatic amino acids</p>
+<p>Lung High fat, low carbohydrate Patients with ARDS and severe ALI</p>
+<p>Anti-inflammatory lipid profile</p>
+<p>and antioxidants</p>
+<p>Diabetes High fat, low carbohydrate Alternative to standard, fiber-</p>
+<p>mellitus containing formulation in patients</p>
+<p>with uncontrolled hyperglycemia</p>
+<p>Immune- Supplemented with glutamine, Patients undergoing major elective</p>
+<p>modulating arginine, nucleotides, and/or GI surgery, trauma, burns, head</p>
+<p>omega-3 fatty acids and neck cancer, and critically ill</p>
+<p>patients on mechanical ventilation</p>
+<p>Use with caution in patients with sepsis</p>
+<p>Select nutrients may be beneficial or</p>
+<p>harmful in subgroups of critically</p>
+<p>ill patients</p>
+<p>Oral Sweetened for taste Patients who require supplementation</p>
+<p>supplement Hypertonic to an oral diet</p>
+<p>ALI, acute lung injury; ARDS, acute respiratory distress syndrome; MCT, medium-chain triglyceride;</p>
+<p>NPC:N, nonprotein calorie-to-nitrogen ratio.</p>
+<p>681</p>
+<p>ch59.indd 681 20-11-2020 12:33:32</p>
+<div class="table-container"><table><tr><th>TABLE 59-4 Adult Enteral Feeding Formulation Classification System</th><th></th><th></th></tr><tr><td>Category</td><td>Features</td><td>Indications</td></tr><tr><td>Standard
+polymeric</td><td>Isotonic
+1–1.2 kcal/mL (4.2–5 kJ/mL)
+NPC:N 125:1–150:1
+May contain fiber</td><td>Designed to meet the needs of the
+majority of patients
+Patients with functional GI tract
+Not suitable for oral use</td></tr><tr><td>High protein</td><td>NPC:N &lt;125:1
+May contain fiber</td><td>Patients with protein requirements
+&gt;1.5 g/kg/day, such as trauma
+patients and those with burns,
+pressure sores, or wounds
+Patients receiving propofol</td></tr><tr><td>High caloric
+density</td><td>1.5–2 kcal/mL (6.3–8.4 kJ/mL)
+Lower electrolyte content per
+calorie
+Hypertonic</td><td>Patients requiring fluid and/or
+electrolyte restriction, such as
+kidney insufficiency</td></tr><tr><td>Elemental</td><td>High proportion of free amino
+acids
+Low in fat</td><td>Patients who require low fat
+Use has generally been replaced by
+peptide-based formulations</td></tr><tr><td>Peptide-based</td><td>Contains dipeptides and
+tripeptides
+Contains MCTs</td><td>Indications/benefits not clearly
+established
+Trial may be warranted in patients
+who do not tolerate intact protein
+due to malabsorption</td></tr><tr><td>Disease specific</td><td></td><td></td></tr><tr><td>Kidney</td><td>Caloric dense
+Protein content varies
+Low-electrolyte content</td><td>Alternative to high-caloric density
+formulations, but generally more
+expensive</td></tr><tr><td>Liver</td><td>Increased branched-chain and
+decreased aromatic amino acids</td><td>Patients with hepatic encephalopathy</td></tr><tr><td>Lung</td><td>High fat, low carbohydrate
+Anti-inflammatory lipid profile
+and antioxidants</td><td>Patients with ARDS and severe ALI</td></tr><tr><td>Diabetes
+mellitus</td><td>High fat, low carbohydrate</td><td>Alternative to standard, fiber-
+containing formulation in patients
+with uncontrolled hyperglycemia</td></tr><tr><td>Immune-
+modulating</td><td>Supplemented with glutamine,
+arginine, nucleotides, and/or
+omega-3 fatty acids</td><td>Patients undergoing major elective
+GI surgery, trauma, burns, head
+and neck cancer, and critically ill
+patients on mechanical ventilation
+Use with caution in patients with sepsis
+Select nutrients may be beneficial or
+harmful in subgroups of critically
+ill patients</td></tr><tr><td>Oral
+supplement</td><td>Sweetened for taste
+Hypertonic</td><td>Patients who require supplementation
+to an oral diet</td></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<p>TABLE 59-5 Suggested Monitoring for Adult Patients on Enteral Nutrition</p>
+<p>During Initiation</p>
+<h2>Parameter of EN Therapy During Stable EN Therapy</h2>
+<p>Vital signs Every 4–6 hours As needed with suspected</p>
+<p>change (ie, fever)</p>
+<p>Clinical assessment</p>
+<p>Weight Daily Weekly</p>
+<p>Total intake/Output Daily As needed with suspected</p>
+<p>change in intake/output</p>
+<p>Tube-feeding intake Daily Daily</p>
+<p>Enterostomy tube site Daily Daily</p>
+<p>assessment</p>
+<p>GI tolerance</p>
+<p>Stool frequency/Volume Daily Daily</p>
+<p>Abdomen assessment Daily Daily</p>
+<p>Nausea or vomiting Daily Daily</p>
+<p>Gastric residual volumes Every 4–8 hours As needed when delayed</p>
+<p>(varies) gastric emptying suspected</p>
+<p>Tube placement Prior to starting, then Ongoing</p>
+<p>ongoing</p>
+<p>Laboratory</p>
+<p>Electrolytes, blood urea Daily until stable, then Every 1–3 months</p>
+<p>nitrogen/serum creatinine, 2–3 times/week</p>
+<p>glucose</p>
+<p>Calcium, magnesium, Daily until stable, then Every 1–3 months</p>
+<p>phosphorus 2–3 times/week</p>
+<pre><code>Liver function tests Weekly Every 1–3 months</code></pre>
+<p>Trace elements, vitamins If deficiency/toxicity If deficiency/toxicity suspected</p>
+<p>suspected</p>
+<p>EN, enteral nutrition.</p>
+<li>Mixing of liquid medications with EN formulations can cause physical</li>
+<p>incompatibilities that inhibit drug absorption and clog small-bore feeding tubes.</p>
+<p>Incompatibility is more common with formulations containing intact (vs. hydrolyzed)</p>
+<p>protein and medications formulated as acidic syrups. Mixing of liquid medications</p>
+<p>and EN formulations should be avoided whenever possible.</p>
+<li>The most significant drug–nutrient interactions result in reduced bioavailability and</li>
+<p>suboptimal pharmacologic effect (Table 59-6). Continuous feeding requires interrup-</p>
+<p>tion for drug administration, and medications should be spaced between bolus feedings.</p>
+<h2>PARENTERAL NUTRITION</h2>
+<li>PN provides macro- and micronutrients by central or peripheral venous access to</li>
+<p>meet specific nutritional requirements of the patient.</p>
+<li>PN should be considered when a patient cannot meet nutritional requirements</li>
+<p>enterally for an extended time period.</p>
+<p>Components of Parenteral Nutrition</p>
+<li>Macronutrients (ie, water, protein, dextrose, and lipid) are used for energy (dextrose</li>
+<p>and lipid) and as structural substrates (protein and lipid).</p>
+<li>Protein is provided as crystalline amino acids (CAAs). When oxidized, 1 g of protein</li>
+<p>yields 4 calories (~17 J). Including the caloric contribution from protein in calorie</p>
+<p>calculations is controversial; therefore, PN calories can be calculated as either total</p>
+<p>or nonprotein calories.</p>
+<li>Standard CAA products contain a balanced profile of essential, semi-essential,</li>
+<p>and nonessential l-amino acids and are designed for patients with “normal” organ</p>
+<p>682</p>
+<p>ch59.indd 682 20-11-2020 12:33:32</p>
+<div class="table-container"><table><tr><th>TABLE 59-5 Suggested Monitoring for Adult Patients on Enteral Nutrition</th><th></th><th></th></tr><tr><td>Parameter</td><td>During Initiation
+of EN Therapy</td><td>During Stable EN Therapy</td></tr><tr><td>Vital signs</td><td>Every 4–6 hours</td><td>As needed with suspected
+change (ie, fever)</td></tr><tr><td>Clinical assessment</td><td></td><td></td></tr><tr><td>Weight</td><td>Daily</td><td>Weekly</td></tr><tr><td>Total intake/Output</td><td>Daily</td><td>As needed with suspected
+change in intake/output</td></tr><tr><td>Tube-feeding intake</td><td>Daily</td><td>Daily</td></tr><tr><td>Enterostomy tube site
+assessment</td><td>Daily</td><td>Daily</td></tr><tr><td>GI tolerance</td><td></td><td></td></tr><tr><td>Stool frequency/Volume</td><td>Daily</td><td>Daily</td></tr><tr><td>Abdomen assessment</td><td>Daily</td><td>Daily</td></tr><tr><td>Nausea or vomiting</td><td>Daily</td><td>Daily</td></tr><tr><td>Gastric residual volumes</td><td>Every 4–8 hours
+(varies)</td><td>As needed when delayed
+gastric emptying suspected</td></tr><tr><td>Tube placement</td><td>Prior to starting, then
+ongoing</td><td>Ongoing</td></tr><tr><td>Laboratory</td><td></td><td></td></tr><tr><td>Electrolytes, blood urea
+nitrogen/serum creatinine,
+glucose</td><td>Daily until stable, then
+2–3 times/week</td><td>Every 1–3 months</td></tr><tr><td>Calcium, magnesium,
+phosphorus</td><td>Daily until stable, then
+2–3 times/week</td><td>Every 1–3 months</td></tr><tr><td>Liver function tests</td><td>Weekly</td><td>Every 1–3 months</td></tr><tr><td>Trace elements, vitamins</td><td>If deficiency/toxicity
+suspected</td><td>If deficiency/toxicity suspected</td></tr></table></div><h2>Nutrition Assessment and Support | CHAPTER 59</h2>
+<p>TABLE 59-6 Select Medications with Special Considerations for Enteral Feeding Tube</p>
+<p>Administration</p>
+<p>Drug Interaction Comments</p>
+<p>Phenytoin Reduced bioavailability in To minimize interaction, holding tube</p>
+<p>the presence of tube feedings 1–2 hours before and after</p>
+<p>feedings phenytoin has been suggested</p>
+<p>Possible phenytoin binding Adjust tube-feeding rate to account</p>
+<p>to calcium caseinates or for time held for phenytoin</p>
+<p>protein hydrolysates in administration</p>
+<p>enteral feeding Monitor phenytoin serum concentration</p>
+<p>and clinical response closely</p>
+<p>Consider switching to IV phenytoin or</p>
+<p>an alternative-treatment option if</p>
+<p>unable to reach therapeutic serum</p>
+<p>concentration</p>
+<p>Fluoroquinolones Potential for reduced Consider holding tube feeding 1 hour</p>
+<p>Tetracyclines bioavailability because before and after administration</p>
+<p>of complexation of Avoid jejunal administration of</p>
+<p>drug with divalent and ciprofloxacin</p>
+<p>trivalent cations found in</p>
+<p>enteral feeding Monitor clinical response</p>
+<p>Warfarin Decreased absorption Adjust warfarin dose based on INR</p>
+<p>of warfarin because Anticipate need to increase warfarin</p>
+<p>of enteral feeding; dose when enteral feedings are</p>
+<p>therapeutic effect started and decrease dose when</p>
+<p>antagonized by vitamin K enteral feedings are stopped</p>
+<p>in enteral formulations</p>
+<p>Consider holding tube feeding 1 hour</p>
+<p>before and after administration</p>
+<p>Omeprazole Administration via feeding Granules become sticky when</p>
+<p>Lansoprazole tube complicated by moistened with water and may</p>
+<p>acid-labile medication occlude small-bore tubes</p>
+<p>within delayed-release, Granules should be mixed with acidic</p>
+<p>base-labile granules liquid when given via a gastric</p>
+<p>feeding tube</p>
+<p>An oral liquid suspension can be</p>
+<p>extemporaneously prepared for</p>
+<p>administration via a feeding tube</p>
+<p>INR, International normalized ratio.</p>
+<pre><code>function and nutritional requirements. Standard CAA products differ in protein</code></pre>
+<p>concentration, total nitrogen, and electrolyte content but have similar effects on</p>
+<p>protein markers.</p>
+<li>The primary energy source in PN solutions is carbohydrate, usually as dextrose</li>
+<p>monohydrate, which is available in concentrations ranging from 5% to 70%. When</p>
+<p>oxidized, 1 g of hydrated dextrose provides 3.4 kcal (14.2 kJ).</p>
+<li>Commercially available intravenous lipid emulsions (IVLE) provide calories and</li>
+<p>essential fatty acids. These products differ in triglyceride source, fatty acid content,</p>
+<p>and essential fatty acid concentration.</p>
+<li>When oxidized, 1 g of fat yields 9 kcal (38 kJ). Because of the caloric contribution from</li>
+<p>egg phospholipid and glycerol, caloric content of IVLE is 1.1 kcal/mL (4.6 kJ/mL)</p>
+<p>for the 10%, 2 kcal/mL (8.4 kJ/mL) for the 20%, and 3 kcal/mL (12.6 kJ/mL) for the</p>
+<p>30% emulsions.</p>
+<li>Essential fatty acid deficiency can be prevented by giving IVLE, 0.5–1 g/kg/day for</li>
+<p>neonates and infants and 100 g/wk for adults.</p>
+<p>683</p>
+<p>ch59.indd 683 20-11-2020 12:33:32</p>
+<div class="table-container"><table><tr><th>TABLE 59-6 Select Medications with Special Considerations for Enteral Feeding Tube
+Administration</th><th></th><th></th></tr><tr><td>Drug</td><td>Interaction</td><td>Comments</td></tr><tr><td>Phenytoin</td><td>Reduced bioavailability in
+the presence of tube
+feedings
+Possible phenytoin binding
+to calcium caseinates or
+protein hydrolysates in
+enteral feeding</td><td>To minimize interaction, holding tube
+feedings 1–2 hours before and after
+phenytoin has been suggested
+Adjust tube-feeding rate to account
+for time held for phenytoin
+administration
+Monitor phenytoin serum concentration
+and clinical response closely
+Consider switching to IV phenytoin or
+an alternative-treatment option if
+unable to reach therapeutic serum
+concentration</td></tr><tr><td>Fluoroquinolones
+Tetracyclines</td><td>Potential for reduced
+bioavailability because
+of complexation of
+drug with divalent and
+trivalent cations found in
+enteral feeding</td><td>Consider holding tube feeding 1 hour
+before and after administration
+Avoid jejunal administration of
+ciprofloxacin
+Monitor clinical response</td></tr><tr><td>Warfarin</td><td>Decreased absorption
+of warfarin because
+of enteral feeding;
+therapeutic effect
+antagonized by vitamin K
+in enteral formulations</td><td>Adjust warfarin dose based on INR
+Anticipate need to increase warfarin
+dose when enteral feedings are
+started and decrease dose when
+enteral feedings are stopped
+Consider holding tube feeding 1 hour
+before and after administration</td></tr><tr><td>Omeprazole
+Lansoprazole</td><td>Administration via feeding
+tube complicated by
+acid-labile medication
+within delayed-release,
+base-labile granules</td><td>Granules become sticky when
+moistened with water and may
+occlude small-bore tubes
+Granules should be mixed with acidic
+liquid when given via a gastric
+feeding tube
+An oral liquid suspension can be
+extemporaneously prepared for
+administration via a feeding tube</td></tr></table></div><h2>SECTION 10 | Nutrition Support</h2>
+<li>IVLE 10% and 20% products can be administered by a central or peripheral vein,</li>
+<p>added directly to PN solution as a total nutrient admixture (TNA) or three-in-one</p>
+<p>system (lipids, protein, glucose, and additives), or co-infused with a CAA and dex-</p>
+<p>trose solution, commonly referred to as a two-in-one solution. IVLE 30% is approved</p>
+<p>only for TNA preparation.</p>
+<li>Micronutrients (ie, vitamins, trace elements, and electrolytes) support metabolic</li>
+<p>activities for cellular homeostasis such as enzyme reactions, fluid balance, and regula-</p>
+<p>tion of electrophysiologic processes.</p>
+<li>Multivitamin products have been formulated to comply with guidelines for adults, chil-</li>
+<p>dren, and infants. These products contain 13 essential vitamins, including v itamin K.</p>
+<li>Requirements for trace elements depend on the patient’s age and clinical</li>
+<p>condition.</p>
+<li>Chromium, copper, manganese, selenium, and zinc are considered essential and</li>
+<p>available as single- or multiple-entity products for addition to PN solutions.</p>
+<li>Sodium, potassium, calcium, magnesium, phosphorus, chloride, and acetate are nec-</li>
+<pre><code>essary components of PN for maintenance of numerous cellular functions.</code></pre>
+<li>Electrolyte requirements depend on the patient’s age, disease state, organ function,</li>
+<p>previous and current drug therapy, nutrition status, and extrarenal losses.</p>
+<p>Specifics of Parenteral Nutrition</p>
+<li>The patient’s clinical condition determines whether PN is administered through a</li>
+<p>peripheral or central vein.</p>
+<li>Peripheral parenteral nutrition (PPN) candidates do not have large nutritional</li>
+<pre><code>requirements, are not fluid restricted, and are expected to regain GI tract function</code></pre>
+<p>within 10–14 days. Solutions for PPN have lower final concentrations of amino acid</p>
+<p>(3%–5%), dextrose (5%–10%), and micronutrients as compared with central paren-</p>
+<p>teral nutrition (CPN).</p>
+<li>Primary advantages of PPN include a lower risk of infectious and technical</li>
+<p>complications.</p>
+<li>CPN is useful in patients who require PN for more than 7–14 days and who have large</li>
+<p>nutrient requirements, poor peripheral venous access, or fluctuating fluid requirements.</p>
+<li>CPN solutions are highly concentrated hypertonic solutions that must be administered</li>
+<p>through a large central vein. The choice of venous access site depends on factors includ-</p>
+<p>ing patient age and anatomy. Peripherally inserted central catheters (PICCs) are often</p>
+<p>used for both short- and long-term central venous access in acute or home care settings.</p>
+<li>Disadvantages include risks associated with catheter insertion, use, and care. Central</li>
+<p>venous access has a greater potential for infection.</p>
+<li>PN regimens for adults can be ordered on traditional paper order forms or by using</li>
+<p>standardized electronic order forms. Standardized order forms are popular because</p>
+<p>they help educate practitioners and foster cost-efficient nutrition support by mini-</p>
+<p>mizing errors in ordering, compounding, and administering.</p>
+<li>Pediatric PN regimens typically require an individualized approach because practice</li>
+<p>guidelines often recommend nutrient intake based on weight. Labeling should reflect</p>
+<p>“amount per kilogram per day.”</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Assessing the outcome of EN includes monitoring objective measures of body com-</li>
+<p>position, protein and energy balance, and subjective outcome for physiologic muscle</p>
+<pre><code>function and wound healing.</code></pre>
+<li>Measures of disease-related morbidity include length of hospital stay, infectious</li>
+<p>complications, and patient’s sense of well-being. Ultimately, the successful use of EN</p>
+<p>avoids the need for PN.</p>
+<li>Outcomes with PN are determined through routine assessment of the clinical condi-</li>
+<p>tion of the patient, with a focus on nutritional and metabolic effects of the PN regimen.</p>
+<li>Biochemical and clinical parameters should be monitored routinely in patients</li>
+<h2>receiving PN (Figure 59-1).</h2>
+<p>684</p>
+<p>ch59.indd 684 20-11-2020 12:33:32</p>
+<h2>Nutrition Assessment and Support | CHAPTER 59</h2>
+<p>Baseline</p>
+<p>Daily 2–3 times weekly Weekly</p>
+<p>(before initiation of PN)</p>
+<p>Weight Weight Serum electrolytes Nitrogen balance</p>
+<p>Vital signs Vital signs Sodium Prealbumin or</p>
+<p>Temperature Current nutritional Potassium transferrin</p>
+<p>Pulse intake Chloride Serum triglyceride</p>
+<p>Respirations Bicarbonate</p>
+<pre><code>Current nutritional Fluid balance Magnesium Liver function tests</code></pre>
+<p>intake Input Phosphorous Alkaline phosphatase</p>
+<p>CBC Output Calcium AST</p>
+<p>Serum electrolytes ALT</p>
+<p>Sodium Capillary blood Serum glucose Total bilirubin</p>
+<p>Potassium glucose PT or INR</p>
+<pre><code>Chloride As necessary; Kidney function tests (as necessary)</code></pre>
+<h2>Bicarbonate unstable patients BUN</h2>
+<p>Magnesium may require SCr</p>
+<p>Phosphorous measurements</p>
+<p>Calcium every 1–2 hours</p>
+<p>Serum glucose</p>
+<p>Serum albumin</p>
+<p>Markers for organ</p>
+<pre><code>function</code></pre>
+<pre><code>Serum electrolytes • Special pediatric • Liver function tests</code></pre>
+<pre><code>Liver function tests</code></pre>
+<p>Sodium consideration: may be drawn less</p>
+<p>Alkaline</p>
+<h2>Potassium Serum frequently in stable</h2>
+<p>phosphatase</p>
+<p>Chloride triglyceride—until patients (every 2–4</p>
+<h2>AST</h2>
+<h2>Bicarbonate stable on maximum weeks)</h2>
+<h2>ALT</h2>
+<p>Calcium dose of IV fat</p>
+<p>Total bilirubin</p>
+<p>emulsion</p>
+<p>PT or INR</p>
+<p>Serum glucose</p>
+<pre><code>Kidney function</code></pre>
+<p>tests</p>
+<h2>BUN</h2>
+<p>SCr • Daily for first 3–4 days • Special pediatric</p>
+<p>Fluid balance after initiation of PN considerations:</p>
+<p>Input • Add magnesium and Height or length</p>
+<p>Oral phosphorous if patient Head circumference</p>
+<p>Nasointestinal at risk for refeeding</p>
+<p>IV syndrome or if baseline</p>
+<p>Output values are abnormal</p>
+<p>Urine • Serum electrolytes</p>
+<p>Gastrointestinal may be measured</p>
+<p>Other losses less frequently</p>
+<h2>in stable patients</h2>
+<li>Critically ill patients</li>
+<p>may require more</p>
+<p>frequent monitoring</p>
+<li>Special pediatric • Special pediatric</li>
+<p>considerations: considerations:</p>
+<p>Height or length Total bilirubin—daily in</p>
+<p>Head circumference newborns until normal</p>
+<p>(ALT, alanine aminotransferase; AST, aspartate aminotransferase; BUN, blood urea nitrogen;</p>
+<p>CBC, complete blood cell count; INR, international normalized ratio; PN, parenteral nutrition;</p>
+<p>PT, prothrombin time; SCr, serum creatinine)</p>
+<p>FIGURE 59-1. Monitoring strategy for patients receiving parenteral nutrition (PN).</p>
+<p>See Chapter 158, Assessment of Nutrition Status and Nutrition Requirements, authored</p>
+<p>by Katherine Hammond Chessman and Vanessa J. Kumpf; Chapter 159, Parenteral</p>
+<p>Nutrition, authored by Todd W. Mattox and Catherine M. Crill; and Chapter 160, Enteral</p>
+<p>Nutrition, authored by Vanessa J. Kumpf and Diana W. Mulherin, for a more detailed</p>
+<p>discussion of this topic.</p>
+<p>685</p>
+<p>ch59.indd 685 20-11-2020 12:33:33</p>
+<p>This page intentionally left blank</p>
+<p>fm.indd 10 04-12-2020 15:14:35</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

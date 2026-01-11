@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41. Human Immunodeficiency Virus Infection</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>41. Human Immunodeficiency Virus Infection</h1>
+        </header>
+        <main>
+            <p>429</p>
+<h2>RETPAHC</h2>
+<p>41</p>
+<p>Human Immunodeficiency</p>
+<p>Virus Infection</p>
+<li>Table 41-1 presents the case definition for adult, adolescent, and children,</li>
+<p>respectively, for human immunodeficiency virus (HIV) infection.</p>
+<h2>ETIOLOGY AND PATHOGENESIS</h2>
+<li>Infection with HIV occurs through three primary modes: sexual, parenteral, and</li>
+<p>perinatal. Sexual intercourse, primarily anal and vaginal intercourse, is the most</p>
+<p>common vehicle for transmission. The highest risk appears to be from receptive ano-</p>
+<p>rectal intercourse at about 1.4 transmissions per 100 sexual acts. Condom use reduces</p>
+<p>the risk of transmission by approximately 80%. Individuals with genital ulcers or</p>
+<p>sexually transmitted diseases are at great risk for contracting HIV.</p>
+<li>Heterosexual transmission is the most common mode of transmission in sub-</li>
+<p>Saharan Africa and worldwide (~80% of cases).</p>
+<li>The risk of HIV transmission from sharing needles is approximately 0.67 per 100</li>
+<p>episodes.</p>
+<li>Healthcare workers have a small risk of occupationally acquiring HIV, mostly</li>
+<p>through accidental injury, most often percutaneous needlestick injury. Mucocutane-</p>
+<p>ous exposures (eg, tainted blood splash in eyes, mouth, or nose) carry a transmission</p>
+<p>risk of approximately 0.09%.</p>
+<li>Perinatal infection, or vertical transmission, is the most common cause of pediatric</li>
+<p>HIV infection. The risk of mother-to-child transmission is ~25% in the absence of</p>
+<p>antiretroviral therapy. Breast-feeding can also transmit HIV.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>The natural history of HIV infection exhibits three general phases: acute, chronic,</li>
+<p>and terminal (AIDS).</p>
+<li>Primary HIV infection also presents with high viral load (may exceed 1,000,000 cop-</li>
+<p>ies/mL or 109/L) and a persistent decrease in CD4 lymphocytes.</p>
+<li>The most common signs and symptoms of primary HIV infection are fever, head-</li>
+<p>ache, sore throat, fatigue, GI upset (diarrhea, nausea, vomiting), weight loss, myalgia,</p>
+<p>morbilliform or maculopapular rash usually involving the trunk, lymphadenopathy,</p>
+<p>and night sweats. Less common signs and symptoms are aseptic meningitis, oral</p>
+<p>ulcers, and leukopenia.</p>
+<li>Clinical presentations of primary HIV infection vary, but patients often have a viral</li>
+<p>syndrome or mononucleosis-like illness with fever, pharyngitis, and adenopathy.</p>
+<p>Symptoms may last for 2 weeks.</p>
+<li>Most children born with HIV are asymptomatic. On physical examination, they often</li>
+<p>present with unexplained physical signs such as lymphadenopathy, hepatomegaly,</p>
+<p>splenomegaly, failure to thrive, weight loss or unexplained low birth weight, and fever</p>
+<p>of unknown origin. Laboratory findings include anemia, hypergammaglobulinemia,</p>
+<pre><code>altered mononuclear cell function, and altered T-cell subset ratios. The normal range</code></pre>
+<p>for CD4 cell counts in children is much different than for adults.</p>
+<li>The probability of progression to AIDS is related to RNA viral load; viral load is a</li>
+<p>major prognostic factor for disease progression, CD4 count decline, and death.</p>
+<li>The presence of HIV infection is screened with an enzyme-linked immunosorbent</li>
+<p>assay (ELISA), which detects antibodies against HIV-1. ELISA tests are generally</p>
+<p>highly sensitive (greater than 99%) and highly specific (greater than 99%), but rare</p>
+<p>false-positive results can occur particularly in those with autoimmune disorders.</p>
+<p>Positive screening tests are confirmed with another enzyme immunoassay to specify</p>
+<p>if the antibodies are to HIV-1 versus HIV-2. False-negative results also occur and</p>
+<h2>CH41.INDD 429 19-11-2020 15:25:08</h2>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>41</th><th>Human Immunodeficiency
+Virus Infection</th></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 41-1 Surveillance Case Definition for HIV Infection Stage Based on CD4+ T-Lymphocyte</p>
+<p>Counts, United States, 2014</p>
+<p>Age on Date of CD4+ T-Lymphocyte Testa</p>
+<p>&lt;1 year 1–5 years ≥6 years</p>
+<p>Stage Cells/μL (×106/L) % Cells/μL (×106/L) % Cells/μL (×106/L) %</p>
+<p>1 ≥1500 ≥34 ≥1000 ≥30 ≥500 ≥26</p>
+<p>2 750–1499 26–33 500–999 22–29 200–499 14–25</p>
+<h2>3 (AIDS) <750 <26 <500 <22 <200 <14</h2>
+<p>AIDS Indicator Conditions</p>
+<p>Bacterial infections, multiple Lymphoma, Burkitt</p>
+<p>or recurrent (specific to Lymphoma, immunoblastic</p>
+<p>children &lt;6 years) Lymphoma, primary, or brain</p>
+<p>Candidiasis of bronchi, trachea,</p>
+<p>or lungs</p>
+<p>Candidiasis, esophageal</p>
+<p>Cervical cancer, invasive (specific</p>
+<p>to adults, adolescents, children</p>
+<p>&gt;6 years)</p>
+<p>Coccidioidomycosis, disseminated or Mycobacterium avium complex or Mycobacterium</p>
+<p>extrapulmonary kansasii, disseminated or extrapulmonary</p>
+<p>Cryptococcosis, extrapulmonary Mycobacterium tuberculosis, any site (pulmonary or</p>
+<p>extrapulmonary)</p>
+<p>Cryptosporidiosis, chronic intestinal Mycobacterium, other species or unidentified species,</p>
+<p>(duration &gt;1 month) disseminated or extrapulmonary</p>
+<p>Cytomegalovirus disease (other than Pneumocystis jirovecii pneumonia (PCP)</p>
+<p>liver, spleen, or nodes), onset at</p>
+<p>age &gt;1 month</p>
+<p>Cytomegalovirus retinitis (with loss Pneumonia, recurrent (specific to adults, adolescents,</p>
+<p>of vision) children &gt;6 years)</p>
+<p>Encephalopathy, HIV-related Progressive multifocal leukoencephalopathy</p>
+<p>Herpes simplex: chronic ulcer(s) Salmonella septicemia, recurrent</p>
+<p>(duration &gt;1 month); or bronchitis, Toxoplasmosis of brain, onset at age &gt;1 month</p>
+<p>pneumonitis, or esophagitis, onset</p>
+<p>at age &gt;1 month Wasting syndrome due to HIV</p>
+<p>Histoplasmosis, disseminated or</p>
+<p>extrapulmonary isosporiasis,</p>
+<p>chronic intestinal (duration &gt;1</p>
+<p>month) Kaposi’s sarcoma</p>
+<p>aAge-specific CD4+ T-lymphocyte count or CD4+ T-lymphocyte percentage of total lymphocytes</p>
+<p>may be attributed to the “window-period” before adequate production of antibodies</p>
+<p>or antigen.</p>
+<li>Once diagnosed, HIV disease is monitored primarily by two surrogate biomarkers,</li>
+<p>viral load and CD4 cell count. The viral load test quantifies viremia by measuring the</p>
+<p>amount of viral RNA. There are several methods used for determining the amount</p>
+<p>of HIV RNA: reverse transcriptase–coupled polymerase chain reaction, branched</p>
+<p>DNA, transcription-mediated amplification, and nucleic acid sequence–based assay.</p>
+<li>The number of CD4 lymphocytes in the blood is a surrogate marker of disease pro-</li>
+<p>gression. The normal adult CD4 lymphocyte count ranges between 500 and 1600</p>
+<p>cells/mm3 (500 and 1600 × 106/L), or 40%–70% of all lymphocytes.</p>
+<p>430</p>
+<h2>CH41.INDD 430 19-11-2020 15:25:09</h2>
+<div class="table-container"><table><tr><th>TABLE 41-1 Surveillance Case Definition for HIV Infection Stage Based on CD4+ T-Lymphocyte
+Counts, United States, 2014</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Age on Date of CD4+ T-Lymphocyte Testa</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>&lt;1 year</td><td></td><td>1–5 years</td><td></td><td>≥6 years</td><td></td></tr><tr><td>Stage</td><td>Cells/μL (×106/L)</td><td>%</td><td>Cells/μL (×106/L)</td><td>%</td><td>Cells/μL (×106/L)</td><td>%</td></tr><tr><td>1</td><td>≥1500</td><td>≥34</td><td>≥1000</td><td>≥30</td><td>≥500</td><td>≥26</td></tr><tr><td>2</td><td>750–1499</td><td>26–33</td><td>500–999</td><td>22–29</td><td>200–499</td><td>14–25</td></tr><tr><td>3 (AIDS)</td><td>&lt;750</td><td>&lt;26</td><td>&lt;500</td><td>&lt;22</td><td>&lt;200</td><td>&lt;14</td></tr><tr><td>AIDS Indicator Conditions</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bacterial infections, multiple
+or recurrent (specific to
+children &lt;6 years)
+Candidiasis of bronchi, trachea,
+or lungs
+Candidiasis, esophageal
+Cervical cancer, invasive (specific
+to adults, adolescents, children
+&gt;6 years)</td><td></td><td></td><td>Lymphoma, Burkitt
+Lymphoma, immunoblastic
+Lymphoma, primary, or brain</td><td></td><td></td><td></td></tr><tr><td>Coccidioidomycosis, disseminated or
+extrapulmonary</td><td></td><td></td><td>Mycobacterium avium complex or Mycobacterium
+kansasii, disseminated or extrapulmonary</td><td></td><td></td><td></td></tr><tr><td>Cryptococcosis, extrapulmonary</td><td></td><td></td><td>Mycobacterium tuberculosis, any site (pulmonary or
+extrapulmonary)</td><td></td><td></td><td></td></tr><tr><td>Cryptosporidiosis, chronic intestinal
+(duration &gt;1 month)</td><td></td><td></td><td>Mycobacterium, other species or unidentified species,
+disseminated or extrapulmonary</td><td></td><td></td><td></td></tr><tr><td>Cytomegalovirus disease (other than
+liver, spleen, or nodes), onset at
+age &gt;1 month</td><td></td><td></td><td>Pneumocystis jirovecii pneumonia (PCP)</td><td></td><td></td><td></td></tr><tr><td>Cytomegalovirus retinitis (with loss
+of vision)</td><td></td><td></td><td>Pneumonia, recurrent (specific to adults, adolescents,
+children &gt;6 years)</td><td></td><td></td><td></td></tr><tr><td>Encephalopathy, HIV-related</td><td></td><td></td><td>Progressive multifocal leukoencephalopathy</td><td></td><td></td><td></td></tr><tr><td>Herpes simplex: chronic ulcer(s)
+(duration &gt;1 month); or bronchitis,
+pneumonitis, or esophagitis, onset
+at age &gt;1 month</td><td></td><td></td><td>Salmonella septicemia, recurrent
+Toxoplasmosis of brain, onset at age &gt;1 month
+Wasting syndrome due to HIV</td><td></td><td></td><td></td></tr><tr><td>Histoplasmosis, disseminated or
+extrapulmonary isosporiasis,
+chronic intestinal (duration &gt;1
+month) Kaposi’s sarcoma</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div><h2>Human Immunodeficiency Virus Infection | CHAPTER 41</h2>
+<h2>TREATMENT</h2>
+<li>Goal of Treatment: The central goal of antiretroviral therapy is to decrease morbidity</li>
+<pre><code>and mortality, improve quality of life, restore and preserve immune function, and</code></pre>
+<p>prevent further transmission through maximum suppression of HIV replication</p>
+<p>(HIV RNA level that is less than the lower limit of quantitation (ie, undetectable;</p>
+<p>usually less than 20 or 50 copies/mL [20 × 103 or 50 × 103/L]).</p>
+<h2>GENERAL APPROACH</h2>
+<li>Contemporary combinations of three active antiretroviral agents from two pharma-</li>
+<p>cologic classes potently inhibit HIV replication to undetectable plasma levels, prevent</p>
+<p>and reverse immune deficiency, and substantially decrease morbidity and mortality—</p>
+<p>constituting the modern ART era.</p>
+<li>Regular, periodic measurement of plasma HIV RNA levels and CD4 cell counts is</li>
+<p>necessary to determine the risk of disease progression in an HIV-infected individual</p>
+<p>and to determine when to initiate or modify antiretroviral treatment regimens.</p>
+<li>The use of potent combination antiretroviral therapy to suppress HIV replication to</li>
+<p>below the levels of detection of sensitive plasma HIV RNA assays limits the potential</p>
+<p>for selection of antiretroviral-resistant HIV variants, the major factor limiting the</p>
+<p>ability of antiretroviral drugs to inhibit virus replication and delay disease progres-</p>
+<p>sion. Maximum achievable suppression of HIV replication should be the goal of</p>
+<p>therapy.</p>
+<li>The most effective means to accomplish durable suppression of HIV replication is the</li>
+<p>simultaneous initiation of combinations of effective anti-HIV drugs with which the</p>
+<p>patient has not been previously treated and that are not cross-resistant with antiret-</p>
+<p>roviral agents with which the patient has been treated previously.</p>
+<li>Each of the antiretroviral drugs used in combination therapy regimens should always</li>
+<p>be used according to optimum schedules and dosages. Combinations of three active</p>
+<p>antiretroviral agents from two pharmacologic classes profoundly inhibit HIV repli-</p>
+<p>cation to undetectable plasma levels, prevent and reverse immune deficiency, and</p>
+<p>substantially decrease morbidity and mortality.</p>
+<li>Women should receive optimal antiretroviral therapy regardless of pregnancy status.</li>
+<li>The same principles of antiretroviral therapy apply to both HIV-infected children</li>
+<p>and adults, although the treatment of HIV-infected children involves unique phar-</p>
+<p>macologic, virologic, and immunologic considerations.</p>
+<li>Persons with acute primary HIV infections should be treated with combination anti-</li>
+<p>retroviral therapy to suppress virus replication to levels below the limit of detection</p>
+<p>of sensitive plasma HIV RNA assays.</p>
+<li>HIV-infected persons, even those with viral loads below detectable limits, should be</li>
+<p>considered infectious and should be counseled to avoid sexual and drug-use behav-</p>
+<p>iors that are associated with transmission or acquisition of HIV and other infectious</p>
+<p>pathogens.</p>
+<li>An excellent source for information on treatment guidelines can be found at http://</li>
+<p>aidsinfo.nih.gov/.</p>
+<li>Untreated HIV is harmful even at high CD4 counts, and immediate ART confers</li>
+<p>individual- and population-level benefit compared with delayed ART. Major policy-</p>
+<p>makers now recommend immediate ART regardless of CD4 count.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Antiretroviral Agents</p>
+<li>Systemic delivery of antiretroviral agents for direct inhibition of viral replica-</li>
+<p>tion has been the most clinically successful strategy for both treatment and</p>
+<p>prophylaxis.</p>
+<li>Inhibiting viral replication with a combination of potent antiretroviral therapy has</li>
+<p>been the most clinically successful strategy in the treatment of HIV infection. There</p>
+<p>have been four primary groups of drugs used: entry inhibitors, reverse transcriptase</p>
+<p>431</p>
+<h2>CH41.INDD 431 19-11-2020 15:25:09</h2>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>inhibitors, integrase strand transfer inhibitors (InSTIs), and HIV protease inhibitors</p>
+<h2>(PIs) (Table 41-2).</h2>
+<li>Significant drug interactions can occur with many antiretroviral agents. The latest</li>
+<p>information on drug interactions of antiretroviral drugs should be consulted. Many</p>
+<p>clinically significant antiretroviral-associated drug interactions involve CYP3A-</p>
+<p>mediated first-pass metabolism and clearance.</p>
+<p>✓ Ritonavir and cobicistat are potent inhibitors of cytochrome P450 enzyme 3A</p>
+<p>and are now used exclusively at lower doses as pharmacokinetic enhancers of</p>
+<p>other HIV PI.</p>
+<p>✓ Rifampin, a potent inducer of CYP3A metabolism and conjugation enzymes, is</p>
+<p>contraindicated with use of most HIV PIs, etravirine, rilpivirine, and maraviroc</p>
+<p>because concentrations are reduced substantially even with ritonavir enhancement.</p>
+<h2>TREATMENT DURING PREGNANCY</h2>
+<li>Generally, pregnant women should be treated as would nonpregnant women, with</li>
+<p>the goal of maximally suppressing HIV RNA, with some exceptions. Efavirenz</p>
+<p>should be avoided in women planning to become pregnant or who are not using</p>
+<p>effective contraception as efavirenz has been associated with neural tube defects in</p>
+<p>the first trimester, in some but not all studies.</p>
+<li>Dolutegravir use at the time of conception was associated with neural tube defects in</li>
+<p>infants and until more is known, dolutegravir should be avoided if possible in women</p>
+<p>who are planning to become pregnant or are not using effective contraception.</p>
+<li>Intravenous (IV) zidovudine is recommended intrapartum depending on the</li>
+<p>mother’s viral load, based on early studies demonstrating clear prophylactic effec-</p>
+<p>tiveness as well as extensive familiarity with the side-effect profile. Infants born to</p>
+<p>HIV-infected mothers should also receive zidovudine (±several doses of nevirapine)</p>
+<p>prophylaxis for 4–6 weeks after birth.</p>
+<h2>CHEMOPROPHYLAXIS</h2>
+<li>Post-exposure prophylaxis (PEP) with conventional ART regimens (eg, tenofovir diso-</li>
+<p>proxil fumarate–emtricitabine–rategravir) should be initiated as soon as possible (ide-</p>
+<p>ally within 1–2 hours) after high-risk exposures to prevent HIV infection. The optimal</p>
+<p>duration of treatment is unknown, but at least 4 weeks of therapy is advocated.</p>
+<li>Preexposure prophylaxis (PrEP) involves daily tenofovir disoproxil fumarate–</li>
+<p>emtricitabine in HIV-negative persons at high risk of HIV acquisition to prevent</p>
+<p>infection should an HIV-exposure occur.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Following the initiation of therapy, patients are generally monitored at 3-month</li>
+<p>intervals until HIV RNA reaches undetectable levels. An assessment at 2–8 weeks</p>
+<p>is warranted to document early response. Monitoring may be increased to every</p>
+<p>6 months in stabilized patients.</p>
+<li>There are two general indications to change therapy: significant toxicity and treat-</li>
+<p>ment failure.</p>
+<li>Specific criteria to indicate treatment failure have not been established through</li>
+<p>controlled clinical trials. As a general guide, the following events should prompt</p>
+<p>consideration for changing therapy: the inability to achieve less than 200 copies/mL</p>
+<p>(200 ×103/L) HIV RNA by 24 weeks of therapy initiation (repeat testing is suggested</p>
+<p>to confirm), or, after HIV RNA suppression, repeated detection of greater than 200</p>
+<p>copies/mL (200 × 103/L) of HIV RNA.</p>
+<h2>THERAPEUTIC FAILURE</h2>
+<li>The most important measure of therapeutic failure is suboptimal suppression of viral</li>
+<p>replication.</p>
+<li>Therapeutic failure may be the result of factors such as pre-ART disease factors</li>
+<p>(eg, high viral load or preexisting drug resistance), nonadherence to medication,</p>
+<p>432</p>
+<h2>CH41.INDD 432 19-11-2020 15:25:09</h2>
+<h2>Human Immunodeficiency Virus Infection | CHAPTER 41</h2>
+<p>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens</p>
+<p>Recommended in Antiretroviral-Naïve Persons</p>
+<p>Preferred Regimensa Selected Limitations</p>
+<p>InSTI-based Bictegravir + tenofovir Only if CrCl ≥30 mL/min (0.5 mL/</p>
+<p>alafenamide fumarate sec); interactions with polyvalent</p>
+<p>+ emtricitabine antacids; bictegravir inhibits</p>
+<p>(coformulated) (AI) creatinine secretion increasing</p>
+<p>serum creatinine (distinguish vs.</p>
+<pre><code>renal dysfunction)</code></pre>
+<p>Raltegravir + tenofovir Can be dosed once or twice daily;</p>
+<p>+ emtricitabine (AI interactions with polyvalent</p>
+<p>for tenofovir disoproxil antacids; creatine kinase increases</p>
+<p>fumarate; AII for</p>
+<p>tenofovir alafenamide</p>
+<p>fumarate)</p>
+<p>Dolutegravir + abacavir Only if HLA-B5701 negative;</p>
+<p>+ lamivudine interactions with polyvalent</p>
+<p>(coformulated) (AI) antacids; possible increased risk</p>
+<p>of neural tube defects in infants</p>
+<p>if used at the time of conception;</p>
+<p>dolutegravir inhibits creatinine</p>
+<p>secretion increasing Scr—</p>
+<pre><code>distinguish vs. renal dysfunction</code></pre>
+<p>Dolutegravir + tenofovir Same as above without HLA-B5701</p>
+<p>disoproxil fumarate (or negative requirement</p>
+<p>tenofovir alafenamide</p>
+<p>fumarate) +</p>
+<p>emtricitabine (AI)</p>
+<p>Selected Alternative Regimens (Some Potential Disadvantages vs. Preferred</p>
+<p>Regimens)</p>
+<p>InSTI-based Elvitegravir + cobicistat Only if CrCl ≥70 mL/min (1.17 mL/sec);</p>
+<p>+ tenofovir food requirement; interactions with</p>
+<p>disoproxil fumarate polyvalent antacids; CYP3A4 drug</p>
+<p>+ emtricitabine interactions; cobicistat inhibits</p>
+<p>(coformulated) (AI) creatinine secretion increasing</p>
+<p>Scr— distinguish vs. renal</p>
+<pre><code>dysfunction</code></pre>
+<p>Elvitegravir + cobicistat Only if CrCl ≥30 mL/min (0.5 mL/sec);</p>
+<p>+ tenofovir same as above</p>
+<p>alafenamide fumarate</p>
+<p>+ emtricitabine</p>
+<p>(coformulated) (AI)</p>
+<p>Raltegravir + abacavir + Only if HLA-B5701 negative and HIV</p>
+<p>lamivudine (BI) RNA &lt;100,000 copies/mL (100 ×</p>
+<p>106/L); can be dosed once or twice</p>
+<p>daily; interactions with polyvalent</p>
+<p>antacids; creatine kinase increases</p>
+<p>(Continued )</p>
+<p>433</p>
+<h2>CH41.INDD 433 19-11-2020 15:25:10</h2>
+<div class="table-container"><table><tr><th>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens
+Recommended in Antiretroviral-Naïve Persons</th><th></th><th></th></tr><tr><td></td><td>Preferred Regimensa</td><td>Selected Limitations</td></tr><tr><td>InSTI-based</td><td>Bictegravir + tenofovir
+alafenamide fumarate
++ emtricitabine
+(coformulated) (AI)</td><td>Only if CrCl ≥30 mL/min (0.5 mL/
+sec); interactions with polyvalent
+antacids; bictegravir inhibits
+creatinine secretion increasing
+serum creatinine (distinguish vs.
+renal dysfunction)</td></tr><tr><td></td><td>Raltegravir + tenofovir
++ emtricitabine (AI
+for tenofovir disoproxil
+fumarate; AII for
+tenofovir alafenamide
+fumarate)</td><td>Can be dosed once or twice daily;
+interactions with polyvalent
+antacids; creatine kinase increases</td></tr><tr><td></td><td>Dolutegravir + abacavir
++ lamivudine
+(coformulated) (AI)</td><td>Only if HLA-B5701 negative;
+interactions with polyvalent
+antacids; possible increased risk
+of neural tube defects in infants
+if used at the time of conception;
+dolutegravir inhibits creatinine
+secretion increasing Scr—
+distinguish vs. renal dysfunction</td></tr><tr><td></td><td>Dolutegravir + tenofovir
+disoproxil fumarate (or
+tenofovir alafenamide
+fumarate) +
+emtricitabine (AI)</td><td>Same as above without HLA-B5701
+negative requirement</td></tr><tr><td>Selected Alternative Regimens (Some Potential Disadvantages vs. Preferred
+Regimens)</td><td></td><td></td></tr><tr><td>InSTI-based</td><td>Elvitegravir + cobicistat
++ tenofovir
+disoproxil fumarate
++ emtricitabine
+(coformulated) (AI)</td><td>Only if CrCl ≥70 mL/min (1.17 mL/sec);
+food requirement; interactions with
+polyvalent antacids; CYP3A4 drug
+interactions; cobicistat inhibits
+creatinine secretion increasing
+Scr— distinguish vs. renal
+dysfunction</td></tr><tr><td></td><td>Elvitegravir + cobicistat
++ tenofovir
+alafenamide fumarate
++ emtricitabine
+(coformulated) (AI)</td><td>Only if CrCl ≥30 mL/min (0.5 mL/sec);
+same as above</td></tr><tr><td></td><td>Raltegravir + abacavir +
+lamivudine (BI)</td><td>Only if HLA-B5701 negative and HIV
+RNA &lt;100,000 copies/mL (100 ×
+106/L); can be dosed once or twice
+daily; interactions with polyvalent
+antacids; creatine kinase increases
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens</p>
+<p>Recommended in Antiretroviral-Naïve Persons (Continued )</p>
+<p>Preferred Regimensa Selected Limitations</p>
+<p>HIV PI-based Atazanavir + ritonavir GI; food requirement; CYP3A4 drug</p>
+<p>(or cobicistat) + interactions; hyperbilirubinemia</p>
+<p>tenofovir disoproxil leading to drug discontinuation,</p>
+<p>fumarate (or tenofovir especially in those with Gilbert’s; only</p>
+<p>alafenamide fumarate) for CrCl ≥70 mL/min (1.17 mL/sec)</p>
+<p>+ emtricitabine (BI) as cobicistat inhibits creatinine</p>
+<p>secretion increasing Scr—</p>
+<pre><code>distinguish vs. renal dysfunction</code></pre>
+<p>Atazanavir + ritonavir (or Only if HLA-B5701 negative; see</p>
+<p>cobicistat) + abacavir issues above</p>
+<p>+ lamivudine (CI for</p>
+<p>ritonavir and CIII for</p>
+<p>cobicistat)</p>
+<p>Darunavir + ritonavir Rash (darunavir has sulfonamide</p>
+<p>(or cobicistat) + moiety); GI; food requirement;</p>
+<p>tenofovir disoproxil CYP3A4 drug interactions; only for</p>
+<p>fumarate (or tenofovir CrCl ≥70 mL/min (1.17 mL/sec)</p>
+<p>alafenamide fumarate) as cobicistat inhibits creatinine</p>
+<p>+ emtricitabine (AI secretion increasing serum</p>
+<p>for ritonavir and AII for creatinine (distinguish vs. renal</p>
+<pre><code>cobicistat) dysfunction); see issues above</code></pre>
+<p>Darunavir + ritonavir (or Only if HLA-B5701 negative; see</p>
+<p>cobicistat) + abacavir issues above</p>
+<p>+ lamivudine (BII)</p>
+<p>NNRTI-based Doravirine + tenofovir Only if CrCl ≥50 mL/min (0.83 mL/sec)</p>
+<p>disoproxil fumarate</p>
+<p>+ lamivudine</p>
+<p>(coformulated) (BI)</p>
+<p>Doravirine + tenofovir</p>
+<p>alafenamide +</p>
+<p>emtricitabine (BIII)</p>
+<p>Efavirenz + tenofovir CNS side effects with efavirenz;</p>
+<p>disoproxil fumarate CYP450 drug interactions; empty</p>
+<p>+ emtricitabine stomach dosing; teratogenic in</p>
+<p>(coformulated) (BI) nonhuman primates—controversial</p>
+<p>in humans—consider avoiding in</p>
+<p>Efavirenz + tenofovir</p>
+<p>women planning to conceive</p>
+<p>alafenamide fumarate</p>
+<p>+ emtricitabine (BII)</p>
+<p>Rilpivirine + tenofovir Not recommended when HIV RNA</p>
+<p>disoproxil fumarate &gt;100,000 copies/mL (100 ×</p>
+<p>(or tenofovir 106/L) or CD4 &lt;200 cells/μL (0.2 ×</p>
+<p>alafenamide fumarate) 109/L); no proton pump inhibitors</p>
+<p>+ emtricitabine (rilpivirine); food requirement;</p>
+<p>(coformulated) (BI) antacid interactions</p>
+<p>If abacavir and Dolutegravir + Only if HIV RNA &lt;500,000 copies/mL</p>
+<p>tenofovir cannot lamivudine (CI) (500 × 106/L); possible increased</p>
+<p>be used risk of neural tube defects in infants</p>
+<p>if used at the time of conception</p>
+<p>(Continued )</p>
+<p>434</p>
+<h2>CH41.INDD 434 19-11-2020 15:25:10</h2>
+<div class="table-container"><table><tr><th>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens
+Recommended in Antiretroviral-Naïve Persons (Continued )</th><th></th><th></th></tr><tr><td></td><td>Preferred Regimensa</td><td>Selected Limitations</td></tr><tr><td>HIV PI-based</td><td>Atazanavir + ritonavir
+(or cobicistat) +
+tenofovir disoproxil
+fumarate (or tenofovir
+alafenamide fumarate)
++ emtricitabine (BI)</td><td>GI; food requirement; CYP3A4 drug
+interactions; hyperbilirubinemia
+leading to drug discontinuation,
+especially in those with Gilbert’s; only
+for CrCl ≥70 mL/min (1.17 mL/sec)
+as cobicistat inhibits creatinine
+secretion increasing Scr—
+distinguish vs. renal dysfunction</td></tr><tr><td></td><td>Atazanavir + ritonavir (or
+cobicistat) + abacavir
++ lamivudine (CI for
+ritonavir and CIII for
+cobicistat)</td><td>Only if HLA-B5701 negative; see
+issues above</td></tr><tr><td></td><td>Darunavir + ritonavir
+(or cobicistat) +
+tenofovir disoproxil
+fumarate (or tenofovir
+alafenamide fumarate)
++ emtricitabine (AI
+for ritonavir and AII for
+cobicistat)</td><td>Rash (darunavir has sulfonamide
+moiety); GI; food requirement;
+CYP3A4 drug interactions; only for
+CrCl ≥70 mL/min (1.17 mL/sec)
+as cobicistat inhibits creatinine
+secretion increasing serum
+creatinine (distinguish vs. renal
+dysfunction); see issues above</td></tr><tr><td></td><td>Darunavir + ritonavir (or
+cobicistat) + abacavir
++ lamivudine (BII)</td><td>Only if HLA-B5701 negative; see
+issues above</td></tr><tr><td>NNRTI-based</td><td>Doravirine + tenofovir
+disoproxil fumarate
++ lamivudine
+(coformulated) (BI)
+Doravirine + tenofovir
+alafenamide +
+emtricitabine (BIII)</td><td>Only if CrCl ≥50 mL/min (0.83 mL/sec)</td></tr><tr><td></td><td>Efavirenz + tenofovir
+disoproxil fumarate
++ emtricitabine
+(coformulated) (BI)
+Efavirenz + tenofovir
+alafenamide fumarate
++ emtricitabine (BII)</td><td>CNS side effects with efavirenz;
+CYP450 drug interactions; empty
+stomach dosing; teratogenic in
+nonhuman primates—controversial
+in humans—consider avoiding in
+women planning to conceive</td></tr><tr><td></td><td>Rilpivirine + tenofovir
+disoproxil fumarate
+(or tenofovir
+alafenamide fumarate)
++ emtricitabine
+(coformulated) (BI)</td><td>Not recommended when HIV RNA
+&gt;100,000 copies/mL (100 ×
+106/L) or CD4 &lt;200 cells/μL (0.2 ×
+109/L); no proton pump inhibitors
+(rilpivirine); food requirement;
+antacid interactions</td></tr><tr><td>If abacavir and
+tenofovir cannot
+be used</td><td>Dolutegravir +
+lamivudine (CI)</td><td>Only if HIV RNA &lt;500,000 copies/mL
+(500 × 106/L); possible increased
+risk of neural tube defects in infants
+if used at the time of conception
+(Continued )</td></tr></table></div><h2>Human Immunodeficiency Virus Infection | CHAPTER 41</h2>
+<p>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens</p>
+<p>Recommended in Antiretroviral-Naïve Persons (Continued )</p>
+<p>Preferred Regimensa Selected Limitations</p>
+<p>Darunavir + ritonavir + Only if HIV RNA &lt;100,000 copies/mL</p>
+<p>raltegravir (CI) (100 × 106/L)and CD4 &gt;200 cells/</p>
+<p>mm3 (0.2 × 109/L); raltegravir must</p>
+<p>be dosed twice daily</p>
+<p>Darunavir + ritonavir +</p>
+<p>lamivudine (CI)</p>
+<p>Selected Regimens or Components that Should Not be Used at Any Time</p>
+<p>Regimen or Component Comment</p>
+<p>Monotherapy Inferior virologic efficacy</p>
+<p>with any single</p>
+<p>agent (AI)</p>
+<p>Any NRTI regimen (AI) Inferior virologic efficacy</p>
+<p>Atazanavir + Additive adverse effects, including</p>
+<p>indinavir (AIII) hyperbilirubinemia and jaundice</p>
+<p>Didanosine + Inferior virologic efficacy, CD4 declines</p>
+<p>tenofovir (AII)</p>
+<p>Didanosine + Toxicity including subcutaneous fat</p>
+<p>stavudine (AII) loss, peripheral neuropathy, and</p>
+<p>lactic acidosis</p>
+<p>2 NNRTI Higher adverse events, drug</p>
+<p>combinations (AI) interactions</p>
+<p>Emtricitabine + Analogs of same nucleobase, no</p>
+<p>lamivudine or additive benefit (or antagonistic)</p>
+<p>zidovudine +</p>
+<p>stavudine (AIII, AII)</p>
+<p>Unboosted PIs Inadequate bioavailability</p>
+<p>(ie, darunavir,</p>
+<p>saquinavir,</p>
+<p>tipranavir) (AII)</p>
+<p>Etravirine + selected Possible induction of PI metabolism,</p>
+<p>boosted PIs (AII) doses not established</p>
+<p>Nevirapine in ARV High incidence of symptomatic</p>
+<p>naïve with higher hepatotoxicity</p>
+<p>CD4 counts (&gt;250</p>
+<p>cells/μL [0.25 ×</p>
+<p>109/L] for women,</p>
+<p>&gt;400 cells/μL</p>
+<p>[0.4 × 109/L] for</p>
+<p>men) (BI)</p>
+<p>aEvidence-based rating definition. Rating strength of recommendation—A, strong recommendation;</p>
+<p>B, moderate recommendation; C, optional recommendation. Rating quality of evidence supporting</p>
+<p>the recommendation—I, evidence from at least one correctly randomized, controlled trial with</p>
+<p>clinical outcomes and/or validated laboratory; II, evidence from at least one well-designed clinical trial</p>
+<p>without randomization or observational cohorts with long-term clinical outcomes; III, expert opinion.</p>
+<p>Lamivudine and emtricitabine are considered interchangeable endpoints.</p>
+<p>435</p>
+<h2>CH41.INDD 435 19-11-2020 15:25:10</h2>
+<div class="table-container"><table><tr><th>TABLE 41-2 Treatment of Human Immunodeficiency Virus Infection: Antiretroviral Regimens
+Recommended in Antiretroviral-Naïve Persons (Continued )</th><th></th><th></th></tr><tr><td></td><td>Preferred Regimensa</td><td>Selected Limitations</td></tr><tr><td></td><td>Darunavir + ritonavir +
+raltegravir (CI)</td><td>Only if HIV RNA &lt;100,000 copies/mL
+(100 × 106/L)and CD4 &gt;200 cells/
+mm3 (0.2 × 109/L); raltegravir must
+be dosed twice daily</td></tr><tr><td></td><td>Darunavir + ritonavir +
+lamivudine (CI)</td><td></td></tr><tr><td>Selected Regimens or Components that Should Not be Used at Any Time</td><td></td><td></td></tr><tr><td>Regimen or Component</td><td></td><td>Comment</td></tr><tr><td>Monotherapy
+with any single
+agent (AI)</td><td></td><td>Inferior virologic efficacy</td></tr><tr><td>Any NRTI regimen (AI)</td><td></td><td>Inferior virologic efficacy</td></tr><tr><td>Atazanavir +
+indinavir (AIII)</td><td></td><td>Additive adverse effects, including
+hyperbilirubinemia and jaundice</td></tr><tr><td>Didanosine +
+tenofovir (AII)</td><td></td><td>Inferior virologic efficacy, CD4 declines</td></tr><tr><td>Didanosine +
+stavudine (AII)</td><td></td><td>Toxicity including subcutaneous fat
+loss, peripheral neuropathy, and
+lactic acidosis</td></tr><tr><td>2 NNRTI
+combinations (AI)</td><td></td><td>Higher adverse events, drug
+interactions</td></tr><tr><td>Emtricitabine +
+lamivudine or
+zidovudine +
+stavudine (AIII, AII)</td><td></td><td>Analogs of same nucleobase, no
+additive benefit (or antagonistic)</td></tr><tr><td>Unboosted PIs
+(ie, darunavir,
+saquinavir,
+tipranavir) (AII)</td><td></td><td>Inadequate bioavailability</td></tr><tr><td>Etravirine + selected
+boosted PIs (AII)</td><td></td><td>Possible induction of PI metabolism,
+doses not established</td></tr><tr><td>Nevirapine in ARV
+naïve with higher
+CD4 counts (&gt;250
+cells/μL [0.25 ×
+109/L] for women,
+&gt;400 cells/μL
+[0.4 × 109/L] for
+men) (BI)</td><td></td><td>High incidence of symptomatic
+hepatotoxicity</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>development of new drug resistance, intolerance to one or more medications,</p>
+<p>adverse drug–drug or drug–food interactions, or pharmacokinetic–pharmacody-</p>
+<p>namic variability.</p>
+<li>Drug resistance testing is recommended while the patient is undergoing the failing</li>
+<p>regimen or within 4 weeks after stopping the regimen as long as the HIV RNA count</p>
+<p>is greater than 500 copies/mL (500 × 103/L), which is the threshold for resistance</p>
+<p>assays (~500–1000 copies/mL [~500 × 103–1000 × 103/L]). Patients should be</p>
+<p>treated with at least two (preferably three) fully active antiretroviral drugs based on</p>
+<p>medication history and resistance tests. The goal of therapy is to suppress HIV RNA</p>
+<p>to undetectable levels. In cases when less than 50 copies/mL (&lt;50 × 103/L) cannot</p>
+<p>be attained, maintenance on the regimen is preferred over drug discontinuation so as</p>
+<p>to prevent rapid immunological and clinical decline.</p>
+<h2>INFECTIOUS COMPLICATIONS OF HUMAN IMMUNODEFICIENCY VIRUS</h2>
+<li>The probability of developing specific opportunistic infections (OIs) is closely related</li>
+<p>to CD4 count thresholds. The principle in the management of OIs is treating HIV</p>
+<p>infection to enable CD4 cells to recover and be maintained above protective levels.</p>
+<p>Other important principles are:</p>
+<p>✓ Preventing exposure to opportunistic pathogens</p>
+<p>✓ Using vaccinations to prevent first-episode of disease (consult HIV-specific</p>
+<p>guidelines)</p>
+<p>✓ Use primary chemoprophylaxis at certain CD4 thresholds to prevent first-episode</p>
+<p>of disease</p>
+<p>✓ Treating emergent OIs</p>
+<p>✓ Use secondary chemoprophylaxis to prevent disease recurrence</p>
+<p>✓ Discontinuing prophylaxis with sustained immune recovery</p>
+<li>The spectrum of infectious diseases observed in HIV-infected individuals and rec-</li>
+<h2>ommended first-line therapies are shown in Table 41-3.</h2>
+<h2>PNEUMOCYSTIS JIROVECII PNEUMONIA</h2>
+<li>P. jirovecii pneumonia (PCP) is the most common life-threatening OI in patients</li>
+<p>with AIDS. The taxonomy of the organism is unclear, having been classified as both</p>
+<p>protozoan and fungal.</p>
+<p>Clinical Presentation</p>
+<li>Characteristic symptoms include fever and dyspnea. Clinical signs are tachypnea with</li>
+<p>or without rales or rhonchi and a nonproductive or mildly productive cough occur-</p>
+<p>ring over a period of weeks, although more fulminant presentations can occur. Chest</p>
+<p>radiographs may show florid or subtle infiltrates or may occasionally be normal,</p>
+<p>although infiltrates are usually interstitial and bilateral. Arterial blood gases may show</p>
+<p>minimal hypoxia (partial pressure of oxygen [PaO] 80–95 mm Hg [10.6–12.6 kPa])</p>
+<p>2</p>
+<p>but in more advanced disease may be markedly abnormal.</p>
+<li>The onset of PCP is often insidious, occurring over a period of weeks. Clinical</li>
+<p>signs are tachypnea with or without rales or rhonchi and a nonproductive or mildly</p>
+<p>productive cough occurring over a period of weeks, although more fulminant pre-</p>
+<p>sentations can occur. The diagnosis of PCP usually is made by identification of the</p>
+<p>organism in induced sputum or in specimens obtained from bronchoalveolar lavage.</p>
+<p>Treatment</p>
+<li>The treatment of choice is trimethoprim–sulfamethoxazole, which is associated</li>
+<p>with a 60%–100% response rate.</p>
+<li>Trimethoprim–sulfamethoxazole is given in doses of 15–20 mg/kg/day (based on the</li>
+<p>trimethoprim component) as three or four divided doses for the treatment of PCP.</p>
+<p>Treatment duration is typically 21 days but must be based on clinical response.</p>
+<li>Trimethoprim–sulfamethoxazole is usually initiated by the IV route, although oral</li>
+<p>therapy (as oral absorption is high) may suffice in mildly ill and reliable patients</p>
+<p>436</p>
+<h2>CH41.INDD 436 19-11-2020 15:25:10</h2>
+<h2>Human Immunodeficiency Virus Infection | CHAPTER 41</h2>
+<p>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected</p>
+<p>Individuals</p>
+<p>Preferred Initial Therapies</p>
+<p>for Acute Infection in Adults Common Drug- or</p>
+<p>(Strength of Recommendation in Dose-Limiting Adverse</p>
+<p>Clinical Disease Parentheses) Reactions</p>
+<p>Fungi</p>
+<pre><code>Candidiasis, oral Fluconazole 100 mg orally for 7–14 Elevated liver function</code></pre>
+<p>days (AI) tests, hepatotoxicity,</p>
+<p>nausea, and vomiting</p>
+<p>or</p>
+<p>Nystatin 500,000 units oral swish Taste, patient acceptance</p>
+<p>(~5 mL) four times daily for 7–14</p>
+<p>days (BII)</p>
+<p>Candidiasis, Fluconazole 100–400 mg orally or IV Same as above</p>
+<p>esophageal daily for 14–21 days (AI)</p>
+<p>or</p>
+<pre><code>Itraconazole 200 mg/day orally for Elevated liver function</code></pre>
+<p>14–21 days (AI) tests, hepatotoxicity,</p>
+<p>nausea, and vomiting</p>
+<p>Pneumocystis jirovecii Moderate-to-severe episodes</p>
+<p>pneumonia Trimethoprim–sulfamethoxazole Skin rash, fever,</p>
+<p>IV or orally 15–20 mg/kg/day as leucopenia,</p>
+<p>trimethoprim component in three thrombocytopenia</p>
+<p>to four divided doses for 21 daysa</p>
+<p>(AI) moderate or severe therapy</p>
+<p>should be started IV</p>
+<p>Mild-to-moderate episodes</p>
+<p>Trimethoprim–sulfamethoxazole</p>
+<p>15–20 mg/kg/day as trimethoprim</p>
+<p>component orally in three</p>
+<p>divided doses or trimethoprim–</p>
+<p>sulfamethoxazole double</p>
+<h2>strength tablets, two tablets three</h2>
+<p>times daily</p>
+<p>Cryptococcal Liposomal amphotericin B 3–4 mg/ Nephrotoxicity,</p>
+<p>meningitis kg/day IV with flucytosine 100 mg/ hypokalemia, anemia,</p>
+<p>kg/day orally in four divided doses fever, chills</p>
+<p>for a minimum of 2 weeks (AI) Bone marrow suppression</p>
+<p>followed by</p>
+<p>Fluconazole 400 mg/day, orally for Same as above</p>
+<p>8 weeks or until CSF cultures are</p>
+<p>negative (AI)a</p>
+<p>Histoplasmosis Liposomal amphotericin B 3 mg/kg/ Same as above</p>
+<p>day IV for 2 weeks (AI) followed by</p>
+<p>Itraconazole 200 mg orally thrice daily</p>
+<p>for 3 days then twice daily, for</p>
+<p>12 months (AII)a</p>
+<p>(Continued )</p>
+<p>437</p>
+<h2>CH41.INDD 437 19-11-2020 15:25:10</h2>
+<div class="table-container"><table><tr><th>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected
+Individuals</th><th></th><th></th></tr><tr><td>Clinical Disease</td><td>Preferred Initial Therapies
+for Acute Infection in Adults
+(Strength of Recommendation in
+Parentheses)</td><td>Common Drug- or
+Dose-Limiting Adverse
+Reactions</td></tr><tr><td>Fungi</td><td></td><td></td></tr><tr><td>Candidiasis, oral</td><td>Fluconazole 100 mg orally for 7–14
+days (AI)</td><td>Elevated liver function
+tests, hepatotoxicity,
+nausea, and vomiting</td></tr><tr><td></td><td>or</td><td></td></tr><tr><td></td><td>Nystatin 500,000 units oral swish
+(~5 mL) four times daily for 7–14
+days (BII)</td><td>Taste, patient acceptance</td></tr><tr><td>Candidiasis,
+esophageal</td><td>Fluconazole 100–400 mg orally or IV
+daily for 14–21 days (AI)</td><td>Same as above</td></tr><tr><td></td><td>or</td><td></td></tr><tr><td></td><td>Itraconazole 200 mg/day orally for
+14–21 days (AI)</td><td>Elevated liver function
+tests, hepatotoxicity,
+nausea, and vomiting</td></tr><tr><td>Pneumocystis jirovecii
+pneumonia</td><td>Moderate-to-severe episodes
+Trimethoprim–sulfamethoxazole
+IV or orally 15–20 mg/kg/day as
+trimethoprim component in three
+to four divided doses for 21 daysa
+(AI) moderate or severe therapy
+should be started IV</td><td>Skin rash, fever,
+leucopenia,
+thrombocytopenia</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td>Mild-to-moderate episodes
+Trimethoprim–sulfamethoxazole
+15–20 mg/kg/day as trimethoprim
+component orally in three
+divided doses or trimethoprim–
+sulfamethoxazole double
+strength tablets, two tablets three
+times daily</td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>Cryptococcal
+meningitis</td><td>Liposomal amphotericin B 3–4 mg/
+kg/day IV with flucytosine 100 mg/
+kg/day orally in four divided doses
+for a minimum of 2 weeks (AI)
+followed by</td><td>Nephrotoxicity,
+hypokalemia, anemia,
+fever, chills</td></tr><tr><td></td><td></td><td>Bone marrow suppression</td></tr><tr><td></td><td>Fluconazole 400 mg/day, orally for
+8 weeks or until CSF cultures are
+negative (AI)a</td><td>Same as above</td></tr><tr><td>Histoplasmosis</td><td>Liposomal amphotericin B 3 mg/kg/
+day IV for 2 weeks (AI) followed by</td><td>Same as above</td></tr><tr><td></td><td>Itraconazole 200 mg orally thrice daily
+for 3 days then twice daily, for
+12 months (AII)a</td><td>(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected</p>
+<p>Individuals (Continued )</p>
+<p>Preferred Initial Therapies</p>
+<p>for Acute Infection in Adults Common Drug- or</p>
+<p>(Strength of Recommendation in Dose-Limiting Adverse</p>
+<p>Clinical Disease Parentheses) Reactions</p>
+<p>Coccidioidomycosis Liposomal amphotericin B 3–5 mg/ Same as above</p>
+<p>kg/day IV until clinical improvement</p>
+<p>(usually after 500–1000 mg) then</p>
+<p>switch to azole (AIII)a</p>
+<p>or</p>
+<p>Fluconazole 400–800 mg once daily Same as above</p>
+<p>(meningeal disease) (AII)a</p>
+<p>Protozoa</p>
+<p>Toxoplasmic Pyrimethamine 200 mg orally once, Bone marrow suppression</p>
+<p>encephalitis then 50–75 mg/day</p>
+<p>plus</p>
+<p>Sulfadiazine 1–1.5 g orally four Rash, drug fever</p>
+<p>times daily</p>
+<p>and</p>
+<p>Leucovorin 10–25 mg orally daily for</p>
+<p>6 weeks (AI)a</p>
+<p>Isosporiasis Trimethoprim and sulfamethoxazole: Same as above</p>
+<p>160 mg trimethoprim and 800 mg</p>
+<p>sulfamethoxazole orally or IV four</p>
+<p>times daily for 10 days (AII)a</p>
+<p>Bacteria</p>
+<p>Mycobacterium avium Clarithromycin 500 mg orally twice GI intolerance, optic</p>
+<p>complex daily, plus ethambutol 15 mg/kg/ neuritis, peripheral</p>
+<p>day orally (AI) for at least 12 months neuritis, elevated</p>
+<p>liver tests</p>
+<p>Salmonella Ciprofloxacin 500–750 mg orally (or GI intolerance, headache,</p>
+<p>enterocolitis or 400 mg IV) twice daily for 14 days dizziness</p>
+<p>bacteremia (longer duration for bacteremia or</p>
+<p>advanced HIV) (AIII)</p>
+<p>Campylobacter Ciprofloxacin 500–750 mg orally (or Same as above</p>
+<p>enterocolitis 400 mg IV) twice daily for 7–10</p>
+<p>(mild-to-moderate) days (or longer with bacteremia)</p>
+<h2>(BIII)</h2>
+<p>Shigella enterocolitis Ciprofloxacin 500–750 mg orally (or Same as above</p>
+<p>400 mg IV) twice daily for 7–10</p>
+<p>days (or 14 days for bacteremia)</p>
+<h2>(AIII)</h2>
+<p>Viruses</p>
+<p>Mucocutaneous Acyclovir 5 mg/kg IV every 8 hours GI intolerance, crystalluria</p>
+<p>herpes simplex until lesions regress, then acyclovir</p>
+<p>400 mg orally three times daily until</p>
+<p>complete healing (famciclovir or</p>
+<p>valacyclovir is alternative) (AIII)</p>
+<p>(Continued )</p>
+<p>438</p>
+<h2>CH41.INDD 438 19-11-2020 15:25:11</h2>
+<div class="table-container"><table><tr><th>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected
+Individuals (Continued )</th><th></th><th></th></tr><tr><td>Clinical Disease</td><td>Preferred Initial Therapies
+for Acute Infection in Adults
+(Strength of Recommendation in
+Parentheses)</td><td>Common Drug- or
+Dose-Limiting Adverse
+Reactions</td></tr><tr><td>Coccidioidomycosis</td><td>Liposomal amphotericin B 3–5 mg/
+kg/day IV until clinical improvement
+(usually after 500–1000 mg) then
+switch to azole (AIII)a</td><td>Same as above</td></tr><tr><td></td><td>or</td><td></td></tr><tr><td></td><td>Fluconazole 400–800 mg once daily
+(meningeal disease) (AII)a</td><td>Same as above</td></tr><tr><td>Protozoa</td><td></td><td></td></tr><tr><td>Toxoplasmic
+encephalitis</td><td>Pyrimethamine 200 mg orally once,
+then 50–75 mg/day</td><td>Bone marrow suppression</td></tr><tr><td></td><td>plus</td><td></td></tr><tr><td></td><td>Sulfadiazine 1–1.5 g orally four
+times daily</td><td>Rash, drug fever</td></tr><tr><td></td><td>and</td><td></td></tr><tr><td></td><td>Leucovorin 10–25 mg orally daily for
+6 weeks (AI)a</td><td></td></tr><tr><td>Isosporiasis</td><td>Trimethoprim and sulfamethoxazole:
+160 mg trimethoprim and 800 mg
+sulfamethoxazole orally or IV four
+times daily for 10 days (AII)a</td><td>Same as above</td></tr><tr><td>Bacteria</td><td></td><td></td></tr><tr><td>Mycobacterium avium
+complex</td><td>Clarithromycin 500 mg orally twice
+daily, plus ethambutol 15 mg/kg/
+day orally (AI) for at least 12 months</td><td>GI intolerance, optic
+neuritis, peripheral
+neuritis, elevated
+liver tests</td></tr><tr><td>Salmonella
+enterocolitis or
+bacteremia</td><td>Ciprofloxacin 500–750 mg orally (or
+400 mg IV) twice daily for 14 days
+(longer duration for bacteremia or
+advanced HIV) (AIII)</td><td>GI intolerance, headache,
+dizziness</td></tr><tr><td>Campylobacter
+enterocolitis
+(mild-to-moderate)</td><td>Ciprofloxacin 500–750 mg orally (or
+400 mg IV) twice daily for 7–10
+days (or longer with bacteremia)
+(BIII)</td><td>Same as above</td></tr><tr><td>Shigella enterocolitis</td><td>Ciprofloxacin 500–750 mg orally (or
+400 mg IV) twice daily for 7–10
+days (or 14 days for bacteremia)
+(AIII)</td><td>Same as above</td></tr><tr><td>Viruses</td><td></td><td></td></tr><tr><td>Mucocutaneous
+herpes simplex</td><td>Acyclovir 5 mg/kg IV every 8 hours
+until lesions regress, then acyclovir
+400 mg orally three times daily until
+complete healing (famciclovir or
+valacyclovir is alternative) (AIII)</td><td>GI intolerance, crystalluria
+(Continued )</td></tr></table></div><h2>Human Immunodeficiency Virus Infection | CHAPTER 41</h2>
+<p>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected</p>
+<p>Individuals (Continued )</p>
+<p>Preferred Initial Therapies</p>
+<p>for Acute Infection in Adults Common Drug- or</p>
+<p>(Strength of Recommendation in Dose-Limiting Adverse</p>
+<p>Clinical Disease Parentheses) Reactions</p>
+<p>Primary varicella-zoster Acyclovir 10–15 mg/kg every 8 hours Obstructive nephropathy,</p>
+<p>IV for 7–10 days (severe cases), then CNS symptoms</p>
+<p>switch to oral valacyclovir 1 g three</p>
+<p>times daily after defervescence</p>
+<p>(famciclovir or acyclovir is</p>
+<p>alternative) (AIII)</p>
+<p>Cytomegalovirus Intravitreal ganciclovir (2 mg) Neutropenia,</p>
+<p>(retinitis) or foscarnet (2.4 mg) for 1–4 thrombocytopenia</p>
+<p>doses over 7–10 days (for</p>
+<p>sight threatening lesions) plus</p>
+<p>valganciclovir 900 mg twice daily</p>
+<p>for 14–21 days then once daily until</p>
+<p>immune recovery from ART (AIII)a</p>
+<p>Cytomegalovirus Ganciclovir 5 mg/kg IV every 12 hours Same as above</p>
+<p>esophagitis or for 21–42 days; may switch to</p>
+<p>colitis valganciclovir 900 mg orally every</p>
+<p>12 hours when oral therapy can be</p>
+<p>tolerated (BI)</p>
+<p>aMaintenance therapy is recommended.</p>
+<p>ART, antiretroviral therapy; CSF, cerebrospinal fluid; HIV, human immunodeficiency virus.</p>
+<p>See Table 41-3 for levels of evidence-based recommendations.</p>
+<p>or to complete a course of therapy after a response has been achieved with IV</p>
+<p>administration.</p>
+<li>The more common adverse reactions seen with trimethoprim–sulfamethoxazole are</li>
+<p>rash (including Stevens–Johnson syndrome), fever, leukopenia, elevated serum trans-</p>
+<p>aminases, and thrombocytopenia. The incidence of these adverse reactions is higher</p>
+<p>in HIV-infected individuals than in those not infected with HIV. Mild rashes should</p>
+<p>be watched closely for progression to more severe reactions but are not an absolute</p>
+<p>contraindication to continuing therapy.</p>
+<li>For pentamidine, side effects include hypotension, tachycardia, nausea, vomiting,</li>
+<p>severe hypoglycemia or hyperglycemia, pancreatitis, irreversible diabetes mellitus,</p>
+<p>elevated transaminases, nephrotoxicity, leukopenia, and cardiac arrhythmias.</p>
+<p>Prophylaxis</p>
+<li>Primary prophylaxis of PCP is recommended for any HIV-infected person who has a</li>
+<p>CD4 lymphocyte count less than 200 cells/mm3 (200 ×106/L) (or CD4 percentage of</p>
+<p>total lymphocytes &lt;14%) or a history of oropharyngeal candidiasis. Secondary pro-</p>
+<p>phylaxis is recommended for all HIV-infected individuals who have had a previous</p>
+<p>episode.</p>
+<li>Trimethoprim–sulfamethoxazole is the preferred therapy for both primary and</li>
+<p>secondary prophylaxis of PCP in adults and adolescents. The recommended dose in</p>
+<h2>adults and adolescents is one double-strength tablet daily.</h2>
+<p>See Chapter 143, Human Immunodeficiency Virus Infection, authored by Peter L. Anderson,</p>
+<p>Jenna Yager, and Courtney V. Fletcher, for a more detailed discussion of this topic.</p>
+<p>439</p>
+<h2>CH41.INDD 439 19-11-2020 15:25:11</h2>
+<div class="table-container"><table><tr><th>TABLE 41-3 Selected Therapies for Common Opportunistic Pathogens in HIV-Infected
+Individuals (Continued )</th><th></th><th></th></tr><tr><td>Clinical Disease</td><td>Preferred Initial Therapies
+for Acute Infection in Adults
+(Strength of Recommendation in
+Parentheses)</td><td>Common Drug- or
+Dose-Limiting Adverse
+Reactions</td></tr><tr><td>Primary varicella-zoster</td><td>Acyclovir 10–15 mg/kg every 8 hours
+IV for 7–10 days (severe cases), then
+switch to oral valacyclovir 1 g three
+times daily after defervescence
+(famciclovir or acyclovir is
+alternative) (AIII)</td><td>Obstructive nephropathy,
+CNS symptoms</td></tr><tr><td>Cytomegalovirus
+(retinitis)</td><td>Intravitreal ganciclovir (2 mg)
+or foscarnet (2.4 mg) for 1–4
+doses over 7–10 days (for
+sight threatening lesions) plus
+valganciclovir 900 mg twice daily
+for 14–21 days then once daily until
+immune recovery from ART (AIII)a</td><td>Neutropenia,
+thrombocytopenia</td></tr><tr><td>Cytomegalovirus
+esophagitis or
+colitis</td><td>Ganciclovir 5 mg/kg IV every 12 hours
+for 21–42 days; may switch to
+valganciclovir 900 mg orally every
+12 hours when oral therapy can be
+tolerated (BI)</td><td>Same as above</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. Venous Thromboembolism</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>14. Venous Thromboembolism</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>156</p>
+<h2>RETPAHC</h2>
+<p>14</p>
+<p>Venous Thromboembolism</p>
+<li>Venous thromboembolism (VTE) results from clot formation in the venous circulation</li>
+<p>and is manifested as deep vein thrombosis (DVT) and pulmonary embolism (PE).</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Risk factors for VTE include increasing age, history of VTE, and aspects related to</li>
+<p>Virchow’s triad: (1) blood stasis (eg, immobility and obesity); (2) vascular injury</p>
+<p>(eg, surgery, trauma, venous catheters); and (3) hypercoagulability (eg, malignancy,</p>
+<p>coagulation factor abnormalities, antiphospholipid antibodies, certain drugs).</p>
+<li>The most common inherited hypercoagulability disorder is activated protein C (aPC)</li>
+<p>resistance (Caucasian prevalence 2%–7%), which increases the risk of VTE three-</p>
+<p>fold. Most aPC resistance results from a factor V gene mutation (known as factor</p>
+<p>V Leiden) that renders it resistant to degradation by aPC.</p>
+<li>The prothrombin G20210A mutation is the second most frequent inherited hyper-</li>
+<p>coagulability disorder (Caucasian prevalence 2%–4%) and imparts a threefold</p>
+<p>increased risk of VTE. The mutation increases circulating prothrombin and may</p>
+<p>enhance thrombin generation.</p>
+<li>Inherited deficiencies of protein C, protein S, and antithrombin occur in <1% of the</li>
+<p>population and may increase the lifetime VTE risk by as much as sevenfold.</p>
+<li>Normal hemostasis maintains circulatory system integrity after blood vessel damage.</li>
+<p>Disruption of the endothelial cell lining with injury results in platelet activation and</p>
+<p>tissue-factor–mediated clotting factor cascade initiation, culminating in thrombin</p>
+<p>formation and ultimately a fibrin clot. In contrast to physiologic hemostasis, patho-</p>
+<p>logic VTE often occurs without gross vessel wall damage and may be triggered by</p>
+<p>tissue factor (TF) brought to the growing thrombus by circulating microparticles.</p>
+<p>Clots causing VTE impair blood flow and often cause complete vessel occlusion.</p>
+<li>Exposure of blood to damaged vessel endothelium causes platelets to become</li>
+<p>activated after binding to adhesion proteins (eg, von Willebrand factor, collagen).</p>
+<p>Activated platelets recruit additional platelets, causing growth of the platelet throm-</p>
+<p>bus. Activated platelets change shape and release components that sustain further</p>
+<p>thrombus formation at the site. Activated platelets express the adhesion molecule</p>
+<p>P-selectin, which facilitates capture of TF-bearing microparticles, resulting in fibrin</p>
+<p>clot formation via the coagulation cascade.</p>
+<li>The conceptual model for the coagulation cascade involves reactions that occur on</li>
+<p>cell surfaces in three overlapping phases (Fig. 14-1):</p>
+<p>✓ Initiation: A TF/VIIa complex (known as extrinsic tenase or X-ase) on cells bear-</p>
+<p>ing TF that have been exposed after vessel injury or captured via P-selectin acti-</p>
+<p>vates limited amounts of factors IX and X. Factor Xa then associates with factor</p>
+<p>Va to form the prothrombinase complex, which cleaves prothrombin (factor II) to</p>
+<p>generate a small amount of thrombin (factor IIa). Factor IXa moves to the surface</p>
+<p>of activated platelets in the growing platelet thrombus. Tissue factor pathway</p>
+<p>inhibitor (TFPI) regulates TF/VIIa-induced coagulation, rapidly terminating the</p>
+<p>initiation phase.</p>
+<p>✓ Amplification: Thrombin produced during the initiation phase activates factors</p>
+<p>V and VIII, which bind to platelet surfaces and support the large-scale thrombin</p>
+<p>generation occurring during the propagation phase. Platelet-bound factor XI is</p>
+<p>also activated by thrombin during amplification.</p>
+<p>✓ Propagation: A burst of thrombin generation occurs as factor VIIIa/IXa complex</p>
+<p>(known as intrinsic tenase) promotes factor Xa formation and prothrombinase</p>
+<p>complexes assemble on the surface of activated platelets, accelerating thrombin</p>
+<p>generation. Thrombin generation is further supported by factor XIa bound to</p>
+<p>platelet surfaces, which activates factor IX to form additional intrinsic tenase.</p>
+<p>ch14.indd 156 18-11-2020 16:21:47</p>
+<div class="table-container"><table><tr><th>Venous Thromboembolism</th><th>14
+00</th><th>RETPAHC</th></tr></table></div><h2>Venous Thromboembolism | CHAPTER 14</h2>
+<h2>A B C D</h2>
+<p>Platelet thrombus P-selectin Microparticle bearing tissue factor Fibrin clot</p>
+<p>FIGURE 14-1. Model of pathologic thrombus formation: (A) activated platelets</p>
+<p>adhere to vascular endothelium; (B) activated platelets express P-selectin;</p>
+<p>(C) pathologic microparticles express active tissue factor and are present at a</p>
+<p>high concentration in the circulation—these microparticles accumulate, perhaps</p>
+<p>by binding to activated platelets expressing P-selectin; and (D) tissue factor can</p>
+<p>lead to thrombin generation, and thrombin generation leads to platelet thrombus</p>
+<p>formation and fibrin generation.</p>
+<li>Thrombin then converts fibrinogen to fibrin monomers that precipitate and polym-</li>
+<p>erize to form fibrin strands. Factor XIIIa (also activated by thrombin) covalently</p>
+<p>bonds these strands to form an extensive meshwork that encases the aggregating</p>
+<p>platelet thrombus and red cells to form a stabilized fibrin clot.</p>
+<li>Hemostasis is controlled by antithrombotic substances produced by intact endothe-</li>
+<p>lium adjacent to damaged tissue. Thrombomodulin modulates thrombin activity</p>
+<p>by converting protein C to its activated form (aPC), which joins with protein S to</p>
+<p>inactivate factors Va and VIIIa. This prevents coagulation reactions from spreading</p>
+<p>to uninjured vessel walls. In addition, circulating antithrombin inhibits thrombin and</p>
+<p>factor Xa. Heparan sulfate is secreted by endothelial cells and accelerates antithrom-</p>
+<p>bin activity. These self-regulatory mechanisms limit fibrin clot formation to the zone</p>
+<p>of vessel injury.</p>
+<li>The fibrinolytic system dissolves formed blood clots; inactive plasminogen is con-</li>
+<p>verted to plasmin by tissue plasminogen activator (tPA). Plasmin is an enzyme that</p>
+<p>degrades the fibrin mesh into soluble end products (known as fibrin degradation</p>
+<p>products including d-dimer).</p>
+<li>Thrombi can form in any part of the venous circulation but usually begin in the</li>
+<p>leg(s). Isolated calf vein thrombi seldom embolize; those involving the popliteal and</p>
+<p>larger veins above it are more likely to embolize and lodge in the pulmonary artery</p>
+<p>or one of its branches, occluding blood flow to the lung and impairing gas exchange.</p>
+<p>Without treatment, the affected lung area becomes necrotic and oxygen delivery to</p>
+<p>other vital organs may decrease, potentially resulting in fatal circulatory collapse.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Some patients with DVT are asymptomatic. Symptoms may include unilateral leg</li>
+<p>swelling, pain, tenderness, erythema, and warmth. Physical signs may include a pal-</p>
+<p>pable cord and a positive Homan sign.</p>
+<li>Symptoms of PE may include cough, chest pain or tightness, shortness of breath, pal-</li>
+<p>pitations, hemoptysis, dizziness, or lightheadedness. Signs of PE include tachypnea,</p>
+<p>tachycardia, diaphoresis, cyanosis, hypotension, shock, and cardiovascular collapse.</p>
+<li>Postthrombotic syndrome may produce chronic lower extremity swelling, pain, ten-</li>
+<p>derness, skin discoloration, and ulceration.</p>
+<h2>DIAGNOSIS</h2>
+<li>Assessment should focus on identifying risk factors (see section Pathophysiology).</li>
+<li>Compression ultrasound (CUS) and computed tomography pulmonary angiography</li>
+<p>(CTPA) are used most often for initial evaluation of suspected VTE.</p>
+<p>157</p>
+<p>ch14.indd 157 18-11-2020 16:21:48</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>Radiographic contrast studies (venography, pulmonary angiography) are the most accu-</li>
+<p>rate and reliable diagnostic methods but are expensive, invasive, and difficult to perform</p>
+<p>and evaluate. The ventilation-perfusion (V/Q) scan is an alternative PE diagnostic test.</p>
+<li>Serum concentration of d-dimer is nearly always elevated; values <500 ng/mL</li>
+<p>(mcg/L) combined with clinical probability scores are useful in ruling out VTE.</p>
+<li>Clinical assessment checklists (eg, Wells score) can be used to determine whether a</li>
+<p>patient is likely or unlikely to have DVT or PE.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The initial goal is to prevent VTE in at-risk populations. Treat-</li>
+<p>ment of VTE is aimed at preventing thrombus extension and embolization, reducing</p>
+<p>recurrence risk, and preventing long-term complications (eg, postthrombotic syn-</p>
+<p>drome, chronic thromboembolic pulmonary hypertension).</p>
+<h2>PREVENTION OF VTE</h2>
+<li>Nonpharmacologic methods improve venous blood flow by mechanical means and</li>
+<p>include early ambulation, graduated compression stockings, intermittent pneumatic</p>
+<p>compression (IPC) devices, and inferior vena cava filters.</p>
+<li>Hospitalized and acutely ill medical patients at high VTE risk and low bleeding risk</li>
+<p>should receive pharmacologic prophylaxis with low-dose unfractionated heparin</p>
+<p>(LDUH), low-molecular-weight heparin (LMWH), fondaparinux, or betrixaban</p>
+<p>during hospitalization or until fully ambulatory. Routine pharmacologic prophylaxis</p>
+<p>is not warranted in low-risk medical patients.</p>
+<li>In general, nonorthopedic surgery patients at high VTE risk but low bleeding risk</li>
+<p>should receive LDUH or LMWH prophylaxis plus graduated compression stockings</p>
+<p>or IPC. Low-risk patients able to ambulate early after surgery do not routinely require</p>
+<p>VTE prophylaxis.</p>
+<li>Recommended VTE prophylaxis following joint replacement surgery may include</li>
+<p>aspirin, adjusted-dose warfarin, LDUH, LMWH, fondaparinux, dabigatran,</p>
+<p>apixaban, or rivaroxaban for at least 10 days postsurgery.</p>
+<li>VTE prophylaxis after surgery should be given throughout the period of increased VTE</li>
+<p>risk. For general surgical procedures, prophylaxis can be discontinued when patients</p>
+<p>are able to ambulate and have no other VTE risk factors. Extended prophylaxis may be</p>
+<p>beneficial for patients undergoing lower extremity orthopedic procedures; most clinical</p>
+<p>trials support use of prophylaxis for 15–42 days after total knee or hip replacement surgery.</p>
+<li>Refer to Antithrombotic Therapy and Prevention of Thrombosis, 9th edition: Evidence-</li>
+<p>Based Clinical Practice Guidelines published by the American College of Chest Physi-</p>
+<p>cians for information on prophylaxis strategies based on clinical situation and risk</p>
+<p>level for VTE.</p>
+<h2>GENERAL APPROACH TO TREATMENT OF VTE</h2>
+<li>Anticoagulation is the primary treatment for VTE; DVT and PE are treated similarly</li>
+<p>(Fig. 14-2).</p>
+<li>After VTE is confirmed objectively, therapy with a rapid-acting anticoagulant should</li>
+<p>be instituted as soon as possible. Anticoagulants can be administered in the outpa-</p>
+<p>tient setting in most patients with DVT and in carefully selected hemodynamically</p>
+<h2>stable patients with PE.</h2>
+<li>Stable patients with DVT or PE who have normal vital signs, low bleeding risk,</li>
+<p>and no other uncontrolled comorbid conditions requiring hospitalization can be</p>
+<p>discharged early or treated entirely on an outpatient basis (if considered appropriate</p>
+<p>candidates). Hemodynamically unstable patients with PE should be admitted for</p>
+<p>initiation of anticoagulation therapy.</p>
+<li>Three months is the appropriate initial duration of anticoagulation therapy for the</li>
+<p>acute first episode of VTE for all patients. This duration is also recommended when</p>
+<p>the initial thrombotic event was associated with a major transient or reversible risk</p>
+<p>factor (eg, surgery, hospitalization).</p>
+<p>158</p>
+<p>ch14.indd 158 18-11-2020 16:21:49</p>
+<p>159</p>
+<p>Venous</p>
+<p>Thromboembolism</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>14</p>
+<p>Objectively confirmed VTE</p>
+<p>Does the patient have: Yes Thrombolytic therapy followed by</p>
+<li>PE with severe cardiopulmonary compromise, or anticoagulation with UFH or LMWH</li>
+<li>DVT with high risk of limb loss</li>
+<p>No</p>
+<li>Place IVC filter</li>
+<p>D - o A e c s ti v th e e b p le a e t d ie in n g t , h o a r ve: Yes e Is x t V re T m E i a ty l o D w V e T r ? Yes - Initiate c a o n n ti t c ra o i a n g d u ic la a t t i i o o n n w re h s e o n lv b e l s eeding or</p>
+<h2>- Remove IVC filter as soon as clinically acceptable</h2>
+<li>Contraindication to anticoagulation</li>
+<p>No</p>
+<p>No</p>
+<p>Does the patient have:</p>
+<p>UFH x 5 days overlap with</p>
+<li>PE with poor prognosis,1 or Yes Hospitalize for VTE treatment CrCL < 30 mL/ Yes</li>
+<p>warfarin and INR &gt; 2</p>
+<h2>- DVT unsuitable for outpatient treatment2 min?</h2>
+<p>No</p>
+<p>Outpatient VTE treatment</p>
+<p>No</p>
+<li>Rivaroxaban</li>
+<li>Apixaban</li>
+<li>LMWH/fondaparinux x 5 days THEN dabigatran or edoxaban</li>
+<li>LMWH/fondaparinux x 5 days OVERLAP with warfarin and INR > 2</li>
+<p>1PESI score ≥86 points: age (1 pt for each year); male sex (10 pts); cancer (30 pts); heart failure (10 pts); COPD (10 pts); heart rate &gt;110 bpm (20 pts); respiratory rate &gt;30/min (20 pts); temperature</p>
+<p>&lt;36°C (20 pts); altered mental status (60 pts); O sat &lt;90% (20 pts).</p>
+<p>2Severe symptoms, renal impairment, inability to o2btain or administer appropriate initial anticoagulant therapy, or high bleeding risk.</p>
+<p>(CrCl, creatinine clearance via Cockcroft and Gault equation; DVT, deep vein thrombosis; INR, international normalized ratio; IVC, inferior vena cava; LMWH, low-molecular-weight heparin; PE, pulmo-</p>
+<p>nary embolism; UFH, unfractionated heparin; VTE, venous thromboembolism [includes DVT and PE].)</p>
+<p>FIGURE 14-2. Acute treatment of venous thromboembolism (VTE).</p>
+<p>ch14.indd</p>
+<p>159</p>
+<p>18-11-2020</p>
+<p>16:21:49</p>
+<div class="table-container"><table><tr><th></th></tr><tr><td>Yes</td></tr></table></div><div class="table-container"><table><tr><th>Yes</th></tr><tr><td></td></tr></table></div><div class="table-container"><table><tr><th></th></tr><tr><td>Yes</td></tr></table></div><div class="table-container"><table><tr><th>No</th></tr><tr><td></td></tr></table></div><div class="table-container"><table><tr><th>N</th><th>o</th></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>Continuing anticoagulation is required to prevent new VTE episodes not directly</li>
+<p>related to the preceding episode. Consider extended therapy beyond 3 months for</p>
+<p>patients with a first unprovoked (idiopathic) VTE when feasible because of a rela-</p>
+<p>tively high recurrence rate. In patients with VTE and active cancer, extended therapy</p>
+<p>is rarely stopped because of a high recurrence risk.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Encourage patients to ambulate as much as symptoms permit.</li>
+<li>Ambulation in conjunction with graduated compression stockings results in faster</li>
+<p>reduction in pain and swelling than strict bedrest with no increase in embolization</p>
+<p>rate.</p>
+<li>Inferior vena cava filters should only be used when anticoagulants are contraindi-</li>
+<p>cated due to active bleeding.</p>
+<li>Elimination of the obstructing thrombus via thrombolysis or thrombectomy may be</li>
+<p>warranted in life- or limb-threatening DVT.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Direct Oral Anticoagulants (DOACs)</p>
+<li>Rivaroxaban, apixaban, edoxaban, and betrixaban are oral selective inhibitors of</li>
+<p>both free and clot-bound factor Xa and do not require antithrombin to exert their</p>
+<p>anticoagulant effect. Dabigatran is an oral selective, reversible, direct factor IIa</p>
+<p>inhibitor.</p>
+<li>See Table 14-1 for DOAC indications and dosing. Use DOACs with caution in</li>
+<pre><code>patients with renal dysfunction.</code></pre>
+<li>Single-drug oral therapy with rivaroxaban or apixaban produces similar rates of</li>
+<p>recurrent VTE compared to traditional therapy with warfarin overlapped with enoxa-</p>
+<p>parin and perhaps less major bleeding. Both drugs are initiated with a higher dose and</p>
+<p>subsequently reduced to a maintenance dose. Until further data are available, these</p>
+<p>drugs should not be used in patients with creatinine clearance (CrCl) &lt;25 mL/min</p>
+<p>(0.42 mL/s), active cancer, and patients requiring thrombolytic therapy. Neither drug</p>
+<p>requires routine anticoagulation monitoring, but the high acquisition cost may be a</p>
+<p>barrier for some patients.</p>
+<li>Edoxaban and dabigatran must be given only after at least 5 days of subcutaneous</li>
+<p>(SC) anticoagulation with UFH, LMWH, or fondaparinux. These regimens were</p>
+<p>noninferior to warfarin in patients with acute VTE for the outcome of recurrent</p>
+<p>VTE. Compared to warfarin, dabigatran caused similar major bleeding and edoxaban</p>
+<p>caused significantly less bleeding. Until further data are available, these agents should</p>
+<p>not be given to patients with hemodynamically unstable PE or at high bleeding risk.</p>
+<li>Bleeding is the most common adverse effect with DOAC therapy. Patients experienc-</li>
+<p>ing significant bleeding should receive routine supportive care and discontinuation of</p>
+<p>anticoagulant therapy. Idarucizumab (Praxbind) 5 g IV rapidly reverses the dabigatran</p>
+<p>anticoagulant effect when needed during emergency situations (eg, life-threatening</p>
+<p>bleeding) and when there is need for urgent surgical intervention. Recombinant</p>
+<p>coagulation factor Xa (also known as andexanet alfa; Andexxa) can reverse life-</p>
+<p>threatening bleeding in patients taking rivaroxaban or apixaban. Adding aspirin to</p>
+<p>DOAC therapy nearly doubles bleeding rates and should be avoided in most patients</p>
+<p>with VTE. All DOACs are P-gp substrates and subject to changes in anticoagulant</p>
+<p>effect when coadministered with P-gp inhibitors or inducers. Rivaroxaban and apixa-</p>
+<p>ban are subject to interactions involving inhibitors or inducers of CYP 3A4.</p>
+<p>Low-Molecular-Weight Heparin</p>
+<li>LMWH fragments produced by either chemical or enzymatic depolymerization of</li>
+<p>UFH are heterogeneous mixtures of sulfated glycosaminoglycans with approximately</p>
+<p>one-third the mean UFH molecular weight. LMWH prevents thrombus propagation</p>
+<p>by accelerating the activity of antithrombin similar to UFH.</p>
+<p>160</p>
+<p>ch14.indd 160 18-11-2020 16:21:49</p>
+<h2>Venous Thromboembolism | CHAPTER 14</h2>
+<p>TABLE 14-1 Approved Indications and Dosing for the Direct Oral Anticoagulants</p>
+<p>Reduction</p>
+<p>in Risk of</p>
+<p>Generic Recurrent VTE</p>
+<p>(Brand) in Patients at</p>
+<p>Name VTE Prophylaxis Acute VTE Treatment Continued Risk</p>
+<p>Dabigatran Hip replacement surgery: 150 mg PO twice daily 150 mg PO twice</p>
+<p>(Pradaxa) CrCl &gt;30 mL/min: with or without food daily with or</p>
+<p>110 mg the first day FOLLOWING at least without food</p>
+<p>beginning 1–4 hours 5 days of parenteral</p>
+<p>after surgery once anticoagulant therapy</p>
+<p>hemostasis is achieved,</p>
+<p>then 220 mg once</p>
+<p>daily for 28–35 days</p>
+<p>CrCl ≤30 mL/min or</p>
+<p>on dialysis: Dosing</p>
+<p>recommendations</p>
+<p>cannot be provided</p>
+<p>Rivaroxaban Hip or knee replacement 15 mg PO twice daily with 10 mg PO once</p>
+<p>(Xarelto) surgery: 10 mg PO food for days 1–21, then daily with or</p>
+<p>once daily with 20 mg PO once daily without food</p>
+<p>or without food with food beginning on</p>
+<p>beginning 6–10 hours day 22</p>
+<p>after surgery once</p>
+<p>hemostasis is achieved</p>
+<p>and continuing for 12</p>
+<p>(knee) to 35 (hip) days</p>
+<p>Apixaban Hip or knee replacement 10 mg PO twice daily with 2.5 mg PO twice</p>
+<p>(Eliquis) surgery: 2.5 mg PO or without food on days daily with or</p>
+<p>twice daily with 1–7, then 5 mg PO twice without food</p>
+<p>or without food daily beginning on day 8</p>
+<p>beginning 12–24</p>
+<p>hours after surgery</p>
+<p>and continuing for 12</p>
+<p>(knee) or 35 (hip) days</p>
+<p>Edoxaban Not approved for use 60 mg PO once daily with or Not approved</p>
+<p>(Savaysa) without food FOLLOWING for use</p>
+<p>at least 5 days of</p>
+<p>parenteral anticoagulant</p>
+<p>therapy; 30 mg once</p>
+<p>daily with CrCl 15–50 mL/</p>
+<p>min (0.25–0.83 mL/sec)</p>
+<p>or body weight ≤60 kg</p>
+<p>or who use certain P-gp</p>
+<p>inhibitors</p>
+<p>Betrixaban Adults hospitalized for Not approved for use Not approved</p>
+<p>(Bevyxxa) acute medical illness: for use</p>
+<p>Initial single dose of</p>
+<p>160 mg PO with food,</p>
+<p>followed by 80 mg</p>
+<p>once daily with food</p>
+<p>for 35–42 days</p>
+<p>PO, by mouth; CrCl, creatinine clearance; P-gp, P-glycoprotein; VTE, venous thromboembolism.</p>
+<p>161</p>
+<p>ch14.indd 161 18-11-2020 16:21:49</p>
+<div class="table-container"><table><tr><th>TABLE 14-1 Approved Indications and Dosing for the Direct Oral Anticoagulants</th><th></th><th></th><th></th></tr><tr><td>Generic
+(Brand)
+Name</td><td>VTE Prophylaxis</td><td>Acute VTE Treatment</td><td>Reduction
+in Risk of
+Recurrent VTE
+in Patients at
+Continued Risk</td></tr><tr><td>Dabigatran
+(Pradaxa)</td><td>Hip replacement surgery:
+CrCl &gt;30 mL/min:
+110 mg the first day
+beginning 1–4 hours
+after surgery once
+hemostasis is achieved,
+then 220 mg once
+daily for 28–35 days
+CrCl ≤30 mL/min or
+on dialysis: Dosing
+recommendations
+cannot be provided</td><td>150 mg PO twice daily
+with or without food
+FOLLOWING at least
+5 days of parenteral
+anticoagulant therapy</td><td>150 mg PO twice
+daily with or
+without food</td></tr><tr><td>Rivaroxaban
+(Xarelto)</td><td>Hip or knee replacement
+surgery: 10 mg PO
+once daily with
+or without food
+beginning 6–10 hours
+after surgery once
+hemostasis is achieved
+and continuing for 12
+(knee) to 35 (hip) days</td><td>15 mg PO twice daily with
+food for days 1–21, then
+20 mg PO once daily
+with food beginning on
+day 22</td><td>10 mg PO once
+daily with or
+without food</td></tr><tr><td>Apixaban
+(Eliquis)</td><td>Hip or knee replacement
+surgery: 2.5 mg PO
+twice daily with
+or without food
+beginning 12–24
+hours after surgery
+and continuing for 12
+(knee) or 35 (hip) days</td><td>10 mg PO twice daily with
+or without food on days
+1–7, then 5 mg PO twice
+daily beginning on day 8</td><td>2.5 mg PO twice
+daily with or
+without food</td></tr><tr><td>Edoxaban
+(Savaysa)</td><td>Not approved for use</td><td>60 mg PO once daily with or
+without food FOLLOWING
+at least 5 days of
+parenteral anticoagulant
+therapy; 30 mg once
+daily with CrCl 15–50 mL/
+min (0.25–0.83 mL/sec)
+or body weight ≤60 kg
+or who use certain P-gp
+inhibitors</td><td>Not approved
+for use</td></tr><tr><td>Betrixaban
+(Bevyxxa)</td><td>Adults hospitalized for
+acute medical illness:
+Initial single dose of
+160 mg PO with food,
+followed by 80 mg
+once daily with food
+for 35–42 days</td><td>Not approved for use</td><td>Not approved
+for use</td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>LMWH given SC in fixed, weight-based doses is at least as effective as UFH given</li>
+<p>IV for VTE treatment. LMWH has largely replaced UFH for initial VTE treatment</p>
+<p>due to improved pharmacokinetic and pharmacodynamic profiles and ease of use.</p>
+<p>Advantages of LMWH over UFH include: (1) predictable anticoagulation dose</p>
+<p>response; (2) improved SC bioavailability; (3) dose-independent clearance; (4) lon-</p>
+<p>ger biologic half-life; (5) lower incidence of thrombocytopenia; and (6) less need for</p>
+<p>routine laboratory monitoring.</p>
+<li>Recommended doses (based on actual body weight) include:</li>
+<p>✓ Enoxaparin (Lovenox): For acute DVT treatment with or without PE, 1 mg/kg SC</p>
+<p>every 12 hours or 1.5 mg/kg every 24 hours;</p>
+<p>✓ Dalteparin (Fragmin): For acute DVT treatment, 200 units/kg SC once daily or</p>
+<p>100 units/kg SC twice daily (not FDA approved in the United States for this indica-</p>
+<p>tion). For VTE in patients with cancer, 200 units/kg SC every 24 hours for 30 days, fol-</p>
+<p>lowed by 150 units SC every 24 hours. The maximum total daily dose is 18,000 units.</p>
+<li>In patients without cancer, acute LMWH treatment is generally transitioned to long-</li>
+<p>term warfarin therapy after 5–10 days.</p>
+<li>Routine laboratory monitoring is unnecessary because LMWH anticoagulant</li>
+<p>response is predictable when given SC. Prior to initiating therapy, obtain a baseline</p>
+<p>complete blood cell count (CBC) with platelet count and serum creatinine. Check</p>
+<p>the CBC every 5–10 days during the first 2 weeks of LMWH therapy and every 2–4</p>
+<p>weeks thereafter to monitor for occult bleeding. Measuring anti–factor Xa activity is</p>
+<p>the most widely used method to monitor LMWH; routine measurement is unneces-</p>
+<p>sary in stable, uncomplicated patients. Monitoring may be considered in patients who</p>
+<p>have significant renal impairment, are morbidly obese, or are pregnant.</p>
+<li>As with other anticoagulants, bleeding is the most common adverse effect of LMWH</li>
+<p>therapy, but major bleeding may be less common than with UFH. If major bleeding</p>
+<p>occurs, IV protamine sulfate can be administered, but it cannot neutralize the anti-</p>
+<p>coagulant effect completely. The recommended protamine sulfate dose is 1 mg per</p>
+<p>1 mg of enoxaparin or 1 mg per 100 anti–factor Xa units of dalteparin administered</p>
+<p>in the previous 8 hours. A second dose of 0.5 mg per 1 mg or 100 anti–factor Xa</p>
+<p>units can be given if bleeding continues. Smaller protamine doses can be used if the</p>
+<p>LMWH dose was given in the previous 8–12 hours. Protamine sulfate is not recom-</p>
+<p>mended if the LMWH was given more than 12 hours earlier.</p>
+<li>Thrombocytopenia can occur with LMWHs, but the incidence of heparin-induced</li>
+<p>thrombocytopenia (HIT) is one-third that of UFH. LMWH has been associated with</p>
+<p>osteopenia, but the risk of osteoporosis appears to be lower with LMWH than with UFH.</p>
+<p>Fondaparinux</p>
+<li>Fondaparinux (Arixtra) prevents thrombus generation and clot formation by indi-</li>
+<p>rectly inhibiting factor Xa activity through its interaction with antithrombin. Unlike</p>
+<p>UFH or LMWH, fondaparinux inhibits only factor Xa activity.</p>
+<li>Fondaparinux is a safe and effective alternative to LMWH for acute VTE treatment</li>
+<p>and is likewise followed by long-term warfarin therapy.</p>
+<li>Fondaparinux is dosed once daily via weight-based SC injection: 5 mg if <50 kg,</li>
+<p>7.5 mg if 50–100 kg, and 10 mg if &gt;100 kg.</p>
+<li>Patients receiving fondaparinux do not require routine coagulation testing. Deter-</li>
+<pre><code>mine baseline kidney function before starting therapy because fondaparinux is con-</code></pre>
+<p>traindicated if CrCl is &lt;30 mL/min (0.5 mL/s).</p>
+<li>Bleeding is the primary adverse effect associated with fondaparinux therapy. Measure</li>
+<p>CBC at baseline and periodically thereafter to detect occult bleeding. Monitor for</p>
+<p>signs and symptoms of bleeding daily. There is no specific antidote to reverse the</p>
+<p>antithrombotic activity of fondaparinux.</p>
+<p>Unfractionated Heparin</p>
+<li>Unfractionated heparin binds to antithrombin, provoking a conformation change that</li>
+<p>makes it much more potent in inhibiting the activity of factors IXa, Xa, XIIa, and IIa.</p>
+<p>162</p>
+<p>ch14.indd 162 18-11-2020 16:21:49</p>
+<h2>Venous Thromboembolism | CHAPTER 14</h2>
+<p>This prevents thrombus growth and propagation allowing endogenous thrombolytic</p>
+<p>systems to lyse the clot. Because some patients fail to achieve an adequate response,</p>
+<p>IV UFH has largely been replaced by LMWH, fondaparinux, and DOACs. UFH</p>
+<p>continues to have a role in patients with CrCl &lt;30 mL/min (0.5 mL/s) and unstable</p>
+<p>patients.</p>
+<li>When immediate and full anticoagulation is required, a weight-based IV loading</li>
+<p>dose followed by a continuous IV infusion is preferred (Table 14-2). Subcutaneous</p>
+<p>UFH (initial dose 333 units/kg followed by 250 units/kg every 12 hours) also provides</p>
+<p>adequate anticoagulation for treatment of acute VTE.</p>
+<li>The activated partial thromboplastin time (aPTT) is generally recommended for</li>
+<p>monitoring UFH, provided that institution-specific therapeutic ranges are defined.</p>
+<p>Measure aPTT prior to initiation of therapy and 6 hours after the start of therapy or</p>
+<p>a dose change. Adjust the UFH dose based on patient response and the institution-</p>
+<p>specific aPTT therapeutic range.</p>
+<li>Monitor patients closely for bleeding signs and symptoms during UFH therapy. If</li>
+<p>major bleeding occurs, discontinue UFH immediately, identify and treat the underly-</p>
+<p>ing bleeding source, and give protamine sulfate by slow IV infusion over 10 minutes</p>
+<p>(1 mg/100 units of UFH infused during the previous 4 hours; maximum 50 mg).</p>
+<li>HIT is a rare immunologic reaction requiring immediate intervention and that may</li>
+<p>be fatal. The most common complication of HIT is VTE; arterial thrombosis occurs</p>
+<p>less frequently. Thrombocytopenia is the most common clinical manifestation, but</p>
+<p>serologic confirmation of heparin antibodies is required to diagnose HIT. Use of a</p>
+<p>clinical prediction rule, such as the 4Ts score (Thrombocytopenia, Timing of platelet</p>
+<p>count fall or thrombosis, Thrombosis, oTher explanation for thrombocytopenia), can</p>
+<p>improve the predictive value of platelet count monitoring and heparin antibody test-</p>
+<p>ing. Discontinue all heparin if new thrombosis occurs in the setting of falling platelets</p>
+<p>in conjunction with a moderate or high 4Ts score. Alternative anticoagulation with a</p>
+<p>direct thrombin inhibitor should then be initiated.</p>
+<li>Using UFH doses of 20,000 units/day or more for longer than 6 months, espe-</li>
+<p>cially during pregnancy, is associated with significant bone loss and may lead to</p>
+<p>osteoporosis.</p>
+<p>TABLE 14-2 Weight-Baseda Dosing for Unfractionated Heparin Administered</p>
+<p>by Continuous IV Infusion</p>
+<p>Indication Initial Loading Dose Initial Infusion Rate</p>
+<p>Deep venous thrombosis/ 80–100 units/kg 17–20 units/kg/hr</p>
+<p>pulmonary embolism Maximum = 10,000 units Maximum = 2300 units/hr</p>
+<p>Activated Partial Thromboplastin Maintenance Infusion Rate</p>
+<p>Time (seconds) Dose Adjustment</p>
+<p>&lt;37 (or anti–factor Xa &lt;0.20 80 units/kg bolus, and then increase infusion by</p>
+<p>unit/mL [kU/L]) 4 units/kg/hr</p>
+<p>37–47 (or anti–factor Xa 40 units/kg bolus, and then increase infusion by</p>
+<p>0.20–0.29 unit/mL [kU/L]) 2 units/kg/hr</p>
+<p>48–71 (or anti–factor Xa No change</p>
+<p>0.30–0.70 unit/mL [kU/L])</p>
+<p>72–93 (or anti–factor Xa Decrease infusion by 1–2 units/kg/hr</p>
+<p>0.71–1 unit/mL [kU/L])</p>
+<p>&gt;93 (or anti–factor Xa &gt;1 Hold infusion for 1 hour, and then decrease by</p>
+<p>unit/mL [kU/L]) 3 units/kg/hr</p>
+<p>aUse actual body weight for all calculations. Adjusted body weight may be used for obese patients</p>
+<p>(&gt;130% of ideal body weight).</p>
+<p>163</p>
+<p>ch14.indd 163 18-11-2020 16:21:49</p>
+<div class="table-container"><table><tr><th>TABLE 14-2 Weight-Baseda Dosing for Unfractionated Heparin Administered
+by Continuous IV Infusion</th><th></th><th></th></tr><tr><td>Indication</td><td>Initial Loading Dose</td><td>Initial Infusion Rate</td></tr><tr><td>Deep venous thrombosis/
+pulmonary embolism</td><td>80–100 units/kg
+Maximum = 10,000 units</td><td>17–20 units/kg/hr
+Maximum = 2300 units/hr</td></tr><tr><td>Activated Partial Thromboplastin
+Time (seconds)</td><td>Maintenance Infusion Rate</td><td></td></tr><tr><td></td><td>Dose Adjustment</td><td></td></tr><tr><td>&lt;37 (or anti–factor Xa &lt;0.20
+unit/mL [kU/L])</td><td>80 units/kg bolus, and then increase infusion by
+4 units/kg/hr</td><td></td></tr><tr><td>37–47 (or anti–factor Xa
+0.20–0.29 unit/mL [kU/L])</td><td>40 units/kg bolus, and then increase infusion by
+2 units/kg/hr</td><td></td></tr><tr><td>48–71 (or anti–factor Xa
+0.30–0.70 unit/mL [kU/L])</td><td>No change</td><td></td></tr><tr><td>72–93 (or anti–factor Xa
+0.71–1 unit/mL [kU/L])</td><td>Decrease infusion by 1–2 units/kg/hr</td><td></td></tr><tr><td>&gt;93 (or anti–factor Xa &gt;1
+unit/mL [kU/L])</td><td>Hold infusion for 1 hour, and then decrease by
+3 units/kg/hr</td><td></td></tr></table></div><h2>SECTION 2 | Cardiovascular Disorders</h2>
+<p>Warfarin</p>
+<li>Warfarin inhibits enzymes responsible for cyclic interconversion of vitamin K in</li>
+<p>the liver. Reduced vitamin K is a cofactor required for carboxylation of the vitamin</p>
+<p>K–dependent coagulation factors II (prothrombin), VII, IX, and X and the endog-</p>
+<p>enous anticoagulant proteins C and S. By inhibiting the reduced vitamin K supply</p>
+<p>needed for production of these proteins, warfarin therapy produces coagulation</p>
+<p>proteins with less activity. By suppressing clotting factor production, warfarin pre-</p>
+<p>vents initial thrombus formation and propagation. The time required to achieve its</p>
+<p>anticoagulant effect depends on the elimination half-lives of the coagulation proteins</p>
+<p>(6 hours for factor VII and 72 hours for prothrombin). Full antithrombotic effect is</p>
+<p>not achieved for at least 6 days after warfarin therapy initiation.</p>
+<li>Because of its slow onset of effect, warfarin must be started concurrently with rapid-a cting</li>
+<p>injectable anticoagulant therapy with an overlap of at least 5 days and until an interna-</p>
+<p>tional normalized ratio (INR) of 2 or greater has been achieved for at least 24 hours.</p>
+<li>Guidelines for initiating warfarin therapy are given in Figure 14-3. The initial dose</li>
+<p>should be 5–10 mg for most patients. Lower starting doses may be acceptable in</p>
+<p>patients with advanced age, malnutrition, liver disease, or heart failure. Starting doses</p>
+<p>more than 10 mg should be avoided.</p>
+<li>Monitor warfarin therapy by the INR; the recommended target INR for VTE treat-</li>
+<p>ment is 2.5, with an acceptable range of 2–3. After an acute thromboembolic event,</p>
+<p>obtain a baseline INR and CBC prior to initiating warfarin and every 1–3 days until</p>
+<p>stabilized. Once the patient’s dose response is established, obtain an INR every 7–14</p>
+<p>days until it stabilizes, then ideally every 4–12 weeks thereafter.</p>
+<li>In general, maintenance dose changes should not be made more frequently than</li>
+<p>every 3 days. Adjust maintenance doses by calculating the weekly dose and reducing</p>
+<p>or increasing it by 5%–25%. The full effect of a dose changes may not become evident</p>
+<p>for 5–7 days.</p>
+<li>Warfarin’s primary adverse effect is bleeding that can range from mild to life threat-</li>
+<p>ening. It does not cause bleeding per se, but it exacerbates bleeding from existing</p>
+<p>lesions and enables massive bleeding from ordinarily minor sources. The likelihood</p>
+<p>of bleeding rises with increasing INR values; therefore, maintaining the INR within</p>
+<p>the target range is important to reduce bleeding risk:</p>
+<p>✓ When the INR is &gt;4.5 without evidence of bleeding, the INR can be lowered by</p>
+<p>withholding warfarin, adjusting the warfarin dose, and/or providing a small dose</p>
+<p>of vitamin K to shorten the time to return to normal INR. Although vitamin K</p>
+<p>can be given parenterally or orally, the oral route is preferred in the absence of</p>
+<p>serious bleeding.</p>
+<p>✓ If the INR is between 5 and 10 and no bleeding is present, routine vitamin K use is not</p>
+<p>recommended because it has not been shown to affect the risk of developing subse-</p>
+<p>quent bleeding or thromboembolism compared to simply withholding warfarin alone.</p>
+<p>✓ For INR &gt;10 without evidence of bleeding, oral vitamin K (phytonadione 2.5 mg)</p>
+<p>is suggested. Use vitamin K with caution in patients at high risk of recurrent</p>
+<p>thromboembolism because of the possibility of INR overcorrection.</p>
+<li>Patients with warfarin-associated major bleeding require supportive care. Rapid</li>
+<p>reversal of anticoagulation with a four-factor prothrombin complex concentrate and</p>
+<p>5–10 mg of vitamin K given by slow IV injection are also recommended.</p>
+<li>Nonhemorrhagic adverse effects of warfarin include the rare “purple toe” syndrome</li>
+<p>and skin necrosis.</p>
+<li>Because of the large number of food–drug and drug–drug interactions with warfarin,</li>
+<p>close monitoring and additional INR determinations may be indicated when other</p>
+<p>medications are initiated or discontinued or a change in consumption of vitamin</p>
+<p>K–containing foods occurs.</p>
+<p>Thrombolytics</p>
+<li>Thrombolytic agents are proteolytic enzymes that enhance conversion of plasmino-</li>
+<p>gen to plasmin, which subsequently degrades the fibrin matrix.</p>
+<p>164</p>
+<p>ch14.indd 164 18-11-2020 16:21:49</p>
+<h2>Venous Thromboembolism | CHAPTER 14</h2>
+<p>Can a PT/INR be obtained</p>
+<p>daily?</p>
+<p>No Yes</p>
+<p>Start warfarin with 5 mg daily Start warfarin with 5 mg daily</p>
+<p>Consider 2.5 mg dose if patient age Consider 7.5−10 mg dose if patient</p>
+<p>&gt;60 years, concurrent use of age &lt;60 years, concurrent use of</p>
+<p>interacting medications, or interacting medications, and</p>
+<p>bleeding risk is high bleeding risk is low</p>
+<p>Measure PT/INR on day 3 or 4 Measure PT/INR on day 2</p>
+<p>INR &lt;1.5—increase weekly dose 10%–25% INR &lt;1.5—no dose change</p>
+<p>INR = 1.5−19—no dose change INR = 1.5−1.9—decrease dose 25%–50%</p>
+<p>INR = 2.0−2.5—decrease weekly dose 25%–50% INR = 2.0−2.5—decrease dose 50%–75%</p>
+<p>INR &gt;2.5—decrease weekly dose 50% or hold INR &gt;2.5—hold next dose</p>
+<p>Measure PT/INR on days 5–7 Measure PT/INR on day 3</p>
+<p>INR &lt;1.5—increase weekly dose 10%–25% INR &lt;1.5—increase dose 0%–25%</p>
+<p>INR = 1.5–19—increase weekly dose 0%–20% INR = 1.5−1.9—no dose change</p>
+<p>INR = 2.0–3.0—no dose change INR = 2.0−2.5—decrease dose 25%–50%</p>
+<p>INR &gt;3.0—decrease weekly dose 10%–25% or hold INR &gt;2.5—decrease 50% or hold next dose</p>
+<p>Measure PT/INR on days 8–10 Measure PT/INR on day 4</p>
+<p>INR &lt;1.5—increase weekly dose 15%–35% INR &lt;1.5—increase dose 0%–25%</p>
+<p>INR = 1.5–1.9—increase weekly dose 5%–20% INR = 1.5−1.9—no dose change or</p>
+<p>INR = 2.0–3.0—no dose change increase 10%–25%</p>
+<p>INR &gt;3.0—decrease weekly dose 10%–25% or hold INR = 2.0−3.0—decrease dose 0%–25%</p>
+<p>INR &gt;3.0—decrease 50% or hold next dose</p>
+<p>Measure PT/INR on days 11–14</p>
+<p>INR &lt;1.6—increase weekly dose 15%–35%</p>
+<p>INR = 1.6–1.9—increase dose 5%–20% Measure PT/INR on day 5</p>
+<p>INR = 2.0–3.0—no dose change INR &lt;1.5—increase dose 25%</p>
+<p>INR &gt;3.0—decrease weekly dose 5%–20% or hold INR = 1.5−1.9—increase dose 0%–25%</p>
+<p>INR = 2.0−3.0—no dose change or</p>
+<p>decrease dose 10%–25%</p>
+<p>INR &gt;3.0—decrease 25%–50%</p>
+<p>(INR, international normalized ratio; PT, prothrombin time.)</p>
+<h2>FIGURE 14-3. Initiation of warfarin therapy.</h2>
+<li>Most patients with VTE do not require thrombolytic therapy. Treatment should be</li>
+<p>reserved for patients who present with extensive proximal (eg, ileofemoral) DVT</p>
+<pre><code>within 14 days of symptom onset, have good functional status, and are at low risk</code></pre>
+<p>of bleeding.</p>
+<li>Patients with massive PE and evidence of hemodynamic compromise (hypotension or</li>
+<p>shock) should receive thrombolytic therapy unless contraindicated by bleeding risk.</p>
+<li>The same duration and intensity of anticoagulation therapy is recommended as for</li>
+<p>DVT patients not receiving thrombolysis. Patients with DVT involving the iliac and</p>
+<p>common femoral veins are at highest risk for postthrombotic syndrome and may</p>
+<p>receive the greatest benefit from thrombus removal strategies.</p>
+<p>165</p>
+<p>ch14.indd 165 18-11-2020 16:21:50</p>
+<h2>SECTION 2 | Cardiovascular Disorders</h2>
+<li>For patients with massive PE manifested by shock and cardiovascular collapse (~5%</li>
+<p>of patients with PE), thrombolytic therapy is considered necessary in addition to</p>
+<p>aggressive interventions such as volume expansion, vasopressor therapy, intubation,</p>
+<p>and mechanical ventilation. Administer thrombolytic therapy in these patients with-</p>
+<p>out delay to reduce the risk of progression to multisystem organ failure and death.</p>
+<p>However, the risk of death from PE should outweigh the risk of serious bleeding</p>
+<p>associated with thrombolytic therapy.</p>
+<li>Alteplase (Activase) 100 mg by IV infusion over 2 hours is the most commonly used</li>
+<p>thrombolytic therapy for patients with PE.</p>
+<li>Before giving thrombolytic therapy for PE, IV UFH should be administered in full</li>
+<p>therapeutic doses. During thrombolytic therapy, IV UFH may be either continued</p>
+<p>or suspended; the most common practice in the United States is to suspend UFH.</p>
+<li>Measure the aPTT after completion of thrombolytic therapy. If the aPTT is <80 sec-</li>
+<p>onds, start UFH infusion and adjust to maintain the aPTT in the therapeutic range. If</p>
+<p>the posttreatment aPTT is &gt;80 seconds, remeasure it every 2–4 hours and start UFH</p>
+<p>infusion when the aPTT is &lt;80 seconds.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Monitor patients for resolution of symptoms, development of recurrent thrombosis,</li>
+<p>symptoms of postthrombotic syndrome, and adverse anticoagulant effects.</p>
+<li>Monitor hemoglobin, hematocrit, and blood pressure carefully to detect bleeding</li>
+<p>from anticoagulant therapy.</p>
+<li>Perform coagulation tests (aPTT, PT, INR) prior to initiating therapy to establish the</li>
+<p>patient’s baseline values and guide later anticoagulation.</p>
+<li>Ask outpatients taking warfarin about medication adherence to prior dosing instruc-</li>
+<p>tions, other medication use, changes in health status, and symptoms related to bleed-</p>
+<p>ing and thromboembolic complications. Any changes in concurrent medications</p>
+<p>should be carefully explored, and dietary intake of vitamin K-rich foods should be</p>
+<p>assessed.</p>
+<p>See Chapter 37, Venous Thromboembolism, authored by Daniel M. Witt, Nathan P.</p>
+<p>Clark, and Sara R. Vazquez, for a more detailed discussion of this topic.</p>
+<p>166</p>
+<p>ch14.indd 166 18-11-2020 16:21:50</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

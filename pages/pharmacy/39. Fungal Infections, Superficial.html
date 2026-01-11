@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39. Fungal Infections, Superficial</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>39. Fungal Infections, Superficial</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>412</p>
+<h2>RETPAHC</h2>
+<p>39</p>
+<p>Fungal Infections, Superficial</p>
+<p>Vulvovaginal Candidiasis</p>
+<li>Vulvovaginal candidiasis (VVC) refers to infections in individuals with or without</li>
+<p>symptoms who have positive vaginal cultures for Candida species. It may be sporadic</p>
+<p>or recurrent.</p>
+<li>By 25 years of age, approximately 50% of college-age women will have had at least</li>
+<p>one episode of VVC.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>C. albicans is the major pathogen responsible for VVC, accounting for 80%–92% of</li>
+<p>symptomatic episodes. The remainder are caused by non–C. albicans species, with</p>
+<p>Candida glabrata dominating.</p>
+<li>Changes in the host’s vaginal environment or response are necessary to induce a</li>
+<p>symptomatic infection. In most cases of symptomatic VVC, no precipitating factor</p>
+<p>can be identified.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>There is a dramatic increase in the frequency of VVC when women become sexually</li>
+<p>active.</p>
+<li>Antibiotic use can increase the risk of VVC, but it is significant in only a small</li>
+<p>number of women.</p>
+<li>Symptoms include intense vulvar itching, soreness irritation, burning on urination,</li>
+<p>and dyspareunia.</p>
+<li>Signs include erythema, fissuring, curdy “cheese”-like discharge, satellite lesions, and</li>
+<p>edema.</p>
+<li>Laboratory tests: Vaginal pH—normal saline, and 10% potassium hydroxide (KOH)</li>
+<p>microscopy for blastospores or pseudohyphae.</p>
+<li>Candida cultures are not recommended unless classic signs and symptoms with</li>
+<p>normal vaginal pH and microscopy are inconclusive or recurrence is suspected.</p>
+<li>The diagnosis should be based on both clinical presentation and investigations,</li>
+<p>including vaginal pH, saline microscopy, and 10% KOH microscopy of vaginal</p>
+<p>discharge.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Complete resolution of symptoms in patients who have symp-</li>
+<p>tomatic VVC.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Remove or improve any predisposing factors if they can be identified.</li>
+<li>Avoid harsh soaps and perfumes that can cause or worsen vulvar irritation. The geni-</li>
+<p>tal area must be kept clean and dry by avoiding constrictive clothing and frequent or</p>
+<p>prolonged exposure to hot tub use. Douching is not recommended for either preven-</p>
+<p>tion or treatment.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>The value of oral use of lactobacillus remains unclear. Daily ingestion of 240 mL</li>
+<p>yogurt containing Lactobacillus acidophilus decreased colonization and symptomatic</p>
+<p>infections of VVC in women with recurrent infections.</p>
+<h2>CH39.INDD 412 19-11-2020 15:15:59</h2>
+<div class="table-container"><table><tr><th>Fungal Infections, Superficial</th><th>39
+00</th><th>RETPAHC</th></tr></table></div><h2>Fungal Infections, Superficial | CHAPTER 39</h2>
+<li>A trial of an oral mixture of bee-honey and yogurt showed some efficacy with</li>
+<p>mycotic cure rates of 76.9% compared to cure rates with antifungal agents of 91.5%.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Effective antimycotic agents should have limited local and systemic side effects, a</li>
+<p>high cure rate, and easy administration.</p>
+<li>Table 39-1 lists treatments for uncomplicated VVC. There are no significant dif-</li>
+<p>ferences in in-vitro activity or clinical efficacy among the topical azole agents. Oral</p>
+<p>azoles (such as fluconazole or itraconazole) are therapeutically equivalent to topical</p>
+<p>therapies.</p>
+<li>Patients with complicated VVC (immunocompromised or uncontrolled diabetes</li>
+<p>mellitus) should be treated for 10–14 days.</p>
+<li>Pregnant patients with VVC should be treated with topical agents.</li>
+<li>Patients with recurrent VVC should receive a 10-day initial treatment (such as with</li>
+<p>oral fluconazole 150 mg) followed by 6 months of prolonged treatment (with oral</p>
+<p>fluconazole once weekly 150 mg).</p>
+<li>Treatment of VVC is considered to have positive outcomes if the symptoms</li>
+<p>are resolved within 24–48 hours and no adverse medication events are experi-</p>
+<p>enced. Self-assessment of symptom relief is appropriate for most cases of VVC.</p>
+<p>If symptoms remain unresolved or recur, then further testing and treatment can</p>
+<p>be required.</p>
+<p>TABLE 39-1 Treatment for Uncomplicated Vulvovaginal Candidiasis</p>
+<p>Active Ingredient Preparation Regimen</p>
+<p>Nonprescription/Topical vaginal products</p>
+<p>Butoconazole 2% cream One applicator × 3 days</p>
+<p>Clotrimazole 1% cream One applicator × 1 day</p>
+<h2>100 mg tablet One 100 mg tablet × 7 days</h2>
+<p>2% cream One applicator × 1 day</p>
+<h2>200 mg tablet One 200 mg tablet × 3 days</h2>
+<p>10% cream One applicator × 1 day</p>
+<h2>500 mg tablet One 500 mg tablet × 1 day</h2>
+<p>Miconazolea 2% cream One applicator × 1 day</p>
+<p>100 mg suppository One 100 mg suppository × 7 days</p>
+<p>200 mg suppository One 200 mg suppository × 3 days</p>
+<p>1200 mg ovule One ovule × 1 day</p>
+<p>Ticonazole 2% cream One applicator × 3 days</p>
+<p>6.5% cream One applicator × 1 day</p>
+<p>Prescription/Topical</p>
+<h2>Nystatin 100,000 unit tablet One tablet × 14 days</h2>
+<p>Terconazole 0.4% cream One applicator × 7 days</p>
+<p>0.8% cream One applicator × 3 days</p>
+<p>Oral products</p>
+<h2>Fluconazole 150 mg One tablet × 1 day</h2>
+<p>aThe FDA warns of the possible increase in the anticoagulant effects of warfarin with</p>
+<p>concomitant use.</p>
+<p>413</p>
+<h2>CH39.INDD 413 19-11-2020 15:16:00</h2>
+<div class="table-container"><table><tr><th>TABLE 39-1 Treatment for Uncomplicated Vulvovaginal Candidiasis</th><th></th><th></th></tr><tr><td>Active Ingredient</td><td>Preparation</td><td>Regimen</td></tr><tr><td>Nonprescription/Topical vaginal products</td><td></td><td></td></tr><tr><td>Butoconazole</td><td>2% cream</td><td>One applicator × 3 days</td></tr><tr><td>Clotrimazole</td><td>1% cream</td><td>One applicator × 1 day</td></tr><tr><td></td><td>100 mg tablet</td><td>One 100 mg tablet × 7 days</td></tr><tr><td></td><td>2% cream</td><td>One applicator × 1 day</td></tr><tr><td></td><td>200 mg tablet</td><td>One 200 mg tablet × 3 days</td></tr><tr><td></td><td>10% cream</td><td>One applicator × 1 day</td></tr><tr><td></td><td>500 mg tablet</td><td>One 500 mg tablet × 1 day</td></tr><tr><td>Miconazolea</td><td>2% cream</td><td>One applicator × 1 day</td></tr><tr><td></td><td>100 mg suppository</td><td>One 100 mg suppository × 7 days</td></tr><tr><td></td><td>200 mg suppository</td><td>One 200 mg suppository × 3 days</td></tr><tr><td></td><td>1200 mg ovule</td><td>One ovule × 1 day</td></tr><tr><td>Ticonazole</td><td>2% cream</td><td>One applicator × 3 days</td></tr><tr><td></td><td>6.5% cream</td><td>One applicator × 1 day</td></tr><tr><td>Prescription/Topical</td><td></td><td></td></tr><tr><td>Nystatin</td><td>100,000 unit tablet</td><td>One tablet × 14 days</td></tr><tr><td>Terconazole</td><td>0.4% cream</td><td>One applicator × 7 days</td></tr><tr><td></td><td>0.8% cream</td><td>One applicator × 3 days</td></tr><tr><td>Oral products</td><td></td><td></td></tr><tr><td>Fluconazole</td><td>150 mg</td><td>One tablet × 1 day</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>Orophyryngeal and Esophageal Candidiasis</p>
+<li>Oropharyngeal candidiasis (OPC), often referred to as thrush, is caused by the yeast</li>
+<p>Candida, most often C. albicans.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>A variety of host and exogenous factors can lead to the transformation of asymp-</li>
+<p>tomatic colonization to symptomatic disease, such as oropharyngeal and esophageal</p>
+<p>candidiasis.</p>
+<li>Endocrine disorders besides diabetes mellitus, such as hypothyroidism, hypopara-</li>
+<p>thyroidism, and hypoadrenalism, also can predispose patients to Candida species</p>
+<p>overgrowth.</p>
+<li>Patients with primary immune deficiencies such as lymphocytic abnormalities,</li>
+<pre><code>phagocytic dysfunction, immunoglobulin A (IgA) deficiency, viral-induced immune</code></pre>
+<p>paralysis, and severe congenital immunodeficiencies are also at risk for OPC as well</p>
+<p>as disseminated candidiasis.</p>
+<li>OPC remains the most common opportunistic infection in patients with HIV</li>
+<p>disease. The CD4 T-cell count is the hallmark predictor for development of OPC;</p>
+<p>however, HIV viral load may have a stronger association with OPC than CD4</p>
+<p>cell number.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Various classifications of OPC are given in Table 39-2. The clinical presentation of</li>
+<h2>OPC and esophageal candidiasis is presented in Table 39-3.</h2>
+<li>A presumptive diagnosis of OPC usually is made by the characteristic appearance</li>
+<p>on the oral mucosa, with resolution of signs and symptoms after antifungal therapy.</p>
+<h2>TREATMENT</h2>
+<li>The primary desired outcome in the management of OPC is a clinical cure; that is,</li>
+<p>elimination of clinical signs and symptoms. Efficacy end points for oropharyngeal</p>
+<p>and esophageal candidiasis include rapid relief of symptoms and prevention of com-</p>
+<p>plications without early relapse after completion of the course of therapy.</p>
+<li>Minimizing toxicities and drug–drug interactions of systemic antifungal agents, as</li>
+<p>well as maximizing adherence by ensuring that the patient understands the impor-</p>
+<p>tance of therapy and the directions to take the medication appropriately, are impor-</p>
+<p>tant secondary outcomes of therapy.</p>
+<h2>GENERAL APPROACH</h2>
+<li>Whenever feasible, it is desirable to minimize all predisposing factors, such as admin-</li>
+<p>istration of corticosteroids, chemotherapeutic agents, and antimicrobials, as well as</p>
+<p>to institute proper oral hygiene and resolve concurrent conditions, such as denture</p>
+<p>stomatitis.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Topical agents, such as nystatin and clotrimazole, are the standard treatment for</li>
+<p>uncomplicated OPC and generally are effective for treatment in otherwise healthy</p>
+<p>adults and infants with no underlying immunodeficiencies (Table 39-4).</p>
+<li>Systemic therapy is necessary in patients with OPC that is refractory to topical treat-</li>
+<p>ment, those who cannot tolerate topical agents, have moderate-to-severe disease, and</p>
+<p>those at high risk for disseminated systemic or invasive candidiasis.</p>
+<li>When patients become unresponsive to topical agents or fluconazole and itra-</li>
+<p>conazole, alternative agents include amphotericin B and other triazoles such as</p>
+<p>voriconazole and posaconazole and echinocandins (caspofungin, micafungin, and</p>
+<p>anidulafungin).</p>
+<p>414</p>
+<h2>CH39.INDD 414 19-11-2020 15:16:00</h2>
+<h2>Fungal Infections, Superficial | CHAPTER 39</h2>
+<p>TABLE 39-2 Clinical Classification of Oropharyngeal Candidiasis</p>
+<p>Types Population at Risk Clinical Signs and Appearance</p>
+<p>Pseudomembranous Neonates, patients Classic “cottage cheese” appearance,</p>
+<p>(thrush) with HIV or cancer, yellowish white, soft plaques (or milk</p>
+<p>the debilitated curds) overlying areas of erythema</p>
+<p>elderly, patients on on the buccal mucosa, tongue,</p>
+<p>broad-spectrum gums, and throat; plaques are easily</p>
+<p>antibiotics or steroid removed by vigorous rubbing but</p>
+<p>inhalers, patients can leave red or bleeding sites when</p>
+<p>with dry mouth from removed; lesions on the tongue</p>
+<p>various causes, and dorsum give it a bald, depapillated</p>
+<p>smokers appearance</p>
+<p>Erythematous Patients with HIV, patients Sensitive and painful erythematous</p>
+<p>(atrophic) on broad-spectrum mucosa with few, if any, white</p>
+<p>antibiotics or steroid plaques; lesions are generally on the</p>
+<p>inhalers dorsal surface of the tongue or the</p>
+<p>hard palate, occasionally on the soft</p>
+<p>palate, but any part of the mucosa</p>
+<p>can be involved; appear as flat red</p>
+<p>patches on the palate or atrophic</p>
+<p>patches on the tongue dorsum with</p>
+<p>loss of papillae. Can be acute or</p>
+<p>chronic</p>
+<p>Hyperplastic Smokers; uncommon in Thick white and adherent keratotic</p>
+<p>(candidal patients with HIV plaques commonly seen on the</p>
+<p>leukoplakia) buccal mucosa and lateral border of</p>
+<p>the tongue; can also be seen on the</p>
+<p>lips and the bottom of the mouth;</p>
+<p>plaques cannot be easily scraped</p>
+<p>off or only partially removed; this</p>
+<p>condition is distinct from oral hairy</p>
+<p>leukoplakia, and it can progress to</p>
+<p>severe dysplasia or malignancy</p>
+<p>Angular cheilitis Patients with HIV, denture Painful red, ulcerative, cracking, or</p>
+<p>wearers fissuring lesion at one or both</p>
+<p>comers of the mouth because of an</p>
+<p>inflammatory reaction; usually lesions</p>
+<p>are small and rather punctate, but</p>
+<p>occasionally they can extend in a</p>
+<p>linear fashion from the angles onto</p>
+<p>the facial skin</p>
+<p>Denture stomatitis Denture wearers who Red, flat lesions on the mucosa beneath</p>
+<p>(chronic atrophic) tend to be elderly and the denture and extend right up to</p>
+<p>have poor oral hygiene the denture border; more commonly</p>
+<p>located beneath a maxillary denture,</p>
+<p>although they can be encountered</p>
+<p>beneath a mandibular denture</p>
+<p>Central papillary Uncommon (&lt;1% Rhomboid-shaped hypertrophic or</p>
+<p>atrophy (median prevalence), men more atrophic plaque in the mid-DORSAL</p>
+<p>rhomboid commonly infected tongue. Lesions may not resolve</p>
+<p>glossitis) than women (3:1) completely</p>
+<p>HIV, human immunodeficiency virus.</p>
+<p>415</p>
+<h2>CH39.INDD 415 19-11-2020 15:16:00</h2>
+<div class="table-container"><table><tr><th>TABLE 39-2 Clinical Classification of Oropharyngeal Candidiasis</th><th></th><th></th></tr><tr><td>Types</td><td>Population at Risk</td><td>Clinical Signs and Appearance</td></tr><tr><td>Pseudomembranous
+(thrush)</td><td>Neonates, patients
+with HIV or cancer,
+the debilitated
+elderly, patients on
+broad-spectrum
+antibiotics or steroid
+inhalers, patients
+with dry mouth from
+various causes, and
+smokers</td><td>Classic “cottage cheese” appearance,
+yellowish white, soft plaques (or milk
+curds) overlying areas of erythema
+on the buccal mucosa, tongue,
+gums, and throat; plaques are easily
+removed by vigorous rubbing but
+can leave red or bleeding sites when
+removed; lesions on the tongue
+dorsum give it a bald, depapillated
+appearance</td></tr><tr><td>Erythematous
+(atrophic)</td><td>Patients with HIV, patients
+on broad-spectrum
+antibiotics or steroid
+inhalers</td><td>Sensitive and painful erythematous
+mucosa with few, if any, white
+plaques; lesions are generally on the
+dorsal surface of the tongue or the
+hard palate, occasionally on the soft
+palate, but any part of the mucosa
+can be involved; appear as flat red
+patches on the palate or atrophic
+patches on the tongue dorsum with
+loss of papillae. Can be acute or
+chronic</td></tr><tr><td>Hyperplastic
+(candidal
+leukoplakia)</td><td>Smokers; uncommon in
+patients with HIV</td><td>Thick white and adherent keratotic
+plaques commonly seen on the
+buccal mucosa and lateral border of
+the tongue; can also be seen on the
+lips and the bottom of the mouth;
+plaques cannot be easily scraped
+off or only partially removed; this
+condition is distinct from oral hairy
+leukoplakia, and it can progress to
+severe dysplasia or malignancy</td></tr><tr><td>Angular cheilitis</td><td>Patients with HIV, denture
+wearers</td><td>Painful red, ulcerative, cracking, or
+fissuring lesion at one or both
+comers of the mouth because of an
+inflammatory reaction; usually lesions
+are small and rather punctate, but
+occasionally they can extend in a
+linear fashion from the angles onto
+the facial skin</td></tr><tr><td>Denture stomatitis
+(chronic atrophic)</td><td>Denture wearers who
+tend to be elderly and
+have poor oral hygiene</td><td>Red, flat lesions on the mucosa beneath
+the denture and extend right up to
+the denture border; more commonly
+located beneath a maxillary denture,
+although they can be encountered
+beneath a mandibular denture</td></tr><tr><td>Central papillary
+atrophy (median
+rhomboid
+glossitis)</td><td>Uncommon (&lt;1%
+prevalence), men more
+commonly infected
+than women (3:1)</td><td>Rhomboid-shaped hypertrophic or
+atrophic plaque in the mid-DORSAL
+tongue. Lesions may not resolve
+completely</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 39-3 Clinical Presentation of Oropharyngeal and Esophageal Candidiasis</p>
+<p>Oropharyngeal Candidiasis Esophageal Candidiasis</p>
+<p>General General</p>
+<p>The clinical features can be quite diverse This usually occurs as an extension of OPC;</p>
+<p>(see Table 39-2) however, the esophagus can be the only site</p>
+<p>involved; the distal two-thirds, rather than the</p>
+<p>proximal one-third, is the most common site</p>
+<p>Symptoms Symptoms</p>
+<p>Symptoms are diverse and range from Typically, the symptoms are dysphagia,</p>
+<p>none to a sore, painful mouth, odynophagia, and retrosternal chest pain</p>
+<p>burning tongue, metallic taste, and but can be asymptomatic in some patients;</p>
+<p>dysphagia and odynophagia with although rare, epigastric pain can be the</p>
+<p>involvement of the hypopharynx dominant symptom</p>
+<p>Signs Signs</p>
+<p>Signs are variable and can include Constitutional signs, including fever, occasionally</p>
+<p>diffuse erythema and white patches occur; physical findings can range from a</p>
+<p>on the surfaces of the buccal few to numerous white or beige plaques of</p>
+<p>mucosa, throat, tongue, or gums; variable size</p>
+<p>constitutional signs are absent Plaques can be hyperemic or edematous, with</p>
+<p>ulceration in more severe cases</p>
+<p>Most advanced cases can occur with increased</p>
+<p>mucosal friability and narrowing of lumen</p>
+<p>Uncommon complications include perforation</p>
+<p>and aortic–esophageal fistula formation</p>
+<p>Laboratory tests Laboratory tests</p>
+<p>Scraping of an active lesion for The best test is upper GI endoscopy (more useful</p>
+<p>microscopic examination can help than barium swallow); helps exclude other</p>
+<p>confirm the diagnosis (presence of causes of esophagitis (eg, viral, aphthous</p>
+<p>pseudohyphae and budding yeast) ulcers); diagnosis is confirmed by the</p>
+<p>but is usually not necessary histologic presence of Candida species in</p>
+<p>Cultures are not necessary because biopsy lesions taken during endoscopy</p>
+<p>isolation of Candida species does Cultures to look for drug-resistant Candida</p>
+<p>not distinguish between colonization species are warranted in patients who require</p>
+<p>and true infection; cultures can be endoscopy</p>
+<p>taken in patients responding poorly</p>
+<p>to therapy to determine the infecting</p>
+<p>species and to predict likely drug</p>
+<p>resistance</p>
+<p>GI, gastrointestinal; OPC, oropharyngeal candidiasis.</p>
+<li>Long-term suppressive therapy with fluconazole is effective in preventing recur-</li>
+<p>rences or new infections of OPC in HIV disease and in patients with cancer. How-</p>
+<p>ever, the indications for antifungal prophylaxis and the best long-term management</p>
+<p>strategy still have not been well established.</p>
+<li>Patients with a history of one or more episodes of documented esophageal candidia-</li>
+<p>sis and a CD4 T-cell count &lt;200 cells/mm3 (&lt;0.2 × 109/L) despite being on highly</p>
+<p>active antiretroviral therapy (HAART) are candidates for secondary prophylaxis.</p>
+<p>Oral fluconazole 100 mg three times weekly is the regimen recommended for</p>
+<p>patients deemed in need of chronic suppressive therapy.</p>
+<p>416</p>
+<h2>CH39.INDD 416 19-11-2020 15:16:01</h2>
+<div class="table-container"><table><tr><th>TABLE 39-3 Clinical Presentation of Oropharyngeal and Esophageal Candidiasis</th><th></th></tr><tr><td>Oropharyngeal Candidiasis</td><td>Esophageal Candidiasis</td></tr><tr><td>General</td><td>General</td></tr><tr><td>The clinical features can be quite diverse
+(see Table 39-2)</td><td>This usually occurs as an extension of OPC;
+however, the esophagus can be the only site
+involved; the distal two-thirds, rather than the
+proximal one-third, is the most common site</td></tr><tr><td>Symptoms</td><td>Symptoms</td></tr><tr><td>Symptoms are diverse and range from
+none to a sore, painful mouth,
+burning tongue, metallic taste, and
+dysphagia and odynophagia with
+involvement of the hypopharynx</td><td>Typically, the symptoms are dysphagia,
+odynophagia, and retrosternal chest pain
+but can be asymptomatic in some patients;
+although rare, epigastric pain can be the
+dominant symptom</td></tr><tr><td>Signs</td><td>Signs</td></tr><tr><td>Signs are variable and can include
+diffuse erythema and white patches
+on the surfaces of the buccal
+mucosa, throat, tongue, or gums;
+constitutional signs are absent</td><td>Constitutional signs, including fever, occasionally
+occur; physical findings can range from a
+few to numerous white or beige plaques of
+variable size
+Plaques can be hyperemic or edematous, with
+ulceration in more severe cases
+Most advanced cases can occur with increased
+mucosal friability and narrowing of lumen
+Uncommon complications include perforation
+and aortic–esophageal fistula formation</td></tr><tr><td>Laboratory tests</td><td>Laboratory tests</td></tr><tr><td>Scraping of an active lesion for
+microscopic examination can help
+confirm the diagnosis (presence of
+pseudohyphae and budding yeast)
+but is usually not necessary
+Cultures are not necessary because
+isolation of Candida species does
+not distinguish between colonization
+and true infection; cultures can be
+taken in patients responding poorly
+to therapy to determine the infecting
+species and to predict likely drug
+resistance</td><td>The best test is upper GI endoscopy (more useful
+than barium swallow); helps exclude other
+causes of esophagitis (eg, viral, aphthous
+ulcers); diagnosis is confirmed by the
+histologic presence of Candida species in
+biopsy lesions taken during endoscopy
+Cultures to look for drug-resistant Candida
+species are warranted in patients who require
+endoscopy</td></tr></table></div><h2>Fungal Infections, Superficial | CHAPTER 39</h2>
+<p>TABLE 39-4 Therapeutic Options for Mucosal Candidiasis (Continued )</p>
+<p>Initial Episodes of OPCa: Treat</p>
+<p>for 7–14 Days (Strength of</p>
+<p>Recommendation and Level of</p>
+<p>Evidence) Common/Significant Side Effects</p>
+<p>Clotrimazole 10 mg troche: hold 1 troche Altered taste, mild nausea, vomiting</p>
+<p>in mouth for 15–20 minutes for slow</p>
+<p>dissolution 5 times daily (B-2)b</p>
+<p>Nystatin 100,000 units/mL suspension: Mild nausea, vomiting, diarrhea</p>
+<p>5 mL swish and swallow orally 4 times</p>
+<p>daily (B-2)</p>
+<p>Miconazole 50 mg mucoadhesive buccal Diarrhea, headache, nausea, dysgeusia,</p>
+<p>tablets 50 mg orally daily (A-1) upper abdominal pain, and vomiting</p>
+<p>Fluconazole 100 mg tabletsc: 100–200 mg GI upset, hepatitis not common</p>
+<p>orally daily (A-1)</p>
+<p>Itraconazole 10 mg/mL solutiond: 200 mg GI upset, not common: hepatotoxicity, CHF,</p>
+<p>orally daily (A-2) pulmonary edema with long-term usee</p>
+<p>Posaconazole 40 mg/mL suspension: 400 mg GI upset, fever, headache, increased hepatic</p>
+<p>orally daily with a full meal (A-2) transaminases not common</p>
+<p>Fluconazole-refractory OPC:</p>
+<p>Treat for ≥14 days</p>
+<p>Itraconazole 10 mg/mL solution: 200 mg See above</p>
+<p>orally daily (A-3)</p>
+<p>Voriconazole 200 mg tablets: 200 mg orally GI upset, rash, reversible visual disturbance</p>
+<p>twice daily (&gt;40 kg), taken on empty (altered light perception, photopsia,</p>
+<p>stomach (A-3) chromatopsia, photophobia), increased</p>
+<p>hepatic transaminases, hallucinations, or</p>
+<p>confusion</p>
+<p>Posaconazole 40 mg/mL suspension: 400 mg See above</p>
+<p>orally twice daily × 3 days, then 400 mg</p>
+<p>daily × 28 days (A-2)</p>
+<p>Amphotericin B 100 mg/mL suspensionf: Oral: nausea, vomiting, diarrhea with</p>
+<p>1–5 mL swish and swallow orally 4 times higher dose</p>
+<p>daily (B-2)</p>
+<p>Amphotericin B deoxycholate 50 mg IV: fever, chills, sweats, nephrotoxicity,</p>
+<p>injection: 0.3–0.7 mg/kg/day IV daily (B-2) electrolyte disturbances, bone marrow</p>
+<p>suppression</p>
+<p>Caspofungin 50 mg IV daily (B-2) Fever, headache, infusion-related reactions</p>
+<p>(&lt;5%) (eg, rash, facial swelling, pruritus,</p>
+<p>vasodilation), hypokalemia, increased</p>
+<p>hepatic transaminases, anemia,</p>
+<p>neutropenia</p>
+<p>Micafungin 150 mg IV daily (B-2) Similar to caspofungin</p>
+<p>Anidulafungin 200 mg IV daily (B-2) Similar to caspofungin</p>
+<p>Esophageal candidiasisa: Treat</p>
+<p>for 14–21 days</p>
+<h2>Fluconazole 100 mg tablets: 200–400 mg See above</h2>
+<p>orally (3–6 mg/kg) daily (A-1)</p>
+<p>Echinocandin: see above (B-2) See above</p>
+<p>(Continued )</p>
+<p>417</p>
+<h2>CH39.INDD 417 19-11-2020 15:16:01</h2>
+<div class="table-container"><table><tr><th>TABLE 39-4 Therapeutic Options for Mucosal Candidiasis</th><th></th><th>(Continued )</th><th></th></tr><tr><td>Initial Episodes of OPCa: Treat
+for 7–14 Days (Strength of
+Recommendation and Level of
+Evidence)</td><td>Common/Significant Side Effects</td><td></td><td></td></tr><tr><td>Clotrimazole 10 mg troche: hold 1 troche
+in mouth for 15–20 minutes for slow
+dissolution 5 times daily (B-2)b</td><td>Altered taste, mild nausea, vomiting</td><td></td><td></td></tr><tr><td>Nystatin 100,000 units/mL suspension:
+5 mL swish and swallow orally 4 times
+daily (B-2)</td><td>Mild nausea, vomiting, diarrhea</td><td></td><td></td></tr><tr><td>Miconazole 50 mg mucoadhesive buccal
+tablets 50 mg orally daily (A-1)</td><td>Diarrhea, headache, nausea, dysgeusia,
+upper abdominal pain, and vomiting</td><td></td><td></td></tr><tr><td>Fluconazole 100 mg tabletsc: 100–200 mg
+orally daily (A-1)</td><td>GI upset, hepatitis not common</td><td></td><td></td></tr><tr><td>Itraconazole 10 mg/mL solutiond: 200 mg
+orally daily (A-2)</td><td>GI upset, not common: hepatotoxicity, CHF,
+pulmonary edema with long-term usee</td><td></td><td></td></tr><tr><td>Posaconazole 40 mg/mL suspension: 400 mg
+orally daily with a full meal (A-2)</td><td>GI upset, fever, headache, increased hepatic
+transaminases not common</td><td></td><td></td></tr><tr><td>Fluconazole-refractory OPC:
+Treat for ≥14 days</td><td></td><td></td><td></td></tr><tr><td>Itraconazole 10 mg/mL solution: 200 mg
+orally daily (A-3)</td><td>See above</td><td></td><td></td></tr><tr><td>Voriconazole 200 mg tablets: 200 mg orally
+twice daily (&gt;40 kg), taken on empty
+stomach (A-3)</td><td>GI upset, rash, reversible visual disturbance
+(altered light perception, photopsia,
+chromatopsia, photophobia), increased
+hepatic transaminases, hallucinations, or
+confusion</td><td></td><td></td></tr><tr><td>Posaconazole 40 mg/mL suspension: 400 mg
+orally twice daily × 3 days, then 400 mg
+daily × 28 days (A-2)</td><td>See above</td><td></td><td></td></tr><tr><td>Amphotericin B 100 mg/mL suspensionf:
+1–5 mL swish and swallow orally 4 times
+daily (B-2)</td><td>Oral: nausea, vomiting, diarrhea with
+higher dose</td><td></td><td></td></tr><tr><td>Amphotericin B deoxycholate 50 mg
+injection: 0.3–0.7 mg/kg/day IV daily (B-2)</td><td>IV: fever, chills, sweats, nephrotoxicity,
+electrolyte disturbances, bone marrow
+suppression</td><td></td><td></td></tr><tr><td>Caspofungin 50 mg IV daily (B-2)</td><td>Fever, headache, infusion-related reactions
+(&lt;5%) (eg, rash, facial swelling, pruritus,
+vasodilation), hypokalemia, increased
+hepatic transaminases, anemia,
+neutropenia</td><td></td><td></td></tr><tr><td>Micafungin 150 mg IV daily (B-2)</td><td>Similar to caspofungin</td><td></td><td></td></tr><tr><td>Anidulafungin 200 mg IV daily (B-2)</td><td>Similar to caspofungin</td><td></td><td></td></tr><tr><td>Esophageal candidiasisa: Treat
+for 14–21 days</td><td></td><td></td><td></td></tr><tr><td>Fluconazole 100 mg tablets: 200–400 mg
+orally (3–6 mg/kg) daily (A-1)</td><td>See above</td><td></td><td></td></tr><tr><td>Echinocandin: see above (B-2)</td><td>See above
+(Continued )</td><td></td><td></td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 39-4 Therapeutic Options for Mucosal Candidiasis (Continued )</p>
+<p>Initial Episodes of OPCa: Treat</p>
+<p>for 7–14 Days (Strength of</p>
+<p>Recommendation and Level of</p>
+<p>Evidence) Common/Significant Side Effects</p>
+<p>Amphotericin B deoxycholate 50 mg See above</p>
+<p>injection: 0.3–0.7 mg/kg/day IV daily (B-2)</p>
+<p>Posaconazole 40 mg/mL suspension: 400 mg See above</p>
+<p>orally twice daily (A-3)</p>
+<p>Itraconazole 10 mg/mL solutiond: 200 mg See above</p>
+<p>orally daily (A-3)</p>
+<h2>Voriconazole 200 mg tablets: 200 mg orally See above</h2>
+<p>twice daily (&gt;40 kg) (A-3)</p>
+<p>Voriconazole IV and echinocandins (A-1): See above</p>
+<p>generally reserved for refractory cases</p>
+<p>Fluconazole-refractory EC: Treat</p>
+<p>for 21–28 days</p>
+<p>Itraconazole 10 mg/mL solution: 200 mg See above</p>
+<p>orally daily (A-2)</p>
+<p>Posaconazole 40 mg/mL suspension: 400 mg See above</p>
+<p>orally twice daily (A-3)</p>
+<h2>Voriconazole 200 mg tablets: 200 mg orally See above</h2>
+<p>twice daily (&gt;40 kg), taken on empty</p>
+<p>stomach (A-3)</p>
+<p>Caspofungin 50 mg IV daily (B-2) See above</p>
+<p>Micafungin 150 mg IV daily (B-2) Similar to caspofungin</p>
+<p>Anidulafungin 100 mg IV on day 1, then Similar to caspofungin</p>
+<p>50 mg IV daily (B-2)</p>
+<p>Amphotericin B deoxycholate: 0.3–0.7 mg/ See above</p>
+<p>kg/day IV, or lipid-based amphotericin</p>
+<p>3–5 mg/kg/day IV (B-2)</p>
+<p>aInitial episodes of OPC can be adequately treated first with topical agents before resorting to</p>
+<p>systemic therapy (B-2), but systemic therapy is required for effective treatment of esophageal</p>
+<p>candidiasis. (A-2) Suppressive therapy is recommended for patients with frequent or severe</p>
+<p>recurrences (A-1).</p>
+<p>bFluconazole is more effective than ketoconazole (A-1).</p>
+<p>cStrength of Recommendation and Level of Evidence</p>
+<p>dSolution is more effective than capsule (A-1); solution is better taken on an empty stomach.</p>
+<p>eSuspension is not marketed; can be prepared extemporaneously by pharmacy.</p>
+<p>fSee discussion under onychomycosis.</p>
+<p>CHF, congestive heart failure; EC, esophageal candidiasis; GI, gastrointestinal; IV, intravenous; OPC,</p>
+<p>oropharyngeal candidiasis.</p>
+<p>Recommendation grades: Strength of recommendation: A—Both strong evidence for efficacy</p>
+<p>and substantial clinical benefit to support recommendation for use. Should always be offered.</p>
+<p>B—Moderate evidence for efficacy but only limited clinical benefit, to support recommendation</p>
+<p>for use. Should generally be offered. C—Evidence for efficacy is insufficient to support</p>
+<p>recommendation for or against use; or evidence for efficacy might not outweigh adverse</p>
+<p>consequences or cost of the treatment under consideration. Optional. D—Moderate evidence</p>
+<p>for lack of efficacy or adverse outcome supports a recommendation against use. Should generally</p>
+<p>not be offered. Quality of evidence: 1—Evidence from at least one properly designed randomized,</p>
+<p>controlled trial. 2—Evidence from at least one well-designed trial without randomization, from</p>
+<p>cohort or case-controlled analytic studies (preferably from more than one center), or from</p>
+<p>multiple time-series studies, or dramatic results from uncontrolled experiments. 3—Evidence from</p>
+<p>opinions of respected authorities based on clinical experience, descriptive studies, or reports of</p>
+<p>expert committees. (UR) Evidence currently unrated.</p>
+<p>418</p>
+<h2>CH39.INDD 418 19-11-2020 15:16:01</h2>
+<div class="table-container"><table><tr><th>TABLE 39-4 Therapeutic Options for Mucosal Candidiasis (Continued )</th><th></th></tr><tr><td>Initial Episodes of OPCa: Treat
+for 7–14 Days (Strength of
+Recommendation and Level of
+Evidence)</td><td>Common/Significant Side Effects</td></tr><tr><td>Amphotericin B deoxycholate 50 mg
+injection: 0.3–0.7 mg/kg/day IV daily (B-2)</td><td>See above</td></tr><tr><td>Posaconazole 40 mg/mL suspension: 400 mg
+orally twice daily (A-3)</td><td>See above</td></tr><tr><td>Itraconazole 10 mg/mL solutiond: 200 mg
+orally daily (A-3)</td><td>See above</td></tr><tr><td>Voriconazole 200 mg tablets: 200 mg orally
+twice daily (&gt;40 kg) (A-3)</td><td>See above</td></tr><tr><td>Voriconazole IV and echinocandins (A-1):
+generally reserved for refractory cases</td><td>See above</td></tr><tr><td>Fluconazole-refractory EC: Treat
+for 21–28 days</td><td></td></tr><tr><td>Itraconazole 10 mg/mL solution: 200 mg
+orally daily (A-2)</td><td>See above</td></tr><tr><td>Posaconazole 40 mg/mL suspension: 400 mg
+orally twice daily (A-3)</td><td>See above</td></tr><tr><td>Voriconazole 200 mg tablets: 200 mg orally
+twice daily (&gt;40 kg), taken on empty
+stomach (A-3)</td><td>See above</td></tr><tr><td>Caspofungin 50 mg IV daily (B-2)</td><td>See above</td></tr><tr><td>Micafungin 150 mg IV daily (B-2)</td><td>Similar to caspofungin</td></tr><tr><td>Anidulafungin 100 mg IV on day 1, then
+50 mg IV daily (B-2)</td><td>Similar to caspofungin</td></tr><tr><td>Amphotericin B deoxycholate: 0.3–0.7 mg/
+kg/day IV, or lipid-based amphotericin
+3–5 mg/kg/day IV (B-2)</td><td>See above</td></tr></table></div><h2>Fungal Infections, Superficial | CHAPTER 39</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Patient counseling tips for managing OPC are given in Table 39-5.</li>
+<p>TABLE 39-5 Patient Counseling Tips for Managing Oropharyngeal Candidiasis</p>
+<p>1. Clean the oral cavity prior to administering the topical antifungal agent. Daily fluoride</p>
+<p>rinses can help reduce the risk of caries when using an agent containing sucrose or</p>
+<p>dextrose.</p>
+<p>2. Use the topical antifungal agent after meals, as saliva flow and mouth movements can</p>
+<p>reduce the contact time.</p>
+<p>3. Dissolve troches slowly in the mouth and swallow the saliva; do not chew or swallow</p>
+<p>them whole.</p>
+<p>4. Swish the suspension, around the mouth in the oral cavity to cover all areas for as long</p>
+<p>as possible, ideally at least 1 minute, then gargled and swallowed.</p>
+<p>5. Remove dentures while medication is being applied to the oral tissues.</p>
+<p>6. Use a suspension or buccal mucoadhesive tablet instead of a troche if xerostomia is</p>
+<p>present; if a troche is preferred, rinse or drink water prior to dosing. For xerostomia, you</p>
+<p>may use nonpharmacologic measures for symptomatic relief (eg, ice chips, sugarless</p>
+<p>gum or hard candy, citrus beverages).</p>
+<p>7. Remove dentures and disinfect overnight using an antiseptic solution</p>
+<p>(eg, chlorhexidine 0.12%–0.2%). Disinfect oral tissues in addition to dental prosthesis.</p>
+<p>8. Complete treatment course even though symptomatic improvement can occur in</p>
+<p>48–72 hours.</p>
+<p>9. Maintain good oral hygiene. Brush teeth daily (twice daily) and floss, rinse mouth, or</p>
+<p>brush teeth after eating sweets.</p>
+<p>10. Stop smoking; avoid alcohol.</p>
+<p>Mycotic Infections of the Skin, Hair, and Nails</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Superficial cutaneous mycoses affect up to 20%–25% of the population globally.</li>
+<p>The usual pathogens are the dermatophytes classified by genera: Trichophyton,</p>
+<p>Epidermophyton, and Microsporum.</p>
+<li>Dermatophytes have the ability to penetrate keratinous structures of the body and</li>
+<p>therefore infections are limited to hair, nails, and skin. These infections affect both</p>
+<p>male and female genders and all races. Reservoirs of mycotic infections include</p>
+<p>humans, animals, and soil.</p>
+<li>Risk factors for the development of an infection include prolonged exposure to sweat</li>
+<p>or soaking in water, maceration, intertriginous folds, sharing personal belongings</p>
+<p>such as combs, close living quarters (dormitories, barracks).</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Mycotic infections of the skin have a classic appearance that consists of a central</li>
+<p>clearing surrounded by an advancing red, scaly, elevated border, also referred to as</p>
+<p>an “active” border.</p>
+<li>Diagnosis usually is based on patient history, as well as the physical examination.</li>
+<p>Diagnostic tests include direct microscopic examination of a specimen after the</p>
+<p>addition of KOH or fungal cultures. The KOH test is quick, inexpensive, and easy</p>
+<p>to perform.</p>
+<p>419</p>
+<h2>CH39.INDD 419 19-11-2020 15:16:01</h2>
+<div class="table-container"><table><tr><th>TABLE 39-5 Patient Counseling Tips for Managing Oropharyngeal Candidiasis</th></tr><tr><td>1. Clean the oral cavity prior to administering the topical antifungal agent. Daily fluoride
+rinses can help reduce the risk of caries when using an agent containing sucrose or
+dextrose.
+2. Use the topical antifungal agent after meals, as saliva flow and mouth movements can
+reduce the contact time.
+3. Dissolve troches slowly in the mouth and swallow the saliva; do not chew or swallow
+them whole.
+4. Swish the suspension, around the mouth in the oral cavity to cover all areas for as long
+as possible, ideally at least 1 minute, then gargled and swallowed.
+5. Remove dentures while medication is being applied to the oral tissues.
+6. Use a suspension or buccal mucoadhesive tablet instead of a troche if xerostomia is
+present; if a troche is preferred, rinse or drink water prior to dosing. For xerostomia, you
+may use nonpharmacologic measures for symptomatic relief (eg, ice chips, sugarless
+gum or hard candy, citrus beverages).
+7. Remove dentures and disinfect overnight using an antiseptic solution
+(eg, chlorhexidine 0.12%–0.2%). Disinfect oral tissues in addition to dental prosthesis.
+8. Complete treatment course even though symptomatic improvement can occur in
+48–72 hours.
+9. Maintain good oral hygiene. Brush teeth daily (twice daily) and floss, rinse mouth, or
+brush teeth after eating sweets.
+10. Stop smoking; avoid alcohol.</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<h2>TREATMENT</h2>
+<h2>GENERAL APPROACH</h2>
+<li>A general approach to treatment of superficial mycotic infections includes keeping</li>
+<p>the infected area dry and clean and limiting exposure to the infected reservoir. Topi-</p>
+<p>cal agents generally are considered to be first-line therapy for infections of the skin.</p>
+<p>Oral therapy is preferred when the infection is extensive or severe or when treating</p>
+<p>tinea capitis or onychomycosis.</p>
+<li>Treatment of mycoses of the skin, hair, and nails is given in Table 39-6.</li>
+<p>TABLE 39-6 Treatment of Mycoses of the Skin, Hair, and Nails (Continued )</p>
+<p>Topicala,b Oral Regimenc</p>
+<p>Tinea pedis Butenafine, daily Fluconazole 150 mg 1 per week ×</p>
+<p>Sertaconazole, twice daily 1–4 weeks</p>
+<p>Luliconazole, daily</p>
+<p>Naftifine cream daily, gel daily</p>
+<p>Tinea manuum Ciclopirox, twice daily Ketoconazole 200 mg daily ×</p>
+<p>4 weeks</p>
+<p>Tinea cruris Clotrimazole, twice daily Itraconazole 200–400 mg/day ×</p>
+<p>Luliconazole, daily 1 week</p>
+<p>Naftifine cream, daily</p>
+<p>Tinea corporis Econazole, daily Terbinafine 250 mg/day × 2 weeks</p>
+<p>Haloprogin, twice daily</p>
+<p>Ketoconazole cream, daily</p>
+<p>Luliconazole, daily</p>
+<p>Miconazole, twice daily</p>
+<p>Naftifine cream, daily</p>
+<p>Oxiconazole, twice daily</p>
+<p>Sulconazole, twice daily</p>
+<p>Terbinafine, twice daily</p>
+<p>Tolnaftate, twice daily</p>
+<p>Triacetin cream, solution, three</p>
+<p>times daily</p>
+<p>Undecylenic acid, various</p>
+<p>preparations: apply as directed</p>
+<p>Tinea capitis Shampoo only in conjunction with Terbinafine 250 mg/day ×</p>
+<p>oral therapy or for treatment of 4–8 weeks</p>
+<p>asymptomatic carriers</p>
+<p>Tinea barbae Ketoconazole twice weekly × Ketoconazole 200 mg daily ×</p>
+<p>4 weeks 4 weeks</p>
+<p>Selenium sulfide daily × 2 weeks Itraconazole 100–200 mg/day ×</p>
+<p>4–6 weeks</p>
+<p>Griseofulvin 500 mg/day ×</p>
+<p>4–6 weeks</p>
+<p>(Continued )</p>
+<p>420</p>
+<h2>CH39.INDD 420 19-11-2020 15:16:02</h2>
+<div class="table-container"><table><tr><th>TABLE 39-6 Treatment of Mycoses of the Skin, Hair, and Nails</th><th></th><th></th><th>(Continued )</th><th></th></tr><tr><td></td><td>Topicala,b</td><td>Oral Regimenc</td><td></td><td></td></tr><tr><td>Tinea pedis</td><td>Butenafine, daily
+Sertaconazole, twice daily
+Luliconazole, daily
+Naftifine cream daily, gel daily</td><td>Fluconazole 150 mg 1 per week ×
+1–4 weeks</td><td></td><td></td></tr><tr><td>Tinea manuum</td><td>Ciclopirox, twice daily</td><td>Ketoconazole 200 mg daily ×
+4 weeks</td><td></td><td></td></tr><tr><td>Tinea cruris</td><td>Clotrimazole, twice daily
+Luliconazole, daily
+Naftifine cream, daily</td><td>Itraconazole 200–400 mg/day ×
+1 week</td><td></td><td></td></tr><tr><td>Tinea corporis</td><td>Econazole, daily</td><td>Terbinafine 250 mg/day × 2 weeks</td><td></td><td></td></tr><tr><td></td><td>Haloprogin, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Ketoconazole cream, daily
+Luliconazole, daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Miconazole, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Naftifine cream, daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Oxiconazole, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Sulconazole, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Terbinafine, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Tolnaftate, twice daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Triacetin cream, solution, three
+times daily</td><td></td><td></td><td></td></tr><tr><td></td><td>Undecylenic acid, various
+preparations: apply as directed</td><td></td><td></td><td></td></tr><tr><td>Tinea capitis</td><td>Shampoo only in conjunction with
+oral therapy or for treatment of
+asymptomatic carriers</td><td>Terbinafine 250 mg/day ×
+4–8 weeks</td><td></td><td></td></tr><tr><td>Tinea barbae</td><td>Ketoconazole twice weekly ×
+4 weeks</td><td>Ketoconazole 200 mg daily ×
+4 weeks</td><td></td><td></td></tr><tr><td></td><td>Selenium sulfide daily × 2 weeks</td><td>Itraconazole 100–200 mg/day ×
+4–6 weeks</td><td></td><td></td></tr><tr><td></td><td></td><td>Griseofulvin 500 mg/day ×
+4–6 weeks
+(Continued )</td><td></td><td></td></tr></table></div><h2>Fungal Infections, Superficial | CHAPTER 39</h2>
+<p>TABLE 39-6 Treatment of Mycoses of the Skin, Hair, and Nails (Continued )</p>
+<p>Topicala,b Oral Regimenc</p>
+<p>Pityriasis Clotrimazole, twice daily Fluconazole 300 mg</p>
+<p>versicolor Econazole, daily once weekly × 2 weeks.</p>
+<p>Haloprogin, twice daily Itraconazole 200 mg</p>
+<p>Ketoconazole, daily daily × 3–7 days</p>
+<p>Miconazole, twice daily</p>
+<p>Oxiconazole cream only,</p>
+<p>twice daily</p>
+<p>Sulconazole, twice daily</p>
+<p>Tolnaftate, three times daily</p>
+<p>Onychomycosis Ciclopirox 8% nail lacquer: apply Terbinafine 250 mg/day × 6 weeks</p>
+<p>solution at night for up to 48 (fingernail), 12 weeks (toenail)</p>
+<p>weeks (fingernails and toenails)</p>
+<p>Itraconazole 200 mg twice daily</p>
+<p>Efinaconazole 10% topical solution × 1 week/month for 2 months</p>
+<p>daily for 48 weeks (toenails) (fingernail); 200 mg daily × 12</p>
+<p>Tavaborole 5% topical solution weeks (toenail)</p>
+<p>daily for 48 weeks (toenails) Fluconazole 50 mg daily or 300 mg</p>
+<p>once weekly for ≥6 months</p>
+<p>(fingernail) or 12 months (toenail)</p>
+<p>aOther products are available, including combination products.</p>
+<p>bLength of therapy depends on mycotic sensitivity and severity of infection.</p>
+<p>cOnly capsule formulation studied; give with food for increased absorption.</p>
+<p>See Chapter 138, Superficial Fungal Infections, authored by Thomas E.R. Brown and</p>
+<p>Linda Dresser, for a more detailed discussion of this topic.</p>
+<p>421</p>
+<h2>CH39.INDD 421 19-11-2020 15:16:02</h2>
+<div class="table-container"><table><tr><th>TABLE 39-6 Treatment of Mycoses of the Skin, Hair, and Nails (Continued )</th><th></th><th></th></tr><tr><td></td><td>Topicala,b</td><td>Oral Regimenc</td></tr><tr><td>Pityriasis
+versicolor</td><td>Clotrimazole, twice daily
+Econazole, daily</td><td>Fluconazole 300 mg
+once weekly × 2 weeks.
+Itraconazole 200 mg
+daily × 3–7 days</td></tr><tr><td></td><td>Haloprogin, twice daily
+Ketoconazole, daily</td><td></td></tr><tr><td></td><td>Miconazole, twice daily</td><td></td></tr><tr><td></td><td>Oxiconazole cream only,
+twice daily</td><td></td></tr><tr><td></td><td>Sulconazole, twice daily</td><td></td></tr><tr><td></td><td>Tolnaftate, three times daily</td><td></td></tr><tr><td>Onychomycosis</td><td>Ciclopirox 8% nail lacquer: apply
+solution at night for up to 48
+weeks (fingernails and toenails)
+Efinaconazole 10% topical solution
+daily for 48 weeks (toenails)
+Tavaborole 5% topical solution
+daily for 48 weeks (toenails)</td><td>Terbinafine 250 mg/day × 6 weeks
+(fingernail), 12 weeks (toenail)
+Itraconazole 200 mg twice daily
+× 1 week/month for 2 months
+(fingernail); 200 mg daily × 12
+weeks (toenail)
+Fluconazole 50 mg daily or 300 mg
+once weekly for ≥6 months
+(fingernail) or 12 months (toenail)</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

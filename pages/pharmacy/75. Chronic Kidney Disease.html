@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>75. Chronic Kidney Disease</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>75. Chronic Kidney Disease</h1>
+        </header>
+        <main>
+            <p>00</p>
+<li>Chronic kidney disease (CKD) is defined as abnormalities in kidney structure or</li>
+<pre><code>function, present for 3 months or longer.</code></pre>
+<li>CKD is classified by glomerular filtration rate (GFR) and urinary albumin-</li>
+<p>to-creatinine ratio (uACR) based on the Kidney Disease: Improving Global Out-</p>
+<p>comes (KDIGO) guidelines for evaluation and management of CKD. The KDIGO</p>
+<p>classification system is referred to as CGA staging (cause, GFR, albuminuria).</p>
+<li>A patient is classified with end-stage renal disease (ESRD) when their GFR is below</li>
+<p>15 mL/min/1.73 m2 (0.14 mL/sec/m2) and either chronic dialysis or kidney transplan-</p>
+<p>tation is needed to sustain life. KDIGO classification will be used in this chapter; the</p>
+<p>term CKD 5D indicates a patient with ESRD requiring dialysis as either hemodialysis</p>
+<p>(CKD 5HD) or peritoneal dialysis (CKD 5PD).</p>
+<li>Prognosis of CKD depends on cause of kidney disease, GFR at time of diagnosis, degree</li>
+<p>of albuminuria measured by uACR, and presence of other comorbid conditions. Please</p>
+<p>refer to Pharmacotherapy: A Pathophysiologic Approach, 11th ed., Chapter 61, Figure 61-1:</p>
+<p>KDIGO GFR and albuminuria categories and prognosis of CKD by category.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Clinical and sociodemographic risk factors for susceptibility to and initiation of</li>
+<p>CKD are useful for identifying individuals at risk of developing CKD. Clinical factors</p>
+<p>include, but aren’t limited to, diabetes, hypertension, obesity, autoimmune diseases,</p>
+<p>systemic infections, family history of CKD, reduction in kidney mass, and low birth</p>
+<p>weight. Sociodemographic factors include older age, US ethnic minority status, low</p>
+<p>income or education, and exposure to certain chemical and environmental conditions.</p>
+<li>KDIGO recommends that prognosis be considered to help guide testing and</li>
+<p>treatment decisions. Validated estimating equations such as the kidney failure risk</p>
+<p>equation (KFRE) provide an accurate 2- and 5-year risk of progression to kidney</p>
+<p>failure for individuals with stage 3–5 CKD.</p>
+<li>Progression risk factors are associated with further decline in kidney function.</li>
+<p>Persistence of the underlying initiation factors (eg, diabetes mellitus, hypertension,</p>
+<p>glomerulonephritis) appears to be the most important predictor of progressive CKD.</p>
+<li>Most progressive nephropathies share a final common pathway to irreversible renal</li>
+<p>parenchymal damage and ESRD (Figure 75-1). Key elements of the pathway to ESRD</p>
+<p>include loss of nephron mass, glomerular capillary hypertension, and proteinuria.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Progression of CKD from category 1 to 5 occurs over decades in the majority of</li>
+<p>people who are asymptomatic until they reach CKD 4 or 5. Signs and symptoms seen</p>
+<p>with stages 4–5 include fatigue, weakness, shortness of breath, mental confusion,</p>
+<p>nausea, vomiting, bleeding, anorexia, itching, cold intolerance, peripheral neuropa-</p>
+<p>thies, edema, weight gain, changes in urine output, and “foaming” of urine.</p>
+<h2>TREATMENT OF CKD</h2>
+<h2>GENERAL APPROACH</h2>
+<li>Goals of Treatment: The goal is to delay or prevent the progression of CKD while</li>
+<p>minimizing the development or severity of complications.</p>
+<li>Management should be based on KDIGO consensus guidelines to provide both evi-</li>
+<p>dence and opinion to optimize management of CKD.</p>
+<li>General nonpharmacologic recommendations for all CKD patients include exercise</li>
+<p>30 minutes five times/week, weight loss if BMI &gt;25 kg/m2, smoking cessation, limit</p>
+<p>alcohol intake, and follow a low-sodium diet if hypertensive.</p>
+<p>872</p>
+<h2>RETPAHC</h2>
+<p>75</p>
+<p>Chronic Kidney Disease</p>
+<p>CH75.indd 872 20-11-2020 17:35:50</p>
+<div class="table-container"><table><tr><th>75
+00</th><th>RETPAHC</th></tr></table></div><p>873</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>Initial pathogenic injury</p>
+<p>Glomerular injury</p>
+<p>Diabetes mellitus Reduced filtration area Arteriosclerosis</p>
+<p>Adaptive hemodynamic</p>
+<p>Formation of advanced changes Hyperlipidemia</p>
+<p>glycation end products</p>
+<p>Increased glomerular Increased glomerular</p>
+<p>Systemic hypertension</p>
+<p>blood flow capillary pressure</p>
+<p>Glomerular hypertrophy Epithelial injury Endothelial injury Mesangial injury</p>
+<p>Focal detachment of Proteinuria</p>
+<p>epithelial foot processes</p>
+<p>Glomerular Microthrombi occluding</p>
+<p>hyaline deposition glomerular capillaries Mesangial expansion</p>
+<p>Glomerulosclerosis Microaneurysm formation</p>
+<p>Progression of</p>
+<p>kidney disease</p>
+<p>FIGURE 75-1. Proposed mechanisms for progression of kidney disease.</p>
+<p>CH75.indd</p>
+<p>873</p>
+<p>20-11-2020</p>
+<p>17:35:50</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<li>General pharmacologic recommendations for all CKD patients include to adjust</li>
+<pre><code>medication doses for kidney function, avoid herbal medicines, discuss over-the-</code></pre>
+<p>counter medicines with pharmacist or other provider before self-medicating, discon-</p>
+<p>tinue potentially nephrotoxic/renally excreted drugs if estimated GFR (eGFR) &lt;60</p>
+<p>mL/min/1.73 m2, adhere to vaccine recommendations, take aspirin as secondary</p>
+<p>prevention if indicated, and avoid oral phosphate-containing bowel preparations if</p>
+<p>GFR &lt;60 mL/min/1.73 m2.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Pharmacologic therapies to slow CKD progression include drugs with demonstrated</li>
+<p>benefits to reduce proteinuria and to manage the causal factors for CKD, primarily</p>
+<p>hypertension and diabetes.</p>
+<p>Proteinuria</p>
+<li>First-line therapy for patients with diabetic CKD (DCKD) should include an angio-</li>
+<p>tensin-converting enzyme inhibitor (ACEI) or an angiotensin II receptor blocker</p>
+<p>(ARB) if the patient’s urine albumin excretion is in category A2 or greater (uACR</p>
+<p>between 30 and 300 mg/g [3–34 mg/mmol]). The antiproteinuric effect of ACEIs and</p>
+<p>ARBs is a class effect. Initiate therapy with the lowest recommended dose and increase</p>
+<p>dose until albuminuria is reduced by 30%–50% or side effects such as a greater than</p>
+<p>30% decrease in eGFR or elevation in serum potassium occur (Figure 75-2).</p>
+<li>Achieving the target blood pressure is the primary goal for CKD patients with hyper-</li>
+<p>tension and a secondary goal is to control proteinuria.</p>
+<li>Nondihydropyridine calcium channel blockers are second- or third-line antiproteinuric</li>
+<p>drugs when an ACEI or ARB is contraindicated or not tolerated.</p>
+<li>Sodium glucose transport-2 inhibitors (SGLT-2) slow progression of DCKD by</li>
+<p>reducing glucose and sodium reabsorption in the proximal tubule of the kidney,</p>
+<p>resulting in a decrease in glomerular hyperfiltration and glomerular hyperten-</p>
+<p>sion. In one trial empagliflozin reduced albuminuria, slowed eGFR decline, and</p>
+<p>reduced risk for progression to ESRD by 50% in patient with eGFR ≥30 mL/</p>
+<p>min/1.73 m2.</p>
+<p>Hypertension</p>
+<li>Figure 75-2 provides an algorithm for recommended blood pressure goals based on</li>
+<p>the degree of albuminuria present and the choice of antihypertensive agent.</p>
+<h2>• For more information on hypertension, see Chapter 10.</h2>
+<p>Diabetes</p>
+<li>Screen patients with diabetes annually for CKD starting at the time of diagnosis</li>
+<p>of type 2 diabetes and 5 years after diagnosis of type 1 diabetes by ordering serum</p>
+<p>creatinine, eGFR, and uACR.</p>
+<li>Management of diabetes in patients with CKD includes reduction of proteinuria and</li>
+<p>achievement of target blood pressure and A1C.</p>
+<h2>• For more information on diabetes, see Chapter 19.</h2>
+<h2>TREATMENT OF SECONDARY COMPLICATIONS</h2>
+<p>Anemia of CKD</p>
+<li>Desired outcomes of anemia management are to increase oxygen-carrying</li>
+<p>capacity, decrease signs and symptoms of anemia, and decrease the need for blood</p>
+<p>transfusions.</p>
+<li>Guide initiation of iron or erythropoiesis-stimulating agent (ESA) therapy by the</li>
+<p>patient’s hemoglobin (Hb), transferrin saturation (TSat), and ferritin (Table 75-1).</p>
+<p>The risk of mortality and cardiovascular events is higher in CKD patients treated to</p>
+<p>higher Hb target values with an ESA. The target range for Hb in the CKD population</p>
+<p>is a topic of much debate.</p>
+<p>874</p>
+<p>CH75.indd 874 20-11-2020 17:35:50</p>
+<p>875</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>Urine albumin Choose agents based on current hypertension</p>
+<p>No BP target ≤140/90 mm Hg excretion &gt;30 guidelines (see Chapter 10) [Evidence rating:</p>
+<p>[Evidence rating: 1B]</p>
+<p>mg/24 hours? 1B]</p>
+<p>Yes Guidelines for using ACEI or ARB:</p>
+<li>Contraindications include: pregnancy (ensure premenopausal females</li>
+<p>Begin low dose ACEI or ARB. Use on appropriate contraception if sexually active); bilateral renal artery</p>
+<p>caution if eGFR&lt;30 mL/min/1.73m2 or stenosis; angioedema with ACE or ARB [Evidence rating: 1A]</p>
+<p>BP&lt;110/70 mm Hg. Repeat eGFR in • Alternatives to decrease proteinuria if ACEI or ARB contraindicated:</p>
+<p>2-4 weeks. Repeat ACR &amp; BP in Nondihydropyridine CCB (diltiazem, verapamil). Not</p>
+<p>4-6 weeks. recommended if patient on β-blocker.</p>
+<p>[Evidence rating: 2D for urine albumin Aldosterone antagonists (spironolactone, eplerenone).</p>
+<p>30-300 mg/24 hours and 1B if urine Associated with ↑ risk of hyperkalemia.</p>
+<p>albumin&gt;300 mg/24 hours] • Hold if patient has severe vomiting, diarrhea, or intravascular volume</p>
+<p>depletion as ↑ risk of prerenal AKI [Evidence rating: not graded]</p>
+<p>Is urine albumin Check BP every 3 months. Repeat</p>
+<p>Yes Is BP≤130/80 mm Hg? Yes</p>
+<p>excretion &lt;30 mg/24 hours blood and urine tests as outlined in</p>
+<p>[Evidence rating: 2C]</p>
+<h2>or ↓30%–50%? Pharmacotherapy textbook Table 61-5.</h2>
+<p>No</p>
+<p>No</p>
+<p>Increase dose of ACEI or ARB. Increase dose of ACEI or ARB and/or add thiazide diuretic If BP still not ≤130/80</p>
+<p>Note: Combination of ACEI + (use loop diuretic if edema present) or dihydropyridine CCB.</p>
+<p>mm Hg, then add</p>
+<p>ARB or aliskiren is not If required, add other antihypertensives such as aldosterone</p>
+<p>clonidine, hydralazine,</p>
+<p>recommended. [Evidence antagonists(especially if hypokalemic), β-blocker or α-blocker</p>
+<p>or minoxidil</p>
+<p>rating: not graded] to achieve BP target. [Evidence rating: not graded]</p>
+<p>(ACEI, angiotensin-converting enzyme inhibitor; ACR, albumin-to-creatinine ratio; AKI, acute kidney injury; ARB, angiotensin receptor blocker; BP, blood pressure; CCB,</p>
+<p>calcium channel blocker; eGFR, estimated glomerular filtration rate.)</p>
+<p>FIGURE 75-2. Treatment of hypertension in chronic kidney disease. (Data from KDIGO Blood Pressure Work Group. KDIGO Clinical</p>
+<p>Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease. Kidney Int Suppl. 2012;2:337–414.)</p>
+<p>CH75.indd</p>
+<p>875</p>
+<p>20-11-2020</p>
+<p>17:35:51</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<p>TABLE 75-1 KDIGO Recommendations for Initiation of Erythropoiesis-Stimulating Agents</p>
+<p>and Iron in Anemia of Chronic Kidney Disease</p>
+<p>ND-CKD CKD 5HD and CKD 5PD Pediatric CKD</p>
+<p>ESA initiation If Hb &lt;10 g/dL (100 Use ESAs to avoid drop Selection of Hb</p>
+<p>g/L; 6.21 mmol/L). in Hb to &lt;9 g/dL concentration at</p>
+<p>Consider rate of (90 g/L; 5.59 mmol/L) which to initiate</p>
+<p>fall of Hb, prior by starting an ESA ESA therapy</p>
+<p>response to iron, when Hb is between should include</p>
+<p>risk of needing a 9 and 10 g/dL (90 and consideration of</p>
+<p>transfusion, risk of 100 g/L; 5.59 and potential benefits</p>
+<p>ESA therapy, and 6.21 mmol/L). [2B] (eg, improvement</p>
+<p>presence of anemia in QOL, school</p>
+<p>symptoms before attendance,</p>
+<p>initiating an ESA. [2C] avoidance of blood</p>
+<p>transfusions) and</p>
+<p>Do not initiate if Hb</p>
+<p>potential harms. [2D]</p>
+<p>≥10 g/dL (100 g/L;</p>
+<p>6.21 mmol/L). [2D]</p>
+<p>Hb level Do not use ESAs Do not use ESAs to Suggest Hb range</p>
+<p>to intentionally intentionally increase of 11–12 g/dL</p>
+<p>increase Hb above Hb above 13 g/dL (110–120 g/L,</p>
+<p>13 g/dL (130 g/L, (130 g/L, 8.07 6.83–7.45 mmol/L).</p>
+<p>8.07 mmol/L). [1A] mmol/L). [1A] [2D]</p>
+<p>Do not use ESAs to Do not use ESAs to</p>
+<p>maintain Hb above maintain Hb above</p>
+<p>11.5 g/dL (115 g/L; 11.5 g/dL (115 g/L;</p>
+<p>7.14 mmol/L). [2C] 7.14 mmol/L). [2C]</p>
+<p>Iron initiationa If TSat is ≤30% (0.30) If TSat is ≤30% (0.30) If TSat is ≤20% (0.20)</p>
+<p>and ferritin is ≤500 and ferritin is ≤500 and ferritin is ≤100</p>
+<p>ng/mL (mcg/L; ng/mL (mcg/L; 1120 ng/mL (mcg/L; 225</p>
+<p>1120 pmol/L). [2C] pmol/L). [2C] pmol/L). [1D]</p>
+<p>aIf TSat and serum ferritin are below suggested levels, consider iron supplementation if goal is to</p>
+<p>increase Hb and/or decrease ESA dose. Note: Serum ferritin is an acute-phase reactant—use</p>
+<p>clinical judgment when above 500 ng/mL (mcg/L; 1120 pmol/L).</p>
+<p>CKD, chronic kidney disease; ESA, erythropoiesis-stimulating agent; Hb, hemoglobin; ND-CKD,</p>
+<p>nondialysis CKD patients; QOL, quality of life; TSat, transferrin saturation.</p>
+<p>The strength of recommendation is indicated as Level 1, Level 2, or Not Graded. The quality of the</p>
+<p>supporting evidence is shown as A, B, C, or D.</p>
+<li>Kidney Disease Outcomes Quality Initiative (KDOQI) guidelines suggest a Hb range</li>
+<p>of 11–12 g/dL (110–120 g/L; 6.83–7.45 mmol/L) for all CKD patients, a target TSat</p>
+<p>of greater than 20% (&gt;0.20), and a serum ferritin of greater than 100 ng/mL (mcg/L;</p>
+<p>&gt;225 pmol/L) for CKD patients not requiring HD and greater than 200 ng/mL</p>
+<p>(mcg/L; &gt;450 pmol/L) for CKD 5HD patients.</p>
+<li>Oral or IV iron supplementation is recommended in non-HD patients (eg, CKD</li>
+<p>category 3 or higher and PD patients). Supplementation with oral products (see</p>
+<p>Table 33-2) is more convenient but patients are likely to require IV iron supplemen-</p>
+<p>tation to correct absolute iron deficiency, especially if they are receiving an ESA.</p>
+<p>Adverse effects of oral iron are primarily GI in nature and include constipation,</p>
+<p>nausea, and abdominal cramping which may negatively influence adherence.</p>
+<li>Soluble ferric pyrophosphate citrate is an iron compound added to the dialysate</li>
+<p>used for HD allowing for continuous iron administration during the procedure.</p>
+<p>Ferric pyrophosphate binds directly to transferrin, bypassing the reticuloendothelial</p>
+<p>system. The role of this agent in treating anemia of CKD is evolving.</p>
+<p>876</p>
+<p>CH75.indd 876 20-11-2020 17:35:51</p>
+<div class="table-container"><table><tr><th>TABLE 75-1 KDIGO Recommendations for Initiation of Erythropoiesis-Stimulating Agents
+and Iron in Anemia of Chronic Kidney Disease</th><th></th><th></th><th></th></tr><tr><td></td><td>ND-CKD</td><td>CKD 5HD and CKD 5PD</td><td>Pediatric CKD</td></tr><tr><td>ESA initiation</td><td>If Hb &lt;10 g/dL (100
+g/L; 6.21 mmol/L).
+Consider rate of
+fall of Hb, prior
+response to iron,
+risk of needing a
+transfusion, risk of
+ESA therapy, and
+presence of anemia
+symptoms before
+initiating an ESA. [2C]
+Do not initiate if Hb
+≥10 g/dL (100 g/L;
+6.21 mmol/L). [2D]</td><td>Use ESAs to avoid drop
+in Hb to &lt;9 g/dL
+(90 g/L; 5.59 mmol/L)
+by starting an ESA
+when Hb is between
+9 and 10 g/dL (90 and
+100 g/L; 5.59 and
+6.21 mmol/L). [2B]</td><td>Selection of Hb
+concentration at
+which to initiate
+ESA therapy
+should include
+consideration of
+potential benefits
+(eg, improvement
+in QOL, school
+attendance,
+avoidance of blood
+transfusions) and
+potential harms. [2D]</td></tr><tr><td>Hb level</td><td>Do not use ESAs
+to intentionally
+increase Hb above
+13 g/dL (130 g/L,
+8.07 mmol/L). [1A]
+Do not use ESAs to
+maintain Hb above
+11.5 g/dL (115 g/L;
+7.14 mmol/L). [2C]</td><td>Do not use ESAs to
+intentionally increase
+Hb above 13 g/dL
+(130 g/L, 8.07
+mmol/L). [1A]
+Do not use ESAs to
+maintain Hb above
+11.5 g/dL (115 g/L;
+7.14 mmol/L). [2C]</td><td>Suggest Hb range
+of 11–12 g/dL
+(110–120 g/L,
+6.83–7.45 mmol/L).
+[2D]</td></tr><tr><td>ron initiationa</td><td>If TSat is ≤30% (0.30)
+and ferritin is ≤500
+ng/mL (mcg/L;
+1120 pmol/L). [2C]</td><td>If TSat is ≤30% (0.30)
+and ferritin is ≤500
+ng/mL (mcg/L; 1120
+pmol/L). [2C]</td><td>If TSat is ≤20% (0.20)
+and ferritin is ≤100
+ng/mL (mcg/L; 225
+pmol/L). [1D]</td></tr></table></div><h2>Chronic Kidney Disease | CHAPTER 75</h2>
+<li>IV iron preparations have different pharmacokinetic profiles determined by the size</li>
+<p>of the iron-containing core and the composition of the surrounding carbohydrate</p>
+<h2>shell (Table 75-2).</h2>
+<li>Adverse effects of IV iron include allergic reactions, hypotension, dizziness, d yspnea,</li>
+<p>headaches, lower back pain, arthralgia, syncope, and arthritis. Some of these r eactions</p>
+<p>can be minimized by decreasing the dose or rate of infusion. Non-dextran IV iron</p>
+<p>formulations have a better safety record than iron dextran. An analysis of anaphylaxis</p>
+<p>risk in patients newly exposed to IV iron products (including dextran, gluconate,</p>
+<p>sucrose, or ferumoxytol) reported the highest risk with iron dextran and the lowest</p>
+<p>risk with iron sucrose.</p>
+<li>Long-term IV iron administration introduces a risk of iron overload leading to</li>
+<pre><code>hepatic, pancreatic, and cardiac dysfunction. Maintain target serum ferritin and TSat</code></pre>
+<p>values to minimize risk.</p>
+<li>All available ESAs may be administered either IV or subcutaneously (SC)</li>
+<p>(Table 75-3). The biosimilar epoetin-alfa epbx is available in the United States with</p>
+<p>the same indications as the biological drug, epoetin alfa. SQ administration of epo-</p>
+<p>etin results in a prolonged absorption phase leading to an extended half-life allowing</p>
+<p>target Hb to be maintained at doses 15%–30% lower than IV doses.</p>
+<li>The prolonged half-lives of darbepoetin alfa and methoxy PEG-epoetin beta allow</li>
+<p>for less frequent dosing.</p>
+<li>Causes of ESA resistance include iron deficiency, acute illness, inflammation,</li>
+<p>infection, chronic bleeding, aluminum toxicity, malnutrition, hyperparathyroidism,</p>
+<p>cancer, and chemotherapy.</p>
+<li>ESAs are well tolerated. Hypertension is the most common adverse event.</li>
+<li>Figure 75-3 provides an approach to management of anemia in patients with CKD.</li>
+<h2>For more information on anemia, see Chapter 33.</h2>
+<p>CKD-Related Mineral and Bone Disorder</p>
+<li>Desired outcomes for management of disorders of mineral and bone metabolism</li>
+<p>(CKD-MBD) are to “normalize” the biochemical parameters and prevent bone</p>
+<p>manifestations, cardiovascular and extravascular calcification, and the associated</p>
+<p>morbidity and mortality.</p>
+<li>The KDIGO-recommended targets for calcium, phosphorus, and PTH and</li>
+<p>frequency of monitoring based on the CKD category are given in Table 75-4.</p>
+<li>Recent guidelines emphasize avoiding hypercalcemia based on evidence linking</li>
+<p>higher calcium levels with mortality and nonfatal cardiovascular events. The change</p>
+<p>in the phosphorus recommendation from maintaining levels in the normal range to</p>
+<p>“toward the normal” is based on evidence linking both high- and low-phosphate</p>
+<p>concentrations with increased mortality.</p>
+<li>Calcium-phosphorus homeostasis is mediated through a complex interplay of</li>
+<p>hormones and their effects on bone, the gastrointestinal (GI) tract, kidneys, and the</p>
+<pre><code>parathyroid gland. As kidney function declines, phosphate elimination decreases</code></pre>
+<p>resulting in hyperphosphatemia and a decrease in serum calcium concentration.</p>
+<pre><code>Hypocalcemia stimulates secretion of PTH. As kidney function declines, serum</code></pre>
+<p>calcium balance can be maintained only at the expense of increased bone resorption,</p>
+<p>leading to alterations in structural integrity of bone and other consequences.</p>
+<p>Treatment</p>
+<li>Dietary phosphorus restriction, dialysis, and parathyroidectomy are n onpharmacologic</li>
+<p>approaches to management of hyperphosphatemia and CKD-MBD.</p>
+<p>Phosphate-Binding Agents</p>
+<li>Oral calcium compounds bind phosphate therefore decreasing phosphorus absorp-</li>
+<p>tion from the gut and are first-line agents for controlling both serum phosphorus</p>
+<p>and calcium concentrations (Table 75-5). Calcium carbonate and calcium acetate</p>
+<p>877</p>
+<p>CH75.indd 877 20-11-2020 17:35:51</p>
+<h2>878 SECTION</h2>
+<p>14</p>
+<p>|</p>
+<p>Renal</p>
+<p>Disorders</p>
+<h2>TABLE 75-2 IV Iron Preparations</h2>
+<p>Iron Brand Half-Life Molecular Weight FDA-Approved FDA-Approved Dose Ranges</p>
+<p>Compounds Names (Hours) (Daltons) Indications Dosinga (mg)b,c</p>
+<p>Ferric Injectafer 7–12 150,000 Adult patients with Give 2 doses separated by at least 7 days of 750 750</p>
+<p>carboxymaltose intolerance to oral iron mg per dose (if body weight is ≥50 kg) or</p>
+<p>or who have had an 15 mg/kg per dose (if body weight is</p>
+<p>unsatisfactory response &lt;50 kg) not to exceed 1500 mg per course.</p>
+<p>to oral iron and in adult Give either IV push (100 mg/min) or diluted</p>
+<p>patients with CKD not on in not more than 250 mL of 0.9 NaCl as an</p>
+<p>dialysis infusion over at least 15 minutes</p>
+<p>Ferumoxytol Feraheme 15 750,000 Adult patients with 510 mg (17 mL) as a single dose, followed 510</p>
+<p>intolerance to oral iron by a second 510 mg dose 3–8 days</p>
+<p>or who have had an after the initial dose. Dilute in 50–200</p>
+<p>unsatisfactory response mL of 0.9% NaCl or 5% dextrose and</p>
+<p>to oral iron and in adult administer as an IV infusion over</p>
+<p>patients with CKD 15 minutes</p>
+<p>Iron dextran INFeD 40–60 96,000 Patients with iron deficiency 100 mg over 2 minutes (25 mg test dose 25–1000</p>
+<p>in whom oral iron required)</p>
+<p>is unsatisfactory or Note: equation provided by manufacturer</p>
+<p>impossible to calculate dose based on desired Hb</p>
+<p>Iron sucrose Venofer 6 43,000 Adult and pediatric CKD 5HD Adult: 100 mg over 2–5 minutes or 100 mg 25–1000</p>
+<p>patients aged 2 years and in maximum of 100 mL of 0.9% NaCl over</p>
+<p>older 15 minutes per consecutive HD session</p>
+<p>Pediatric: 0.5 mg/kg not to exceed 100 mg</p>
+<p>per dose over 5 minutes or diluted in</p>
+<p>25 mL of 0.9% NaCl administered over</p>
+<p>5–60 minutes (give dose every 2 weeks</p>
+<p>for 12 weeks)</p>
+<p>CH75.indd</p>
+<p>878</p>
+<p>20-11-2020</p>
+<p>17:35:51</p>
+<div class="table-container"><table><tr><th>Iron
+Compounds</th><th>Brand
+Names</th><th>Half-Life
+(Hours)</th><th>Molecular Weight
+(Daltons)</th><th>FDA-Approved
+Indications</th><th>FDA-Approved
+Dosinga</th><th>Dose Ranges
+(mg)b,c</th></tr><tr><td>Ferric
+carboxymaltose</td><td>Injectafer</td><td>7–12</td><td>150,000</td><td>Adult patients with
+intolerance to oral iron
+or who have had an
+unsatisfactory response
+to oral iron and in adult
+patients with CKD not on
+dialysis</td><td>Give 2 doses separated by at least 7 days of 750
+mg per dose (if body weight is ≥50 kg) or
+15 mg/kg per dose (if body weight is
+&lt;50 kg) not to exceed 1500 mg per course.
+Give either IV push (100 mg/min) or diluted
+in not more than 250 mL of 0.9 NaCl as an
+infusion over at least 15 minutes</td><td>750</td></tr><tr><td>Ferumoxytol</td><td>Feraheme</td><td>15</td><td>750,000</td><td>Adult patients with
+intolerance to oral iron
+or who have had an
+unsatisfactory response
+to oral iron and in adult
+patients with CKD</td><td>510 mg (17 mL) as a single dose, followed
+by a second 510 mg dose 3–8 days
+after the initial dose. Dilute in 50–200
+mL of 0.9% NaCl or 5% dextrose and
+administer as an IV infusion over
+15 minutes</td><td>510</td></tr><tr><td>Iron dextran</td><td>INFeD</td><td>40–60</td><td>96,000</td><td>Patients with iron deficiency
+in whom oral iron
+is unsatisfactory or
+impossible</td><td>100 mg over 2 minutes (25 mg test dose
+required)
+Note: equation provided by manufacturer
+to calculate dose based on desired Hb</td><td>25–1000</td></tr><tr><td>Iron sucrose</td><td>Venofer</td><td>6</td><td>43,000</td><td>Adult and pediatric CKD 5HD
+patients aged 2 years and
+older</td><td>Adult: 100 mg over 2–5 minutes or 100 mg
+in maximum of 100 mL of 0.9% NaCl over
+15 minutes per consecutive HD session
+Pediatric: 0.5 mg/kg not to exceed 100 mg
+per dose over 5 minutes or diluted in
+25 mL of 0.9% NaCl administered over
+5–60 minutes (give dose every 2 weeks
+for 12 weeks)</td><td>25–1000</td></tr></table></div><p>879</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>Adult and pediatric ND-CKD Adult: 200 mg over 2–5 minutes on five</p>
+<p>patients aged 2 years and different occasions within 14-day</p>
+<p>older period. There is limited experience with</p>
+<p>administration of 500 mg diluted in a</p>
+<p>maximum of 250 mL of 0.9% NaCl over</p>
+<p>3.5–4 hours on day 1 and day 14</p>
+<p>Pediatric: see pediatric dosing for CKD 5HD</p>
+<p>(give dose every 4 weeks for 12 weeks)</p>
+<p>Adult and pediatric CKD 5PD Adult: give 3 divided doses within 28 days</p>
+<p>patients aged 2 years and as 2 infusions of 300 mg over 1.5 hours</p>
+<p>older 14 days apart followed by one 400 mg</p>
+<p>infusion over 2.5 hours 14 days later. Dilute</p>
+<p>in a maximum of 250 mL of 0.9% NaCl</p>
+<p>Pediatric: see pediatric dosing for CKD 5HD</p>
+<p>(give dose every 4 weeks for 12 weeks)</p>
+<p>Sodium ferric Ferrlecit 1 350,000 Adult and pediatric CKD Adult: 125 mg over 10 minutes or 125 mg 62.5–1000</p>
+<p>gluconate 5HD patients aged 6 years in 100 mL of 0.9% NaCl over 60 minutes</p>
+<p>and older receiving ESA per HD session</p>
+<p>therapy Pediatric: 1.5 mg/kg in 25 mL of 0.9% NaCl</p>
+<p>over 60 minutes per dialysis session;</p>
+<p>maximum dose 125 mg per dose</p>
+<p>aMonitor for 30 minutes following an infusion; KDIGO guidelines recommend monitoring for 60 minutes (1B recommendation for iron dextran, 2C recommendation for non-dextran products).</p>
+<p>bDose ranges for iron deficiency in CKD. With the exception of ferric carboxymaltose and ferumoxytol, small doses (eg, 25–150 mg/week) are generally used for maintenance regimens.</p>
+<p>Larger doses (eg, 1 g) should be administered in divided doses.</p>
+<p>cTotal dose for absolute iron deficiency is approximately 1 g in divided doses (1.5 g for ferric carboxymaltose).</p>
+<p>CKD, chronic kidney disease; ESA, erythropoiesis-stimulating agent; ND-CKD, nondialysis CKD patients.</p>
+<p>CH75.indd</p>
+<p>879</p>
+<p>20-11-2020</p>
+<p>17:35:51</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th>Adult and pediatric ND-CKD
+patients aged 2 years and
+older</th><th>Adult: 200 mg over 2–5 minutes on five
+different occasions within 14-day
+period. There is limited experience with
+administration of 500 mg diluted in a
+maximum of 250 mL of 0.9% NaCl over
+3.5–4 hours on day 1 and day 14
+Pediatric: see pediatric dosing for CKD 5HD
+(give dose every 4 weeks for 12 weeks)</th><th></th></tr><tr><td></td><td></td><td></td><td></td><td>Adult and pediatric CKD 5PD
+patients aged 2 years and
+older</td><td>Adult: give 3 divided doses within 28 days
+as 2 infusions of 300 mg over 1.5 hours
+14 days apart followed by one 400 mg
+infusion over 2.5 hours 14 days later. Dilute
+in a maximum of 250 mL of 0.9% NaCl
+Pediatric: see pediatric dosing for CKD 5HD
+(give dose every 4 weeks for 12 weeks)</td><td></td></tr><tr><td>Sodium ferric
+gluconate</td><td>Ferrlecit</td><td>1</td><td>350,000</td><td>Adult and pediatric CKD
+5HD patients aged 6 years
+and older receiving ESA
+therapy</td><td>Adult: 125 mg over 10 minutes or 125 mg
+in 100 mL of 0.9% NaCl over 60 minutes
+per HD session
+Pediatric: 1.5 mg/kg in 25 mL of 0.9% NaCl
+over 60 minutes per dialysis session;
+maximum dose 125 mg per dose</td><td>62.5–1000</td></tr></table></div><p>880</p>
+<p>Diagnosis of Anemia of CKDa (other causes ruled out)</p>
+<p>EvaluateTSat and Ferritin</p>
+<p>TSat &lt;30% (&lt;0.30), Ferritin &lt;500 TSat ≥30% (≥0.30), Ferritinb ≥ 500</p>
+<p>ng/mL (mcg/L; &lt;1,120 pmol/L) ng/mL (mcg/L; ≥1,120 pmol/L)</p>
+<p>If goal is to ↑Hb without initiating an ESA or If ESA naïve: Initiate ESA therapy</p>
+<p>to ↓ESA dose, administer supplemental iron. (see Table 75-3). If receiving ESA</p>
+<p>[2C] IV: Give as single large dose or repeated therapy and Hb has not increased</p>
+<p>smaller doses depending on formulation by 1 g/dL (10 g/L; 0.62 mmol/L)</p>
+<p>(see Table 75-2) [preferred route for CKD 5HD within 4 weeks, increase dose by</p>
+<p>and CKD 5PD] 25%. Consider maintenance iron to</p>
+<p>avoid iron deficiency.</p>
+<p>PO: 1-3 month course of 200 mg elemental</p>
+<p>iron per day [preferred route for ND-CKD]</p>
+<p>Monitor Hb monthly.c Monitor</p>
+<p>If Hb increases too If Hb does not increase appropriately TSat and ferritin at least every If Hb increases too rapidly</p>
+<p>rapidly (see text) Monitor Hb, TSat, (see text) and TSat &lt;30% (&lt;0.30), 3 months (more frequent (see text) decrease ESA</p>
+<p>decrease ESA dose and ferritin monthly.c ferritin &lt; 500 ng/mL (mcg/L;&lt;1,120 monitoring of iron indices may dose by 25%. [2C]</p>
+<p>by 25% (if receiving pmol/L) give a course of IV iron. be warranted with</p>
+<p>an ESA). [2C] initiation/increase in ESA).</p>
+<p>If TSat and ferritin are above</p>
+<p>thresholds, see decision tree for ≥</p>
+<p>30%, Ferritin ≥500 ng/mL (mcg/L).</p>
+<p>CH75.indd</p>
+<p>880</p>
+<p>20-11-2020</p>
+<p>17:35:51</p>
+<p>881</p>
+<p>If Hb increases appropriately If Hb increases appropriately If Hb does not increase appropriately</p>
+<p>(see text) continue ESA (see text) continue ESA and (see text) consider increase in ESA</p>
+<p>(if patient receiving an ESA) Monitor Hb, TSat, and ferritin consider maintenance iron dose by 25% after evaluating for</p>
+<p>and consider maintenance monthly.c (eg, daily PO iron for ND-CKD, hyporesponsiveness.</p>
+<p>iron (eg, daily PO iron, weekly or monthly IV iron for Avoid repeated escalation in ESA</p>
+<p>weekly or monthly IV iron) CKD 5HD or CKD 5PD) to avoid dose beyond double the initial weight-</p>
+<p>to avoid iron deficiency. iron deficiency. based dose. [2D]</p>
+<p>If TSat and ferritin are below</p>
+<p>If Hb does not increase</p>
+<p>thresholds, give a course of iron</p>
+<p>Monitor Hb monthly (CKD appropriately (see text) consider Monitor Hb monthly (CKD (route and dose depend on CKD</p>
+<p>5HD and CKD 5PD) or every increase in ESA dose by 25% after 5HD and CKD 5PD) or category and formulation). [2C]</p>
+<p>evaluating for hyporesponsiveness. every 3 months (ND-CKD).</p>
+<p>3 months (ND-CKD).</p>
+<p>Avoid repeated escalation in ESA Monitor TSat and ferritin</p>
+<p>Monitor TSat and ferritin at</p>
+<p>dose beyond double the initial weight- at least every 3 months.</p>
+<p>least every 3 months.</p>
+<p>based dose. [2D] If TSat and ferritin</p>
+<p>are below thresholds, consider</p>
+<p>risk/benefit of a repeated course of</p>
+<p>IV iron (route and dose depend on</p>
+<p>CKD category and formulation).</p>
+<h2>aSee Table 75-1 and text for discussion of Hb levels.</h2>
+<p>b Clinical judgment should be used to determine if iron supplementation should be continued when ferritin &gt;500 ng/mL (mcg/L; 1120 pmol/L).</p>
+<p>cWeekly monitoring of Hb may be warranted. Wait at least 1 week after an IV dose of iron to measure TSat and ferritin.</p>
+<p>(CKD, chronic kidney disease; ESA, erythropoiesis-stimulating agent; Hb, hemoglobin; ND-CKD, n ondialysis CKD patients; TSat, transferrin saturation.)</p>
+<p>FIGURE 75-3 Algorithm for management of anemia of CKD in adults.</p>
+<p>CH75.indd</p>
+<p>881</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<h2>SECTION 14 | Renal Disorders</h2>
+<p>TABLE 75-3 Erythropoiesis-Stimulating Agents in Chronic Kidney Disease</p>
+<p>Brand Route of Half-Life</p>
+<p>Drug Name Name(s) Starting Dose Administration (Hours)</p>
+<p>Epoetin alfa Epogen, Adults: 50–100 units/kg IV or SC 8.5 (IV)</p>
+<p>Procrit three times per week 24 (SC)</p>
+<p>Pediatrics: 50 units/kg three</p>
+<p>times per week</p>
+<p>Epoetin Retacrit See epoetin alfa</p>
+<p>alfa-epbx information</p>
+<p>Darbepoetin Aranesp Adults: IV or SC 25 (IV)</p>
+<p>alfa ND-CKD: 0.45 mcg/kg once 48 (SC)</p>
+<p>every 4 weeks</p>
+<p>CKD 5HD or CKD 5PD: 0.45</p>
+<p>mcg/kg once per week</p>
+<p>or 0.75 mcg/kg every 2</p>
+<p>weeks</p>
+<p>Pediatrics:</p>
+<p>0.45 mcg/kg once weekly;</p>
+<p>may give 0.75 mcg/kg</p>
+<p>once every 2 weeks in</p>
+<p>ND-CKD patients</p>
+<p>Methoxy PEG- Mircera All adult CKD patients: IV or SC 134 (IV)</p>
+<p>epoetin 0.6 mcg/kg every 139 (SC)</p>
+<p>beta 2 weeks; once Hb</p>
+<p>stabilizes, double the</p>
+<p>dose and administer</p>
+<p>monthly (eg, if</p>
+<p>administering 0.6 mcg/</p>
+<p>kg every 2 weeks,</p>
+<p>give 1.2 mcg/kg every</p>
+<p>month)</p>
+<p>CKD, chronic kidney disease; ND-CKD, nondialysis CKD patients; PEG, polyethylene glycol; SC,</p>
+<p>subcutaneous.</p>
+<p>are the primary preparations used. Sevelamer is a nonabsorbable, nonelemental</p>
+<p>hydrogel that effectively lowers phosphorus and also lowers LDL and increases HDL.</p>
+<li>Lanthanum carbonate controls phosphorus and maintains PTH in the target range</li>
+<p>with less risk of hypercalcemia than calcium-containing binding agents. Ferric</p>
+<p>citrate and sucroferric oxyhydroxide are iron-based phosphate-binding agents.</p>
+<li>Adverse effects of all phosphate binders are generally limited to GI effects, including</li>
+<p>constipation, diarrhea, nausea, vomiting, and abdominal pain. Risk of hypercalcemia</p>
+<p>may necessitate restriction of calcium-containing binder use and/or reduction in</p>
+<p>dietary intake. Aluminum and magnesium binders are not recommended for regular</p>
+<p>use in CKD because aluminum binders have been associated with CNS toxicity and</p>
+<p>the worsening of anemia, whereas magnesium binders may lead to hypermagnesemia</p>
+<p>and hyperkalemia. The potential for iron overload should be considered with ferric</p>
+<p>citrate.</p>
+<p>Vitamin D Therapy</p>
+<li>Calcitriol, 1,25-dihydroxyvitamin D, and vitamin D analogs directly inhibit or sup-</li>
+<p>3</p>
+<p>press PTH synthesis and also stimulate absorption of serum calcium by intestinal</p>
+<p>cells, which decreases PTH secretion by the parathyroid glands.</p>
+<p>882</p>
+<p>CH75.indd 882 20-11-2020 17:35:52</p>
+<div class="table-container"><table><tr><th>TABLE 75-3 Erythropoiesis-Stimulating Agents in Chronic Kidney Disease</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug Name</td><td>Brand
+Name(s)</td><td>Starting Dose</td><td>Route of
+Administration</td><td>Half-Life
+(Hours)</td></tr><tr><td>Epoetin alfa</td><td>Epogen,
+Procrit</td><td>Adults: 50–100 units/kg
+three times per week
+Pediatrics: 50 units/kg three
+times per week</td><td>IV or SC</td><td>8.5 (IV)
+24 (SC)</td></tr><tr><td>Epoetin
+alfa-epbx</td><td>Retacrit</td><td>See epoetin alfa
+information</td><td></td><td></td></tr><tr><td>Darbepoetin
+alfa</td><td>Aranesp</td><td>Adults:
+ND-CKD: 0.45 mcg/kg once
+every 4 weeks
+CKD 5HD or CKD 5PD: 0.45
+mcg/kg once per week
+or 0.75 mcg/kg every 2
+weeks
+Pediatrics:
+0.45 mcg/kg once weekly;
+may give 0.75 mcg/kg
+once every 2 weeks in
+ND-CKD patients</td><td>IV or SC</td><td>25 (IV)
+48 (SC)</td></tr><tr><td>Methoxy PEG-
+epoetin
+beta</td><td>Mircera</td><td>All adult CKD patients:
+0.6 mcg/kg every
+2 weeks; once Hb
+stabilizes, double the
+dose and administer
+monthly (eg, if
+administering 0.6 mcg/
+kg every 2 weeks,
+give 1.2 mcg/kg every
+month)</td><td>IV or SC</td><td>134 (IV)
+139 (SC)</td></tr></table></div><p>883</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>TABLE 75-4 KDIGO Monitoring and Goals for Calcium, Phosphorus, and Parathyroid Hormone</p>
+<p>Chronic Kidney Disease Stage</p>
+<p>Parameter 3 4 5 ESRD</p>
+<p>Calciuma</p>
+<p>Monitoring frequencyb Every 6–12 months Every 3–6 months Every 1–3 months Every 1–3 months</p>
+<p>Goal Avoid hypercalcemia [2C] Avoid hypercalcemia [2C] Avoid hypercalcemia [2C] Avoid hypercalcemia [2C]</p>
+<p>Phosphorus</p>
+<p>Monitoring frequencyb Every 6–12 months Every 3–6 months Every 1–3 months Every 1–3 months</p>
+<p>Goal Toward the normal range [2C] Toward the normal range [2C] Toward the normal range [2C] Toward the normal range [2C]</p>
+<p>Intact PTH</p>
+<p>Monitoring frequencyb Based on baseline level and Every 6–12 months Every 3–6 months Every 3–6 months</p>
+<p>CKD progression</p>
+<p>Goal Avoid progressively rising Avoid progressively rising levels Avoid progressively rising levels or 2–9 times the upper normal limit [2C]</p>
+<p>levels or levels persistently or levels persistently above levels persistently above the upper</p>
+<p>above the upper limit of the upper limit of normal [2C] limit of normal [2C]</p>
+<p>normal [2C]</p>
+<p>aUsually corrected for albumin.</p>
+<p>bNot graded.</p>
+<p>See Table 75-1 for definitions of evidence grading in brackets.</p>
+<p>CH75.indd</p>
+<p>883</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<div class="table-container"><table><tr><th>TABLE 75-4 KDIGO Monitoring and Goals for Calcium, Phosphorus, and Parathyroid Hormone</th><th></th><th></th><th></th><th></th></tr><tr><td></td><td></td><td>Chronic Kidney Disease Stage</td><td></td><td></td></tr><tr><td>Parameter</td><td>3</td><td>4</td><td>5</td><td>ESRD</td></tr><tr><td>Calciuma
+Monitoring frequencyb
+Goal</td><td>Every 6–12 months
+Avoid hypercalcemia [2C]</td><td>Every 3–6 months
+Avoid hypercalcemia [2C]</td><td>Every 1–3 months
+Avoid hypercalcemia [2C]</td><td>Every 1–3 months
+Avoid hypercalcemia [2C]</td></tr><tr><td>Phosphorus
+Monitoring frequencyb
+Goal</td><td>Every 6–12 months
+Toward the normal range [2C]</td><td>Every 3–6 months
+Toward the normal range [2C]</td><td>Every 1–3 months
+Toward the normal range [2C]</td><td>Every 1–3 months
+Toward the normal range [2C]</td></tr><tr><td>Intact PTH
+Monitoring frequencyb
+Goal</td><td>Based on baseline level and
+CKD progression
+Avoid progressively rising
+levels or levels persistently
+above the upper limit of
+normal [2C]</td><td>Every 6–12 months
+Avoid progressively rising levels
+or levels persistently above
+the upper limit of normal [2C]</td><td>Every 3–6 months
+Avoid progressively rising levels or
+levels persistently above the upper
+limit of normal [2C]</td><td>Every 3–6 months
+2–9 times the upper normal limit [2C]</td></tr></table></div><h2>884 SECTION</h2>
+<p>14</p>
+<p>|</p>
+<p>Renal</p>
+<p>Disorders</p>
+<p>TABLE 75-5 Phosphate-Binding Agents for Treatment of Hyperphosphatemia in Chronic Kidney Disease Patients</p>
+<p>Category Drug Brand Name Compound Content Starting Doses Dose Titrationa Commentsb</p>
+<p>Calcium- Calcium PhosLo 25% elemental calcium 1334 mg three Increase or Comparable efficacy to calcium carbonate with</p>
+<p>based acetate (25% Phoslyra (169 mg elemental times a day with decrease by lower dose of elemental calcium</p>
+<p>binders elemental calcium per 667 mg meals 667 mg per Approximately 45 mg phosphorus bound per 1 g</p>
+<p>calcium) capsule) meal (169 mg calcium acetate</p>
+<p>667 p e m r g 5 c m al L cium acetate e ca le lc m iu e m nt ) al Evaluate for drug interactions with calcium</p>
+<p>Calcium Tums, Os-Cal, 40% elemental calcium 0.5–1 g (elemental Increase or Dissolution characteristics and phosphate</p>
+<p>carbonatec Caltrate calcium) three decrease by binding may vary from product to product</p>
+<p>times a day with 500 mg per Approximately 39 mg phosphorus bound per 1 g</p>
+<p>meals meal (200 mg calcium carbonate</p>
+<p>elemental</p>
+<p>calcium) Evaluate for drug interactions with calcium</p>
+<p>Iron-based Ferric citrate Auryxia 210 mg tablets (= 1 420 mg ferric iron Increase or May increase serum iron, ferritin, and TSat</p>
+<p>binders g ferric citrate) three times daily decrease dose by May cause discolored (dark) stools</p>
+<h2>with meals 1 or 2 tablets per</h2>
+<p>meal Evaluate for drug interactions with iron</p>
+<p>Sucroferric Velphoro 500 mg chewable 500 mg three times Increase or May cause discolored (dark) stools</p>
+<p>oxyhydroxide tablets daily with meals decrease by 500 Evaluate for drug interactions with iron</p>
+<p>mg per day</p>
+<p>CH75.indd</p>
+<p>884</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<div class="table-container"><table><tr><th>TABLE 75-5 Phosphate-Binding Agents for Treatment of Hyperphosphatemia in Chronic Kidney Disease Patients</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Category</td><td>Drug</td><td>Brand Name</td><td>Compound Content</td><td>Starting Doses</td><td>Dose Titrationa</td><td>Commentsb</td></tr><tr><td>Calcium-
+based
+binders</td><td>Calcium
+acetate (25%
+elemental
+calcium)</td><td>PhosLo
+Phoslyra</td><td>25% elemental calcium
+(169 mg elemental
+calcium per 667 mg
+capsule)
+667 mg calcium acetate
+per 5 mL</td><td>1334 mg three
+times a day with
+meals</td><td>Increase or
+decrease by
+667 mg per
+meal (169 mg
+elemental
+calcium)</td><td>Comparable efficacy to calcium carbonate with
+lower dose of elemental calcium
+Approximately 45 mg phosphorus bound per 1 g
+calcium acetate
+Evaluate for drug interactions with calcium</td></tr><tr><td></td><td>Calcium
+carbonatec</td><td>Tums, Os-Cal,
+Caltrate</td><td>40% elemental calcium</td><td>0.5–1 g (elemental
+calcium) three
+times a day with
+meals</td><td>Increase or
+decrease by
+500 mg per
+meal (200 mg
+elemental
+calcium)</td><td>Dissolution characteristics and phosphate
+binding may vary from product to product
+Approximately 39 mg phosphorus bound per 1 g
+calcium carbonate
+Evaluate for drug interactions with calcium</td></tr><tr><td>Iron-based
+binders</td><td>Ferric citrate</td><td>Auryxia</td><td>210 mg tablets (= 1
+g ferric citrate)</td><td>420 mg ferric iron
+three times daily
+with meals</td><td>Increase or
+decrease dose by
+1 or 2 tablets per
+meal</td><td>May increase serum iron, ferritin, and TSat
+May cause discolored (dark) stools
+Evaluate for drug interactions with iron</td></tr><tr><td></td><td>Sucroferric
+oxyhydroxide</td><td>Velphoro</td><td>500 mg chewable
+tablets</td><td>500 mg three times
+daily with meals</td><td>Increase or
+decrease by 500
+mg per day</td><td>May cause discolored (dark) stools
+Evaluate for drug interactions with iron</td></tr></table></div><p>885</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>Resin binders Sevelamer Renvela 800 mg tablet 800–1600 mg three Increase or Also lowers low-density lipoprotein cholesterol</p>
+<p>carbonate 0.8 and 2.4 g powder times a day with decrease by Consider in patients at risk for extraskeletal</p>
+<p>for oral suspension meals (once- 800 mg per meal calcification</p>
+<p>daily dosing also</p>
+<p>effective) Risk of metabolic acidosis with sevelamer</p>
+<p>hydrochloride (less risk with carbonate formulation)</p>
+<p>Sevelamer Renagel 400 and 800 mg tablets 800–1600 mg three Increase or decrease May interact with cipro and mycophenolate mofetil</p>
+<p>hydrochloride times a day with by 800 mg per</p>
+<p>meals meal</p>
+<p>Other Lanthanum Fosrenol 500, 750, and 1000 mg 1500 mg daily in Increase or Potential for accumulation of lanthanum due to</p>
+<p>elemental carbonate chewable tablets divided doses decrease by some GI absorption (long-term consequences</p>
+<p>binders 750 and 1000 mg oral with meals 750 mg/day unknown)</p>
+<p>powder Evaluate for drug interactions (eg, cationic</p>
+<p>antacids, quinolone antibiotics)</p>
+<p>Aluminum AlternaGel Content varies (range 300–600 mg three Not for long-term Not a first-line agent; risk of aluminum toxicity;</p>
+<p>hydroxide 100–600 mg/unit) times a day with use requiring do not use concurrently with citrate-</p>
+<p>meals titration containing products</p>
+<p>Reserve for short-term use (4 weeks) in patients</p>
+<p>with hyperphosphatemia not responding to</p>
+<p>other binders</p>
+<p>Evaluate for drug interactions</p>
+<p>aBased on phosphorus levels, titrate every 2–3 weeks until phosphorus goal is reached.</p>
+<p>bGI side effects are possible with all agents (eg, nausea, vomiting, abdominal pain, diarrhea, or constipation).</p>
+<p>cMultiple preparations available that are not listed.</p>
+<p>TSat, transferrin saturation.</p>
+<p>CH75.indd</p>
+<p>885</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<div class="table-container"><table><tr><th>Resin binders</th><th>Sevelamer
+carbonate</th><th>Renvela</th><th>800 mg tablet
+0.8 and 2.4 g powder
+for oral suspension</th><th>800–1600 mg three
+times a day with
+meals (once-
+daily dosing also
+effective)</th><th>Increase or
+decrease by
+800 mg per meal</th><th>Also lowers low-density lipoprotein cholesterol
+Consider in patients at risk for extraskeletal
+calcification
+Risk of metabolic acidosis with sevelamer
+hydrochloride (less risk with carbonate formulation)</th></tr><tr><td></td><td>Sevelamer
+hydrochloride</td><td>Renagel</td><td>400 and 800 mg tablets</td><td>800–1600 mg three
+times a day with
+meals</td><td>Increase or decrease
+by 800 mg per
+meal</td><td>May interact with cipro and mycophenolate mofetil</td></tr><tr><td>Other
+elemental
+binders</td><td>Lanthanum
+carbonate</td><td>Fosrenol</td><td>500, 750, and 1000 mg
+chewable tablets
+750 and 1000 mg oral
+powder</td><td>1500 mg daily in
+divided doses
+with meals</td><td>Increase or
+decrease by
+750 mg/day</td><td>Potential for accumulation of lanthanum due to
+some GI absorption (long-term consequences
+unknown)
+Evaluate for drug interactions (eg, cationic
+antacids, quinolone antibiotics)</td></tr><tr><td></td><td>Aluminum
+hydroxide</td><td>AlternaGel</td><td>Content varies (range
+100–600 mg/unit)</td><td>300–600 mg three
+times a day with
+meals</td><td>Not for long-term
+use requiring
+titration</td><td>Not a first-line agent; risk of aluminum toxicity;
+do not use concurrently with citrate-
+containing products
+Reserve for short-term use (4 weeks) in patients
+with hyperphosphatemia not responding to
+other binders
+Evaluate for drug interactions</td></tr></table></div><h2>886 SECTION</h2>
+<p>14</p>
+<p>|</p>
+<p>Renal</p>
+<p>Disorders</p>
+<h2>TABLE 75-6 Vitamin D Agents</h2>
+<p>Form of Frequency of Dosing or</p>
+<p>Generic Name Brand Name Vitamin D Dosage Forms Initial Dose Dosage Range Dose Titrationa</p>
+<p>Nutritional Vitamin D</p>
+<p>Ergocalciferol Drisdol D PO Varies based on 25(OH)D levels 400–50,000 Daily (doses of 400–2000</p>
+<p>2</p>
+<p>international units international units)</p>
+<p>Cholecalciferolb Generic D PO Weekly or monthly for higher</p>
+<p>3</p>
+<p>doses (50,000 international</p>
+<p>units)</p>
+<p>Calcifediol Rayaldee D PO 30 mcg daily 30–60 mcg Increase after 3 months if PTH</p>
+<p>3</p>
+<p>above desired range</p>
+<p>Vitamin D and Analogs</p>
+<p>Form of</p>
+<p>Generic Name Brand Name Vitamin D Dosage Forms Initial Dosec,d Dosage Range Dose Titrationa</p>
+<p>Calcitriol Rocaltrol D PO 0.25 mcg daily (varying doses 0.25–5 mcg Increase by 0.25 mcg/day at</p>
+<p>3</p>
+<p>administered three times per 4–8 week intervals</p>
+<p>week are also used)</p>
+<p>Calcijex IV 1–2 mcg three times per week 0.5–5 mcg Increase by 0.5–1 mcg at 2–4</p>
+<p>week intervals</p>
+<p>Doxercalciferole Hectorol D PO ND-CKD: 1 mcg daily 5–20 mcg Increase by 0.5 mcg at</p>
+<p>2</p>
+<p>2-week intervals for daily</p>
+<p>dosing or by 2.5 mcg at</p>
+<p>8-week intervals for three</p>
+<p>times per week dosing</p>
+<p>CH75.indd</p>
+<p>886</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<div class="table-container"><table><tr><th>TABLE 75-6 Vitamin D Agents</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Brand Name</td><td>Form of
+Vitamin D</td><td>Dosage Forms</td><td>Initial Dose</td><td>Dosage Range</td><td>Frequency of Dosing or
+Dose Titrationa</td></tr><tr><td>Nutritional Vitamin D</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Ergocalciferol</td><td>Drisdol</td><td>D
+2</td><td>PO</td><td>Varies based on 25(OH)D levels</td><td>400–50,000
+international units</td><td>Daily (doses of 400–2000
+international units)</td></tr><tr><td>Cholecalciferolb</td><td>Generic</td><td>D
+3</td><td>PO</td><td></td><td></td><td>Weekly or monthly for higher
+doses (50,000 international
+units)</td></tr><tr><td>Calcifediol</td><td>Rayaldee</td><td>D
+3</td><td>PO</td><td>30 mcg daily</td><td>30–60 mcg</td><td>Increase after 3 months if PTH
+above desired range</td></tr><tr><td>Vitamin D and Analogs</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Generic Name</td><td>Brand Name</td><td>Form of
+Vitamin D</td><td>Dosage Forms</td><td>Initial Dosec,d</td><td>Dosage Range</td><td>Dose Titrationa</td></tr><tr><td>Calcitriol</td><td>Rocaltrol</td><td>D
+3</td><td>PO</td><td>0.25 mcg daily (varying doses
+administered three times per
+week are also used)</td><td>0.25–5 mcg</td><td>Increase by 0.25 mcg/day at
+4–8 week intervals</td></tr><tr><td></td><td>Calcijex</td><td></td><td>IV</td><td>1–2 mcg three times per week</td><td>0.5–5 mcg</td><td>Increase by 0.5–1 mcg at 2–4
+week intervals</td></tr><tr><td>Doxercalciferole</td><td>Hectorol</td><td>D
+2</td><td>PO</td><td>ND-CKD: 1 mcg daily</td><td>5–20 mcg</td><td>Increase by 0.5 mcg at
+2-week intervals for daily
+dosing or by 2.5 mcg at
+8-week intervals for three
+times per week dosing</td></tr></table></div><p>887</p>
+<p>Chronic</p>
+<p>Kidney</p>
+<p>Disease</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>75</p>
+<p>ESRD: 10 mcg three times per week</p>
+<p>IV ESRD: 4 mcg three times per week 2–8 mcg Increase by 1–2 mcg at</p>
+<p>8-week intervals</p>
+<p>Paricalcitol Zemplar D PO ND-CKD: 1 mcg daily or 2 mcg 1–4 mcg Increase by 1 mcg (for daily</p>
+<p>2</p>
+<p>three times per week if PTH dosing) or 2 mcg (for three</p>
+<p>≤500 pg/mL(ng/L; 54 pmol/L); times per week dosing) at</p>
+<p>2 mcg daily or 4 mcg three 2–4 week intervals</p>
+<p>times per week if PTH &gt;500</p>
+<p>pg/mL (ng/L; 54 pmol/L)</p>
+<p>IV ESRD: 0.04–1 mcg three times 2.5–15 mcg Increase by 2–4 mcg at 2–4</p>
+<p>per week week intervals</p>
+<p>aBased on PTH, calcium, and phosphorus levels. Decreases in dose are necessary if PTH is oversuppressed and/or if calcium and phosphorus are elevated.</p>
+<p>bMultiple preparations are available that are not listed.</p>
+<p>cDose ratios are as follows: 1:1 for IV paricalcitol to oral doxercalciferol, 1.5:1 for IV paricalcitol to IV doxercalciferol, and 1:1 for IV to oral calcitriol.</p>
+<p>dDaily oral dosing most common for nonhemodialysis CKD patients, IV or PO dosing three times per week more often used in the hemodialysis population.</p>
+<p>eProdrug that requires activation by the liver.</p>
+<p>ESRD, end-stage renal disease; ND-CKD, nondialysis chronic kidney disease; PTH, parathyroid hormone.</p>
+<p>CH75.indd</p>
+<p>887</p>
+<p>20-11-2020</p>
+<p>17:35:52</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th>ESRD: 10 mcg three times per week</th><th></th><th></th></tr><tr><td></td><td></td><td></td><td>IV</td><td>ESRD: 4 mcg three times per week</td><td>2–8 mcg</td><td>Increase by 1–2 mcg at
+8-week intervals</td></tr><tr><td>Paricalcitol</td><td>Zemplar</td><td>D
+2</td><td>PO</td><td>ND-CKD: 1 mcg daily or 2 mcg
+three times per week if PTH
+≤500 pg/mL(ng/L; 54 pmol/L);
+2 mcg daily or 4 mcg three
+times per week if PTH &gt;500
+pg/mL (ng/L; 54 pmol/L)</td><td>1–4 mcg</td><td>Increase by 1 mcg (for daily
+dosing) or 2 mcg (for three
+times per week dosing) at
+2–4 week intervals</td></tr><tr><td></td><td></td><td></td><td>IV</td><td>ESRD: 0.04–1 mcg three times
+per week</td><td>2.5–15 mcg</td><td>Increase by 2–4 mcg at 2–4
+week intervals</td></tr></table></div><h2>SECTION 14 | Renal Disorders</h2>
+<li>Serum calcium and phosphorus should be within the normal range before ini-</li>
+<p>tiation and during continued vitamin D therapy. Adjust vitamin D dose every</p>
+<p>2–4 weeks based on PTH concentrations and trends in calcium and phosphorus</p>
+<h2>(Table 75-6).</h2>
+<li>KDIGO does not advocate for routine use of calcitriol and vitamin D analogs in the</li>
+<p>nondialysis CKD population and suggests that they be reserved for patients with</p>
+<p>CKD stages 4–5.</p>
+<li>The newer vitamin D analogs paricalcitol and doxercalciferol may be associ-</li>
+<p>ated with less hypercalcemia and hyperphosphatemia. Observational studies show</p>
+<p>all-cause and cardiovascular survival benefit with these agents.</p>
+<p>Calcimimetics</p>
+<li>Cinacalcet and etelcalcetide reduce PTH secretion by increasing the sensitivity of</li>
+<p>the calcium-sensing receptor. The most common adverse events include nausea and</p>
+<p>vomiting.</p>
+<li>Since these agents lower serum calcium they should not be started if the serum</li>
+<p>calcium is less than the lower limit of normal. Start cinacalcet at 30 mg daily, which</p>
+<p>can be titrated to the desired PTH and calcium concentrations every 2–4 weeks to a</p>
+<p>maximum of 180 mg daily. Initiate etelcalcetide at 5 mg IV three times per week at</p>
+<p>the end of hemodialysis.</p>
+<h2>CARDIOVACULAR COMPLICATIONS OF CKD</h2>
+<h2>CARDIOVASCULAR DISEASE</h2>
+<li>CKD patients are at increased risk of CVD, independent of the etiology of their</li>
+<p>kidney disease and this is associated with much higher mortality rates. Traditional</p>
+<p>risk factors include diabetes, dyslipidemia, hypertension, smoking, and obesity. Non-</p>
+<p>traditional risk factors include proteinuria, hyperhomocysteinemia, anemia, inflam-</p>
+<p>mation, and abnormal calcium and phosphate metabolism, resulting in vascular</p>
+<p>calcification oxidative stress.</p>
+<li>CKD patients benefit from treatment of traditional risk factors. Aspirin is recom-</li>
+<p>mended for secondary prevention in all patients based on decreased mortality in</p>
+<p>observational studies.</p>
+<h2>HYPERLIPIDEMIA</h2>
+<li>CKD with or without nephrotic syndrome is frequently accompanied by abnor-</li>
+<p>malities in lipoprotein metabolism.</p>
+<li>KDIGO Lipid Guidelines recommend:</li>
+<p>1. Complete a fasting lipid profile in all adults with newly identified CKD.</p>
+<p>2. Statin treatment in adults ages 18–49 years with CKD but not treated with chronic</p>
+<p>dialysis or kidney transplantation, who have one or more of the following: known</p>
+<p>coronary disease; diabetes mellitus; prior ischemic stroke; estimated 10-year inci-</p>
+<p>dence of coronary death or nonfatal MI greater than 10%.</p>
+<p>3. Statin or statin/ezetimibe combination in adults &gt;50 years with eGFR &lt;60 mL/</p>
+<p>min/1.73 m2 but not treated with chronic dialysis or kidney transplantation.</p>
+<p>4. Do not initiate statins or statin/ezetimibe combination therapy in adults with</p>
+<p>dialysis-dependent CKD. Continue these agents if patient is already taking them</p>
+<p>at the time of dialysis initiation.</p>
+<p>See Chapter 61, Chronic Kidney Disease, authored by Joanna Q. Hudson, Lori D. Wazny,</p>
+<p>and Paul Komenda, for a more detailed discussion of this topic.</p>
+<p>888</p>
+<p>CH75.indd 888 20-11-2020 17:35:52</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

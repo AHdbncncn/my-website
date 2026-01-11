@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19. Diabetes Mellitus</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>19. Diabetes Mellitus</h1>
+        </header>
+        <main>
+            <p>197</p>
+<h2>RETPAHC</h2>
+<p>19</p>
+<p>Diabetes Mellitus</p>
+<li>Diabetes mellitus (DM) is a group of metabolic disorders characterized by chronically</li>
+<p>elevated blood glucose (BG) and abnormal carbohydrate, fat, and protein metabolism.</p>
+<p>Without effective treatment, DM can lead to acute complications such as diabetic keto-</p>
+<p>acidosis (DKA) and hyperosmolar hyperglycemic syndrome (HHS). Chronic hyper-</p>
+<p>glycemia can cause microvascular, macrovascular, and neuropathic complications.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Type 1 DM (5%–10% of cases) usually results from autoimmune destruction of pan-</li>
+<p>creatic β-cells, leading to absolute deficiency of insulin. It usually presents in children</p>
+<p>and adolescents but can occur at any age. The disorder is believed to be initiated by</p>
+<p>exposure to an unknown environmental trigger in a genetically susceptible individ-</p>
+<p>ual. The autoimmune process is mediated by macrophages and T lymphocytes with</p>
+<p>autoantibodies to β-cell antigens (eg, islet cell antibody, insulin antibodies). Amylin</p>
+<p>(a hormone cosecreted from pancreatic β-cells with insulin) is also deficient in type 1</p>
+<p>DM due to β-cell destruction. Amylin suppresses inappropriate glucagon secretion,</p>
+<p>slows gastric emptying, and causes central satiety.</p>
+<p>✓ After the initial diagnosis, a period of transient remission called the “honeymoon”</p>
+<p>phase may occur, during which insulin doses can be reduced or withdrawn before</p>
+<p>continued β-cell destruction requires lifelong insulin replacement therapy.</p>
+<li>Type 2 DM (90%–95% of cases) is characterized by multiple defects:</li>
+<pre><code>✓ Impaired insulin secretion: β-cell mass and function are both reduced, and β-cell</code></pre>
+<p>failure is progressive.</p>
+<p>✓ Reduced incretin effect: Normally, the gut incretin hormones glucagon-like</p>
+<p>peptide-1 (GLP-1) and glucose-dependent insulinotropic peptide (GIP) are</p>
+<p>released and stimulate insulin secretion in response to a meal. Patients with type 2</p>
+<p>DM have a reduced incretin effect due to decreased concentrations of or resistance</p>
+<p>to the effects of incretin hormones.</p>
+<p>✓ Insulin resistance: This is manifested by excessive hepatic glucose production,</p>
+<p>decreased skeletal muscle uptake of glucose, and increased lipolysis and free fatty</p>
+<p>acid production.</p>
+<p>✓ Excess glucagon secretion: This occurs because type 2 DM patients fail to suppress</p>
+<p>glucagon in response to meals because of GLP-1 resistance/deficiency and insulin</p>
+<p>resistance/deficiency, which directly suppress glucagon.</p>
+<p>✓ Sodium-glucose cotransporter-2 (SGLT-2) upregulation in the kidney: This increases</p>
+<p>reabsorption of glucose by proximal renal tubular cells, which further contributes</p>
+<p>to hyperglycemia.</p>
+<li>Gestational diabetes (GDM) is DM that occurs in women during pregnancy.</li>
+<li>Less common causes of DM (1%–2%) include maturity onset diabetes of the young</li>
+<p>(MODY), genetic syndromes (eg, Down syndrome), endocrine disorders (eg, acro-</p>
+<pre><code>megaly, Cushing syndrome), pancreatic exocrine dysfunction, infections, and medi-</code></pre>
+<p>cations (eg, glucocorticoids, thiazides, niacin, atypical antipsychotics).</p>
+<li>Microvascular complications include retinopathy, neuropathy, and nephropathy.</li>
+<p>Macrovascular complications include coronary heart disease (CHD), stroke, and</p>
+<p>peripheral vascular disease.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<h2>TYPE 1 DIABETES MELLITUS</h2>
+<li>Patients often have symptoms in the days or weeks preceding the diagnosis. The most</li>
+<p>common initial symptoms are polyuria, polydipsia, polyphagia, weight loss, fatigue,</p>
+<p>and lethargy.</p>
+<p>ch19.indd 197 19-11-2020 11:40:37</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>19</th><th>Diabetes Mellitus</th></tr></table></div><h2>SECTION 4 | Endocrinologic Disorders</h2>
+<li>Individuals are often thin and are prone to develop DKA in the absence of an ade-</li>
+<p>quate insulin supply; many patients initially present with DKA. Symptom onset can</p>
+<p>be triggered by infection, trauma, or psychological stress.</p>
+<h2>TYPE 2 DIABETES MELLITUS</h2>
+<li>Most patients are asymptomatic or have only mild fatigue at the time of diagnosis.</li>
+<p>Many patients are incidentally found to have type 2 DM after routine laboratory test-</p>
+<p>ing (eg, plasma glucose or A1C) or development of complications (eg, myocardial</p>
+<p>infarction, stroke).</p>
+<li>Because mild hyperglycemia may exist for years prior to the diagnosis, microvascular</li>
+<p>and macrovascular complications are often present at the time of diagnosis.</p>
+<li>Most patients are overweight or obese with an elevated waist:hip ratio.</li>
+<h2>DIAGNOSIS</h2>
+<li>Normal fasting (no caloric intake for at least 8 hours) plasma glucose (FPG) is 70–99</li>
+<p>mg/dL (3.9–5.5 mmol/L). Impaired fasting glucose (IFG) is FPG 100–125 mg/dL</p>
+<p>(5.6–6.9 mmol/L).</p>
+<li>Normal glucose tolerance based on a 2-hour post-load plasma glucose using the</li>
+<p>equivalent of 75 g anhydrous glucose dissolved in water (oral glucose tolerance test</p>
+<p>or OGTT) is &lt;140 mg/dL (7.8 mmol/L). Impaired glucose tolerance (IGT) is OGTT</p>
+<p>140–199 mg/dL (7.8–11.0 mmol/L).</p>
+<li>Normal A1C is 4%–5.6% (39–46 mmol/mol Hb). Increased risk of DM (prediabetes)</li>
+<p>is A1C 5.7%–6.4% (39–46 mmol/mol Hb).</p>
+<li>Criteria for diagnosis of DM include any one of the following:</li>
+<p>1. A1C ≥6.5% (48 mmol/mol Hb)</p>
+<p>2. FPG ≥126 mg/dL (7.0 mmol/L)</p>
+<p>3. OGTT ≥200 mg/dL (11.1 mmol/L)</p>
+<p>4. Random plasma glucose ≥200 mg/dL (11.1 mmol/L) with classic symptoms of</p>
+<p>hyperglycemia or hyperglycemic crisis</p>
+<p>In the absence of unequivocal hyperglycemia, a diagnosis using criteria 1 through 3</p>
+<p>requires two abnormal test results from the same sample or in two separate test samples.</p>
+<li>Prediabetes is a condition of abnormal BG that is not sufficiently high to meet the</li>
+<p>thresholds that define DM but often progresses to the diagnosis.</p>
+<li>Screening for type 1 DM in asymptomatic children or adults is not recommended due</li>
+<p>to low disease prevalence and the acute onset of symptoms. Screening for type 2 DM</p>
+<p>is recommended for asymptomatic adults who are overweight (BMI ≥25 kg/m2 or</p>
+<p>≥23 kg/m2 in Asian-Americans) and have at least one other risk factor for develop-</p>
+<p>ing type 2 DM. All adults, even those without risk factors, should be screened every</p>
+<p>3 years starting at 45 years old. Children at risk for developing type 2 DM should</p>
+<p>undergo screening every 3 years starting at age 10 years. Pregnant women should</p>
+<p>undergo risk assessment for GDM at the first prenatal visit; those with multiple risk</p>
+<p>factors for type 2 DM should be tested as soon as feasible. All women (even if the</p>
+<p>initial test was negative) should undergo testing at 24–28 weeks’ gestation.</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The primary goal is to prevent or delay progression of long-term</li>
+<p>microvascular and macrovascular complications. Additional goals are to alleviate</p>
+<p>symptoms of hyperglycemia, minimize hypoglycemia and other adverse effects,</p>
+<p>minimize treatment burden, and maintain quality of life. General glycemic targets</p>
+<p>for most nonpregnant adults with DM are listed in Table 19-1.</p>
+<h2>INITIAL ASSESSMENT</h2>
+<li>During the initial visit, perform a full medical evaluation to confirm the diagnosis,</li>
+<p>classify the type of diabetes, identify complications or potential comorbid conditions,</p>
+<p>and review previous treatments and risk factors in established patients.</p>
+<p>198</p>
+<p>ch19.indd 198 19-11-2020 11:40:38</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<p>TABLE 19-1 Glycemic Target Recommendations for Most Nonpregnant Adults with Diabetes</p>
+<p>American Association of</p>
+<p>American Diabetes Clinical Endocrinologists</p>
+<p>Parameter Association (ADA) (AACE)</p>
+<p>A1C &lt;7.0% (53 mmol/mol Hb) ≤6.5% (48 mmol/mol Hb)</p>
+<p>Fasting plasma glucose 80–130 mg/dL (4.4–7.2 &lt;110 mg/dL (6.1 mmol/L)</p>
+<p>(FPG) mmol/L)</p>
+<p>Postprandial glucose (PPG) &lt;180 mg/dL (10 mmol/L) &lt;140 mg/dL (7.8 mmol/L)</p>
+<p>Glycemic targets should be individualized. More stringent or less stringent goals may be appropriate</p>
+<p>for some patients.</p>
+<li>Review past medical, family, and social history as well as medication use, adherence,</li>
+<p>tolerability, and use of diabetes technology.</p>
+<li>Screen for psychosocial conditions, self-management education needs, and</li>
+<p>hypoglycemia.</p>
+<li>Perform a thorough physical exam (including height, weight, BMI, blood pressure,</li>
+<p>thyroid palpation, and foot exam) and laboratory evaluation (including A1C, lipid</p>
+<pre><code>profile, liver function tests, serum creatinine, and eGFR).</code></pre>
+<li>Calculate a 10-year ASCVD risk score.</li>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Medical nutrition therapy (MNT) involves an individually tailored nutrition plan.</li>
+<p>Implement a healthy meal plan that is moderate in calories and carbohydrates and</p>
+<p>low in saturated fat with all of the essential vitamins and minerals. Target an initial</p>
+<p>weight loss goal of at least 5% in all type 2 DM patients who are overweight or obese</p>
+<p>through calorie restriction. For individuals with type 1 DM, focus on physiologically</p>
+<p>regulating insulin administration rather than the amount and type of carbohydrates</p>
+<p>ingested.</p>
+<li>Aerobic exercise can improve insulin sensitivity, modestly improve glycemic control,</li>
+<p>reduce cardiovascular (CV) risk, contribute to weight control, and improve well-</p>
+<p>being. Physical activity goals include at least 150 min/week of moderate (50%–70%</p>
+<p>maximal heart rate) intensity exercise spread over at least 3 days/week with no more</p>
+<p>than 2 days between activity. Resistance/strength training is recommended at least</p>
+<p>2 times/week for patients without proliferative diabetic retinopathy.</p>
+<li>Offer access to diabetes self-management education and support (DSME/S) pro-</li>
+<p>grams to all patients. Such programs target self-care behaviors of healthy eating,</p>
+<p>being active, monitoring glucose levels, taking medications, problem-solving, reduc-</p>
+<p>ing risk of complications, and healthy coping. Patients must be involved in decision</p>
+<p>making and have strong knowledge of the disease and associated complications.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Insulin</p>
+<li>The main advantage of insulin over other antihyperglycemic agents is that it can</li>
+<p>achieve a wide range of glucose targets and the dose can be individualized based on</p>
+<p>glycemic levels. Disadvantages include the risk of hypoglycemia, need for injections,</p>
+<p>weight gain, and treatment burden.</p>
+<li>All commercial insulin preparations are produced using recombinant DNA tech-</li>
+<p>nology. “Human” insulins (NPH, regular) are recombinant DNA–derived human</p>
+<p>insulin, whereas insulin analogs have had amino acids substitutions in the insulin</p>
+<p>molecule that change the onset or duration of action.</p>
+<li>Most insulin products are administered subcutaneously (SC) for chronic diabetes</li>
+<p>management, except for inhaled human insulin, which is a dry powder of regular</p>
+<p>insulin that is inhaled and absorbed through pulmonary tissue.</p>
+<p>199</p>
+<p>ch19.indd 199 19-11-2020 11:40:39</p>
+<div class="table-container"><table><tr><th>TABLE 19-1 Glycemic Target Recommendations for Most Nonpregnant Adults with Diabetes</th><th></th><th></th></tr><tr><td>Parameter</td><td>American Diabetes
+Association (ADA)</td><td>American Association of
+Clinical Endocrinologists
+(AACE)</td></tr><tr><td>A1C</td><td>&lt;7.0% (53 mmol/mol Hb)</td><td>≤6.5% (48 mmol/mol Hb)</td></tr><tr><td>Fasting plasma glucose
+(FPG)</td><td>80–130 mg/dL (4.4–7.2
+mmol/L)</td><td>&lt;110 mg/dL (6.1 mmol/L)</td></tr><tr><td>Postprandial glucose (PPG)</td><td>&lt;180 mg/dL (10 mmol/L)</td><td>&lt;140 mg/dL (7.8 mmol/L)</td></tr></table></div><h2>SECTION 4 | Endocrinologic Disorders</h2>
+<li>The most commonly used insulin concentration is 100 units/mL (U-100); more</li>
+<p>concentrated insulins (U-200, U-300, U-500) may be considered for patients requir-</p>
+<p>ing larger doses. U-500 regular insulin is reserved for patients with extreme insulin</p>
+<p>resistance and is usually given two or three times a day.</p>
+<li>The pharmacokinetics of insulin products is characterized by their onset, peak, and</li>
+<h2>duration of action (Table 19-2).</h2>
+<li>Basal insulin (or background insulin) refers to longer-acting insulins that regulate</li>
+<p>BG levels in between meals by suppressing hepatic glucose production and maintain-</p>
+<p>ing near-normal glycemic levels in the fasting state. Options include the following</p>
+<p>insulins:</p>
+<p>✓ NPH is the least ideal product because it has a distinct peak and a duration of</p>
+<p>action much less than 24 hours and usually requires twice-daily dosing.</p>
+<p>✓ Detemir also has a peak and often lasts &lt;24 hours; it can be given once daily in</p>
+<p>some patients but should be dosed twice daily at low doses (&lt;0.3 units/kg).</p>
+<p>TABLE 19-2 Pharmacokinetics of Select Insulins Administered Subcutaneously</p>
+<p>Type of Insulina by Generic</p>
+<p>(Brand) Name Onset Peakb Durationb</p>
+<p>Ultra-rapid acting</p>
+<p>Insulin aspart (Fiasp) 15–20 minc 90–120 min 5–7 hours</p>
+<p>Insulin human—inhaled (Afrezza) 12 min 35–55 min 1.5–4.5 hours</p>
+<p>Rapid-acting</p>
+<p>Insulin aspart (NovoLog) 10–20 min 30–90 min 3–5 hours</p>
+<p>Insulin lispro U-100, U-200 (Humalog)</p>
+<p>Insulin glulisine (Apidra)</p>
+<p>Short-acting</p>
+<p>Regular (Humulin R, Novolin R) 30–60 min 2–4 hours 5–8 hours</p>
+<p>Intermediate-acting</p>
+<p>NPH (Humulin N, Novolin N) 2–4 hours 4–10 hours 10–24 hours</p>
+<p>Regular U-500 (Humulin R 500) 15 min 4–8 hours 13–24 hours</p>
+<p>Long-acting</p>
+<p>Insulin detemir (Levemir) 1.5–4 hours 6–14 hoursd 16–20 hours</p>
+<p>Insulin glargine (Lantus, Basaglar) 2–4 hours No peak 20–24 hours</p>
+<p>Insulin glargine U-300 (Toujeo) 6 hours No peak 36 hours</p>
+<p>Insulin degludec U-100, U-200 (Tresiba) 1 hour No peak 42 hours</p>
+<p>Combination Products</p>
+<p>70% NPH/30% Regular (Humulin 70/30, 30–60 min Dual 10–16 hours</p>
+<p>Novolin 70/30)</p>
+<p>75% NPL, 25% lispro (Humalog 75/25) 5–15 min 10–16 hours</p>
+<p>50% NPL, 50% lispro (Humalog 50/50) 5–15 min 10–16 hours</p>
+<p>70% insulin aspart protamine, 30% 5–15 min 15–18 hours</p>
+<p>insulin aspart (NovoLog 70/30)</p>
+<p>aU-100 unless otherwise noted.</p>
+<p>bThe peak and duration of insulin action are variable, depending on the injection site, duration of</p>
+<pre><code>diabetes, renal function, smoking status, and other factors.</code></pre>
+<p>cOnset of appearance is 2.5 minutes compared to 5.2 minutes for insulin aspart (NovoLog).</p>
+<p>dLong-acting insulins are considered “peakless” although they have exhibited peak effects during</p>
+<p>comparative testing.</p>
+<p>NPH, neutral protamine Hagedorn; NPL, insulin lispro protamine suspension.</p>
+<p>200</p>
+<p>ch19.indd 200 19-11-2020 11:40:39</p>
+<div class="table-container"><table><tr><th>TABLE 19-2 Pharmacokinetics of Select Insulins Administered Subcutaneously</th><th></th><th></th><th></th></tr><tr><td>Type of Insulina by Generic
+(Brand) Name</td><td>Onset</td><td>Peakb</td><td>Durationb</td></tr><tr><td>Ultra-rapid acting</td><td></td><td></td><td></td></tr><tr><td>Insulin aspart (Fiasp)</td><td>15–20 minc</td><td>90–120 min</td><td>5–7 hours</td></tr><tr><td>Insulin human—inhaled (Afrezza)</td><td>12 min</td><td>35–55 min</td><td>1.5–4.5 hours</td></tr><tr><td>Rapid-acting</td><td></td><td></td><td></td></tr><tr><td>Insulin aspart (NovoLog)</td><td>10–20 min</td><td>30–90 min</td><td>3–5 hours</td></tr><tr><td>Insulin lispro U-100, U-200 (Humalog)</td><td></td><td></td><td></td></tr><tr><td>Insulin glulisine (Apidra)</td><td></td><td></td><td></td></tr><tr><td>Short-acting</td><td></td><td></td><td></td></tr><tr><td>Regular (Humulin R, Novolin R)</td><td>30–60 min</td><td>2–4 hours</td><td>5–8 hours</td></tr><tr><td>Intermediate-acting</td><td></td><td></td><td></td></tr><tr><td>NPH (Humulin N, Novolin N)</td><td>2–4 hours</td><td>4–10 hours</td><td>10–24 hours</td></tr><tr><td>Regular U-500 (Humulin R 500)</td><td>15 min</td><td>4–8 hours</td><td>13–24 hours</td></tr><tr><td>Long-acting</td><td></td><td></td><td></td></tr><tr><td>Insulin detemir (Levemir)</td><td>1.5–4 hours</td><td>6–14 hoursd</td><td>16–20 hours</td></tr><tr><td>Insulin glargine (Lantus, Basaglar)</td><td>2–4 hours</td><td>No peak</td><td>20–24 hours</td></tr><tr><td>Insulin glargine U-300 (Toujeo)</td><td>6 hours</td><td>No peak</td><td>36 hours</td></tr><tr><td>Insulin degludec U-100, U-200 (Tresiba)</td><td>1 hour</td><td>No peak</td><td>42 hours</td></tr><tr><td>Combination Products</td><td></td><td></td><td></td></tr><tr><td>70% NPH/30% Regular (Humulin 70/30,
+Novolin 70/30)</td><td>30–60 min</td><td>Dual</td><td>10–16 hours</td></tr><tr><td>75% NPL, 25% lispro (Humalog 75/25)</td><td>5–15 min</td><td></td><td>10–16 hours</td></tr><tr><td>50% NPL, 50% lispro (Humalog 50/50)</td><td>5–15 min</td><td></td><td>10–16 hours</td></tr><tr><td>70% insulin aspart protamine, 30%
+insulin aspart (NovoLog 70/30)</td><td>5–15 min</td><td></td><td>15–18 hours</td></tr></table></div><h2>Diabetes Mellitus | CHAPTER 19</h2>
+<p>✓ Glargine U-100 is considered to be peakless and can usually be given once daily.</p>
+<p>✓ Glargine U-300 and degludec U-100 or U-200 are longer acting-agents that have</p>
+<p>no peak and are given once daily.</p>
+<p>All basal insulins can achieve similar A1C reductions if dosed and titrated properly,</p>
+<p>but the longer-acting products have a lower risk of hypoglycemia (particularly noc-</p>
+<p>turnal hypoglycemia) and may result in less glucose variability. However, they are</p>
+<p>more expensive.</p>
+<li>Bolus insulin refers to short- or rapid-acting insulins that cover meals (also called</li>
+<p>prandial insulin) or glycemic excursions (also called correction insulin). Basal insu-</p>
+<p>lin is the preferred and most convenient initial insulin formulation for patients with</p>
+<p>type 2 DM, whereas patients with type 1 DM require a combination of basal and</p>
+<p>bolus insulin to achieve adequate glycemic control. Bolus insulin options include:</p>
+<p>✓ Aspart, lispro, and glulisine, the rapid-onset, short-duration insulins</p>
+<p>✓ Inhaled human insulin and fast-acting insulin aspart (Fiasp), the ultra-rapid</p>
+<p>onset insulins</p>
+<p>Rapid-acting insulins offer a faster onset and shorter duration of action than regular</p>
+<p>insulin, and ultra-rapid acting insulins offer an even faster onset; this may more</p>
+<p>closely mimic prandial endogenous insulin release. Rapid-acting insulins have a</p>
+<p>modestly lower risk of hypoglycemia than regular insulin. All prandial insulins can</p>
+<p>be used effectively, but cost differences can be substantial.</p>
+<li>Various premixed insulin products containing both a basal and a prandial compo-</li>
+<p>nent are also available for patients who require fewer injections or a simpler regimen</p>
+<p>(Table 19-2). However, these products are limited by fixed mixed formulations,</p>
+<p>which can make it challenging to tailor the dosing regimen.</p>
+<li>The insulin dose must be individualized. In type 1 DM, the average daily requirement</li>
+<p>is 0.5–0.6 units/kg, with approximately 50% given as basal insulin and the remaining</p>
+<p>50% dedicated to meal coverage. During the honeymoon phase, requirements may</p>
+<p>fall to 0.1–0.4 units/kg. Higher doses are often needed during acute illness or with</p>
+<p>ketosis.</p>
+<li>Hypoglycemia is the most common adverse effects of insulin therapy. Insulin also</li>
+<p>causes dose-dependent weight gain, which occurs predominantly in truncal fat.</p>
+<p>Injection site reactions may include redness, pain, itching, urticaria, edema, and</p>
+<p>inflammation. SC administration can result in lipoatrophy or lipohypertrophy, which</p>
+<p>can be prevented by routinely rotating injection sites. Inhaled human insulin can</p>
+<p>cause cough and upper respiratory infections, and it is contraindicated in chronic</p>
+<p>obstructive pulmonary disease and asthma due to bronchospasm risk. Because</p>
+<pre><code>inhaled insulin has been associated with a small decline in pulmonary function,</code></pre>
+<p>patients should have spirometry tests performed at baseline, 6 months, and annually</p>
+<p>thereafter.</p>
+<p>Biguanides</p>
+<li>Metformin decreases hepatic glucose production and enhances insulin sensitivity in</li>
+<p>peripheral (muscle) tissues, allowing for increased glucose uptake into muscle cells.</p>
+<li>Metformin is recommended as first-line pharmacotherapy in patients with type 2</li>
+<p>DM (unless a contraindication or intolerability exists) due to extensive experience,</p>
+<p>high efficacy, minimal hypoglycemia risk, positive or neutral effects on weight,</p>
+<p>potential positive impact on CV risk, manageable side-effect profile, and low cost.</p>
+<p>It reduces A1C levels by 1.5%–2% (16–22 mmol/mol Hb) and FPG levels by 60–80</p>
+<p>mg/dL (3.3–4.4 mmol/L) in drug-naïve patients with initial A1C values of approxi-</p>
+<p>mately 9% (75 mmol/mol Hb). It does not cause weight gain and may lead to a mod-</p>
+<p>est (2–3 kg) weight loss. It has a low risk of hypoglycemia because it does not directly</p>
+<p>increase pancreatic insulin secretion. Metformin decreases plasma triglycerides and</p>
+<p>low-density lipoprotein cholesterol (LDL-C) by approximately 8%–15% and mod-</p>
+<p>estly increases high-density lipoprotein cholesterol (HDL-C) by 2%.</p>
+<li>Metformin frequently causes GI side effects (diarrhea, abdominal discomfort,</li>
+<p>stomach upset); these effects are usually dose-dependent, transient, mild, and can</p>
+<p>201</p>
+<p>ch19.indd 201 19-11-2020 11:40:39</p>
+<h2>SECTION 4 | Endocrinologic Disorders</h2>
+<p>be minimized with slow dose titration and taking metformin with or immediately</p>
+<p>after meals. When initiating therapy, use a low dose (typically 500 mg) given with</p>
+<p>the largest meal. Then increase the dose in 500-mg increments over several weeks.</p>
+<p>Extended-release metformin may lessen some of the GI side effects, but a comparison</p>
+<p>of immediate-release vs extended-release metformin found no significant differences</p>
+<p>in rates of GI adverse effects.</p>
+<li>Metformin may cause a metallic taste and may lower vitamin B concentrations;</li>
+<p>12</p>
+<p>B levels or methylmalonic acid should be measured annually or if a deficiency is</p>
+<p>12</p>
+<p>suspected, with vitamin B supplementation given if indicated.</p>
+<li>Lactic acidosis occurs rare 12 ly, usually in the setting of severe illness or acute kidney</li>
+<p>injury. The risk may increase in moderate-to-severe renal insufficiency or tissue</p>
+<p>hypoperfusion states such as acute heart failure (HF), excessive alcohol intake, and</p>
+<p>hepatic impairment. Because symptoms are often nonspecific, the diagnosis must be</p>
+<p>confirmed by laboratory measurement of high lactic acid levels and acidosis.</p>
+<li>Metformin is renally excreted and accumulates in renal insufficiency; it is contrain-</li>
+<p>dicated in patients with eGFR &lt;30 mL/min/1.73 m2 and should be used with caution</p>
+<p>in patients with milder renal insufficiency. Metformin initiation is not recommended</p>
+<p>in patients with eGFR 30–45 mL/min/1.73 m2 but can be continued with increased</p>
+<pre><code>renal function monitoring; a reduction of 50% of maximal dose may be warranted.</code></pre>
+<p>Due to the risk of acute renal failure with use of IV contrast dye, withhold metformin</p>
+<p>therapy starting the day of the procedure and resume it 2–3 days later if normal renal</p>
+<pre><code>function has been documented.</code></pre>
+<li>Metformin can be used in combination with any other antihyperglycemic therapy</li>
+<p>and is often continued when insulin therapy is initiated. The target metformin dose</p>
+<p>is 1000 mg twice daily or 2000 mg daily if the extended-release product is used.</p>
+<p>The minimal effective dose is 1000 mg/day. See Table 19-3 for metformin dosing</p>
+<p>recommendations.</p>
+<li>Numerous combination products containing metformin as well as combinations of</li>
+<h2>other drug classes are available (Table 19-4).</h2>
+<p>Sulfonylureas</p>
+<li>Sulfonylureas enhance insulin secretion by binding to the sulfonylurea receptor SUR1</li>
+<p>on pancreatic β-cells. First-generation agents (chlorpropamide, tolazamide, and tol-</p>
+<p>butamide) are lower in potency than second-generation drugs (glyburide, glipizide,</p>
+<p>and glimepiride), and are rarely used due to a higher risk of adverse effects.</p>
+<li>All sulfonylureas are equally effective in lowering BG when given in equipotent</li>
+<p>doses. On average, the A1C falls by 1.5%–2% (16–22 mmol/mol Hb) with FPG reduc-</p>
+<p>tions of 60–70 mg/dL (3.3–3.9 mmol/L) in drug-naïve patients.</p>
+<li>Sulfonylureas are widely used because they have an extensive record of safety and</li>
+<p>effectiveness, are given orally, and are inexpensive. However, current treatment</p>
+<p>guidelines either discourage their use or suggest caution due to the risk of hypoglyce-</p>
+<p>mia and weight gain. In addition, tachyphylaxis to the insulin secretion effect occurs,</p>
+<p>leading to poor long-term durability of response in most patients.</p>
+<li>The most common side effect is hypoglycemia. Patients who skip meals, exercise</li>
+<p>vigorously, or lose a substantial amount of weight are more prone to hypoglycemia.</p>
+<p>Sulfonylureas with long durations of action and those with active metabolites should</p>
+<p>be used with extreme caution in older patients and those with renal insufficiency due</p>
+<p>to the high risk of hypoglycemia. Weight gain is common (typically 1–2 kg). Patients</p>
+<p>with sulfa allergy rarely experience crossreactivity with sulfonylureas.</p>
+<h2>• See Table 19-3 for sulfonylurea dosing information.</h2>
+<p>Thiazolidinediones (TZDs)</p>
+<li>TZDs bind to the peroxisome proliferator activator receptor-γ (PPAR-γ) located</li>
+<p>primarily on fat and vascular cells, enhancing insulin sensitivity in muscle, liver, and</p>
+<p>fat tissues.</p>
+<p>202</p>
+<p>ch19.indd 202 19-11-2020 11:40:40</p>
+<p>203</p>
+<p>Diabetes</p>
+<p>Mellitus</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>19</p>
+<p>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</p>
+<p>Generic Usual Maximal dose</p>
+<p>(Brand) Name Starting Dose Recommended Dose (mg/day) Dosing/Use in Renal Insufficiencya</p>
+<p>Biguanides</p>
+<p>Metformin 500 mg once or twice daily 1000 mg twice daily 2550 Do not initiate if eGFR 30–45;</p>
+<p>(Glucophage) or 850 mg once daily, Do not use if eGFR &lt;30</p>
+<p>titrate to target dose as</p>
+<p>tolerated</p>
+<p>Metformin XR 500–1000 mg once daily, 2000 mg once daily 2500 Do not initiate if eGFR 30–45;</p>
+<p>titrate to target dose as Do not use if eGFR &lt;30</p>
+<p>tolerated</p>
+<p>Sulfonylureas (first generation)</p>
+<p>Chlorpropamide 250 mg once daily (100 mg 100–500 mg once daily 750 Consider alternative agent or initiate conservatively at 100 mg in</p>
+<p>once daily in older adults) renal insufficiency to avoid hypoglycemia</p>
+<p>Tolazamide 250 mg once daily (100 mg 250–500 mg once daily 1000 Consider alternative agent or initiate conservatively at 100 mg in</p>
+<p>once daily in older adults renal insufficiency to avoid hypoglycemia</p>
+<p>or if FPG &lt;200 mg/dL</p>
+<p>[11.1 mmol/L])</p>
+<p>Tolbutamide 1000–2000 mg once daily 1000–2000 mg once daily 3000 Consider alternative agent or initiate conservatively in renal</p>
+<p>(250–500 mg once daily insufficiency to avoid hypoglycemia</p>
+<p>in older adults)</p>
+<p>Sulfonylureas (second generation)</p>
+<p>Glimepiride (Amaryl) 1–2 mg once daily (1 mg 4 mg once daily 8 Initiate conservatively at 1 mg in renal insufficiency to avoid</p>
+<p>once daily in older adults) hypoglycemia</p>
+<p>(Continued)</p>
+<p>ch19.indd</p>
+<p>203</p>
+<p>19-11-2020</p>
+<p>11:40:40</p>
+<div class="table-container"><table><tr><th>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes</th><th></th><th></th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>Generic
+(Brand) Name</td><td>Starting Dose</td><td>Usual
+Recommended Dose</td><td>Maximal dose
+(mg/day)</td><td></td><td></td><td>Dosing/Use in Renal Insufficiencya</td></tr><tr><td>Biguanides</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Metformin
+(Glucophage)</td><td>500 mg once or twice daily
+or 850 mg once daily,
+titrate to target dose as
+tolerated</td><td>1000 mg twice daily</td><td>2550</td><td></td><td></td><td>Do not initiate if eGFR 30–45;
+Do not use if eGFR &lt;30</td></tr><tr><td>Metformin XR</td><td>500–1000 mg once daily,
+titrate to target dose as
+tolerated</td><td>2000 mg once daily</td><td>2500</td><td></td><td></td><td>Do not initiate if eGFR 30–45;
+Do not use if eGFR &lt;30</td></tr><tr><td>Sulfonylureas (first generation)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Chlorpropamide</td><td>250 mg once daily (100 mg
+once daily in older adults)</td><td>100–500 mg once daily</td><td>750</td><td></td><td></td><td>Consider alternative agent or initiate conservatively at 100 mg in
+renal insufficiency to avoid hypoglycemia</td></tr><tr><td>Tolazamide</td><td>250 mg once daily (100 mg
+once daily in older adults
+or if FPG &lt;200 mg/dL
+[11.1 mmol/L])</td><td>250–500 mg once daily</td><td>1000</td><td></td><td></td><td>Consider alternative agent or initiate conservatively at 100 mg in
+renal insufficiency to avoid hypoglycemia</td></tr><tr><td>Tolbutamide</td><td>1000–2000 mg once daily
+(250–500 mg once daily
+in older adults)</td><td>1000–2000 mg once daily</td><td>3000</td><td></td><td></td><td>Consider alternative agent or initiate conservatively in renal
+insufficiency to avoid hypoglycemia</td></tr><tr><td>Sulfonylureas (second generation)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Glimepiride (Amaryl)</td><td>1–2 mg once daily (1 mg
+once daily in older adults)</td><td>4 mg once daily</td><td>8</td><td></td><td></td><td>Initiate conservatively at 1 mg in renal insufficiency to avoid
+hypoglycemia
+(Continued)</td></tr></table></div><h2>204 SECTION</h2>
+<p>4</p>
+<p>|</p>
+<p>Endocrinologic</p>
+<p>Disorders</p>
+<p>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</p>
+<p>Generic Usual Maximal dose</p>
+<p>(Brand) Name Starting Dose Recommended Dose (mg/day) Dosing/Use in Renal Insufficiencya</p>
+<p>Glipizide (Glucotrol) 5 mg once daily (2.5 mg 5–10 mg once daily 40 Initiate conservatively at 2.5 mg in renal insufficiency to avoid</p>
+<p>daily in older adults) hypoglycemia</p>
+<p>Glipizide XL 5 mg once daily (2.5 mg 5–10 mg once daily 20 Initiate conservatively at 2.5 mg in renal insufficiency to avoid</p>
+<p>(Glucotrol XL) once daily in older adults) hypoglycemia</p>
+<p>Glyburide (Diabeta) 2.5–5 mg once daily 5–10 mg once daily 20 Consider alternative agent or initiate conservatively at 1.25 mg in</p>
+<p>(1.25 mg once daily in renal insufficiency to avoid hypoglycemia</p>
+<p>older adults)</p>
+<p>Glyburide micronized 1.5–3 mg once daily 3–6 mg once daily 12 Consider alternative agent or initiate conservatively at 0.75 mg in</p>
+<p>(Glynase) (0.75 mg once daily in renal insufficiency to avoid hypoglycemia</p>
+<p>older adults)</p>
+<p>Meglitinides</p>
+<p>Nateglinide (Starlix) 120 mg three times daily 120 mg three times daily 360 No adjustment required</p>
+<p>before meals before meals</p>
+<p>Repaglinide (Prandin) 1–2 mg three times daily 2–4 mg three times daily 16 Initiate conservatively at 0.5 mg before meals if CrCl 20–40 mL/</p>
+<p>before meals (0.5 mg before meals min (0.33–0.67 mL/sec)</p>
+<p>before meals if A1C &lt;8%</p>
+<p>[64 mmol/mol Hb])</p>
+<p>Thiazolidinediones</p>
+<p>Pioglitazone (Actos) 15 mg once daily 30 mg once daily 45 No dose adjustment required</p>
+<p>Rosiglitazone 4 mg once daily or in two 4 mg once daily or in two 8 No dose adjustment required</p>
+<p>(Avandia) divided doses divided doses</p>
+<p>ch19.indd</p>
+<p>204</p>
+<p>19-11-2020</p>
+<p>11:40:40</p>
+<div class="table-container"><table><tr><th>Generic Usual Maximal dose
+(Brand) Name Starting Dose Recommended Dose (mg/day) Dosing/Use in Renal Insufficiencya</th><th></th><th></th><th></th><th></th></tr><tr><td>Glipizide (Glucotrol)</td><td>5 mg once daily (2.5 mg
+daily in older adults)</td><td>5–10 mg once daily</td><td>40</td><td>Initiate conservatively at 2.5 mg in renal insufficiency to avoid
+hypoglycemia</td></tr><tr><td>Glipizide XL
+(Glucotrol XL)</td><td>5 mg once daily (2.5 mg
+once daily in older adults)</td><td>5–10 mg once daily</td><td>20</td><td>Initiate conservatively at 2.5 mg in renal insufficiency to avoid
+hypoglycemia</td></tr><tr><td>Glyburide (Diabeta)</td><td>2.5–5 mg once daily
+(1.25 mg once daily in
+older adults)</td><td>5–10 mg once daily</td><td>20</td><td>Consider alternative agent or initiate conservatively at 1.25 mg in
+renal insufficiency to avoid hypoglycemia</td></tr><tr><td>Glyburide micronized
+(Glynase)</td><td>1.5–3 mg once daily
+(0.75 mg once daily in
+older adults)</td><td>3–6 mg once daily</td><td>12</td><td>Consider alternative agent or initiate conservatively at 0.75 mg in
+renal insufficiency to avoid hypoglycemia</td></tr><tr><td>Meglitinides</td><td></td><td></td><td></td><td></td></tr><tr><td>Nateglinide (Starlix)</td><td>120 mg three times daily
+before meals</td><td>120 mg three times daily
+before meals</td><td>360</td><td>No adjustment required</td></tr><tr><td>Repaglinide (Prandin)</td><td>1–2 mg three times daily
+before meals (0.5 mg
+before meals if A1C &lt;8%
+[64 mmol/mol Hb])</td><td>2–4 mg three times daily
+before meals</td><td>16</td><td>Initiate conservatively at 0.5 mg before meals if CrCl 20–40 mL/
+min (0.33–0.67 mL/sec)</td></tr><tr><td>Thiazolidinediones</td><td></td><td></td><td></td><td></td></tr><tr><td>Pioglitazone (Actos)</td><td>15 mg once daily</td><td>30 mg once daily</td><td>45</td><td>No dose adjustment required</td></tr><tr><td>Rosiglitazone
+(Avandia)</td><td>4 mg once daily or in two
+divided doses</td><td>4 mg once daily or in two
+divided doses</td><td>8</td><td>No dose adjustment required</td></tr></table></div><p>205</p>
+<p>Diabetes</p>
+<p>Mellitus</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>19</p>
+<p>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</p>
+<p>α-Glucosidase inhibitors</p>
+<p>Acarbose (Precose) 25 mg once to three times 50 mg once to three times 300 Avoid if CrCl &lt;25 mL/min (0.42 mL/sec)</p>
+<p>daily with the first bite of daily with meals</p>
+<p>a meal</p>
+<p>Miglitol (Glyset) 25 mg once to three times 50 mg once to three times 300 Avoid if CrCl &lt;25 mL/min (0.42 mL/sec)</p>
+<p>daily with the first bite of daily with meals</p>
+<p>a meal</p>
+<p>Sodium-glucose transporter (SGLT)-2 inhibitors</p>
+<p>Canagliflozin 100 mg once daily, taken 100–300 mg once daily 300 100 mg once daily if eGFR 45–60;</p>
+<p>(Invokana) before the first meal of Avoid if eGFR &lt;45</p>
+<p>the day</p>
+<p>Dapagliflozin (Farxiga) 5 mg once daily in the 5–10 mg once daily 10 Avoid if eGFR &lt;60</p>
+<p>morning with or</p>
+<p>without food</p>
+<p>Empagliflozin 10 mg once daily in 10–25 mg once daily 25 Avoid if eGFR &lt;30</p>
+<p>(Jardiance) the morning with or</p>
+<p>without food</p>
+<p>Ertugliflozin (Steglatro) 5 mg once daily in the 5–15 mg once daily 15 Avoid if eGFR&lt;60</p>
+<p>morning with or</p>
+<p>without food (Continued)</p>
+<p>ch19.indd</p>
+<p>205</p>
+<p>19-11-2020</p>
+<p>11:40:40</p>
+<div class="table-container"><table><tr><th>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>α-Glucosidase inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Acarbose (Precose)</td><td>25 mg once to three times
+daily with the first bite of
+a meal</td><td>50 mg once to three times
+daily with meals</td><td>300</td><td>Avoid if CrCl &lt;25 mL/min (0.42 mL/sec)</td></tr><tr><td></td><td>Miglitol (Glyset)</td><td>25 mg once to three times
+daily with the first bite of
+a meal</td><td>50 mg once to three times
+daily with meals</td><td>300</td><td>Avoid if CrCl &lt;25 mL/min (0.42 mL/sec)</td></tr><tr><td></td><td>Sodium-glucose transporter (SGLT)-2 inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Canagliflozin
+(Invokana)</td><td>100 mg once daily, taken
+before the first meal of
+the day</td><td>100–300 mg once daily</td><td>300</td><td>100 mg once daily if eGFR 45–60;
+Avoid if eGFR &lt;45</td></tr><tr><td></td><td>Dapagliflozin (Farxiga)</td><td>5 mg once daily in the
+morning with or
+without food</td><td>5–10 mg once daily</td><td>10</td><td>Avoid if eGFR &lt;60</td></tr><tr><td></td><td>Empagliflozin
+(Jardiance)</td><td>10 mg once daily in
+the morning with or
+without food</td><td>10–25 mg once daily</td><td>25</td><td>Avoid if eGFR &lt;30</td></tr><tr><td></td><td>Ertugliflozin (Steglatro)</td><td>5 mg once daily in the
+morning with or
+without food</td><td>5–15 mg once daily</td><td>15</td><td>Avoid if eGFR&lt;60
+(Continued)</td></tr></table></div><h2>206 SECTION</h2>
+<p>4</p>
+<p>|</p>
+<p>Endocrinologic</p>
+<p>Disorders</p>
+<p>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</p>
+<p>Generic Usual Maximal dose</p>
+<p>(Brand) Name Starting Dose Recommended Dose (mg/day) Dosing/Use in Renal Insufficiencya</p>
+<p>Dipeptidyl peptidase (DPP)-4 inhibitors</p>
+<p>Alogliptin (Nesina) 25 mg once daily with or 25 mg once daily 25 12.5 mg once daily if CrCl 30–60 mL/min (0.5–1.0 mL/sec);</p>
+<p>without food 6.25 mg once daily if CrCl &lt;30 mL/min (0.5 mL/sec)</p>
+<p>Linagliptin (Tradjenta) 5 mg once daily with or 5 mg once daily 5 No dose adjustment needed</p>
+<p>without food</p>
+<p>Saxagliptin (Onglyza) 2.5–5 mg once daily with or 5 mg once daily 5 2.5 mg once daily if eGFR ≤50</p>
+<p>without food</p>
+<p>Sitagliptin (Januvia) 100 mg once daily with or 100 mg once daily 100 50 mg once daily if eGFR 30–50;</p>
+<p>without food 25 mg once daily if eGFR &lt;30</p>
+<p>Bile acid sequestrants</p>
+<p>Colesevelam (Welchol) 1.875 g twice daily or 3.75 g 1.875 g twice daily or 3.75 g 3.75 g/day No dose adjustment needed</p>
+<p>once daily with meals once daily with meals</p>
+<p>Dopamine agonists</p>
+<p>Bromocriptine 0.8 mg once daily, taken 1.6–4.8 mg once daily 4.8 No dose adjustment needed</p>
+<p>(Cycloset) within 2 hours after</p>
+<p>waking in the morning</p>
+<p>with food</p>
+<p>aeGFR units: mL/min/1.73 m2; CrCl units: mL/min.</p>
+<p>ch19.indd</p>
+<p>206</p>
+<p>19-11-2020</p>
+<p>11:40:41</p>
+<div class="table-container"><table><tr><th>TABLE 19-3 Dosing Recommendations for Oral Medications Used to Treat Type 2 Diabetes (Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic
+(Brand) Name</td><td>Starting Dose</td><td>Usual
+Recommended Dose</td><td>Maximal dose
+(mg/day)</td><td>Dosing/Use in Renal Insufficiencya</td></tr><tr><td>Dipeptidyl peptidase (DPP)-4 inhibitors</td><td></td><td></td><td></td><td></td></tr><tr><td>Alogliptin (Nesina)</td><td>25 mg once daily with or
+without food</td><td>25 mg once daily</td><td>25</td><td>12.5 mg once daily if CrCl 30–60 mL/min (0.5–1.0 mL/sec);
+6.25 mg once daily if CrCl &lt;30 mL/min (0.5 mL/sec)</td></tr><tr><td>Linagliptin (Tradjenta)</td><td>5 mg once daily with or
+without food</td><td>5 mg once daily</td><td>5</td><td>No dose adjustment needed</td></tr><tr><td>Saxagliptin (Onglyza)</td><td>2.5–5 mg once daily with or
+without food</td><td>5 mg once daily</td><td>5</td><td>2.5 mg once daily if eGFR ≤50</td></tr><tr><td>Sitagliptin (Januvia)</td><td>100 mg once daily with or
+without food</td><td>100 mg once daily</td><td>100</td><td>50 mg once daily if eGFR 30–50;
+25 mg once daily if eGFR &lt;30</td></tr><tr><td>Bile acid sequestrants</td><td></td><td></td><td></td><td></td></tr><tr><td>Colesevelam (Welchol)</td><td>1.875 g twice daily or 3.75 g
+once daily with meals</td><td>1.875 g twice daily or 3.75 g
+once daily with meals</td><td>3.75 g/day</td><td>No dose adjustment needed</td></tr><tr><td>Dopamine agonists</td><td></td><td></td><td></td><td></td></tr><tr><td>Bromocriptine
+(Cycloset)</td><td>0.8 mg once daily, taken
+within 2 hours after
+waking in the morning
+with food</td><td>1.6–4.8 mg once daily</td><td>4.8</td><td>No dose adjustment needed</td></tr></table></div><h2>Diabetes Mellitus | CHAPTER 19</h2>
+<h2>TABLE 19-4 Combination Drug Products for Type 2 Diabetes</h2>
+<p>Drug Classes Drug Combination Brand Name</p>
+<p>Biguanide and Metformin Glipizide Metaglipa</p>
+<p>sulfonylurea Metformin Glyburide Glucovancea</p>
+<p>Biguanide and Metformin Repaglinide Prandimeta</p>
+<p>meglitinide</p>
+<p>Biguanide and Metformin Pioglitazone Actoplus Meta,</p>
+<p>thiazolidinedione Actoplus Met XR</p>
+<p>Metformin Rosiglitazone Avandameta</p>
+<p>Biguanide and DPP-4 Metformin Alogliptin Kazano</p>
+<p>inhibitor Metformin Linagliptin Jentadueto,</p>
+<p>Jentadueto XR</p>
+<p>Metformin Saxagliptin Kombiglyze XR</p>
+<p>Metformin Sitagliptin Janumet,</p>
+<p>Janumet XR</p>
+<p>Biguanide and SGLT- Metformin Canagliflozin Invokamet,</p>
+<p>2 inhibitor Invokamet XR</p>
+<p>Metformin Dapagliflozin Xigduo XR</p>
+<p>Metformin Empagliflozin Synjardy, Synjardy XR</p>
+<p>Metformin Ertugliflozin Segluromet</p>
+<p>Thiazolidinedione Pioglitazone Glimepiride Duetacta</p>
+<p>and sulfonylurea Rosiglitazone Glimepiride Avandaryl</p>
+<p>Thiazolidinedione Pioglitazone Alogliptin Oseni</p>
+<p>and DPP-4</p>
+<p>inhibitor</p>
+<p>SGLT-2 inhibitor and Dapagliflozin Saxagliptin Qtern</p>
+<p>DPP-4 inhibitor Empagliflozin Linagliptin Glyxambi</p>
+<p>Ertugliflozin Sitagliptin Steglujan</p>
+<p>Basal insulin and Insulin Lixisenatide Soliqua</p>
+<p>GLP-1 receptor glargine U-100</p>
+<p>agonist Insulin Liraglutide Xultophy</p>
+<p>degludec U-100</p>
+<p>aAvailable as generic product.</p>
+<p>XR, extended release.</p>
+<li>At maximal doses, pioglitazone and rosiglitazone reduce A1C by 1%–1.5% (11–22</li>
+<p>mmol/mol Hb) and FPG by 60–70 mg/dL (3.3–3.9 mmol/L), and they have high</p>
+<p>durability over time. Maximum effects may not be seen until 3–4 months of therapy.</p>
+<li>TZDs are considered second- or third-line agents and can be used in combination</li>
+<p>with metformin and other commonly prescribed medications for type 2 DM.</p>
+<li>Pioglitazone decreases plasma triglycerides by 10%–20%, whereas rosiglitazone</li>
+<p>tends to have no effect. Pioglitazone does not significantly increase LDL-C, whereas</p>
+<p>rosiglitazone may increase LDL-C by 5%–15%. Both drugs increase HDL-C, but the</p>
+<p>magnitude may be greater with pioglitazone.</p>
+<li>Fluid retention may occur due to peripheral vasodilation and improved insulin sen-</li>
+<p>sitization in the kidney with increased sodium and water retention. This may result</p>
+<p>207</p>
+<p>ch19.indd 207 19-11-2020 11:40:41</p>
+<div class="table-container"><table><tr><th>TABLE 19-4 Combination Drug Products for Type 2 Diabetes</th><th></th><th></th><th></th></tr><tr><td>Drug Classes</td><td>Drug Combination</td><td></td><td>Brand Name</td></tr><tr><td>Biguanide and
+sulfonylurea</td><td>Metformin</td><td>Glipizide</td><td>Metaglipa</td></tr><tr><td></td><td>Metformin</td><td>Glyburide</td><td>Glucovancea</td></tr><tr><td>Biguanide and
+meglitinide</td><td>Metformin</td><td>Repaglinide</td><td>Prandimeta</td></tr><tr><td>Biguanide and
+thiazolidinedione</td><td>Metformin</td><td>Pioglitazone</td><td>Actoplus Meta,
+Actoplus Met XR</td></tr><tr><td></td><td>Metformin</td><td>Rosiglitazone</td><td>Avandameta</td></tr><tr><td>Biguanide and DPP-4
+inhibitor</td><td>Metformin</td><td>Alogliptin</td><td>Kazano</td></tr><tr><td></td><td>Metformin</td><td>Linagliptin</td><td>Jentadueto,
+Jentadueto XR</td></tr><tr><td></td><td>Metformin</td><td>Saxagliptin</td><td>Kombiglyze XR</td></tr><tr><td></td><td>Metformin</td><td>Sitagliptin</td><td>Janumet,
+Janumet XR</td></tr><tr><td>Biguanide and SGLT-
+2 inhibitor</td><td>Metformin</td><td>Canagliflozin</td><td>Invokamet,
+Invokamet XR</td></tr><tr><td></td><td>Metformin</td><td>Dapagliflozin</td><td>Xigduo XR</td></tr><tr><td></td><td>Metformin</td><td>Empagliflozin</td><td>Synjardy, Synjardy XR</td></tr><tr><td></td><td>Metformin</td><td>Ertugliflozin</td><td>Segluromet</td></tr><tr><td>Thiazolidinedione
+and sulfonylurea</td><td>Pioglitazone</td><td>Glimepiride</td><td>Duetacta</td></tr><tr><td></td><td>Rosiglitazone</td><td>Glimepiride</td><td>Avandaryl</td></tr><tr><td>Thiazolidinedione
+and DPP-4
+inhibitor</td><td>Pioglitazone</td><td>Alogliptin</td><td>Oseni</td></tr><tr><td>SGLT-2 inhibitor and
+DPP-4 inhibitor</td><td>Dapagliflozin</td><td>Saxagliptin</td><td>Qtern</td></tr><tr><td></td><td>Empagliflozin</td><td>Linagliptin</td><td>Glyxambi</td></tr><tr><td></td><td>Ertugliflozin</td><td>Sitagliptin</td><td>Steglujan</td></tr><tr><td>Basal insulin and
+GLP-1 receptor
+agonist</td><td>Insulin
+glargine U-100</td><td>Lixisenatide</td><td>Soliqua</td></tr><tr><td></td><td>Insulin
+degludec U-100</td><td>Liraglutide</td><td>Xultophy</td></tr></table></div><h2>SECTION 4 | Endocrinologic Disorders</h2>
+<p>in peripheral edema (4%–5% of patients with monotherapy; 15% or more when com-</p>
+<p>bined with insulin), HF, hemodilution of hemoglobin and hematocrit, and weight</p>
+<p>gain. Edema is dose related and if not severe may be managed by dose reduction in</p>
+<p>most patients. TZDs are contraindicated in patients with New York Heart Association</p>
+<p>Class III or IV HF and should be used with caution in patients with Class I or II HF.</p>
+<li>Weight gain is dose related and results from both fluid retention and fat accumula-</li>
+<p>tion; a gain of 4 kg is not uncommon, and higher gains may require drug discontinu-</p>
+<p>ation. TZDs have also been associated with an increased fracture rate in the upper</p>
+<p>and lower limbs of postmenopausal women. An increased risk of bladder cancer is</p>
+<p>controversial.</p>
+<h2>• See Table 19-3 for TZD dosing information.</h2>
+<p>Glucagon-like Peptide 1 Receptor Agonists (GLP1-RAs)</p>
+<li>Dulaglutide, exenatide, exenatide XR, lixisenatide, liraglutide, and semaglutide</li>
+<p>stimulate insulin secretion and suppress inappropriately high postprandial gluca-</p>
+<p>gon secretion, decreasing hepatic glucose output. They also slow gastric emptying,</p>
+<p>increase satiety, and cause weight loss (average 1–3 kg).</p>
+<li>Short-acting agents (exenatide, lixisenatide) predominantly lower postprandial</li>
+<p>glucose (PPG) levels, whereas long-acting agents (dulaglutide, liraglutide, exenatide</p>
+<p>XR, semaglutide) lower both FPG and PPG, but with larger effects on FPG. Evidence</p>
+<p>suggests that liraglutide and semaglutide have the highest A1C and weight-lowering</p>
+<p>efficacy while exenatide and lixisenatide have the lowest.</p>
+<li>Liraglutide and semaglutide have demonstrated CV benefits in clinical trials. Lira-</li>
+<p>glutide is FDA approved to reduce the risk of major adverse CV events in adults with</p>
+<p>type 2 DM and established atherosclerotic cardiovascular disease (ASCVD).</p>
+<li>GLP1-RAs are not currently recommended as first-line agents but can be used as</li>
+<p>monotherapy in patients who cannot tolerate or take first-line therapy. They are</p>
+<p>recommended second-line agents for patients with established ASCVD or chronic</p>
+<p>kidney disease (CKD) and those with a compelling need to avoid hypoglycemia or to</p>
+<p>avoid weight gain or induce weight loss. They can be used in combination with met-</p>
+<p>formin, TZDs, sulfonylureas, SGLT-2 inhibitors, and basal insulin. They should not</p>
+<p>be used in combination with DPP-4 inhibitors due to similar mechanisms of action.</p>
+<li>The GLP1-RAs are administered SC and have important differences in efficacy,</li>
+<h2>adverse effect rates, and dosing schedules (Table 19-5).</h2>
+<li>The most common adverse effects of GLP1-RAs are nausea, vomiting, and diar-</li>
+<p>rhea. These effects are dose related, so dose titration is recommended. They usually</p>
+<p>occur early in the treatment course and are mild and transient but may require drug</p>
+<p>discontinuation in some patients. Instruct patients to eat slowly and stop eating</p>
+<p>when satiated or nausea may worsen and cause vomiting. Injection site reactions</p>
+<p>and hypersensitivity reactions (including anaphylaxis and angioedema) have been</p>
+<p>reported.</p>
+<li>Because GLP1-RAs enhance insulin secretion in response to food intake, the risk of</li>
+<p>hypoglycemia is low when combined with metformin, SGLT-2 inhibitors, or a TZD.</p>
+<p>However, hypoglycemia may occur when combined with a sulfonylurea or insulin.</p>
+<p>Dipeptidyl Peptidase-4 (DPP-4) Inhibitors</p>
+<li>Alogliptin, linagliptin, saxagliptin, and sitagliptin prolong the half-life of endog-</li>
+<p>enously produced GLP-1 and GIP, thereby increasing glucose-dependent insulin</p>
+<p>secretion from the pancreas and reducing inappropriate postprandial glucagon secre-</p>
+<p>tion, resulting in lower glucose levels without an increase in hypoglycemia when used</p>
+<p>as monotherapy. They do not alter gastric emptying, cause nausea, have significant</p>
+<p>effects on satiety, or cause weight gain/loss.</p>
+<li>DPP-4 inhibitors produce average A1C reductions of 0.5%–0.9% (6–10 mmol/mol Hb)</li>
+<p>when used at maximum doses. There are no clear differences in efficacy among agents</p>
+<p>in the class.</p>
+<p>208</p>
+<p>ch19.indd 208 19-11-2020 11:40:41</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<p>TABLE 19-5 Dosing Recommendations for Subcutaneous GLP-1 Receptor Agonists</p>
+<p>Generic (Brand) Name Dosea Interval Renal Dose/Useb</p>
+<p>Exenatide (Byetta) 5–10 mcg Twice daily (30–60 Avoid if eGFR &lt;30</p>
+<p>min before</p>
+<p>breakfast and</p>
+<p>dinner)</p>
+<p>Lixisenatide (Adlyxin) 10–20 mcg Once daily (1 hour Limited experience</p>
+<p>before breakfast) in severe renal</p>
+<p>impairment; avoid</p>
+<p>if eGFR &lt;15</p>
+<p>Dulaglutide 0.75–1.5 mg Once weekly (at any Limited experience</p>
+<p>(Trulicity) time of day, with in severe renal</p>
+<p>or without food) impairment</p>
+<p>Exenatide XR 2 mg Once weekly (at any Avoid if eGFR &lt;30</p>
+<p>(Bydureon) time of day, with</p>
+<p>or without meals)</p>
+<p>Liraglutide (Victoza) 0.6–1.8 mg Once daily (with or Limited experience</p>
+<p>without meals) in severe renal</p>
+<p>impairment</p>
+<p>Semaglutide 0.25–1 mg Once weekly No dose adjustment</p>
+<p>(Ozempic) recommended</p>
+<p>aAll products require subcutaneous administration into the abdomen, thigh, or upper arm.</p>
+<p>beGFR units: mL/min/1.73 m2.</p>
+<li>DPP-4 inhibitors are considered second- or third-line therapy. Advantages include</li>
+<p>once-daily dosing, oral administration, weight neutrality, low risk of hypoglycemia,</p>
+<p>and good tolerability. However, they have less A1C lowering efficacy than other</p>
+<p>second-line medication classes and are expensive.</p>
+<li>Adverse effects are uncommon and include stuffy, runny nose; headache; and upper</li>
+<p>respiratory tract infections. The labeling of saxagliptin and alogliptin includes infor-</p>
+<p>mation about increased risk of hospitalizations for HF. The FDA has also issued a</p>
+<p>warning on the risk of severe joint pain with DPP-4 inhibitors. Pancreatitis appears</p>
+<p>to be an established but rare safety concern.</p>
+<li>There is no need to titrate the dose of DPP-4 inhibitors; however, renal dose adjust-</li>
+<p>ments are required for alogliptin, saxagliptin, and sitagliptin (Table 19-3).</p>
+<p>Sodium-Glucose Cotransporter-2 Inhibitors</p>
+<li>Canagliflozin, dapagliflozin, empagliflozin, and ertugliflozin reduce plasma glu-</li>
+<p>cose by preventing the kidneys from reabsorbing glucose back into the bloodstream,</p>
+<p>leading to increased glucose excretion in the urine. SGLT-2 inhibitors lower both</p>
+<p>FPG and PPG and are effective even in the absolute absence of insulin.</p>
+<li>SGLT-2 inhibitors reduce A1C by 0.5%–1% (6–11 mmol/mol Hb) and appear to</li>
+<p>be more effective in patients with higher baseline A1C levels. Renal impairment</p>
+<p>decreases the efficacy of SGLT-2 inhibitors.</p>
+<li>SGLT-2 inhibitors are second-line agents that can be added to metformin or other</li>
+<p>second-line agents. They are not recommended as first-line agents but can be used</p>
+<p>as monotherapy in patients who cannot tolerate or take first-line therapy. They are</p>
+<p>recommended for patients with established ASCVD or CKD and those with a need to</p>
+<p>avoid hypoglycemia or weight gain or loss. They are unlikely to cause hypoglycemia</p>
+<p>unless combined with medications such as sulfonylureas, meglitinides, or insulin.</p>
+<p>209</p>
+<p>ch19.indd 209 19-11-2020 11:40:42</p>
+<div class="table-container"><table><tr><th>TABLE 19-5 Dosing Recommendations for Subcutaneous GLP-1 Receptor Agonists</th><th></th><th></th><th></th></tr><tr><td>Generic (Brand) Name</td><td>Dosea</td><td>Interval</td><td>Renal Dose/Useb</td></tr><tr><td>Exenatide (Byetta)</td><td>5–10 mcg</td><td>Twice daily (30–60
+min before
+breakfast and
+dinner)</td><td>Avoid if eGFR &lt;30</td></tr><tr><td>Lixisenatide (Adlyxin)</td><td>10–20 mcg</td><td>Once daily (1 hour
+before breakfast)</td><td>Limited experience
+in severe renal
+impairment; avoid
+if eGFR &lt;15</td></tr><tr><td>Dulaglutide
+(Trulicity)</td><td>0.75–1.5 mg</td><td>Once weekly (at any
+time of day, with
+or without food)</td><td>Limited experience
+in severe renal
+impairment</td></tr><tr><td>Exenatide XR
+(Bydureon)</td><td>2 mg</td><td>Once weekly (at any
+time of day, with
+or without meals)</td><td>Avoid if eGFR &lt;30</td></tr><tr><td>Liraglutide (Victoza)</td><td>0.6–1.8 mg</td><td>Once daily (with or
+without meals)</td><td>Limited experience
+in severe renal
+impairment</td></tr><tr><td>Semaglutide
+(Ozempic)</td><td>0.25–1 mg</td><td>Once weekly</td><td>No dose adjustment
+recommended</td></tr></table></div><h2>SECTION 4 | Endocrinologic Disorders</h2>
+<li>Both empagliflozin and canagliflozin reduced major adverse CV events in large clini-</li>
+<p>cal trials, and empagliflozin is FDA approved to reduce the risk of CV death in adults</p>
+<p>with type 2 DM and established ASCVD.</p>
+<li>The most common adverse effect is genital mycotic infections, which are more</li>
+<p>common in women and uncircumcised men. There is also a slightly increased risk</p>
+<p>of urinary tract infections. Polyuria, dehydration, dizziness, or hypotension may</p>
+<p>occur because of the osmotic diuresis effects. Concomitant diuretic use may increase</p>
+<p>the risk of orthostatic hypotension and electrolyte abnormalities. Older adults and</p>
+<p>patients with stage 4 or 5 CKD are not optimal treatment candidates. Other potential</p>
+<p>safety concerns include ketoacidosis, amputations, fractures, and Fournier gangrene.</p>
+<li>The SGLT-2 inhibitors should be started at a low dose with assessment of volume</li>
+<pre><code>status, adverse effects, and renal function. The dose may be titrated in patients who</code></pre>
+<p>are tolerating the drug well and require additional glucose control (Table 19-3).</p>
+<p>α-Glucosidase Inhibitors</p>
+<li>Acarbose and miglitol delay the breakdown of sucrose and complex carbohydrates</li>
+<p>in the small intestine, prolonging carbohydrate absorption. The net effect is reduc-</p>
+<p>tion in PPG (40–50 mg/dL; 2.2–2.8 mmol/L) with relatively unchanged FBG. A1C</p>
+<p>lowering is modest, with average A1C reductions of 0.3%–1%.</p>
+<li>Good candidates for these drugs are patients who are near target A1C levels with</li>
+<p>near-normal FPG but high PPG levels.</p>
+<li>The most common side effects are flatulence, abdominal pain, and diarrhea, which</li>
+<h2>can be reduced by slow dosage titration (Table 19-3).</h2>
+<p>Meglitinides</p>
+<li>Nateglinide and repaglinide stimulate insulin secretion from pancreatic β-cells</li>
+<p>by binding to a site adjacent to the sulfonylurea receptor. They are similar to</p>
+<p>sulfonylureas except that they have a faster onset and shorter duration of action.</p>
+<p>As monotherapy, they reduce PPG excursions and reduce A1C by 0.8%–1%</p>
+<p>(9–11 mmol/mol Hb).</p>
+<li>Similar to sulfonylureas, the main side effects are hypoglycemia and weight gain.</li>
+<li>Their role in therapy is unclear due to lack of clinical evidence. They are not included</li>
+<p>in the American Diabetes Association (ADA) treatment algorithm. They may be used</p>
+<p>in patients with renal insufficiency and may be a good option for patients with erratic</p>
+<p>meal schedules. However, multiple daily dosing may decrease adherence.</p>
+<li>Meglitinides should be taken by mouth with each meal, initiated at a low dose, and</li>
+<p>titrated over time until glycemic control is achieved (Table 19-3).</p>
+<p>Bile Acid Sequestrants</p>
+<li>Colesevelam binds bile acid in the intestinal lumen, decreasing the bile acid pool for</li>
+<p>reabsorption. Its mechanism in lowering plasma glucose levels is unknown, and its</p>
+<p>role in therapy is unclear.</p>
+<li>A1C lowering efficacy is modest. It reduces LDL-C in patients with type 2 DM by</li>
+<p>12%–16% but has not been proven to reduce CV morbidity or mortality. Colesevelam</p>
+<p>is weight neutral and has a low risk of hypoglycemia. Patients with type 2 DM who</p>
+<p>need a small reduction in A1C as well as additional LDL-C lowering may be candi-</p>
+<p>dates for this agent.</p>
+<li>The most common side effects are constipation and dyspepsia; colesevelam should</li>
+<p>be taken with a large amount of water. Colesevelam has multiple absorption-related</p>
+<p>drug–drug interactions. See Table 19-3 for dosing information.</p>
+<p>Dopamine Agonists</p>
+<li>Bromocriptine mesylate is FDA approved for treatment of type 2 DM. The mecha-</li>
+<p>nisms by which it improves glycemic control are unknown but may involve improved</p>
+<p>hepatic insulin sensitivity and decreased hepatic glucose output.</p>
+<li>The A1C lowering efficacy is modest, and its role in the treatment of type 2 DM is unclear.</li>
+<p>210</p>
+<p>ch19.indd 210 19-11-2020 11:40:42</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<li>Common side effects include nausea, vomiting, constipation, fatigue, headache, diz-</li>
+<p>ziness, and asthenia. Somnolence and orthostatic hypotension may also occur.</p>
+<p>Amylin Analogs</p>
+<li>Pramlintide (Symlin) is a synthetic amylin analog that reduces glucagon secre-</li>
+<p>tion, slows gastric emptying, and increases satiety. It was the first noninsulin agent</p>
+<p>approved for patients with type 1 DM.</p>
+<li>Pramlintide lowers both PPG levels and A1C. The average A1C reduction is about 0.6%</li>
+<p>(7 mmol/mol Hb) in patients with type 2 DM and 0.4%–0.5% (5–6 mmol/mol Hb)</p>
+<p>in type 1 DM.</p>
+<li>It is used primarily in type 1 DM as adjunctive therapy for patients who are not</li>
+<p>achieving PPG goals despite maximizing mealtime insulin doses. It can also decrease</p>
+<p>weight and may allow for lower mealtime insulin doses.</p>
+<li>The most common adverse effects are nausea, vomiting, and anorexia. It does not</li>
+<p>cause hypoglycemia when used alone, but hypoglycemia can occur when used with</p>
+<p>insulin. To minimize the risk of severe hypoglycemia, empirically reduce the meal-</p>
+<p>time insulin dose by 30%–50% when pramlintide is initiated.</p>
+<li>In type 2 DM, the starting dose is 60 mcg SC prior to meals, titrated to the maximally</li>
+<p>recommended 120-mcg SC dose as tolerated and warranted based on PPG levels. In</p>
+<p>type 1 DM, dosing starts at 15 mcg SC prior to meals and can be titrated up in 15-mcg</p>
+<p>increments to a maximum of 60 mcg SC prior to each meal, if tolerated.</p>
+<h2>TREATMENT OF HYPERGLYCEMIA IN TYPE 2 DIABETES</h2>
+<li>Upon diagnosis, assess the patient’s current lifestyle, existing comorbidities, A1C, age,</li>
+<p>weight, presence or absence of symptoms, motivation, cultural preferences, health</p>
+<p>literacy level, and cost limitations. Set a patient-specific A1C target and discuss it</p>
+<p>with the patient.</p>
+<li>Implement comprehensive lifestyle modifications with MNT, physical activity, weight</li>
+<p>loss if obese, smoking cessation, and psychologic support upon diagnosis and rein-</p>
+<p>force them at every visit. All patients should be offered access to ongoing DSME/S</p>
+<p>programs.</p>
+<li>Initiate metformin as first-line therapy in patients without contraindications or toler-</li>
+<p>ability issues. Start with a low dose and titrate to the maximum effective dose over</p>
+<p>time to improve tolerability.</p>
+<li>If the initial A1C is close to goal (eg, ≤7.5% [58 mmol/mol Hb]) consider initial</li>
+<p>treatment with lifestyle modifications alone if the patient is motivated.</p>
+<li>Consider starting two medications (metformin plus a second agent) if the initial A1C</li>
+<p>is &gt;1.5% (16 mmol/mol Hb) higher than the target A1C.</p>
+<li>Consider early introduction of basal insulin in patients with very high A1C levels</li>
+<p>(&gt;10% [86 mmol/mol Hb]), symptoms of hyperglycemia, or evidence of catabolism</p>
+<p>(eg, weight loss).</p>
+<li>See patients at least every 3 months if they are not meeting their goals and at least</li>
+<p>every 6 months if they are meeting goals. At those times, check an A1C level, assess</p>
+<p>medication adherence, and reinforce lifestyle recommendations. Add additional</p>
+<p>therapy if glucose targets have not been met.</p>
+<li>For patients maximized on metformin therapy but with A1C levels above the target,</li>
+<p>add a second-line antihyperglycemic agent. The ADA Standards of Care identify six</p>
+<p>drug classes to consider: (1) DPP-4 inhibitors, (2) GLP1-RAs, (3) SGLT-2 inhibi-</p>
+<p>tors, (4) sulfonylureas, (5) TZDs, and (6) basal insulin. Patient-specific factors to</p>
+<p>consider in medication selection include the individualized A1C target and presence</p>
+<p>of comorbidities (eg, ASCVD, HF, CKD, obesity). Drug-specific factors to consider</p>
+<p>include glucose-lowering efficacy, impact on comorbidities, effect on weight and</p>
+<p>hypoglycemia risk, side-effect profile, ease of use, and cost. Recommendations based</p>
+<p>on patient-specific comorbidities and other factors include:</p>
+<p>✓ Established ASCVD or CKD: SGLT-2 inhibitor (eg, empagliflozin) or GLP1-RA</p>
+<p>(eg, liraglutide) with proven CV benefit.</p>
+<h2>ALGRAWANY</h2>
+<p>211</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>ch19.indd 211 19-11-2020 11:40:42</p>
+<h2>SECTION 4 | Endocrinologic Disorders</h2>
+<p>✓ Established ASCVD and HF: SGLT-2 inhibitor with proven benefit in reducing HF</p>
+<p>progression. Avoid TZDs in patients with HF.</p>
+<p>✓ CKD (with or without ASCVD): SGLT-2 inhibitor with proven benefit in reducing</p>
+<p>CKD progression.</p>
+<p>✓ Need to minimize weight gain or promote weight loss in patients without ASCVD</p>
+<p>or CKD: GLP1-RA or SGLT-2 inhibitor. If these agents cannot be used, use a</p>
+<p>weight-neutral medication such as a DPP-4 inhibitor. Avoid sulfonylureas, insulin,</p>
+<p>and TZDs due to weight gain.</p>
+<p>✓ Compelling need to minimize hypoglycemia: DPP-4 inhibitor, GLP1-RA, SGLT-2</p>
+<p>inhibitor, or TZD could be added to metformin.</p>
+<li>If the A1C target is not achieved after 3 months of dual therapy or if the patient did</li>
+<p>not tolerate the selected drug(s), then triple therapy is warranted, adding a drug from</p>
+<p>another class.</p>
+<li>People with type 2 DM can often be managed with oral medications for years before</li>
+<p>injectable medications are needed. Insulin is recommended for extreme (A1C &gt;10%</p>
+<p>[86 mmol/mol Hb]) or symptomatic hyperglycemia. Otherwise, GLP-1 RAs are pre-</p>
+<p>ferred over basal insulin because they have equal or superior A1C lowering efficacy</p>
+<p>and lead to weight loss instead of weight gain with a low risk of hypoglycemia. Basal</p>
+<p>insulin can be initiated if additional glucose lowering is needed after the GLP-1 RA</p>
+<p>dose has been maximized.</p>
+<li>Basal insulin is started at a low dose (10 units once daily or 0.1–0.2 units/kg/day) and</li>
+<p>titrated slowly over time to a target FPG range (ie, 80–130 mg/dL [4.4-7.2 mmol/L]</p>
+<p>for patients targeting an A1C &lt;7% [53 mmol/mol Hb]). If the A1C target is not</p>
+<p>reached by maximally titrating basal insulin, PPG levels are likely elevated and a</p>
+<p>GLP1-RA or SGLT-2 inhibitor should be considered if the patient is not already tak-</p>
+<p>ing one. Prandial insulin is also an option, starting with 4 units or 10% of the basal</p>
+<p>dose with the largest meal of the day. If the A1C is &lt;8% (64 mmol/mol Hb), the basal</p>
+<p>insulin dose can be decreased by the same amount to avoid hypoglycemia. Titrate the</p>
+<p>dose over time to achieve target PPG levels &lt;180 mg/dL (10 mmol/L). A second or</p>
+<p>third injection can be added to the other meals if needed.</p>
+<li>Reevaluate the appropriateness of oral medications when injectable agents are started:</li>
+<p>✓ GLP-1 RAs can be used in combination with all oral agents except DPP-4 inhibitors.</p>
+<p>✓ Continue metformin when insulin is started. Stop TZDs and sulfonylureas or</p>
+<p>reduce the dose.</p>
+<p>✓ SGLT-2 inhibitors can be continued, but educate the patient about the risk of DKA.</p>
+<h2>TREATMENT OF HYPERGLYCEMIA IN TYPE 1 DIABETES</h2>
+<li>All patients with type 1 DM require exogenous insulin. Achieving adequate glycemic</li>
+<p>control usually requires intensive insulin regimens designed to provide insulin in a</p>
+<p>manner that mimics normal physiologic insulin secretion, with consistent secretion</p>
+<p>of insulin throughout the day to manage glucose levels overnight and in between</p>
+<p>meals (ie, basal insulin), and bursts of insulin in response to glucose rises after inges-</p>
+<p>tion of carbohydrates (ie, prandial insulin).</p>
+<li>Intensive insulin regimens can be given with either multiple daily injections (MDI) or</li>
+<p>use of continuous subcutaneous insulin infusion (CSII) via an insulin pump (Fig. 19-1).</p>
+<li>A common MDI approach is one injection of long-acting insulin (eg, insulin glargine</li>
+<p>U-100) for the basal component and three injections of rapid-acting insulin (eg,</p>
+<p>insulin lispro U-100) for the prandial component (Fig. 19-1A). A less expensive</p>
+<p>option consists of two injections of intermediate-acting insulin (eg, NPH insulin)</p>
+<p>and two injections of short-acting insulin (eg, regular insulin) (Fig. 19-1B). However,</p>
+<p>the ADA Standards of Care recommend that most patients should use rapid-acting</p>
+<p>insulins rather than regular insulin to reduce the risk of hypoglycemia.</p>
+<li>Insulin pump therapy or CSII infuses rapid-acting insulin to cover both the basal</li>
+<p>and prandial insulin needs (Fig. 19-1C). The pump infuses a basal rate constantly</p>
+<p>throughout the day and allows the patient to give bolus doses using a bolus dose</p>
+<p>calculator based on current glucose levels, carbohydrate intake, and insulin on board.</p>
+<p>212</p>
+<p>ch19.indd 212 19-11-2020 11:40:43</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<p>Morning Afternoon Evening Night</p>
+<p>Insulin Insulin Insulin</p>
+<p>ana- ana- ana-</p>
+<p>logue* logue* logue*</p>
+<p>Long-acting</p>
+<p>Insulin^</p>
+<h2>B L S HS B</h2>
+<p>A Meals</p>
+<p>213</p>
+<p>tceffe</p>
+<p>nilusnI</p>
+<p>Morning Afternoon Evening</p>
+<p>Insulin Insulin</p>
+<p>analogue* analogue*</p>
+<p>Regular Regular</p>
+<p>tceffe</p>
+<p>nilusnI</p>
+<p>Night</p>
+<h2>NPH</h2>
+<h2>NPH</h2>
+<h2>B L S HS B</h2>
+<p>B Meals</p>
+<p>Morning</p>
+<p>Bolus Bolus Bolus</p>
+<p>Basal infusion</p>
+<h2>B L S HS B</h2>
+<p>C Meals</p>
+<p>tceffe</p>
+<p>nilusnI</p>
+<p>Afternoon Evening Night</p>
+<h2>FIGURE 19-1. Common insulin regimens.</h2>
+<p>(A) Multiple-component insulin regimen consisting of one injection of long-acting</p>
+<p>insulin (^detemir, glargine degludec) to provide basal glycemic coverage and three</p>
+<p>injections of rapid-acting insulin (*aspart, lispro, glulisine) to provide glycemic cov-</p>
+<p>erage for each meal.</p>
+<p>(B) Insulin regimen consisting of two injections of intermediate-acting insulin (NPH)</p>
+<p>and rapid-acting insulin (*aspart, lispro, glulisine [solid line]), or short-acting regular</p>
+<p>insulin (dashed line). Only one formulation of short-acting insulin is used.</p>
+<p>(C) Insulin administration by insulin infusion device. The basal insulin rate is</p>
+<p>decreased during the evening and increased slightly prior to the patient awaken-</p>
+<p>ing in the morning. Rapid-acting insulin (aspart, lispro, or glulisine) is used in the</p>
+<p>insulin pump.</p>
+<p>ch19.indd 213 19-11-2020 11:40:44</p>
+<h2>SECTION 4 | Endocrinologic Disorders</h2>
+<p>Insulin pump therapy can provide more precise glucose control and allow greater</p>
+<p>flexibility and fine-tune tailoring.</p>
+<li>The starting insulin dose for someone with newly diagnosed type 1 DM is typically</li>
+<p>0.4–1 units/kg/day of total insulin. The total daily insulin dose is then divided to</p>
+<p>give 50% as basal insulin and 50% as prandial insulin (distributed across meals). For</p>
+<p>example, an 80-kg patient started on 0.5 units/kg/day would start with a total daily</p>
+<p>dose of 40 units, with 20 units given as a long-acting insulin (eg, insulin detemir,</p>
+<p>glargine) and 7 units of rapid-acting insulin (eg, insulin aspart, lispro, or glulisine)</p>
+<p>with breakfast, lunch, and dinner. The insulin doses would then be adjusted based</p>
+<p>on SMBG data.</p>
+<li>Ideally, patients should learn to count carbohydrates so they can match their prandial</li>
+<p>insulin doses to their carbohydrate intake. Patients should also SMBG before each</p>
+<p>meal or use continuous glucose monitoring (CGM) to evaluate the insulin regimen</p>
+<p>and make treatment decisions. Bolus insulin doses can be better individualized by</p>
+<p>using carbohydrate-to-insulin ratios (C:I ratios) and correction factors (CF); refer to</p>
+<h2>the textbook chapter for more detailed information.</h2>
+<li>Pramlintide is indicated as adjunctive treatment in patients with type 1 DM who</li>
+<p>are not achieving glycemic targets despite optimization of mealtime insulin (refer to</p>
+<p>discussion earlier in this chapter). Pramlintide may improve glycemic control and</p>
+<p>minimize weight gain caused by insulin, but its use is limited by adverse effects such</p>
+<p>as nausea and vomiting, modest glucose improvements, increased injections and cost,</p>
+<p>and increased risk of hypoglycemia.</p>
+<li>Assess patients every 3 months if uncontrolled and every 6 months if controlled.</li>
+<p>Obtain an A1C and adjust treatment as needed. Patients on intensive insulin therapy</p>
+<p>should SMBG at least four times daily, before meals and at bedtime. Patients should</p>
+<p>also test before exercise, prior to critical tasks such as driving, and if symptoms of</p>
+<p>hypoglycemia occur. SMBG is crucial during times of intercurrent illness or stresses</p>
+<p>for early detection and prevention of DKA.</p>
+<li>Continuous glucose monitors report interstitial glucose levels in real time, provide</li>
+<p>insight into glucose trends, and can reduce A1C and reduce glucose variability in</p>
+<p>patients with type 1 DM. Current guidelines recommend CGM in patients with type 1</p>
+<p>DM who are not meeting glycemic goals. They are also recommended in patients with</p>
+<p>hypoglycemia unawareness to better detect and prevent hypoglycemic events.</p>
+<h2>HYPOGLYCEMIA</h2>
+<li>Hypoglycemia is a common complication of some diabetes medications and is associ-</li>
+<p>ated with falls, injury, motor vehicle accidents, decreased quality of life, and increased</p>
+<p>risk of developing dementia, CV events, arrhythmias, and death.</p>
+<li>The severity of hypoglycemia is classified as follows:</li>
+<p>✓ Level 1 (hypoglycemia alert value; ≤70 mg/dL [3.9 mmol/L]): May not cause</p>
+<p>symptoms but should be treated with a fast-acting carbohydrate and may need</p>
+<p>medication dose adjustment</p>
+<p>✓ Level 2 (clinically significant hypoglycemia; &lt;54 mg/dL [3.0 mmol/L]): Serious,</p>
+<p>clinically important hypoglycemia</p>
+<p>✓ Level 3 (severe hypoglycemia): Associated with cognitive impairment requiring</p>
+<p>external assistance for recovery and can be life threatening</p>
+<li>Initial autonomic symptoms include tachycardia, palpitations, sweating, tremors, and</li>
+<p>hunger. Neuroglycopenic symptoms often occur with BG &lt;60 mg/dL (3.3 mmol/L)</p>
+<p>and can include cognitive impairment, confusion, behavioral changes, anger, irrita-</p>
+<p>bility, blurred vision, headaches, seizures, and loss of consciousness.</p>
+<li>Some patients have hypoglycemia unawareness and are unable to detect the early</li>
+<p>warning symptoms of hypoglycemia; they are at increased risk for the serious</p>
+<p>sequelae associated with severe hypoglycemia.</p>
+<li>SMBG and CGM can be useful in preventing hypoglycemia. Patients must be edu-</li>
+<p>cated to understand situations that increase risk of hypoglycemia (eg, delaying meals,</p>
+<p>during or after exercising, or fasting).</p>
+<p>214</p>
+<p>ch19.indd 214 19-11-2020 11:40:45</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<li>Treatment of hypoglycemia requires ingestion of carbohydrates, preferably glucose.</li>
+<p>Patients should carry a source of fast-acting glucose with them at all times and use</p>
+<p>the “rule of 15” for proper treatment:</p>
+<p>✓ First use SMBG to confirm BG &lt;70 mg/dL (3.9 mmol/L) and then ingest 15 g of</p>
+<p>fast-acting carbohydrates such as 1/2 cup (4 oz or 125 mL) of milk, juice, or soda;</p>
+<p>1 tablespoon of honey; hard candy; jelly beans; or glucose tablets.</p>
+<p>✓ Repeat SMBG in 15 minutes; if the BG is &lt;70 mg/dL (3.9 mmol/L), repeat the</p>
+<p>process.</p>
+<p>✓ Once the BG is normalized, eat a snack or meal that includes complex carbohy-</p>
+<p>drates and protein to prevent further hypoglycemic episodes.</p>
+<li>If the patient is unconscious, give IV glucose or glucagon injection. Glucagon</li>
+<p>increases glycogenolysis in the liver and may be given in any situation in which IV</p>
+<p>glucose cannot be rapidly administered. A glucagon kit should be prescribed and</p>
+<p>readily available to all patients on insulin who have a history of or high risk for</p>
+<p>severe hypoglycemia. It can take 10–15 minutes before glucose levels start to rise,</p>
+<p>and patients often vomit. Position the patient on the side with the head tilted slightly</p>
+<p>downward to avoid aspiration.</p>
+<li>Clinicians should monitor hypoglycemia at every visit. Ask the patient about the fre-</li>
+<p>quency, severity, and timing of hypoglycemic events, need for assistance by others, or</p>
+<p>the need to administer glucagon. Reevaluate the treatment regimen of patients with</p>
+<p>frequent or severe hypoglycemia to minimize future episodes.</p>
+<h2>COMPLICATIONS AND COMORBIDITIES</h2>
+<p>Diabetic Ketoacidosis (DKA)</p>
+<li>In patients with type 1 DM, DKA is usually precipitated by omitting insulin, infec-</li>
+<p>tion, or acute illness with resultant increases in cortisol, catecholamines, glucagon,</p>
+<p>and growth hormone.</p>
+<li>Patients may be alert, stuporous, or comatose at presentation. Diagnostic laboratory</li>
+<p>values include hyperglycemia, anion gap acidosis, and large ketonemia or ketonuria.</p>
+<li>Patients have fluid deficits of several liters and significant sodium and potassium</li>
+<p>deficits. Treatment requires restoration of intravascular volume with normal saline</p>
+<p>followed by hypotonic saline to replace free water, potassium supplements, and insu-</p>
+<p>lin given by continuous IV infusion.</p>
+<li>Constant infusion of a fixed insulin dose and administration of IV glucose when</li>
+<p>the BG level decreases to &lt;250 mg/dL (13.9 mmol/L) are preferred over titrating</p>
+<p>the insulin infusion based on the glucose level. Rapid correction of the glucose</p>
+<p>(a decrease &gt;75–100 mg/dL/hr [4.2–5.6 mmol/L/hr]) is not recommended because it</p>
+<p>has been associated with cerebral edema, especially in children. Continue the insulin</p>
+<p>infusion until the urine ketones clear and the anion gap closes.</p>
+<li>Give long-acting insulin 1–3 hours before discontinuing the insulin infusion. Per-</li>
+<p>form hourly bedside monitoring of glucose and frequent monitoring of potassium</p>
+<p>(every 2–4 hours).</p>
+<li>Treatment with bicarbonate to correct the acidosis is generally not needed and may</li>
+<p>be harmful.</p>
+<li>It is essential to correct the underlying situation or medical condition that precipi-</li>
+<p>tated DKA.</p>
+<li>Metabolic improvement is manifested by an increase in serum bicarbonate and pH.</li>
+<p>Because fluid administration alone reduces BG, reduced glucose values do not neces-</p>
+<p>sarily indicate improving metabolic status.</p>
+<p>Hyperosmolar Hyperglycemic State (HHS)</p>
+<li>HHS is a potentially life-threatening acute complication of diabetes associated with</li>
+<p>very high glucose concentrations, typically &gt;400 mg/dL (22.2 mmol/L). It usually</p>
+<p>occurs in older patients with type 2 DM or in younger patients with prolonged hyper-</p>
+<p>glycemia and dehydration or significant renal insufficiency.</p>
+<p>215</p>
+<p>ch19.indd 215 19-11-2020 11:40:45</p>
+<h2>SECTION 4 | Endocrinologic Disorders</h2>
+<li>The patient presentation is similar to DKA, but HHS patients usually have much</li>
+<p>higher BG, elevated serum osmolality, and little to no ketonuria or ketonemia.</p>
+<li>HHS typically evolves over several days to weeks, whereas DKA evolves much faster.</li>
+<p>Large ketonemia is not usually seen because residual insulin secretion suppresses</p>
+<p>lipolysis. Infection or another medical illness is the usual precipitant.</p>
+<li>Fluid deficits are often greater and BG levels higher—sometimes >1000 mg/dL (55.5</li>
+<p>mmol/L)—in patients with HHS than in patients with DKA.</p>
+<li>BG should be lowered very gradually with hypotonic fluids and low-dose insulin</li>
+<p>infusions (1–2 units/hr).</p>
+<p>Macrovascular Complications</p>
+<li>Macrovascular complications (eg, CHD, stroke) are the leading causes of death in</li>
+<p>people with diabetes.</p>
+<li>The ADA recommends low-dose aspirin therapy (75–162 mg daily) in all patients</li>
+<p>with established ASCVD. Clopidogrel may be used in patients allergic to aspirin. The</p>
+<p>role of antiplatelet therapy for primary CV prevention is unclear because the benefits</p>
+<p>may be offset by a higher risk of bleeding; some practice guidelines recommend</p>
+<p>aspirin if the 10-year risk of a CV event is &gt;20%.</p>
+<li>In patients with established ASCVD, use of a GLP1-RA or an SGLT-2 inhibitor</li>
+<p>should be strongly considered.</p>
+<li>For all patients whose blood pressure (BP) exceeds 120/80 mm Hg, the ADA recom-</li>
+<p>mends dietary changes, physical activity, and weight loss in overweight or obese</p>
+<p>patients. Drug therapy using agents proven to reduce CV events should be started</p>
+<p>for BP &gt;140/90 mm Hg. A combination of two medications should be used for BP</p>
+<p>&gt;160/100 mm Hg.</p>
+<li>Initiate high-intensity statin therapy in all patients with diabetes and preexisting</li>
+<p>ASCVD regardless of baseline lipid levels. In the absence of ASCVD, prescribe a</p>
+<p>moderate-intensity statin to all patients with type 1 or type 2 DM over the age of</p>
+<p>40. In patients &lt;40 years of age, a moderate-intensity statin may be appropriate for</p>
+<p>patients with multiple CV risk factors. A fibrate (eg, fenofibrate), omega-3 fatty</p>
+<p>acid, or niacin can be added for patients with marked hypertriglyceridemia.</p>
+<li>Peripheral arterial disease can lead to claudication, nonhealing foot ulcers, and limb</li>
+<p>amputation. Smoking cessation, statin therapy, good glycemic control, and antiplatelet</p>
+<p>therapy are important strategies. Cilostazol may be useful in select patients to reduce</p>
+<p>symptoms. Revascularization surgery can be considered in some situations. Perform</p>
+<p>foot examinations during each face-to-face patient encounter and a yearly monofila-</p>
+<p>ment test to assess for loss of protective sensation to identify high-risk patients.</p>
+<p>Microvascular Complications</p>
+<li>Efforts to improve glucose control significantly reduce the risk of developing micro-</li>
+<p>vascular complications and slow their progression.</p>
+<li>Nephropathy: Albuminuria is a marker of renal damage and can be predictive of end-</li>
+<p>stage renal disease. The ADA recommends screening for albuminuria upon diagnosis</p>
+<p>in persons with type 2 DM. Screening with type 1 DM should begin with puberty</p>
+<p>and after 5-years’ disease duration. BP control is important for preventing and slow-</p>
+<p>ing progression of nephropathy. Angiotensin-converting enzyme (ACE) inhibitors</p>
+<p>and angiotensin receptor blockers (ARBs) can slow the progression of renal disease</p>
+<p>in patients with diabetes. Diuretics are often necessary due to volume-expanded</p>
+<p>states and are recommended second-line therapy. The ADA recommends a BP goal</p>
+<p>&lt;140/90 mm Hg in patients with nephropathy but a lower target (eg, &lt;130/80) if it</p>
+<p>can be achieved without undue burden or side effects. Three or more antihyperten-</p>
+<p>sives are often needed to reach goal BP.</p>
+<li>Retinopathy: Patients with diabetes should have routine dilated eye examinations to</li>
+<p>fully evaluate the retina. Early background retinopathy may reverse with improved</p>
+<p>glycemic control and optimal BP control. More advanced retinopathy will not fully</p>
+<p>regress with improved glycemia, and aggressive BG reductions may acutely worsen</p>
+<p>retinopathy. Laser photocoagulation has markedly improved sight preservation.</p>
+<p>216</p>
+<p>ch19.indd 216 19-11-2020 11:40:45</p>
+<h2>Diabetes Mellitus | CHAPTER 19</h2>
+<p>Intravitreal antivascular endothelial growth factor (VEGF) therapy is also highly</p>
+<p>effective for sight preservation. Bevacizumab (used off-label) and ranibizumab are</p>
+<p>anti-VEGF monoclonal antibodies, and aflibercept is a VEGF decoy receptor.</p>
+<li>Neuropathy:</li>
+<p>✓ Distal symmetrical peripheral neuropathy is the most common complication</p>
+<p>in patients with type 2 DM. Paresthesias, numbness, or pain are the predomi-</p>
+<p>nant symptoms. The feet are involved far more often than the hands. Improved</p>
+<p>glycemic control is the primary treatment and may alleviate some symptoms.</p>
+<p>Pharmacologic therapy is symptomatic and includes low-dose tricyclic antide-</p>
+<p>pressants (nortriptyline or desipramine), duloxetine, gabapentin, pregabalin,</p>
+<p>venlafaxine, topical capsaicin, and tramadol.</p>
+<p>✓ Gastroparesis can be severe and debilitating. Improved glycemic control, discon-</p>
+<p>tinuation of medications that slow gastric motility, and use of metoclopramide or</p>
+<p>low-dose erythromycin may be helpful.</p>
+<p>✓ Diabetic diarrhea is often nocturnal and frequently responds to a 10- to 14-day</p>
+<p>course of an antibiotic such as doxycycline or metronidazole. Octreotide may be</p>
+<p>useful in unresponsive cases.</p>
+<p>✓ Orthostatic hypotension may require mineralocorticoids (eg, fludrocortisone) or</p>
+<p>adrenergic agonists (midodrine).</p>
+<pre><code>✓ Erectile dysfunction is common, and initial therapy should include a trial of an</code></pre>
+<p>oral phosphodiesterase-5 inhibitor (eg, sildenafil, vardenafil, or tadalafil).</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Measure A1C every 3–6 months to follow long-term glycemic control for the</li>
+<p>previous 2–3 months, even in patients who are stable on a therapeutic regimen and</p>
+<h2>meeting treatment goals (Table 19-1).</h2>
+<li>SMBG provides an opportunity to adjust medications, food intake, or physical activ-</li>
+<p>ity and enables patients to detect hypoglycemia. For patients with type 1 DM, SMBG</p>
+<p>is typically performed 4–6 times per day—prior to food intake and physical activity</p>
+<p>and at bedtime. The optimal frequency of SMBG in patients with type 2 DM on oral</p>
+<p>agents is controversial.</p>
+<li>CGM should be considered in adults with type 1 DM who are at least 25 years of age</li>
+<p>and those younger than 25 years of age who can demonstrate adherence to its use.</p>
+<li>At each visit, ask patients with type 1 DM about the frequency and severity of hypo-</li>
+<p>glycemia. Document any hypoglycemic episodes requiring assistance of another per-</p>
+<p>son, medical attention, or hospitalization and take steps to prevent future episodes.</p>
+<li>Screen for complications at the time of diagnosis and thereafter as follows:</li>
+<p>✓ Obtain yearly dilated eye exams in type 2 DM and an initial exam in the first</p>
+<p>5 years in type 1 DM, then yearly.</p>
+<p>✓ Assess BP at each visit.</p>
+<p>✓ Examine the feet at each visit, including palpation of distal pulses and visual</p>
+<p>inspection for skin integrity, calluses, and deformities.</p>
+<p>✓ Screen for pedal sensory loss annually using a 10-g force monofilament.</p>
+<p>✓ Screen for albuminuria at the time of diagnosis in patients with type 2 DM and</p>
+<p>5 years after diagnosis in type 1 DM. At least once a year, assess urinary albumin</p>
+<p>(urine albumin-to-creatinine ratio) and eGFR in all patients with type 2 DM and</p>
+<p>in patients with type 1 DM for at least 5 years.</p>
+<p>✓ Check fasting lipid panel annually if the patient is on lipid-lowering therapy.</p>
+<li>Administer an annual influenza vaccine and assess for administration of the pneu-</li>
+<p>mococcal vaccine and hepatitis B vaccine series along with management of other CV</p>
+<p>risk factors (eg, smoking).</p>
+<p>See Chapter 91, Diabetes Mellitus, authored by Jennifer Trujillo and Stuart Haines, for a</p>
+<p>more detailed discussion of this topic.</p>
+<p>217</p>
+<p>ch19.indd 217 19-11-2020 11:40:46</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>78. Asthma</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>78. Asthma</h1>
+        </header>
+        <main>
+            <li>Asthma is defined by the Global Initiative for Asthma (GINA) as a heterogeneous</li>
+<p>disease usually characterized by chronic airway inflammation. It is defined by a his-</p>
+<p>tory of respiratory symptoms such as wheezing, shortness of breath, chest tightness,</p>
+<p>and cough that vary over time and in intensity, together with variable expiratory</p>
+<p>airflow limitation.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>There is a variable degree of airflow obstruction (related to smooth muscle broncho-</li>
+<p>spasm, edema, and mucus hypersecretion), bronchial hyperresponsiveness (BHR),</p>
+<p>and airway inflammation.</p>
+<li>In acute inflammation, inhaled allergens in allergic patients cause early-phase allergic</li>
+<p>reaction with activation of cells bearing allergen-specific immunoglobulin E (IgE)</p>
+<p>antibodies. After rapid activation, airway mast cells and macrophages release pro-</p>
+<p>inflammatory mediators such as histamine and eicosanoids that induce contraction</p>
+<p>of airway smooth muscle, mucus secretion, edema, and exudation of plasma in the</p>
+<p>airways. Plasma protein leakage induces a thickened, engorged, edematous airway</p>
+<p>wall and narrowing of lumen with reduced mucus clearance.</p>
+<li>Late-phase inflammatory reaction occurs 6–9 hours after allergen provocation</li>
+<p>and involves recruitment and activation of eosinophils, T lymphocytes, b asophils,</p>
+<p>neutrophils, and macrophages. Eosinophils migrate to airways and release</p>
+<p>inflammatory mediators.</p>
+<li>T-lymphocyte activation leads to release of cytokines from type 2 T-helper (TH) cells</li>
+<p>2</p>
+<p>that mediate allergic inflammation (interleukin [IL]-4, IL-5, and IL-13). Conversely,</p>
+<p>type 1 T-helper (TH) cells produce IL-2 and interferon-γ that are essential for</p>
+<p>1</p>
+<p>cellular defense mechanisms. Allergic asthmatic inflammation may result from</p>
+<p>imbalance between TH and TH cells.</p>
+<li>Mast cell degranulation 1 results in 2 release of mediators such as histamine; eosinophil</li>
+<p>and neutrophil chemotactic factors; leukotrienes C, D, and E; prostaglandins; and</p>
+<p>4 4 4</p>
+<p>platelet-activating factor (PAF). Histamine can induce smooth muscle constriction</p>
+<p>and bronchospasm and may contribute to mucosal edema and mucus secretion.</p>
+<li>Alveolar macrophages release inflammatory mediators, including proinflammatory</li>
+<p>and anti-inflammatory cytokines, reactive oxygen species, and eicosanoids. Produc-</p>
+<p>tion of neutrophil chemotactic factor and eosinophil chemotactic factor furthers the</p>
+<p>inflammatory process. Neutrophils also release mediators (PAFs, prostaglandins,</p>
+<p>thromboxanes, and leukotrienes) that contribute to BHR and airway inflamma-</p>
+<p>tion. Leukotrienes C, D, and E are released during inflammatory processes in the</p>
+<p>4 4 4</p>
+<p>lung and produce bronchospasm, mucus secretion, microvascular permeability, and</p>
+<p>airway edema.</p>
+<li>Bronchial epithelial cells participate in inflammation by releasing eicosanoids, pep-</li>
+<p>tidases, matrix proteins, cytokines, and nitric oxide. Epithelial shedding results in</p>
+<p>heightened airway responsiveness, altered permeability of airway mucosa, depletion</p>
+<p>of epithelial-derived relaxant factors, and loss of enzymes responsible for degrading</p>
+<p>inflammatory neuropeptides. The exudative inflammatory process and sloughing of</p>
+<p>epithelial cells into the airway lumen impair mucociliary transport. Bronchial glands</p>
+<p>increase in size, and goblet cells increase in size and number.</p>
+<li>The airway is innervated by parasympathetic, sympathetic, and nonadrenergic</li>
+<p>inhibitory nerves. Normal resting tone of airway smooth muscle is maintained by vagal</p>
+<p>efferent activity, and bronchoconstriction can be mediated by vagal stimulation in</p>
+<p>small bronchi. Airway smooth muscle contains noninnervated β-adrenergic receptors</p>
+<p>2</p>
+<p>that produce bronchodilation. The nonadrenergic, noncholinergic (NANC) nervous</p>
+<p>system in the trachea and bronchi may amplify inflammation by releasing nitric oxide.</p>
+<p>915</p>
+<h2>RETPAHC</h2>
+<p>78</p>
+<p>Asthma</p>
+<p>CH78.indd 915 20-11-2020 17:59:48</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>78</th><th>Asthma</th></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<h2>CLINICAL PRESENTATION</h2>
+<h2>CHRONIC ASTHMA</h2>
+<li>Symptoms include episodes of shortness of breath, chest tightness, coughing</li>
+<p>( particularly at night), wheezing, or a whistling sound when breathing. These often</p>
+<p>occur with exercise but may occur spontaneously or in association with known</p>
+<p>allergens.</p>
+<li>Signs include expiratory wheezing (rhonchi) on auscultation; dry, hacking cough;</li>
+<p>and atopy (eg, allergic rhinitis or atopic dermatitis).</p>
+<li>Asthma can vary from chronic daily symptoms to only intermittent symptoms.</li>
+<p>Intervals between symptoms may be days, weeks, months, or years.</p>
+<li>Severity is determined by lung function, symptoms, nighttime awakenings, and inter-</li>
+<p>ference with normal activity prior to therapy. Patients can present with mild intermit-</p>
+<p>tent symptoms that require no medications or only occasional short-acting inhaled</p>
+<p>β-agonists (SABAs) to severe chronic symptoms despite multiple medications.</p>
+<p>2</p>
+<h2>ACUTE SEVERE ASTHMA</h2>
+<li>Uncontrolled asthma can progress to an acute state in which inflammation, airway</li>
+<p>edema, mucus accumulation, and severe bronchospasm result in profound airway</p>
+<p>narrowing that is poorly responsive to bronchodilator therapy.</p>
+<li>Patients may be anxious in acute distress and complain of severe dyspnea, shortness</li>
+<p>of breath, chest tightness, or burning. They may be able to say only a few words with</p>
+<p>each breath. Symptoms are unresponsive to usual measures (ie, SABAs).</p>
+<li>Signs include expiratory and inspiratory wheezing on auscultation; dry, hacking</li>
+<p>cough; tachypnea; tachycardia; pallor or cyanosis; and hyperinflated chest with</p>
+<p>intercostal and supraclavicular retractions. Breath sounds may be diminished with</p>
+<p>severe obstruction.</p>
+<h2>DIAGNOSIS</h2>
+<h2>CHRONIC ASTHMA</h2>
+<li>Diagnosis is made primarily by history of recurrent episodes of coughing, wheezing,</li>
+<p>chest tightness, or shortness of breath and confirmatory spirometry.</p>
+<li>Patients may have family history of allergy or asthma or symptoms of allergic rhinitis</li>
+<p>or atopic dermatitis. History of exercise or cold air precipitating dyspnea or increased</p>
+<p>symptoms during specific allergen seasons suggests asthma. Patient may have exces-</p>
+<p>sive variability in twice-daily peak expiratory flows (PEF) over 2 weeks.</p>
+<li>Spirometry demonstrates obstruction (forced expiratory volume in 1 second</li>
+<p>[FEV]/forced vital capacity [FVC] &lt;80%) with reversibility after inhaled β-agonist</p>
+<p>1 2</p>
+<p>administration (at least 12% and 200 mL increase in FEV). If baseline spirometry</p>
+<p>1</p>
+<p>is normal, challenge testing with exercise, methacholine, or mannitol can be used to</p>
+<p>elicit BHR.</p>
+<h2>ACUTE SEVERE ASTHMA</h2>
+<li>PEF and FEV1 are <40% of normal predicted values. Pulse oximetry reveals</li>
+<p>decreased arterial oxygen and O saturations.</p>
+<li>Arterial blood gases may revea 2 l metabolic acidosis and low partial pressure of</li>
+<p>oxygen (PaO).</p>
+<li>Obtain the hi 2 story and physical examination while initial therapy is provided, assess-</li>
+<p>ing for onset and causes of the exacerbation; severity of symptoms and if associated</p>
+<p>with anaphylaxis; medication use, adherence, and response to current therapy; and</p>
+<p>risk factors for asthma-related death (history of near-fatal asthma requiring intuba-</p>
+<p>tion and mechanical ventilation, hospitalization or emergency care in the past year,</p>
+<p>recent use of oral corticosteroids, no current use of inhaled corticosteroids [ICS],</p>
+<p>overuse of SABA therapy [more than 1 canister/month], history of psychiatric disease</p>
+<p>916</p>
+<p>CH78.indd 916 20-11-2020 17:59:48</p>
+<h2>Asthma | CHAPTER 78</h2>
+<p>or psychosocial problems, poor medication adherence, lack of a written asthma</p>
+<p>action plan, and food allergy). During the physical exam, assess vital signs and iden-</p>
+<p>tify any complicating factors (eg, pneumonia, anaphylaxis) and comorbid conditions</p>
+<p>that could be causing acute shortness of breath such as inhaled foreign body, heart</p>
+<p>failure, pulmonary infection, and pulmonary embolism.</p>
+<li>Measure lung function testing by PEF or FEV before treatment if possible, 1 hour</li>
+<p>1</p>
+<p>after start of treatment, and then periodically until response is achieved or no further</p>
+<p>improvement is evident. Monitor oxygen saturation closely, preferably by pulse</p>
+<p>oximetry.</p>
+<li>Arterial blood gases are typically reserved for patients who are poorly responsive to</li>
+<p>initial treatment or deteriorating.</p>
+<li>Obtain a complete blood count if there are signs of infection (fever and purulent</li>
+<p>sputum).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The GINA long-term goals for asthma management include</li>
+<p>(1) achieve good control of symptoms and maintain normal activity levels, and</p>
+<p>(2) minimize future risk of exacerbations, fixed airflow limitation, and side effects.</p>
+<p>For acute severe asthma, the primary goal is prevention of life-threatening asthma by</p>
+<p>early recognition of signs of deterioration and early intervention.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Patient education is mandatory to improve medication adherence, self-management</li>
+<p>skills, and use of healthcare services.</p>
+<li>Short-term (approximately 2 weeks) home PEF monitoring can be used to assess</li>
+<p>treatment response. However, routine PEF monitoring is generally recommended</p>
+<p>only for patients with severe asthma or poor symptom perception.</p>
+<li>Avoidance of known allergenic triggers can improve symptoms, reduce medication</li>
+<p>use, and decrease BHR. Environmental triggers (eg, animals) should be avoided in</p>
+<p>sensitive patients, and smokers should be encouraged to quit.</p>
+<li>In acute asthma exacerbations, initiate oxygen therapy to achieve an arterial oxygen</li>
+<p>saturation of 93%–95% in adolescents and adults and 94%–98% in school-aged</p>
+<p>children and pregnant women or those with cardiac disease.</p>
+<li>Correct dehydration if present; urine specific gravity may help guide therapy in</li>
+<p>children when assessment of hydration status is difficult.</p>
+<h2>PHARMACOTHERAPY</h2>
+<p>General Approach</p>
+<li>Table 78-1 summarizes GINA recommendations for initial controller treatment</li>
+<p>in adults and adolescents with persistent asthma. Regardless of the long-term</p>
+<p>therapy, all patients must have an inhaled SABA available for quick relief of acute</p>
+<p>symptoms.</p>
+<li>Table 78-2 depicts the GINA stepwise approach for control-based management,</li>
+<p>which emphasizes three components: (1) ASSESS symptom control and risk factors,</p>
+<p>(2) ADJUST therapy and treat modifiable risk factors, and (3) REVIEW RESPONSE</p>
+<p>and optimize control about every 3 months. Step-down of controller treatment may</p>
+<pre><code>be considered if symptoms have been well controlled and lung function has been</code></pre>
+<p>stable for 3 months or longer. While engaging the patient in this effort, monitor</p>
+<p>symptoms and PEF and schedule follow-up. Stepping down ICS doses by 25%–50%</p>
+<p>at 3-month intervals is feasible and safe for most patients.</p>
+<li>The primary therapy of acute exacerbations includes inhaled SABAs and (depend-</li>
+<p>ing on severity) systemic corticosteroids, inhaled ipratropium, intravenous (IV)</p>
+<p>magnesium sulfate, and oxygen. Treatments are typically administered concurrently</p>
+<p>to facilitate rapid improvement. Measure initial response 1 hour after the first three</p>
+<p>inhaled bronchodilator treatments.</p>
+<p>917</p>
+<p>CH78.indd 917 20-11-2020 17:59:48</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<p>TABLE 78-1 GINA Recommendations for Initial Controller Treatment in Adults and Adolescents</p>
+<p>Preferred Treatment</p>
+<p>Symptom Presentation (Evidence Level)</p>
+<p>Symptoms or need for SABA less than 2×/mo; no waking No controller (D)</p>
+<p>due to asthma in last month; and no risk factors for</p>
+<p>exacerbations, including in prior year</p>
+<p>Infrequent symptoms, but patient has one or more risk Low-dose ICS (D)</p>
+<pre><code>factors for exacerbation (eg, low lung function, use of OCS</code></pre>
+<p>in prior year, intensive care treatment for asthma ever)</p>
+<p>Symptoms or need for SABA between 2×/mo and 2×/week, Low-dose ICS (D)</p>
+<p>or patient wakes due to asthma more than once/mo</p>
+<p>Symptoms or need for SABA &gt;2×/week Low-dose ICSa (Α)</p>
+<p>Troublesome symptoms most days or waking ≥1 ×/week, Medium/high-dose ICS or</p>
+<p>esp. if any risk factors exist low-dose ICS/LABAb (Α)</p>
+<p>Symptoms consistent with severely uncontrolled asthma, or OCS short course AND</p>
+<p>with an acute exacerbation start of high-dose ICS</p>
+<p>or moderate-dose ICS/</p>
+<p>LABAb (D)</p>
+<p>aLess effective options are LTRA or theophylline.</p>
+<p>bNot recommended for initial controller treatment in children ages 6–11 years.</p>
+<p>(A), (B), (C), (D) = grade of evidence with A as the highest grade and D as the lowest grade.</p>
+<p>ICS, inhaled corticosteroids; LABA, long-acting β-agonist; LTRA, leukotriene receptor antagonist; OCS,</p>
+<p>2</p>
+<p>oral corticosteroids; SABA, short-acting β-agonist.</p>
+<p>2</p>
+<li>Figure 78-1 outlines strategies for self-management of worsening asthma.</li>
+<li>Figure 78-2 is an algorithm for management of acute asthma exacerbations in acute</li>
+<p>care facilities (eg, emergency departments).</p>
+<p>β-Agonists</p>
+<p>2</p>
+<li>SABAs are the most effective bronchodilators. Aerosol administration enhances</li>
+<p>bronchoselectivity and provides more rapid response and greater protection against</p>
+<p>provocations (eg, exercise, allergen challenges) than systemic administration. In</p>
+<p>adults, administration as either continuous or intermittent (every 20 minutes for</p>
+<p>3 doses) administration over 1 hour results in equivalent improvement. In acute</p>
+<p>severe asthma, continuous nebulization of a SABA (eg, albuterol) is recommended</p>
+<p>for patients having unsatisfactory response after three doses (every 20 minutes) of</p>
+<p>aerosolized β-agonists and potentially for patients presenting initially with PEF or</p>
+<p>2</p>
+<p>FEV values &lt;30% of predicted normal.</p>
+<li>Albu 1 terol and other inhaled SABAs are indicated for intermittent episodes of</li>
+<p>bronchospasm and are the treatment of choice for acute severe asthma and EIB.</p>
+<p>Regular treatment (four times daily) does not improve symptom control over as-</p>
+<p>needed use and is not indicated. Nonprescription inhaled epinephrine as Primatene</p>
+<p>Mist metered-dose inhaler is less effective than prescription SABAs and is only to</p>
+<p>be used for temporary relief of mild symptoms of intermittent asthma in patients</p>
+<p>≥12 years old; patients should see a physician immediately if improvement is not</p>
+<p>seen within 20 minutes, symptoms become worse, or require more than 8 inhalations</p>
+<p>in a 24-hour period, or there are more than two episodes in a week.</p>
+<li>Two long-acting β-agonists (LABAs), formoterol (Foradil) and salmeterol</li>
+<p>2</p>
+<p>( Serevent), provide bronchodilation for 12 hours or longer. The LABAs are preferred</p>
+<p>adjunctive therapy with ICS in adults and children ≥12 years old for step 3 and for</p>
+<p>children 6–11 years of age for steps 4 and 5. Combination treatment with ICS/LABA</p>
+<p>provides greater asthma control than increasing the dose of ICS alone while reducing</p>
+<p>918</p>
+<p>CH78.indd 918 20-11-2020 17:59:48</p>
+<div class="table-container"><table><tr><th>TABLE 78-1 GINA Recommendations for Initial Controller Treatment in Adults and Adolescents</th><th></th></tr><tr><td>Symptom Presentation</td><td>Preferred Treatment
+(Evidence Level)</td></tr><tr><td>Symptoms or need for SABA less than 2×/mo; no waking
+due to asthma in last month; and no risk factors for
+exacerbations, including in prior year</td><td>No controller (D)</td></tr><tr><td>Infrequent symptoms, but patient has one or more risk
+factors for exacerbation (eg, low lung function, use of OCS
+in prior year, intensive care treatment for asthma ever)</td><td>Low-dose ICS (D)</td></tr><tr><td>Symptoms or need for SABA between 2×/mo and 2×/week,
+or patient wakes due to asthma more than once/mo</td><td>Low-dose ICS (D)</td></tr><tr><td>Symptoms or need for SABA &gt;2×/week</td><td>Low-dose ICSa (Α)</td></tr><tr><td>Troublesome symptoms most days or waking ≥1 ×/week,
+esp. if any risk factors exist</td><td>Medium/high-dose ICS or
+low-dose ICS/LABAb (Α)</td></tr><tr><td>Symptoms consistent with severely uncontrolled asthma, or
+with an acute exacerbation</td><td>OCS short course AND
+start of high-dose ICS
+or moderate-dose ICS/
+LABAb (D)</td></tr></table></div><h2>Asthma | CHAPTER 78</h2>
+<p>TABLE 78-2 GINA Stepwise Approach to Control Symptoms and Minimize Future Risk</p>
+<p>Preferred Option Other Recommended Options</p>
+<p>Step (Evidence Level) (Evidence Level)</p>
+<p>1 As-needed SABA (A) Consider low-dose ICS, in addition to</p>
+<p>as-needed SABA, for patients at risk for</p>
+<p>exacerbations (B)</p>
+<p>2 Low-dose ICS plus as-needed SABA (A) LTRA (A)</p>
+<p>Low-dose ICS/LABA (A)</p>
+<p>ICS started with symptoms of allergic</p>
+<p>asthma, for seasonal treatment only (D)</p>
+<p>3 Low-dose ICS/LABA, plus as-needed Medium-dose ICS for adults/adolescents (A)</p>
+<p>SABA for adults/adolescents</p>
+<p>OR low-dose ICS/formoterol as both Low-dose ICS plus LTRA (A) or low-dose,</p>
+<p>maintenance and reliever (A) sustained-release theophylline (B)</p>
+<p>For children 6–11 years of age, moderate-</p>
+<p>dose ICS, plus as-needed SABA</p>
+<p>4 Medium-dose ICS/LABA, plus as-needed Add-on therapy with tiotropium for</p>
+<p>SABA for adults/adolescents (B) adults with exacerbation history (A)</p>
+<p>OR medium-dose ICS/formoterol as Sublingual allergen immunotherapy in</p>
+<p>both maintenance and reliever (A) adults with allergic rhinitis and house</p>
+<p>For children 6–11 years of age, refer dust mite sensitization if FEV 1 is &gt;70%</p>
+<p>child to asthma specialist predicted</p>
+<p>5 Referral to specialist and consideration Add-on anticholinergic (B): tiotropium if</p>
+<p>of add-on treatment if asthma ≥12 years of age</p>
+<p>remains uncontrolled Add-on anti-IgE (A): omalizumab</p>
+<p>(subcutaneous) for moderate-to-severe</p>
+<p>allergic asthma if ≥6 years of age</p>
+<p>Add-on anti-interleukin-5 therapy</p>
+<p>(A): mepolizumab if ≥12 years</p>
+<p>(subcutaneous); reslizumab if ≥18</p>
+<p>years) (intravenous)</p>
+<p>Add-on anti-interleukin 5 receptor</p>
+<p>(A): benralizumab if ≥12 years</p>
+<p>(subcutaneous)</p>
+<p>Sputum-guided treatment adjusted by</p>
+<p>eosinophilia &gt;3% (0.03) (A)</p>
+<p>Bronchial thermoplasty in some adults</p>
+<p>with severe asthma (B)</p>
+<p>Add-on low-dose OCS (≤7.5 mg/day</p>
+<p>prednisone equivalent) (B)</p>
+<p>ICS, inhaled corticosteroids; LABA, long-acting β-agonist; LTRA, leukotriene receptor antagonist; OCS,</p>
+<p>2</p>
+<p>oral corticosteroids; SABA, short-acting β-agonist.</p>
+<p>2</p>
+<p>the frequency of mild and severe exacerbations. A SABA should be continued for</p>
+<p>acute exacerbations.</p>
+<li>Three ultra-LABAs (indacaterol [Arcapta Neohaler], olodaterol [Striverdi Respimat],</li>
+<p>and vilanterol) have a 24-hour bronchodilator duration of effect. Vilanterol is avail-</p>
+<p>able only in combination with fluticasone furoate (Breo Ellipta) for once-daily</p>
+<p>919</p>
+<p>CH78.indd 919 20-11-2020 17:59:48</p>
+<div class="table-container"><table><tr><th>TABLE 78-2 GINA Stepwise Approach to Control Symptoms and Minimize Future Risk</th><th></th><th></th></tr><tr><td>Step</td><td>Preferred Option
+(Evidence Level)</td><td>Other Recommended Options
+(Evidence Level)</td></tr><tr><td>1</td><td>As-needed SABA (A)</td><td>Consider low-dose ICS, in addition to
+as-needed SABA, for patients at risk for
+exacerbations (B)</td></tr><tr><td>2</td><td>Low-dose ICS plus as-needed SABA (A)</td><td>LTRA (A)
+Low-dose ICS/LABA (A)
+ICS started with symptoms of allergic
+asthma, for seasonal treatment only (D)</td></tr><tr><td>3</td><td>Low-dose ICS/LABA, plus as-needed
+SABA for adults/adolescents
+OR low-dose ICS/formoterol as both
+maintenance and reliever (A)
+For children 6–11 years of age, moderate-
+dose ICS, plus as-needed SABA</td><td>Medium-dose ICS for adults/adolescents (A)
+Low-dose ICS plus LTRA (A) or low-dose,
+sustained-release theophylline (B)</td></tr><tr><td>4</td><td>Medium-dose ICS/LABA, plus as-needed
+SABA for adults/adolescents (B)
+OR medium-dose ICS/formoterol as
+both maintenance and reliever (A)
+For children 6–11 years of age, refer
+child to asthma specialist</td><td>Add-on therapy with tiotropium for
+adults with exacerbation history (A)
+Sublingual allergen immunotherapy in
+adults with allergic rhinitis and house
+dust mite sensitization if FEV is &gt;70%
+1
+predicted</td></tr><tr><td>5</td><td>Referral to specialist and consideration
+of add-on treatment if asthma
+remains uncontrolled</td><td>Add-on anticholinergic (B): tiotropium if
+≥12 years of age
+Add-on anti-IgE (A): omalizumab
+(subcutaneous) for moderate-to-severe
+allergic asthma if ≥6 years of age
+Add-on anti-interleukin-5 therapy
+(A): mepolizumab if ≥12 years
+(subcutaneous); reslizumab if ≥18
+years) (intravenous)
+Add-on anti-interleukin 5 receptor
+(A): benralizumab if ≥12 years
+(subcutaneous)
+Sputum-guided treatment adjusted by
+eosinophilia &gt;3% (0.03) (A)
+Bronchial thermoplasty in some adults
+with severe asthma (B)
+Add-on low-dose OCS (≤7.5 mg/day
+prednisone equivalent) (B)</td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>Effective asthma self-management education requires:</p>
+<li>Self-monitoring of symptoms and/or lung function</li>
+<li>Written asthma action plan</li>
+<li>Regular medical review</li>
+<p>If PEF or FEV</p>
+<p>1</p>
+<p>&lt;60% of best, or not</p>
+<p>improving after</p>
+<p>48 hours</p>
+<p>All patients Continue reliever</p>
+<p>Increase reliever Continue controller</p>
+<p>Early increase in Add prednisolone</p>
+<p>controller as below 40-50 mg/day</p>
+<p>Review response Contact doctor</p>
+<p>EARLY or MILD LATE OR SEVERE</p>
+<p>Short-term change (1-2 weeks) Evidence</p>
+<p>Medication</p>
+<p>for worsening asthma Level</p>
+<p>Increase usual reliever:</p>
+<p>Short-acting β-agonist Increase frequency of SABA use A</p>
+<p>2</p>
+<p>(SABA) For pMDI, add spacer A</p>
+<p>Low dose ICS/formoterola Increase frequency of reliever use A</p>
+<p>(maximum formoterol total 72 mcg/day</p>
+<p>Increase usual controller:</p>
+<p>Maintenance and reliever Continue maintenance ICS/formoterol and increase A</p>
+<p>ICS/formoterola reliever ICS/formoterol as neededa (maximum</p>
+<p>formoterol total 72 mcg/day)</p>
+<p>Maintenance ICS with SABA At least double ICS; consider increasing ICS to B</p>
+<p>as reliever high dose (maximum 2000 mcg/day BDP equivalent)</p>
+<p>Maintenance ICS/formoterol Quadruple maintenance ICS/formoterol B</p>
+<p>with SABA as reliever (maximum formoterol 72 mcg/day)</p>
+<p>Maintenance ICS/other Step up to higher dose formulaion of ICS/other LABA, D</p>
+<p>LABA with SABA as reliever or consider adding a separate ICS inhaler (to</p>
+<p>maximum total 2000 mcg/day BDP equivalent)</p>
+<p>Add oral corticosteroids (OCS) and contact doctor</p>
+<p>OCS (prednisone or Add OCS for severe exacerbations (eg, PEF or FEV A</p>
+<p>1</p>
+<p>prednisolone) &lt;60% personal best or predicted), or patient not</p>
+<p>responding to treatment over 48 hours</p>
+<p>Adults: prednisolone 1 mg/kg/day (maximum 50 mg) D</p>
+<p>usually for 5-7 days. Children: 1-2 mg/kg/day</p>
+<p>(maximum 40 mg) usually for 3-5 days</p>
+<p>Tapering is not needed if OCS are prescribed for B</p>
+<p>&lt; 2 weeks</p>
+<p>BDP, beclomethasone dipropionate; FEV, forced expiratory volume in 1 second; ICS, inhaled</p>
+<p>1</p>
+<p>corticosteroid; PEF, peak expiratory flow; SABA, short-acting β-agonist. Options are listed in</p>
+<p>2</p>
+<p>order of evidence.</p>
+<p>aICS/formoterol maintenance and reliever regimen: lose dose budesonide or beclomethasone</p>
+<p>with formoterol. This regimen is not approved for children &lt; 12 years in many countries.</p>
+<p>FIGURE 78-1 Self-management of worsening asthma in adults and adolescents</p>
+<p>with a written asthma action plan. (Adapted from Global initiative for Asthma.</p>
+<p>Global strategy for asthma management and prevention, 2018. Available from: www.</p>
+<p>ginasthma.org.)</p>
+<p>920</p>
+<p>CH78.indd 920 20-11-2020 17:59:48</p>
+<div class="table-container"><table><tr><th>Short-term change (1-2 weeks) Evidence
+Medication
+for worsening asthma Level</th><th></th><th></th><th></th></tr><tr><td>Increase usual reliever:
+Short-acting β-agonist
+2
+(SABA)
+Low dose ICS/formoterola</td><td></td><td>Increase frequency of SABA use
+For pMDI, add spacer
+Increase frequency of reliever use
+(maximum formoterol total 72 mcg/day</td><td>A
+A
+A</td></tr><tr><td>Increase usual controller:
+Maintenance and reliever
+ICS/formoterola
+Maintenance ICS with SABA
+as reliever
+Maintenance ICS/formoterol
+with SABA as reliever
+Maintenance ICS/other
+LABA with SABA as reliever</td><td></td><td>Continue maintenance ICS/formoterol and increase
+reliever ICS/formoterol as neededa (maximum
+formoterol total 72 mcg/day)
+At least double ICS; consider increasing ICS to
+high dose (maximum 2000 mcg/day BDP equivalent)
+Quadruple maintenance ICS/formoterol
+(maximum formoterol 72 mcg/day)
+Step up to higher dose formulaion of ICS/other LABA,
+or consider adding a separate ICS inhaler (to
+maximum total 2000 mcg/day BDP equivalent)</td><td>A
+B
+B
+D</td></tr><tr><td>Add oral corticosteroids (
+OCS (prednisone or
+prednisolone)</td><td>(</td><td>O</td><td>A
+D
+B</td></tr></table></div><h2>Asthma | CHAPTER 78</h2>
+<p>INITIAL ASSESSMENT Are any of the following present?</p>
+<p>A: airway B: breathing C: circulation Drowsiness, Confusion, Silent chest</p>
+<h2>NO</h2>
+<h2>YES</h2>
+<p>Further TRIAGE BY CLINICAL Consult ICU, start SABA</p>
+<p>STATUS and O, and prepare patient</p>
+<p>2</p>
+<p>according to worst feature for intubation</p>
+<h2>MILD OR MODERATE SEVERE</h2>
+<p>Talks in phrases Talks in words</p>
+<p>Prefers sitting to lying Sits hunched forwards</p>
+<p>Not agitated Agitated</p>
+<p>Respiratory rate increased Respiratory rate &gt;30/min</p>
+<p>Accessory muscles not used Accessory muscles being used</p>
+<p>Pulse rate 100-120 bpm Pulse rate &gt;120 bpm</p>
+<p>O saturation (on air) 90-95% O saturation (on air) &lt;90%</p>
+<p>2 2</p>
+<p>PEF &gt;50% predicted or PEF ≤50% predicted (or</p>
+<p>previous best previous best)</p>
+<p>Short–acting β-agonists Short–acting β-agonists</p>
+<p>2 2</p>
+<p>Consider ipratropium bromide Consider ipratropium bromide</p>
+<p>Controlled O to maintain Controlled O to maintain</p>
+<p>2 2</p>
+<p>saturation 93-95% (children saturation 93-95%</p>
+<p>94-98%) (children 94-98%)</p>
+<p>Oral corticosteroids Oral or IV corticosteroids</p>
+<p>Consider IV magnesium</p>
+<p>Consider high-dose ICS</p>
+<p>If continuing deterioration, treat as</p>
+<p>severe and re-assess for ICU</p>
+<h2>ASSESS CLINCAL PROGRESS FREQUENTLY</h2>
+<h2>MEASURE LUNG FUNCTION</h2>
+<p>in all patients one hour after initial treatment</p>
+<p>FEV or PEF 60%–80% predicted FEV or PEF &lt;60% predicted</p>
+<p>1 1</p>
+<p>or personal best and symptoms or personal best or lack of</p>
+<p>improved clinical response</p>
+<p>Consider for discharge planning Continue treatment as above</p>
+<p>and reassess frequently</p>
+<p>FIGURE 78-2 Management of asthma exacerbations in acute care facilities (eg,</p>
+<p>emergency departments).</p>
+<p>dosing for asthma in adults ≥18 years old in the United States and for children and</p>
+<p>adults ≥12 years old in Europe. Products containing indacaterol and olodaterol are</p>
+<p>currently only indicated for COPD but are being evaluated for asthma.</p>
+<li>Table 78-3 contains dosing guidelines for acute severe asthma exacerbations.</li>
+<p>921</p>
+<p>CH78.indd 921 20-11-2020 17:59:49</p>
+<div class="table-container"><table><tr><th></th></tr><tr><td>NO</td></tr></table></div><div class="table-container"><table><tr><th>Y</th><th>ES</th></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>TABLE 78-3 Drug Doses for Treatment of Acute Severe Exacerbations of Asthma</p>
+<p>Dosages</p>
+<p>Medications ≥12 Years Old &lt;12 Years Old Comments</p>
+<p>Inhaled β-agonists</p>
+<p>Albuterol nebulizer 2.5–5 mg every 0.15 mg/kg Only selective</p>
+<p>solution (5 mg/mL, 20 minutes (minimum dose β-agonists are</p>
+<p>2</p>
+<p>0.63 mg/3 mL, for three 2.5 mg) every 20 recommended. For</p>
+<p>1.25 mg/3 mL, doses, and minutes for three optimal delivery,</p>
+<p>2.5 mg/3 mL) then 2.5–10 doses, and then dilute aerosols to</p>
+<p>mg every 0.15–0.3 mg/kg minimum of</p>
+<p>1–4 hours as up to 10 mg 4 mL at gas flow of</p>
+<p>needed, or every 1–4 hours 6–8 L/min. Use face</p>
+<p>10–15 mg/hr as needed, or mask if &lt;4 years</p>
+<p>continuously 0.5 mg/kg/hr of age</p>
+<p>by continuous</p>
+<p>nebulization</p>
+<p>Albuterol MDI 4–8 puffs every 4–8 puffs every In patients in</p>
+<p>(90 mcg/puff) 30 minutes 20 minutes for severe distress,</p>
+<p>up to three doses, and nebulization is</p>
+<p>4 hours, and then every preferred; use</p>
+<p>then every 1–4 hours as VHC-type spacer</p>
+<p>1–4 hours as needed with face mask if</p>
+<p>needed &lt;4 years old</p>
+<p>Levalbuterol nebulizer Give at one-half Give at one-half the The single isomer of</p>
+<p>solution (0.31 mg/3 the milligram milligram dose of albuterol is twice</p>
+<p>mL, 0.63 mg/3 mL, dose of albuterol above as potent on a</p>
+<p>2.5 mg/1 mL, albuterol milligram basis</p>
+<p>1.25 mg/3 mL) above Not recommended</p>
+<p>Levalbuterol MDI See albuterol See albuterol MDI See albuterol MDI</p>
+<p>(45 mcg/puff) MDI dose dose above dose; one-half as</p>
+<p>potent as albuterol</p>
+<p>on a microgram</p>
+<p>basis</p>
+<p>Not recommended</p>
+<p>Anticholinergics</p>
+<p>Ipratropium bromide 500 mcg every 250 mcg every May mix in same</p>
+<p>nebulizer solution 30 minutes 20 minutes for nebulizer with</p>
+<p>(0.25 mg/mL) for three three doses, and albuterol; only</p>
+<p>doses, and then 250 mcg add to β-agonist</p>
+<p>2</p>
+<p>then every every 2–4 hours therapy</p>
+<p>2–4 hours as</p>
+<p>needed</p>
+<p>Ipratropium bromide 8 puffs every 4–8 puffs as needed Not to be continued</p>
+<p>MDI (18 mcg/puff) 20 minutes as every 2–4 hours once hospitalized</p>
+<p>needed for up</p>
+<p>to 3 hours</p>
+<p>(Continued )</p>
+<p>922</p>
+<p>CH78.indd 922 20-11-2020 17:59:49</p>
+<div class="table-container"><table><tr><th>TABLE 78-3 Drug Doses for Treatment of Acute Severe Exacerbations of Asthma</th><th></th><th></th><th></th></tr><tr><td></td><td>Dosages</td><td></td><td></td></tr><tr><td>Medications</td><td>≥12 Years Old</td><td>&lt;12 Years Old</td><td>Comments</td></tr><tr><td>Inhaled β-agonists</td><td></td><td></td><td></td></tr><tr><td>Albuterol nebulizer
+solution (5 mg/mL,
+0.63 mg/3 mL,
+1.25 mg/3 mL,
+2.5 mg/3 mL)</td><td>2.5–5 mg every
+20 minutes
+for three
+doses, and
+then 2.5–10
+mg every
+1–4 hours as
+needed, or
+10–15 mg/hr
+continuously</td><td>0.15 mg/kg
+(minimum dose
+2.5 mg) every 20
+minutes for three
+doses, and then
+0.15–0.3 mg/kg
+up to 10 mg
+every 1–4 hours
+as needed, or
+0.5 mg/kg/hr
+by continuous
+nebulization</td><td>Only selective
+β-agonists are
+2
+recommended. For
+optimal delivery,
+dilute aerosols to
+minimum of
+4 mL at gas flow of
+6–8 L/min. Use face
+mask if &lt;4 years
+of age</td></tr><tr><td>Albuterol MDI
+(90 mcg/puff)</td><td>4–8 puffs every
+30 minutes
+up to
+4 hours, and
+then every
+1–4 hours as
+needed</td><td>4–8 puffs every
+20 minutes for
+three doses, and
+then every
+1–4 hours as
+needed</td><td>In patients in
+severe distress,
+nebulization is
+preferred; use
+VHC-type spacer
+with face mask if
+&lt;4 years old</td></tr><tr><td>Levalbuterol nebulizer
+solution (0.31 mg/3
+mL, 0.63 mg/3 mL,
+2.5 mg/1 mL,
+1.25 mg/3 mL)</td><td>Give at one-half
+the milligram
+dose of
+albuterol
+above</td><td>Give at one-half the
+milligram dose of
+albuterol above</td><td>The single isomer of
+albuterol is twice
+as potent on a
+milligram basis
+Not recommended</td></tr><tr><td>Levalbuterol MDI
+(45 mcg/puff)</td><td>See albuterol
+MDI dose</td><td>See albuterol MDI
+dose above</td><td>See albuterol MDI
+dose; one-half as
+potent as albuterol
+on a microgram
+basis
+Not recommended</td></tr><tr><td>Anticholinergics</td><td></td><td></td><td></td></tr><tr><td>Ipratropium bromide
+nebulizer solution
+(0.25 mg/mL)</td><td>500 mcg every
+30 minutes
+for three
+doses, and
+then every
+2–4 hours as
+needed</td><td>250 mcg every
+20 minutes for
+three doses, and
+then 250 mcg
+every 2–4 hours</td><td>May mix in same
+nebulizer with
+albuterol; only
+add to β-agonist
+2
+therapy</td></tr><tr><td>Ipratropium bromide
+MDI (18 mcg/puff)</td><td>8 puffs every
+20 minutes as
+needed for up
+to 3 hours</td><td>4–8 puffs as needed
+every 2–4 hours</td><td>Not to be continued
+once hospitalized
+(Continued )</td></tr></table></div><h2>Asthma | CHAPTER 78</h2>
+<p>TABLE 78-3 Drug Doses for Treatment of Acute Severe Exacerbations of Asthma(Continued )</p>
+<p>Dosages</p>
+<p>Medications ≥12 Years Old &lt;12 Years Old Comments</p>
+<p>Corticosteroids</p>
+<p>Prednisone, 50 mg in one 1 mg/kg (maximum For outpatient</p>
+<p>methylprednisolone, or two 40 mg/day) in “burst” use 1–2 mg/</p>
+<p>prednisolone divided doses two divided doses kg/day, maximum</p>
+<p>(prednisone (prednisone 60 mg, for 3–5 days</p>
+<p>equivalent) equivalent) in children and</p>
+<p>40–60 mg/day in</p>
+<p>one or two divided</p>
+<p>doses for 5–7 days</p>
+<p>in adults</p>
+<p>Note: No advantage has been found for very-high-dose corticosteroids in acute severe asthma, nor</p>
+<p>is there any advantage for IV administration over oral therapy. The usual regimen is to continue</p>
+<p>the oral corticosteroid for the duration of hospitalization. The final duration of therapy following</p>
+<p>a hospitalization or emergency department visit may be from 3 to 10 days. If patients are then</p>
+<p>started on an ICS, there is no need to taper the systemic corticosteroid dose. An ICS can be started</p>
+<p>at any time during the exacerbation.</p>
+<p>Corticosteroids</p>
+<li>ICS are the preferred long-term control therapy for persistent asthma because of</li>
+<p>potency and consistent effectiveness; they are the only therapy shown to reduce risk of</p>
+<p>dying from asthma. See Table 78-4 for comparative ICS doses; all agents are approved</p>
+<p>for once- or twice-daily dosing. Most patients with moderate disease can be controlled</p>
+<p>with twice-daily dosing of most ICS. In milder asthma, once-daily dosing is often suffi-</p>
+<p>cient to maintain control. More severe patients may require multiple daily dosing; after</p>
+<p>asthma is controlled, many patients can reduce the ICS dose and maintain control.</p>
+<li>Response to ICS is delayed; symptoms improve in most patients within the first</li>
+<p>1–2 weeks and reach maximum improvement in 4–8 weeks. Maximum improvement</p>
+<p>in FEV and PEF rates may require 3–6 weeks.</p>
+<li>Systemi 1 c toxicity of ICS is minimal with low-to-moderate doses, but risk of systemic effects</li>
+<p>increases with high doses (eg, growth suppression in children, osteoporosis, cataracts,</p>
+<p>dermal thinning, adrenal insufficiency). Local adverse effects include dose-dependent</p>
+<p>oropharyngeal candidiasis and dysphonia, which can be reduced by using a spacer device.</p>
+<li>Systemic corticosteroids (Table 78-5) are indicated in all patients with acute severe</li>
+<p>asthma not responding completely to initial inhaled β-agonist administration (every</p>
+<p>2</p>
+<p>20 minutes for 3 doses) and should be administered within 1 hour of presentation.</p>
+<p>IV therapy offers no advantage over oral administration except in patients unable to</p>
+<p>take oral medications. Adults are treated effectively with 5–7 days of oral prednisone</p>
+<p>(or equivalent), but children may require only 3–5 days. Dexamethasone for 1–2 days</p>
+<p>is an option for children and has the benefit of less vomiting. Continue full doses</p>
+<p>until the PEF reaches 70% of predicted normal or personal best. Tapering the dose</p>
+<p>after discharge is unnecessary if patients are prescribed an ICS for outpatient therapy.</p>
+<li>Because short-term (1–2 weeks), high-dose corticosteroids (1–2 mg/kg/day of oral</li>
+<p>prednisone) do not produce serious toxicities, the ideal strategy is to use systemic</p>
+<p>corticosteroids in a short “burst” and then maintain the patient on appropriate</p>
+<p>long-term control therapy with ICS.</p>
+<p>Anticholinergics</p>
+<li>Ipratropium bromide (Atrovent HFA) and tiotropium bromide (Spiriva) produce</li>
+<p>bronchodilation only in cholinergic-mediated bronchoconstriction. Anticholinergics</p>
+<p>are effective bronchodilators but are not as effective as β-agonists. They attenuate</p>
+<p>2</p>
+<p>but do not block allergen- or exercise-induced asthma in a dose-dependent fashion.</p>
+<p>923</p>
+<p>CH78.indd 923 20-11-2020 17:59:49</p>
+<div class="table-container"><table><tr><th>TABLE 78-3 Drug Doses for Treatment of Acute Severe Exacerbations of Asthma(Continued )</th><th></th><th></th><th></th></tr><tr><td></td><td>Dosages</td><td></td><td></td></tr><tr><td>Medications</td><td>≥12 Years Old</td><td>&lt;12 Years Old</td><td>Comments</td></tr><tr><td>Corticosteroids</td><td></td><td></td><td></td></tr><tr><td>Prednisone,
+methylprednisolone,
+prednisolone</td><td>50 mg in one
+or two
+divided doses
+(prednisone
+equivalent)</td><td>1 mg/kg (maximum
+40 mg/day) in
+two divided doses
+(prednisone
+equivalent)</td><td>For outpatient
+“burst” use 1–2 mg/
+kg/day, maximum
+60 mg, for 3–5 days
+in children and
+40–60 mg/day in
+one or two divided
+doses for 5–7 days
+in adults</td></tr></table></div><h2>SECTION 15 | Respiratory Disorders</h2>
+<p>TABLE 78-4 Available Inhaled Corticosteroid Products, Lung Delivery, and Comparative</p>
+<p>Daily Dosages</p>
+<p>ICS Product Lung Deliverya</p>
+<p>Beclomethasone 40 and 80 mcg/actuation HFA MDI 50%–60%</p>
+<p>dipropionate (BDP)</p>
+<p>Budesonide (BUD) 90 or 180 mcg/dose DPI, Flexhaler 15%–30%</p>
+<p>200 and 500 mcg ampules, 1 mg 5%–8%</p>
+<p>Ciclesonide (CIC) 80 or 160 mcg/actuation HFA MDI 50%</p>
+<p>Flunisolide (FLU) 80 mcg/actuation HFA MDI 68%</p>
+<p>Fluticasone furoate (FF) 100, 200 mcg/actuation DPI, Ellipta 80%–85%</p>
+<p>Fluticasone propionate (FP) 44, 110, and 220 mcg/actuation 20%</p>
+<h2>HFA MDI</h2>
+<p>50, 100, and 250 mcg/dose DPI, Diskus 15%</p>
+<p>Mometasone furoate (MF) 110 and 220 mcg/dose DPI, Twisthaler; 11%</p>
+<p>100 mcg and 200 mcg/actuation</p>
+<h2>HFA MDI</h2>
+<p>Comparative Daily Dosages (mcg) of Inhaled Corticosteroids</p>
+<p>Low Daily Dose Medium Daily Dose High Daily Dose</p>
+<p>Childa/Adult Childa/Adult Childa/Adult</p>
+<h2>BDP</h2>
+<h2>HFA MDI 80–160/80–240 >160–320/>240–480 >320/>480</h2>
+<h2>BUD</h2>
+<h2>DPI 180–360/180–540 >360–720/>540–1080 >720/>1080</h2>
+<p>Nebules 500/UK 1000/UK 2000/UK</p>
+<h2>CIC HFA MDI 80–160/160–320 >160–320/>320–640 >320/>640</h2>
+<h2>FLU</h2>
+<h2>HFA MDI 160/320 320/320–640 ≥640/>640</h2>
+<h2>FF DPI UK/100 UK/200</h2>
+<h2>FP</h2>
+<h2>HFA MDI 88–176/88–264 176–352/264–440 >352/>440</h2>
+<h2>DPI 100–200/100–300 200–400/300–500 >400/>500</h2>
+<h2>MF, DPI 110/110–220 220–440/>220–440 >440/>440</h2>
+<p>a5–11 years of age, except for BUD Nebules, which is 2–11 years of age. UK, unknown.</p>
+<h2>TABLE 78-5 Comparison of Systemic Corticosteroids</h2>
+<p>Duration</p>
+<p>Anti- of Biologic Elimination</p>
+<p>Inflammatory Mineralocorticoid Activity Half-Life</p>
+<p>Systemic Potency Potency (Hours) (Hours)</p>
+<p>Hydrocortisone 1 1 8–12 1.5–2</p>
+<p>Prednisone 4 0.8 12–36 2.5–3.5</p>
+<p>Methylprednisolone 5 0.5 12–36 3.3</p>
+<p>Dexamethasone 25 0 36–72 3.4–4</p>
+<p>924</p>
+<p>CH78.indd 924 20-11-2020 17:59:49</p>
+<div class="table-container"><table><tr><th>TABLE 78-4 Available Inhaled Corticosteroid Products, Lung Delivery, and Comparative
+Daily Dosages</th><th></th><th></th><th></th><th></th></tr><tr><td>ICS</td><td></td><td>Product</td><td></td><td>Lung Deliverya</td></tr><tr><td>Beclomethasone
+dipropionate (BDP)</td><td></td><td>40 and 80 mcg/actuation HFA MDI</td><td></td><td>50%–60%</td></tr><tr><td>Budesonide (BUD)</td><td></td><td>90 or 180 mcg/dose DPI, Flexhaler</td><td></td><td>15%–30%</td></tr><tr><td></td><td></td><td>200 and 500 mcg ampules, 1 mg</td><td></td><td>5%–8%</td></tr><tr><td>Ciclesonide (CIC)</td><td></td><td>80 or 160 mcg/actuation HFA MDI</td><td></td><td>50%</td></tr><tr><td>Flunisolide (FLU)</td><td></td><td>80 mcg/actuation HFA MDI</td><td></td><td>68%</td></tr><tr><td>Fluticasone furoate (FF)</td><td></td><td>100, 200 mcg/actuation DPI, Ellipta</td><td></td><td>80%–85%</td></tr><tr><td>Fluticasone propionate (FP)</td><td></td><td>44, 110, and 220 mcg/actuation
+HFA MDI</td><td></td><td>20%</td></tr><tr><td></td><td></td><td>50, 100, and 250 mcg/dose DPI, Diskus</td><td></td><td>15%</td></tr><tr><td>Mometasone furoate (MF)</td><td></td><td>110 and 220 mcg/dose DPI, Twisthaler;
+100 mcg and 200 mcg/actuation
+HFA MDI</td><td></td><td>11%</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Comparativ</td><td>e Daily Dosages (mcg) of Inhaled Cor</td><td></td><td>ticosteroids</td></tr><tr><td></td><td>Low Daily D
+Childa/Adul</td><td>ose
+t</td><td>Medium Daily Dose
+Childa/Adult</td><td>High Daily Dose
+Childa/Adult</td></tr><tr><td>BDP</td><td></td><td></td><td></td><td></td></tr><tr><td>HFA MDI</td><td>80–160/80–2</td><td>40</td><td>&gt;160–320/&gt;240–480</td><td>&gt;320/&gt;480</td></tr><tr><td>BUD</td><td></td><td></td><td></td><td></td></tr><tr><td>DPI</td><td>180–360/180–</td><td>540</td><td>&gt;360–720/&gt;540–1080</td><td>&gt;720/&gt;1080</td></tr><tr><td>Nebules</td><td>500/UK</td><td></td><td>1000/UK</td><td>2000/UK</td></tr><tr><td>CIC HFA MDI</td><td>80–160/160–</td><td>320</td><td>&gt;160–320/&gt;320–640</td><td>&gt;320/&gt;640</td></tr><tr><td>FLU</td><td></td><td></td><td></td><td></td></tr><tr><td>HFA MDI</td><td>160/320</td><td></td><td>320/320–640</td><td>≥640/&gt;640</td></tr><tr><td>FF DPI</td><td></td><td></td><td>UK/100</td><td>UK/200</td></tr><tr><td>FP</td><td></td><td></td><td></td><td></td></tr><tr><td>HFA MDI</td><td>88–176/88–2</td><td>64</td><td>176–352/264–440</td><td>&gt;352/&gt;440</td></tr><tr><td>DPI</td><td>100–200/100</td><td>–300</td><td>200–400/300–500</td><td>&gt;400/&gt;500</td></tr><tr><td>MF, DPI</td><td>110/110–220</td><td></td><td>220–440/&gt;220–440</td><td>&gt;440/&gt;440</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table></div><div class="table-container"><table><tr><th>TABLE 78-5 Comparison of Systemic Corticosteroids</th><th></th><th></th><th></th><th></th></tr><tr><td>Systemic</td><td>Anti-
+Inflammatory
+Potency</td><td>Mineralocorticoid
+Potency</td><td>Duration
+of Biologic
+Activity
+(Hours)</td><td>Elimination
+Half-Life
+(Hours)</td></tr><tr><td>Hydrocortisone</td><td>1</td><td>1</td><td>8–12</td><td>1.5–2</td></tr><tr><td>Prednisone</td><td>4</td><td>0.8</td><td>12–36</td><td>2.5–3.5</td></tr><tr><td>Methylprednisolone</td><td>5</td><td>0.5</td><td>12–36</td><td>3.3</td></tr><tr><td>Dexamethasone</td><td>25</td><td>0</td><td>36–72</td><td>3.4–4</td></tr></table></div><h2>Asthma | CHAPTER 78</h2>
+<p>Ipratropium bromide is approved by the US Food and Drug Administration (FDA)</p>
+<p>for maintenance treatment of bronchospasm associated with chronic obstructive</p>
+<p>pulmonary disease (COPD) but is not currently approved for treatment of asthma.</p>
+<p>Tiotropium bromide is also approved for once-daily maintenance treatment of</p>
+<p>COPD and is also indicated for the long-term, once-daily, maintenance treatment of</p>
+<p>asthma in patients ≥6 years of age.</p>
+<li>Time to reach maximum bronchodilation from aerosolized ipratropium is longer</li>
+<p>than from aerosolized SABAs (30–60 minutes vs. 5–10 minutes). However, some</p>
+<p>bronchodilation is seen within 30 seconds, and 50% of maximum response occurs</p>
+<p>within 3 minutes. Ipratropium bromide has a duration of action of 4–8 hours; tiotro-</p>
+<p>pium bromide has a duration of 24 hours.</p>
+<li>In acute asthma exacerbations, inhaled ipratropium bromide produces a further</li>
+<pre><code>improvement in lung function of 10%–15% over inhaled β-agonists alone. When</code></pre>
+<p>2</p>
+<p>added to initial asthma therapy, ipratropium bromide reduces the hospitalization rate</p>
+<p>in patients with moderate-to-severe exacerbations.</p>
+<li>Inhaled ipratropium bromide should only be considered as adjunctive therapy in</li>
+<p>acute severe asthma not completely responsive to β-agonists alone.</p>
+<li>Tiotropium may be considered as add-on therapy 2 in patients whose asthma is not</li>
+<p>well controlled with a medium-to-high dose of ICS and LABA combination therapy.</p>
+<pre><code>Addition of tiotropium only modestly improves lung function, but it increases the</code></pre>
+<p>time to severe exacerbation requiring oral corticosteroid treatment.</p>
+<p>Leukotriene Modifiers</p>
+<li>Zafirlukast (Accolate) and montelukast (Singulair) are oral leukotriene receptor</li>
+<p>antagonists (LTRA) that reduce the proinflammatory and bronchoconstriction effects</p>
+<pre><code>of leukotriene D. In persistent asthma, they improve pulmonary function tests,</code></pre>
+<p>4</p>
+<p>decrease nocturnal awakenings and β-agonist use, and improve symptoms. However,</p>
+<p>2</p>
+<p>they are less effective than low-dose ICS, and they are less effective than LABAs when</p>
+<p>added to ICS for moderate persistent asthma. They are not used to treat acute exac-</p>
+<p>erbations and must be taken on a regular basis, even during symptom-free periods.</p>
+<p>The adult zafirlukast dose is 20 mg twice daily, taken at least 1 hour before or 2 hours</p>
+<p>after meals; the dose for children ages 5–11 years is 10 mg twice daily. The adult</p>
+<p>montelukast dose is 10 mg once daily, taken in the evening without regard to food;</p>
+<p>the dose for children ages 6–14 years is one 5 mg chewable tablet daily in the evening.</p>
+<li>In general, the LTRA are well tolerated. An idiosyncratic syndrome similar to the</li>
+<p>Churg–Strauss syndrome, with marked circulating eosinophilia, heart failure, and</p>
+<p>associated eosinophilic vasculitis, has been reported rarely; a direct causal associa-</p>
+<p>tion has not been established. Because of reports of adverse neuropsychiatric events</p>
+<p>especially within a few weeks of starting therapy, monitor patients for signs of irrita-</p>
+<p>bility, aggressiveness, and sleep disturbances; suicidality has also been reported rarely.</p>
+<p>There have been reports of fatal hepatic failure associated with zafirlukast.</p>
+<li>Zileuton (Zyflo) is a 5-lipoxygenase inhibitor; its use is limited due to potential for</li>
+<p>elevated hepatic enzymes, especially in the first 3 months of therapy, and inhibition of</p>
+<p>metabolism of drugs metabolized by CYP3A4 (eg, theophylline, warfarin). The dose</p>
+<p>of zileuton tablets is 600 mg four times daily with meals and at bedtime. The dose of</p>
+<p>zileuton extended-release tablets is two 600 mg tablets twice daily, within 1 hour after</p>
+<p>the morning and evening meals (total daily dose 2400 mg).</p>
+<p>Biologic Agents</p>
+<li>These agents target the IgE pathway (relevant to allergic asthma) or IL-4, IL-13,</li>
+<p>and IL-5 pathways (relevant to the Th2 pathway and eosinophilic disorders) and</p>
+<p>are indicated for patients with moderate or severe asthma (depending upon the</p>
+<p>drug) along with other biomarkers or clinical indicators associated with treatment</p>
+<p>response. They are typically reserved for patients with moderate-to-severe persistent</p>
+<p>asthma who have been treated with dual therapy with ICS/LABA or triple therapy</p>
+<p>such as with ICS/LABA+ long-acting muscarinic antagonist (LAMA) and remain</p>
+<p>poorly controlled.</p>
+<p>925</p>
+<p>CH78.indd 925 20-11-2020 17:59:49</p>
+<h2>SECTION 15 | Respiratory Disorders</h2>
+<li>Omalizumab (Xolair) is an anti-IgE antibody approved for treatment of allergic</li>
+<p>asthma not well controlled by oral or ICS. Dosage is determined by baseline total</p>
+<p>serum IgE (international units/mL [kIU/L]) and body weight (kg). Doses range from</p>
+<p>150 to 375 mg subcutaneously (SC) at either 2- or 4-week intervals. Omalizumab is</p>
+<p>recommended for treating patients &gt;6 years of age with moderate-to-severe asthma</p>
+<p>not adequately controlled by ICS, ICS/LABA, and in some cases, oral corticosteroids.</p>
+<p>Elevated levels of the fraction of exhaled nitric oxide (FeNO) at ≥19.5 ppb are pre-</p>
+<p>dictive of an exacerbation rate reduction of ~50%. Because of a 0.2% incidence of</p>
+<p>anaphylaxis, observe patients for a reasonable period after injection because 70% of</p>
+<p>reactions occur within 2 hours. Some reactions have occurred up to 24 hours after</p>
+<p>injection.</p>
+<li>Mepolizumab (Nucala) and reslizumab (Cinqair) are monoclonal antibodies</li>
+<p>directed against IL-5 to block activation of the IL-5 receptor on eosinophils.</p>
+<p>Benralizumab (Fasenra) binds to the alpha subunit of the IL-5 receptor of eosino-</p>
+<p>phils and prevents binding of IL-5, thus mitigating downstream eosinophilic inflam-</p>
+<p>mation. Mepolizumab and benralizumab are approved for patients ≥12 years old with</p>
+<p>severe asthma and are administered SC; reslizumab is approved for severe asthma in</p>
+<p>patients ≥18 years old and is administered IV. Mepolizumab and r eslizumab are</p>
+<p>dosed every 4 weeks; benralizumab is dosed every 4 weeks for 3 months then every</p>
+<p>8 weeks. Doses are to be administered in a healthcare setting by professionals who are</p>
+<p>prepared to manage anaphylaxis. Each of these drugs is indicated for patients with an</p>
+<p>“eosinophilic phenotype” (which has not been formally defined). However, a reduc-</p>
+<p>tion in exacerbation rate of ~50% is observed when patients have a certain minimum</p>
+<p>peripheral blood eosinophil count that varies by drug.</p>
+<li>Dupilumab (Dupixent) targets the IL-4α receptor, thus blocking signaling of IL4</li>
+<p>and IL-13, which are cytokines that promote IgE synthesis and inflammatory cell</p>
+<p>recruitment. Dupilumab is approved for patients with moderate-to-severe asthma</p>
+<p>age ≥12 years old with an eosinophilic phenotype and is administered SC every</p>
+<p>2 weeks. Unlike mepolizumab, reslizumab, and benralizumab, FeNO levels &gt;25 ppb</p>
+<p>in addition to blood eosinophil levels ≥150 cells/µL (0.15 × 109/L) is predictive of a</p>
+<p>response in reducing the asthma exacerbation rate by ~50%.</p>
+<p>Magnesium Sulfate</p>
+<li>Magnesium sulfate is a moderately potent bronchodilator, producing relaxation of</li>
+<p>smooth muscle by blocking calcium ion influx into smooth muscles; it may also have</p>
+<p>anti-inflammatory effects.</p>
+<li>For patients with severe asthma exacerbations, a single 2 g IV infusion may reduce</li>
+<p>hospital admissions in adults who have an FEV &lt;25%–30% predicted upon arrival</p>
+<p>1</p>
+<p>in the emergency department, children and adults who have persistent hypoxemia</p>
+<p>after standard treatment, and children whose FEV remains &lt;60% predicted after</p>
+<p>1</p>
+<p>1 hour of standard treatment. Adverse effects include hypotension, facial flushing,</p>
+<p>sweating, depressed deep tendon reflexes, hypothermia, and CNS and respiratory</p>
+<p>depression.</p>
+<p>Methylxanthines</p>
+<li>Methylxanthines are rarely used today because of the high risk of severe life-</li>
+<p>threatening toxicity, numerous drug interactions, and decreased efficacy compared</p>
+<p>with ICS, LABAs, and biologics. Theophylline is a moderately potent bronchodilator</p>
+<p>with mild anti-inflammatory properties and is available for oral and IV administra-</p>
+<p>tion. Theophylline dosing requires monitoring of serum concentrations for both</p>
+<p>efficacy and toxicity, including seizures and death. In addition, theophylline is</p>
+<p>eliminated primarily by metabolism via the hepatic CYP P450 microsomal enzymes</p>
+<p>(primarily CYP1A2 and CYP3A4), and drug interactions affecting metabolism</p>
+<p>significantly affect blood concentrations.</p>
+<p>926</p>
+<p>CH78.indd 926 20-11-2020 17:59:49</p>
+<h2>Asthma | CHAPTER 78</h2>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Focus the initial encounters on the patient’s concerns, expectations, and goals of</li>
+<p>treatment. Basic education should include discussion of asthma as a chronic lung dis-</p>
+<p>ease, the types of medications, and how they are to be used. Teach inhaler technique,</p>
+<p>advise the patient about when to seek medical advice, and provide written action</p>
+<p>plans. Both peak flow-based or symptom-based self-monitoring can be effective, if</p>
+<p>taught and followed correctly.</p>
+<li>At the first follow-up visit, reinforce the educational messages from the first visit and</li>
+<p>review of the patient’s current medications, adherence, and any difficulties related</p>
+<p>to therapy.</p>
+<li>The two key components of effective asthma control are “symptom control” and</li>
+<p>“future risk of adverse outcomes.” Assess symptom control by frequency of daytime</p>
+<p>and nighttime asthma symptoms, reliever medication use, and activity limitations;</p>
+<p>poor symptom control is also an indicator of future risk for exacerbations.</p>
+<li>Future risk of adverse outcomes includes assessment of risks for future exacerbations,</li>
+<p>fixed airflow limitation (and thus diminished response to therapy), and medication</p>
+<pre><code>adverse effects. To assess the risk for future exacerbations, measure lung function</code></pre>
+<p>before the start of treatment and then 2 months later when maximum response to</p>
+<p>controller medications is likely attained.</p>
+<li>During ongoing care, measure spirometry yearly but reserve long-term PEF</li>
+<p>monitoring for patients with severe asthma.</p>
+<li>Validated questionnaires can be administered regularly, such as the Asthma</li>
+<p>Control Test, Asthma Therapy Assessment Questionnaire, and Asthma Control</p>
+<p>Questionnaire.</p>
+<li>Ask patients about exercise tolerance because perceived good exercise tolerance may</li>
+<p>be biased by a sedentary lifestyle adapted to the frequency of bothersome symptoms.</p>
+<li>All patients on inhaled drugs should have their inhalation technique evaluated</li>
+<p>monthly initially and then every 3–6 months.</p>
+<li>After initiation of anti-inflammatory therapy or increase in dosage, most patients</li>
+<p>should experience decreased symptoms within 1–2 weeks and achieve maximum</p>
+<p>improvement within 4–8 weeks. Improvement in baseline FEV or PEF should follow</p>
+<p>1</p>
+<p>a similar time course, but decrease in BHR as measured by morning PEF, PEF vari-</p>
+<p>ability, and exercise tolerance may take longer and improve over 1–3 months.</p>
+<p>See Chapter 43, Asthma, authored by Kathryn V. Blake and Jason E. Lang, for a more</p>
+<p>detailed discussion of this topic.</p>
+<p>927</p>
+<p>CH78.indd 927 20-11-2020 17:59:49</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60. Breast Cancer</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>60. Breast Cancer</h1>
+        </header>
+        <main>
+            <h2>SECTION 11</h2>
+<h2>ONCOLOGIC DISORDERS</h2>
+<p>Edited by Cecily V. DiPiro</p>
+<p>60</p>
+<p>Breast Cancer</p>
+<li>Breast cancer is a malignancy originating from breast tissue. Disease confined to a</li>
+<p>localized breast lesion is referred to as early, primary, localized, or curable. Disease</p>
+<p>detected clinically or radiologically in sites distant from the breast is referred to as</p>
+<p>advanced or metastatic breast cancer (MBC), which is usually incurable.</p>
+<h2>EPIDEMIOLOGY</h2>
+<li>Two variables most strongly associated with occurrence of breast cancer are gender</li>
+<p>and age. Additional risk factors include endocrine factors (eg, early menarche, nul-</p>
+<p>liparity, late age at first birth, and hormone replacement therapy), genetic factors</p>
+<p>(eg, personal and family history, mutations of tumor suppresser genes [BRCA1 and</p>
+<p>BRCA2]), and environmental and lifestyle factors (eg, radiation exposure, weight,</p>
+<p>height, and alcohol use).</p>
+<li>Breast cancer cells often spread undetected by contiguity, lymph channels, and</li>
+<p>through the blood early in the course of the disease, resulting in metastatic disease</p>
+<p>after local therapy. The most common metastatic sites are lymph nodes, skin, bone,</p>
+<p>liver, lungs, and brain.</p>
+<h2>PREVENTION OF BREAST CANCER</h2>
+<li>Selective estrogen receptor modulators (SERMs) and aromatase inhibitors (AIs) are</li>
+<p>being studied for pharmacologic risk reduction of breast cancer.</p>
+<li>The most clinical information is available for the SERMs, tamoxifen and raloxifene,</li>
+<p>which reduce the rates of invasive breast cancer in women at high risk for developing</p>
+<p>the disease. Tamoxifen increased incidence of endometrial cancer and both agents</p>
+<p>increased thromboembolic events.</p>
+<li>Exemestane and anastrozole taken for 5 years significantly reduced the rates of inva-</li>
+<p>sive breast cancers in postmenopausal women with tolerable adverse events.</p>
+<li>Risk reduction strategies include mastectomy, oophorectomy, and pharmacologic</li>
+<p>agents. Clinical guidelines recommend the use of tamoxifen, raloxifene, anastrozole,</p>
+<p>or exemestane for postmenopausal women at high risk.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<li>A painless, palpable lump is the initial sign of breast cancer in most women. The typi-</li>
+<p>cal malignant mass is solitary, unilateral, solid, hard, irregular, and nonmobile. Nipple</p>
+<p>changes are less commonly seen. More advanced cases present with prominent skin</p>
+<p>edema, redness, warmth, and induration.</p>
+<li>Symptoms of MBC depend on the site of metastases but may include bone pain, diffi-</li>
+<p>culty breathing, abdominal pain or enlargement, jaundice, and mental status changes.</p>
+<li>Many women first detect some breast abnormalities themselves, but it is increasingly</li>
+<p>common for breast cancer to be detected during routine screening mammography in</p>
+<p>asymptomatic women.</p>
+<p>687</p>
+<h2>RETPAHC</h2>
+<p>CH60.indd 687 19-11-2020 18:15:28</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>60</th><th>Breast Cancer</th></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<h2>DIAGNOSIS</h2>
+<li>Initial workup should include a careful history, physical examination of the breast,</li>
+<p>three-dimensional mammography, and, possibly, other breast imaging techniques,</p>
+<p>such as ultrasound and magnetic resonance imaging (MRI).</p>
+<li>Breast biopsy is indicated for a mammographic abnormality that suggests malignancy</li>
+<p>or for a palpable mass on physical examination.</p>
+<h2>STAGING</h2>
+<li>Stage (anatomical extent of disease) is based on primary tumor extent and size</li>
+<p>(T ), presence and extent of lymph node involvement (N ), and presence or</p>
+<p>1–4 1–3</p>
+<p>absence of distant metastases (M ). The staging system determines prognosis</p>
+<p>0–1</p>
+<p>and assists with treatment decisions. Simplistically stated, these stages may be</p>
+<p>represented as follows:</p>
+<p>✓ Early breast cancer</p>
+<p>Stage 0: Carcinoma in situ or disease that has not invaded the basement</p>
+<p>membrane</p>
+<p>Stage I: Small primary invasive tumor without lymph node involvement</p>
+<p>Stage II: Involvement of regional lymph nodes</p>
+<p>✓ Locally advanced breast cancer</p>
+<p>Stage III: Usually a large tumor with extensive nodal involvement in which the</p>
+<p>node or tumor is fixed to the chest wall</p>
+<p>✓ Advanced or metastatic breast cancer</p>
+<p>Stage IV: Metastases in organs distant from the primary tumor</p>
+<li>Staging for breast cancer is separated into clinical and pathologic staging. Clinical</li>
+<p>stage is assigned before surgery and is based on physical examination (assessment</p>
+<p>of tumor size and presence of axillary lymph nodes), imaging (eg, mammogra-</p>
+<p>phy, ultrasonography), and pathologic examination of tissues (eg, biopsy results).</p>
+<p>Pathologic staging occurs after surgery and adds data from surgical exploration and</p>
+<h2>resection.</h2>
+<h2>PATHOLOGIC EVALUATION</h2>
+<li>Development of malignancy is a multistep process involving preinvasive (or nonin-</li>
+<p>vasive) and invasive phases. The goal of treatment for noninvasive carcinomas is to</p>
+<p>prevent the development of invasive disease.</p>
+<li>Pathologic evaluation of breast lesions establishes the histologic diagnosis and</li>
+<p>confirms the presence or absence of prognostic factors.</p>
+<li>Most breast carcinomas are adenocarcinomas and are classified as ductal or</li>
+<p>lobular.</p>
+<h2>PROGNOSTIC FACTORS</h2>
+<li>The ability to predict prognosis is used to design personalized treatment</li>
+<p>recommendations.</p>
+<li>Age at diagnosis and ethnicity can affect prognosis.</li>
+<li>Tumor size and presence and number of involved axillary lymph nodes are inde-</li>
+<p>pendent factors that influence the risk for breast cancer recurrence and subsequent</p>
+<p>metastatic disease. Other disease characteristics that provide prognostic information</p>
+<p>are histologic subtype, nuclear or histologic grade, lymphatic and vascular invasion,</p>
+<p>and proliferation indices.</p>
+<li>Hormone receptors (estrogen [ER] and progesterone [PR]) are not strong prognostic</li>
+<p>markers but are used clinically to predict response to endocrine therapy.</p>
+<li>HER2 overexpression occurs in about 20%–30% of breast cancers and is associated</li>
+<p>with increased tumor aggressiveness, increased rates of recurrence, and increased</p>
+<p>rates of mortality.</p>
+<li>Genetic profiling tools provide additional prognostic information to aid in treatment</li>
+<p>decisions for subgroups of patients with otherwise favorable prognostic features.</p>
+<p>688</p>
+<p>CH60.indd 688 19-11-2020 18:15:28</p>
+<h2>Breast Cancer | CHAPTER 60</h2>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: Adjuvant therapy for early and locally advanced breast cancer is</li>
+<p>administered with curative intent. Neoadjuvant therapy is given to eradicate micromet-</p>
+<p>astatic disease, determine prognosis, and potentially conserve breast tissue for a better</p>
+<p>cosmetic result. Palliation is the desired therapeutic outcome in the treatment of MBC.</p>
+<li>Treatment is rapidly evolving. Specific information regarding the most promising</li>
+<p>interventions can be found only in the primary literature.</p>
+<li>Treatment can cause substantial toxicity, which differs depending on the individual</li>
+<p>agent, administration method, and combination regimen. A comprehensive review of</p>
+<p>toxicities is beyond the scope of this chapter; consult appropriate references.</p>
+<h2>EARLY BREAST CANCER (STAGE I AND II)</h2>
+<p>Local-Regional Therapy</p>
+<li>Surgery alone can cure most patients with in situ cancers, 70%–80% of stage I can-</li>
+<p>cers, and approximately one-half of those with stage II cancers.</p>
+<li>Breast-conserving therapy (BCT) is an appropriate primary therapy for most women</li>
+<p>with stages I and II disease and is preferable because it provides survival rates equiva-</p>
+<p>lent to modified radical mastectomy. BCT includes removal of part of the breast,</p>
+<p>surgical evaluation of axillary lymph nodes, and radiation therapy (RT) to prevent</p>
+<p>local recurrence.</p>
+<li>RT is administered to the entire breast over 3–5 weeks to eradicate residual disease</li>
+<p>after BCT. Reddening and erythema of the breast tissue with subsequent shrinkage</p>
+<p>of total breast mass are minor complications associated with RT.</p>
+<li>Multiple sites of cancer within the breast and the inability to attain negative patho-</li>
+<p>logic margins on the excised breast specimen are indications for mastectomy.</p>
+<li>Axillary lymph nodes should be sampled for staging and prognostic information.</li>
+<p>Lymphatic mapping with sentinel lymph node biopsy is a less invasive alternative to</p>
+<h2>axillary dissection.</h2>
+<p>Systemic Adjuvant Therapy</p>
+<li>Systemic adjuvant therapy is the administration of systemic therapy following defini-</li>
+<p>tive local therapy (surgery, radiation, or both) when there is no evidence of metastatic</p>
+<p>disease but a high likelihood of disease recurrence. The goal of such therapy is cure.</p>
+<li>Administration of chemotherapy, endocrine therapy, targeted therapy, or some</li>
+<p>combination of these agents results in improved disease-free survival (DFS) and/or</p>
+<p>overall survival (OS) for high-risk patients in specific prognostic subgroups.</p>
+<li>The National Comprehensive Cancer Network (NCCN) practice guidelines are</li>
+<p>updated at least annually and should be consulted for treatment recommendations.</p>
+<li>Several multigene expression assays are commercially available as decision-support</li>
+<p>tools for adjuvant chemotherapy.</p>
+<p>Adjuvant Chemotherapy</p>
+<li>Early administration of effective combination chemotherapy at a time of low tumor</li>
+<p>burden should increase the likelihood of cure and minimize emergence of drug-</p>
+<p>resistant tumor cell clones. Combination regimens have historically been more effec-</p>
+<h2>tive than single-agent chemotherapy (Table 60-1).</h2>
+<li>Anthracycline-containing regimens (eg, doxorubicin and epirubicin) reduce the</li>
+<p>rate of recurrence and death as compared with regimens that contain cyclophospha-</p>
+<p>mide, methotrexate, and fluorouracil.</p>
+<li>The addition of taxanes, docetaxel and paclitaxel, to adjuvant regimens comprised of</li>
+<p>the drugs listed above resulted in reduced risk of distant recurrence, any recurrence,</p>
+<p>and breast cancer mortality compared with a nontaxane regimen in node-positive</p>
+<p>breast cancer patients. The use of taxane-containing regimens in node-negative</p>
+<p>patients remains controversial.</p>
+<h2>ALGRAWANY</h2>
+<p>689</p>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<p>CH60.indd 689 19-11-2020 18:15:28</p>
+<h2>SECTION 11 | Oncologic Disorders</h2>
+<p>TABLE 60-1 Selected Neo/Adjuvant Chemotherapy Regimens for Breast Cancer</p>
+<p>Dose-Dense AC → Paclitaxela AC → Paclitaxel</p>
+<p>Doxorubicin 60 mg/m2 IV bolus, day 1 Doxorubicin 60 mg/m2 IV, day 1</p>
+<p>Cyclophosphamide 600 mg/m2 IV, day 1 Cyclophosphamide 600 mg/m2 IV, day 1</p>
+<p>Repeat cycles every 14 days for 4 cycles (must Repeat cycles every 21 days for 4 cycles</p>
+<p>be given with growth factor support) Followed by paclitaxel 80 mg/m2 IV weekly</p>
+<p>Followed by paclitaxel 80 mg/m2 IV weekly Repeat cycles every 7 days for 12 cycles</p>
+<p>Repeat cycles every 7 days for 12 cycles TAC</p>
+<p>TCa Docetaxel 75 mg/m2 IV, day 1</p>
+<p>Docetaxel 75 mg/m2 IV, day 1 Doxorubicin 50 mg/m2 IV bolus, day 1</p>
+<p>Cyclophosphamide 600 mg/m2 IV, day 1 Cyclophosphamide 500 mg/m2 IV, day 1</p>
+<p>Repeat cycles every 21 days for 4 cycles (doxorubicin should be given first)</p>
+<p>Dose-Dense AC → Dose-Dense Paclitaxela Repeat cycles every 21 days for 6 cycles</p>
+<p>Doxorubicin 60 mg/m2 IV bolus, day 1 (must be given with growth factor</p>
+<p>support)</p>
+<p>Cyclophosphamide 600 mg/m2 IV, day 1</p>
+<h2>CMF</h2>
+<p>Repeat cycles every 14 days for 4 cycles (must</p>
+<p>be given with growth factor support) Cyclophosphamide 100 mg/m2 per day</p>
+<p>orally, days 1–14</p>
+<p>Followed by paclitaxel 175 mg/m2 IV over 3</p>
+<p>hours Methotrexate 40 mg/m2 IV, days 1 and 8</p>
+<p>Repeat cycles every 14 days for 4 cycles (must 5-fluorouracil 600 mg/m2 IV, days 1 and 8</p>
+<p>be given with growth factor support) Repeat cycles every 28 days for 6 cycles</p>
+<p>aDesignated as a preferred regimen in the NCCN Breast Cancer Guidelines.</p>
+<p>AC, Adriamycin (doxorubicin), Cytoxan (cyclophosphamide); CMF, cyclophosphamide, methotrexate,</p>
+<p>5-fluorouracil; TAC, Taxotere (docetaxel), Adriamycin (doxorubicin), cyclophosphamide; TC,</p>
+<p>Taxotere (docetaxel), cyclophosphamide.</p>
+<li>Initiate chemotherapy within 12 weeks of surgical removal of the primary tumor.</li>
+<p>Optimal duration of adjuvant treatment is unknown but appears to be 12–24 weeks,</p>
+<p>depending on the regimen used.</p>
+<li>Dose intensity refers to the amount of drug administered per unit of time, which can</li>
+<p>be achieved by increasing dose, decreasing time between doses, or both. Dose density</p>
+<p>is one way of achieving dose intensity by decreasing time between treatment cycles.</p>
+<li>Dose-dense adjuvant regimens for node-positive breast cancer resulted in prolonged</li>
+<p>DFS and OS. No benefit in DFS or OS was shown for sequential versus concurrent</p>
+<p>chemotherapy, but sequential therapy appears to be less toxic.</p>
+<li>Concomitant or sequential administration of a taxane with an anthracycline-based</li>
+<p>regimen is standard of care in node-positive breast cancer.</p>
+<li>Dose increases in standard regimens appear to not be beneficial and may be harmful.</li>
+<li>Avoid dose reductions in standard regimens unless necessitated by severe toxicity.</li>
+<li>Short-term toxicities of adjuvant chemotherapy are generally well tolerated,</li>
+<p>especially with the availability of serotonin-antagonist and substance P/neurokinin</p>
+<p>1–antagonist antiemetics and myeloid growth factors.</p>
+<li>Survival benefit for adjuvant chemotherapy in stage I and II breast cancer is modest.</li>
+<p>The absolute reduction in mortality at 10 years is 5% in node-negative and 10% in</p>
+<p>node-positive disease.</p>
+<p>Adjuvant Biologic or Targeted Therapy</p>
+<li>Trastuzumab in combination with or sequentially after adjuvant chemotherapy is</li>
+<p>indicated in patients with early stage, HER2-positive breast cancer. The risk of recur-</p>
+<p>rence was reduced up to 50% in clinical trials.</p>
+<p>690</p>
+<p>CH60.indd 690 19-11-2020 18:15:28</p>
+<div class="table-container"><table><tr><th>TABLE 60-1 Selected Neo/Adjuvant Chemotherapy Regimens for Breast Cancer</th><th></th></tr><tr><td>Dose-Dense AC → Paclitaxela</td><td>AC → Paclitaxel</td></tr><tr><td>Doxorubicin 60 mg/m2 IV bolus, day 1</td><td>Doxorubicin 60 mg/m2 IV, day 1</td></tr><tr><td>Cyclophosphamide 600 mg/m2 IV, day 1</td><td>Cyclophosphamide 600 mg/m2 IV, day 1</td></tr><tr><td>Repeat cycles every 14 days for 4 cycles (must
+be given with growth factor support)
+Followed by paclitaxel 80 mg/m2 IV weekly
+Repeat cycles every 7 days for 12 cycles</td><td>Repeat cycles every 21 days for 4 cycles</td></tr><tr><td></td><td>Followed by paclitaxel 80 mg/m2 IV weekly
+Repeat cycles every 7 days for 12 cycles</td></tr><tr><td></td><td>TAC
+Docetaxel 75 mg/m2 IV, day 1
+Doxorubicin 50 mg/m2 IV bolus, day 1
+Cyclophosphamide 500 mg/m2 IV, day 1
+(doxorubicin should be given first)
+Repeat cycles every 21 days for 6 cycles
+(must be given with growth factor
+support)
+CMF
+Cyclophosphamide 100 mg/m2 per day
+orally, days 1–14
+Methotrexate 40 mg/m2 IV, days 1 and 8
+5-fluorouracil 600 mg/m2 IV, days 1 and 8</td></tr><tr><td>TCa</td><td></td></tr><tr><td>Docetaxel 75 mg/m2 IV, day 1</td><td></td></tr><tr><td>Cyclophosphamide 600 mg/m2 IV, day 1</td><td></td></tr><tr><td>Repeat cycles every 21 days for 4 cycles
+Dose-Dense AC → Dose-Dense Paclitaxela
+Doxorubicin 60 mg/m2 IV bolus, day 1
+Cyclophosphamide 600 mg/m2 IV, day 1
+Repeat cycles every 14 days for 4 cycles (must
+be given with growth factor support)
+Followed by paclitaxel 175 mg/m2 IV over 3
+hours
+Repeat cycles every 14 days for 4 cycles (must
+be given with growth factor support)</td><td></td></tr><tr><td></td><td>Repeat cycles every 28 days for 6 cycles</td></tr></table></div><h2>Breast Cancer | CHAPTER 60</h2>
+<li>Unanswered questions with the use of adjuvant trastuzumab include optimal concur-</li>
+<p>rent chemotherapy, optimal dose, schedule and duration of therapy, and use of other</p>
+<p>concurrent therapeutic modalities.</p>
+<p>Adjuvant Endocrine Therapy</p>
+<li>Tamoxifen, toremifene, oophorectomy, ovarian irradiation, luteinizing hormone–</li>
+<p>releasing hormone (LHRH) agonists, and AIs are hormonal therapies used in the</p>
+<p>treatment of primary or early-stage breast cancer. Tamoxifen was the gold standard</p>
+<p>adjuvant hormonal therapy for three decades and is generally considered the adjuvant</p>
+<p>hormonal therapy of choice for premenopausal women. It has both estrogenic and</p>
+<p>antiestrogenic properties, depending on the tissue and gene in question.</p>
+<li>Tamoxifen 20 mg daily, beginning soon after completing chemotherapy and continu-</li>
+<p>ing for 5 years, reduces the risk of recurrence and mortality. It is usually well toler-</p>
+<p>ated; however, symptoms of estrogen withdrawal (hot flashes and vaginal bleeding)</p>
+<p>may occur but decrease in frequency and intensity over time. Tamoxifen reduces</p>
+<p>the risk of hip radius and spine fractures. It increases the risks of stroke, pulmonary</p>
+<p>embolism, deep vein thrombosis, and endometrial cancer, particularly in women age</p>
+<p>50 years or older. Administration of tamoxifen for 10 years in patients with a higher</p>
+<p>risk of recurrence is supported by recent studies.</p>
+<li>Premenopausal women benefit from ovarian ablation with LHRH agonists</li>
+<p>(eg, goserelin) in the adjuvant setting, either with or without concurrent tamoxifen.</p>
+<p>Trials are ongoing to further define the role of LHRH agonists.</p>
+<li>Guidelines recommend incorporation of AIs into adjuvant hormonal therapy for</li>
+<p>postmenopausal, hormone-sensitive breast cancer. Experts believe that anastrozole,</p>
+<p>letrozole, and exemestane have similar antitumor efficacy and toxicity profiles.</p>
+<p>Adverse effects with AIs include bone loss/osteoporosis, hot flashes, myalgia/arthral-</p>
+<p>gia, vaginal dryness/atrophy, mild headaches, and diarrhea.</p>
+<li>The optimal drug, dose, sequence, and duration of administration of AIs in the adju-</li>
+<p>vant setting are not known.</p>
+<h2>LOCALLY ADVANCED BREAST CANCER (STAGE III)</h2>
+<li>Neoadjuvant or primary chemotherapy is the initial treatment of choice. Benefits</li>
+<p>include rendering inoperable tumors resectable and increasing the rate of BCT.</p>
+<li>Primary chemotherapy with an anthracycline- and taxane-containing regimen is</li>
+<p>recommended. The use of trastuzumab and pertuzumab with chemotherapy is</p>
+<p>appropriate for patients with HER2-positive tumors.</p>
+<li>Surgery followed by chemotherapy and adjuvant RT should be administered to mini-</li>
+<p>mize local recurrence.</p>
+<li>Cure is the primary goal of therapy for most patients with stage III disease.</li>
+<h2>METASTATIC BREAST CANCER (STAGE IV)</h2>
+<li>Treatment of MBC with cytotoxic, endocrine, or targeted therapy often results in</li>
+<p>regression of disease, improvements in quality of life, and improved OS with the</p>
+<p>addition of some biologic or targeted therapies.</p>
+<li>The choice of therapy for MBC is based on the extent of disease involvement and the</li>
+<p>presence or absence of certain tumor or patient characteristics, as described below.</p>
+<li>The most important predictive factors are the presence of HER2, ER, and PR recep-</li>
+<p>tors in the primary or metastatic tumor tissue.</p>
+<li>Consider adding bone-modifying agents (eg, pamidronate, zoledronic acid, or</li>
+<p>denosumab) to treat breast cancer patients with metastases to the bone to decrease</p>
+<p>rates of skeletal-related events, such as fractures, spinal cord compression, and pain,</p>
+<p>and the need for radiation to the bones or surgery.</p>
+<p>Biologic or Targeted Therapy</p>
+<li>Fifteen percent to 20% of patients with MBC overexpress HER2. Five anti-HER2</li>
+<p>agents are available in the United States: trastuzumab, lapatinib, pertuzumab, ado-</p>
+<p>trastuzumab emtansine, and neratinib.</p>
+<p>691</p>
+<p>CH60.indd 691 19-11-2020 18:15:28</p>
+<h2>SECTION 11 | Oncologic Disorders</h2>
+<li>First-line therapy with a pertuzumab-trastuzumab-taxane combination is the pre-</li>
+<p>ferred option for HER2-overexpressing MBC in patients who have not received per-</p>
+<p>tuzumab in the neoadjuvant or adjuvant setting. Second-line HER2-targeted therapy</p>
+<p>for MBC depends on the specific agent given as first-line therapy. Subsequent therapy</p>
+<p>(third-line) for HER2-positive MBC is controversial.</p>
+<li>Consider combination endocrine plus HER2-directed therapy when chemotherapy is</li>
+<p>not tolerated or after achieving maximal response with chemotherapy-HER2 therapy</p>
+<p>approach.</p>
+<li>All HER2-targeted therapies are cardiotoxic with the type of toxicity differing among</li>
+<p>agents. The incidence of heart failure is ~5% with single-agent trastuzumab and</p>
+<p>unacceptably high in combination with an anthracycline.</p>
+<li>HER2-targeted regimens for MBC are summarized in Table 60-2.</li>
+<p>TABLE 60-2 Selected Regimens for HER2-Positive Metastatic Breast Cancer</p>
+<p>Select Chemotherapy/Biologic Therapy Regimens</p>
+<p>Docetaxel + Trastuzumab + Ado-Trastuzumab Emtansine (T-DM1)</p>
+<p>Pertuzumab Ado-Trastuzumab Emtansine 3.6 mg/kg</p>
+<p>Docetaxel 75 mg/m2 IV day 1 IV day 1</p>
+<p>Trastuzumab 8 mg/kg IV day 1 followed 21 Repeat cycle every 21 days</p>
+<p>days later by 6 mg/kg IV Trastuzumab + Chemotherapy</p>
+<p>Pertuzumab 840 mg IV day 1 followed 21 Trastuzumab 8 mg/kg IV day 1 followed 21</p>
+<p>days later by 420 mg IV days later by 6 mg/kg IV day 1</p>
+<p>Repeat cycle every 21 days Repeat cycle every 21 days (for every 21 day</p>
+<p>Paclitaxel + Trastuzumab + Pertuzumab chemotherapy)</p>
+<p>Paclitaxel 80 mg/m2 IV days 1, 8, 15 OR</p>
+<p>Trastuzumab 8 mg/kg IV day 1 followed 21 Trastuzumab 4 mg/kg IV day 1 followed 7</p>
+<p>days later by 6 mg/kg IV days later by 2 mg/kg IV day 1</p>
+<p>Pertuzumab 840 mg IV day 1 followed 21 Repeat cycle weekly (for weekly</p>
+<p>days later by 420 mg IV chemotherapy)</p>
+<p>Repeat cycle every 21 days Chemotherapy may include any one of the</p>
+<p>following:</p>
+<p>Paclitaxel, docetaxel, protein-bound paclitaxel,</p>
+<p>capecitabine, vinorelbine, gemcitabine</p>
+<p>Select Endocrine Therapy/Biologic Therapy Regimens</p>
+<p>Trastuzumab + Lapatinib (± Aromatase Trastuzumab (± Aromatase Inhibitor or</p>
+<p>Inhibitor) Fulvestrant or Tamoxifen)</p>
+<p>Lapatinib 1000 mg orally daily continuously Trastuzumab 8 mg/kg IV day 1 followed 21</p>
+<p>Trastuzumab 8 mg/kg IV day 1 followed 21 days later by 6 mg/kg IV day 1</p>
+<p>days later by 6 mg/kg IV Repeat cycle every 21 days</p>
+<p>Repeat cycle every 21 days (aromatase inhibitor, fulvestrant, and</p>
+<p>(aromatase inhibitor dosed per Table 60-3) tamoxifen dosed per Table 60-3)</p>
+<p>Lapatinib + Capecitabine Lapatinib + Aromatase Inhibitor</p>
+<p>Lapatinib 1250 mg orally daily continuously Lapatinib 1500 mg orally daily continuously</p>
+<p>Capecitabine 1000 mg/m2 twice daily × (aromatase inhibitor dosed daily continuously</p>
+<h2>14 days per Table 60-3)</h2>
+<p>Repeat cycle every 21 days</p>
+<p>692</p>
+<p>CH60.indd 692 19-11-2020 18:15:28</p>
+<div class="table-container"><table><tr><th>TABLE 60-2 Selected Regimens for HER2-Positive Metastatic Breast Cancer</th><th></th></tr><tr><td>Select Chemotherapy/Biologic Therapy Regimens</td><td></td></tr><tr><td>Docetaxel + Trastuzumab +
+Pertuzumab
+Docetaxel 75 mg/m2 IV day 1
+Trastuzumab 8 mg/kg IV day 1 followed 21
+days later by 6 mg/kg IV
+Pertuzumab 840 mg IV day 1 followed 21
+days later by 420 mg IV
+Repeat cycle every 21 days</td><td>Ado-Trastuzumab Emtansine (T-DM1)
+Ado-Trastuzumab Emtansine 3.6 mg/kg
+IV day 1
+Repeat cycle every 21 days
+Trastuzumab + Chemotherapy
+Trastuzumab 8 mg/kg IV day 1 followed 21
+days later by 6 mg/kg IV day 1
+Repeat cycle every 21 days (for every 21 day
+chemotherapy)
+OR
+Trastuzumab 4 mg/kg IV day 1 followed 7
+days later by 2 mg/kg IV day 1
+Repeat cycle weekly (for weekly
+chemotherapy)
+Chemotherapy may include any one of the
+following:
+Paclitaxel, docetaxel, protein-bound paclitaxel,
+capecitabine, vinorelbine, gemcitabine</td></tr><tr><td>Paclitaxel + Trastuzumab + Pertuzumab</td><td></td></tr><tr><td>Paclitaxel 80 mg/m2 IV days 1, 8, 15
+Trastuzumab 8 mg/kg IV day 1 followed 21
+days later by 6 mg/kg IV
+Pertuzumab 840 mg IV day 1 followed 21
+days later by 420 mg IV
+Repeat cycle every 21 days</td><td></td></tr><tr><td>Select Endocrine Therapy/Biologic Therapy Regimens</td><td></td></tr><tr><td>Trastuzumab + Lapatinib (± Aromatase
+Inhibitor)
+Lapatinib 1000 mg orally daily continuously
+Trastuzumab 8 mg/kg IV day 1 followed 21
+days later by 6 mg/kg IV
+Repeat cycle every 21 days
+(aromatase inhibitor dosed per Table 60-3)</td><td>Trastuzumab (± Aromatase Inhibitor or
+Fulvestrant or Tamoxifen)
+Trastuzumab 8 mg/kg IV day 1 followed 21
+days later by 6 mg/kg IV day 1
+Repeat cycle every 21 days
+(aromatase inhibitor, fulvestrant, and
+tamoxifen dosed per Table 60-3)</td></tr><tr><td>Lapatinib + Capecitabine
+Lapatinib 1250 mg orally daily continuously
+Capecitabine 1000 mg/m2 twice daily ×
+14 days
+Repeat cycle every 21 days</td><td>Lapatinib + Aromatase Inhibitor
+Lapatinib 1500 mg orally daily continuously
+(aromatase inhibitor dosed daily continuously
+per Table 60-3)</td></tr></table></div><h2>Breast Cancer | CHAPTER 60</h2>
+<li>Other targeted agents including mTOR inhibitors (eg, everolimus) and cyclin-</li>
+<p>dependent kinases (CDK) (eg, abemaciclib, palbociclib, and ribociclib) are used</p>
+<p>in combination with endocrine agents to improve outcomes. To date, CDK inhibi-</p>
+<p>tors have improved progression-free survival in combination with AIs (as first-line</p>
+<p>therapy), fulvestrant (as first- and second-line therapy), and tamoxifen (as first-line</p>
+<h2>therapy) (see Table 60-3).</h2>
+<p>Endocrine Therapy</p>
+<li>Consider endocrine therapy in combination with a targeted agent when feasible</li>
+<p>although this increases the risk of adverse events that require supportive management</p>
+<p>strategies. The choice of endocrine therapy is based on the menopausal status of the</p>
+<p>patient, prior therapies and previous response, duration of response, or disease-free</p>
+<p>interval.</p>
+<li>Endocrine therapy is the treatment of choice for patients who have hormone receptor-</li>
+<p>positive metastases in soft tissue, bone, pleura, or, if asymptomatic, viscera. Com-</p>
+<p>pared with chemotherapy, endocrine therapy has an equal probability of response</p>
+<p>and a better safety profile.</p>
+<li>Patients are sequentially treated with endocrine therapy until their tumors cease to</li>
+<p>respond, at which time chemotherapy can be given.</p>
+<li>No one endocrine therapy has clearly superior survival benefit. Choice of agent is</li>
+<p>based primarily on mechanism of action, toxicity, and patient preference (Table 60-3).</p>
+<li>AIs are generally first-line therapy in postmenopausal women. AIs reduce circulating</li>
+<p>and target organ estrogens by blocking peripheral conversion from an androgenic</p>
+<p>precursor, the primary source of estrogens in postmenopausal women. The third-</p>
+<p>generation AIs anastrozole, letrozole, and exemestane are more selective and have</p>
+<p>an improved toxicity profile. When compared with tamoxifen, patients receiving AIs</p>
+<p>had similar response rates as well as lower incidence of thromboembolic events and</p>
+<p>vaginal bleeding.</p>
+<li>Tamoxifen, an estrogen agonist/antagonist, is the preferred initial agent when</li>
+<p>metastases are present in premenopausal women except when metastases occur</p>
+<p>within 1 year of adjuvant tamoxifen. In addition to the side effects described for</p>
+<p>adjuvant therapy, tumor flare or hypercalcemia occurs in approximately 5% of</p>
+<p>patients with MBC.</p>
+<li>Toremifene, also an estrogen agonist/antagonist, has similar efficacy and toler-</li>
+<p>ability as tamoxifen and is an alternative to tamoxifen in postmenopausal patients.</p>
+<p>Fulvestrant is a second-line intramuscular agent with similar efficacy and safety</p>
+<p>when compared with anastrozole or exemestane in patients who progressed on</p>
+<p>tamoxifen.</p>
+<li>Surgical or chemical ovarian ablation is considered by some experts to be the</li>
+<p>endocrine therapy of choice in premenopausal women and produces similar overall</p>
+<p>response rates as tamoxifen. Medical castration with an LHRH analogue (goserelin,</p>
+<p>leuprolide, or triptorelin) is a reversible alternative to surgery.</p>
+<li>Progestins are generally reserved for third-line therapy. They cause weight gain, fluid</li>
+<p>retention, and thromboembolic events.</p>
+<p>Chemotherapy</p>
+<li>Chemotherapy is used as initial therapy for women with hormone receptor-negative</li>
+<p>tumors, with triple negative tumors, and after failure of endocrine/targeted therapy</p>
+<p>regimens.</p>
+<li>Chemotherapy is chosen based on overall efficacy, the risk of toxicity, performance</li>
+<p>status and presence of comorbidities in the patient, aggressiveness of disease (eg,</p>
+<p>indolent vs. visceral crisis), and patient preferences related to chemotherapy sched-</p>
+<p>ules, dosing route (eg, oral vs. intravenous), and frequency (eg, weekly vs. every</p>
+<p>3 weeks).</p>
+<p>693</p>
+<p>CH60.indd 693 19-11-2020 18:15:28</p>
+<h2>694 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 60-3 Therapies Used for Hormone Receptor–Positive Metastatic Breast Cancer</p>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</p>
+<p>Aromatase Inhibitors: Nonsteroidal</p>
+<p>Anastrozole Arimidex, 1 mg orally daily</p>
+<p>generic</p>
+<p>Letrozole Femara, generic 2.5 mg orally daily Caution in severe liver impairmenta</p>
+<p>Aromatas Inhibitor: Steroidal</p>
+<p>Exemestane Aromasin, 25 mg orally daily Take after meals</p>
+<p>generic</p>
+<p>Estrogen Agonists/Antagonists</p>
+<p>Tamoxifen Nolvadex, 20 mg orally daily See text regarding CYP2D6</p>
+<p>generic</p>
+<p>Toremifene Fareston 60 mg orally daily</p>
+<p>Antiestrogen: SERD</p>
+<p>Fulvestrant Faslodex 500 mg IM every 28 days 250–500 mg (see Moderate liver impairmenta</p>
+<p>(after loading days 1, text for details) administer 250 mg IM every 28</p>
+<p>15, 29) days (after loading days 1, 15, 29)</p>
+<p>LHRH Agonists</p>
+<p>Goserelin Zoladex 3.6 mg SC every 28 days Premenopausal women only</p>
+<p>Leuprolide Lupron (IM), 3.75 mg IM every 28 days Other formulations Premenopausal women only Not FDA approved for breast</p>
+<p>generic and doses are cancer; other formulations</p>
+<p>not used for are administered differently</p>
+<p>breast cancer</p>
+<p>Triptorelin Trelstar 3.75 mg IM every 28 days Premenopausal women only Not FDA-approved for breast</p>
+<p>cancer</p>
+<p>CH60.indd</p>
+<p>694</p>
+<p>19-11-2020</p>
+<p>18:15:29</p>
+<div class="table-container"><table><tr><th>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Aromatase Inhibitors: Nonsteroidal</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Anastrozole</td><td>Arimidex,
+generic</td><td>1 mg orally daily</td><td></td><td></td><td></td></tr><tr><td>Letrozole</td><td>Femara, generic</td><td>2.5 mg orally daily</td><td></td><td>Caution in severe liver impairmenta</td><td></td></tr><tr><td>Aromatas Inhibitor: Steroidal</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Exemestane</td><td>Aromasin,
+generic</td><td>25 mg orally daily</td><td></td><td></td><td>Take after meals</td></tr><tr><td>Estrogen Agonists/Antagonists</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tamoxifen</td><td>Nolvadex,
+generic</td><td>20 mg orally daily</td><td></td><td>See text regarding CYP2D6</td><td></td></tr><tr><td>Toremifene</td><td>Fareston</td><td>60 mg orally daily</td><td></td><td></td><td></td></tr><tr><td>Antiestrogen: SERD</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Fulvestrant</td><td>Faslodex</td><td>500 mg IM every 28 days
+(after loading days 1,
+15, 29)</td><td>250–500 mg (see
+text for details)</td><td>Moderate liver impairmenta
+administer 250 mg IM every 28
+days (after loading days 1, 15, 29)</td><td></td></tr><tr><td>LHRH Agonists</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Goserelin</td><td>Zoladex</td><td>3.6 mg SC every 28 days</td><td></td><td>Premenopausal women only</td><td></td></tr><tr><td>Leuprolide</td><td>Lupron (IM),
+generic</td><td>3.75 mg IM every 28 days</td><td>Other formulations
+and doses are
+not used for
+breast cancer</td><td>Premenopausal women only</td><td>Not FDA approved for breast
+cancer; other formulations
+are administered differently</td></tr><tr><td>Triptorelin</td><td>Trelstar</td><td>3.75 mg IM every 28 days</td><td></td><td>Premenopausal women only</td><td>Not FDA-approved for breast
+cancer</td></tr></table></div><p>695</p>
+<p>Breast</p>
+<p>Cancer</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>60</p>
+<p>Progestins</p>
+<p>Megestrol acetate Megace, generic 40 mg orally 4 times a day 80 mg twice daily Absorption may be increased</p>
+<p>also appropriate when taken with food</p>
+<p>Medroxyprogesterone DepoProvera, 400 mg IM every week 400–1000 mg IM May need to decrease dose in severe</p>
+<p>generic every week liver impairmenta</p>
+<p>Androgens</p>
+<p>Fluoxymesterone Androxy, generic 10 mg orally twice a day 10–20/day in Avoid in severe renal or liver</p>
+<p>divided doses impairmenta</p>
+<p>Estrogens</p>
+<p>Ethinyl estradiol Multiple 1 mg orally 3 times a day Lower doses not Avoid in jaundice or “marked” liver Take with food</p>
+<p>generics effective disease</p>
+<p>Conjugated estrogens Premarin 2.5 mg orally 3 times Lower doses not Avoid in jaundice or “marked” liver Take with food</p>
+<p>a day effective disease</p>
+<p>Biologic/Targeted Therapies</p>
+<p>Abemaciclib (± Letrozole or Verzenio Single agent 200 mg 50–200 mg twice Adjust dose for diarrhea, Do not split tablets</p>
+<p>Fulvestrant) orally twice a day a day myelosuppression, and/or</p>
+<p>continuously OR severe hepatic impairment.</p>
+<p>Combination 150 mg Monitor for hepatotoxicity</p>
+<p>orally twice a day and thromboembolism. Avoid</p>
+<p>continuously concomitant strong inhibitors</p>
+<p>of CYP3A4 and moderate/strong</p>
+<p>inducers of CYP3A4</p>
+<p>(Continued )</p>
+<p>CH60.indd</p>
+<p>695</p>
+<p>19-11-2020</p>
+<p>18:15:29</p>
+<div class="table-container"><table><tr><th>Progestins</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Megestrol acetate</td><td>Megace, generic</td><td>40 mg orally 4 times a day</td><td>80 mg twice daily
+also appropriate</td><td></td><td>Absorption may be increased
+when taken with food</td></tr><tr><td>Medroxyprogesterone</td><td>DepoProvera,
+generic</td><td>400 mg IM every week</td><td>400–1000 mg IM
+every week</td><td>May need to decrease dose in severe
+liver impairmenta</td><td></td></tr><tr><td>Androgens</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Fluoxymesterone</td><td>Androxy, generic</td><td>10 mg orally twice a day</td><td>10–20/day in
+divided doses</td><td>Avoid in severe renal or liver
+impairmenta</td><td></td></tr><tr><td>Estrogens</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Ethinyl estradiol</td><td>Multiple
+generics</td><td>1 mg orally 3 times a day</td><td>Lower doses not
+effective</td><td>Avoid in jaundice or “marked” liver
+disease</td><td>Take with food</td></tr><tr><td>Conjugated estrogens</td><td>Premarin</td><td>2.5 mg orally 3 times
+a day</td><td>Lower doses not
+effective</td><td>Avoid in jaundice or “marked” liver
+disease</td><td>Take with food</td></tr><tr><td>Biologic/Targeted Therapies</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Abemaciclib (± Letrozole or
+Fulvestrant)</td><td>Verzenio</td><td>Single agent 200 mg
+orally twice a day
+continuously OR</td><td>50–200 mg twice
+a day</td><td>Adjust dose for diarrhea,
+myelosuppression, and/or
+severe hepatic impairment.
+Monitor for hepatotoxicity
+and thromboembolism. Avoid
+concomitant strong inhibitors
+of CYP3A4 and moderate/strong
+inducers of CYP3A4</td><td>Do not split tablets
+(Continued )</td></tr><tr><td></td><td></td><td>Combination 150 mg
+orally twice a day
+continuously</td><td></td><td></td><td></td></tr></table></div><h2>696 SECTION</h2>
+<p>11</p>
+<p>|</p>
+<p>Oncologic</p>
+<p>Disorders</p>
+<p>TABLE 60-3 Therapies Used for Hormone Receptor–Positive Metastatic Breast Cancer (Continued )</p>
+<p>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</p>
+<p>Palbociclib (+ Letrozole or Ibrance 125 mg orally daily × 75–125 mg daily Adjust dose for myelosuppression Do not open capsules</p>
+<p>Fulvestrant) 21 days, followed by and severe hepatic impairment.</p>
+<p>7 days off, repeated Monitor for nausea, diarrhea, and</p>
+<p>every 28 days hepatotoxicity. Avoid concomitant</p>
+<p>strong inhibitors of CYP3A4 and</p>
+<p>moderate/strong inducers of</p>
+<h2>CYP3A4</h2>
+<p>Ribociclib (+ Letrozole or Kisqali 600 mg orally daily × 200–600 mg daily Adjust dose for myelosuppression Do not split tablets</p>
+<p>Fulvestrant) 21 days, followed by and/or severe hepatic or</p>
+<p>7 days off, repeated renal impairment. Monitor</p>
+<p>every 28 days for hepatotoxicity and QT</p>
+<p>prolongation. Avoid concomitant</p>
+<p>strong inhibitors of CYP3A4 and</p>
+<p>moderate/strong inducers of</p>
+<h2>CYP3A4</h2>
+<p>Everolimus (+ Exemestane Afinitor 10 mg orally daily 2.5–10 mg daily Adjust dose in mild, moderate, and Do not split tablets</p>
+<p>or Fulvestrant or severe liver impairment; also</p>
+<p>Tamoxifen) monitor for myelosuppression,</p>
+<p>hyperglycemia, dyslipidemia, renal</p>
+<pre><code>dysfunction. May need to adjust</code></pre>
+<p>dose with concomitant CYP3A4</p>
+<p>inhibitors/inducers</p>
+<p>aSevere liver impairment: Child–Pugh class C; moderate liver impairment: Child–Pugh class B; minor liver impairment: Child–Pugh class A.</p>
+<p>IM, intramuscular; LHRH, luteinizing hormone-releasing hormone; SC, subcutaneous; SERD, selective estrogen receptor downregulator.</p>
+<p>CH60.indd</p>
+<p>696</p>
+<p>19-11-2020</p>
+<p>18:15:29</p>
+<div class="table-container"><table><tr><th>Drug Brand Name Initial Dose Usual Range Special Population Dose Comments</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Palbociclib (+ Letrozole or
+Fulvestrant)</td><td>Ibrance</td><td>125 mg orally daily ×
+21 days, followed by
+7 days off, repeated
+every 28 days</td><td>75–125 mg daily</td><td>Adjust dose for myelosuppression
+and severe hepatic impairment.
+Monitor for nausea, diarrhea, and
+hepatotoxicity. Avoid concomitant
+strong inhibitors of CYP3A4 and
+moderate/strong inducers of
+CYP3A4</td><td>Do not open capsules</td></tr><tr><td>Ribociclib (+ Letrozole or
+Fulvestrant)</td><td>Kisqali</td><td>600 mg orally daily ×
+21 days, followed by
+7 days off, repeated
+every 28 days</td><td>200–600 mg daily</td><td>Adjust dose for myelosuppression
+and/or severe hepatic or
+renal impairment. Monitor
+for hepatotoxicity and QT
+prolongation. Avoid concomitant
+strong inhibitors of CYP3A4 and
+moderate/strong inducers of
+CYP3A4</td><td>Do not split tablets</td></tr><tr><td>Everolimus (+ Exemestane
+or Fulvestrant or
+Tamoxifen)</td><td>Afinitor</td><td>10 mg orally daily</td><td>2.5–10 mg daily</td><td>Adjust dose in mild, moderate, and
+severe liver impairment; also
+monitor for myelosuppression,
+hyperglycemia, dyslipidemia, renal
+dysfunction. May need to adjust
+dose with concomitant CYP3A4
+inhibitors/inducers</td><td>Do not split tablets</td></tr></table></div><h2>Breast Cancer | CHAPTER 60</h2>
+<li>Response rates are high with combination chemotherapy, but sequential use of single</li>
+<p>agents is an effective strategy and may be preferred due to decreased rates of adverse</p>
+<p>events. In the palliative setting, when efficacy is similar, the least toxic approach is</p>
+<h2>preferred (Table 60-4).</h2>
+<p>TABLE 60-4 Select Chemotherapy Regimens for HER2-Negative Metastatic Breast Cancer</p>
+<p>Single-Agent Chemotherapy</p>
+<p>Paclitaxel Vinorelbine</p>
+<p>Paclitaxel 175 mg/m2 IV over 3 hours Vinorelbine 25 mg/m2/week IV</p>
+<p>Repeat cycles every 21 days Repeat cycles every 7 days (adjust dose based</p>
+<p>or on absolute neutrophil count; see product</p>
+<p>information)</p>
+<p>Paclitaxel 80 mg/m2/week IV over 1 hour</p>
+<p>Repeat dose every 7 days</p>
+<p>Docetaxel Gemcitabine</p>
+<p>Docetaxel 60–100 mg/m2 IV over 1 hour Gemcitabine 800–1200 mg/m2/week IV, days</p>
+<p>Repeat cycles every 21 days 1, 8, and 15</p>
+<p>Repeat cycles every 28 days (may need to</p>
+<p>hold day 15 dose based on blood counts)</p>
+<p>Protein-Bound Paclitaxel Ixabepilone</p>
+<p>Protein-Bound Paclitaxel 260 mg/m2 IV over Ixabepilone 40 mg/m2 IV over 3 hours</p>
+<p>30 minutes Repeat cycles every 21 days</p>
+<p>Repeat cycles every 21 days</p>
+<p>or Eribulin</p>
+<p>Protein-Bound Paclitaxel 100–125 mg/m2 IV Eribulin 1.4 mg/m2/dose IV over 2–5 minutes</p>
+<p>over 30 minutes on days 1, 8, and 15 on days 1 and 8</p>
+<p>Repeat cycle every 28 days Repeat dose every 21 days</p>
+<p>Capecitabine Liposomal Doxorubicin</p>
+<p>Capecitabine 1000–1250 mg/m2 orally Liposomal Doxorubicin 50 mg/m2 IV over</p>
+<p>twice daily for 14 days variable duration</p>
+<p>Repeat cycles every 21 days Repeat cycles every 28 days</p>
+<p>Olaparib Talazoparib</p>
+<p>Olaparib tablet 300 mg orally twice daily Talazoparib tablet 1 mg orally daily</p>
+<p>Repeat cycles every 28 days Repeat cycles every 28 days</p>
+<p>Combination Chemotherapy Regimens</p>
+<p>Gemcitabine + Carboplatin Paclitaxel + Gemcitabine</p>
+<p>Gemcitabine 1000 mg/m2 IV, days 1 and 8 Paclitaxel 175 mg/m2 IV over 3 hours, day 1</p>
+<p>Carboplatin AUC 2 IV, days 1 and 8 Gemcitabine 1250 mg/m2 IV days 1 and 8</p>
+<p>Repeat cycles every 21 days Repeat cycles every 21 days</p>
+<p>Docetaxel + Capecitabine Paclitaxel + Bevacizumab</p>
+<p>Docetaxel 75 mg/m2 IV over 1 hour, day 1 Paclitaxel 90 mg/m2 IV over 1 hour, days 1,</p>
+<p>Capecitabine 950 mg/m2 orally twice daily 8, and 15</p>
+<p>for 14 days Bevacizumab 10 mg/kg IV over 30–90</p>
+<p>Repeat cycles every 21 days minutes, days 1 and 15</p>
+<p>Repeat cycles every 28 days</p>
+<p>Adapted from NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines®). Breast Cancer V.3.2019.</p>
+<p>National Comprehensive Cancer Network, Inc. Accessed September 20, 2019.</p>
+<p>697</p>
+<p>CH60.indd 697 19-11-2020 18:15:29</p>
+<div class="table-container"><table><tr><th>TABLE 60-4 Select Chemotherapy Regimens for HER2-Negative Metastatic Breast Cancer</th><th></th></tr><tr><td>Single-Agent Chemotherapy</td><td></td></tr><tr><td>Paclitaxel
+Paclitaxel 175 mg/m2 IV over 3 hours
+Repeat cycles every 21 days
+or
+Paclitaxel 80 mg/m2/week IV over 1 hour
+Repeat dose every 7 days</td><td>Vinorelbine
+Vinorelbine 25 mg/m2/week IV
+Repeat cycles every 7 days (adjust dose based
+on absolute neutrophil count; see product
+information)</td></tr><tr><td>Docetaxel
+Docetaxel 60–100 mg/m2 IV over 1 hour
+Repeat cycles every 21 days</td><td>Gemcitabine
+Gemcitabine 800–1200 mg/m2/week IV, days
+1, 8, and 15
+Repeat cycles every 28 days (may need to
+hold day 15 dose based on blood counts)</td></tr><tr><td>Protein-Bound Paclitaxel
+Protein-Bound Paclitaxel 260 mg/m2 IV over
+30 minutes
+Repeat cycles every 21 days</td><td>Ixabepilone
+Ixabepilone 40 mg/m2 IV over 3 hours
+Repeat cycles every 21 days</td></tr><tr><td>or
+Protein-Bound Paclitaxel 100–125 mg/m2 IV
+over 30 minutes on days 1, 8, and 15
+Repeat cycle every 28 days</td><td>Eribulin
+Eribulin 1.4 mg/m2/dose IV over 2–5 minutes
+on days 1 and 8
+Repeat dose every 21 days</td></tr><tr><td>Capecitabine
+Capecitabine 1000–1250 mg/m2 orally
+twice daily for 14 days
+Repeat cycles every 21 days</td><td>Liposomal Doxorubicin
+Liposomal Doxorubicin 50 mg/m2 IV over
+variable duration
+Repeat cycles every 28 days</td></tr><tr><td>Olaparib
+Olaparib tablet 300 mg orally twice daily
+Repeat cycles every 28 days</td><td>Talazoparib
+Talazoparib tablet 1 mg orally daily
+Repeat cycles every 28 days</td></tr><tr><td>Combination Chemotherapy Regimens</td><td></td></tr><tr><td>Gemcitabine + Carboplatin
+Gemcitabine 1000 mg/m2 IV, days 1 and 8
+Carboplatin AUC 2 IV, days 1 and 8
+Repeat cycles every 21 days</td><td>Paclitaxel + Gemcitabine
+Paclitaxel 175 mg/m2 IV over 3 hours, day 1
+Gemcitabine 1250 mg/m2 IV days 1 and 8
+Repeat cycles every 21 days</td></tr><tr><td>Docetaxel + Capecitabine
+Docetaxel 75 mg/m2 IV over 1 hour, day 1
+Capecitabine 950 mg/m2 orally twice daily
+for 14 days
+Repeat cycles every 21 days</td><td>Paclitaxel + Bevacizumab
+Paclitaxel 90 mg/m2 IV over 1 hour, days 1,
+8, and 15
+Bevacizumab 10 mg/kg IV over 30–90
+minutes, days 1 and 15
+Repeat cycles every 28 days</td></tr></table></div><h2>SECTION 11 | Oncologic Disorders</h2>
+<li>Treatment with sequential single agents is recommended over combination regimens</li>
+<p>unless the patient has rapidly progressive disease, life-threatening visceral disease, or</p>
+<p>the need for rapid symptom control.</p>
+<li>Most patients experience partial responses to chemotherapy, but complete disappear-</li>
+<p>ance of disease occurs in less than 10% of patients. The median duration of response</p>
+<p>is highly variable, ranging from 5–18 months; the median OS is 14–33 months.</p>
+<p>A specific chemotherapy regimen is continued until there is unequivocal evidence of</p>
+<p>progressive disease or intolerable side effects.</p>
+<li>Anthracyclines and taxanes produce response rates of 50% to 60% when used as</li>
+<p>first-line therapy for MBC. Single-agent capecitabine, vinorelbine, and gemcitabine</p>
+<p>have response rates of 20% to 25% when used after an anthracycline and a taxane.</p>
+<li>Ixabepilone, a microtubule stabilizing agent, is indicated as monotherapy or in</li>
+<p>combination with capecitabine. Eribulin is a second antimicrotubule agent approved</p>
+<p>as monotherapy in patients who have received at least two prior chemotherapy regi-</p>
+<p>mens for MBC.</p>
+<p>Radiation Therapy</p>
+<li>Commonly used to treat painful bone metastases or other localized sites of disease,</li>
+<p>including brain and spinal cord lesions. Pain relief is seen in approximately 90% of</p>
+<p>patients who receive RT for painful bone metastases.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<h2>EARLY BREAST CANCER</h2>
+<li>The goal of adjuvant therapy, chemotherapy, biologic or targeted therapy, and endo-</li>
+<p>crine therapy, in early-stage disease is cure. Adjuvant therapy is intended to eradicate</p>
+<p>micrometastases and thus cure the patient of breast cancer, which cannot be fully</p>
+<p>evaluated for years after initial diagnosis and treatment. In addition, because disease</p>
+<p>cannot be detected at the time adjuvant therapy is started, an assessment of disease</p>
+<p>response is not possible.</p>
+<li>Adjuvant chemotherapy can cause significant toxicity. Optimize supportive care mea-</li>
+<p>sures such as antiemetics and growth factors to maintain dose intensity.</p>
+<h2>LOCALLY ADVANCED BREAST CANCER</h2>
+<li>The goal of neoadjuvant chemotherapy in locally advanced breast cancer is cure.</li>
+<p>Complete pathologic response, determined at the time of surgery, is the desired end</p>
+<p>point.</p>
+<h2>METASTATIC BREAST CANCER</h2>
+<li>Palliation is the therapeutic end point in the treatment of MBC. Optimizing quality</li>
+<p>of life is an important therapeutic end point. Valid and reliable tools are available for</p>
+<p>objective assessment of quality of life in patients with breast cancer.</p>
+<li>The least toxic therapies are used initially, with increasingly aggressive therapies</li>
+<p>applied in a sequential manner that does not significantly compromise quality of life.</p>
+<li>Tumor response is measured by changes in laboratory tests, diagnostic imaging, or</li>
+<p>physical signs or symptoms.</p>
+<p>See Chapter 145, Breast Cancer, authored by Bonnie Lin Boster, Neelam K. Patel, and</p>
+<p>Laura Boehnke Michaud, for a more detailed discussion of this topic.</p>
+<p>698</p>
+<p>CH60.indd 698 19-11-2020 18:15:29</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

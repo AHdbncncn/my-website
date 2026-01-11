@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70. Schizophrenia</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>70. Schizophrenia</h1>
+        </header>
+        <main>
+            <p>813</p>
+<h2>RETPAHC</h2>
+<p>70</p>
+<p>Schizophrenia</p>
+<li>Schizophrenia is characterized by positive symptoms (eg, delusions, disorganized</li>
+<p>speech [association disturbance], hallucinations, behavior disturbance [disorganized</p>
+<p>or catatonic], and illusions); negative symptoms (eg, alogia [poverty of speech],</p>
+<pre><code>avolition, flat affect, anhedonia, and social isolation); and cognitive dysfunction (eg,</code></pre>
+<pre><code>impaired attention, working memory, and executive function) all leading to impaired</code></pre>
+<pre><code>psychosocial functioning.</code></pre>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Schizophrenia causation theories include genetic predisposition, obstetric complica-</li>
+<p>tions with hypoxia, increased neuronal pruning, neurodevelopmental disorders, neu-</p>
+<p>rodegenerative theories, dopamine receptor defect, and regional brain abnormalities</p>
+<p>including hyper- or hypoactivity of dopaminergic processes in specific brain regions.</p>
+<p>Increased ventricular size and decreased gray matter have been reported.</p>
+<li>Alterations in glutamatergic neurotransmission resulting in increased neuronal pruning</li>
+<p>have also been implicated in schizophrenia pathogenesis. Genes controlling N-methyl-</p>
+<p>d-aspartate (NMDA) receptor activity are hypothesized to be part of this process.</p>
+<li>Studies have also shown increased susceptibility to immune/autoimmune disorders in</li>
+<pre><code>schizophrenia, as well as abnormalities of autoantibodies and cytokine functioning.</code></pre>
+<li>Positive symptoms may be closely associated with dopamine receptor hyperactivity</li>
+<p>in the mesocaudate, whereas negative and cognitive symptoms may be most closely</p>
+<pre><code>related to dopamine receptor hypofunction in the prefrontal cortex.</code></pre>
+<h2>CLINICAL PRESENTATION</h2>
+<li>Symptoms of the acute episode may include being out of touch with reality; halluci-</li>
+<p>nations (especially hearing voices); delusions (fixed false beliefs); ideas of influence</p>
+<p>(actions controlled by external influences); disconnected thought processes (loose</p>
+<p>associations); illogical conversation; ambivalence (contradictory thoughts); flat,</p>
+<p>inappropriate, or labile affect; autistic thinking (withdrawn and inwardly directed</p>
+<p>thinking); uncooperativeness, hostility, and verbal or physical aggression; impaired</p>
+<p>self-care skills; and disturbed sleep and appetite.</p>
+<li>After the acute psychotic episode has resolved, typically there are residual features</li>
+<p>(eg, anxiety, suspiciousness, lack of motivation, poor insight, impaired judgment,</p>
+<p>social withdrawal, difficulty in learning from experience, and poor self-care skills).</p>
+<li>Comorbid psychiatric and medical disorders (eg depression, anxiety disorders,</li>
+<p>substance abuse, and general medical disorders such as respiratory disorders, cardio-</p>
+<p>vascular disorders, and metabolic disturbances) can also occur. Medication nonad-</p>
+<p>herence is also common.</p>
+<h2>DIAGNOSIS</h2>
+<li>The Diagnostic and Statistical Manual of Mental Disorders, 5th ed. (DSM-5), specifies</li>
+<p>the following diagnostic criteria:</p>
+<p>✓ Continuous symptoms that persist for at least 6 months with at least 1 month</p>
+<p>of active phase symptoms (Criterion A) and may include prodromal or residual</p>
+<p>symptoms.</p>
+<p>ο Criterion A: For at least 1 month, there must be at least two of the following</p>
+<p>present for a significant portion of time: delusions, hallucinations, disorganized</p>
+<p>speech, grossly disorganized or catatonic behavior, and negative symptoms. At</p>
+<p>least one symptom must be delusions, hallucinations, or disorganized speech.</p>
+<pre><code>ο Criterion B: Significantly impaired functioning.</code></pre>
+<p>CH70.indd 813 20-11-2020 16:46:09</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>70</th><th>Schizophrenia</th></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Before treatment, perform a mental status examination, physical (vitals includ-</li>
+<p>ing height and weight) and neurologic examination, complete family and social</p>
+<p>history, psychiatric diagnostic interview, and laboratory workup (complete blood</p>
+<pre><code>count [CBC], electrolytes, hepatic function, renal function, electrocardiogram</code></pre>
+<pre><code>[ECG], fasting serum glucose, serum lipids, thyroid function, and urine drug</code></pre>
+<p>screen).</p>
+<h2>TREATMENT</h2>
+<li>Goals of Treatment: The goal is to alleviate target symptoms, avoid side effects,</li>
+<pre><code>improve psychosocial functioning and productivity, achieve compliance with the</code></pre>
+<p>prescribed regimen, integrate the patient back into the community, prevent relapse,</p>
+<p>and involve the patient in treatment planning.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<li>Psychosocial rehabilitation programs to improve the patients’ adaptive functioning</li>
+<p>are the mainstay of nondrug treatment for schizophrenia. Programs that involve the</p>
+<p>family aimed at supportive employment and housing are effective and considered</p>
+<pre><code>“best practices” and decrease rehospitalization while improving functioning in the</code></pre>
+<p>community.</p>
+<li>It is important to frame clinical decision making in the context of a mutual process</li>
+<p>involving patient and clinician.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<li>Both first-generation antipsychotics (FGAs, also known as traditional) and second-</li>
+<p>generation antipsychotics (SGAs, also known as atypical) are used to treat schizo-</p>
+<p>phrenia. Available antipsychotics and dosage ranges are shown in Table 70-1.</p>
+<li>Table 70-2 summarizes the long-acting injectable antipsychotics (LAIAs), including</li>
+<p>dosage range, conversion from oral to LAIA, and injection method/technique.</p>
+<li>The exact mechanism of action of antipsychotics is unknown. FGAs have been found</li>
+<p>to have high D antagonism and low serotonin-2 receptor [5-HT ] antagonism.</p>
+<h2>2 2A</h2>
+<p>SGAs exhibit moderate-to-high D antagonism and high 5-HT antagonism, and</p>
+<h2>2 2A</h2>
+<p>clozapine shows low D antagonism and high 5-HT antagonism.</p>
+<li>Base antipsychotic selec 2 tion on: (1) the need to avoi 2 d A certain side effects, (2) concur-</li>
+<p>rent medical or psychiatric disorders, and (3) patient or family history of response.</p>
+<p>Figure 70-1 is an algorithm for management of schizophrenia. Clozapine has supe-</p>
+<p>rior efficacy for suicidal behavior.</p>
+<li>In first-episode schizophrenia, initiate antipsychotic dosing at the lower end of the</li>
+<p>dosing range. Use of SGAs during the first acute episode results in greater treatment</p>
+<p>retention and relapse prevention compared to FGAs. Aripiprazole, risperidone, or</p>
+<p>ziprasidone may be preferred first line.</p>
+<li>Risperidone injection is more effective than oral risperidone in preventing relapse</li>
+<p>over a 1-year period for first episode schizophrenia. A long-acting antipsychotic</p>
+<p>should be considered during stages 1A, 1B, and 2.</p>
+<li>In Stage 3, clozapine monotherapy is recommended.</li>
+<li>For Stage 4, minimal evidence exists for any treatment option for patients who do not</li>
+<p>have adequate symptom improvement with clozapine. Use of antipsychotic combina-</p>
+<p>tions is controversial, as limited evidence supports increased efficacy, despite this</p>
+<p>practice being somewhat common.</p>
+<li>Predictors of antipsychotic response include prior response to the drug selected,</li>
+<p>absence of alcohol or drug abuse, acute onset and short duration of illness, later age</p>
+<p>of onset, affective symptoms, family history of affective illness, medication adherence</p>
+<p>employment, and good premorbid adjustment. Negative symptoms are generally less</p>
+<p>responsive to antipsychotic therapy.</p>
+<p>814</p>
+<p>CH70.indd 814 20-11-2020 16:46:09</p>
+<h2>Schizophrenia | CHAPTER 70</h2>
+<h2>TABLE 70-1 Available Antipsychotics and Dosage Ranges</h2>
+<p>Usual</p>
+<p>Starting Dosage</p>
+<p>Dose Range</p>
+<p>Generic Name Trade Name (mg/day) (mg/day) Comments</p>
+<p>First-generation antipsychotics</p>
+<p>Chlorpromazine Thorazine 50–150 300–1000 Most weight gain</p>
+<p>among FGAs</p>
+<p>Fluphenazine Prolixin 5 5–20</p>
+<p>Haloperidol Haldol 2–5 2–20 Higher dropout rate</p>
+<p>in first episode</p>
+<p>Loxapine Loxitane 20 50–150</p>
+<p>Loxapine inhaled Adasuve 10 10; max Approved REMS</p>
+<p>10 mg per program only</p>
+<p>24 hrs</p>
+<p>Perphenazine Trilafon 4–24 16–64</p>
+<p>Thioridazine Mellaril 50–150 100–800 Significant QTc</p>
+<p>prolongation</p>
+<p>Thiothixene Navane 4–10 4–50</p>
+<p>Trifluoperazine Stelazine 2–5 5–40</p>
+<p>Second-generation antipsychotics</p>
+<p>Aripiprazole Abilify 5–15 15–30</p>
+<p>Asenapine Saphris 5 10–20 Sublingual only, no</p>
+<p>food or drink for</p>
+<p>10 minutes after</p>
+<p>administration</p>
+<p>Brexpiprazole Rexulti 1 2–4</p>
+<p>Cariprazine Vraylar 1.5 1.5–6 Due to long half-life,</p>
+<p>steady state is</p>
+<p>not reached for</p>
+<p>several weeks</p>
+<p>Clozapine Clozaril 25 100–800 Check plasma level</p>
+<p>before exceeding</p>
+<p>600 mg</p>
+<p>Iloperidone Fanapt 1–2 6–24 Care with dosing</p>
+<p>in CYP2D6 slow</p>
+<p>metabolizers</p>
+<p>Lurasidone Latuda 20–40 40–120 Take with food, ≥350</p>
+<p>calories (1460 J)</p>
+<p>Olanzapine Zyprexa 5–10 10–20 Avoid in first episode</p>
+<p>because of</p>
+<p>weight gain</p>
+<p>Paliperidone Invega 3–6 3–12 Bioavailability</p>
+<p>increased when</p>
+<p>administered</p>
+<p>with food</p>
+<p>(Continued )</p>
+<p>815</p>
+<p>CH70.indd 815 20-11-2020 16:46:10</p>
+<div class="table-container"><table><tr><th>TABLE 70-1 Available Antipsychotics and Dosage Ranges</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Trade Name</td><td>Starting
+Dose
+(mg/day)</td><td>Usual
+Dosage
+Range
+(mg/day)</td><td>Comments</td></tr><tr><td>First-generation antipsychotics</td><td></td><td></td><td></td><td></td></tr><tr><td>Chlorpromazine</td><td>Thorazine</td><td>50–150</td><td>300–1000</td><td>Most weight gain
+among FGAs</td></tr><tr><td>Fluphenazine</td><td>Prolixin</td><td>5</td><td>5–20</td><td></td></tr><tr><td>Haloperidol</td><td>Haldol</td><td>2–5</td><td>2–20</td><td>Higher dropout rate
+in first episode</td></tr><tr><td>Loxapine</td><td>Loxitane</td><td>20</td><td>50–150</td><td></td></tr><tr><td>Loxapine inhaled</td><td>Adasuve</td><td>10</td><td>10; max
+10 mg per
+24 hrs</td><td>Approved REMS
+program only</td></tr><tr><td>Perphenazine</td><td>Trilafon</td><td>4–24</td><td>16–64</td><td></td></tr><tr><td>Thioridazine</td><td>Mellaril</td><td>50–150</td><td>100–800</td><td>Significant QTc
+prolongation</td></tr><tr><td>Thiothixene</td><td>Navane</td><td>4–10</td><td>4–50</td><td></td></tr><tr><td>Trifluoperazine</td><td>Stelazine</td><td>2–5</td><td>5–40</td><td></td></tr><tr><td>Second-generation antipsychotics</td><td></td><td></td><td></td><td></td></tr><tr><td>Aripiprazole</td><td>Abilify</td><td>5–15</td><td>15–30</td><td></td></tr><tr><td>Asenapine</td><td>Saphris</td><td>5</td><td>10–20</td><td>Sublingual only, no
+food or drink for
+10 minutes after
+administration</td></tr><tr><td>Brexpiprazole</td><td>Rexulti</td><td>1</td><td>2–4</td><td></td></tr><tr><td>Cariprazine</td><td>Vraylar</td><td>1.5</td><td>1.5–6</td><td>Due to long half-life,
+steady state is
+not reached for
+several weeks</td></tr><tr><td>Clozapine</td><td>Clozaril</td><td>25</td><td>100–800</td><td>Check plasma level
+before exceeding
+600 mg</td></tr><tr><td>Iloperidone</td><td>Fanapt</td><td>1–2</td><td>6–24</td><td>Care with dosing
+in CYP2D6 slow
+metabolizers</td></tr><tr><td>Lurasidone</td><td>Latuda</td><td>20–40</td><td>40–120</td><td>Take with food, ≥350
+calories (1460 J)</td></tr><tr><td>Olanzapine</td><td>Zyprexa</td><td>5–10</td><td>10–20</td><td>Avoid in first episode
+because of
+weight gain</td></tr><tr><td>Paliperidone</td><td>Invega</td><td>3–6</td><td>3–12</td><td>Bioavailability
+increased when
+administered
+with food
+(Continued )</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 70-1 Available Antipsychotics and Dosage Ranges (Continued )</p>
+<p>Usual</p>
+<p>Starting Dosage</p>
+<p>Dose Range</p>
+<p>Generic Name Trade Name (mg/day) (mg/day) Comments</p>
+<p>Quetiapine Seroquel 50 300–800</p>
+<p>Quetiapine XR Seroquel XR 300 400–800</p>
+<p>Risperidone Risperdal 1–2 2–8</p>
+<p>Ziprasidone Geodon 40 80–160 Take with food, ≥500</p>
+<p>calories (2100 J)</p>
+<p>Note: In first-episode patients, starting dose and target dose should generally be 50% of the usual</p>
+<p>dose range. See Long-Acting Injectable Antipsychotics in text for dosing of these agents.</p>
+<p>REMS, Risk Evaluation and Mitigation Strategy; XR: extended release.</p>
+<li>An initial dysphoric response, (eg, dislike of the medication or feeling worse, com-</li>
+<p>bined with anxiety or akathisia) portends a poor drug response, adverse effects, and</p>
+<p>nonadherence.</p>
+<li>The importance of developing a therapeutic alliance between the patient and the</li>
+<p>clinician cannot be overemphasized.</p>
+<li>Table 70-3 outlines the relative adverse effect incidence of commonly used antipsy-</li>
+<p>chotics, which often follows their binding affinities.</p>
+<li>Anticholinergic side effects, most likely to occur with low-potency FGA, clozapine,</li>
+<p>and olanzapine, include impaired memory, dry mouth, constipation, tachycardia,</p>
+<p>blurred vision, inhibition of ejaculation, and urinary retention. Elderly patients are</p>
+<p>especially sensitive to these side effects.</p>
+<li>Sedation can be reduced if most or the entire antipsychotic daily dose is taken at</li>
+<p>bedtime.</p>
+<li>Antipsychotics are highly lipophilic, bind highly to membranes and plasma proteins,</li>
+<p>have large volumes of distribution, and are largely metabolized by cytochrome P450</p>
+<p>(CYP) pathways (except ziprasidone). Pharmacogenetics may impact the pharmaco-</p>
+<p>kinetics of the antipsychotics.</p>
+<li>Most antipsychotics have elimination half-lives of 24 hours or more, except quetiap-</li>
+<p>ine and ziprasidone. Therefore, most can be dosed once daily.</p>
+<li>Antipsychotic pharmacokinetics can be significantly affected by concomitant enzyme</li>
+<p>inducers or inhibitors. Smoking is a potent inducer of hepatic enzymes and may</p>
+<p>increase antipsychotic clearance by as much as 50%. Asenapine, an inhibitor of</p>
+<p>CPY2D6, is the only antipsychotic that significantly affects the pharmacokinetics of</p>
+<p>other medications. Fluvoxamine, an inhibitor of CYP1A2, increases clozapine serum</p>
+<p>concentrations by two- to three-fold. Ketoconazole profoundly decreases lurasidone</p>
+<p>metabolism, and it is recommended that they not be used concomitantly. Carbamaze-</p>
+<p>pine reportedly decreases aripiprazole serum concentrations. Reduce the iloperidone</p>
+<p>dose by 50% when used with CYP2D6 inhibitors such as fluoxetine or paroxetine.</p>
+<li>Initial Therapy</li>
+<li>The goals during the first 7 days of treatment are decreased agitation, hostility, anxi-</li>
+<p>ety, and aggression and normalization of sleep and eating.</p>
+<li>Titrate the antipsychotic dose over the first few days to an average effective dose in</li>
+<p>(the middle of the ranges shown in Table 70-1), with the dose for first episode psy-</p>
+<p>chosis being half of that used for chronically ill patients. Rapid titration of dose is not</p>
+<p>recommended. If there is no improvement within 2 weeks at a therapeutic dose, then</p>
+<h2>move to the next treatment stage in Figure 70-1.</h2>
+<li>In partial responders who are tolerating the antipsychotic well, it may be reasonable</li>
+<p>to titrate above the usual dose range for 2–4 weeks with close monitoring.</p>
+<p>816</p>
+<p>CH70.indd 816 20-11-2020 16:46:10</p>
+<div class="table-container"><table><tr><th>TABLE 70-1 Available Antipsychotics and Dosage Ranges (Continued )</th><th></th><th></th><th></th><th></th></tr><tr><td>Generic Name</td><td>Trade Name</td><td>Starting
+Dose
+(mg/day)</td><td>Usual
+Dosage
+Range
+(mg/day)</td><td>Comments</td></tr><tr><td>Quetiapine</td><td>Seroquel</td><td>50</td><td>300–800</td><td></td></tr><tr><td>Quetiapine XR</td><td>Seroquel XR</td><td>300</td><td>400–800</td><td></td></tr><tr><td>Risperidone</td><td>Risperdal</td><td>1–2</td><td>2–8</td><td></td></tr><tr><td>Ziprasidone</td><td>Geodon</td><td>40</td><td>80–160</td><td>Take with food, ≥500
+calories (2100 J)</td></tr></table></div><h2>Schizophrenia | CHAPTER 70</h2>
+<p>Suggested schizophrenia pharmacotherapy algorithm</p>
+<p>Stage 1A Stage 1B</p>
+<p>Treatment-naïve individual with Previously treated with an</p>
+<p>first break schizophrenia. antipsychotic for</p>
+<li>• • schizophrenia, and treatment</li>
+<p>Aripiprazole, risperidone and is being restarted.</p>
+<p>ziprasidone. • • •</p>
+<p>Any antipsychotic except clozapine.</p>
+<p>An antipsychotic that previously</p>
+<p>produced poor efficacy or</p>
+<p>intolerance should not be used.</p>
+<p>Stage 2</p>
+<p>Patient had inadequate clinical response</p>
+<p>with antipsychotic used in stage 1A or 1B.</p>
+<li>• •</li>
+<p>Any antipsychotic monotherapy, except</p>
+<p>clozapine, not used in stage 1A or 1B.</p>
+<p>May consider clozapine in severely</p>
+<p>suicidal patient.</p>
+<p>Stage 3</p>
+<h2>Use a long-acting injectable</h2>
+<p>antipsychotic at stages</p>
+<p>Patient had inadequate clinical</p>
+<p>1B, 2, or 4 if needed for poor</p>
+<p>response with two appropriate</p>
+<p>patient adherence or because of</p>
+<p>antipsychotic trials.</p>
+<p>patient preference.</p>
+<li>• •</li>
+<p>Clozapine monotherapy is recommended.</p>
+<p>Stage 4</p>
+<p>Minimal evidence exists for treatment</p>
+<p>options for patients who have not</p>
+<p>received an adequate treatment response</p>
+<p>with clozapine.</p>
+<li>• •</li>
+<p>Alternate antipsychotic monotherapies</p>
+<p>may be as good as augmentation or</p>
+<p>antipsychotic combinations.</p>
+<p>Schizophrenia should be treated in the context of an interprofessional model that addresses the psy-</p>
+<p>chosocial needs of the patient, necessary psychiatric pharmacotherapy, psychiatric co-occurring mental</p>
+<p>disorders, treatment adherence, and any medical problems the patient may have.</p>
+<p>FIGURE 70-1. Pharmacotherapy algorithm for treatment of schizophrenia.</p>
+<p>817</p>
+<p>CH70.indd 817 20-11-2020 16:46:10</p>
+<div class="table-container"><table><tr><th>Stage 1A</th></tr><tr><td>Treatment-naïve individual with
+first break schizophrenia.
+• • •
+Aripiprazole, risperidone and
+ziprasidone.</td></tr></table></div><div class="table-container"><table><tr><th>Stage 1B</th></tr><tr><td>Previously treated with an
+antipsychotic for
+schizophrenia, and treatment
+is being restarted.
+• • •
+Any antipsychotic except clozapine.
+An antipsychotic that previously
+produced poor efficacy or
+intolerance should not be used.</td></tr></table></div><div class="table-container"><table><tr><th>Stage 2</th></tr><tr><td>Patient had inadequate clinical response
+with antipsychotic used in stage 1A or 1B.
+• • •
+Any antipsychotic monotherapy, except
+clozapine, not used in stage 1A or 1B.
+May consider clozapine in severely
+suicidal patient.</td></tr></table></div><div class="table-container"><table><tr><th>Stage 3</th></tr><tr><td>Patient had inadequate clinical
+response with two appropriate
+antipsychotic trials.
+• • •
+Clozapine monotherapy is recommended.</td></tr></table></div><div class="table-container"><table><tr><th>Stage 4</th></tr><tr><td>Minimal evidence exists for treatment
+options for patients who have not
+received an adequate treatment response
+with clozapine.
+• • •
+Alternate antipsychotic monotherapies
+may be as good as augmentation or
+antipsychotic combinations.</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 70-2 Summary of Available Long-Acting Injectable (LAI) Antipsychotics</p>
+<p>Paliperidone</p>
+<p>Palmitate Aripiprazole</p>
+<p>Risperidone Paliperidone (Invega Olanzapine Monohydrate</p>
+<p>Medication Name Fluphenazine Haloperidol (Risperdal Risperidone Palmitate (Invega Trinza®) Pamoate (Zyprexa (Abilify Aripiprazole</p>
+<p>Parameter Decanoate Decanoate Consta) (PERSERIS) Sustenna®) (1MPP) Relprevv®) (3MPP) Maintena®) (Lauroxil Aristada®)</p>
+<p>Dose range (mg) 12.5–100 20–450 12.5–50 90–120 39–234 273–819 150–405 160–400 441–882</p>
+<p>PO Overlap None 4 weeks (none if 3 weeks after first None None None None 2 weeks PO dose 21 days PO overlap after</p>
+<p>loading); use PO injection: use PO ranges from 10 first injection</p>
+<p>dose patient was dose patient was to 20 mg/day</p>
+<p>taking prior to taking prior to</p>
+<p>injection injection</p>
+<p>Recommended maximum dose 100 mg every 450 mg every 50 mg every 120 mg 234 mg every 4 weeks 819 mg every 300 mg every 2 weeks 400 mg monthly 882 mg monthly</p>
+<p>2–3 weeks 4 weeks 2 weeks 3 months or 405 mg every</p>
+<p>4 weeks</p>
+<p>Initiation or loading dose Can load Can load None None Initiation required None required, Initiation required None None required, dose</p>
+<p>dose used depends on PO dose</p>
+<p>depends on as follows:</p>
+<p>last Invega If 10 mg/day PO give</p>
+<p>Sustenna dose 441 mg/month IM</p>
+<p>as follows: if</p>
+<p>78 mg give If 15 mg/day PO give</p>
+<p>273 mg; 662 mg/month IM</p>
+<p>if 117 mg give If 20 mg PO give</p>
+<p>410 mg; 882 mg/month IM</p>
+<p>if 156 mg give</p>
+<p>546 mg</p>
+<p>Time to peak 8–24 hours 4–11 days 4–5 weeks 4–6 hours 13 days 30–33 days &lt;1 week 5–7 days 5–6 days</p>
+<p>T 2–3 months 2–3 months 6–8 weeks 60 days 7–11 months Continues 3 months 3–4 months 4 months</p>
+<p>ss</p>
+<p>steady-state</p>
+<p>Half-life 14.2 ± 2.2a days 21 days 3–6 days 9–11 days 25–49 days 84–89 days 30 days 29.9–46.5 days 29.2–34.9 days</p>
+<p>(deltoid)</p>
+<p>118–139 days</p>
+<p>(gluteal)</p>
+<p>Injection Gluteal Yes Yes Yes Abdominal Yes after 2nd dose Yes Yes Yes Yes for all dose</p>
+<p>site only strengths</p>
+<p>Deltoid Yes Yes Yes Yes Yes No No Yes, but only</p>
+<p>441 mg dose</p>
+<p>Notes Z-track Subcutaneous Avoid use in Requires at least Monitor for PDSS Maintenance May require up to 2</p>
+<p>injection patients with a 4-month trial subject to REMS dose reduced to weeks of PO trial to</p>
+<p>moderate-to-severe with Invega 300 mg if patient establish tolerability</p>
+<p>A starting dose 90 mg = 3 mg</p>
+<p>renal impairment Sustenna. Not experiences to aripiprazole before</p>
+<p>of 12.5 mg is PO risperidone</p>
+<p>recommended</p>
+<p>(CrCl &lt;50 mL/min recommended adverse initiating LAIA</p>
+<p>in patients with 120 mg = 4 mg [0.83 mL/sec]) in patients with events. Dose Avoid use of strong</p>
+<p>hepatic or renal PO risperidone moderate or adjustment CYP2D6 and 3A4</p>
+<p>impairment severe renal needed in inhibitors on 662</p>
+<p>impairment CYP2D6 slow and 882 mg dose, no</p>
+<p>(CrCl &lt;50 metabolizers. adjustment needed</p>
+<p>mL/min[0.83 Avoid use for 441 mg dose</p>
+<p>mL/sec]) in patients</p>
+<p>taking CYP</p>
+<p>3A4 inhibitors</p>
+<p>&gt;14 days</p>
+<p>aBased on multiple-dose data. Single-dose data indicate a β-half-life of 6–10 days.</p>
+<p>CrCl, creatine clearance; IM, intramuscular; LAIA, long-acting injectable; PO, oral; T, time to steady state.</p>
+<p>ss</p>
+<p>818</p>
+<p>CH70.indd 818 20-11-2020 16:46:11</p>
+<div class="table-container"><table><tr><th>TABLE 70-2 Summary of Available Long-Acting Injectable (LAI) Antipsychotics</th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Medication Name
+Parameter</td><td></td><td>Fluphenazine
+Decanoate</td><td>Haloperidol
+Decanoate</td><td>Risperidone
+(Risperdal
+Consta)</td><td>Risperidone
+(PERSERIS)</td></tr><tr><td>Dose range (mg)</td><td></td><td>12.5–100</td><td>20–450</td><td>12.5–50</td><td>90–120</td></tr><tr><td>PO Overlap</td><td></td><td>None</td><td>4 weeks (none if
+loading); use PO
+dose patient was
+taking prior to
+injection</td><td>3 weeks after first
+injection: use PO
+dose patient was
+taking prior to
+injection</td><td>None</td></tr><tr><td>Recommended maximum dose</td><td></td><td>100 mg every
+2–3 weeks</td><td>450 mg every
+4 weeks</td><td>50 mg every
+2 weeks</td><td>120 mg</td></tr><tr><td>Initiation or loading dose</td><td></td><td>Can load</td><td>Can load</td><td>None</td><td>None</td></tr><tr><td>Time to peak</td><td></td><td>8–24 hours</td><td>4–11 days</td><td>4–5 weeks</td><td>4–6 hours</td></tr><tr><td>T
+ss</td><td></td><td>2–3 months</td><td>2–3 months</td><td>6–8 weeks</td><td>60 days</td></tr><tr><td>Half-life</td><td></td><td>14.2 ± 2.2a days</td><td>21 days</td><td>3–6 days</td><td>9–11 days</td></tr><tr><td>Injection
+site</td><td>Gluteal
+Deltoid</td><td>Yes
+Yes</td><td>Yes
+Yes</td><td>Yes
+Yes</td><td>Abdominal
+only</td></tr><tr><td>Notes</td><td></td><td></td><td>Z-track Subcutaneous
+injection
+A starting dose
+of 12.5 mg is
+recommended
+in patients with
+hepatic or renal
+impairment</td><td></td><td>90 mg = 3 mg
+PO risperidone
+120 mg = 4 mg
+PO risperidone</td></tr></table></div><h2>Schizophrenia | CHAPTER 70</h2>
+<p>TABLE 70-2 Summary of Available Long-Acting Injectable (LAI) Antipsychotics</p>
+<p>Paliperidone</p>
+<p>Palmitate Aripiprazole</p>
+<p>Risperidone Paliperidone (Invega Olanzapine Monohydrate</p>
+<p>Medication Name Fluphenazine Haloperidol (Risperdal Risperidone Palmitate (Invega Trinza®) Pamoate (Zyprexa (Abilify Aripiprazole</p>
+<p>Parameter Decanoate Decanoate Consta) (PERSERIS) Sustenna®) (1MPP) Relprevv®) (3MPP) Maintena®) (Lauroxil Aristada®)</p>
+<p>Dose range (mg) 12.5–100 20–450 12.5–50 90–120 39–234 273–819 150–405 160–400 441–882</p>
+<p>PO Overlap None 4 weeks (none if 3 weeks after first None None None None 2 weeks PO dose 21 days PO overlap after</p>
+<p>loading); use PO injection: use PO ranges from 10 first injection</p>
+<p>dose patient was dose patient was to 20 mg/day</p>
+<p>taking prior to taking prior to</p>
+<p>injection injection</p>
+<p>Recommended maximum dose 100 mg every 450 mg every 50 mg every 120 mg 234 mg every 4 weeks 819 mg every 300 mg every 2 weeks 400 mg monthly 882 mg monthly</p>
+<p>2–3 weeks 4 weeks 2 weeks 3 months or 405 mg every</p>
+<p>4 weeks</p>
+<p>Initiation or loading dose Can load Can load None None Initiation required None required, Initiation required None None required, dose</p>
+<p>dose used depends on PO dose</p>
+<p>depends on as follows:</p>
+<p>last Invega If 10 mg/day PO give</p>
+<p>Sustenna dose 441 mg/month IM</p>
+<p>as follows: if</p>
+<p>78 mg give If 15 mg/day PO give</p>
+<p>273 mg; 662 mg/month IM</p>
+<p>if 117 mg give If 20 mg PO give</p>
+<p>410 mg; 882 mg/month IM</p>
+<p>if 156 mg give</p>
+<p>546 mg</p>
+<p>Time to peak 8–24 hours 4–11 days 4–5 weeks 4–6 hours 13 days 30–33 days &lt;1 week 5–7 days 5–6 days</p>
+<p>T 2–3 months 2–3 months 6–8 weeks 60 days 7–11 months Continues 3 months 3–4 months 4 months</p>
+<p>ss</p>
+<p>steady-state</p>
+<p>Half-life 14.2 ± 2.2a days 21 days 3–6 days 9–11 days 25–49 days 84–89 days 30 days 29.9–46.5 days 29.2–34.9 days</p>
+<p>(deltoid)</p>
+<p>118–139 days</p>
+<p>(gluteal)</p>
+<p>Injection Gluteal Yes Yes Yes Abdominal Yes after 2nd dose Yes Yes Yes Yes for all dose</p>
+<p>site only strengths</p>
+<p>Deltoid Yes Yes Yes Yes Yes No No Yes, but only</p>
+<p>441 mg dose</p>
+<p>Notes Z-track Subcutaneous Avoid use in Requires at least Monitor for PDSS Maintenance May require up to 2</p>
+<p>injection patients with a 4-month trial subject to REMS dose reduced to weeks of PO trial to</p>
+<p>moderate-to-severe with Invega 300 mg if patient establish tolerability</p>
+<p>A starting dose 90 mg = 3 mg</p>
+<p>renal impairment Sustenna. Not experiences to aripiprazole before</p>
+<p>of 12.5 mg is PO risperidone</p>
+<p>recommended</p>
+<p>(CrCl &lt;50 mL/min recommended adverse initiating LAIA</p>
+<p>in patients with 120 mg = 4 mg [0.83 mL/sec]) in patients with events. Dose Avoid use of strong</p>
+<p>hepatic or renal PO risperidone moderate or adjustment CYP2D6 and 3A4</p>
+<p>impairment severe renal needed in inhibitors on 662</p>
+<p>impairment CYP2D6 slow and 882 mg dose, no</p>
+<p>(CrCl &lt;50 metabolizers. adjustment needed</p>
+<p>mL/min[0.83 Avoid use for 441 mg dose</p>
+<p>mL/sec]) in patients</p>
+<p>taking CYP</p>
+<p>3A4 inhibitors</p>
+<p>&gt;14 days</p>
+<p>aBased on multiple-dose data. Single-dose data indicate a β-half-life of 6–10 days.</p>
+<p>CrCl, creatine clearance; IM, intramuscular; LAIA, long-acting injectable; PO, oral; T, time to steady state.</p>
+<p>ss</p>
+<p>819</p>
+<p>CH70.indd 819 20-11-2020 16:46:11</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>Paliperidone
+Palmitate (Invega
+Sustenna®)</td><td>Paliperidone
+Palmitate
+(Invega
+Trinza®)
+(1MPP)</td><td>Olanzapine
+Pamoate (Zyprexa
+Relprevv®) (3MPP)</td><td>Aripiprazole
+Monohydrate
+(Abilify
+Maintena®)</td><td>Aripiprazole
+(Lauroxil Aristada®)</td></tr><tr><td></td><td>39–234</td><td>273–819</td><td>150–405</td><td>160–400</td><td>441–882</td></tr><tr><td></td><td>None</td><td>None</td><td>None</td><td>2 weeks PO dose
+ranges from 10
+to 20 mg/day</td><td>21 days PO overlap after
+first injection</td></tr><tr><td></td><td>234 mg every 4 weeks</td><td>819 mg every
+3 months</td><td>300 mg every 2 weeks
+or 405 mg every
+4 weeks</td><td>400 mg monthly</td><td>882 mg monthly</td></tr><tr><td></td><td>Initiation required</td><td>None required,
+dose used
+depends on
+last Invega
+Sustenna dose
+as follows: if
+78 mg give
+273 mg;
+if 117 mg give
+410 mg;
+if 156 mg give
+546 mg</td><td>Initiation required</td><td>None</td><td>None required, dose
+depends on PO dose
+as follows:
+If 10 mg/day PO give
+441 mg/month IM
+If 15 mg/day PO give
+662 mg/month IM
+If 20 mg PO give
+882 mg/month IM</td></tr><tr><td></td><td>13 days</td><td>30–33 days</td><td>&lt;1 week</td><td>5–7 days</td><td>5–6 days</td></tr><tr><td></td><td>7–11 months</td><td>Continues
+steady-state</td><td>3 months</td><td>3–4 months</td><td>4 months</td></tr><tr><td></td><td>25–49 days 84–89 days
+(deltoid)
+118–139 days
+(gluteal)</td><td></td><td>30 days</td><td>29.9–46.5 days</td><td>29.2–34.9 days</td></tr><tr><td></td><td>Yes after 2nd dose
+Yes</td><td>Yes
+Yes</td><td>Yes
+No</td><td>Yes
+No</td><td>Yes for all dose
+strengths
+Yes, but only
+441 mg dose</td></tr><tr><td>Avoid use in
+patients with
+moderate-to-severe
+renal impairment
+(CrCl &lt;50 mL/min
+[0.83 mL/sec])</td><td></td><td>Requires at least
+a 4-month trial
+with Invega
+Sustenna. Not
+recommended
+in patients with
+moderate or
+severe renal
+impairment
+(CrCl &lt;50
+mL/min[0.83
+mL/sec])</td><td>Monitor for PDSS
+subject to REMS</td><td>Maintenance
+dose reduced to
+300 mg if patient
+experiences
+adverse
+events. Dose
+adjustment
+needed in
+CYP2D6 slow
+metabolizers.
+Avoid use
+in patients
+taking CYP
+3A4 inhibitors
+&gt;14 days</td><td>May require up to 2
+weeks of PO trial to
+establish tolerability
+to aripiprazole before
+initiating LAIA
+Avoid use of strong
+CYP2D6 and 3A4
+inhibitors on 662
+and 882 mg dose, no
+adjustment needed
+for 441 mg dose</td></tr></table></div><h2>820 SECTION</h2>
+<p>13</p>
+<p>|</p>
+<p>Psychiatric</p>
+<p>Disorders</p>
+<p>TABLE 70-3 Relative Side-Effect Incidence of Commonly Used Antipsychoticsa,b</p>
+<p>Sedation EPS Anticholinergic Orthostasis Weight Gain Prolactin</p>
+<p>Aripiprazole + +/++c + + + +</p>
+<p>Asenapine + +/++ ± + ++ +</p>
+<p>Brexpiprazole + +/++c + + + +</p>
+<p>Cariprazine ± +/++c + + + +</p>
+<p>Chlorpromazine ++++ +++ +++ ++++ ++ +++</p>
+<p>Clozapine ++++ + ++++ ++++ ++++ +</p>
+<p>Fluphenazine + ++++ + + + ++++</p>
+<p>Haloperidol + ++++ + + + ++++</p>
+<p>Iloperidone + ± + +++ ++ +</p>
+<p>Lurasidone ++ + + + + +</p>
+<p>Olanzapine ++ ++ ++ ++ ++++ +</p>
+<p>Paliperidone + ++ + + ++ ++++</p>
+<p>Perphenazine ++ ++++ ++ + + ++++</p>
+<p>Quetiapine ++ + ++ ++ ++ +</p>
+<p>Risperidone + ++ + ++ ++ ++++</p>
+<p>Thioridazine ++++ +++ ++++ ++++ + +++</p>
+<p>Thiothixene + ++++ + + + ++++</p>
+<p>Ziprasidone ++ ++ + + + +</p>
+<p>aSide effects shown are relative risk based on doses within the recommended therapeutic range.</p>
+<p>bIndividual patient risk varies depending on patient-specific factors.</p>
+<p>cPrimarily akathisia.</p>
+<p>EPS, extrapyramidal side effects—include dystonias, pseudoparkinsonism, akathisia, and tardive dyskinesia.</p>
+<p>Relative side effect risk: ±, negligible; +, low; ++, moderate; +++, moderately high; ++++, high.</p>
+<p>CH70.indd</p>
+<p>820</p>
+<p>20-11-2020</p>
+<p>16:46:12</p>
+<div class="table-container"><table><tr><th>Sedation EPS Anticholinergic Orthostasis Weight Gain Prolactin</th><th></th><th></th><th></th><th></th><th></th><th></th></tr><tr><td>Aripiprazole</td><td>+</td><td>+/++c</td><td>+</td><td>+</td><td>+</td><td>+</td></tr><tr><td>Asenapine</td><td>+</td><td>+/++</td><td>±</td><td>+</td><td>++</td><td>+</td></tr><tr><td>Brexpiprazole</td><td>+</td><td>+/++c</td><td>+</td><td>+</td><td>+</td><td>+</td></tr><tr><td>Cariprazine</td><td>±</td><td>+/++c</td><td>+</td><td>+</td><td>+</td><td>+</td></tr><tr><td>Chlorpromazine</td><td>++++</td><td>+++</td><td>+++</td><td>++++</td><td>++</td><td>+++</td></tr><tr><td>Clozapine</td><td>++++</td><td>+</td><td>++++</td><td>++++</td><td>++++</td><td>+</td></tr><tr><td>Fluphenazine</td><td>+</td><td>++++</td><td>+</td><td>+</td><td>+</td><td>++++</td></tr><tr><td>Haloperidol</td><td>+</td><td>++++</td><td>+</td><td>+</td><td>+</td><td>++++</td></tr><tr><td>Iloperidone</td><td>+</td><td>±</td><td>+</td><td>+++</td><td>++</td><td>+</td></tr><tr><td>Lurasidone</td><td>++</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td></tr><tr><td>Olanzapine</td><td>++</td><td>++</td><td>++</td><td>++</td><td>++++</td><td>+</td></tr><tr><td>Paliperidone</td><td>+</td><td>++</td><td>+</td><td>+</td><td>++</td><td>++++</td></tr><tr><td>Perphenazine</td><td>++</td><td>++++</td><td>++</td><td>+</td><td>+</td><td>++++</td></tr><tr><td>Quetiapine</td><td>++</td><td>+</td><td>++</td><td>++</td><td>++</td><td>+</td></tr><tr><td>Risperidone</td><td>+</td><td>++</td><td>+</td><td>++</td><td>++</td><td>++++</td></tr><tr><td>Thioridazine</td><td>++++</td><td>+++</td><td>++++</td><td>++++</td><td>+</td><td>+++</td></tr><tr><td>Thiothixene</td><td>+</td><td>++++</td><td>+</td><td>+</td><td>+</td><td>++++</td></tr><tr><td>Ziprasidone</td><td>++</td><td>++</td><td>+</td><td>+</td><td>+</td><td>+</td></tr></table></div><h2>Schizophrenia | CHAPTER 70</h2>
+<li>Intramuscular (IM) antipsychotic administration (eg, aripiprazole 5.25–9.75 mg,</li>
+<p>ziprasidone 10–20 mg, olanzapine 2.5–10 mg, or haloperidol 2–5 mg) can be used</p>
+<p>to calm agitated patients. However, this approach does not improve the extent of</p>
+<p>response, time to remission, or length of hospitalization. IM lorazepam, 2 mg, as</p>
+<p>needed for agitation added to the maintenance antipsychotic is a rational alternative</p>
+<p>to an injectable antipsychotic. Combining IM lorazepam with olanzapine or clozap-</p>
+<p>ine is not recommended because of the risk of hypotension, central nervous system</p>
+<p>(CNS) depression, and respiratory depression.</p>
+<li>Inhaled loxapine powder, FDA-approved for acute agitation associated with schizo-</li>
+<p>phrenia or in adults, can be administered only in a healthcare facility and through</p>
+<p>the FDA-approved Risk Evaluation and Mitigation Strategy (REMS). Use is limited to</p>
+<p>one 10-mg inhaled dose per 24 hours. Patients with any lung disease associated with</p>
+<p>bronchospasm (eg, asthma, chronic obstructive pulmonary disease) are excluded. It</p>
+<p>may offer no advantage over IM and oral products.</p>
+<p>Stabilization Therapy</p>
+<li>During weeks 2 and 3, the goal is to improve socialization, self-care, and mood. Dose</li>
+<p>titration may continue every 1–2 weeks as long as the patient has no side effects.</p>
+<li>If the patient begins to show an adequate response at a particular dose, then con-</li>
+<p>tinue that dosage as long as symptoms continue to improve. Improvement in formal</p>
+<p>thought disorder may require an additional 6–8 weeks.</p>
+<p>Maintenance Therapy</p>
+<li>The goal of maintenance therapy is relapse prevention; therefore, continue medica-</li>
+<p>tion for at least 12 months after remission of the first psychotic episode. Many experts</p>
+<p>recommend treatment for at least 5 years, and lifetime pharmacotherapy at the lowest</p>
+<p>effective dose is necessary in most patients with schizophrenia.</p>
+<li>In general, when switching from one antipsychotic to another, the first should be</li>
+<p>tapered and discontinued over at least 1–2 weeks while the second antipsychotic is</p>
+<p>initiated and tapered upward. Slow titration of antipsychotics (especially FGAs and</p>
+<p>clozapine) can be done to avoid cholinergic rebound.</p>
+<p>Management of Treatment-Resistant Schizophrenia</p>
+<li>Only clozapine has shown superiority over other antipsychotics; however, improve-</li>
+<p>ment occurs slowly, with 60% of patients improving if used for up to 6 months.</p>
+<li>Because of the risk of orthostatic hypotension, clozapine is usually titrated more</li>
+<p>slowly than other antipsychotics. If a 12.5-mg test dose does not produce hypoten-</p>
+<p>sion, then 25 mg at bedtime is recommended, increased to 25 mg twice daily after 3</p>
+<p>days, then increased in 25–50 mg/day increments every 3 days until a dose of at least</p>
+<p>300 mg/day is reached.</p>
+<li>A 12-hour postdose clozapine serum concentration of at least 350 ng/mL (1.07</li>
+<p>μmol/L) is associated with efficacy. Monitor serum concentrations of clozapine</p>
+<p>before exceeding 600 mg daily, in patients with unusual or severe adverse effects, in</p>
+<p>those concomitantly taking potentially interacting medications, in those with age</p>
+<p>or pathophysiologic changes suggesting altered kinetics, and in those suspected of</p>
+<p>medication nonadherence.</p>
+<li>Mood stabilizers (eg, lithium, valproic acid, and carbamazepine) may improve</li>
+<p>labile affect and agitation in patients with refectory schizophrenia. Selective sero-</p>
+<p>tonin reuptake inhibitors (SSRIs) may improve obsessive-compulsive symptoms that</p>
+<p>worsen or arise during clozapine treatment.</p>
+<li>Combining a FGA and SGA and combining different SGAs have been suggested, but</li>
+<p>no data support or refute these strategies. If tried, one of the drugs should be discon-</p>
+<p>tinued if there is no improvement within 6–12 weeks.</p>
+<p>821</p>
+<p>CH70.indd 821 20-11-2020 16:46:12</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>Extrapyramidal Side Effects</p>
+<p>Dystonias</p>
+<li>Dystonias are prolonged tonic muscle contractions (occurring usually within 24–96</li>
+<p>hours of dosage initiation or dosage increase); they may be life-threatening (eg,</p>
+<p>pharyngeal–laryngeal dystonias). Other dystonias are trismus, glossospasm, tongue</p>
+<p>protrusion, blepharospasm, oculogyric crisis, torticollis, and retrocollis. Risk factors</p>
+<p>include younger (male) patients and use of FGA, high-potency agents, and high dose.</p>
+<li>Treatment includes IM or IV anticholinergics (Table 70-4) or benzodiazepines.</li>
+<p>Benztropine 2 mg, or diphenhydramine 50 mg, may be given IM or IV, or diaz-</p>
+<p>epam, 5–10 mg by slow IV push, or lorazepam, 1–2 mg IM, may be given. Relief usu-</p>
+<p>ally occurs within 15–20 minutes of IM injection or 5 minutes of IV administration.</p>
+<li>Prophylactic anticholinergic medications are reasonable when using high-potency</li>
+<p>FGAs (eg, haloperidol and fluphenazine) in young men or in patients with a prior</p>
+<p>dystonia. Risk can be minimized by using lower initial doses or by using an SGA.</p>
+<p>Akathisia</p>
+<li>Akathisia occurs in 20%–40% of patients treated with high-potency FGA and con-</li>
+<p>sists of subjective complaints (feelings of inner restlessness) and/or objective symp-</p>
+<p>toms (pacing, shifting, shuffling, or tapping feet).</p>
+<li>Reduction in antipsychotic dose is the best intervention but is not always feasible.</li>
+<p>Switching to an SGA is an option, although akathisia may occur with some SGAs.</p>
+<p>Aripiprazole, risperidone, quetiapine, and clozapine appear to have the lowest risk.</p>
+<p>Benzodiazepines should be avoided in patients with a history of substance abuse.</p>
+<p>Propranolol (up to 160 mg/day) is reported to be effective. Emerging literature</p>
+<p>suggests that agents with antagonist activity at the 5-HT receptor (cyproheptadine,</p>
+<p>2</p>
+<p>mirtazapine, and trazodone) may be protective against akathisia.</p>
+<p>Pseudoparkinsonism</p>
+<li>There are four cardinal symptoms</li>
+<p>✓ Akinesia, bradykinesia, or decreased motor activity, including mask-like facial</p>
+<p>expression, micrographia</p>
+<p>✓ Tremor, predominantly at rest; decreasing with movement</p>
+<p>✓ Cogwheel rigidity; the patient’s limbs yield in jerky, ratchet-like fashion when</p>
+<p>moved passively by the examiner</p>
+<p>✓ Stooped, unstable posture and slow, shuffling, or festinating gait</p>
+<li>Possible accessory symptoms include seborrhea, sialorrhea, hyperhidrosis, fatigue,</li>
+<p>weakness, dysphagia, and dysarthria.</p>
+<li>Risk factors include FGA use (especially in high dose), increasing age, and possibly</li>
+<p>female gender.</p>
+<li>Symptoms start 1–2 weeks after initiation of antipsychotic therapy or dose increase.</li>
+<p>Risk with SGAs is low except with risperidone in doses greater than 6 mg/day.</p>
+<li>Benztropine has a half-life that allows once- to twice-daily dosing. Typical dosing is</li>
+<p>1–2 mg twice daily up to a maximum of 8 mg daily. Diphenhydramine produces more</p>
+<p>sedation (see Table 70-4). All of the anticholinergics have been abused for euphoriant</p>
+<p>effects. Amantadine is as effective as anticholinergics with less effect on memory.</p>
+<li>Attempt to taper and discontinue these agents 6 weeks to 3 months after symptoms</li>
+<p>resolve.</p>
+<p>Tardive Dyskinesia</p>
+<li>Tardive dyskinesia (TD) is characterized by abnormal involuntary movements. The</li>
+<p>classic presentation is buccolingual-masticatory or orofacial movements that may</p>
+<p>interfere with chewing, wearing dentures, speech, respiration, or swallowing. Facial</p>
+<p>movements include frequent blinking, brow arching, grimacing, upward deviation of</p>
+<p>the eyes, and lip smacking. Restless choreiform and athetotic movements of the limbs</p>
+<p>822</p>
+<p>CH70.indd 822 20-11-2020 16:46:12</p>
+<h2>Schizophrenia | CHAPTER 70</h2>
+<h2>TABLE 70-4 Agents Used to Treat Extrapyramidal Side Effects</h2>
+<p>Daily Dosage</p>
+<p>Generic Name Equivalent Dose (mg) Range (mg)</p>
+<p>Antimuscarinics</p>
+<p>Benztropinea 1 1–8b</p>
+<p>Biperidena 2 2–8</p>
+<p>Trihexyphenidyl 2 2–15</p>
+<p>Antihistaminic</p>
+<p>Diphenhydraminea 50 50–400</p>
+<p>Dopamine agonist</p>
+<p>Amantadine NA 100–400</p>
+<p>Benzodiazepines</p>
+<p>Lorazepama NA 1–8</p>
+<p>Diazepam NA 2–20</p>
+<p>Clonazepam NA 2–8</p>
+<p>β-Blockers</p>
+<p>Propranolol NA 20–160</p>
+<p>aInjectable dosage form can be given intramuscularly for relief of acute dystonia.</p>
+<p>bIn treatment-refractory cases, dosage can be titrated to 12 mg/day with careful monitoring;</p>
+<p>nonlinear pharmacokinetics has been reported.</p>
+<p>NA, not applicable.</p>
+<p>occur in later stages. Movements may worsen with stress, decrease with sedation, and</p>
+<p>disappear with sleep.</p>
+<li>Screen at baseline and at least quarterly using the Abnormal Involuntary Movement</li>
+<p>Scale (AIMS) and the Dyskinesia Identification System Condensed User Scale (DIS-</p>
+<p>CUS) to detect TD.</p>
+<li>TD prevention includes: (1) use SGAs first-line; (2) biyearly TD screening; and (3)</li>
+<p>discontinue antipsychotics or switch to SGAs at the earliest symptoms of TD, if</p>
+<p>possible.</p>
+<li>Risk factors for TD include duration of antipsychotic therapy, higher dose, pos-</li>
+<p>sibly cumulative dose, possibly female gender, increasing age, occurrence of acute</p>
+<p>extrapyramidal symptoms, poor antipsychotic response, diagnosis of organic mental</p>
+<p>disorder, diabetes mellitus, and mood disorders. With FGAs the prevalence of TD</p>
+<p>ranges from 20%–50%. With SGAs, the risk of TD is ~3.0% per year in nonelderly</p>
+<p>adults compared to 7.7% per year for FGAs.</p>
+<li>The American Academy of Neurology guideline recommends short-term treatment</li>
+<p>of TD with clonazepam or ginkgo biloba.</p>
+<li>Deutetrabenazine and valbenazine are vesicular monoamine transporter-2</li>
+<p>(VMAT2) inhibitors approved for TD treatment in adults. Warnings associated with</p>
+<p>their use include suicidality, depression, and QT interval prolongation.</p>
+<p>Other Antipsychotic Adverse Effects</p>
+<p>Seizures</p>
+<li>The highest risk for antipsychotic-induced seizures is with chlorpromazine or clo-</li>
+<p>zapine. Seizures are more likely with initiation of treatment, higher doses, and rapid</p>
+<p>dose increases.</p>
+<p>823</p>
+<p>CH70.indd 823 20-11-2020 16:46:13</p>
+<div class="table-container"><table><tr><th>TABLE 70-4 Agents Used to Treat Extrapyramidal Side Effects</th><th></th><th></th></tr><tr><td>Generic Name</td><td>Equivalent Dose (mg)</td><td>Daily Dosage
+Range (mg)</td></tr><tr><td>Antimuscarinics</td><td></td><td></td></tr><tr><td>Benztropinea</td><td>1</td><td>1–8b</td></tr><tr><td>Biperidena</td><td>2</td><td>2–8</td></tr><tr><td>Trihexyphenidyl</td><td>2</td><td>2–15</td></tr><tr><td>Antihistaminic</td><td></td><td></td></tr><tr><td>Diphenhydraminea</td><td>50</td><td>50–400</td></tr><tr><td>Dopamine agonist</td><td></td><td></td></tr><tr><td>Amantadine</td><td>NA</td><td>100–400</td></tr><tr><td>Benzodiazepines</td><td></td><td></td></tr><tr><td>Lorazepama</td><td>NA</td><td>1–8</td></tr><tr><td>Diazepam</td><td>NA</td><td>2–20</td></tr><tr><td>Clonazepam</td><td>NA</td><td>2–8</td></tr><tr><td>β-Blockers</td><td></td><td></td></tr><tr><td>Propranolol</td><td>NA</td><td>20–160</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Dosage reduction should occur for an isolated seizure, and anticonvulsant therapy is</li>
+<p>usually not recommended.</p>
+<li>If a change in antipsychotic therapy is required, risperidone, thioridazine, haloperi-</li>
+<p>dol, pimozide, trifluoperazine, and fluphenazine may be considered.</p>
+<p>Thermoregulation</p>
+<li>Poikilothermia, the body temperature adjusting to the ambient temperature, can</li>
+<p>be a serious side effect of antipsychotic therapy in temperature extremes. Hyperpy-</p>
+<p>rexia, leading to heat stroke, may be dangerous in hot weather or during exercise.</p>
+<p>Hypothermia is also a risk, especially in older individuals. These problems are more</p>
+<p>common with the use of low-potency FGAs and can occur with the more anticho-</p>
+<p>linergic SGAs.</p>
+<p>Neuroleptic Malignant Syndrome</p>
+<li>Neuroleptic malignant syndrome (NMS) occurs in 0.5%–1% of patients taking FGAs,</li>
+<p>and can occur with SGAs, including clozapine, but is less frequent.</p>
+<li>Symptoms develop rapidly over 24–72 hours (eg, body temperature exceeding 38°C</li>
+<pre><code>[100.4°F]), altered level of consciousness, autonomic dysfunction (tachycardia, labile</code></pre>
+<p>blood pressure, diaphoresis, and tachypnea), and rigidity.</p>
+<li>Myoglobinuria, leukocytosis, increases in creatine kinase (CK), aspartate amino-</li>
+<p>transferase (AST), alanine aminotransferase (ALT), and lactate dehydrogenase</p>
+<p>(LDH) are common.</p>
+<li>Discontinue antipsychotics and provide supportive care. Bromocriptine reduces</li>
+<p>rigidity, fever, and CK levels in up to 94% of patients. Amantadine has been used suc-</p>
+<p>cessfully in up to 63% of patients. Dantrolene has been used with favorable effects on</p>
+<p>temperature, heart rate, respiratory rate, and CK in up to 81% of patients.</p>
+<li>Antipsychotic rechallenge with the lowest effective dose of an SGA or low-potency</li>
+<p>FGA may be considered only after at least 2 weeks without antipsychotics. Monitor</p>
+<p>carefully and titrate the dose slowly.</p>
+<p>Endocrine Effects</p>
+<li>Antipsychotic-induced prolactin elevations associated with galactorrhea, gyneco-</li>
+<p>mastia, decreased libido, and menstrual irregularities are common and are likely with</p>
+<p>FGAs, risperidone, and paliperidone. Possible management strategies include switch-</p>
+<p>ing to an agent with lower risk (eg, aripiprazole, asenapine, iloperidone, lurasidone,</p>
+<p>brexpiprazole, and cariprazine). Dopamine agonists are not recommended due to</p>
+<p>potential psychosis exacerbation.</p>
+<li>Weight gain with antipsychotic therapy may be most likely with olanzapine, clozap-</li>
+<p>ine, risperidone, quetiapine, and iloperidone. Ziprasidone, aripiprazole, asenapine,</p>
+<p>lurasidone, brexpiprizole, and cariprazine appear to cause minimal weight gain.</p>
+<li>Patients with schizophrenia have a high prevalence of type 2 diabetes, which may be</li>
+<p>adversely affected by antipsychotics. Olanzapine and clozapine have the highest risk</p>
+<p>of causing new-onset diabetes, followed by risperidone and quetiapine. The risk with</p>
+<p>aripiprazole and ziprasidone is likely less than with other SGAs.</p>
+<p>Cardiovascular Adverse Effects</p>
+<li>Orthostatic hypotension (defined as >20 mm Hg drop in systolic blood pressure</li>
+<p>upon standing) is greatest with low-potency FGAs, clozapine, iloperidone, que-</p>
+<p>tiapine, and combination antipsychotics. Patients with diabetes and cardiovascular</p>
+<p>disease and older patients are predisposed. Dose reduction or changing to an antipsy-</p>
+<p>chotic with less α-adrenergic blockade may help, and tolerance may develop within</p>
+<p>2–3 months.</p>
+<li>The low-potency piperidine phenothiazines (thioridazine), clozapine, iloperidone,</li>
+<p>and ziprasidone are the most likely to cause ECG changes, including increased heart</p>
+<p>rate, flattened T waves, ST-segment depression, and prolongation of QT and PR</p>
+<p>intervals. Thioridazine prolongs the QTc on average about 20 milliseconds longer</p>
+<p>824</p>
+<p>CH70.indd 824 20-11-2020 16:46:13</p>
+<h2>Schizophrenia | CHAPTER 70</h2>
+<p>than haloperidol, risperidone, olanzapine, or quetiapine. For thioridazine, the effect</p>
+<p>is dose related, and the drug’s labeling carries a boxed warning for torsades de pointes</p>
+<p>and sudden death.</p>
+<li>Iloperidone pharmacogenomic metabolism may increase the risk of QTc prolonga-</li>
+<p>tion in CYP2D6 poor metabolizers. High IV doses of haloperidol also can prolong</p>
+<p>the QTc, and it also carries a boxed warning.</p>
+<li>Medication discontinuation should occur with QTc prolongation consistently</li>
+<p>exceeding 500 milliseconds. Torsades rarely happens in the absence of additional risk</p>
+<p>factors (eg, age greater than 60, female gender, preexisting cardiac or cerebrovascular</p>
+<p>disease, hepatic impairment, hypokalemia, hypomagnesemia, additional meds that</p>
+<p>prolong the QTc interval, metabolic inhibition by another medication, or preexisting</p>
+<p>QTc prolongation).</p>
+<li>In patients older than 50 years, pretreatment ECG and serum potassium and magne-</li>
+<p>sium levels are recommended.</p>
+<li>Myocarditis is an infrequent and dose-independent adverse effect that is most likely</li>
+<p>to occur with clozapine but has been reported with quetiapine, and possibly with</p>
+<p>olanzapine. Recommended laboratory monitoring has been proposed with baseline</p>
+<p>and weekly monitoring of C-reactive protein (CRP) for the first 4 weeks, while tro-</p>
+<p>ponin (I or T) and B-type natriuretic peptide monitoring has also been suggested.</p>
+<p>Cardiomyopathy, a potentially life-threatening adverse effect, can also be seen with</p>
+<p>clozapine, which typically presents later in the course of treatment than myocarditis,</p>
+<p>with an average time of onset of 14 months. Clozapine rechallenge after myocarditis</p>
+<p>is debated, and not recommended after cardiomyopathy.</p>
+<li>Those taking FGAs or SGAs have twice the risk of sudden cardiac death than non-</li>
+<p>users. Use of antipsychotics was associated with a 1.53-fold increase in ventricular</p>
+<p>arrhythmia or sudden cardiac death.</p>
+<li>Compared to the general population, the risk of venous thromboembolism (VTE) is</li>
+<p>twofold higher in individuals with schizophrenia with both FGAs and SGAs associ-</p>
+<p>ated with this risk. Although the mechanism of this risk is unknown, increased seda-</p>
+<p>tive side effects, metabolic side effects, antipsychotic effect on platelet aggregation,</p>
+<p>and hyperprolactinemia indirectly increasing venous stasis have been proposed.</p>
+<p>Lipid Effects</p>
+<li>Some SGAs and phenothiazines cause elevations in serum triglycerides and choles-</li>
+<p>terol. Olanzapine, clozapine, and quetiapine have the highest risk for dyslipidemia.</p>
+<li>Weight gain, diabetes, and lipid abnormalities during antipsychotic therapy are con-</li>
+<p>sistent with development of metabolic syndrome (consisting of raised triglycerides,</p>
+<p>≥150 mg/dL [1.70 mmol/L]), low high-density lipoprotein cholesterol (≤40 mg/dL</p>
+<p>[1.03 mmol/L] for males, ≤50 mg/dL [1.29 mmol/L] for females), elevated fasting</p>
+<p>glucose (≥100 mg/dL [5.6 mmol/L]), blood pressure elevation (≥130/85 mm Hg),</p>
+<p>and weight gain (abdominal circumference &gt;102 cm [40 in.] for males, &gt;89 cm</p>
+<p>[35 in.] for females).</p>
+<p>Psychiatric Side Effects</p>
+<li>Aripiprazole has been associated with impulse control disorders such as pathological</li>
+<p>gambling, uncontrolled sexual urges, uncontrolled spending, binge or compulsive</p>
+<p>eating, and other intense urges.</p>
+<p>Ophthalmologic Effects</p>
+<li>Exacerbation of narrow-angle glaucoma can occur with antipsychotics and/or anti-</li>
+<p>cholinergic use.</p>
+<li>Opaque deposits in the cornea and lens may occur with chronic phenothiazine treat-</li>
+<p>ment, especially chlorpromazine. Although visual acuity is not usually affected, peri-</p>
+<p>odic slit-lamp examinations are recommended with long-term phenothiazine use.</p>
+<p>Baseline and periodic slit-lamp examinations are also recommended for quetiapine-</p>
+<p>treated patients because of cataract development in animal studies.</p>
+<p>825</p>
+<p>CH70.indd 825 20-11-2020 16:46:13</p>
+<h2>SECTION 13 | Psychiatric Disorders</h2>
+<li>Thioridazine doses greater than 800 mg daily (the recommended maximum dose)</li>
+<p>can cause retinitis pigmentosa with permanent visual impairment or blindness.</p>
+<p>Genitourinary System</p>
+<li>Urinary hesitancy and retention are common, especially with low-potency FGAs and</li>
+<p>clozapine, and in men with benign prostatic hyperplasia.</p>
+<li>Urinary incontinence may result from α-blockade, and among the SGAs, it is espe-</li>
+<p>cially problematic with clozapine.</p>
+<li>Risperidone and paliperidone produce at least as much sexual dysfunction as FGAs,</li>
+<p>but other SGAs (which have a weaker effect of prolactin) pose less risk. Priapism,</p>
+<p>a sustained and painful erection that is unprovoked and persists for longer than an</p>
+<p>hour, is increasingly reported with antipsychotic medication use.</p>
+<p>Hematologic System</p>
+<li>Antipsychotics can cause transient leukopenia, but it usually does not progress to</li>
+<p>clinical significance. Clozapine, chlorpromazine, and olanzapine have the highest</p>
+<p>risk for neutropenia.</p>
+<li>Agranulocytosis reportedly occurs in 0.01% of patients receiving FGAs, and it may</li>
+<p>occur more frequently with chlorpromazine and thioridazine. The onset is usually</p>
+<p>within the first 8 weeks of therapy.</p>
+<li>Agranulocytosis can manifest as sore throat, leukoplakia, erythema, and ulcerated</li>
+<p>pharynx. Patients with these symptoms taking antipsychotics should have an absolute</p>
+<p>neutrophil count (ANC). If the ANC is less than 500/μL (0.5 × 109/L), discontinue</p>
+<p>the antipsychotic with close monitoring for secondary infection.</p>
+<li>The risk of developing neutropenia or agranulocytosis with clozapine is approxi-</li>
+<p>mately 3% and 0.8%, respectively. Increasing age and female gender increase risk.</p>
+<p>The greatest risk is between 1 and 6 months of initiating treatment. The baseline</p>
+<p>ANC must be at least 1500/μL (1.5 × 109/L) in order to start clozapine. Weekly ANC</p>
+<p>monitoring for the first 6 months is FDA mandated. After this time, if the ANC</p>
+<p>remains greater than 1500/μL (1.5 × 109/L), ANC monitoring can be decreased to</p>
+<p>every 2 weeks for the next 6 months. Subsequently, if all ANCs remain greater than</p>
+<p>1500/μL (1.5 × 109/L) ANC monitoring can be decreased to monthly. If at any time</p>
+<p>the ANC drops to less than 500/μL (0.5 × 109/L), clozapine must be discontinued and</p>
+<p>the ANC monitored daily until it is greater than 1500/μL (1.5 × 109/L). Refer to the</p>
+<p>product labeling for more detailed information regarding ANC monitoring, includ-</p>
+<p>ing monitoring for mild and moderate leukopenia.</p>
+<p>Dermatologic System</p>
+<li>Allergic reactions are rare and usually occur within 8 weeks of initiating therapy.</li>
+<p>They manifest as maculopapular, erythematous, or pruritic rashes.</p>
+<li>Contact dermatitis, on the skin or oral mucosa, may occur. Swallowing of the FGA</li>
+<p>oral concentrates quickly may decrease rashes on the oral mucosa.</p>
+<li>Ziprasidone can cause a rare but fatal skin reaction called Drug Reaction with</li>
+<p>Eosinophilia and Systemic Symptoms (DRESS).</p>
+<li>Both FGAs and SGAs can cause photosensitivity with severe sunburns. Patients</li>
+<p>should use maximal blocking sunscreens, hats, protective clothing, and sunglasses</p>
+<p>when in the sun.</p>
+<li>Blue-gray or purplish discoloration of skin exposed to sunlight may occur with</li>
+<p>higher doses of low-potency phenothiazines (especially chlorpromazine) given long</p>
+<p>term. This may occur with concurrent corneal or lens pigmentation.</p>
+<p>Use in Pregnancy and Lactation</p>
+<li>Haloperidol is the best-studied FGA with approximately 400 reported exposures. A</li>
+<p>small study found a twofold elevated risk of preterm birth in women with schizo-</p>
+<p>phrenia taking FGAs as compared with mothers not taking antipsychotics. Risk of</p>
+<p>826</p>
+<p>CH70.indd 826 20-11-2020 16:46:14</p>
+<h2>Schizophrenia | CHAPTER 70</h2>
+<p>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters</p>
+<p>Adverse Reaction Monitoring Parameter Frequency Comments</p>
+<p>Adverse effect monitoring parameters for all antipsychotic medications</p>
+<p>Akathisia Ask about restlessness Every visit</p>
+<p>or anxiety. Observe</p>
+<p>patient for restlessness.</p>
+<p>Barnes Akathisia Scale</p>
+<p>can also be used</p>
+<p>Anticholinergic side Ask patient about Every visit</p>
+<p>effects constipation, blurry</p>
+<p>vision, urinary</p>
+<p>retention, or unusual</p>
+<p>dry mouth</p>
+<p>Glucose intolerance FBS or HbA1c At baseline, after</p>
+<p>3 months, and</p>
+<p>if normal, then</p>
+<p>annually</p>
+<p>Hyperlipidemia Lipid profile At baseline, after</p>
+<p>3 months, and</p>
+<p>if normal, then</p>
+<p>annually</p>
+<p>Orthostatic Ask patient about Every visit The degree of</p>
+<p>hypotension dizziness on standing. orthostatic</p>
+<p>If present, check BP change in BP</p>
+<p>and HR in sitting and to produce</p>
+<p>standing positions symptoms</p>
+<p>varies. In</p>
+<p>general, a BP</p>
+<p>change of</p>
+<p>20 mm Hg</p>
+<p>or more is</p>
+<p>significant</p>
+<p>Hyperprolactinemia In women, ask about Every visit In the absence of</p>
+<p>expression of milk symptoms, there</p>
+<p>from the breast and is no need to</p>
+<p>menstrual irregularities. monitor serum</p>
+<p>In men, ask about prolactin</p>
+<p>breast enlargement or</p>
+<p>expression of milk from</p>
+<p>nipples. If symptoms</p>
+<p>present, check serum</p>
+<p>prolactin level</p>
+<p>Sedation Ask patient about unusual Every visit</p>
+<p>sedation or sleepiness</p>
+<pre><code>Sexual dysfunction Ask patient about Every visit Patients with</code></pre>
+<p>decreased sexual schizophrenia</p>
+<p>desire, difficulty being have more</p>
+<p>aroused, or problems sexual</p>
+<pre><code>with orgasm dysfunction</code></pre>
+<p>than the normal</p>
+<p>population.</p>
+<p>Compare</p>
+<p>symptoms with</p>
+<p>medication-free</p>
+<p>state</p>
+<p>(Continued)</p>
+<p>827</p>
+<p>CH70.indd 827 20-11-2020 16:46:14</p>
+<div class="table-container"><table><tr><th>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters</th><th></th><th></th><th></th></tr><tr><td>Adverse Reaction</td><td>Monitoring Parameter</td><td>Frequency</td><td>Comments</td></tr><tr><td>Adverse effect monitoring parameters for all antipsychotic medications</td><td></td><td></td><td></td></tr><tr><td>Akathisia</td><td>Ask about restlessness
+or anxiety. Observe
+patient for restlessness.
+Barnes Akathisia Scale
+can also be used</td><td>Every visit</td><td></td></tr><tr><td>Anticholinergic side
+effects</td><td>Ask patient about
+constipation, blurry
+vision, urinary
+retention, or unusual
+dry mouth</td><td>Every visit</td><td></td></tr><tr><td>Glucose intolerance</td><td>FBS or HbA1c</td><td>At baseline, after
+3 months, and
+if normal, then
+annually</td><td></td></tr><tr><td>Hyperlipidemia</td><td>Lipid profile</td><td>At baseline, after
+3 months, and
+if normal, then
+annually</td><td></td></tr><tr><td>Orthostatic
+hypotension</td><td>Ask patient about
+dizziness on standing.
+If present, check BP
+and HR in sitting and
+standing positions</td><td>Every visit</td><td>The degree of
+orthostatic
+change in BP
+to produce
+symptoms
+varies. In
+general, a BP
+change of
+20 mm Hg
+or more is
+significant</td></tr><tr><td>Hyperprolactinemia</td><td>In women, ask about
+expression of milk
+from the breast and
+menstrual irregularities.
+In men, ask about
+breast enlargement or
+expression of milk from
+nipples. If symptoms
+present, check serum
+prolactin level</td><td>Every visit</td><td>In the absence of
+symptoms, there
+is no need to
+monitor serum
+prolactin</td></tr><tr><td>Sedation</td><td>Ask patient about unusual
+sedation or sleepiness</td><td>Every visit</td><td></td></tr><tr><td>Sexual dysfunction</td><td>Ask patient about
+decreased sexual
+desire, difficulty being
+aroused, or problems
+with orgasm</td><td>Every visit</td><td>Patients with
+schizophrenia
+have more
+sexual
+dysfunction
+than the normal
+population.
+Compare
+symptoms with
+medication-free
+state
+(Continued)</td></tr></table></div><h2>SECTION 13 | Psychiatric Disorders</h2>
+<p>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters (Continued )</p>
+<p>Adverse Reaction Monitoring Parameter Frequency Comments</p>
+<p>Tardive dyskinesia Standardized rating scale At baseline, and</p>
+<p>such as the AIMS or the then every 3</p>
+<p>DISCUS months for FGAs</p>
+<p>and every 6</p>
+<p>months for SGAs</p>
+<p>Weight gain Measure body weight, At baseline, Waist</p>
+<p>BMI, and waist monthly for the circumference</p>
+<p>circumference first 3 months, is the single</p>
+<p>and then best predictor</p>
+<p>quarterly of cardiac</p>
+<p>morbidity</p>
+<p>Adverse effect monitoring parameters for specific antipsychotics</p>
+<p>Agranulocytosis White blood cell At baseline, weekly Clozapine only</p>
+<p>(WBC) and for 6 months,</p>
+<p>absolute neutrophil then every 2</p>
+<p>counts (ANC) weeks for 6</p>
+<p>months, and</p>
+<p>then monthly</p>
+<p>Sialorrhea or excess Ask patient about Every visit Clozapine only</p>
+<p>drooling problems with excess</p>
+<p>drooling, waking in</p>
+<p>the morning with</p>
+<p>a wet ring on his</p>
+<p>or her pillow. Visual</p>
+<p>observation of the</p>
+<p>patient for drooling</p>
+<p>Bronchospasm, Before administration, Every dose Inhaled loxapine</p>
+<p>respiratory screen patients for administration only. Can only</p>
+<p>distress, a history of asthma, be administered</p>
+<p>respiratory chronic obstructive in approved</p>
+<p>depression, pulmonary disease, healthcare</p>
+<p>respiratory arrest or other lung disease facilities</p>
+<p>associated with registered in</p>
+<p>bronchospasm. REMS program</p>
+<p>Monitor patient</p>
+<p>every 15 minutes</p>
+<p>for a minimum of</p>
+<p>1 hour after drug</p>
+<p>administration for</p>
+<p>signs and symptoms</p>
+<p>of bronchospasm (ie,</p>
+<p>vital signs and chest</p>
+<p>auscultation). Only one</p>
+<p>10 mg dose can be</p>
+<p>given every 24 hours</p>
+<p>(Continued )</p>
+<p>828</p>
+<p>CH70.indd 828 20-11-2020 16:46:14</p>
+<div class="table-container"><table><tr><th>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters (Continued )</th><th></th><th></th><th></th></tr><tr><td>Adverse Reaction</td><td>Monitoring Parameter</td><td>Frequency</td><td>Comments</td></tr><tr><td>Tardive dyskinesia</td><td>Standardized rating scale
+such as the AIMS or the
+DISCUS</td><td>At baseline, and
+then every 3
+months for FGAs
+and every 6
+months for SGAs</td><td></td></tr><tr><td>Weight gain</td><td>Measure body weight,
+BMI, and waist
+circumference</td><td>At baseline,
+monthly for the
+first 3 months,
+and then
+quarterly</td><td>Waist
+circumference
+is the single
+best predictor
+of cardiac
+morbidity</td></tr><tr><td>Adverse effect monitoring parameters for specific antipsychotics</td><td></td><td></td><td></td></tr><tr><td>Agranulocytosis</td><td>White blood cell
+(WBC) and
+absolute neutrophil
+counts (ANC)</td><td>At baseline, weekly
+for 6 months,
+then every 2
+weeks for 6
+months, and
+then monthly</td><td>Clozapine only</td></tr><tr><td>Sialorrhea or excess
+drooling</td><td>Ask patient about
+problems with excess
+drooling, waking in
+the morning with
+a wet ring on his
+or her pillow. Visual
+observation of the
+patient for drooling</td><td>Every visit</td><td>Clozapine only</td></tr><tr><td>Bronchospasm,
+respiratory
+distress,
+respiratory
+depression,
+respiratory arrest</td><td>Before administration,
+screen patients for
+a history of asthma,
+chronic obstructive
+pulmonary disease,
+or other lung disease
+associated with
+bronchospasm.
+Monitor patient
+every 15 minutes
+for a minimum of
+1 hour after drug
+administration for
+signs and symptoms
+of bronchospasm (ie,
+vital signs and chest
+auscultation). Only one
+10 mg dose can be
+given every 24 hours</td><td>Every dose
+administration</td><td>Inhaled loxapine
+only. Can only
+be administered
+in approved
+healthcare
+facilities
+registered in
+REMS program
+(Continued )</td></tr></table></div><h2>Schizophrenia | CHAPTER 70</h2>
+<p>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters (Continued )</p>
+<p>Adverse Reaction Monitoring Parameter Frequency Comments</p>
+<p>Postinjection Observe the patient for at Every dose Long-acting</p>
+<p>sedation/ least 3 hours after drug administration olanzapine</p>
+<p>delirium administration. Monitor pamoate</p>
+<p>syndrome for possible sedation, monohydrate</p>
+<p>altered level of only. Can only</p>
+<p>consciousness, coma, be administered</p>
+<p>delirium, confusion, in approved</p>
+<p>disorientation, healthcare</p>
+<p>agitation, anxiety, facilities</p>
+<p>or other cognitive registered in</p>
+<p>impairment REMS program</p>
+<p>AIMS, abnormal involuntary movement scale; DISCUS, dyskinesia identification system condensed</p>
+<p>user scale, FBS, fasting blood sugar; FGA, first-generation antipsychotic; SGA, second-generation</p>
+<p>antipsychotic.</p>
+<p>neonatal EPS is increased with in utero exposure to FGAs, with effects in the infant</p>
+<p>lasting for 3–12 months after birth.</p>
+<li>All SGAs cross the blood–placental barrier to varying degrees. A meta-analysis</li>
+<p>found a greater risk of birth defects and preterm births with first trimester exposure</p>
+<p>to SGA, but no specific abnormality was identified. Other larger studies also suggest</p>
+<p>that aripiprazole, olanzapine, quetiapine, risperidone, and ziprasidone collectively do</p>
+<p>not increase the risk of congenital malformations or cardiac malformation. Large,</p>
+<p>well-controlled studies are needed to clarify the safety of SGAs during pregnancy.</p>
+<li>For all of the FGAs, the overall relative infant doses (RID) obtained through breast-</li>
+<p>feeding is thought to be less than 10%, which is a common threshold indicating that</p>
+<p>these medications are safe for use. Olanzapine and quetiapine have reported RIDs</p>
+<p>of less than 4%. Risperidone and aripiprazole have higher RIDs up to approximately</p>
+<p>9%. Breastfeeding while on clozapine is not recommended due to the risk of severe</p>
+<p>neutropenia and seizures in the infant.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>Table 70-5 summarizes antipsychotic adverse effects, patient monitoring parameters,</li>
+<p>and frequency of monitoring parameters.</p>
+<li>The four-item Positive Symptom Rating Scale and the Brief Negative Symptom</li>
+<p>Assessment are brief enough to be useful in the outpatient setting to measure changes</p>
+<p>in symptomatology. Patient-rated self-assessments can also be useful, as they engage</p>
+<p>the patient in treatment and can open the door for patient education and addressing</p>
+<p>misconceptions. Clinicians should be assertive in attempting to achieve symptom</p>
+<p>remission.</p>
+<p>See Chapter 84, Schizophrenia, authored by M. Lynn Crismon, Tawny Smith, and Peter</p>
+<p>F. Buckley, for a more detailed discussion of this topic.</p>
+<p>829</p>
+<p>CH70.indd 829 20-11-2020 16:46:15</p>
+<div class="table-container"><table><tr><th>TABLE 70-5 Antipsychotic Adverse Effects and Monitoring Parameters (Continued )</th><th></th><th></th><th></th></tr><tr><td>Adverse Reaction</td><td>Monitoring Parameter</td><td>Frequency</td><td>Comments</td></tr><tr><td>Postinjection
+sedation/
+delirium
+syndrome</td><td>Observe the patient for at
+least 3 hours after drug
+administration. Monitor
+for possible sedation,
+altered level of
+consciousness, coma,
+delirium, confusion,
+disorientation,
+agitation, anxiety,
+or other cognitive
+impairment</td><td>Every dose
+administration</td><td>Long-acting
+olanzapine
+pamoate
+monohydrate
+only. Can only
+be administered
+in approved
+healthcare
+facilities
+registered in
+REMS program</td></tr></table></div>
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

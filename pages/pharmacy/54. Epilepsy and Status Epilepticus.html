@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54. Epilepsy and Status Epilepticus</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>54. Epilepsy and Status Epilepticus</h1>
+        </header>
+        <main>
+            <p>00</p>
+<p>583</p>
+<h2>RETPAHC</h2>
+<p>54</p>
+<p>Epilepsy and Status</p>
+<p>Epilepticus</p>
+<li>Epilepsy is a common neurologic condition in which a person is prone to recurrent</li>
+<p>epileptic seizures. Epilepsies are characterized by different seizure types, ranging in</p>
+<p>severity and etiologies often with neurobiological, cognitive, psychological, and social</p>
+<p>consequences. Status epilepticus (SE) is a neurologic emergency associated with brain</p>
+<p>damage and death with generalized convulsive status epilepticus (GCSE) being the</p>
+<p>most common and severe form. It occurs when the length of the continuous seizure</p>
+<p>activity extends past 5 minutes or time of ongoing seizure activity extends past 30</p>
+<p>minutes, after which there is a risk of long-term consequences.</p>
+<h2>PATHOPHYSIOLOGY</h2>
+<li>Seizures result from excessive excitation or disordered inhibition of neurons, resulting</li>
+<p>in changes in electrical activity as measured by the electroencephalogram (EEG).</p>
+<p>Initially, a small number of neurons fire abnormally. Normal membrane c onductances</p>
+<p>and inhibitory synaptic currents then break down, and excitability spreads locally</p>
+<p>(focal seizure) or more widely (generalized seizure). Epileptic seizures result only</p>
+<p>when there is also synchronization of excessive neuronal firing.</p>
+<li>Seizure initiation is likely caused by an imbalance between excitatory (eg, glutamate,</li>
+<p>calcium, sodium, substance P, and neurokinin B) and inhibitory (γ-aminobutyric</p>
+<p>acid [GABA], adenosine, potassium, neuropeptide Y, opioid peptides, and galanin)</p>
+<p>neurotransmission.</p>
+<li>GCSE is largely caused by glutamate acting on postsynaptic N-methyl-d-aspartate</li>
+<p>(NMDA) and α-amino-3-hydroxy-5-methylisoxazole-4-propionate (AMPA)/kainate</p>
+<p>receptors. Sustained depolarization can result in neuronal death.</p>
+<li>GABA receptors may become less responsive to endogenous GABA and GABA</li>
+<h2>A</h2>
+<p>agonists.</p>
+<li>Epilepsy etiologies can be classified into six categories: (1) genetic; (2) structural; (3)</li>
+<p>infectious; (4) metabolic; (5) immune; and (6) unknown.</p>
+<h2>CLINICAL PRESENTATION</h2>
+<h2>EPILEPSY</h2>
+<li>Figure 54-1 shows the International League Against Epilepsy (ILAE) framework for</li>
+<p>the classification of seizure types.</p>
+<li>Many patients, particularly those with focal onset seizures with dyscognitive features</li>
+<p>or generalized tonic–clonic (GTC) seizures, are amnestic to the actual seizure event.</p>
+<li>Symptoms depend on seizure type and where the abnormal firing occurs. Although</li>
+<p>seizures can vary between patients, they tend to be stereotyped within an individual.</p>
+<li>Focal seizures (ie, partial seizures) begin in one hemisphere of the brain, and unless</li>
+<p>they become secondarily generalized (ie, evolve to a bilateral convulsive seizure), result</p>
+<pre><code>in an asymmetric seizure. Focal seizures manifest as alterations in motor functions (eg,</code></pre>
+<p>twitching or shaking), sensory (eg, numbness or tingling) or somatosensory symptoms,</p>
+<p>aberrations in behavior, or automatisms. Focal seizures without dyscognitive features (for-</p>
+<p>merly called simple partial seizures) are associated with no impairment of consciousness.</p>
+<p>In focal seizures with dyscognitive features (formerly called complex partial seizures),</p>
+<p>there is impairment of consciousness and awareness and no memory of the event.</p>
+<li>Absence seizures generally occur in young children or adolescents and exhibit a</li>
+<p>sudden onset, interruption of ongoing activities, a blank stare, and possibly a brief</p>
+<p>upward rotation of the eyes. There is only a very brief (seconds) period of altered</p>
+<p>consciousness. Absence seizures have a characteristic two to four cycles per second</p>
+<p>spike and slow-wave EEG pattern.</p>
+<p>ch54.indd 583 20-11-2020 13:08:47</p>
+<div class="table-container"><table><tr><th>RETPAHC</th><th>5004</th><th></th><th>Epilepsy and Status
+Epilepticus</th></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>GTC seizures are major convulsive episodes and are always associated with a loss</li>
+<p>of consciousness. Motor symptoms are bilateral. GTC seizures may be preceded by</p>
+<p>premonitory symptoms (ie, an aura). A tonic–clonic seizure that is preceded by an</p>
+<p>aura is likely a focal seizure that is secondarily generalized. Tonic–clonic seizures</p>
+<p>begin with a short tonic contraction of muscles followed by a period of rigidity and</p>
+<p>clonic movements. The patient may lose sphincter control, bite the tongue, or become</p>
+<p>cyanotic. The episode is frequently followed by a deep sleep.</p>
+<li>Interictally (between seizure episodes), there are typically no objective, pathogno-</li>
+<p>monic signs of epilepsy.</p>
+<li>Myoclonic seizures are brief shock-like muscular contractions (jerks) of the face,</li>
+<p>trunk, and extremities. They may be isolated events or rapidly repetitive. There is no</p>
+<p>alteration of consciousness.</p>
+<li>In atonic seizures (the hallmark of Lennox–Gastaut syndrome), there is a sudden loss</li>
+<p>of muscle tone that may be described as a head drop, dropping of a limb, or slumping</p>
+<p>to the ground.</p>
+<h2>STATUS EPILEPTICUS</h2>
+<li>The four stages of GCSE are (1) stablization, (2) initial therapy, (3) secondary therapy,</li>
+<h2>and (4) third therapy as indicated in Table 54-1.</h2>
+<p>✓ During first therapy phase of GCSE, each seizure produces marked increases in</p>
+<p>plasma epinephrine, norepinephrine, and steroid concentrations that may cause</p>
+<p>hypertension, tachycardia, and cardiac arrhythmias. Muscle contractions and</p>
+<p>hypoxia can cause acidosis, hypotension, shock, rhabdomyolysis, and secondary</p>
+<p>hyperkalemia, and acute tubular necrosis may ensue.</p>
+<p>✓ In second therapy phase, beginning 30 minutes into the seizure, the patient begins</p>
+<p>to decompensate and may become hypotensive with compromised cerebral blood</p>
+<p>flow. Serum glucose may be normal or decreased, and hyperthermia, respiratory</p>
+<p>deterioration, hypoxia, and ventilatory failure may develop.</p>
+<p>✓ The third therapy phase consists of refractory and supra-refractory GCSE where</p>
+<p>motor activity may cease, but electrical seizures may persist.</p>
+<li>Younger children, older persons, and those with preexisting epilepsy have a higher</li>
+<p>propensity for sequelae.</p>
+<li>Overall worldwide case fatality rate of 14.9%, with the highest rate in those >60 years</li>
+<p>of age (24.9%) and in those with refractory GCSE (33.3%).</p>
+<p>584</p>
+<p>seitidibromoC</p>
+<p>Seizure types</p>
+<p>Etiology</p>
+<p>Focal Generalized Unknown</p>
+<p>onset onset onset Structural</p>
+<p>Genetic</p>
+<p>Epilepsy types Infectious</p>
+<p>Combined</p>
+<p>Focal Generalized Generalized Unknown</p>
+<p>Metabolic</p>
+<p>&amp; Focal</p>
+<p>Immune</p>
+<p>Unknown</p>
+<p>Epilepsy Syndromes</p>
+<p>FIGURE 54-1. ILAE 2017 Classification of seizure types—expanded version.</p>
+<p>ch54.indd 584 20-11-2020 13:08:48</p>
+<h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-1 Generalized Convulsive Status Epilepticus</h2>
+<p>Phase Time Stage Definition</p>
+<p>Stabilization 0–5 minutes An acute condition characterized by</p>
+<p>phase convulsive seizures. This may include pre-</p>
+<p>hospitalization or emergency room care</p>
+<p>Initial-therapy 0–20 minutes Impending</p>
+<p>phase (5–20 GCSE</p>
+<p>minutes)</p>
+<p>Second-therapy 20–40 Established An acute condition characterized by</p>
+<p>phase minutes GCSE continuous or intermittent seizures</p>
+<p>(20–40 without full recovery of consciousness</p>
+<p>minutes) between events for at least 20 minutes</p>
+<p>Third-therapy 40–60 Refractory An acute condition characterized by</p>
+<p>phase minutes GCSE continuous seizures despite initial</p>
+<p>treatment with 2 ASDs</p>
+<p>&gt;24 hours Supra- An acute condition characterized by</p>
+<p>refractory seizures that continue 24 hours or</p>
+<p>longer after the administration of</p>
+<p>anesthesia, including cases in which</p>
+<p>SE recurs on reduction or withdrawal</p>
+<p>of anesthesia</p>
+<p>ASD, antiseizure drug; GCSE, generalized convulsive status epilepticus; SE, status epilepticus.</p>
+<li>Variables affecting outcome are (1) the time between onset of GCSE and the initia-</li>
+<p>tion of treatment and (2) the duration of the seizure. The mortality rate is 2.6%, 19%,</p>
+<p>and 32% for those with seizures lasting 10–29 minutes, longer than 30 minutes, and</p>
+<p>longer than 60 minutes, respectively.</p>
+<h2>DIAGNOSIS</h2>
+<li>Ask the patient and family to characterize the seizure for signs/symptoms, triggers,</li>
+<p>frequency, duration, precipitating factors, time of occurrence, presence of an aura,</p>
+<p>impairment of consciousness, ictal activity, and postictal state.</p>
+<li>Physical, neurologic, and laboratory examination may identify an etiology.</li>
+<li>A person is considered to have epilepsy if they have (1) at least 2 unprovoked (or</li>
+<p>reflex) seizures occurring greater than 24 hours apart; (2) 1 unprovoked (or reflex)</p>
+<p>seizure and a probability of further seizures of at least 60% after 2 unprovoked sei-</p>
+<p>zures, occurring over the next 10 years; or (3) a diagnosis of an epilepsy syndrome.</p>
+<li>In some cases, particularly following GTC seizures, serum prolactin levels may</li>
+<p>be transiently elevated. A serum prolactin level obtained within 10–20 minutes of</p>
+<p>a tonic–clonic seizure can help differentiate seizure activity from pseudoseizure</p>
+<p>activity but not from syncope.</p>
+<li>Laboratory tests may rule out treatable causes of seizures (hypoglycemia,</li>
+<p>altered serum electrolyte concentrations, infections, etc.) that are not epilepsy.</p>
+<li>EEG is very useful in the diagnosis of various seizure disorders, but epileptiform</li>
+<p>activity is found in only about 50% of patients with epilepsy.</p>
+<li>Brain imaging with either a computerized tomography (CT) scan or magnetic reso-</li>
+<p>nance imaging (MRI) can detect structural lesions that can aid in the diagnosis of</p>
+<p>seizures and epilepsy types.</p>
+<p>585</p>
+<p>ch54.indd 585 20-11-2020 13:08:48</p>
+<div class="table-container"><table><tr><th>TABLE 54-1 Generalized Convulsive Status Epilepticus</th><th></th><th></th><th></th></tr><tr><td>Phase</td><td>Time</td><td>Stage</td><td>Definition</td></tr><tr><td>Stabilization
+phase</td><td>0–5 minutes</td><td></td><td>An acute condition characterized by
+convulsive seizures. This may include pre-
+hospitalization or emergency room care</td></tr><tr><td>Initial-therapy
+phase (5–20
+minutes)</td><td>0–20 minutes</td><td>Impending
+GCSE</td><td></td></tr><tr><td>Second-therapy
+phase
+(20–40
+minutes)</td><td>20–40
+minutes</td><td>Established
+GCSE</td><td>An acute condition characterized by
+continuous or intermittent seizures
+without full recovery of consciousness
+between events for at least 20 minutes</td></tr><tr><td>Third-therapy
+phase</td><td>40–60
+minutes</td><td>Refractory
+GCSE</td><td>An acute condition characterized by
+continuous seizures despite initial
+treatment with 2 ASDs</td></tr><tr><td></td><td>&gt;24 hours</td><td>Supra-
+refractory</td><td>An acute condition characterized by
+seizures that continue 24 hours or
+longer after the administration of
+anesthesia, including cases in which
+SE recurs on reduction or withdrawal
+of anesthesia</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TREATMENT</h2>
+<h2>EPILEPSY</h2>
+<li>Goals of Treatment: Control or reduce the frequency and severity of seizures, mini-</li>
+<p>mize side effects, and ensure compliance, allowing the patient to live as normal a life</p>
+<p>as possible. Complete suppression of seizures must be balanced against tolerability of</p>
+<p>side effects, and the patient should be involved in defining the balance. Side effects</p>
+<p>and comorbidities (eg, anxiety and depression) as well as social issues (eg, driving, job</p>
+<p>security, relationships, and social stigma) have significant impact on quality of life.</p>
+<h2>STATUS EPILEPTICUS</h2>
+<li>Goals of Treatment: (1) Identify GCSE subtype and precipitating factors; (2) termi-</li>
+<p>nate clinical and electrical seizure activity as soon as possible, and preserve cardiore-</p>
+<pre><code>spiratory function; (3) minimize side effects; (4) prevent recurrent seizures; and (5)</code></pre>
+<p>avoid pharmacoresistant epilepsy and/or neurologic sequelae.</p>
+<h2>NONPHARMACOLOGIC THERAPY</h2>
+<p>Epilepsy</p>
+<li>Nonpharmacologic therapies are available for drug-resistant patients with epilepsy</li>
+<p>as well as for drug-responsive patients in which the benefits of nonpharmacologic</p>
+<p>therapies outweigh its risk (ie, ketogenic diet, vagus nerve stimulation [VNS], and</p>
+<p>surgery among other modalities).</p>
+<p>Status Epilepticus</p>
+<li>Therapy starts with the stabilization phase where the time of seizure onset should be</li>
+<p>noted, vital signs should be assessed, a protected airway should be established, venti-</p>
+<p>lation should be maintained, and oxygen should be administered. Intravenous access</p>
+<p>should be established and hyperthermia, if present, should be aggressively treated (eg,</p>
+<p>rectal or IV acetaminophen and cooling blanket).</p>
+<li>Laboratory values should be drawn, including anticonvulsant serum concentrations.</li>
+<li>Continuous EEG monitoring may need to occur for patients with persistent GCSE and</li>
+<p>frequent arterial blood gas determinations are necessary to assess for metabolic acidosis.</p>
+<h2>PHARMACOLOGIC THERAPY</h2>
+<p>Epilepsy</p>
+<li>Drug selection depends on the seizure type and epilepsy classification as well as</li>
+<p>patient-specific characteristics including age, gender, susceptibility to adverse effects,</p>
+<p>comorbid medical conditions, interactions with other medications, ability to comply</p>
+<p>with a prescribed regimen, and cost of therapy/insurance coverage. Figure 54-2 is a</p>
+<p>suggested algorithm for treatment of epilepsy.</p>
+<li>Most anti-seizure drugs (ASDs) affection channel (sodium and Ca) kinetics, augmen-</li>
+<p>tation of inhibitory neurotransmission (increasing CNS GABA), and modulation of</p>
+<p>excitatory neurotransmission (decreasing or antagonizing glutamate and aspartate).</p>
+<p>ASDs effective against GTC and focal seizures probably work by delaying recovery of</p>
+<p>sodium channels from activation. Drugs that reduce corticothalamic T-type Ca currents</p>
+<p>are effective against generalized absence seizures.</p>
+<li>Begin with monotherapy. About 65% of patients can be maintained on one ASD,</li>
+<p>although not necessarily seizure free.</p>
+<li>Up to 60% of patients with epilepsy are nonadherent, commonly leading to treatment</li>
+<p>failure.</p>
+<li>Patients who have had two or more seizures should generally be started on ASDs;</li>
+<p>however, some providers start after one seizure.</p>
+<li>Provide the patient with a seizure and side-effect diary.</li>
+<h2>• ASD dosing is shown in Table 54-2.</h2>
+<p>586</p>
+<p>ch54.indd 586 20-11-2020 13:08:48</p>
+<h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<li>Many newer ASDs have been tested only as adjunctive therapy, but many providers</li>
+<p>will use them off-label as monotherapy.</p>
+<li>Evidence for comparable effectiveness is mostly available for older agents and for a</li>
+<p>few newer ones. In general, the newer ASDs appear to have comparable efficacy to</p>
+<p>the older drugs, and some may be better tolerated.</p>
+<li>Carbamazepine, ethosuximide, gabapentin, levetiracetam, oxcarbazepine, phe-</li>
+<p>nytoin valproic acid, and zonisamide have strong enough evidence to be labeled</p>
+<p>efficacious or effective or as probably efficacious or effective as initial monotherapy</p>
+<p>in certain seizure types.</p>
+<li>Some ASDs may possibly precipitate or aggravate certain seizure types, and it is</li>
+<p>suggested that they be used with caution in those patients. Examples are carba-</p>
+<p>mazepine, gabapentin, oxcarbazepine, phenytoin, tiagabine, and vigabatrin in</p>
+<p>children with absence or juvenile myoclonic epilepsy.</p>
+<li>Initiate ASD with a low dose (ie, one-fourth to one-third of the anticipated mainte-</li>
+<p>nance dose), and titrated gradually over 3–4 weeks to a moderate dose. If seizures</p>
+<p>continue, titrate to a maximum dose. If the first ASD is ineffective or causes intoler-</p>
+<p>able side effects, add a second ASD (preferably with a different mechanism of action),</p>
+<p>and then taper and discontinue the ineffective or intolerable drug. If the second ASD</p>
+<p>is ineffective, then polytherapy may be indicated.</p>
+<li>Clinicians should determine the optimal serum concentration for each patient as</li>
+<p>seizure control may occur before the “minimum” of the therapeutic serum range is</p>
+<p>reached, and some patients may need serum concentrations beyond the “maximum.”</p>
+<li>The therapeutic range for ASDs may be different for different seizure types (eg,</li>
+<p>higher for focal seizures with dyscognitive features than for GTC seizures).</p>
+<li>Serum concentration determinations can be useful to document lack of or loss of</li>
+<p>efficacy, establish noncompliance, and guide therapy in patients with renal and/or</p>
+<p>hepatic disease and patients taking multiple drugs, as well as in women who are</p>
+<p>pregnant or taking oral contraceptives.</p>
+<li>Lower doses of ASDs are often required in older individuals due to compromised</li>
+<pre><code>renal or hepatic function and some patients have increased receptor sensitivity to</code></pre>
+<p>CNS drugs, making the accepted therapeutic range invalid. Older persons often take</p>
+<p>many medications, and thus are more prone to experience neurocognitive effects and</p>
+<p>drug–drug interactions involving ASDs that affect the CPY450 system (eg, car-</p>
+<p>bamazepine, phenytoin, valproic acid, and phenobarbital). Hypoalbuminemia is</p>
+<p>common in older populations, and highly bound ASDs (eg, valproic acid) can be</p>
+<p>problematic. They also experience body mass changes which can affect elimination</p>
+<p>half-life and volume of distribution. Lamotrigine is often considered a drug of choice</p>
+<p>for older patients with focal onset seizures because of effectiveness and tolerability.</p>
+<li>After 12 months of treatment, the percentage who are seizure free is highest for those</li>
+<p>with only GTC seizures (48%–55%), lowest for those who have only focal seizures</p>
+<p>(23%–26%), and intermediate for those with mixed seizure types (25%–32%).</p>
+<li>ASD withdrawal can be considered in a patient meeting the following profile: seizure</li>
+<p>free for 2–5 years, a history of a single type of focal seizure or primary generalized sei-</p>
+<p>zures, a normal neurologic exam and normal IQ, and an EEG that has normalized with</p>
+<p>treatment. Factors favoring an unsuccessful withdrawal of ASDs include a history of</p>
+<p>a high frequency of seizures, repeated episodes of SE, a combination of seizure types,</p>
+<pre><code>and development of abnormal mental functioning. Always withdraw ASDs gradually.</code></pre>
+<li>Drug resistance is defined as failure of adequate trials of two tolerated and appropri-</li>
+<p>ately chosen and used ASD schedules (whether as monotherapies or in combination)</p>
+<p>to achieve sustained seizure freedom.</p>
+<li>For populations known to have altered plasma protein binding, measure free rather</li>
+<p>than total serum concentrations if the ASD is highly protein bound. Conditions alter-</p>
+<p>ing ASD protein binding include chronic renal failure, liver disease, hypoalbumin-</p>
+<p>emia, burns, pregnancy, malnutrition, displacing drugs, and age (neonates and older</p>
+<p>persons). Unbound concentration monitoring is especially useful for phenytoin.</p>
+<p>587</p>
+<p>ch54.indd 587 20-11-2020 13:08:48</p>
+<h2>SECTION 9 | Neurologic Disorders</h2>
+<p>Diagnosis of epilepsy</p>
+<p>Begin treatment with one ASD.</p>
+<p>Choose ASD based on seizure</p>
+<p>classification, comorbidities, and</p>
+<p>side effects</p>
+<p>Box 3: Seizure free?</p>
+<p>Yes No</p>
+<p>Intolerable side effects? Intolerable side effects?</p>
+<p>No Yes No Yes</p>
+<p>Optimal QOL? Decrease ASD Increase ASD Alternative ASD;</p>
+<p>dose go dose; go to Box 3 consider reducing</p>
+<p>to Box 3 dose or tapering</p>
+<p>Yes No</p>
+<p>off prior ASD</p>
+<p>Continue current Explore QOL issues;</p>
+<p>Box 4: Seizure</p>
+<p>treatment refer appropriately;</p>
+<p>free?</p>
+<p>go to Box 3</p>
+<p>No Yes</p>
+<p>Seizure free &gt;2 years Intolerable side Increase dose of</p>
+<p>effects alternative</p>
+<p>Yes No Yes No ASD; Go to Box 3</p>
+<p>Consider withdrawal Go to Box 3 Taper off less</p>
+<p>of ASDs effective ASD;</p>
+<p>Continue current Rx</p>
+<p>continue effective</p>
+<h2>ASD</h2>
+<p>Seizure free?</p>
+<p>Yes No</p>
+<p>Continue Go to Box 4 or</p>
+<p>current Rx reconfirm diagnosis;</p>
+<p>consider surgery,</p>
+<p>other ASDs, or VNS</p>
+<p>(ASD, antiseizure drug; VNS, vagal nerve stimulation; QOL, quality of life)</p>
+<h2>FIGURE 54-2. An algorithm for ASD therapy.</h2>
+<li>Neonates and infants display decreased efficiency in renal elimination and may</li>
+<p>metabolize drugs more slowly, but by age 2 or 3 years children may metabolize drugs</p>
+<p>more rapidly than adults. Thus, neonates and infants require lower doses of ASD, but</p>
+<p>children require higher doses of many ASDs than adults.</p>
+<li>ASD side effects and monitoring are shown in Table 54-3. Concentration-dependent</li>
+<p>side effects can often be alleviated by decreasing the dose or avoided by increasing</p>
+<p>the dose very slowly.</p>
+<li>CNS side effects are frequent and include sedation, dizziness, blurred vision, poor</li>
+<p>concentration, and ataxia.</p>
+<li>Barbiturates can cause more cognitive impairment than other ASDs, but in children,</li>
+<p>they can cause paradoxical excitement. In general, the newer agents have less effect</p>
+<p>on cognition, except topiramate.</p>
+<p>588</p>
+<p>ch54.indd 588 20-11-2020 13:08:49</p>
+<div class="table-container"><table><tr><th>Increase ASD
+dose; go to Box 3</th><th>Alternative ASD;
+consider reducing
+dose or tapering
+off prior ASD</th></tr></table></div><div class="table-container"><table><tr><th>Continue current
+treatment</th><th>Explore QOL issues;
+refer appropriately;
+go to Box 3</th></tr></table></div><div class="table-container"><table><tr><th>Continue
+current Rx</th><th>Go to Box 4 or
+reconfirm diagnosis;
+consider surgery,
+other ASDs, or VNS</th></tr></table></div><p>589</p>
+<p>Epilepsy</p>
+<p>and</p>
+<p>Status</p>
+<p>Epilepticus</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>54</p>
+<p>TABLE 54-2 Antiseizure Drug Dosing and Target Serum Concentration Ranges</p>
+<p>Comments Target Serum</p>
+<p>Drug Brand Name Initial or Starting Dose Usual Range or Maximum Dose Concentration Range</p>
+<p>First generation</p>
+<p>Carbamazepine Tegretol 400 mg/day 400–1600 mg 4–12 mcg/mLa (17–51 μmol/L)</p>
+<p>Tegretol XR</p>
+<p>Clonazepam Klonopin 1.5 mg/day 20 mg 20–70 ng/mL (67–233 pmol/L)</p>
+<p>Ethosuximide Zarontin 500 mg/day 500–1500 mg 40–100 mcg/mL (282–708 μmol/L)</p>
+<p>Phenobarbital Various 1–3 mg/kg/day (10– 180–300 mg 10–40 mcg/mLa (43–172 μmol/L)</p>
+<p>20 mg/kg LD)</p>
+<p>Phenytoin Dilantin 3–5 mg/kg (200–400 mg) 300–600 mg Total: 10–20 mcg/mL (40–79 μmol/L)</p>
+<p>(15–20 mg/kg LD) Unbound: 0.5–3 mcg/mL (2–12 μmol/L)</p>
+<p>Primidone Mysoline 100–125 mg/day 750–2000 mg 5–10 mcg/mL (23–46 μmol/L)</p>
+<p>Valproic acid Depakene 15 mg/kg (500–1000 mg) 60 mg/kg (3000–5000 mg) 50–100 mcg/mL (347–693 μmol/L)</p>
+<p>Depakote DR/ER</p>
+<p>Depacon</p>
+<p>Second generation</p>
+<p>Felbamate Felbatol 1200 mg/day 3600 mg 30–60 mcg/mL (126–252 μmol/L)</p>
+<p>Gabapentin Neurontin 300–900 mg/day 4800 mg 2–20 mcg/mL (12–117 μmol/L)</p>
+<p>Lamotrigine Lamictal 25 mg every other day if on 100–200 mg if on VPA; 300–500 mg 4–20 mcg/mL (16–78 μmol/L)</p>
+<p>Lamictal XR VPA; 25–50 mg/day if not if not on VPA</p>
+<p>on VPA</p>
+<p>(Continued )</p>
+<p>ch54.indd</p>
+<p>589</p>
+<p>20-11-2020</p>
+<p>13:08:49</p>
+<h2>ALGRAWANY</h2>
+<p>https://www.facebook.com/groups/2202763316616203</p>
+<div class="table-container"><table><tr><th>TABLE 54-2 Antiseizure Drug Dosing and Target Serum Concentration Ranges</th><th></th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Initial or Starting Dose</td><td>Usual Range or Maximum Dose</td><td>Comments Target Serum
+Concentration Range</td></tr><tr><td>First generation</td><td></td><td></td><td></td><td></td></tr><tr><td>Carbamazepine</td><td>Tegretol</td><td>400 mg/day</td><td>400–1600 mg</td><td>4–12 mcg/mLa (17–51 μmol/L)</td></tr><tr><td></td><td>Tegretol XR</td><td></td><td></td><td></td></tr><tr><td>Clonazepam</td><td>Klonopin</td><td>1.5 mg/day</td><td>20 mg</td><td>20–70 ng/mL (67–233 pmol/L)</td></tr><tr><td>Ethosuximide</td><td>Zarontin</td><td>500 mg/day</td><td>500–1500 mg</td><td>40–100 mcg/mL (282–708 μmol/L)</td></tr><tr><td>Phenobarbital</td><td>Various</td><td>1–3 mg/kg/day (10–
+20 mg/kg LD)</td><td>180–300 mg</td><td>10–40 mcg/mLa (43–172 μmol/L)</td></tr><tr><td>Phenytoin</td><td>Dilantin</td><td>3–5 mg/kg (200–400 mg)</td><td>300–600 mg</td><td>Total: 10–20 mcg/mL (40–79 μmol/L)</td></tr><tr><td></td><td></td><td>(15–20 mg/kg LD)</td><td></td><td>Unbound: 0.5–3 mcg/mL (2–12 μmol/L)</td></tr><tr><td>Primidone</td><td>Mysoline</td><td>100–125 mg/day</td><td>750–2000 mg</td><td>5–10 mcg/mL (23–46 μmol/L)</td></tr><tr><td>Valproic acid</td><td>Depakene</td><td>15 mg/kg (500–1000 mg)</td><td>60 mg/kg (3000–5000 mg)</td><td>50–100 mcg/mL (347–693 μmol/L)</td></tr><tr><td></td><td>Depakote DR/ER</td><td></td><td></td><td></td></tr><tr><td></td><td>Depacon</td><td></td><td></td><td></td></tr><tr><td>Second generation</td><td></td><td></td><td></td><td></td></tr><tr><td>Felbamate</td><td>Felbatol</td><td>1200 mg/day</td><td>3600 mg</td><td>30–60 mcg/mL (126–252 μmol/L)</td></tr><tr><td>Gabapentin</td><td>Neurontin</td><td>300–900 mg/day</td><td>4800 mg</td><td>2–20 mcg/mL (12–117 μmol/L)</td></tr><tr><td>Lamotrigine</td><td>Lamictal</td><td>25 mg every other day if on
+VPA; 25–50 mg/day if not
+on VPA</td><td>100–200 mg if on VPA; 300–500 mg
+if not on VPA</td><td>4–20 mcg/mL (16–78 μmol/L)
+(Continued )</td></tr><tr><td></td><td>Lamictal XR</td><td></td><td></td><td></td></tr></table></div><h2>590 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<p>TABLE 54-2 Antiseizure Drug Dosing and Target Serum Concentration Ranges(Continued )</p>
+<p>Comments Target Serum</p>
+<p>Drug Brand Name Initial or Starting Dose Usual Range or Maximum Dose Concentration Range</p>
+<p>Second generation (con’t)</p>
+<p>Levetiracetam Keppra 500–1000 mg/day 3000 mg 12–46 mcg/mL (70–270 μmol/L)</p>
+<p>Keppra XR</p>
+<p>Oxcarbazepine Trileptal 300–600 mg/day 1200–2400 mg 3–35 mcg/mL (MHD) (12–139 μmol/L)</p>
+<p>Oxtellar XR</p>
+<p>Tiagabine Gabitril 4 mg/day 56 mg 0.02–0.2 mcg/mL (0.05–0.5 μmol/L)</p>
+<p>Topiramate Topamax 25–50 mg/day 200–400 mg 5–20 mcg/mL (15–59 μmol/L)</p>
+<p>Trokendi XR</p>
+<p>Zonisamide Zonegran 100 mg/day 600 mg 10–40 mcg/mL (47–188 μmol/L)</p>
+<p>Third generation</p>
+<p>Brivaracetam Briviact 100 mg/day 200 mg/day Not defined</p>
+<p>Cannabadiol Epidiolex 5 mg/kg/day 10–20 mg/kg/day Not defined</p>
+<p>Clobazam Onfi ≤30 kg: 5 mg/day; &gt;30 kg: ≤30 kg up to 20 mg; &gt;30 kg up to 0.03–0.3 mcg/mL (0.1–1.0 μmol/L)</p>
+<p>10 mg/day 40 mg</p>
+<p>Eslicarbazepine Aptiom 400 mg/day 800–1600 mg Not defined</p>
+<p>Lacosamide Vimpat 100 mg/day 400 mg Not defined</p>
+<p>Perampanel Fycompa 2 mg/day 8–12 mg Not defined</p>
+<p>Pregabalin Lyrica 150 mg/day 600 mg Not defined</p>
+<p>Rufinamide Banzel 400–800 mg/day 3200 mg Not defined</p>
+<p>Vigabatrin Sabril 1000 mg/day 3000 mg 0.8–36 mcg/mL (6–279 μmol/L)</p>
+<p>aUnits mcg/mL and mg/L are numerically equivalent, and units ng/mL and mcg/L are numerically equivalent.</p>
+<p>LD, loading dose; MHD, 10-monohydroxycarbazepine derivative.</p>
+<p>ch54.indd</p>
+<p>590</p>
+<p>20-11-2020</p>
+<p>13:08:49</p>
+<div class="table-container"><table><tr><th>TABLE 54-2 Antiseizure Drug Dosing and Target Serum Concentration Ranges(Continued )
+Comments Target Serum
+Drug Brand Name Initial or Starting Dose Usual Range or Maximum Dose Concentration Range</th><th></th><th></th><th></th><th></th></tr><tr><td>Second generation (con’t)</td><td></td><td></td><td></td><td></td></tr><tr><td>Levetiracetam</td><td>Keppra</td><td>500–1000 mg/day</td><td>3000 mg</td><td>12–46 mcg/mL (70–270 μmol/L)</td></tr><tr><td></td><td>Keppra XR</td><td></td><td></td><td></td></tr><tr><td>Oxcarbazepine</td><td>Trileptal</td><td>300–600 mg/day</td><td>1200–2400 mg</td><td>3–35 mcg/mL (MHD) (12–139 μmol/L)</td></tr><tr><td></td><td>Oxtellar XR</td><td></td><td></td><td></td></tr><tr><td>Tiagabine</td><td>Gabitril</td><td>4 mg/day</td><td>56 mg</td><td>0.02–0.2 mcg/mL (0.05–0.5 μmol/L)</td></tr><tr><td>Topiramate</td><td>Topamax</td><td>25–50 mg/day</td><td>200–400 mg</td><td>5–20 mcg/mL (15–59 μmol/L)</td></tr><tr><td></td><td>Trokendi XR</td><td></td><td></td><td></td></tr><tr><td>Zonisamide</td><td>Zonegran</td><td>100 mg/day</td><td>600 mg</td><td>10–40 mcg/mL (47–188 μmol/L)</td></tr><tr><td>Third generation</td><td></td><td></td><td></td><td></td></tr><tr><td>Brivaracetam</td><td>Briviact</td><td>100 mg/day</td><td>200 mg/day</td><td>Not defined</td></tr><tr><td>Cannabadiol</td><td>Epidiolex</td><td>5 mg/kg/day</td><td>10–20 mg/kg/day</td><td>Not defined</td></tr><tr><td>Clobazam</td><td>Onfi</td><td>≤30 kg: 5 mg/day; &gt;30 kg:
+10 mg/day</td><td>≤30 kg up to 20 mg; &gt;30 kg up to
+40 mg</td><td>0.03–0.3 mcg/mL (0.1–1.0 μmol/L)</td></tr><tr><td>Eslicarbazepine</td><td>Aptiom</td><td>400 mg/day</td><td>800–1600 mg</td><td>Not defined</td></tr><tr><td>Lacosamide</td><td>Vimpat</td><td>100 mg/day</td><td>400 mg</td><td>Not defined</td></tr><tr><td>Perampanel</td><td>Fycompa</td><td>2 mg/day</td><td>8–12 mg</td><td>Not defined</td></tr><tr><td>Pregabalin</td><td>Lyrica</td><td>150 mg/day</td><td>600 mg</td><td>Not defined</td></tr><tr><td>Rufinamide</td><td>Banzel</td><td>400–800 mg/day</td><td>3200 mg</td><td>Not defined</td></tr><tr><td>Vigabatrin</td><td>Sabril</td><td>1000 mg/day</td><td>3000 mg</td><td>0.8–36 mcg/mL (6–279 μmol/L)</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<li>The most widely recognized idiosyncratic reactions are ASD-induced drug rashes,</li>
+<p>which can progress to Stevens–Johnson syndrome/toxic epidermal necrolysis. Vari-</p>
+<p>ants of the HLA-B gene, HLA-B*1502, have been associated with increased risk of</p>
+<p>developing Stevens–Johnson syndrome as well as toxic epidermal necrolysis with</p>
+<p>carbamazepine (and possibly phenytoin, lamotrigine, and oxcarbazepine). This vari-</p>
+<p>ant is found in up to 15% of individuals of Asian, southeast Asian, and south Asian</p>
+<p>origin. Patients with this variant should generally avoid these drugs. Also, the HLA</p>
+<p>genotype HLA-A*3101 is associated with carbamazepine-induced skin reactions</p>
+<p>in individuals of Chinese, Japanese, and European populations.</p>
+<li>Others reactions include hepatitis and blood dyscrasias. When acute organ</li>
+<p>failure occurs, it usually happens within the first 6 months of ASD therapy. Any</p>
+<p>patient taking ASDs who complains of lethargy, vomiting, fever, or rash should</p>
+<pre><code>have a laboratory assessment, including white blood cell counts and liver function tests.</code></pre>
+<li>A side effect of long-term use of ASDs is osteomalacia or osteoporosis. It is hypoth-</li>
+<p>esized that phenytoin, phenobarbital, carbamazepine, oxcarbazepine, felbamate, and</p>
+<p>valproic acid may interfere with vitamin D metabolism. Patients taking these drugs</p>
+<p>should receive vitamin D supplementation and calcium and bone mineral density</p>
+<p>testing if other risk factors for osteoporosis are present. Laboratory tests may reveal</p>
+<p>elevated bone-specific alkaline phosphatase and decreased serum Ca and 25-OH</p>
+<p>vitamin D, as well as intact parathyroid hormone.</p>
+<li>Table 54-4 shows ASD elimination pathways and major effects on hepatic enzymes.</li>
+<p>Use caution when ASDs are added to or discontinued from a drug regimen. Pharma-</p>
+<p>cokinetic interactions are common complicating factor in ASD selection.</p>
+<li>Phenobarbital, phenytoin, primidone, and carbamazepine are potent inducers of</li>
+<p>cytochrome P450 (CYP450), epoxide hydrolase, and uridine diphosphate glucurono-</p>
+<p>syltransferase enzyme systems. Valproic acid inhibits many hepatic enzyme systems</p>
+<p>and displaces some drugs from plasma albumin.</p>
+<li>Felbamate and topiramate can act as inducers with some isoforms and inhibitors</li>
+<p>with others.</p>
+<p>First-Generation ASDs</p>
+<p>Carbamazepine</p>
+<li>Food, especially fat, may enhance the bioavailability of carbamazepine.</li>
+<li>Controlled- and sustained-release preparations dosed every 12 hours are bioequiva-</li>
+<p>lent to immediate-release preparations dosed every 6 hours. The sustained-release</p>
+<p>capsule can be opened and sprinkled on food.</p>
+<li>Carbamazepine may be continued unless the white blood cell count drops to less than</li>
+<p>2500/mm3 (2.5 × 109/L) and the absolute neutrophil count drops to less than 1000/</p>
+<p>mm3 (1 × 109/L).</p>
+<li>Carbamazepine may interact with other drugs by inducing their metabolism. The inter-</li>
+<p>action of erythromycin and clarithromycin (CYP3A4 inhibition) with carbamazepine is</p>
+<p>particularly significant. Autoinduction of its own metabolism starts 3–5 days after initiat-</p>
+<p>ing and is complete in 21–28 days. Reversal of autoinduction is rapid after discontinuation.</p>
+<p>Ethosuximide</p>
+<li>Titration over 1–2 weeks to maintenance doses of 20 mg/kg/day usually produces</li>
+<p>therapeutic serum concentrations. It is usually given in two equal doses daily.</p>
+<li>There is some evidence for nonlinear metabolism at higher serum concentrations.</li>
+<p>Phenobarbital</p>
+<li>Phenobarbital, a potent enzyme inducer, interacts with many drugs.</li>
+<p>Phenytoin</p>
+<li>Phenytoin is a first-line ASD for many seizure types (see Table 54-3).</li>
+<li>Absorption may be saturable at higher doses (above 400 mg). Do not change brands</li>
+<p>without careful monitoring. The IM route is best avoided, as absorption is erratic. Fosphe-</p>
+<p>nytoin can safely be administered IV and intramuscularly (IM). Equations are available to</p>
+<p>normalize the phenytoin concentration in patients with hypoalbuminemia or renal failure.</p>
+<p>591</p>
+<p>ch54.indd 591 20-11-2020 13:08:49</p>
+<h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>First-generation ASDs</p>
+<p>Carbamazepine Useful in Worsens other seizure types Potent inducer of CYP3A4, Phenobarbital, CNS effects including Boxed warning: Increased Hyponatremia</p>
+<p>comorbid in patients with absence CYP1A2, CYP2B6, phenytoin, primidone diplopia, dizziness, risk of SJS/TEN and (periodically</p>
+<h2>Chewable tablet,</h2>
+<p>bipolar epilepsy; avoid if prior rash CYP2C9/19; decreases decrease levels; drowsiness, HLA-B*1502 allele; monitor sodium);</p>
+<h2>ER tablet, liquid</h2>
+<p>disorder and with other ASDs due to levels of brivaracetam, valproate increases unsteadiness, lethargy aplastic anemia and metabolic bone</p>
+<p>suspension</p>
+<p>trigeminal possible cross-reaction; clonazepam, carbamazepine-10,11 agranulocytosis disease including</p>
+<p>neuralgia increased risk of SJS/ eslicarbazepine, epoxide osteoporosis,</p>
+<p>Other blood</p>
+<p>TEN in HLA-B*1502 and ethosuximide, lamotrigine, osteopenia,</p>
+<p>dycrasias including</p>
+<p>HLA-A*3101 allele in oxcarbazepine, osteomalacia</p>
+<p>thrombocytopenia,</p>
+<p>Asians; auto-inducer; active perampanel, phenytoin,</p>
+<p>leukopenia; DRESS;</p>
+<p>metabolite carbamazepine tiagabine, topiramate,</p>
+<p>hyponatremia; increased</p>
+<p>10,11 epoxide contributes to valproate</p>
+<p>intraocular pressure;</p>
+<p>idiosyncratic side effects; can</p>
+<p>cardiovascular effects</p>
+<p>cause fetal harm</p>
+<p>including second- and</p>
+<p>third-degree AV heart</p>
+<p>block; hepatotoxicity;</p>
+<p>genitourinary effect;</p>
+<p>nephrotoxicity</p>
+<p>Clonazepam Useful in May increase TC seizures when May affect levels of May be affected by CNS effects including Boxed warning: Concomitant Physiologic</p>
+<p>(Schedule IV) patients used in mixed seizure types; phenytoin enzyme-inducing or sedation, ataxia; use with opioids may dependence; loss</p>
+<p>with panic tolerance and dependence enzyme-inhibiting paradoxical result in profound of effect; hair loss;</p>
+<h2>Tablet, ODT</h2>
+<p>disorder, may occur; use with other ASDs reactions such as sedation, respiratory hirsutism; ankle</p>
+<p>myoclonic CNS depressant may produce agitation, irritability, depression, coma, and and facial edema</p>
+<p>seizures, and additive effects; may cause aggression, anxiety, death</p>
+<p>subcortical respiratory depression; anger, nightmares,</p>
+<p>Blood dyscrasias</p>
+<p>myoclonus contraindicated in acute hallucinations and</p>
+<p>including leukopenia,</p>
+<p>narrow angle glaucoma psychoses</p>
+<p>thrombocytopenia,</p>
+<p>and severe liver impairment;</p>
+<p>eosinophilia; rash;</p>
+<p>withdrawal symptoms may</p>
+<p>cardiovascular or</p>
+<p>occur after discontinuation; no</p>
+<p>respiratory depression;</p>
+<p>adequate data in pregnancy—</p>
+<p>hepatotoxicity; muscle</p>
+<p>may cause fetal harm</p>
+<p>weakness</p>
+<p>Ethosuximide Drug of choice Worsens generalized TC May affect levels of Valproate may increase GI distress including Blood dyscrasias Behavioral changes</p>
+<p>for absence seizures and other seizure phenytoin, carbamazepine, or decrease levels nausea/vomiting, including leukopenia,</p>
+<p>Capsule, liquid</p>
+<p>seizures types; contraindicated phenobarbital, phenytoin, cramps diarrhea; agranulocytosis,</p>
+<p>solution</p>
+<p>in those with allergies primidone, valproate anorexia and pancytopenia;</p>
+<p>to succinimides; may weight loss; CNS rash including SJS;</p>
+<p>cause fetal harm; use with effects including DRESS; hepatic/renal</p>
+<pre><code>caution in hepatic/renal drowsiness, dizziness, dysfunction; lupus</code></pre>
+<pre><code>dysfunction hiccoughs erythematosus</code></pre>
+<p>Phenobarbital Tolerance and dependence may May decrease levels of Valproate increases CNS effects including Respiratory depression Behavioral changes;</p>
+<p>(Schedule III) occur; slow taper needed carbamazepine, levels; phenytoin residual sedation, and apnea; rash (SJS, connective tissue</p>
+<p>when discontinuing after eslicarbazepine, increases or decreases drowsiness, lethargy, TEN); cardiac effects disorder; intellectual</p>
+<h2>Tablet, elixir,</h2>
+<p>prolonged use; use with other ethosuximide, lamotrigine, levels confusion, ataxia, including bradycardia, blunting; metabolic</p>
+<h2>injectable</h2>
+<p>CNS depressants may produce oxcarbazepine, perampanel, vertigo; paroxysmal hypotension, syncope; bone disease</p>
+<p>solution</p>
+<p>additive CNS effects; may phenytoin, rufinamide, excitement, irritability hepatotoxicity (osteoporosis,</p>
+<p>cause respiratory depression; tiagabine, topiramate, and hyperactivity in osteopenia,</p>
+<p>can cause fetal harm valproate older persons and osteomalacia);</p>
+<p>children; GI effects folate deficiency</p>
+<p>including nausea, (with megaloblastic</p>
+<p>vomiting anemia)</p>
+<p>592</p>
+<p>ch54.indd 592 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs)</th><th></th><th></th><th>(Continued )</th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td></td><td></td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>First-generation ASDs
+Carbamazepine Useful in Worsens other seizure types Potent inducer of CYP3A4,
+comorbid in patients with absence CYP1A2, CYP2B6,
+Chewable tablet,
+bipolar epilepsy; avoid if prior rash CYP2C9/19; decreases
+ER tablet, liquid
+disorder and with other ASDs due to levels of brivaracetam,
+suspension
+trigeminal possible cross-reaction; clonazepam,
+neuralgia increased risk of SJS/ eslicarbazepine,
+TEN in HLA-B*1502 and ethosuximide, lamotrigine,
+HLA-A*3101 allele in oxcarbazepine,
+Asians; auto-inducer; active perampanel, phenytoin,
+metabolite carbamazepine tiagabine, topiramate,
+10,11 epoxide contributes to valproate
+idiosyncratic side effects; can
+cause fetal harm</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Clonazepam
+(Schedule IV)
+Tablet, ODT</td><td>Useful in
+patients
+with panic
+disorder,
+myoclonic
+seizures, and
+subcortical
+myoclonus</td><td>May increase TC seizures when
+used in mixed seizure types;
+tolerance and dependence
+may occur; use with other
+CNS depressant may produce
+additive effects; may cause
+respiratory depression;
+contraindicated in acute
+narrow angle glaucoma
+and severe liver impairment;
+withdrawal symptoms may
+occur after discontinuation; no
+adequate data in pregnancy—
+may cause fetal harm</td><td></td><td></td><td>May affect levels of
+phenytoin</td></tr><tr><td>Ethosuximide
+Capsule, liquid
+solution</td><td>Drug of choice
+for absence
+seizures</td><td>Worsens generalized TC
+seizures and other seizure
+types; contraindicated
+in those with allergies
+to succinimides; may
+cause fetal harm; use with
+caution in hepatic/renal
+dysfunction</td><td></td><td></td><td>May affect levels of
+phenytoin, carbamazepine,
+phenobarbital, phenytoin,
+primidone, valproate</td></tr><tr><td>Phenobarbital
+(Schedule III)
+Tablet, elixir,
+injectable
+solution</td><td></td><td>Tolerance and dependence may
+occur; slow taper needed
+when discontinuing after
+prolonged use; use with other
+CNS depressants may produce
+additive CNS effects; may
+cause respiratory depression;
+can cause fetal harm</td><td></td><td></td><td>May decrease levels of
+carbamazepine,
+eslicarbazepine,
+ethosuximide, lamotrigine,
+oxcarbazepine, perampanel,
+phenytoin, rufinamide,
+tiagabine, topiramate,
+valproate</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>First-generation ASDs</p>
+<p>Carbamazepine Useful in Worsens other seizure types Potent inducer of CYP3A4, Phenobarbital, CNS effects including Boxed warning: Increased Hyponatremia</p>
+<p>comorbid in patients with absence CYP1A2, CYP2B6, phenytoin, primidone diplopia, dizziness, risk of SJS/TEN and (periodically</p>
+<h2>Chewable tablet,</h2>
+<p>bipolar epilepsy; avoid if prior rash CYP2C9/19; decreases decrease levels; drowsiness, HLA-B*1502 allele; monitor sodium);</p>
+<h2>ER tablet, liquid</h2>
+<p>disorder and with other ASDs due to levels of brivaracetam, valproate increases unsteadiness, lethargy aplastic anemia and metabolic bone</p>
+<p>suspension</p>
+<p>trigeminal possible cross-reaction; clonazepam, carbamazepine-10,11 agranulocytosis disease including</p>
+<p>neuralgia increased risk of SJS/ eslicarbazepine, epoxide osteoporosis,</p>
+<p>Other blood</p>
+<p>TEN in HLA-B*1502 and ethosuximide, lamotrigine, osteopenia,</p>
+<p>dycrasias including</p>
+<p>HLA-A*3101 allele in oxcarbazepine, osteomalacia</p>
+<p>thrombocytopenia,</p>
+<p>Asians; auto-inducer; active perampanel, phenytoin,</p>
+<p>leukopenia; DRESS;</p>
+<p>metabolite carbamazepine tiagabine, topiramate,</p>
+<p>hyponatremia; increased</p>
+<p>10,11 epoxide contributes to valproate</p>
+<p>intraocular pressure;</p>
+<p>idiosyncratic side effects; can</p>
+<p>cardiovascular effects</p>
+<p>cause fetal harm</p>
+<p>including second- and</p>
+<p>third-degree AV heart</p>
+<p>block; hepatotoxicity;</p>
+<p>genitourinary effect;</p>
+<p>nephrotoxicity</p>
+<p>Clonazepam Useful in May increase TC seizures when May affect levels of May be affected by CNS effects including Boxed warning: Concomitant Physiologic</p>
+<p>(Schedule IV) patients used in mixed seizure types; phenytoin enzyme-inducing or sedation, ataxia; use with opioids may dependence; loss</p>
+<p>with panic tolerance and dependence enzyme-inhibiting paradoxical result in profound of effect; hair loss;</p>
+<h2>Tablet, ODT</h2>
+<p>disorder, may occur; use with other ASDs reactions such as sedation, respiratory hirsutism; ankle</p>
+<p>myoclonic CNS depressant may produce agitation, irritability, depression, coma, and and facial edema</p>
+<p>seizures, and additive effects; may cause aggression, anxiety, death</p>
+<p>subcortical respiratory depression; anger, nightmares,</p>
+<p>Blood dyscrasias</p>
+<p>myoclonus contraindicated in acute hallucinations and</p>
+<p>including leukopenia,</p>
+<p>narrow angle glaucoma psychoses</p>
+<p>thrombocytopenia,</p>
+<p>and severe liver impairment;</p>
+<p>eosinophilia; rash;</p>
+<p>withdrawal symptoms may</p>
+<p>cardiovascular or</p>
+<p>occur after discontinuation; no</p>
+<p>respiratory depression;</p>
+<p>adequate data in pregnancy—</p>
+<p>hepatotoxicity; muscle</p>
+<p>may cause fetal harm</p>
+<p>weakness</p>
+<p>Ethosuximide Drug of choice Worsens generalized TC May affect levels of Valproate may increase GI distress including Blood dyscrasias Behavioral changes</p>
+<p>for absence seizures and other seizure phenytoin, carbamazepine, or decrease levels nausea/vomiting, including leukopenia,</p>
+<p>Capsule, liquid</p>
+<p>seizures types; contraindicated phenobarbital, phenytoin, cramps diarrhea; agranulocytosis,</p>
+<p>solution</p>
+<p>in those with allergies primidone, valproate anorexia and pancytopenia;</p>
+<p>to succinimides; may weight loss; CNS rash including SJS;</p>
+<p>cause fetal harm; use with effects including DRESS; hepatic/renal</p>
+<pre><code>caution in hepatic/renal drowsiness, dizziness, dysfunction; lupus</code></pre>
+<pre><code>dysfunction hiccoughs erythematosus</code></pre>
+<p>Phenobarbital Tolerance and dependence may May decrease levels of Valproate increases CNS effects including Respiratory depression Behavioral changes;</p>
+<p>(Schedule III) occur; slow taper needed carbamazepine, levels; phenytoin residual sedation, and apnea; rash (SJS, connective tissue</p>
+<p>when discontinuing after eslicarbazepine, increases or decreases drowsiness, lethargy, TEN); cardiac effects disorder; intellectual</p>
+<h2>Tablet, elixir,</h2>
+<p>prolonged use; use with other ethosuximide, lamotrigine, levels confusion, ataxia, including bradycardia, blunting; metabolic</p>
+<h2>injectable</h2>
+<p>CNS depressants may produce oxcarbazepine, perampanel, vertigo; paroxysmal hypotension, syncope; bone disease</p>
+<p>solution</p>
+<p>additive CNS effects; may phenytoin, rufinamide, excitement, irritability hepatotoxicity (osteoporosis,</p>
+<p>cause respiratory depression; tiagabine, topiramate, and hyperactivity in osteopenia,</p>
+<p>can cause fetal harm valproate older persons and osteomalacia);</p>
+<p>children; GI effects folate deficiency</p>
+<p>including nausea, (with megaloblastic</p>
+<p>vomiting anemia)</p>
+<p>(Continued )</p>
+<p>593</p>
+<p>ch54.indd 593 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td>Phenobarbital, CNS effects including Boxed warning: Increased Hyponatremia
+phenytoin, primidone diplopia, dizziness, risk of SJS/TEN and (periodically
+decrease levels; drowsiness, HLA-B*1502 allele; monitor sodium);
+valproate increases unsteadiness, lethargy aplastic anemia and metabolic bone
+carbamazepine-10,11 agranulocytosis disease including
+epoxide osteoporosis,
+Other blood
+osteopenia,
+dycrasias including
+osteomalacia
+thrombocytopenia,
+leukopenia; DRESS;
+hyponatremia; increased
+intraocular pressure;
+cardiovascular effects
+including second- and
+third-degree AV heart
+block; hepatotoxicity;
+genitourinary effect;
+nephrotoxicity</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>May be affected by
+enzyme-inducing or
+enzyme-inhibiting
+ASDs</td><td>CNS effects including
+sedation, ataxia;
+paradoxical
+reactions such as
+agitation, irritability,
+aggression, anxiety,
+anger, nightmares,
+hallucinations and
+psychoses</td><td>Boxed warning: Concomitant
+use with opioids may
+result in profound
+sedation, respiratory
+depression, coma, and
+death
+Blood dyscrasias
+including leukopenia,
+thrombocytopenia,
+eosinophilia; rash;
+cardiovascular or
+respiratory depression;
+hepatotoxicity; muscle
+weakness</td><td>Physiologic
+dependence; loss
+of effect; hair loss;
+hirsutism; ankle
+and facial edema</td></tr><tr><td></td><td>Valproate may increase
+or decrease levels</td><td>GI distress including
+nausea/vomiting,
+cramps diarrhea;
+anorexia and
+weight loss; CNS
+effects including
+drowsiness, dizziness,
+hiccoughs</td><td>Blood dyscrasias
+including leukopenia,
+agranulocytosis,
+pancytopenia;
+rash including SJS;
+DRESS; hepatic/renal
+dysfunction; lupus
+erythematosus</td><td>Behavioral changes</td></tr><tr><td></td><td>Valproate increases
+levels; phenytoin
+increases or decreases
+levels</td><td>CNS effects including
+residual sedation,
+drowsiness, lethargy,
+confusion, ataxia,
+vertigo; paroxysmal
+excitement, irritability
+and hyperactivity in
+older persons and
+children; GI effects
+including nausea,
+vomiting</td><td>Respiratory depression
+and apnea; rash (SJS,
+TEN); cardiac effects
+including bradycardia,
+hypotension, syncope;
+hepatotoxicity</td><td>Behavioral changes;
+connective tissue
+disorder; intellectual
+blunting; metabolic
+bone disease
+(osteoporosis,
+osteopenia,
+osteomalacia);
+folate deficiency
+(with megaloblastic
+anemia)
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>First-generation ASDs (con’t)</p>
+<p>Phenytoin Useful in May aggravate seizures in May decrease levels of Ethosuximide, CNS effects including Blood dyscrasias including Connective</p>
+<p>nonadherence patients with absence brivaracetam, felbamate, ataxia, nystagums, thrombocytopenia, tissue changes</p>
+<p>ER capsule; liquid</p>
+<p>as dosed once seizures; can increase blood carbamazepine, oxcarbazepine, slurred speech, leukopenia, including skin</p>
+<p>suspension;</p>
+<p>daily sugar levels in diabetes; clonazepam, eslicarbazepine, methsuximide, decreased granulocytopenia, thickening, gingival</p>
+<h2>injectable;</h2>
+<p>HLA-B*1502 may be a risk ethosuximide, felbamate, topiramate may coordination, mental agranulocytosis, hyperplasia,</p>
+<h2>chewable tablet</h2>
+<p>factor for the development of lamotrigine, oxcarbazepine, increase levels; confusion, dizziness, pancytopenia; rash coarsening of</p>
+<p>(Fosphenytoin, SJS/TEN in patients of Asian perampanel, tiagabine, carbamazepine, insomnia, transient (SJS/TEN); DRESS; facial features,</p>
+<p>a prodrug ancestry; monitoring of free topiramate, valproate vigabatrin may nervousness, hepatotoxicity, cardiac enlargement of</p>
+<p>desterified phenytoin levels required in decrease levels; headaches effects; purple glove lips; hirsutism;</p>
+<p>by esterases pregnancy, older persons or phenobarbital, syndrome with IV metabolic</p>
+<p>in the blood low albumin; compromised valproate may administration bone disease</p>
+<p>to phenytoin, absorption with concomitant increase or decrease (osteoporosis,</p>
+<p>also available tube feeds levels osteopenia,</p>
+<h2>as injectable osteomalacia);</h2>
+<p>solution only) peripheral</p>
+<p>neuropathy;</p>
+<p>cerebellar atrophy;</p>
+<p>folate deficiency</p>
+<p>(with megaloblastic</p>
+<p>anemia)</p>
+<p>Primidone Useful in Contraindicated in patients May decrease levels of Valproate may increase CNS effects including Blood dyscrasias including Behavioral changes;</p>
+<p>essential with porphyria carbamazepine, levels; phenytoin may ataxia, vertigo, granulocytopenia, intellectual</p>
+<h2>Tablet</h2>
+<p>tremor eslicarbazepine, increase or decrease nystagmus, diplopia, agranulocytosis; blunting;</p>
+<p>ethosuximide, lamotrigine, levels drowsiness, rash (SJS, TEN); liver connective</p>
+<pre><code>oxcarbazepine, perampanel, fatigue; GI effect dysfunction tissue disorder;</code></pre>
+<p>phenytoin, rufinamide, including nausea/ metabolic bone</p>
+<p>tiagabine, topiramate, vomiting, anorexia, disease (rickets,</p>
+<p>valproate fatigue; emotional osteomalacia);</p>
+<p>disturbances including folate deficiency</p>
+<p>hyperirritability (with megaloblastic</p>
+<p>anemia)</p>
+<p>Valproate Useful in Contraindicated in significant May increase levels of Carbamazepine, GI effects including Boxed warning: Hair and nail changes</p>
+<pre><code>comorbid hepatic dysfunction, eslicarbazepine, ethosuximide, phenobarbital, abdominal pain/GI hepatotoxicity especially including alopecia,</code></pre>
+<p>Divalproex DR</p>
+<p>bipolar mitochondrial disorders felbamate, lamotrigine, phenytoin, primidone upset (worse with IR), for children &lt;2 years hirsutism, hair</p>
+<p>sprinkle capsule,</p>
+<p>disorder and caused by DNA polymerase γ oxcarbazepine, phenytoin, decrease levels; constipation, diarrhea, of age and with texture and color</p>
+<p>Divalproex DR</p>
+<p>migraine (POLG) mutations, urea cycle phenobarbital, rufinamide, felbamate can anorexia, increased mitochondrial disorders; changes, nail and</p>
+<h2>tablet, Divalproex</h2>
+<p>disorders; use with caution topiramate increase levels; appetite, weight gain, fetal risk including neural nail bed disorders;</p>
+<p>ER 24-hour</p>
+<p>in pancreatitis, bleeding and estrogen OCPs may nausea/vomiting; tube defects, other irregular menses</p>
+<h2>tablet, valproic</h2>
+<p>other hematopoietic disorders; affect levels CNS effects including major malformations, and polycystic</p>
+<p>acid IR capsule,</p>
+<p>hyperammonemia with and blurred vision, ataxia, and decreased IQ; ovary-like</p>
+<p>valproate sodium</p>
+<p>without encephalopathy dizziness, headache, pancreatitis including syndrome; weight</p>
+<h2>injectable</h2>
+<p>associated with concomitant insomnia, nystagmus, fatal hemorrhagic gain; cerebral</p>
+<p>solution</p>
+<p>topiramate use; pregnancy somnolence, thinking pancreatitis pseudoa trophy;</p>
+<p>category D—contraindicated abnormal, tremor; Hyperammonemia osteoporosis and</p>
+<p>in women of childbearing dose dependent with and without osteopenia</p>
+<p>potential and pregnancy thrombocy topenia encephalopathy;</p>
+<p>category X for pregnant (associated hypothermia</p>
+<p>patients treated for migraine with valproate with and without</p>
+<p>prophylaxis concentrations &gt;100 hyperammonemia;</p>
+<p>mg/mL; 693 umol/L).</p>
+<p>DRESS; bleeding and</p>
+<p>other hematopoietic</p>
+<p>disorders</p>
+<p>594</p>
+<p>ch54.indd 594 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</th><th></th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>First-generation ASDs (con’t)
+Phenytoin Useful in May aggravate seizures in May decrease levels of
+nonadherence patients with absence brivaracetam,
+ER capsule; liquid
+as dosed once seizures; can increase blood carbamazepine,
+suspension;
+daily sugar levels in diabetes; clonazepam, eslicarbazepine,
+injectable;
+HLA-B*1502 may be a risk ethosuximide, felbamate,
+chewable tablet
+factor for the development of lamotrigine, oxcarbazepine,
+(Fosphenytoin, SJS/TEN in patients of Asian perampanel, tiagabine,
+a prodrug ancestry; monitoring of free topiramate, valproate
+desterified phenytoin levels required in
+by esterases pregnancy, older persons or
+in the blood low albumin; compromised
+to phenytoin, absorption with concomitant
+also available tube feeds
+as injectable
+solution only)</td><td></td><td></td><td></td></tr><tr><td>Primidone
+Tablet</td><td>Useful in
+essential
+tremor</td><td>Contraindicated in patients
+with porphyria</td><td>May decrease levels of
+carbamazepine,
+eslicarbazepine,
+ethosuximide, lamotrigine,
+oxcarbazepine, perampanel,
+phenytoin, rufinamide,
+tiagabine, topiramate,
+valproate</td></tr><tr><td>Valproate
+Divalproex DR
+sprinkle capsule,
+Divalproex DR
+tablet, Divalproex
+ER 24-hour
+tablet, valproic
+acid IR capsule,
+valproate sodium
+injectable
+solution</td><td>Useful in
+comorbid
+bipolar
+disorder and
+migraine</td><td>Contraindicated in significant
+hepatic dysfunction,
+mitochondrial disorders
+caused by DNA polymerase γ
+(POLG) mutations, urea cycle
+disorders; use with caution
+in pancreatitis, bleeding and
+other hematopoietic disorders;
+hyperammonemia with and
+without encephalopathy
+associated with concomitant
+topiramate use; pregnancy
+category D—contraindicated
+in women of childbearing
+potential and pregnancy
+category X for pregnant
+patients treated for migraine
+prophylaxis</td><td>May increase levels of
+eslicarbazepine, ethosuximide,
+felbamate, lamotrigine,
+oxcarbazepine, phenytoin,
+phenobarbital, rufinamide,
+topiramate</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>First-generation ASDs (con’t)</p>
+<p>Phenytoin Useful in May aggravate seizures in May decrease levels of Ethosuximide, CNS effects including Blood dyscrasias including Connective</p>
+<p>nonadherence patients with absence brivaracetam, felbamate, ataxia, nystagums, thrombocytopenia, tissue changes</p>
+<p>ER capsule; liquid</p>
+<p>as dosed once seizures; can increase blood carbamazepine, oxcarbazepine, slurred speech, leukopenia, including skin</p>
+<p>suspension;</p>
+<p>daily sugar levels in diabetes; clonazepam, eslicarbazepine, methsuximide, decreased granulocytopenia, thickening, gingival</p>
+<h2>injectable;</h2>
+<p>HLA-B*1502 may be a risk ethosuximide, felbamate, topiramate may coordination, mental agranulocytosis, hyperplasia,</p>
+<h2>chewable tablet</h2>
+<p>factor for the development of lamotrigine, oxcarbazepine, increase levels; confusion, dizziness, pancytopenia; rash coarsening of</p>
+<p>(Fosphenytoin, SJS/TEN in patients of Asian perampanel, tiagabine, carbamazepine, insomnia, transient (SJS/TEN); DRESS; facial features,</p>
+<p>a prodrug ancestry; monitoring of free topiramate, valproate vigabatrin may nervousness, hepatotoxicity, cardiac enlargement of</p>
+<p>desterified phenytoin levels required in decrease levels; headaches effects; purple glove lips; hirsutism;</p>
+<p>by esterases pregnancy, older persons or phenobarbital, syndrome with IV metabolic</p>
+<p>in the blood low albumin; compromised valproate may administration bone disease</p>
+<p>to phenytoin, absorption with concomitant increase or decrease (osteoporosis,</p>
+<p>also available tube feeds levels osteopenia,</p>
+<h2>as injectable osteomalacia);</h2>
+<p>solution only) peripheral</p>
+<p>neuropathy;</p>
+<p>cerebellar atrophy;</p>
+<p>folate deficiency</p>
+<p>(with megaloblastic</p>
+<p>anemia)</p>
+<p>Primidone Useful in Contraindicated in patients May decrease levels of Valproate may increase CNS effects including Blood dyscrasias including Behavioral changes;</p>
+<p>essential with porphyria carbamazepine, levels; phenytoin may ataxia, vertigo, granulocytopenia, intellectual</p>
+<h2>Tablet</h2>
+<p>tremor eslicarbazepine, increase or decrease nystagmus, diplopia, agranulocytosis; blunting;</p>
+<p>ethosuximide, lamotrigine, levels drowsiness, rash (SJS, TEN); liver connective</p>
+<pre><code>oxcarbazepine, perampanel, fatigue; GI effect dysfunction tissue disorder;</code></pre>
+<p>phenytoin, rufinamide, including nausea/ metabolic bone</p>
+<p>tiagabine, topiramate, vomiting, anorexia, disease (rickets,</p>
+<p>valproate fatigue; emotional osteomalacia);</p>
+<p>disturbances including folate deficiency</p>
+<p>hyperirritability (with megaloblastic</p>
+<p>anemia)</p>
+<p>Valproate Useful in Contraindicated in significant May increase levels of Carbamazepine, GI effects including Boxed warning: Hair and nail changes</p>
+<pre><code>comorbid hepatic dysfunction, eslicarbazepine, ethosuximide, phenobarbital, abdominal pain/GI hepatotoxicity especially including alopecia,</code></pre>
+<p>Divalproex DR</p>
+<p>bipolar mitochondrial disorders felbamate, lamotrigine, phenytoin, primidone upset (worse with IR), for children &lt;2 years hirsutism, hair</p>
+<p>sprinkle capsule,</p>
+<p>disorder and caused by DNA polymerase γ oxcarbazepine, phenytoin, decrease levels; constipation, diarrhea, of age and with texture and color</p>
+<p>Divalproex DR</p>
+<p>migraine (POLG) mutations, urea cycle phenobarbital, rufinamide, felbamate can anorexia, increased mitochondrial disorders; changes, nail and</p>
+<h2>tablet, Divalproex</h2>
+<p>disorders; use with caution topiramate increase levels; appetite, weight gain, fetal risk including neural nail bed disorders;</p>
+<p>ER 24-hour</p>
+<p>in pancreatitis, bleeding and estrogen OCPs may nausea/vomiting; tube defects, other irregular menses</p>
+<h2>tablet, valproic</h2>
+<p>other hematopoietic disorders; affect levels CNS effects including major malformations, and polycystic</p>
+<p>acid IR capsule,</p>
+<p>hyperammonemia with and blurred vision, ataxia, and decreased IQ; ovary-like</p>
+<p>valproate sodium</p>
+<p>without encephalopathy dizziness, headache, pancreatitis including syndrome; weight</p>
+<h2>injectable</h2>
+<p>associated with concomitant insomnia, nystagmus, fatal hemorrhagic gain; cerebral</p>
+<p>solution</p>
+<p>topiramate use; pregnancy somnolence, thinking pancreatitis pseudoa trophy;</p>
+<p>category D—contraindicated abnormal, tremor; Hyperammonemia osteoporosis and</p>
+<p>in women of childbearing dose dependent with and without osteopenia</p>
+<p>potential and pregnancy thrombocy topenia encephalopathy;</p>
+<p>category X for pregnant (associated hypothermia</p>
+<p>patients treated for migraine with valproate with and without</p>
+<p>prophylaxis concentrations &gt;100 hyperammonemia;</p>
+<p>mg/mL; 693 umol/L).</p>
+<p>DRESS; bleeding and</p>
+<p>other hematopoietic</p>
+<p>disorders</p>
+<p>(Continued )</p>
+<p>595</p>
+<p>ch54.indd 595 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td>Ethosuximide, CNS effects including Blood dyscrasias including Connective
+felbamate, ataxia, nystagums, thrombocytopenia, tissue changes
+oxcarbazepine, slurred speech, leukopenia, including skin
+methsuximide, decreased granulocytopenia, thickening, gingival
+topiramate may coordination, mental agranulocytosis, hyperplasia,
+increase levels; confusion, dizziness, pancytopenia; rash coarsening of
+carbamazepine, insomnia, transient (SJS/TEN); DRESS; facial features,
+vigabatrin may nervousness, hepatotoxicity, cardiac enlargement of
+decrease levels; headaches effects; purple glove lips; hirsutism;
+phenobarbital, syndrome with IV metabolic
+valproate may administration bone disease
+increase or decrease (osteoporosis,
+levels osteopenia,
+osteomalacia);
+peripheral
+neuropathy;
+cerebellar atrophy;
+folate deficiency
+(with megaloblastic
+anemia)</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Valproate may increase
+levels; phenytoin may
+increase or decrease
+levels</td><td>CNS effects including
+ataxia, vertigo,
+nystagmus, diplopia,
+drowsiness,
+fatigue; GI effect
+including nausea/
+vomiting, anorexia,
+fatigue; emotional
+disturbances including
+hyperirritability</td><td>Blood dyscrasias including
+granulocytopenia,
+agranulocytosis;
+rash (SJS, TEN); liver
+dysfunction</td><td>Behavioral changes;
+intellectual
+blunting;
+connective
+tissue disorder;
+metabolic bone
+disease (rickets,
+osteomalacia);
+folate deficiency
+(with megaloblastic
+anemia)</td></tr><tr><td></td><td>Carbamazepine,
+phenobarbital,
+phenytoin, primidone
+decrease levels;
+felbamate can
+increase levels;
+estrogen OCPs may
+affect levels</td><td>GI effects including
+abdominal pain/GI
+upset (worse with IR),
+constipation, diarrhea,
+anorexia, increased
+appetite, weight gain,
+nausea/vomiting;
+CNS effects including
+blurred vision, ataxia,
+dizziness, headache,
+insomnia, nystagmus,
+somnolence, thinking
+abnormal, tremor;
+dose dependent
+thrombocy topenia
+(associated
+with valproate
+concentrations &gt;100
+mg/mL; 693 umol/L).</td><td>Boxed warning:
+hepatotoxicity especially
+for children &lt;2 years
+of age and with
+mitochondrial disorders;
+fetal risk including neural
+tube defects, other
+major malformations,
+and decreased IQ;
+pancreatitis including
+fatal hemorrhagic
+pancreatitis
+Hyperammonemia
+with and without
+encephalopathy;
+hypothermia
+with and without
+hyperammonemia;
+DRESS; bleeding and
+other hematopoietic
+disorders</td><td>Hair and nail changes
+including alopecia,
+hirsutism, hair
+texture and color
+changes, nail and
+nail bed disorders;
+irregular menses
+and polycystic
+ovary-like
+syndrome; weight
+gain; cerebral
+pseudoa trophy;
+osteoporosis and
+osteopenia
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Second-generation ASDs</p>
+<p>Gabapentin Useful in Considered weakly efficacious;</p>
+<p>postherpetic potential abuse when taken</p>
+<h2>Tablet, capsule, oral</h2>
+<p>neuralgia, with opioids; withdrawal</p>
+<p>solution</p>
+<p>chronic reaction characterized by</p>
+<p>pain, and anxiety, insomnia, nausea,</p>
+<p>neuropathy; sweating, and increased</p>
+<p>few pain; absorption may be</p>
+<p>drug–drug impaired for doses &gt;1,200</p>
+<p>interactions mg; no adequate data in</p>
+<p>pregnancy—may cause</p>
+<p>fetal harm</p>
+<p>Lamotrigine Useful in bipolar Slow titration required to avoid Does not inhibit liver enzymes Valproate increases CNS effects including Boxed warning: Rash Rash usually appears</p>
+<p>disease; XR rash including SJS; increased lamotrigine levels by dizziness, headache, including SJS, TEN with after 3–4 weeks</p>
+<h2>Tablet, chewable</h2>
+<p>tableta, ODTa, XR useful in risk if patient with prior rash to 2x; carbamazepine, diplopia, ataxia, increased risk if given of therapy and</p>
+<p>tableta nonadherence other ASD and concomitant phenytoin, blurred vision, with valproate, exceeding is typically</p>
+<p>as dosed once use of valproic acid; rash phenobarbital, somnolence, tremor; recommended initial generalized,</p>
+<p>daily incidence higher in children; primidone decrease GI effects including dose or dose escalation erythematous, and</p>
+<p>may exacerbate myoclonus; levels by 40%; nausea/vomiting, morbilliform but</p>
+<p>DRESS; blood dyscrasias;</p>
+<p>dosage adjustment required estrogen OCPs abdominal pain, can progress to SJS</p>
+<p>hemophagocytic</p>
+<p>in patients with moderate decrease lamotrigine diarrhea; other effects</p>
+<p>lymphohistiocytosis</p>
+<p>and severe liver impairment; by 50% including rhinitis,</p>
+<h2>(HLH)</h2>
+<p>no adequate data in pharyngitis, infection,</p>
+<p>pregnancy—may cause fever; rash</p>
+<p>fetal harm</p>
+<p>Levetiracetam Minimal May worsen depression, PTSD, CNS effects including Psychosis, hallucinations</p>
+<p>Tablet, XR tableta, drug–drug anxiety, thought disorders; somnolence, fatigue;</p>
+<p>injectable interactions; dose adjustment in dialysis/ behavior effects</p>
+<p>solution XR useful in renal failure is necessary; including aggression,</p>
+<p>nonadhe- pregnancy category C agitation, anger,</p>
+<p>rence as anxiety, apathy,</p>
+<p>dosed once depersonaliza-</p>
+<p>daily tion, depression,</p>
+<p>emotional lability,</p>
+<p>hostility, irritability</p>
+<p>Oxcarbazepine Useful in bipolar Higher incidence of Inhibitor of CYP2C19 and Carbamazepine, CNS effects including Hyponatremia; rash (SJS, Hyponatremia</p>
+<p>disorder; hyponatremia (as high inducer of CYP3A4/5; phenytoin and dizziness, TEN); DRESS; blood</p>
+<h2>Tablet, tablet</h2>
+<p>ERa, liquid ER useful in as 25%); must check increases phenytoin levels; phenobarbital somnolence, diplopia, dyscrasias</p>
+<p>suspensiona nonadhe- HLA-B*1502 in Asians to decreases lamotrigine decreases active fatigue, ataxia,</p>
+<p>rence as predict SJS or TEN; active levels through UGT metabolite levels abnormal vision,</p>
+<p>dosed once MHD metabolite may induction; decreases headache, nystagmus,</p>
+<p>daily decrease in pregnancy; no estrogen OCP levels tremor; GI effects</p>
+<p>adequate data in pregnant including nausea,</p>
+<p>women—may cause fetal vomiting</p>
+<p>harm</p>
+<p>596</p>
+<p>ch54.indd 596 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</th><th></th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>Second-generation ASDs
+Gabapentin Useful in Considered weakly efficacious;
+postherpetic potential abuse when taken
+Tablet, capsule, oral
+neuralgia, with opioids; withdrawal
+solution
+chronic reaction characterized by
+pain, and anxiety, insomnia, nausea,
+neuropathy; sweating, and increased
+few pain; absorption may be
+drug–drug impaired for doses &gt;1,200
+interactions mg; no adequate data in
+pregnancy—may cause
+fetal harm</td><td></td><td></td><td></td></tr><tr><td>Lamotrigine
+Tablet, chewable
+tableta, ODTa, XR
+tableta</td><td>Useful in bipolar
+disease; XR
+useful in
+nonadherence
+as dosed once
+daily</td><td>Slow titration required to avoid
+rash including SJS; increased
+risk if patient with prior rash to
+other ASD and concomitant
+use of valproic acid; rash
+incidence higher in children;
+may exacerbate myoclonus;
+dosage adjustment required
+in patients with moderate
+and severe liver impairment;
+no adequate data in
+pregnancy—may cause
+fetal harm</td><td>Does not inhibit liver enzymes</td></tr><tr><td>Levetiracetam
+Tablet, XR tableta,
+injectable
+solution</td><td>Minimal
+drug–drug
+interactions;
+XR useful in
+nonadhe-
+rence as
+dosed once
+daily</td><td>May worsen depression, PTSD,
+anxiety, thought disorders;
+dose adjustment in dialysis/
+renal failure is necessary;
+pregnancy category C</td><td></td></tr><tr><td>Oxcarbazepine
+Tablet, tablet
+ERa, liquid
+suspensiona</td><td>Useful in bipolar
+disorder;
+ER useful in
+nonadhe-
+rence as
+dosed once
+daily</td><td>Higher incidence of
+hyponatremia (as high
+as 25%); must check
+HLA-B*1502 in Asians to
+predict SJS or TEN; active
+MHD metabolite may
+decrease in pregnancy; no
+adequate data in pregnant
+women—may cause fetal
+harm</td><td>Inhibitor of CYP2C19 and
+inducer of CYP3A4/5;
+increases phenytoin levels;
+decreases lamotrigine
+levels through UGT
+induction; decreases
+estrogen OCP levels</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Second-generation ASDs</p>
+<p>Gabapentin Useful in Considered weakly efficacious;</p>
+<p>postherpetic potential abuse when taken</p>
+<h2>Tablet, capsule, oral</h2>
+<p>neuralgia, with opioids; withdrawal</p>
+<p>solution</p>
+<p>chronic reaction characterized by</p>
+<p>pain, and anxiety, insomnia, nausea,</p>
+<p>neuropathy; sweating, and increased</p>
+<p>few pain; absorption may be</p>
+<p>drug–drug impaired for doses &gt;1,200</p>
+<p>interactions mg; no adequate data in</p>
+<p>pregnancy—may cause</p>
+<p>fetal harm</p>
+<p>Lamotrigine Useful in bipolar Slow titration required to avoid Does not inhibit liver enzymes Valproate increases CNS effects including Boxed warning: Rash Rash usually appears</p>
+<p>disease; XR rash including SJS; increased lamotrigine levels by dizziness, headache, including SJS, TEN with after 3–4 weeks</p>
+<h2>Tablet, chewable</h2>
+<p>tableta, ODTa, XR useful in risk if patient with prior rash to 2x; carbamazepine, diplopia, ataxia, increased risk if given of therapy and</p>
+<p>tableta nonadherence other ASD and concomitant phenytoin, blurred vision, with valproate, exceeding is typically</p>
+<p>as dosed once use of valproic acid; rash phenobarbital, somnolence, tremor; recommended initial generalized,</p>
+<p>daily incidence higher in children; primidone decrease GI effects including dose or dose escalation erythematous, and</p>
+<p>may exacerbate myoclonus; levels by 40%; nausea/vomiting, morbilliform but</p>
+<p>DRESS; blood dyscrasias;</p>
+<p>dosage adjustment required estrogen OCPs abdominal pain, can progress to SJS</p>
+<p>hemophagocytic</p>
+<p>in patients with moderate decrease lamotrigine diarrhea; other effects</p>
+<p>lymphohistiocytosis</p>
+<p>and severe liver impairment; by 50% including rhinitis,</p>
+<h2>(HLH)</h2>
+<p>no adequate data in pharyngitis, infection,</p>
+<p>pregnancy—may cause fever; rash</p>
+<p>fetal harm</p>
+<p>Levetiracetam Minimal May worsen depression, PTSD, CNS effects including Psychosis, hallucinations</p>
+<p>Tablet, XR tableta, drug–drug anxiety, thought disorders; somnolence, fatigue;</p>
+<p>injectable interactions; dose adjustment in dialysis/ behavior effects</p>
+<p>solution XR useful in renal failure is necessary; including aggression,</p>
+<p>nonadhe- pregnancy category C agitation, anger,</p>
+<p>rence as anxiety, apathy,</p>
+<p>dosed once depersonaliza-</p>
+<p>daily tion, depression,</p>
+<p>emotional lability,</p>
+<p>hostility, irritability</p>
+<p>Oxcarbazepine Useful in bipolar Higher incidence of Inhibitor of CYP2C19 and Carbamazepine, CNS effects including Hyponatremia; rash (SJS, Hyponatremia</p>
+<p>disorder; hyponatremia (as high inducer of CYP3A4/5; phenytoin and dizziness, TEN); DRESS; blood</p>
+<h2>Tablet, tablet</h2>
+<p>ERa, liquid ER useful in as 25%); must check increases phenytoin levels; phenobarbital somnolence, diplopia, dyscrasias</p>
+<p>suspensiona nonadhe- HLA-B*1502 in Asians to decreases lamotrigine decreases active fatigue, ataxia,</p>
+<p>rence as predict SJS or TEN; active levels through UGT metabolite levels abnormal vision,</p>
+<p>dosed once MHD metabolite may induction; decreases headache, nystagmus,</p>
+<p>daily decrease in pregnancy; no estrogen OCP levels tremor; GI effects</p>
+<p>adequate data in pregnant including nausea,</p>
+<p>women—may cause fetal vomiting</p>
+<p>harm</p>
+<p>(Continued )</p>
+<p>597</p>
+<p>ch54.indd 597 20-11-2020 13:08:50</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Valproate increases
+lamotrigine levels by
+2x; carbamazepine,
+phenytoin,
+phenobarbital,
+primidone decrease
+levels by 40%;
+estrogen OCPs
+decrease lamotrigine
+by 50%</td><td>CNS effects including
+dizziness, headache,
+diplopia, ataxia,
+blurred vision,
+somnolence, tremor;
+GI effects including
+nausea/vomiting,
+abdominal pain,
+diarrhea; other effects
+including rhinitis,
+pharyngitis, infection,
+fever; rash</td><td>Boxed warning: Rash
+including SJS, TEN with
+increased risk if given
+with valproate, exceeding
+recommended initial
+dose or dose escalation
+DRESS; blood dyscrasias;
+hemophagocytic
+lymphohistiocytosis
+(HLH)</td><td>Rash usually appears
+after 3–4 weeks
+of therapy and
+is typically
+generalized,
+erythematous, and
+morbilliform but
+can progress to SJS</td></tr><tr><td></td><td></td><td>CNS effects including
+somnolence, fatigue;
+behavior effects
+including aggression,
+agitation, anger,
+anxiety, apathy,
+depersonaliza-
+tion, depression,
+emotional lability,
+hostility, irritability</td><td>Psychosis, hallucinations</td><td></td></tr><tr><td></td><td>Carbamazepine,
+phenytoin and
+phenobarbital
+decreases active
+metabolite levels</td><td>CNS effects including
+dizziness,
+somnolence, diplopia,
+fatigue, ataxia,
+abnormal vision,
+headache, nystagmus,
+tremor; GI effects
+including nausea,
+vomiting</td><td>Hyponatremia; rash (SJS,
+TEN); DRESS; blood
+dyscrasias</td><td>Hyponatremia
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Second-generation ASDs (con’t)</p>
+<p>Tiagabine Has been associated with Carbamazepine, CNS effects including Increase in generalized Possibility</p>
+<p>new-onset seizure, phenytoin, dizziness, ligh- seizures and of long-term</p>
+<h2>Tablet</h2>
+<p>status epilepticus, and primidone, theadedness, nonconvulsive SE in ophthal-</p>
+<p>exacerbation of EEG phenobarbital somnolence, thinking patients with refractory mologic effects</p>
+<p>abnormalities in those with decrease levels; abnormal; behavior epilepsy; occurrence</p>
+<p>existing epilepsy; dosage valproate increases effects including of seizures and SE</p>
+<p>reduction may be necessary levels by 40% asthenia, lack of in patients without</p>
+<p>in patients with liver disease; energy, nervousness, epilepsy; moderately</p>
+<p>pregnancy category C irritability, difficulty severe to incapacitating</p>
+<p>with concentration or generalized weakness;</p>
+<p>attention; GI effects exacerbation of EEG</p>
+<p>including abdominal abnormalities; rash</p>
+<p>pain and nausea including SJS</p>
+<p>Topiramate Useful in Avoid in patients with Weak inhibitor of CYP2C19 and Phenytoin CNS effects including Renal stones; glaucoma; Weight loss, renal</p>
+<p>comorbid preexisting cognitive issues; inducer of CYP3A4; decreases carbamazepine fatigue, difficulty oligohidrosis and stones, metabolic</p>
+<p>Sprinkle capsule,</p>
+<p>migraine renally dose adjust with CrCl estrogen OCP levels decreases levels concentrating, hyperthermia; metabolic acidosis</p>
+<h2>tablet, XR tablet,</h2>
+<p>and obesity; &lt;70 mL/min; can cause confusion, language acidosis; rash (SJS,</p>
+<p>capsule, capsule</p>
+<p>XR useful in fetal harm problems, tremor TEN); hypothermia and</p>
+<h2>ER</h2>
+<p>nonadherence paresthesias; hyperammonemia</p>
+<p>as dosed once behavioral with and without</p>
+<p>daily effects including encephalopathy when</p>
+<p>nervousness, anxiety used with valproate</p>
+<p>Zonisamide Useful in tremor; Contraindicated in those with CYP3A4 inhibitors CNS effects including Oligohidrosis and Weight loss, renal</p>
+<p>useful in sulfa allergy; dose efficacy or inducers sedation, ataxia, hyperthermia; renal stones, metabolic</p>
+<p>Capsule</p>
+<p>nonadherence may plateau at 400 mg; may alter levels; confusion, stones; metabolic acidosis</p>
+<p>as dosed once should not be used in renal carbamazepine, depression, difficulty acidosis; rash (SJS, TEN);</p>
+<p>daily failure due to increases in SCr phenobarbital, concentrating, word- DRESS; fulminant hepatic</p>
+<p>and BUN and possible effects phenytoin, valproate finding difficulties necrosis; blood dyscrasias</p>
+<p>on GFR; pregnancy category C decrease levels</p>
+<p>Third-generation ASDs</p>
+<p>Brivaracetam Consider Dosage adjustments required Increases carbamazepine CYP2C19 inhibitors may CNS effects including Angioedema;</p>
+<p>(Schedule V) converting in hepatic impairment; metabolite; increases alter levels sedation, fatigue, bronchospasm;</p>
+<p>well- no adequate data in phenytoin levels ataxia, nystagums; decreased neutrophils;</p>
+<h2>Tablet, oral solution,</h2>
+<p>controlled pregnancy—may cause behavioral effects psychosis</p>
+<p>injection solution</p>
+<p>patients from fetal harm including irritability,</p>
+<p>levetiracetam aggressive behavior,</p>
+<p>if intolerable anxiety; GI effects</p>
+<p>psychiatric including nausea,</p>
+<p>side effects vomiting</p>
+<p>Cannabidiol Useful for Avoid in patients with Increases lamotrigine levels; CYP3A4 and CYP2C19 CNS effects including Hepatotoxicity; hypoxia;</p>
+<p>refractory hypersensitivity reactions to increase levels of clobazam inhibitors will increase somnolence, fatigue, respiratory failure</p>
+<p>(Schedule V)</p>
+<pre><code>seizures in cannabis, THC; liver function active metabolite by 3 times levels; CYP3A4 and malaise, asthenia; sleep</code></pre>
+<p>Oral solution LGS and and bilirubin monitoring before CYP2C19 inducers will disorders including</p>
+<p>Dravet and at 1, 3, and 6 months of decrease levels insomnia, poor quality</p>
+<p>syndrome treatment specially if given sleep; GI effects</p>
+<p>with valproate; no adequate including decreased</p>
+<p>data in pregnant woman— appetite; diarrhea;</p>
+<p>may cause fetal harm transaminase elevations</p>
+<p>598</p>
+<p>ch54.indd 598 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</th><th></th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>Second-generation ASDs (con’t)
+Tiagabine Has been associated with
+new-onset seizure,
+Tablet
+status epilepticus, and
+exacerbation of EEG
+abnormalities in those with
+existing epilepsy; dosage
+reduction may be necessary
+in patients with liver disease;
+pregnancy category C</td><td></td><td></td><td></td></tr><tr><td>Topiramate
+Sprinkle capsule,
+tablet, XR tablet,
+capsule, capsule
+ER</td><td>Useful in
+comorbid
+migraine
+and obesity;
+XR useful in
+nonadherence
+as dosed once
+daily</td><td>Avoid in patients with
+preexisting cognitive issues;
+renally dose adjust with CrCl
+&lt;70 mL/min; can cause
+fetal harm</td><td>Weak inhibitor of CYP2C19 and
+inducer of CYP3A4; decreases
+estrogen OCP levels</td></tr><tr><td>Zonisamide
+Capsule</td><td>Useful in tremor;
+useful in
+nonadherence
+as dosed once
+daily</td><td>Contraindicated in those with
+sulfa allergy; dose efficacy
+may plateau at 400 mg;
+should not be used in renal
+failure due to increases in SCr
+and BUN and possible effects
+on GFR; pregnancy category C</td><td></td></tr><tr><td>Third-generation ASDs
+Brivaracetam Consider Dosage adjustments required Increases carbamazepine
+(Schedule V) converting in hepatic impairment; metabolite; increases
+well- no adequate data in phenytoin levels
+Tablet, oral solution,
+controlled pregnancy—may cause
+injection solution
+patients from fetal harm
+levetiracetam
+if intolerable
+psychiatric
+side effects</td><td></td><td></td><td></td></tr><tr><td>Cannabidiol
+(Schedule V)
+Oral solution</td><td>Useful for
+refractory
+seizures in
+LGS and
+Dravet
+syndrome</td><td>Avoid in patients with
+hypersensitivity reactions to
+cannabis, THC; liver function
+and bilirubin monitoring before
+and at 1, 3, and 6 months of
+treatment specially if given
+with valproate; no adequate
+data in pregnant woman—
+may cause fetal harm</td><td>Increases lamotrigine levels;
+increase levels of clobazam
+active metabolite by 3 times</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Second-generation ASDs (con’t)</p>
+<p>Tiagabine Has been associated with Carbamazepine, CNS effects including Increase in generalized Possibility</p>
+<p>new-onset seizure, phenytoin, dizziness, ligh- seizures and of long-term</p>
+<h2>Tablet</h2>
+<p>status epilepticus, and primidone, theadedness, nonconvulsive SE in ophthal-</p>
+<p>exacerbation of EEG phenobarbital somnolence, thinking patients with refractory mologic effects</p>
+<p>abnormalities in those with decrease levels; abnormal; behavior epilepsy; occurrence</p>
+<p>existing epilepsy; dosage valproate increases effects including of seizures and SE</p>
+<p>reduction may be necessary levels by 40% asthenia, lack of in patients without</p>
+<p>in patients with liver disease; energy, nervousness, epilepsy; moderately</p>
+<p>pregnancy category C irritability, difficulty severe to incapacitating</p>
+<p>with concentration or generalized weakness;</p>
+<p>attention; GI effects exacerbation of EEG</p>
+<p>including abdominal abnormalities; rash</p>
+<p>pain and nausea including SJS</p>
+<p>Topiramate Useful in Avoid in patients with Weak inhibitor of CYP2C19 and Phenytoin CNS effects including Renal stones; glaucoma; Weight loss, renal</p>
+<p>comorbid preexisting cognitive issues; inducer of CYP3A4; decreases carbamazepine fatigue, difficulty oligohidrosis and stones, metabolic</p>
+<p>Sprinkle capsule,</p>
+<p>migraine renally dose adjust with CrCl estrogen OCP levels decreases levels concentrating, hyperthermia; metabolic acidosis</p>
+<h2>tablet, XR tablet,</h2>
+<p>and obesity; &lt;70 mL/min; can cause confusion, language acidosis; rash (SJS,</p>
+<p>capsule, capsule</p>
+<p>XR useful in fetal harm problems, tremor TEN); hypothermia and</p>
+<h2>ER</h2>
+<p>nonadherence paresthesias; hyperammonemia</p>
+<p>as dosed once behavioral with and without</p>
+<p>daily effects including encephalopathy when</p>
+<p>nervousness, anxiety used with valproate</p>
+<p>Zonisamide Useful in tremor; Contraindicated in those with CYP3A4 inhibitors CNS effects including Oligohidrosis and Weight loss, renal</p>
+<p>useful in sulfa allergy; dose efficacy or inducers sedation, ataxia, hyperthermia; renal stones, metabolic</p>
+<p>Capsule</p>
+<p>nonadherence may plateau at 400 mg; may alter levels; confusion, stones; metabolic acidosis</p>
+<p>as dosed once should not be used in renal carbamazepine, depression, difficulty acidosis; rash (SJS, TEN);</p>
+<p>daily failure due to increases in SCr phenobarbital, concentrating, word- DRESS; fulminant hepatic</p>
+<p>and BUN and possible effects phenytoin, valproate finding difficulties necrosis; blood dyscrasias</p>
+<p>on GFR; pregnancy category C decrease levels</p>
+<p>Third-generation ASDs</p>
+<p>Brivaracetam Consider Dosage adjustments required Increases carbamazepine CYP2C19 inhibitors may CNS effects including Angioedema;</p>
+<p>(Schedule V) converting in hepatic impairment; metabolite; increases alter levels sedation, fatigue, bronchospasm;</p>
+<p>well- no adequate data in phenytoin levels ataxia, nystagums; decreased neutrophils;</p>
+<h2>Tablet, oral solution,</h2>
+<p>controlled pregnancy—may cause behavioral effects psychosis</p>
+<p>injection solution</p>
+<p>patients from fetal harm including irritability,</p>
+<p>levetiracetam aggressive behavior,</p>
+<p>if intolerable anxiety; GI effects</p>
+<p>psychiatric including nausea,</p>
+<p>side effects vomiting</p>
+<p>Cannabidiol Useful for Avoid in patients with Increases lamotrigine levels; CYP3A4 and CYP2C19 CNS effects including Hepatotoxicity; hypoxia;</p>
+<p>refractory hypersensitivity reactions to increase levels of clobazam inhibitors will increase somnolence, fatigue, respiratory failure</p>
+<p>(Schedule V)</p>
+<pre><code>seizures in cannabis, THC; liver function active metabolite by 3 times levels; CYP3A4 and malaise, asthenia; sleep</code></pre>
+<p>Oral solution LGS and and bilirubin monitoring before CYP2C19 inducers will disorders including</p>
+<p>Dravet and at 1, 3, and 6 months of decrease levels insomnia, poor quality</p>
+<p>syndrome treatment specially if given sleep; GI effects</p>
+<p>with valproate; no adequate including decreased</p>
+<p>data in pregnant woman— appetite; diarrhea;</p>
+<p>may cause fetal harm transaminase elevations</p>
+<p>(Continued )</p>
+<p>599</p>
+<p>ch54.indd 599 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td>Carbamazepine, CNS effects including Increase in generalized Possibility
+phenytoin, dizziness, ligh- seizures and of long-term
+primidone, theadedness, nonconvulsive SE in ophthal-
+phenobarbital somnolence, thinking patients with refractory mologic effects
+decrease levels; abnormal; behavior epilepsy; occurrence
+valproate increases effects including of seizures and SE
+levels by 40% asthenia, lack of in patients without
+energy, nervousness, epilepsy; moderately
+irritability, difficulty severe to incapacitating
+with concentration or generalized weakness;
+attention; GI effects exacerbation of EEG
+including abdominal abnormalities; rash
+pain and nausea including SJS</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Phenytoin
+carbamazepine
+decreases levels</td><td>CNS effects including
+fatigue, difficulty
+concentrating,
+confusion, language
+problems, tremor
+paresthesias;
+behavioral
+effects including
+nervousness, anxiety</td><td>Renal stones; glaucoma;
+oligohidrosis and
+hyperthermia; metabolic
+acidosis; rash (SJS,
+TEN); hypothermia and
+hyperammonemia
+with and without
+encephalopathy when
+used with valproate</td><td>Weight loss, renal
+stones, metabolic
+acidosis</td></tr><tr><td></td><td>CYP3A4 inhibitors
+or inducers
+may alter levels;
+carbamazepine,
+phenobarbital,
+phenytoin, valproate
+decrease levels</td><td>CNS effects including
+sedation, ataxia,
+confusion,
+depression, difficulty
+concentrating, word-
+finding difficulties</td><td>Oligohidrosis and
+hyperthermia; renal
+stones; metabolic
+acidosis; rash (SJS, TEN);
+DRESS; fulminant hepatic
+necrosis; blood dyscrasias</td><td>Weight loss, renal
+stones, metabolic
+acidosis</td></tr><tr><td>CYP2C19 inhibitors may CNS effects including Angioedema;
+alter levels sedation, fatigue, bronchospasm;
+ataxia, nystagums; decreased neutrophils;
+behavioral effects psychosis
+including irritability,
+aggressive behavior,
+anxiety; GI effects
+including nausea,
+vomiting</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>CYP3A4 and CYP2C19
+inhibitors will increase
+levels; CYP3A4 and
+CYP2C19 inducers will
+decrease levels</td><td>CNS effects including
+somnolence, fatigue,
+malaise, asthenia; sleep
+disorders including
+insomnia, poor quality
+sleep; GI effects
+including decreased
+appetite; diarrhea;
+transaminase elevations</td><td>Hepatotoxicity; hypoxia;
+respiratory failure</td><td>(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Third-generation ASDs (con’t)</p>
+<p>Clobazam Monitor patients with history Inhibitor of CYP2C9 and inducer Carbamazepine, CNS effects including Boxed warning:</p>
+<p>of substance abuse; use of CYP3A4; affects levels of felbamate, somnolence, sedation, Concomitant use with</p>
+<p>(Schedule IV)</p>
+<p>with other CNS depressant CYP2C9, CYP3A4 substrates; phenobarbital, lethargy; pyrexia; opioids increases risk</p>
+<p>Tablet, oral may produce additive CNS decreases estrogen OCP levels phenytoin, primidone constipation; drooling of death</p>
+<p>suspension effects; may cause respiratory decrease levels</p>
+<p>Rash (SJS, TEN); anemia;</p>
+<p>depression, coma, and</p>
+<p>liver enzyme elevations;</p>
+<p>death; no adequate data in</p>
+<p>respiratory depression</p>
+<p>pregnant women—may</p>
+<p>cause fetal harm</p>
+<p>Eslicarbazepine Useful in Avoid in severe hepatic Inhibitor of CYP2C19; affects Carbamazepine, CNS effects including Hyponatremia; rash Hyponatremia</p>
+<p>nonadherence impairment; dose carbamazepine, phenytoin, phenobarbital, dizziness, somnolence, (SJS); anaphylaxis,</p>
+<h2>Tablet</h2>
+<p>as dosed once adjustment in renal failure; phenobarbital, primidone primidone, and nausea, headache, angioedema, DRESS;</p>
+<p>daily avoid concomitant use levels; decreases estrogen phenytoin decrease diplopia, fatigue, cardiac effects including</p>
+<p>with carbamazepine and OCP levels levels vertigo, ataxia, blurred prolonged PR interval,</p>
+<p>oxcarbazepine; no adequate vision, tremor AV block; hepatotoxicity;</p>
+<p>data in pregnancy—may blood dyscrasias</p>
+<p>cause fetal harm</p>
+<p>Lacosamide Minimal Avoid in third-degree heart Substrate of CYP3A4, CYP2C9, CYP2C19 inhibitor CNS effects including Cardiac effects including</p>
+<p>drug–drug block; use with caution in and CYP2C19; carbamazepine, but no clinically ataxia, dizziness, AV conduction</p>
+<p>(Schedule V)</p>
+<p>interactions patients with underlying phenytoin, phenobarbital, significant effects diplopia, headache, abnormalities, prolonged</p>
+<p>Tablet, oral solution, proarrhythmic conditions or primdone, decrease levels by tremor; GI effects PR interval, atrial</p>
+<p>Injectable on concomitant medications 15%–20% including nausea, arrhythmias, syncope</p>
+<p>solution that affect cardiac vomiting (especially in patients</p>
+<p>conduction; no adequate with diabetes)</p>
+<p>data in pregnancy—may</p>
+<p>cause fetal harm</p>
+<p>Perampanel Useful in mixed Avoid in active psychosis or Modest enzyme inducer at high CNS effects including Boxed warning: Aggression, Weight gain</p>
+<p>(Schedule III) seizure types; unstable recurrent affective doses; carbamazepine, dizziness, somnolence, hostility, irritability, anger,</p>
+<p>useful in disorders with significant eslicarbazepine, fatigue, falls, vertigo, and homicidal ideation</p>
+<h2>Tablet, oral</h2>
+<p>nonadherence hostility or aggressive oxcarbazepine, phenobarbital, ataxia, headache,</p>
+<p>suspension</p>
+<p>as dosed once behavior; avoid in severe phenytoin, primidone, confusion; GI effects</p>
+<p>daily hepatic/renal impairment or topiramate decrease levels; including nausea,</p>
+<p>hemodialysis; no adequate valproate has no effect on weight gain, vomiting,</p>
+<p>data in pregnancy—may levels; decreases estrogen abdominal pain;</p>
+<p>cause fetal harm OCP levels behavioral effects</p>
+<p>including irritability</p>
+<p>anxiety</p>
+<p>Pregabalin Useful in patients Preexisting cognitive disorders; CNS effects including Potential for abuse when Weight gain</p>
+<p>(Schedule V) with diabetic no adequate data in dizziness, somnolence, taken with opiates</p>
+<p>peripheral pregnancy—may cause blurred vision,</p>
+<h2>Capsule, tablet CR,</h2>
+<p>neuropathy, fetal harm difficulty with</p>
+<p>oral solution</p>
+<p>postherpetic concentration and</p>
+<p>neuralgia, attention; dry mouth;</p>
+<p>fibromyalgia, edema and weight</p>
+<p>neuropathic gain</p>
+<p>pain with</p>
+<p>spinal cord</p>
+<p>injury; minimal</p>
+<p>DDIs due to</p>
+<p>renal excretion</p>
+<p>600</p>
+<p>ch54.indd 600 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</th><th></th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>Third-generation ASDs (con’t)
+Clobazam Monitor patients with history Inhibitor of CYP2C9 and inducer
+of substance abuse; use of CYP3A4; affects levels of
+(Schedule IV)
+with other CNS depressant CYP2C9, CYP3A4 substrates;
+Tablet, oral may produce additive CNS decreases estrogen OCP levels
+suspension effects; may cause respiratory
+depression, coma, and
+death; no adequate data in
+pregnant women—may
+cause fetal harm</td><td></td><td></td><td></td></tr><tr><td>Eslicarbazepine
+Tablet</td><td>Useful in
+nonadherence
+as dosed once
+daily</td><td>Avoid in severe hepatic
+impairment; dose
+adjustment in renal failure;
+avoid concomitant use
+with carbamazepine and
+oxcarbazepine; no adequate
+data in pregnancy—may
+cause fetal harm</td><td>Inhibitor of CYP2C19; affects
+carbamazepine, phenytoin,
+phenobarbital, primidone
+levels; decreases estrogen
+OCP levels</td></tr><tr><td>Lacosamide
+(Schedule V)
+Tablet, oral solution,
+Injectable
+solution</td><td>Minimal
+drug–drug
+interactions</td><td>Avoid in third-degree heart
+block; use with caution in
+patients with underlying
+proarrhythmic conditions or
+on concomitant medications
+that affect cardiac
+conduction; no adequate
+data in pregnancy—may
+cause fetal harm</td><td>Substrate of CYP3A4, CYP2C9,
+and CYP2C19; carbamazepine,
+phenytoin, phenobarbital,
+primdone, decrease levels by
+15%–20%</td></tr><tr><td>Perampanel
+(Schedule III)
+Tablet, oral
+suspension</td><td>Useful in mixed
+seizure types;
+useful in
+nonadherence
+as dosed once
+daily</td><td>Avoid in active psychosis or
+unstable recurrent affective
+disorders with significant
+hostility or aggressive
+behavior; avoid in severe
+hepatic/renal impairment or
+hemodialysis; no adequate
+data in pregnancy—may
+cause fetal harm</td><td>Modest enzyme inducer at high
+doses; carbamazepine,
+eslicarbazepine,
+oxcarbazepine, phenobarbital,
+phenytoin, primidone,
+topiramate decrease levels;
+valproate has no effect on
+levels; decreases estrogen
+OCP levels</td></tr><tr><td>Pregabalin
+(Schedule V)
+Capsule, tablet CR,
+oral solution</td><td>Useful in patients
+with diabetic
+peripheral
+neuropathy,
+postherpetic
+neuralgia,
+fibromyalgia,
+neuropathic
+pain with
+spinal cord
+injury; minimal
+DDIs due to
+renal excretion</td><td>Preexisting cognitive disorders;
+no adequate data in
+pregnancy—may cause
+fetal harm</td><td></td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Third-generation ASDs (con’t)</p>
+<p>Clobazam Monitor patients with history Inhibitor of CYP2C9 and inducer Carbamazepine, CNS effects including Boxed warning:</p>
+<p>of substance abuse; use of CYP3A4; affects levels of felbamate, somnolence, sedation, Concomitant use with</p>
+<p>(Schedule IV)</p>
+<p>with other CNS depressant CYP2C9, CYP3A4 substrates; phenobarbital, lethargy; pyrexia; opioids increases risk</p>
+<p>Tablet, oral may produce additive CNS decreases estrogen OCP levels phenytoin, primidone constipation; drooling of death</p>
+<p>suspension effects; may cause respiratory decrease levels</p>
+<p>Rash (SJS, TEN); anemia;</p>
+<p>depression, coma, and</p>
+<p>liver enzyme elevations;</p>
+<p>death; no adequate data in</p>
+<p>respiratory depression</p>
+<p>pregnant women—may</p>
+<p>cause fetal harm</p>
+<p>Eslicarbazepine Useful in Avoid in severe hepatic Inhibitor of CYP2C19; affects Carbamazepine, CNS effects including Hyponatremia; rash Hyponatremia</p>
+<p>nonadherence impairment; dose carbamazepine, phenytoin, phenobarbital, dizziness, somnolence, (SJS); anaphylaxis,</p>
+<h2>Tablet</h2>
+<p>as dosed once adjustment in renal failure; phenobarbital, primidone primidone, and nausea, headache, angioedema, DRESS;</p>
+<p>daily avoid concomitant use levels; decreases estrogen phenytoin decrease diplopia, fatigue, cardiac effects including</p>
+<p>with carbamazepine and OCP levels levels vertigo, ataxia, blurred prolonged PR interval,</p>
+<p>oxcarbazepine; no adequate vision, tremor AV block; hepatotoxicity;</p>
+<p>data in pregnancy—may blood dyscrasias</p>
+<p>cause fetal harm</p>
+<p>Lacosamide Minimal Avoid in third-degree heart Substrate of CYP3A4, CYP2C9, CYP2C19 inhibitor CNS effects including Cardiac effects including</p>
+<p>drug–drug block; use with caution in and CYP2C19; carbamazepine, but no clinically ataxia, dizziness, AV conduction</p>
+<p>(Schedule V)</p>
+<p>interactions patients with underlying phenytoin, phenobarbital, significant effects diplopia, headache, abnormalities, prolonged</p>
+<p>Tablet, oral solution, proarrhythmic conditions or primdone, decrease levels by tremor; GI effects PR interval, atrial</p>
+<p>Injectable on concomitant medications 15%–20% including nausea, arrhythmias, syncope</p>
+<p>solution that affect cardiac vomiting (especially in patients</p>
+<p>conduction; no adequate with diabetes)</p>
+<p>data in pregnancy—may</p>
+<p>cause fetal harm</p>
+<p>Perampanel Useful in mixed Avoid in active psychosis or Modest enzyme inducer at high CNS effects including Boxed warning: Aggression, Weight gain</p>
+<p>(Schedule III) seizure types; unstable recurrent affective doses; carbamazepine, dizziness, somnolence, hostility, irritability, anger,</p>
+<p>useful in disorders with significant eslicarbazepine, fatigue, falls, vertigo, and homicidal ideation</p>
+<h2>Tablet, oral</h2>
+<p>nonadherence hostility or aggressive oxcarbazepine, phenobarbital, ataxia, headache,</p>
+<p>suspension</p>
+<p>as dosed once behavior; avoid in severe phenytoin, primidone, confusion; GI effects</p>
+<p>daily hepatic/renal impairment or topiramate decrease levels; including nausea,</p>
+<p>hemodialysis; no adequate valproate has no effect on weight gain, vomiting,</p>
+<p>data in pregnancy—may levels; decreases estrogen abdominal pain;</p>
+<p>cause fetal harm OCP levels behavioral effects</p>
+<p>including irritability</p>
+<p>anxiety</p>
+<p>Pregabalin Useful in patients Preexisting cognitive disorders; CNS effects including Potential for abuse when Weight gain</p>
+<p>(Schedule V) with diabetic no adequate data in dizziness, somnolence, taken with opiates</p>
+<p>peripheral pregnancy—may cause blurred vision,</p>
+<h2>Capsule, tablet CR,</h2>
+<p>neuropathy, fetal harm difficulty with</p>
+<p>oral solution</p>
+<p>postherpetic concentration and</p>
+<p>neuralgia, attention; dry mouth;</p>
+<p>fibromyalgia, edema and weight</p>
+<p>neuropathic gain</p>
+<p>pain with</p>
+<p>spinal cord</p>
+<p>injury; minimal</p>
+<p>DDIs due to</p>
+<p>renal excretion</p>
+<p>(Continued )</p>
+<p>601</p>
+<p>ch54.indd 601 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td>Carbamazepine, CNS effects including Boxed warning:
+felbamate, somnolence, sedation, Concomitant use with
+phenobarbital, lethargy; pyrexia; opioids increases risk
+phenytoin, primidone constipation; drooling of death
+decrease levels
+Rash (SJS, TEN); anemia;
+liver enzyme elevations;
+respiratory depression</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Carbamazepine,
+phenobarbital,
+primidone, and
+phenytoin decrease
+levels</td><td>CNS effects including
+dizziness, somnolence,
+nausea, headache,
+diplopia, fatigue,
+vertigo, ataxia, blurred
+vision, tremor</td><td>Hyponatremia; rash
+(SJS); anaphylaxis,
+angioedema, DRESS;
+cardiac effects including
+prolonged PR interval,
+AV block; hepatotoxicity;
+blood dyscrasias</td><td>Hyponatremia</td></tr><tr><td></td><td>CYP2C19 inhibitor
+but no clinically
+significant effects</td><td>CNS effects including
+ataxia, dizziness,
+diplopia, headache,
+tremor; GI effects
+including nausea,
+vomiting</td><td>Cardiac effects including
+AV conduction
+abnormalities, prolonged
+PR interval, atrial
+arrhythmias, syncope
+(especially in patients
+with diabetes)</td><td></td></tr><tr><td></td><td></td><td>CNS effects including
+dizziness, somnolence,
+fatigue, falls, vertigo,
+ataxia, headache,
+confusion; GI effects
+including nausea,
+weight gain, vomiting,
+abdominal pain;
+behavioral effects
+including irritability
+anxiety</td><td>Boxed warning: Aggression,
+hostility, irritability, anger,
+and homicidal ideation</td><td>Weight gain</td></tr><tr><td></td><td></td><td>CNS effects including
+dizziness, somnolence,
+blurred vision,
+difficulty with
+concentration and
+attention; dry mouth;
+edema and weight
+gain</td><td>Potential for abuse when
+taken with opiates</td><td>Weight gain
+(Continued )</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Third-generation ASDs (con’t)</p>
+<p>Rufinamide Contraindicated in severe liver Weak inhibitor of CYP2E1; Carbamazepine, CNS effects including DRESS; rash (SJS); status</p>
+<p>impairment or in familial weak inducer of CYP3A4; phenobarbital, somnolence, epilepticus; leukopenia;</p>
+<h2>Tablet, oral</h2>
+<p>short QT syndrome; use modestly decreases levels phenytoin decrease fatigue, coordination QT interval shortening</p>
+<p>suspension</p>
+<p>caution with other drugs of carbamazepine, lamotrigine; levels by 19%–46%; abnormalities,</p>
+<p>that shorten QT interval; increases levels of valproate increases dizziness, gait</p>
+<p>no adequate data in phenobarbital, phenytoin; levels up to 70% disturbances, ataxia;</p>
+<p>pregnancy—may cause decreases estrogen GI effects including</p>
+<p>fetal harm OCP levels nausea</p>
+<p>Vigabatrin Useful in Permanent vision loss in most Inducer of CYP2C9; decreases CNS effects including Boxed warning: Progressive Onset of vision loss is</p>
+<p>infantile patients after a certain levels of phenytoin by 20%; fatigue, somnolence, and permanent bilateral unpredictable with</p>
+<h2>Tablet, powder</h2>
+<p>spasms duration of exposure possibly increases nystagmus, peripheral visual risk increasing in a</p>
+<p>packet</p>
+<p>for whom requiring eye exams Q3 levels of carbamazepine by tremor, blurred constriction including dose-related and</p>
+<p>potential months; requires REMS 10%; increases C vision, memory tunnel vision; reduced life exposure-</p>
+<p>max</p>
+<p>benefit program registration; of clonazepam impairment, abnormal visual acuity related manner;</p>
+<p>outweighs no adequate data in coordination, Seizure exacerbation, abnormal MRI</p>
+<p>risk of vision pregnancy—may cause confusion; weight particularly absence and signal changes in</p>
+<p>loss fetal harm gain; edema; myoclonic seizures in infants treated for</p>
+<p>peripheral neuropathy infantile spasms</p>
+<p>patients with generalized</p>
+<p>strongly suggestive</p>
+<p>In pediatric patients: epilepsies; anemia</p>
+<p>of intramyelinic</p>
+<p>aggression; infection</p>
+<p>edema in select</p>
+<p>including upper</p>
+<p>brain areas</p>
+<p>respiratory tract</p>
+<p>infection, bronchitis,</p>
+<p>ear infection, and acute</p>
+<p>otitis media</p>
+<p>aAll ASDs may increase the risk of suicidal thoughts or behavior and patients treated with an ASD should be</p>
+<p>monitored for the emergence or worsening of depression, suicidal thoughts or behavior, or any unusual</p>
+<p>changes in mood or behavior.</p>
+<p>AMPA, A-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid; ASD, antiseizure drug; AV, atrioventricular;</p>
+<p>BUN, blood urea nitrogen; C , maximum concentration; CNS, central nervous system; CR, controlled-</p>
+<p>max</p>
+<p>release; CrCl, creatinine clearance; CYP, cytochrome p450 isoenzyme system; DDI, drug–drug</p>
+<p>interaction; DR, delayed-release; DRESS, drug rash with eosinophilia and systemic symptoms;</p>
+<li>Zero-order kinetics occurs within the usual therapeutic range, so any change in dose</li>
+<p>may produce disproportional changes in serum concentrations.</p>
+<li>Most adult patients can be maintained on a single-daily dose, but children often</li>
+<p>require more frequent administration. Only extended-release preparations should</p>
+<p>be used for single-daily dosing.</p>
+<li>For phenytoin serum concentration less than 7 mcg/mL (28 μmol/L), the daily dose</li>
+<p>should be increased by 100 mg; if the concentration is 7–12 mcg/mL (28–48 μmol/L),</p>
+<p>the daily dose can be increased by 50 mg; and if the concentration is greater than</p>
+<p>12 mcg/mL (48 μmol/L), the daily dose can be increased by 30 mg or less. At concen-</p>
+<p>trations greater than 50 mcg/mL (200 μmol/L), phenytoin can exacerbate seizures.</p>
+<li>If protein-binding interactions are suspected, free rather than total phenytoin serum</li>
+<p>concentrations are a better therapeutic guide.</p>
+<li>Folic acid replacement enhances phenytoin clearance and can result in loss of effi-</li>
+<p>cacy. Phenytoin tablets and suspension contain phenytoin acid, whereas the capsules</p>
+<p>and parenteral solution are phenytoin sodium. Ninety-two milligrams of phenytoin</p>
+<p>acid is approximately equal to 100 mg of phenytoin sodium.</p>
+<p>602</p>
+<p>ch54.indd 602 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</th><th></th><th></th><th></th></tr><tr><td>ASD and
+Available
+Formulations</td><td>Advantages</td><td>Disadvantages</td><td>DDI: Effect of Drug on
+Concomitant ASD</td></tr><tr><td>Third-generation ASDs (con’t)
+Rufinamide Contraindicated in severe liver Weak inhibitor of CYP2E1;
+impairment or in familial weak inducer of CYP3A4;
+Tablet, oral
+short QT syndrome; use modestly decreases levels
+suspension
+caution with other drugs of carbamazepine, lamotrigine;
+that shorten QT interval; increases levels of
+no adequate data in phenobarbital, phenytoin;
+pregnancy—may cause decreases estrogen
+fetal harm OCP levels</td><td></td><td></td><td></td></tr><tr><td>Vigabatrin
+Tablet, powder
+packet</td><td>Useful in
+infantile
+spasms
+for whom
+potential
+benefit
+outweighs
+risk of vision
+loss</td><td>Permanent vision loss in most
+patients after a certain
+duration of exposure
+requiring eye exams Q3
+months; requires REMS
+program registration;
+no adequate data in
+pregnancy—may cause
+fetal harm</td><td>Inducer of CYP2C9; decreases
+levels of phenytoin by 20%;
+possibly increases
+levels of carbamazepine by
+10%; increases C
+max
+of clonazepam</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<h2>TABLE 54-3 Antiseizure Drugs (ASDs) (Continued )</h2>
+<p>ASD and DDIs: Effect of Common and Dose-</p>
+<p>Available DDI: Effect of Drug on Concomitant ASDs Related Adverse Rare and Serious Long-Term</p>
+<p>Formulations Advantages Disadvantages Concomitant ASD on Drug Effects Adverse Effectsa Adverse Effects</p>
+<p>Third-generation ASDs (con’t)</p>
+<p>Rufinamide Contraindicated in severe liver Weak inhibitor of CYP2E1; Carbamazepine, CNS effects including DRESS; rash (SJS); status</p>
+<p>impairment or in familial weak inducer of CYP3A4; phenobarbital, somnolence, epilepticus; leukopenia;</p>
+<h2>Tablet, oral</h2>
+<p>short QT syndrome; use modestly decreases levels phenytoin decrease fatigue, coordination QT interval shortening</p>
+<p>suspension</p>
+<p>caution with other drugs of carbamazepine, lamotrigine; levels by 19%–46%; abnormalities,</p>
+<p>that shorten QT interval; increases levels of valproate increases dizziness, gait</p>
+<p>no adequate data in phenobarbital, phenytoin; levels up to 70% disturbances, ataxia;</p>
+<p>pregnancy—may cause decreases estrogen GI effects including</p>
+<p>fetal harm OCP levels nausea</p>
+<p>Vigabatrin Useful in Permanent vision loss in most Inducer of CYP2C9; decreases CNS effects including Boxed warning: Progressive Onset of vision loss is</p>
+<p>infantile patients after a certain levels of phenytoin by 20%; fatigue, somnolence, and permanent bilateral unpredictable with</p>
+<h2>Tablet, powder</h2>
+<p>spasms duration of exposure possibly increases nystagmus, peripheral visual risk increasing in a</p>
+<p>packet</p>
+<p>for whom requiring eye exams Q3 levels of carbamazepine by tremor, blurred constriction including dose-related and</p>
+<p>potential months; requires REMS 10%; increases C vision, memory tunnel vision; reduced life exposure-</p>
+<p>max</p>
+<p>benefit program registration; of clonazepam impairment, abnormal visual acuity related manner;</p>
+<p>outweighs no adequate data in coordination, Seizure exacerbation, abnormal MRI</p>
+<p>risk of vision pregnancy—may cause confusion; weight particularly absence and signal changes in</p>
+<p>loss fetal harm gain; edema; myoclonic seizures in infants treated for</p>
+<p>peripheral neuropathy infantile spasms</p>
+<p>patients with generalized</p>
+<p>strongly suggestive</p>
+<p>In pediatric patients: epilepsies; anemia</p>
+<p>of intramyelinic</p>
+<p>aggression; infection</p>
+<p>edema in select</p>
+<p>including upper</p>
+<p>brain areas</p>
+<p>respiratory tract</p>
+<p>infection, bronchitis,</p>
+<p>ear infection, and acute</p>
+<p>otitis media</p>
+<p>EEG, electroencephalogram; FDA, Food and Drug Administration; ER, extended release; GABA, gamma-</p>
+<p>aminobutyric acid; GAT1, GABA transporter type 1; GI, gastrointestinal; GFR, glomerular filtration</p>
+<p>rate; HLA, human leukocyte antigen; IQ, intelligence quotient; IR, immediate release; IV, intravenous; LGS,</p>
+<p>Lennox–Gastaut syndrome; OCP, oral contraceptives; ODT, orally dissolving tablet; PTSD, posttraumatic</p>
+<p>stress disorder; SJS, Steven–Johnson syndrome; TEN, toxic epidermal necrolysis; TBI, traumatic brain</p>
+<p>injury; TC, tonic–clonic; UGT, UDP-glucuronosyltransferase; XR, extended-release.</p>
+<p>Valproic acid and divalproex sodium</p>
+<li>The free fraction may increase as the total serum concentration increases, and moni-</li>
+<p>toring free concentrations may be more useful than total concentrations, especially at</p>
+<p>higher serum concentrations and in patients with hypoalbuminemia.</p>
+<li>At least 10 metabolites have been identified, and some may be active.</li>
+<li>It is first-line therapy for primary generalized seizures, such as absence, myoclonic,</li>
+<p>and atonic seizures, and is approved for adjunctive and monotherapy treatment of</p>
+<p>focal onset seizures. It can also be useful in mixed seizure disorders.</p>
+<li>GI complaints may be minimized with the enteric-coated formulation or by giving</li>
+<p>with food.</p>
+<li>Although carnitine supplementation may partially ameliorate hyperammonemia, it is</li>
+<p>expensive and is not generally supported.</p>
+<li>Valproic acid is an enzyme inhibitor. Carbapenems and combination oral contracep-</li>
+<p>tives may lower serum levels of valproic acid.</p>
+<li>Once-daily dosing is possible with the extended-release divalproex, but more</li>
+<p>frequent dosing is the norm due to reports of breakthrough seizures.</p>
+<p>603</p>
+<p>ch54.indd 603 20-11-2020 13:08:51</p>
+<div class="table-container"><table><tr><th></th><th></th><th></th><th></th><th></th></tr><tr><td></td><td>DDIs: Effect of
+Concomitant ASDs
+on Drug</td><td>Common and Dose-
+Related Adverse
+Effects</td><td>Rare and Serious
+Adverse Effectsa</td><td>Long-Term
+Adverse Effects</td></tr><tr><td>Carbamazepine, CNS effects including DRESS; rash (SJS); status
+phenobarbital, somnolence, epilepticus; leukopenia;
+phenytoin decrease fatigue, coordination QT interval shortening
+levels by 19%–46%; abnormalities,
+valproate increases dizziness, gait
+levels up to 70% disturbances, ataxia;
+GI effects including
+nausea</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>CNS effects including
+fatigue, somnolence,
+nystagmus,
+tremor, blurred
+vision, memory
+impairment, abnormal
+coordination,
+confusion; weight
+gain; edema;
+peripheral neuropathy
+In pediatric patients:
+aggression; infection
+including upper
+respiratory tract
+infection, bronchitis,
+ear infection, and acute
+otitis media</td><td>Boxed warning: Progressive
+and permanent bilateral
+peripheral visual
+constriction including
+tunnel vision; reduced
+visual acuity
+Seizure exacerbation,
+particularly absence and
+myoclonic seizures in
+patients with generalized
+epilepsies; anemia</td><td>Onset of vision loss is
+unpredictable with
+risk increasing in a
+dose-related and
+life exposure-
+related manner;
+abnormal MRI
+signal changes in
+infants treated for
+infantile spasms
+strongly suggestive
+of intramyelinic
+edema in select
+brain areas</td></tr></table></div><h2>604 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<p>TABLE 54-4 Antiseizure Drug Elimination Pathways and Major Effects on Hepatic Enzymes</p>
+<p>Antiepileptic Drugs Major Hepatic Enzymes Renal Elimination (%) Induces Inhibits</p>
+<p>First generation</p>
+<p>Carbamazepine CYP3A4 3 CYP1A2; CYP2B6; CYP2C9/19; CYP3A; None</p>
+<h2>GT</h2>
+<p>Clonazepam CYP3A 2 None None</p>
+<p>Ethosuximide CYP3A4; CYP2E1 10–20 None None</p>
+<p>Phenobarbital CYP2C9; CYP2C19 25 CYP 3A4/2C9/2C19/1A2; GT None</p>
+<p>Phenytoin CYP2C9; CYP2C19 Unknown CYP3A; CYP2C; GT</p>
+<p>Primidone &lt;1</p>
+<p>Valproate GT; β-oxidation &lt;3 None CYP2C9; GT epoxide</p>
+<p>hydrolase</p>
+<p>Second generation</p>
+<p>Felbamate CYP3A4; CYP2E1; other 50 CYP3A4 CYP2C19; β-oxidation</p>
+<p>Gabapentin None Almost completely None None</p>
+<p>Lamotrigine GT 10 GT None</p>
+<p>Levetiracetam None (undergoes nonhepatic 66 None None</p>
+<p>hydrolysis)</p>
+<p>Oxcarbazepine (MHD is active Cytosolic system &lt;1 (27 as MHD) CYP3A4; CYP3A5; GT CYP2C19</p>
+<p>oxcarbazepine metabolite)</p>
+<p>Tiagabine CYP3A4; CYP1A2; CYP2D6; 2 None None</p>
+<h2>CYP2C19</h2>
+<p>Topiramate Not known 70 CYP3A (dose dependent) CYP2C19</p>
+<p>Zonisamide CYP3A4 35 None None</p>
+<p>ch54.indd</p>
+<p>604</p>
+<p>20-11-2020</p>
+<p>13:08:51</p>
+<div class="table-container"><table><tr><th>TABLE 54-4 Antiseizure Drug Elimination Pathways and Major Effects on Hepatic Enzymes
+Antiepileptic Drugs Major Hepatic Enzymes Renal Elimination (%) Induces Inhibits</th><th></th><th></th><th></th><th></th></tr><tr><td>First generation</td><td></td><td></td><td></td><td></td></tr><tr><td>Carbamazepine</td><td>CYP3A4</td><td>3</td><td>CYP1A2; CYP2B6; CYP2C9/19; CYP3A;
+GT</td><td>None</td></tr><tr><td>Clonazepam</td><td>CYP3A</td><td>2</td><td>None</td><td>None</td></tr><tr><td>Ethosuximide</td><td>CYP3A4; CYP2E1</td><td>10–20</td><td>None</td><td>None</td></tr><tr><td>Phenobarbital</td><td>CYP2C9; CYP2C19</td><td>25</td><td>CYP 3A4/2C9/2C19/1A2; GT</td><td>None</td></tr><tr><td>Phenytoin</td><td>CYP2C9; CYP2C19</td><td>Unknown</td><td>CYP3A; CYP2C; GT</td><td></td></tr><tr><td>Primidone</td><td></td><td>&lt;1</td><td></td><td></td></tr><tr><td>Valproate</td><td>GT; β-oxidation</td><td>&lt;3</td><td>None</td><td>CYP2C9; GT epoxide
+hydrolase</td></tr><tr><td>Second generation</td><td></td><td></td><td></td><td></td></tr><tr><td>Felbamate</td><td>CYP3A4; CYP2E1; other</td><td>50</td><td>CYP3A4</td><td>CYP2C19; β-oxidation</td></tr><tr><td>Gabapentin</td><td>None</td><td>Almost completely</td><td>None</td><td>None</td></tr><tr><td>Lamotrigine</td><td>GT</td><td>10</td><td>GT</td><td>None</td></tr><tr><td>Levetiracetam</td><td>None (undergoes nonhepatic
+hydrolysis)</td><td>66</td><td>None</td><td>None</td></tr><tr><td>Oxcarbazepine (MHD is active
+oxcarbazepine metabolite)</td><td>Cytosolic system</td><td>&lt;1 (27 as MHD)</td><td>CYP3A4; CYP3A5; GT</td><td>CYP2C19</td></tr><tr><td>Tiagabine</td><td>CYP3A4; CYP1A2; CYP2D6;
+CYP2C19</td><td>2</td><td>None</td><td>None</td></tr><tr><td>Topiramate</td><td>Not known</td><td>70</td><td>CYP3A (dose dependent)</td><td>CYP2C19</td></tr><tr><td>Zonisamide</td><td>CYP3A4</td><td>35</td><td>None</td><td>None</td></tr></table></div><p>605</p>
+<p>Epilepsy</p>
+<p>and</p>
+<p>Status</p>
+<p>Epilepticus</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>54</p>
+<p>Third generation</p>
+<p>Brivaracetam CYP2C19 &lt;10 None CYP2C19 (weak), GT epoxide</p>
+<p>hydrolase</p>
+<p>Cannabadiol CYP2C19; CYP3A4; GT Minor CYP1A2; CYP2B6; GT CYP2C8/9 and 19</p>
+<p>Clobazam CYP3A4; CYP2C19; CYP2B6 2 CYP3A4 (weak) CYP2C9</p>
+<p>Eslicarbazepine Undergoes hydrolysis 67 GT (mild) CYP2C19</p>
+<p>Lacosamide CYP2C9/19; CYP3A4 40 None CYP2C19</p>
+<p>Perampanel CYP3A4/5; CYP1A2; CYP2B6 Undefined CYP3A4/5; CYP2B6; GT CYPA3A4/5; CYP2C8; GT</p>
+<p>Pregabalin None 100 None None</p>
+<p>Rufinamide Hydrolysis 2 CYP3A4 (weak) CYP2E1 (weak)</p>
+<p>Vigabatrin None Almost completely CYP2C9 None</p>
+<p>CYP, cytochrome P450 isoenzyme system; GT, glucuronyltransferase.</p>
+<p>ch54.indd</p>
+<p>605</p>
+<p>20-11-2020</p>
+<p>13:08:51</p>
+<div class="table-container"><table><tr><th>Third generation</th><th></th><th></th><th></th><th></th></tr><tr><td>Brivaracetam</td><td>CYP2C19</td><td>&lt;10</td><td>None</td><td>CYP2C19 (weak), GT epoxide
+hydrolase</td></tr><tr><td>Cannabadiol</td><td>CYP2C19; CYP3A4; GT</td><td>Minor</td><td>CYP1A2; CYP2B6; GT</td><td>CYP2C8/9 and 19</td></tr><tr><td>Clobazam</td><td>CYP3A4; CYP2C19; CYP2B6</td><td>2</td><td>CYP3A4 (weak)</td><td>CYP2C9</td></tr><tr><td>Eslicarbazepine</td><td>Undergoes hydrolysis</td><td>67</td><td>GT (mild)</td><td>CYP2C19</td></tr><tr><td>Lacosamide</td><td>CYP2C9/19; CYP3A4</td><td>40</td><td>None</td><td>CYP2C19</td></tr><tr><td>Perampanel</td><td>CYP3A4/5; CYP1A2; CYP2B6</td><td>Undefined</td><td>CYP3A4/5; CYP2B6; GT</td><td>CYPA3A4/5; CYP2C8; GT</td></tr><tr><td>Pregabalin</td><td>None</td><td>100</td><td>None</td><td>None</td></tr><tr><td>Rufinamide</td><td>Hydrolysis</td><td>2</td><td>CYP3A4 (weak)</td><td>CYP2E1 (weak)</td></tr><tr><td>Vigabatrin</td><td>None</td><td>Almost completely</td><td>CYP2C9</td><td>None</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<li>The enteric-coated tablet divalproex sodium causes fewer GI side effects. It is metab-</li>
+<p>olized in the gut to valproic acid. When switching from Depakote to Depakote-ER,</p>
+<p>the dose should be increased by 14%–20%.</p>
+<p>Second-Generation ASDs</p>
+<p>Felbamate</p>
+<li>Felbamate is approved as adjunctive treatment for seizures of Lennox–Gastaut</li>
+<p>syndrome and is effective as monotherapy or adjunctive therapy for focal onset</p>
+<p>seizures as well. Because of reports of aplastic anemia (1 in 3000 patients) and</p>
+<p>hepatitis (1 in 10,000 patients), felbamate is recommended only for patients</p>
+<p>refractory to other ASDs. Risk factors for aplastic anemia may include a history</p>
+<p>of cytopenia, ASD allergy or toxicity, viral infection, and/or immunologic problems.</p>
+<p>Gabapentin</p>
+<li>Gabapentin is a second-line agent for patients with focal onset seizures.</li>
+<li>Binding is saturable, causing dose-dependent bioavailability. It is eliminated exclusively</li>
+<pre><code>renally, and dosage adjustment is necessary in patients with impaired renal function.</code></pre>
+<li>Dosing is initiated at 300 mg at bedtime and increased to 300 mg twice daily on</li>
+<p>the second day and 300 mg three times daily on the third day. Further titrations are</p>
+<p>then made. When the total daily dose is 3600 mg/day or greater, divide the daily dose</p>
+<p>into at least four doses.</p>
+<p>Lamotrigine</p>
+<li>Lamotrigine is useful as both adjunctive therapy and monotherapy for partial seizures</li>
+<p>and can be considered first- or second-line therapy. It is also approved for primary</p>
+<p>GTC seizures, and for primary generalized seizure of Lennox–Gastaut syndrome.</p>
+<p>Levetiracetam</p>
+<li>Renal elimination of unchanged drug accounts for 66% of levetiracetam clearance,</li>
+<pre><code>and the dose should be adjusted for impaired renal function. It is metabolized in</code></pre>
+<p>blood by nonhepatic enzymatic hydrolysis.</p>
+<li>It is effective in the adjunctive treatment of focal onset seizures in patients 1 month</li>
+<p>of age and older, myoclonic seizures in patients 12 years and older, and primary GTC</p>
+<p>seizures in patients 6 years and older.</p>
+<li>The recommended initial adult dose is 500 mg orally twice daily. In some intractable</li>
+<p>seizure patients, the oral dose has been titrated rapidly over 3 days up to 3000 mg/day</p>
+<p>(1500 mg twice daily). It can be loaded orally or intravenously.</p>
+<p>Oxcarbazepine</p>
+<li>The relationship between dose and serum concentration is linear. It does not autoin-</li>
+<p>duce its own metabolism.</p>
+<li>It is indicated for use as adjunctive therapy for partial seizures in patients 6 years</li>
+<p>and older.</p>
+<li>Concurrent use of oxcarbazepine with ethinyl estradiol and levonorgestrel-contain-</li>
+<p>ing contraceptives may render these agents less effective.</p>
+<li>In patients converted from carbamazepine, the typical maintenance doses of oxcar-</li>
+<p>bazepine are 1.5 times the carbamazepine dose or less if patients are on larger carba-</p>
+<p>mazepine doses. See manufacturer’s recommendations for dosing by weight.</p>
+<p>Tiagabine</p>
+<li>Tiagabine is adjunctive therapy for patients 12 years and older with focal onset sei-</li>
+<p>zures who have failed initial therapy.</p>
+<li>Tiagabine is displaced from protein by naproxen, salicylates, and valproate.</li>
+<p>Topiramate</p>
+<li>Topiramate is a first-line ASD for patients with partial seizures as an adjunct or for</li>
+<p>monotherapy. It is also approved for tonic–clonic seizures in primary generalized</p>
+<p>epilepsy and for generalized seizures in Lennox–Gastaut syndrome.</p>
+<p>606</p>
+<p>ch54.indd 606 20-11-2020 13:08:52</p>
+<h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<li>The dose should be adjusted in renally impaired patients.</li>
+<li>It increases the clearance of ethinyl estradiol.</li>
+<li>Dose increments may occur every 1 or 2 weeks. For patients on other ASDs, doses</li>
+<p>greater than 400 mg/day do not appear to lead to improved efficacy and may increase</p>
+<p>side effects.</p>
+<p>Zonisamide</p>
+<li>Zonisamide, a broad-spectrum sulfonamide ASD, is approved as adjunctive therapy</li>
+<p>for partial seizures in adults.</p>
+<li>Start dosing in adults at 100 mg/day and increase by 100 mg/day every 2 weeks. It is</li>
+<p>suitable for once- or twice-daily dosing, but once-daily dosing may cause more side</p>
+<p>effects.</p>
+<p>Third-Generation ASDs</p>
+<p>Brivaracetam</p>
+<li>Dosage adjustment is required in all stages of hepatic impairment.</li>
+<p>Cannabadiol</p>
+<li>Cannabadiol is a purified drug derived from marijuana whose exact antiseizure</li>
+<p>mechanism is unknown.</p>
+<li>It is FDA approved for Dravet syndrome and LGS.</li>
+<p>Clobazam</p>
+<li>Abrupt discontinuation can cause a withdrawal syndrome (eg, behavioral disorder,</li>
+<p>tremor, anxiety, dysphoria, insomnia, convulsions, and psychosis).</p>
+<li>As an inducer of CYP3A4, clobazam may lower serum levels of some oral contra-</li>
+<p>ceptives. It is an inhibitor of CYP2D6. In older persons and poor metabolizers of</p>
+<p>CYP2C19, initiate dosing as in patients weighing less than 30 kg.</p>
+<li>It is more effective than clonazepam for Lennox–Gastaut syndrome but less effective</li>
+<p>than clonazepam for myoclonic jerks and absence seizures. It is adjunctive treatment</p>
+<p>for seizures of Lennox–Gastaut syndrome.</p>
+<p>Eslicarbazepine</p>
+<li>Eslicarbazepine acetate is a prodrug that undergoes hydrolysis to S-licarbazepine, the</li>
+<p>major active metabolite of oxcarbazepine. It is FDA approved for monotherapy or</p>
+<p>adjunctive therapy of focal onset seizures.</p>
+<li>It is mostly renally excreted, and dosage adjustment is needed when creatinine clear-</li>
+<p>ance is less than 50 mL/min (0.8 mL/sec). It may increase the PR interval on the ECG.</p>
+<p>It causes less hyponatremia than oxcarbazepine.</p>
+<p>Ezogabine</p>
+<li>Ezogabine is approved for adjunctive treatment of focal onset seizures, and is recom-</li>
+<p>mended only after several alternative drugs have been tried.</p>
+<li>Lower doses are recommended in older persons.</li>
+<li>It can cause urinary retention and QT prolongation.</li>
+<li>Alcohol may increase systemic exposure to ezogabine with an increase in side effects.</li>
+<p>It can increase lamotrigine clearance and reduce digoxin clearance.</p>
+<li>It may cause falsely elevated results on urine and serum bilirubin laboratory tests.</li>
+<li>It must be taken three times daily.</li>
+<p>Lacosamide</p>
+<li>Lacosamide is approved as adjunctive therapy in patients 17 years old or greater with</li>
+<p>focal onset seizures.</p>
+<li>There is a linear relationship between daily doses and serum concentrations up to</li>
+<p>800 mg/day. Moderate hepatic and renal impairment both increase systemic drug</p>
+<p>exposure by up to 40%.</p>
+<li>The starting dose is 100 mg/day in two divided doses, with dose increase by 100 mg/</li>
+<p>day every week until a daily dose of 200–400 mg has been reached.</p>
+<p>607</p>
+<p>ch54.indd 607 20-11-2020 13:08:52</p>
+<h2>SECTION 9 | Neurologic Disorders</h2>
+<p>Perampanel</p>
+<li>Perampanel has a half-life of approximately 100 hours, and its clearance in increased</li>
+<p>two- to threefold by enzyme-inducing ASDs.</p>
+<li>It is FDA approved for adjunctive therapy of focal onset seizures in patients 12 years</li>
+<p>and older and as adjunctive therapy for primary GTC in patients 12 years and older.</p>
+<p>Pregabalin</p>
+<li>Pregabalin is FDA approved as adjunctive therapy for adults with focal onset seizures.</li>
+<p>It is considered a second-line agent for those who have failed initial treatment.</p>
+<li>It is eliminated unchanged primarily by renal excretion; dosage adjustment is</li>
+<pre><code>required in patients with significant renal dysfunction.</code></pre>
+<p>Rufinamide</p>
+<li>Rufinamide is an adjunctive agent used for seizures of LGS in patients 1 year and</li>
+<p>older and in adults. Reserve rufinamide for patients who have failed other ASDs.</p>
+<li>Children may have a higher clearance of rufinamide than adults.</li>
+<li>It is dosed twice daily because of slow absorption and a short half-life. Drug</li>
+<p>interactions are common.</p>
+<li>Multiorgan hypersensitivity has occurred within 4 weeks of dose initiation in chil-</li>
+<p>dren younger than 12 years.</p>
+<p>Vigabatrin</p>
+<li>Vigabatrin is monotherapy for infantile spasms in infants 1 month–2 years of age,</li>
+<p>and a third-line adjunctive agent for refractory complex partial seizures in patients</p>
+<p>10 years and older.</p>
+<li>It is excreted unchanged in the urine. Dosage adjustment is necessary in pediatric</li>
+<p>and renally impaired patients.</p>
+<li>Access to vigabatrin is restricted as all providers must be certified in the Vigabatrin</li>
+<p>Risk Evaluation and Mitigation Strategy (REMS) Program.</p>
+<p>Special Considerations in Patients of Reproductive Age</p>
+<li>Estrogen has a seizure-activating effect, and progesterone has a seizure-protective</li>
+<p>effect. Enzyme-inducing ASDs (eg, phenobarbital, phenytoin, carbamazepine, topira-</p>
+<p>mate, oxcarbazepine, and perhaps rufinamide, lamotrigine, clobazam, and felbamate)</p>
+<p>may cause oral contraceptive failures; supplemental birth control is advised if break-</p>
+<p>through bleeding occurs. Women taking these ASDs should take twice the usual dose</p>
+<p>of emergency contraception.</p>
+<li>For catamenial epilepsy (seizures just before or during menses) or seizures that occurring</li>
+<p>during ovulation, conventional ASDs should be tried first, but intermittent supplemen-</p>
+<p>tation with higher-dose ASDs or benzodiazepines should be considered. Acetazolamide</p>
+<p>has been used with limited success. Progestational agents may also be effective.</p>
+<li>Seizures often improve in frequency at menopause.</li>
+<li>Women with epilepsy who are seizure free for 9–12 months before becoming preg-</li>
+<p>nant, have an 84%–92% chance of being seizure free during pregnancy. Fluctuations</p>
+<p>in ASD serum concentrations during pregnancy may be due to reduced gastric motil-</p>
+<p>ity, nausea and vomiting, increased drug distribution, increased renal elimination,</p>
+<p>altered hepatic enzyme activity, or changes in protein binding.</p>
+<li>ASD monotherapy is preferred in pregnancy. Clearance of phenytoin, carbamaze-</li>
+<p>pine, lamotrigine, oxcarbazepine, and levetiracetam increases during pregnancy,</p>
+<p>and protein binding may be reduced. Serum concentrations of p henobarbital, primi-</p>
+<p>done, ethosuximide, and valproic acid may also fluctuate during pregnancy. Serum</p>
+<p>concentrations of ASDs should be monitored closely durng pregnancy. There is a</p>
+<p>higher incidence of adverse pregnancy outcomes in women taking ASDs, including</p>
+<p>an increased risk of major congenital malformations (MCMs).</p>
+<li>Valproic acid is associated with a risk of MCMs 3.5–4 times that of offspring of</li>
+<p>nonepileptic women. There is also an increased risk of neurodevelopmental effects</p>
+<p>including effects on cognition in children. Valproic acid should not be used in</p>
+<p>pregnancy, but when it is used, doses should not exceed 500–600 mg/day.</p>
+<p>608</p>
+<p>ch54.indd 608 20-11-2020 13:08:52</p>
+<h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<li>Topiramate use during pregnancy has been associated with cleft palate and possibly</li>
+<p>low birth weight and hypospadias.</p>
+<li>Teratogenic effects may possibly be prevented by adequate folate intake, although</li>
+<p>strong evidence is lacking. Prenatal vitamins with folic acid (0.4–5 mg/day) are rec-</p>
+<p>ommended for women of childbearing potential taking ASDs. Higher folate doses</p>
+<p>should be used in women who have previously delivered a child with a neural tube</p>
+<p>defect and women who are taking valproic acid.</p>
+<li>ASDs with low protein binding will accumulate in breast milk.</li>
+<li>Other adverse outcomes of maternal seizures are growth, psychomotor, and mental</li>
+<p>retardation. Vitamin K, 10 mg/day orally, given to the woman during the last month</p>
+<p>of pregnancy may prevent neonatal hemorrhagic disorder. Alternatively, parenteral</p>
+<p>vitamin K can be given to the newborn at delivery.</p>
+<li>Data suggest that men with epilepsy have reduced fertility, and that carbamazepine,</li>
+<p>oxcarbazepine, and valproic acid are associated with sperm abnormalities. Valproic</p>
+<p>acid seems to cause testicular atrophy resulting in reduced testosterone volume,</p>
+<p>whereas levetiracetam appears to slightly increase serum testosterone.</p>
+<h2>STATUS EPILEPTICUS</h2>
+<li>For any tonic–clonic seizure that does not stop automatically or when doubt exists</li>
+<p>regarding the diagnosis, treatment of GCSE should begin during the diagnostic</p>
+<p>workup. Figure 54-3 is an algorithm for treatment of GCSE. Table 54-5 includes</p>
+<p>doses of medication for GCSE, and Table 54-6 has adverse drug reactions and</p>
+<p>monitoring of parameters.</p>
+<p>Stabilization Phase</p>
+<li>Thiamine (100 mg IV) should be given prior to IV glucose (see Figure 54-3).</li>
+<p>Initial Therapy Phase (5–20 Minutes)</p>
+<li>Benzodiazepines are effective initial therapy in most patients. Benzodiazepine pref-</li>
+<p>erence is based on pharmacokinetics, route of administration, pharmacoeconomics,</p>
+<p>adverse-effect profile, and current availability. Evidence-based guidelines recommend</p>
+<p>the initial use of IM midazolam, IV lorazepam, or IV diazepam (see Figure 54-3)</p>
+<p>in adults and the use of IV lorazepam or IV diazepam in children.</p>
+<li>IV diazepam is extremely lipophilic and quickly distributed into the brain, but it</li>
+<p>redistributes rapidly into body fat, causing a very short duration of effect (&lt;0.5 hour).</p>
+<p>Therefore, give a longer-acting anticonvulsant (eg, phenytoin or phenobarbital)</p>
+<p>immediately after the diazepam.</p>
+<li>IV lorazepam is currently considered the benzodiazepine of choice by most prac-</li>
+<p>titioners. It takes longer to reach peak brain levels than diazepam but has a longer</p>
+<p>duration of action (12–24 hours).</p>
+<li>IV midazolam is water soluble and diffuses rapidly into the CNS but has a very</li>
+<p>short half-life. Maintenance doses must be given by continuous infusion. Mid-</p>
+<p>azolam has a more reliable IM absorption than either diazepam or lorazepam.</p>
+<p>There is increasing interest in giving it buccally, IM, and intranasally when IV access</p>
+<p>cannot be obtained readily. Buccal midazolam may be more effective than rectal</p>
+<p>diazepam in children.</p>
+<li>Guidelines also recommend the use of IV phenobarbital as an alternative first-line</li>
+<p>agent in adults during the initial therapy stage.</p>
+<p>✓ If the initial loading dose does not stop the seizures within 20–30 minutes, an</p>
+<p>additional dose (10–20 mg/kg) can be given, before moving to anesthetic agents.</p>
+<p>When necessary, larger loading doses (eg, 30 mg/kg) have been used in neonates.</p>
+<li>Once GCSE is controlled, the maintenance dose should be started within 12–24 hours.</li>
+<p>Second-Therapy Phase: Established GCSE (20–40 Minutes)</p>
+<li>Phenytoin is second-line for GCSE unresponsive to the benzodiazepines or in</li>
+<p>seizures that recur after successful benzodiazepine treatment.</p>
+<p>609</p>
+<p>ch54.indd 609 20-11-2020 13:08:52</p>
+<h2>SECTION 9 | Neurologic Disorders</h2>
+<h2>PREHOSPITAL CARE</h2>
+<li>Monitor Vital signs (HR, RR)</li>
+<li>PR diazepam (0.2-0.5 mg/kg)</li>
+<li>Consider IN midazolam (0.15-0.3 mg/kg)</li>
+<p>or IM midazolam (0.2 mg/kg up to 10 mg)</p>
+<li>Transport to hospital if seizures persist</li>
+<h2>INITIAL HOSPITAL CARE LABORATORY STUDIES</h2>
+<li>Time from seizure onset • CBC with differential</li>
+<li>Assess and control airway and cardiac • Serum chemistry profile (eg, electrolytes,</li>
+<pre><code>function; pulse oximetry glucose, renal/hepatic function, calcium,</code></pre>
+<li>100% oxygen magnesium)</li>
+<li>Place IV catheter; Intraosseous if unable to • Arterial blood gas</li>
+<p>place IV and patient is younger than 6 years • Blood cultures</p>
+<li>Begin IV fluids; blood pressure support as needed • Serum anticonvulsant concentration</li>
+<li>Thiamine 100 mg (adult) • Urine drug/alcohol screen</li>
+<li>Pyridoxine 50-100 mg (infant) • EEG as needed</li>
+<li>Glucose (adult: 50 mL of 50%; children: 1 mL/kg of</li>
+<p>10%) if serum glucose is &lt;60 mg/dL (&lt;3.3 mmol/L)</p>
+<li>Naloxone 0.1 mg/kg for suspected narcotic overdose</li>
+<li>Antibiotics if infection suspected</li>
+<li>Treat hyperthermia</li>
+<p>IMPENDING GSCE (0-30 minutes)</p>
+<li>IV lorazepam (0.1 mg/kg over 30-60 seconds up to 6 mg) may repeat in 5 minutes if no response or IN</li>
+<p>midazolam (0.15-0.3 mg/kg up to 10 mg) or IM midazolam (0.2 mg/kg up to 10 mg)</p>
+<li>Additional therapies may not be required if seizure stops</li>
+<p>ESTABLISHED GSCE (30-60 minutes)</p>
+<p>First-line</p>
+<p>Phenytoin (IV): 18-20 mg/kg over 20 minutes (&lt;1 mg/kg/min; max 50 mg/min); may give an additional</p>
+<p>5 mg/kg as needed or Fosphenytoin (IV or IM): 18-20 mg PE/kg (&lt;3 mg PE/kg/min; max &lt;150 mg PE/min)</p>
+<p>Second-line</p>
+<p>Phenobarbital (IV): 15-20 mg/kg over 20 minutes (&lt;100 mg/min)</p>
+<p>Valproate (IV): 25-30 mg/kg over 5-15 minutes (&lt;3 mg/kg/min up to 200 mg/min) followed by an infusion</p>
+<p>of 1-mg/kg/h</p>
+<p>Third-line</p>
+<p>Lacosamide (IV): 50-400 mg; 200 mg given over 15 minutes</p>
+<p>Levetiracetam (IV): 40-60 mg/kg, maximum 3,000 mg (administer 2-5 mg/kg/min)</p>
+<p>REFRACTORY GSCE (&gt;120 minutes)</p>
+<p>Implement continuous EEG monitoring</p>
+<p>Assure patient is normovolemic</p>
+<p>Assure cerebral perfusion pressure is &gt;70 mm Hg (&gt;9.3 kPa)</p>
+<p>Administer volume as stated above and then begin vasopressors to achieve adequate mean arterial</p>
+<p>pressure (&gt;120 mm Hg [&gt;16.0 kPa]) Continuous ECG monitoring if on propofol</p>
+<p>First-line</p>
+<li>Midazolam: 0.2-0.4 mg/kg bolus at a rate of 2 mg/min followed by 0.05-2 mg/kg/h</li>
+<li>Pentobarbital: 10-20 mg/kg bolus at a rate of ≤50 mg/min followed by 1-5 mg/kg/h</li>
+<li>Propofol: 1-2 mg/kg bolus followed by <4 mg/kg/h in children; larger dose may be used in adults</li>
+<p>SUPER-REFRACTORY GSCE (&gt;24 hours)</p>
+<p>Implement continuous EEG monitoring</p>
+<p>Assure patient is normovolemic</p>
+<p>Assure cerebral perfusion pressure is &gt;70 mm Hg (&gt;9.3 kPa)</p>
+<p>Administer volume as stated above and then begin vasopressors to achieve adequate mean arterial</p>
+<p>pressure (&gt;120 mm Hg [&gt;16.0 kPa])</p>
+<li>Ketamine</li>
+<li>Hypothermia</li>
+<li>Lidocaine</li>
+<li>Topiramate</li>
+<li>Inhaled Anesthetics</li>
+<li>Immunomodulating therapies</li>
+<li>Ketogenic diet</li>
+<li>Vagus Nerve Stimulator</li>
+<p>aBecause variability exists in dosing, monitor serum c o n ce n t ra t i on</p>
+<p>(BP, blood pressure; CBC, complete blood count; CI, continuous infusion; D12.5W, 12.5% dextrose in water; D25W,</p>
+<p>25% dextrose in water; D50W, 50% dextrose in water; EEG, electroencephalogram; GCSE, generalized convulsive</p>
+<p>status epilepticus; HR, heart rate; IN, intranasal; PE, phenytoin equivalents; PR, per rectum; RR, respiratory rate.)</p>
+<h2>FIGURE 54-3. Algorithm for the treatment of GCSE.</h2>
+<p>610</p>
+<p>ch54.indd 610 20-11-2020 13:08:52</p>
+<h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<p>TABLE 54-5 Dosing of Medications Used in the Initial and Established Treatment of GCSE</p>
+<p>Initial Dose (Maximum Maintenance</p>
+<p>Drug (Route) Brand Name Dose) Dose</p>
+<p>Diazepam (IV) Valium plus generic</p>
+<p>Adult 0.25 mg/kga,b,c (20 mg) Not used</p>
+<p>Pediatric 0.25–0.5 mg/kga,c (20 mg) Not used</p>
+<p>Fosphenytoin (IV) Cerebyx plus generic</p>
+<p>Adult 20–25 mg PE/kg 4–5 mg PE/kg/day</p>
+<p>Pediatric 20–25 mg PE/kg 5–10 mg PE/kg/day</p>
+<p>Levetiracetam (IV) Keppra plus generics</p>
+<p>Adult 2000–3000 mg 1000 mg thrice a day</p>
+<p>Pediatric 40–60 mg/kg (3000 mg) 40–60 mg/kg/day,</p>
+<p>given twice or</p>
+<p>thrice a day</p>
+<p>Lorazepam (IV) Ativan plus generic</p>
+<p>Adult 4 mgb,c (6 mg) Not used</p>
+<p>Pediatric 0.1 mg/kga,c (6 mg) Not used</p>
+<p>Midazolam (IV, IM) Versed plus generic</p>
+<p>Adult 200 mcg/kga,d (10 mg) 50–500 mcg/kg/hre</p>
+<p>Pediatric 150 mcg/kga,d (10 mg) 60–120 mcg/kg/hre</p>
+<p>Phenobarbital (IV) Generic</p>
+<p>Adult 10–20 mg/kge 1–4 mg/kg/daye</p>
+<p>Pediatric 15–20 mg/kge 3–5 mg/kg/daye</p>
+<p>Phenytoin (IV) Dilantin plus generic</p>
+<p>Adult 20–25 mg/kgf 4–5 mg/kg/daye</p>
+<p>Pediatric 20–25 mg/kgf 5–10 mg/kg/daye</p>
+<p>Valproate (IV) Depacon plus generic</p>
+<p>Adult 15–30 mg/kg (3000 mg) 1–4 mg/kg/hre</p>
+<p>Pediatric 20–25 mg/kg (3000 mg) 1–4 mg/kg/hre, or</p>
+<p>give every</p>
+<p>4–6 hours</p>
+<p>aDoses can be repeated every 10–15 minutes until the maximum dosage is given.</p>
+<p>bInitial doses in the older persons are 2–5 mg.</p>
+<p>cLarger doses can be required if patients chronically on a benzodiazepine (eg, clonazepam).</p>
+<p>dCan be given by the intramuscular, rectal, or buccal routes.</p>
+<p>eTitrate dose as needed.</p>
+<p>fAdminister additional loading dose based on serum concentration.</p>
+<p>gThe rate should not exceed 25 mg/min in older patients and those with known atherosclerotic</p>
+<p>cardiovascular disease.</p>
+<p>GCSE, generalized convulsive status epilepticus; PE, phenytoin equivalents.</p>
+<li>Phenytoin has a 20–36 hour half-life, but it cannot be delivered fast enough to be a</li>
+<p>first-line agent.</p>
+<li>Phenytoin should be diluted to 5 mg/mL or greater in normal saline. Maintenance</li>
+<p>doses should be started within 12–24 hours of the loading dose.</p>
+<li>In determining a loading dose, consider whether the patient was taking phenytoin</li>
+<p>prior to admission and the phenytoin serum concentration if known. A larger loading</p>
+<p>dose is required in obese patients.</p>
+<p>611</p>
+<p>ch54.indd 611 20-11-2020 13:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 54-5 Dosing of Medications Used in the Initial and Established Treatment of GCSE</th><th></th><th></th><th></th></tr><tr><td>Drug (Route)</td><td>Brand Name</td><td>Initial Dose (Maximum
+Dose)</td><td>Maintenance
+Dose</td></tr><tr><td>Diazepam (IV)</td><td>Valium plus generic</td><td></td><td></td></tr><tr><td>Adult</td><td></td><td>0.25 mg/kga,b,c (20 mg)</td><td>Not used</td></tr><tr><td>Pediatric</td><td></td><td>0.25–0.5 mg/kga,c (20 mg)</td><td>Not used</td></tr><tr><td>Fosphenytoin (IV)</td><td>Cerebyx plus generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>20–25 mg PE/kg
+20–25 mg PE/kg</td><td>4–5 mg PE/kg/day
+5–10 mg PE/kg/day</td></tr><tr><td>Levetiracetam (IV)</td><td>Keppra plus generics</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>2000–3000 mg
+40–60 mg/kg (3000 mg)</td><td>1000 mg thrice a day
+40–60 mg/kg/day,
+given twice or
+thrice a day</td></tr><tr><td>Lorazepam (IV)</td><td>Ativan plus generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>4 mgb,c (6 mg)
+0.1 mg/kga,c (6 mg)</td><td>Not used
+Not used</td></tr><tr><td>Midazolam (IV, IM)</td><td>Versed plus generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>200 mcg/kga,d (10 mg)
+150 mcg/kga,d (10 mg)</td><td>50–500 mcg/kg/hre
+60–120 mcg/kg/hre</td></tr><tr><td>Phenobarbital (IV)</td><td>Generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>10–20 mg/kge
+15–20 mg/kge</td><td>1–4 mg/kg/daye
+3–5 mg/kg/daye</td></tr><tr><td>Phenytoin (IV)</td><td>Dilantin plus generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>20–25 mg/kgf
+20–25 mg/kgf</td><td>4–5 mg/kg/daye
+5–10 mg/kg/daye</td></tr><tr><td>Valproate (IV)</td><td>Depacon plus generic</td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td></td><td>15–30 mg/kg (3000 mg)
+20–25 mg/kg (3000 mg)</td><td>1–4 mg/kg/hre
+1–4 mg/kg/hre, or
+give every
+4–6 hours</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<p>TABLE 54-6 Adverse Drug Reactions and Monitoring of Patients Receiving Drugs</p>
+<p>for GCSE (Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reaction Parameters Comments</p>
+<p>Diazepam Hypotension Vital signs and Propylene glycol causes</p>
+<p>and cardiac ECG during hypotension and cardiac</p>
+<p>arrhythmias administration arrhythmias when</p>
+<p>administered too rapidly;</p>
+<p>hypotension may occur with</p>
+<p>large doses</p>
+<p>Fosphenytoin Hypotension Vital signs and Hypotension is less than</p>
+<p>and cardiac ECG during phenytoin, as product does</p>
+<p>arrhythmias; administration not contain propylene glycol;</p>
+<p>paresthesia, pruritus generally involves the</p>
+<p>pruritus face and groin areas, is dose</p>
+<p>and rate related, and subsides</p>
+<p>5–10 minutes after infusion</p>
+<p>Lidocaine Fasciculations, Occur at serum concentrations</p>
+<p>visual between 6 and 8 mg/L</p>
+<p>disturbances, (25.6–34.1 μmol/L); seizures</p>
+<p>tinnitus, seizures &gt;8 mg/L (34.1 μmol/L)</p>
+<p>Lorazepam Apnea, Vital signs and Accumulation of propylene glycol</p>
+<p>hypotension, ECG during during prolong continuous</p>
+<p>bradycardia, administration; infusions may cause acidosis</p>
+<p>cardiac arrest, HCO and</p>
+<p>3</p>
+<p>respiratory serum</p>
+<p>depression, creatinine;</p>
+<p>metabolic cumulative</p>
+<p>acidosis, and dose of</p>
+<p>renal toxicity propylene</p>
+<p>glycol</p>
+<p>Pentobarbital Hypotension Vital signs and Rate of infusion should be slower</p>
+<p>ECG during or dopamine should be added</p>
+<p>administration if hypotension occurs</p>
+<p>Phenytoin Hypotension Vital signs and Contains propylene glycol. Large</p>
+<p>and cardiac ECG during loading doses are generally</p>
+<p>arrhythmia; administration not given to older individuals</p>
+<p>nystagmus with preexisting cardiac disease</p>
+<p>or in critically ill patients with</p>
+<p>marginal blood pressure. The</p>
+<p>infusion rate should be slowed</p>
+<p>if the QT interval widens or if</p>
+<p>hypotension or arrhythmias</p>
+<p>develop; horizontal nystagmus</p>
+<p>suggests toxicity</p>
+<p>Phenobarbital Hypotension, Vital signs and Contains propylene glycol; if</p>
+<p>respiratory, and mental status; hypotension occurs, slow</p>
+<p>CNS depression EEG if used the rate of administration</p>
+<p>in anesthesia or begin dopamine; apnea</p>
+<p>doses and hypopnea can be more</p>
+<p>profound in patients treated</p>
+<p>initially with benzodiazepines</p>
+<p>(Continued )</p>
+<p>612</p>
+<p>ch54.indd 612 20-11-2020 13:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 54-6 Adverse Drug Reactions and Monitoring of Patients Receiving Drugs
+for GCSE (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Diazepam</td><td>Hypotension
+and cardiac
+arrhythmias</td><td>Vital signs and
+ECG during
+administration</td><td>Propylene glycol causes
+hypotension and cardiac
+arrhythmias when
+administered too rapidly;
+hypotension may occur with
+large doses</td></tr><tr><td>Fosphenytoin</td><td>Hypotension
+and cardiac
+arrhythmias;
+paresthesia,
+pruritus</td><td>Vital signs and
+ECG during
+administration</td><td>Hypotension is less than
+phenytoin, as product does
+not contain propylene glycol;
+pruritus generally involves the
+face and groin areas, is dose
+and rate related, and subsides
+5–10 minutes after infusion</td></tr><tr><td>Lidocaine</td><td>Fasciculations,
+visual
+disturbances,
+tinnitus, seizures</td><td></td><td>Occur at serum concentrations
+between 6 and 8 mg/L
+(25.6–34.1 μmol/L); seizures
+&gt;8 mg/L (34.1 μmol/L)</td></tr><tr><td>Lorazepam</td><td>Apnea,
+hypotension,
+bradycardia,
+cardiac arrest,
+respiratory
+depression,
+metabolic
+acidosis, and
+renal toxicity</td><td>Vital signs and
+ECG during
+administration;
+HCO and
+3
+serum
+creatinine;
+cumulative
+dose of
+propylene
+glycol</td><td>Accumulation of propylene glycol
+during prolong continuous
+infusions may cause acidosis</td></tr><tr><td>Pentobarbital</td><td>Hypotension</td><td>Vital signs and
+ECG during
+administration</td><td>Rate of infusion should be slower
+or dopamine should be added
+if hypotension occurs</td></tr><tr><td>Phenytoin</td><td>Hypotension
+and cardiac
+arrhythmia;
+nystagmus</td><td>Vital signs and
+ECG during
+administration</td><td>Contains propylene glycol. Large
+loading doses are generally
+not given to older individuals
+with preexisting cardiac disease
+or in critically ill patients with
+marginal blood pressure. The
+infusion rate should be slowed
+if the QT interval widens or if
+hypotension or arrhythmias
+develop; horizontal nystagmus
+suggests toxicity</td></tr><tr><td>Phenobarbital</td><td>Hypotension,
+respiratory, and
+CNS depression</td><td>Vital signs and
+mental status;
+EEG if used
+in anesthesia
+doses</td><td>Contains propylene glycol; if
+hypotension occurs, slow
+the rate of administration
+or begin dopamine; apnea
+and hypopnea can be more
+profound in patients treated
+initially with benzodiazepines
+(Continued )</td></tr></table></div><h2>Epilepsy and Status Epilepticus | CHAPTER 54</h2>
+<p>TABLE 54-6 Adverse Drug Reactions and Monitoring of Patients Receiving Drugs</p>
+<p>for GCSE (Continued )</p>
+<p>Adverse Drug Monitoring</p>
+<p>Drug Reaction Parameters Comments</p>
+<p>Propofol Progressive Vital signs, ECG, Referred to as propofol-related</p>
+<p>metabolic osmolar gap; infusion syndrome, which can</p>
+<p>acidosis, EEG if used be fatal</p>
+<p>hemodynamic in anesthesia</p>
+<p>instability, and doses</p>
+<p>bradyarrhythmias</p>
+<p>Topiramate Metabolic acidosis Acid base Extremely rare</p>
+<p>status (serum</p>
+<p>bicarbonate)</p>
+<p>CNS, central nervous system; ECG, electrocardiogram; EEG, electroencephalogram.</p>
+<li>Fosphenytoin, the water-soluble phosphate ester of phenytoin, is a phenytoin</li>
+<p>prodrug.</p>
+<li>Do not give the loading dose IM unless IV access is impossible.</li>
+<li>Serum phenytoin concentrations should not be obtained for at least 2 hours after IV</li>
+<p>and 4 hours after IM administration.</p>
+<li>IV valproate or levetiracetam are acceptable first-line agents if a benzodiazepine fails</li>
+<p>to control seizures after 20 minutes, or if seizures recur following a benzodiazepine</p>
+<p>and/or a hydantoin. Dosing for these agents is outlined in Table 54-5.</p>
+<p>Third-Phase Therapies: Refractory GCSE (40–60 Minutes)</p>
+<li>When adequate doses of a benzodiazepine, and a single dose of a second anticonvul-</li>
+<p>sant (hydantoin, valproate, levetiracetam, and/ or barbiturate) have failed, the condi-</p>
+<p>tion is termed refractory. Approximately 10%–15% of patients will develop refractory</p>
+<p>GCSE. Doses of agents used to treat refractory GCSE are given in Table 54-7.</p>
+<li>There is no consensus regarding the agent of choice, sequencing of therapy, or treat-</li>
+<p>ment of refractory GCSE.</p>
+<p>✓ Some clinicians recommend anesthetic doses of midazolam as the first-line treat-</p>
+<p>ment for refractory GCSE (see Table 54-7) in combination with another drugs that</p>
+<p>are mechanistically different. Most patients respond within an hour.</p>
+<p>✓ Successful benzodiazepine discontinuation is enhanced by serum phenytoin</p>
+<p>concentrations &gt;20 mg/L (79 μmol/L) and phenobarbital concentrations &gt;40 mg/L</p>
+<p>(172 μmol/L).</p>
+<li>A short-acting barbiturate (eg, pentobarbital or thiopental) (see Figure 54-3) may</li>
+<p>require intubation and respiratory support as well as continuous EEG and monitor-</p>
+<p>ing of vital signs.</p>
+<p>✓ Give a loading dose of pentobarbital to provide serum concentration (40 mg/L; 177</p>
+<p>μmol/L) sufficient to induce an isoelectric EEG. Usual duration of coma is 2–3 days,</p>
+<p>aiming to discontinue use as soon as possible.</p>
+<li>Propofol is very lipid soluble and has a large volume of distribution and a rapid onset</li>
+<p>of action. It has comparable efficacy to midazolam for refractory GCSE. Adverse</p>
+<p>effects and monitoring are shown in Table 54-6 and dosing is shown in Table 54-7.</p>
+<p>Once EEG burst suppression is achieved, the dose should be reduced.</p>
+<li>Topiramate tablets can be crushed, dissolved in a small amount of water, and given</li>
+<p>orally or nasogastrically. Response tends to be delayed hours to days. If metabolic</p>
+<p>acidosis occurs, it can be treated with citrates, with a goal of maintaining a serum</p>
+<p>bicarbonate level of at least 20 mEq/L (mmol/L).</p>
+<p>Super-Refractory GCSE (&gt;24 Hours)</p>
+<li>Ketamine appears to be a reasonable option to consider in refractory GCSE that</li>
+<p>has failed inhaled analgesics (Figure 54-3). Advantages include maintenance of</p>
+<p>613</p>
+<p>ch54.indd 613 20-11-2020 13:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 54-6 Adverse Drug Reactions and Monitoring of Patients Receiving Drugs
+for GCSE (Continued )</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Adverse Drug
+Reaction</td><td>Monitoring
+Parameters</td><td>Comments</td></tr><tr><td>Propofol</td><td>Progressive
+metabolic
+acidosis,
+hemodynamic
+instability, and
+bradyarrhythmias</td><td>Vital signs, ECG,
+osmolar gap;
+EEG if used
+in anesthesia
+doses</td><td>Referred to as propofol-related
+infusion syndrome, which can
+be fatal</td></tr><tr><td>Topiramate</td><td>Metabolic acidosis</td><td>Acid base
+status (serum
+bicarbonate)</td><td>Extremely rare</td></tr></table></div><h2>614 SECTION</h2>
+<p>9</p>
+<p>|</p>
+<p>Neurologic</p>
+<p>Disorders</p>
+<p>TABLE 54-7 Dosing of Medications Used to Treat Refractory or Super-Refractory GCSE (Continued )</p>
+<p>Initial Dose (Maximum</p>
+<p>Drug (Brand Name) Dose) Maintenance Dose Comments</p>
+<p>Ketamine (generics)</p>
+<p>Adult 1–4 mg 1–5 mg/kg/hr</p>
+<p>Pediatric 0.5–2 mg/kg 1–10 mg/kg/hr</p>
+<p>Lacosamide (Vimpat)</p>
+<p>Adult 200–400 mg 200 mg bid Administer IV over 15 minutes, monitor serum concentrations</p>
+<p>Pediatric 6–10 mg/kg (400 mg) 6–12 mg/kg/day, given</p>
+<p>twice a day</p>
+<p>Lidocaine (generics)</p>
+<p>Adult 50–100 mg 1.5–3.5 mg/kg/hr Administer IV in ≤2 minutes</p>
+<p>Pediatric 1 mg/kg (maximum 3–5 mg/kg 1.2–3 mg/kg/hr</p>
+<p>in the first hour)</p>
+<p>Midazolam (Versed plus generic)</p>
+<p>Adult 200 mcg/kga 50–500 mcg/kg/hrb Initial dose may be given IM; administer IV over 0.5–1 mg/min;</p>
+<p>pediatric 150 mcg/kga 60–120 mcg/kg/hrb continuous-infusion rate should be increased every 15 minutes in</p>
+<p>those who do not respond and should be guided by EEG response;</p>
+<p>development of tachyphylaxis can require frequent increases in</p>
+<p>dose; decrease dose by 1 mcg/kg/min every 2 hours once GCSE is</p>
+<p>controlled</p>
+<p>ch54.indd</p>
+<p>614</p>
+<p>20-11-2020</p>
+<p>13:08:53</p>
+<div class="table-container"><table><tr><th>TABLE 54-7 Dosing of Medications Used to Treat Refractory or Super-Refractory GCSE (Continued )
+Initial Dose (Maximum
+Drug (Brand Name) Dose) Maintenance Dose Comments</th><th></th><th></th><th></th></tr><tr><td>Ketamine (generics)</td><td></td><td></td><td></td></tr><tr><td>Adult</td><td>1–4 mg</td><td>1–5 mg/kg/hr</td><td></td></tr><tr><td>Pediatric</td><td>0.5–2 mg/kg</td><td>1–10 mg/kg/hr</td><td></td></tr><tr><td>Lacosamide (Vimpat)</td><td></td><td></td><td></td></tr><tr><td>Adult</td><td>200–400 mg</td><td>200 mg bid</td><td>Administer IV over 15 minutes, monitor serum concentrations</td></tr><tr><td>Pediatric</td><td>6–10 mg/kg (400 mg)</td><td>6–12 mg/kg/day, given
+twice a day</td><td></td></tr><tr><td>Lidocaine (generics)</td><td></td><td></td><td></td></tr><tr><td>Adult</td><td>50–100 mg</td><td>1.5–3.5 mg/kg/hr</td><td>Administer IV in ≤2 minutes</td></tr><tr><td>Pediatric</td><td>1 mg/kg (maximum 3–5 mg/kg
+in the first hour)</td><td>1.2–3 mg/kg/hr</td><td></td></tr><tr><td>Midazolam (Versed plus generic)</td><td></td><td></td><td></td></tr><tr><td>Adult
+pediatric</td><td>200 mcg/kga
+150 mcg/kga</td><td>50–500 mcg/kg/hrb
+60–120 mcg/kg/hrb</td><td>Initial dose may be given IM; administer IV over 0.5–1 mg/min;
+continuous-infusion rate should be increased every 15 minutes in
+those who do not respond and should be guided by EEG response;
+development of tachyphylaxis can require frequent increases in
+dose; decrease dose by 1 mcg/kg/min every 2 hours once GCSE is
+controlled</td></tr></table></div><p>615</p>
+<p>Epilepsy</p>
+<p>and</p>
+<p>Status</p>
+<p>Epilepticus</p>
+<p>|</p>
+<h2>CHAPTER</h2>
+<p>54</p>
+<p>Pentobarbital (generics)</p>
+<p>Adult 10–20 mg/kg 1–5 mg/kg/hrb Over 1–2 hours, the rate of infusion should be slowed or dopamine</p>
+<p>Pediatric 15–20 mg/kg 1–5 mg/kg/hrb should be added if hypotension occurs; gradually titrate dose</p>
+<p>upward until there is evidence of burst suppression on EEG (ie,</p>
+<p>isoelectric EEG) or prohibitive adverse effects occur. Twelve hours</p>
+<p>after a burst suppression is obtained, the rate should be titrated</p>
+<p>downward every 2–4 hours</p>
+<p>Propofol (Diprivan plus generic)</p>
+<p>Adult 2 mg/kg 5–10 mg/kg/hrb Over 10 seconds in adults and 20–30 seconds in pediatric patients</p>
+<p>Pediatric 3 mg/kg 2–4 mg/kg/hrc</p>
+<p>Topiramate (Topamax plus generic)</p>
+<p>Adult 300–500 mg 400–1600 mg/day Given orally in divided dose every 12 hours. Doses as large as 25</p>
+<p>Pediatric 5–15 mg/kg (400 mg) 5–10 mg/kg/day, given mg/kg/day for 2–5 days have been used in children. Monitor serum</p>
+<p>thrice a day bicarbonate levels and serum concentrations</p>
+<p>aDoses can be repeated twice at 10–15 minute intervals until the maximum dosage is given.</p>
+<p>bTitrate dose as needed.</p>
+<p>cGenerally recommended not to exceed a dose of 4 mg/kg/hr and a duration of 48 hours.</p>
+<p>EEG, electroencephalogram; GCSE, generalized convulsive status epilepticus; IM, intramuscular; IV, intravenous.</p>
+<p>ch54.indd</p>
+<p>615</p>
+<p>20-11-2020</p>
+<p>13:08:53</p>
+<div class="table-container"><table><tr><th>Pentobarbital (generics)</th><th></th><th></th><th></th></tr><tr><td>Adult
+Pediatric</td><td>10–20 mg/kg
+15–20 mg/kg</td><td>1–5 mg/kg/hrb
+1–5 mg/kg/hrb</td><td>Over 1–2 hours, the rate of infusion should be slowed or dopamine
+should be added if hypotension occurs; gradually titrate dose
+upward until there is evidence of burst suppression on EEG (ie,
+isoelectric EEG) or prohibitive adverse effects occur. Twelve hours
+after a burst suppression is obtained, the rate should be titrated
+downward every 2–4 hours</td></tr><tr><td>Propofol (Diprivan plus generic)</td><td></td><td></td><td></td></tr><tr><td>Adult</td><td>2 mg/kg</td><td>5–10 mg/kg/hrb</td><td>Over 10 seconds in adults and 20–30 seconds in pediatric patients</td></tr><tr><td>Pediatric</td><td>3 mg/kg</td><td>2–4 mg/kg/hrc</td><td></td></tr><tr><td>Topiramate (Topamax plus generic)</td><td></td><td></td><td></td></tr><tr><td>Adult
+Pediatric</td><td>300–500 mg
+5–15 mg/kg (400 mg)</td><td>400–1600 mg/day
+5–10 mg/kg/day, given
+thrice a day</td><td>Given orally in divided dose every 12 hours. Doses as large as 25
+mg/kg/day for 2–5 days have been used in children. Monitor serum
+bicarbonate levels and serum concentrations</td></tr></table></div><h2>SECTION 9 | Neurologic Disorders</h2>
+<p>arterial blood pressure, pulse, and cardiac output, but it may cause hallucinations</p>
+<p>upon awakening, increased salivation, and increased intraocular and intracranial</p>
+<p>pressures.</p>
+<li>IV lidocaine is not recommended unless other agents have failed. Serum concentra-</li>
+<p>tions should be monitored to avoid drug accumulation and toxicity (Table 54-6).</p>
+<li>Inhaled anesthetics are used once other approaches fail. Halothane, isoflurane,</li>
+<p>are difficult to administer outside the operating room, and an anesthesiologist is</p>
+<p>required. They have no proven advantages over traditional anticonvulsants, and they</p>
+<p>can increase intracranial pressure.</p>
+<li>In the absence of contraindications, a trial of large doses of steroids (eg, 1 g/day of IV</li>
+<p>prednisolone for 3 days, followed by 1 mg/kg/day in four divided doses) should be</p>
+<p>used in patients with unidentified etiology for super-refractory GCSE. Responders</p>
+<p>should continue long-term steroids, IV immunoglobulins, and other immunomodu-</p>
+<p>latory agents, such as cyclophosphamide or rituximab.</p>
+<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
+<li>The goal therapeutic outcome for all ASDs is seizure freedom or reduction in seizure</li>
+<p>frequency, while minimizing adverse effects.</p>
+<li>Monitor long term for seizure control, side effects, social adjustment including qual-</li>
+<p>ity of life, drug interactions, compliance, and side effects. Clinical response is more</p>
+<p>important than serum drug concentrations.</p>
+<li>Screen periodically for psychiatric disorders (eg, anxiety and depression).</li>
+<li>Ask patients and caregivers to record severity and frequency of seizures. Medication</li>
+<p>adherence should be assessed continually.</p>
+<li>The morbidity and mortality associated with GCSE can be minimized by the rapid</li>
+<p>implementation of a rational therapeutic plan.</p>
+<li>An EEG is an extremely important tool used to determine when abnormal electrical</li>
+<p>activity has been aborted, but also can assist in determining which anticonvulsant</p>
+<p>was effective.</p>
+<p>See Chapter 73, Epilepsy, authored by Viet-Huong V. Nguyen, Sunita Dergalust, and</p>
+<p>Edward Chang and Chapter 74, Status Epilepticus, authored by Stephanie J. Phelps and</p>
+<p>James W. Wheless, for a more detailed discussion of these topics.</p>
+<p>616</p>
+<p>ch54.indd 616 20-11-2020 13:08:53</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35. Antimicrobial Regimen Selection</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #eb455f;
+            --bg-color: #f8f9fa;
+            --text-color: #2c3333;
+            --white: #ffffff;
+            --table-header: #2d4263;
+            --table-row-even: #f1f6f9;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --p-color-1: #2c3e50;
+            --p-color-2: #34495e;
+            --p-color-3: #2980b9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 20px;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 4px solid var(--secondary-color);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--secondary-color);
+            padding-left: 20px;
+            background: #f0f9f9;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        p:nth-of-type(3n+1) { color: var(--p-color-1); }
+        p:nth-of-type(3n+2) { color: var(--p-color-2); }
+        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even);
+        }
+
+        tr:hover {
+            background-color: #e9f5f5;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-left: 6px solid var(--accent-color);
+            font-family: 'Consolas', 'Monaco', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: var(--accent-color);
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            p { font-size: 1rem; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>35. Antimicrobial Regimen Selection</h1>
+        </header>
+        <main>
+            <h2>SECTION 8</h2>
+<h2>INFECTIOUS DISEASES</h2>
+<p>Edited by Joseph T. DiPiro</p>
+<li>A systematic approach to the selection and evaluation of an antimicrobial regimen is</li>
+<p>shown in Table 35-1. An empiric antimicrobial regimen is begun before the offending</p>
+<p>organism is identified and sometimes before documentation of the presence of infec-</p>
+<p>tion, whereas a definitive regimen is instituted when the causative organism is known.</p>
+<h2>CONFIRMING THE PRESENCE OF INFECTION</h2>
+<h2>FEVER</h2>
+<li>Fever is defined as a controlled elevation of body temperature above the expected</li>
+<p>37°C (98.6°F) (measured orally) and is a manifestation of many disease states other</p>
+<p>than infection.</p>
+<li>Many drugs have been identified as causes of fever. Drug-induced fever is defined as</li>
+<p>persistent fever in the absence of infection or other underlying condition. The fever</p>
+<p>must coincide temporally with the administration of the offending agent and disap-</p>
+<p>pear promptly upon its withdrawal, after which the temperature remains normal.</p>
+<h2>WHITE BLOOD CELL COUNT</h2>
+<li>Most infections result in elevated white blood cell (WBC) counts (leukocytosis)</li>
+<p>because of the mobilization of granulocytes and/or lymphocytes to destroy invading</p>
+<p>microbes. Normal values for WBC counts are between 4000 and 10,000 cells/mm3</p>
+<p>(4 × 109 and 10 × 109/L).</p>
+<p>TABLE 35-1 Systematic Approach for Selection of Antimicrobials</p>
+<p>Confirm the presence of infection</p>
+<p>Careful history and physical examination</p>
+<p>Signs and symptoms</p>
+<p>Predisposing factors</p>
+<p>Identification of the pathogen (see Pharmacotherapy textbook Chapter e122.)</p>
+<p>Collection of infected material</p>
+<p>Stains</p>
+<p>Serologies</p>
+<p>Culture and sensitivity</p>
+<p>Selection of presumptive therapy considering every infected site</p>
+<p>Host factors</p>
+<p>Drug factors</p>
+<p>Monitor therapeutic response</p>
+<p>Clinical assessment</p>
+<p>Laboratory tests</p>
+<p>Assessment of therapeutic failure</p>
+<p>369</p>
+<h2>RETPAHC</h2>
+<p>35</p>
+<p>Antimicrobial Regimen</p>
+<p>Selection</p>
+<p>ch35.indd 369 19-11-2020 14:26:34</p>
+<div class="table-container"><table><tr><th>TABLE 35-1 Systematic Approach for Selection of Antimicrobials</th></tr><tr><td>Confirm the presence of infection
+Careful history and physical examination
+Signs and symptoms
+Predisposing factors</td></tr><tr><td>Identification of the pathogen (see Pharmacotherapy textbook Chapter e122.)
+Collection of infected material
+Stains
+Serologies
+Culture and sensitivity</td></tr><tr><td>Selection of presumptive therapy considering every infected site
+Host factors
+Drug factors</td></tr><tr><td>Monitor therapeutic response
+Clinical assessment
+Laboratory tests
+Assessment of therapeutic failure</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<li>Bacterial infections are associated with elevated granulocyte counts (neutrophils and</li>
+<p>basophils), often with increased numbers of immature forms (band neutrophils) seen</p>
+<p>in peripheral blood smears. With infection, peripheral leukocyte counts may be high,</p>
+<p>but they are rarely higher than 10,000 to 40,000 cells/mm3 (10 × 109/L to 40 × 109/L).</p>
+<p>Low neutrophil counts (neutropenia) after the onset of infection indicate an abnormal</p>
+<p>response and are generally associated with a poor prognosis for bacterial infection.</p>
+<li>Relative lymphocytosis, even with normal or slightly elevated total WBC counts, is</li>
+<p>generally associated with tuberculosis and viral or fungal infections. Many types of</p>
+<p>infections, however, may be accompanied by a completely normal WBC count and</p>
+<p>differential.</p>
+<h2>LOCAL SIGNS</h2>
+<li>Pain and inflammation may accompany infection and are sometimes manifested by</li>
+<p>swelling, erythema, tenderness, and purulent drainage. Unfortunately, these signs</p>
+<p>may be apparent only if the infection is superficial or in a bone or joint.</p>
+<li>The manifestations of inflammation with deep-seated infections such as meningitis,</li>
+<p>pneumonia, endocarditis, and urinary tract infection must be ascertained by exam-</p>
+<p>ining tissues or fluids. For example, the presence of polymorphonuclear leukocytes</p>
+<p>(neutrophils) in spinal fluid, lung secretions (sputum), and urine is highly suggestive</p>
+<p>of bacterial infection.</p>
+<h2>IDENTIFICATION OF THE PATHOGEN</h2>
+<li>Identification and antimicrobial susceptibility of a suspected pathogen are the most</li>
+<p>important factors in determining the choice of antimicrobial therapy.</p>
+<li>Infected body materials must be sampled, if at all possible or practical, before the insti-</li>
+<p>tution of antimicrobial therapy. A Gram stain of the material may reveal bacteria, or an</p>
+<p>acid-fast stain may detect mycobacteria or actinomycetes. Premature use of antimicro-</p>
+<p>bials can suppress the growth of pathogens that might result in false-negative culture</p>
+<p>results or alterations in the cellular and chemical composition of infected fluids.</p>
+<li>Blood cultures should be performed in the acutely ill, febrile patient. Infected mate-</li>
+<p>rials produced by the patient (eg, blood, sputum, urine, stool, and wound or sinus</p>
+<p>drainage) and less accessible fluids or tissues are obtained when needed to assess</p>
+<p>localized signs or symptoms. Abscesses and cellulitic areas should also be aspirated.</p>
+<li>After a positive Gram stain, culture results, or both are obtained, the clinician must</li>
+<p>be cautious in determining whether the organism recovered is a true pathogen, a</p>
+<p>contaminant, or a part of the normal flora. Cultures of specimens from purportedly</p>
+<p>infected sites that are obtained by sampling from or through a contaminated areas</p>
+<p>might contain significant numbers of the normal flora.</p>
+<h2>SELECTION OF PRESUMPTIVE THERAPY</h2>
+<li>A variety of factors must be considered to select rational antimicrobial therapy for</li>
+<p>a given clinical situation. These include the severity and acuity of the disease, local</p>
+<p>epidemiology and antibiogram, patient history, host factors, factors related to the</p>
+<p>drugs used, and the necessity for using multiple agents. Choice of antimicrobial is</p>
+<p>influenced by local antimicrobial susceptibility data rather than information pub-</p>
+<p>lished by other institutions or national compilations.</p>
+<li>The drugs of choice for the treatment of most pathogens are compiled from a variety</li>
+<p>of sources and are intended as guidelines rather than specific rules for antimicrobial</p>
+<h2>use (Table 35-2).</h2>
+<li>Important considerations when selecting empiric antimicrobial therapy include: (1)</li>
+<p>prior knowledge of colonization or infections, (2) previous antimicrobial use, (3) the</p>
+<p>site of infection and the organisms most likely pathogens, and (4) local antibiogram</p>
+<p>and resistance patterns for important pathogens.</p>
+<p>370</p>
+<p>ch35.indd 370 19-11-2020 14:26:35</p>
+<h2>Antimicrobial Regimen Selection | CHAPTER 35</h2>
+<h2>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)</h2>
+<p>Gram-Positive Cocci</p>
+<p>Enterococcus faecalis (generally not as resistant to antibiotics as Enterococcus faecium)</p>
+<li>Serious infection (endocarditis, meningitis, pyelonephritis with bacteremia)</li>
+<li>Ampicillin (or penicillin G) + (gentamicin or streptomycin)</li>
+<li>Vancomycin + (gentamicin or streptomycin), daptomycin, linezolid, tedizolid, telavancin,</li>
+<p>tigecyclinea</p>
+<li>Urinary tract infection</li>
+<li>Ampicillin, amoxicillin</li>
+<li>Fosfomycin or nitrofurantoin</li>
+<p>E. faecium (generally more resistant to antibiotics than E. faecalis)</p>
+<li>Recommend consultation with infectious disease specialist</li>
+<li>Linezolid, quinupristin/dalfopristin, daptomycin, tigecyclinea</li>
+<p>Staphylococcus aureus/Staphylococcus epidermidis</p>
+<li>Methicillin (oxacillin)-sensitive</li>
+<li>Nafcillin or oxacillin</li>
+<li>FGC,b,c trimethoprim–sulfamethoxazole, clindamycin, BL/BLId</li>
+<li>Hospital-acquired methicillin (oxacillin)–resistant</li>
+<li>Vancomycin ± (gentamicin or rifampin)</li>
+<li>Ceftaroline, daptomycin, linezolid, telavancin, tigecycline,a trimethoprim–sulfamethoxa-</li>
+<p>zole, quinupristin–dalfopristin</p>
+<li>Community-acquired methicillin (oxacillin)–resistant</li>
+<li>Clindamycin, trimethoprim–sulfamethoxazole, doxycyclinea</li>
+<li>Ceftaroline, dalbavancin, daptomycin, linezolid, oritivancin, tedizolid, telavancin,</li>
+<p>tigecycline,a or vancomycin</p>
+<p>Streptococcus (groups A, B, C, G, and Streptococcus bovis)</p>
+<li>Penicillin G or V or ampicillin</li>
+<li>FGC,b,c erythromycin, azithromycin, clarithromycin</li>
+<p>Streptococcus pneumoniae</p>
+<li>Penicillin-sensitive (minimal inhibitory concentration [MIC] <0.1 mcg/mL [mg/L])</li>
+<li>Penicillin G or V or ampicillin</li>
+<li>FGC,b,c doxycycline,a azithromycin, clarithromycin, erythromycin</li>
+<li>Penicillin intermediate (MIC 0.1–1 mcg/mL [mg/L])</li>
+<li>High-dose penicillin (12 million units/day for adults) or ceftriaxonec or cefotaximec</li>
+<li>Levofloxacin,a moxifloxacin,a gemifloxacin,a or vancomycin</li>
+<li>Penicillin-resistant (MIC ≥1.0 mcg/mL [mg/L])</li>
+<li>Recommend consultation with infectious disease specialist.</li>
+<p>– Vancomycin ± rifampin</p>
+<p>– Per sensitivities: ceftaroline, cefotaxime, ceftriaxone,c levofloxacin,a moxifloxacin,a or</p>
+<p>gemifloxacina</p>
+<p>Streptococcus, viridans group</p>
+<li>Penicillin G ± gentamicine</li>
+<li>Cefotaxime,c ceftriaxone,c erythromycin, azithromycin, clarithromycin, or vancomycin ±</li>
+<p>gentamicin</p>
+<p>Gram-Negative Cocci</p>
+<p>Moraxella (Branhamella) catarrhalis</p>
+<li>Amoxicillin–clavulanate, ampicillin–sulbactam</li>
+<li>Trimethoprim–sulfamethoxazole, erythromycin, azithromycin, clarithromycin, doxycycline,a</li>
+<p>SGC,c,f cefotaxime,c ceftriaxone,c or TGCPOc,g</p>
+<p>(Continued )</p>
+<p>371</p>
+<p>ch35.indd 371 19-11-2020 14:26:35</p>
+<div class="table-container"><table><tr><th>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)</th></tr><tr><td>Gram-Positive Cocci
+Enterococcus faecalis (generally not as resistant to antibiotics as Enterococcus faecium)
+• Serious infection (endocarditis, meningitis, pyelonephritis with bacteremia)
+• Ampicillin (or penicillin G) + (gentamicin or streptomycin)
+• Vancomycin + (gentamicin or streptomycin), daptomycin, linezolid, tedizolid, telavancin,
+tigecyclinea
+• Urinary tract infection
+• Ampicillin, amoxicillin
+• Fosfomycin or nitrofurantoin
+E. faecium (generally more resistant to antibiotics than E. faecalis)
+• Recommend consultation with infectious disease specialist
+• Linezolid, quinupristin/dalfopristin, daptomycin, tigecyclinea
+Staphylococcus aureus/Staphylococcus epidermidis
+• Methicillin (oxacillin)-sensitive
+• Nafcillin or oxacillin
+• FGC,b,c trimethoprim–sulfamethoxazole, clindamycin, BL/BLId
+• Hospital-acquired methicillin (oxacillin)–resistant
+• Vancomycin ± (gentamicin or rifampin)
+• Ceftaroline, daptomycin, linezolid, telavancin, tigecycline,a trimethoprim–sulfamethoxa-
+zole, quinupristin–dalfopristin
+• Community-acquired methicillin (oxacillin)–resistant
+• Clindamycin, trimethoprim–sulfamethoxazole, doxycyclinea
+• Ceftaroline, dalbavancin, daptomycin, linezolid, oritivancin, tedizolid, telavancin,
+tigecycline,a or vancomycin
+Streptococcus (groups A, B, C, G, and Streptococcus bovis)
+• Penicillin G or V or ampicillin
+• FGC,b,c erythromycin, azithromycin, clarithromycin
+Streptococcus pneumoniae
+• Penicillin-sensitive (minimal inhibitory concentration [MIC] &lt;0.1 mcg/mL [mg/L])
+• Penicillin G or V or ampicillin
+• FGC,b,c doxycycline,a azithromycin, clarithromycin, erythromycin
+• Penicillin intermediate (MIC 0.1–1 mcg/mL [mg/L])
+• High-dose penicillin (12 million units/day for adults) or ceftriaxonec or cefotaximec
+• Levofloxacin,a moxifloxacin,a gemifloxacin,a or vancomycin
+• Penicillin-resistant (MIC ≥1.0 mcg/mL [mg/L])
+• Recommend consultation with infectious disease specialist.
+– Vancomycin ± rifampin
+– Per sensitivities: ceftaroline, cefotaxime, ceftriaxone,c levofloxacin,a moxifloxacin,a or
+gemifloxacina
+Streptococcus, viridans group
+• Penicillin G ± gentamicine
+• Cefotaxime,c ceftriaxone,c erythromycin, azithromycin, clarithromycin, or vancomycin ±
+gentamicin
+Gram-Negative Cocci
+Moraxella (Branhamella) catarrhalis
+• Amoxicillin–clavulanate, ampicillin–sulbactam
+• Trimethoprim–sulfamethoxazole, erythromycin, azithromycin, clarithromycin, doxycycline,a
+SGC,c,f cefotaxime,c ceftriaxone,c or TGCPOc,g
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)(Continued )</p>
+<p>Neisseria gonorrhoeae (also give concomitant treatment for Chlamydia trachomatis)</p>
+<li>Disseminated gonococcal infection</li>
+<li>Ceftriaxonec or cefotaximec</li>
+<li>Oral follow-up: cefpodoxime,c ciprofloxacin,a or levofloxacina</li>
+<li>Uncomplicated infection</li>
+<li>Ceftriaxone,c cefotaxime,c or cefpodoximec</li>
+<li>Ciprofloxacina or levofloxacina</li>
+<p>Neisseria meningitides</p>
+<li>Penicillin G</li>
+<li>Cefotaximec or ceftriaxonec</li>
+<p>Gram-Positive Bacilli</p>
+<p>Clostridium perfringens</p>
+<li>Penicillin G ± clindamycin</li>
+<li>Metronidazole,a clindamycin, doxycycline,a cefazolin,c carbapenemh,i</li>
+<p>Clostridioides (formerly Clostridium) difficile</p>
+<li>Oral vancomycin or fidaxomicin</li>
+<li>Oral metronidazole</li>
+<p>Gram-Negative Bacilli</p>
+<p>Acinetobacter spp.</p>
+<li>Doripenem, imipenem, or meropenem ± aminoglycosidej (amikacin usually most effective)</li>
+<li>Ampicillin–sulbactam, polymyxins,i or tigecyclinea</li>
+<p>Bacteroides fragilis (and others)</p>
+<li>Metronidazolea</li>
+<li>BL/BLI,d clindamycin, cefoxitin,c cefotetan,c ceftolozane-azobactam, ceftazidime-avibactam,</li>
+<p>or carbapenemh,i</p>
+<p>Enterobacter spp.</p>
+<li>Carbapenemh or cefepime ± aminoglycosidej</li>
+<li>Ceftolozane-tazobactam, ceftazidime-avibactam, ciprofloxacin,a levofloxacin,a piperacillin–</li>
+<p>tazobactam, ticarcillin–clavulanate</p>
+<p>Escherichia coli</p>
+<li>Meningitis</li>
+<li>Cefotaxime,c ceftriaxone,c meropenem</li>
+<li>Systemic infection</li>
+<li>Cefotaximec or ceftriaxonec</li>
+<li>BL/BLI,d fluoroquinolone,a,k carbapenemh,i</li>
+<li>Urinary tract infection</li>
+<li>Most oral agents: check sensitivities</li>
+<li>Ampicillin, amoxicillin–clavulanate, doxycycline,a or cephalexinc</li>
+<li>Aminoglycoside,j FGC,b,c nitrofurantoin, fluoroquinolonea,k</li>
+<p>Gardnerella vaginalis</p>
+<li>Metronidazolea</li>
+<li>Clindamycin</li>
+<p>Haemophilus influenzae</p>
+<li>Meningitis</li>
+<li>Cefotaximec or ceftriaxonec</li>
+<li>Meropenemi</li>
+<li>Other infections</li>
+<li>BL/BLI,d or if β-lactamase-negative, ampicillin or amoxicillin</li>
+<li>Trimethoprim–sulfamethoxazole, cefuroxime,c azithromycin, clarithromycin, or</li>
+<p>fluoroquinolonea,k</p>
+<p>(Continued )</p>
+<p>372</p>
+<p>ch35.indd 372 19-11-2020 14:26:35</p>
+<div class="table-container"><table><tr><th>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)(Continued )</th></tr><tr><td>Neisseria gonorrhoeae (also give concomitant treatment for Chlamydia trachomatis)
+• Disseminated gonococcal infection
+• Ceftriaxonec or cefotaximec
+• Oral follow-up: cefpodoxime,c ciprofloxacin,a or levofloxacina
+• Uncomplicated infection
+• Ceftriaxone,c cefotaxime,c or cefpodoximec
+• Ciprofloxacina or levofloxacina
+Neisseria meningitides
+• Penicillin G
+• Cefotaximec or ceftriaxonec</td></tr><tr><td>Gram-Positive Bacilli
+Clostridium perfringens
+• Penicillin G ± clindamycin
+• Metronidazole,a clindamycin, doxycycline,a cefazolin,c carbapenemh,i
+Clostridioides (formerly Clostridium) difficile
+• Oral vancomycin or fidaxomicin
+• Oral metronidazole</td></tr><tr><td>Gram-Negative Bacilli
+Acinetobacter spp.
+• Doripenem, imipenem, or meropenem ± aminoglycosidej (amikacin usually most effective)
+• Ampicillin–sulbactam, polymyxins,i or tigecyclinea
+Bacteroides fragilis (and others)
+• Metronidazolea
+• BL/BLI,d clindamycin, cefoxitin,c cefotetan,c ceftolozane-azobactam, ceftazidime-avibactam,
+or carbapenemh,i
+Enterobacter spp.
+• Carbapenemh or cefepime ± aminoglycosidej
+• Ceftolozane-tazobactam, ceftazidime-avibactam, ciprofloxacin,a levofloxacin,a piperacillin–
+tazobactam, ticarcillin–clavulanate
+Escherichia coli
+• Meningitis
+• Cefotaxime,c ceftriaxone,c meropenem
+• Systemic infection
+• Cefotaximec or ceftriaxonec
+• BL/BLI,d fluoroquinolone,a,k carbapenemh,i
+• Urinary tract infection
+• Most oral agents: check sensitivities
+• Ampicillin, amoxicillin–clavulanate, doxycycline,a or cephalexinc
+• Aminoglycoside,j FGC,b,c nitrofurantoin, fluoroquinolonea,k
+Gardnerella vaginalis
+• Metronidazolea
+• Clindamycin
+Haemophilus influenzae
+• Meningitis
+• Cefotaximec or ceftriaxonec
+• Meropenemi
+• Other infections
+• BL/BLI,d or if β-lactamase-negative, ampicillin or amoxicillin
+• Trimethoprim–sulfamethoxazole, cefuroxime,c azithromycin, clarithromycin, or
+fluoroquinolonea,k
+(Continued )</td></tr></table></div><h2>Antimicrobial Regimen Selection | CHAPTER 35</h2>
+<p>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s) (Continued )</p>
+<p>Klebsiella pneumoniae</p>
+<li>BL/BLI,d cefotaxime,c ceftriaxone,c cefepimec</li>
+<li>Carbapenem,h,i ceftolozane-tazobactam, ceftazidime-avibactam, fluoroquinolonea,k</li>
+<p>Legionella spp.</p>
+<li>Azithromycin, erythromycin ± rifampin, or fluoroquinolonea,k</li>
+<li>Trimethoprim–sulfamethoxazole, clarithromycin, or doxycyclinea</li>
+<p>Pasteurella multocida</p>
+<li>Penicillin G, ampicillin, amoxicillin</li>
+<li>Doxycycline,a BL/BLI,d trimethoprim–sulfamethoxazole or ceftriaxonec</li>
+<p>Proteus mirabilis</p>
+<li>Ampicillin</li>
+<li>Trimethoprim–sulfamethoxazole</li>
+<p>Proteus (indole-positive) (including Providencia rettgeri, Morganella morganii, and Proteus</p>
+<p>vulgaris)</p>
+<li>Cefotaxime,c ceftriaxone,c or fluoroquinolonea,k</li>
+<li>BL/BLI,d aztreonam,l aminoglycosides,j carbapenem,h,i ceftolozane-tazobactam,</li>
+<p>ceftazidime-avibactam</p>
+<p>Providencia stuartii</p>
+<li>Amikacin, cefotaxime,c ceftriaxone,c fluoroquinolonea,k</li>
+<li>Trimethoprim–sulfamethoxazole, aztreonam,l carbapenemh,i</li>
+<p>Pseudomonas aeruginosa</p>
+<li>Urinary tract infection only</li>
+<li>Aminoglycosidej</li>
+<li>Ciprofloxacin,a levofloxacina</li>
+<li>Systemic infection</li>
+<li>Cefepime,c ceftazidime,c doripenem,i imipenem,i meropenem,i piperacillin–tazobactam, or</li>
+<p>ticarcillin–clavulanate + aminoglycosidej</p>
+<li>Aztreonam,l ceftolozane-tazobactam, ceftazidime-avibactam, ciprofloxacin,a levofloxacin,a</li>
+<p>polymyxini</p>
+<p>Salmonella typhi</p>
+<li>Ciprofloxacin,a levofloxacin,c ceftriaxone,c cefotaximec</li>
+<li>Trimethoprim–sulfamethoxazole</li>
+<p>Serratia marcescens</p>
+<li>Ceftriaxone,c cefotaxime,c cefepime,c ciprofloxacin,a levofloxacina</li>
+<li>Aztreonam,l carbapenem,h,i piperacillin–tazobactam, ticarcillin–clavulanate</li>
+<p>Stenotrophomonas (Xanthomonas) maltophilia (generally very resistant to all antimicrobials)</p>
+<li>Trimethoprim–sulfamethoxazole.</li>
+<li>Check sensitivities to ceftazidime,c doxycycline,a minocycline,a and ticarcillin–clavulanate</li>
+<p>Miscellaneous Microorganisms</p>
+<p>Chlamydia pneumoniae</p>
+<li>Doxycyclinea</li>
+<li>Azithromycin, clarithromycin, erythromycin, or fluoroquinolonea,k</li>
+<p>C. trachomatis</p>
+<li>Azithromycin or doxycyclinea</li>
+<li>Levofloxacin,a erythromycin</li>
+<p>Mycoplasma pneumoniae</p>
+<li>Azithromycin, clarithromycin, erythromycin, fluoroquinolonea,k</li>
+<li>Doxycyclinea</li>
+<p>(Continued )</p>
+<p>373</p>
+<p>ch35.indd 373 19-11-2020 14:26:35</p>
+<div class="table-container"><table><tr><th>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s) (Continued )</th></tr><tr><td>Klebsiella pneumoniae
+• BL/BLI,d cefotaxime,c ceftriaxone,c cefepimec
+• Carbapenem,h,i ceftolozane-tazobactam, ceftazidime-avibactam, fluoroquinolonea,k
+Legionella spp.
+• Azithromycin, erythromycin ± rifampin, or fluoroquinolonea,k
+• Trimethoprim–sulfamethoxazole, clarithromycin, or doxycyclinea
+Pasteurella multocida
+• Penicillin G, ampicillin, amoxicillin
+• Doxycycline,a BL/BLI,d trimethoprim–sulfamethoxazole or ceftriaxonec
+Proteus mirabilis
+• Ampicillin
+• Trimethoprim–sulfamethoxazole
+Proteus (indole-positive) (including Providencia rettgeri, Morganella morganii, and Proteus
+vulgaris)
+• Cefotaxime,c ceftriaxone,c or fluoroquinolonea,k
+• BL/BLI,d aztreonam,l aminoglycosides,j carbapenem,h,i ceftolozane-tazobactam,
+ceftazidime-avibactam
+Providencia stuartii
+• Amikacin, cefotaxime,c ceftriaxone,c fluoroquinolonea,k
+• Trimethoprim–sulfamethoxazole, aztreonam,l carbapenemh,i
+Pseudomonas aeruginosa
+• Urinary tract infection only
+• Aminoglycosidej
+• Ciprofloxacin,a levofloxacina
+• Systemic infection
+• Cefepime,c ceftazidime,c doripenem,i imipenem,i meropenem,i piperacillin–tazobactam, o
+ticarcillin–clavulanate + aminoglycosidej
+• Aztreonam,l ceftolozane-tazobactam, ceftazidime-avibactam, ciprofloxacin,a levofloxacin,a
+polymyxini
+Salmonella typhi
+• Ciprofloxacin,a levofloxacin,c ceftriaxone,c cefotaximec
+• Trimethoprim–sulfamethoxazole
+Serratia marcescens
+• Ceftriaxone,c cefotaxime,c cefepime,c ciprofloxacin,a levofloxacina
+• Aztreonam,l carbapenem,h,i piperacillin–tazobactam, ticarcillin–clavulanate
+Stenotrophomonas (Xanthomonas) maltophilia (generally very resistant to all antimicrobials)
+• Trimethoprim–sulfamethoxazole.
+• Check sensitivities to ceftazidime,c doxycycline,a minocycline,a and ticarcillin–clavulanate
+Miscellaneous Microorganisms
+Chlamydia pneumoniae
+• Doxycyclinea
+• Azithromycin, clarithromycin, erythromycin, or fluoroquinolonea,k
+C. trachomatis
+• Azithromycin or doxycyclinea
+• Levofloxacin,a erythromycin
+Mycoplasma pneumoniae
+• Azithromycin, clarithromycin, erythromycin, fluoroquinolonea,k
+• Doxycyclinea
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)(Continued )</p>
+<p>Spirochetes</p>
+<p>Treponema pallidum</p>
+<li>Neurosyphilis</li>
+<li>Penicillin G</li>
+<li>Ceftriaxonec</li>
+<li>Primary or secondary</li>
+<li>Benzathine, penicillin G</li>
+<li>Ceftriaxonec or doxycyclinea</li>
+<p>Borrelia burgdorferi (choice depends on stage of disease)</p>
+<li>Ceftriaxonec or cefuroxime axetil,c doxycycline,a amoxicillin</li>
+<li>High-dose penicillin, cefotaximec</li>
+<p>aNot for use in pregnant patients or children.</p>
+<p>bFirst-generation cephalosporins—IV: cefazolin; orally: cephalexin, cephradine, or cefadroxil.</p>
+<p>cSome penicillin-allergic patients may react to cephalosporins.</p>
+<p>dβ-Lactam/β-lactamase inhibitor combination—IV: ampicillin–sulbactam, piperacillin–tazobactam,</p>
+<p>and ticarcillin–clavulanate; orally: amoxicillin–clavulanate.</p>
+<p>eGentamicin should be added if tolerance or moderately susceptible (MIC &gt;0.1 mcg/mL [mg/L])</p>
+<p>organisms are encountered; streptomycin is used but can be more toxic.</p>
+<p>fSecond-generation cephalosporins—IV: cefuroxime; orally: cefaclor, cefditoren, cefprozil, cefuroxime</p>
+<p>axetil, and loracarbef.</p>
+<p>gThird-generation cephalosporins—orally: cefdinir, cefixime, cefetamet, cefpodoxime proxetil, and</p>
+<p>ceftibuten.</p>
+<p>hCarbapenem: doripenem, ertapenem, imipenem/cilastatin, and meropenem.</p>
+<p>iReserve for serious infection.</p>
+<p>jAminoglycosides: gentamicin, tobramycin, and amikacin; use per sensitivities.</p>
+<p>kFluoroquinolones IV/orally: ciprofloxacin, levofloxacin, and moxifloxacin.</p>
+<p>lGenerally reserved for patients with hypersensitivity reactions to penicillin.</p>
+<h2>HOST FACTORS</h2>
+<li>When a patient for initial or empiric therapy is evaluated, the following factors should</li>
+<p>be considered:</p>
+<p>✓ Allergy or history of adverse drug reactions.</p>
+<p>✓ Age of patient.</p>
+<p>✓ Pregnancy.</p>
+<p>✓ Metabolic or genetic variation.</p>
+<pre><code>✓ Renal and hepatic function: Patients with diminished renal and/or hepatic function</code></pre>
+<p>will accumulate certain drugs unless the dosage is adjusted.</p>
+<p>✓ Concomitant drug therapy: Any concomitant therapy the patient is receiving may</p>
+<p>influence the selection of drug therapy, the dose, and monitoring. A list of selected</p>
+<p>drug interactions involving antimicrobials is provided in Table 35-3.</p>
+<p>✓ Concomitant disease states.</p>
+<h2>DRUG FACTORS</h2>
+<li>Integration of both pharmacokinetic and pharmacodynamic properties of an agent</li>
+<p>is important when choosing antimicrobial therapy to ensure efficacy and prevent</p>
+<p>resistance. Antibiotics may demonstrate concentration-dependent (aminoglycosides</p>
+<p>and fluoroquinolones) or time-dependent (β-lactams) bactericidal effects.</p>
+<li>The importance of tissue penetration varies with the site of infection. The central</li>
+<p>nervous system (CNS) is one body site where the importance of antimicrobial</p>
+<p>penetration is relatively well defined, and correlations with clinical outcomes are</p>
+<p>established. Drugs that do not reach significant concentrations in CSF should either</p>
+<p>be avoided or instilled directly when treating meningitis.</p>
+<p>374</p>
+<p>ch35.indd 374 19-11-2020 14:26:36</p>
+<div class="table-container"><table><tr><th>TABLE 35-2 Drugs of Choice, First Choice, Alternative(s)(Continued )</th></tr><tr><td>Spirochetes
+Treponema pallidum
+• Neurosyphilis
+• Penicillin G
+• Ceftriaxonec
+• Primary or secondary
+• Benzathine, penicillin G
+• Ceftriaxonec or doxycyclinea
+Borrelia burgdorferi (choice depends on stage of disease)
+• Ceftriaxonec or cefuroxime axetil,c doxycycline,a amoxicillin
+• High-dose penicillin, cefotaximec</td></tr></table></div><h2>Antimicrobial Regimen Selection | CHAPTER 35</h2>
+<h2>TABLE 35-3 Major Drug Interactions with Antimicrobials</h2>
+<p>Mechanism of Clinical</p>
+<p>Antimicrobial Other Agent(s) Action/Effect Management</p>
+<p>Aminoglycosides Neuromuscular Additive adverse Avoid</p>
+<p>blocking agents effects</p>
+<p>Nephrotoxins (N) Additive adverse Monitor</p>
+<p>or ototoxins (O) effects aminoglycoside</p>
+<p>(eg, amphotericin SDC and renal</p>
+<pre><code>B [N], cisplatin function</code></pre>
+<p>[N/O], cyclosporine</p>
+<p>[N], furosemide</p>
+<p>[O], NSAIDs [N],</p>
+<p>radiocontrast [N],</p>
+<p>vancomycin [N])</p>
+<p>Amphotericin B Nephrotoxins (eg, Additive adverse Monitor renal</p>
+<pre><code>aminoglycosides, effects function</code></pre>
+<p>cidofovir,</p>
+<p>cyclosporine,</p>
+<p>foscarnet,</p>
+<p>pentamidine)</p>
+<h2>Azoles See Chapter 38</h2>
+<p>Chloramphenicol Phenytoin, Decreased Monitor phenytoin</p>
+<p>tolbutamide, metabolism of SDC, blood</p>
+<p>ethanol other agents glucose</p>
+<p>Foscarnet Pentamidine IV Increased risk Monitor renal</p>
+<pre><code>of severe function/serum</code></pre>
+<p>nephrotoxicity/ calcium</p>
+<p>hypocalcemia</p>
+<p>Isoniazid Carbamazepine, Decreased Monitor drug SDC</p>
+<p>phenytoin metabolism of</p>
+<p>other agents</p>
+<p>(nausea, vomiting,</p>
+<p>nystagmus, ataxia)</p>
+<p>Macrolides/ Digoxin Decreased digoxin Monitor digoxin SDC;</p>
+<p>Azalides bioavailability and avoid if possible</p>
+<p>metabolism</p>
+<p>Theophylline Decreased Monitor theophylline</p>
+<p>metabolism of SDC</p>
+<p>theophylline</p>
+<p>Metronidazole Ethanol (drugs Disulfiram-like Avoid</p>
+<p>containing ethanol) reaction</p>
+<p>Penicillins and Probenecid, aspirin Blocked excretion of Use if prolonged</p>
+<p>cephalosporins β-lactams high</p>
+<p>concentration of</p>
+<p>β-lactam desirable</p>
+<p>Ciprofloxacin/ Theophylline Decreased Monitor theophylline</p>
+<p>Norfloxacin metabolism of</p>
+<p>theophylline</p>
+<p>(Continued )</p>
+<p>375</p>
+<p>ch35.indd 375 19-11-2020 14:26:36</p>
+<div class="table-container"><table><tr><th>TABLE 35-3 Major Drug Interactions with Antimicrobials</th><th></th><th></th><th></th></tr><tr><td>Antimicrobial</td><td>Other Agent(s)</td><td>Mechanism of
+Action/Effect</td><td>Clinical
+Management</td></tr><tr><td>Aminoglycosides</td><td>Neuromuscular
+blocking agents</td><td>Additive adverse
+effects</td><td>Avoid</td></tr><tr><td></td><td>Nephrotoxins (N)
+or ototoxins (O)
+(eg, amphotericin
+B [N], cisplatin
+[N/O], cyclosporine
+[N], furosemide
+[O], NSAIDs [N],
+radiocontrast [N],
+vancomycin [N])</td><td>Additive adverse
+effects</td><td>Monitor
+aminoglycoside
+SDC and renal
+function</td></tr><tr><td>Amphotericin B</td><td>Nephrotoxins (eg,
+aminoglycosides,
+cidofovir,
+cyclosporine,
+foscarnet,
+pentamidine)</td><td>Additive adverse
+effects</td><td>Monitor renal
+function</td></tr><tr><td>Azoles</td><td>See Chapter 38</td><td></td><td></td></tr><tr><td>Chloramphenicol</td><td>Phenytoin,
+tolbutamide,
+ethanol</td><td>Decreased
+metabolism of
+other agents</td><td>Monitor phenytoin
+SDC, blood
+glucose</td></tr><tr><td>Foscarnet</td><td>Pentamidine IV</td><td>Increased risk
+of severe
+nephrotoxicity/
+hypocalcemia</td><td>Monitor renal
+function/serum
+calcium</td></tr><tr><td>Isoniazid</td><td>Carbamazepine,
+phenytoin</td><td>Decreased
+metabolism of
+other agents
+(nausea, vomiting,
+nystagmus, ataxia)</td><td>Monitor drug SDC</td></tr><tr><td>Macrolides/
+Azalides</td><td>Digoxin</td><td>Decreased digoxin
+bioavailability and
+metabolism</td><td>Monitor digoxin SDC;
+avoid if possible</td></tr><tr><td></td><td>Theophylline</td><td>Decreased
+metabolism of
+theophylline</td><td>Monitor theophylline
+SDC</td></tr><tr><td>Metronidazole</td><td>Ethanol (drugs
+containing ethanol)</td><td>Disulfiram-like
+reaction</td><td>Avoid</td></tr><tr><td>Penicillins and
+cephalosporins</td><td>Probenecid, aspirin</td><td>Blocked excretion of
+β-lactams</td><td>Use if prolonged
+high
+concentration of
+β-lactam desirable</td></tr><tr><td>Ciprofloxacin/
+Norfloxacin</td><td>Theophylline</td><td>Decreased
+metabolism of
+theophylline</td><td>Monitor theophylline
+(Continued )</td></tr></table></div><h2>SECTION 8 | Infectious Diseases</h2>
+<p>TABLE 35-3 Major Drug Interactions with Antimicrobials(Continued )</p>
+<p>Mechanism of Clinical</p>
+<p>Antimicrobial Other Agent(s) Action/Effect Management</p>
+<p>Quinolones Classes Ia and III Increased Q-T Avoid</p>
+<p>antiarrhythmics interval</p>
+<p>Multivalent cations Decreased Separate by 2 hours</p>
+<p>(antacids, iron, absorption of</p>
+<p>sucralfate, zinc, quinolone</p>
+<p>vitamins, dairy, citric</p>
+<p>acid), didanosine</p>
+<p>Rifampin Azoles, cyclosporine, Increased Avoid if possible</p>
+<p>methadone metabolism of</p>
+<p>propranolol, PIs, other agent</p>
+<p>oral contraceptives,</p>
+<p>tacrolimus, warfarin</p>
+<p>Sulfonamides Sulfonylureas, Decreased Monitor blood</p>
+<p>phenytoin, warfarin metabolism of glucose, SDC, PT</p>
+<p>other agent</p>
+<p>Tetracyclines Antacids, iron, calcium, Decreased Separate by 2 hours</p>
+<p>sucralfate absorption of</p>
+<p>tetracycline</p>
+<p>Digoxin Decreased digoxin Monitor digoxin SDC;</p>
+<p>bioavailability avoid if possible</p>
+<p>PI, protease inhibitor; PT, prothrombin time; SDC, serum drug concentrations.</p>
+<p>Azalides: azithromycin; azoles: fluconazole, itraconazole, ketoconazole, and voriconazole; macrolides:</p>
+<p>erythromycin and clarithromycin; protease inhibitors: amprenavir, indinavir, lopinavir/ritonavir, nelfinavir,</p>
+<p>ritonavir, and saquinavir; quinolones: ciprofloxacin, gemifloxacin, levofloxacin, and moxifloxacin.</p>
+<li>Apart from the bloodstream, other body fluids in which drug concentration data are</li>
+<p>clinically relevant are cerebrospinal fluid, urine, synovial fluid, and peritoneal fluid.</p>
+<li>Pharmacokinetic parameters such as area under the drug concentration-time curve</li>
+<p>(AUC) and maximal plasma concentration can be predictive of treatment outcome when</p>
+<p>specific ratios of AUC or maximal plasma concentration to the minimum inhibitory</p>
+<p>concentration (MIC) are achieved. For some agents, the ratio of AUC to MIC, peak-to-</p>
+<p>MIC ratio, or the time that the drug concentration is above the MIC may predict efficacy.</p>
+<li>The most important pharmacodynamic relationship for antimicrobials that display</li>
+<p>time-dependent bactericidal effects (such as penicillins and cephalosporins) is the</p>
+<p>duration that drug concentrations exceed the MIC.</p>
+<h2>COMBINATION ANTIMICROBIAL THERAPY</h2>
+<li>Combinations of antimicrobials are generally used to broaden the spectrum of cover-</li>
+<p>age for empiric therapy, achieve synergistic activity against the infecting organism,</p>
+<p>and prevent the emergence of resistance.</p>
+<li>Increasing the coverage of antimicrobial therapy is generally necessary in mixed</li>
+<p>infections in which multiple organisms are likely to be present, such as intra-abdom-</p>
+<p>inal and female pelvic infections in which a variety of aerobic and anaerobic bacteria</p>
+<p>may produce disease. Combination antimicrobial therapy is also used in critically</p>
+<p>ill patients with presumed healthcare-associated infections in which an increased</p>
+<p>spectrum of activity is desirable.</p>
+<p>Synergism</p>
+<li>The achievement of synergistic antimicrobial activity is advantageous for infections</li>
+<p>caused by gram-negative bacilli in immunosuppressed patients.</p>
+<p>376</p>
+<p>ch35.indd 376 19-11-2020 14:26:36</p>
+<div class="table-container"><table><tr><th>TABLE 35-3 Major Drug Interactions with Antimicrobials(Continued )</th><th></th><th></th><th></th></tr><tr><td>Antimicrobial</td><td>Other Agent(s)</td><td>Mechanism of
+Action/Effect</td><td>Clinical
+Management</td></tr><tr><td>Quinolones</td><td>Classes Ia and III
+antiarrhythmics</td><td>Increased Q-T
+interval</td><td>Avoid</td></tr><tr><td></td><td>Multivalent cations
+(antacids, iron,
+sucralfate, zinc,
+vitamins, dairy, citric
+acid), didanosine</td><td>Decreased
+absorption of
+quinolone</td><td>Separate by 2 hours</td></tr><tr><td>Rifampin</td><td>Azoles, cyclosporine,
+methadone
+propranolol, PIs,
+oral contraceptives,
+tacrolimus, warfarin</td><td>Increased
+metabolism of
+other agent</td><td>Avoid if possible</td></tr><tr><td>Sulfonamides</td><td>Sulfonylureas,
+phenytoin, warfarin</td><td>Decreased
+metabolism of
+other agent</td><td>Monitor blood
+glucose, SDC, PT</td></tr><tr><td>Tetracyclines</td><td>Antacids, iron, calcium,
+sucralfate</td><td>Decreased
+absorption of
+tetracycline</td><td>Separate by 2 hours</td></tr><tr><td></td><td>Digoxin</td><td>Decreased digoxin
+bioavailability</td><td>Monitor digoxin SDC;
+avoid if possible</td></tr></table></div><h2>Antimicrobial Regimen Selection | CHAPTER 35</h2>
+<li>Traditionally, combinations of aminoglycosides and β-lactams have been used</li>
+<p>because these drugs together generally act synergistically against a wide variety of</p>
+<p>bacteria. However, the data supporting superior efficacy of synergistic over nonsyn-</p>
+<p>ergistic combinations are weak.</p>
+<li>Synergistic combinations may produce better results in infections caused by Pseudo-</li>
+<p>monas aeruginosa, as well as in certain infections caused by Enterococcus spp.</p>
+<li>The use of combinations to prevent the emergence of resistance is widely applied but</li>
+<p>not often realized. The only circumstance in which this has been clearly effective is</p>
+<p>in the treatment of tuberculosis.</p>
+<p>Disadvantages of Combination Therapy</p>
+<li>Although there are potentially beneficial effects from combining drugs, there are also</li>
+<p>potential disadvantages, including increased cost, greater risk of drug toxicity, and</p>
+<p>superinfection with even more resistant bacteria.</p>
+<li>Some combinations of antimicrobials are potentially antagonistic. For example,</li>
+<p>agents that are capable of inducing β-lactamase production in bacteria (eg, cefoxitin)</p>
+<p>may antagonize the effects of enzyme-labile drugs such as penicillins or imipenem.</p>
+<h2>MONITORING THERAPEUTIC RESPONSE</h2>
+<li>After antimicrobial therapy has been instituted, the patient must be monitored</li>
+<p>carefully for a therapeutic response. Culture and sensitivity reports from specimens</p>
+<p>sent to the microbiology laboratory must be reviewed and the therapy changed</p>
+<p>accordingly.</p>
+<li>Use of agents with the narrowest spectrum of activity against identified pathogens</li>
+<p>is recommended.</p>
+<li>Patient monitoring should include a variety of parameters, including WBC count,</li>
+<p>body temperature, signs and symptoms of infection, appetite, radiologic studies as</p>
+<p>appropriate, and determination of antimicrobial concentrations in body fluids.</p>
+<li>As the patient improves, the route of antibiotic administration should be reevalu-</li>
+<p>ated. Streamlining therapy from parenteral to oral (switch therapy) has become an</p>
+<p>accepted practice for many infections. Criteria favoring the switch to oral therapy</p>
+<p>include the following:</p>
+<p>✓ Overall clinical improvement</p>
+<p>✓ Lack of fever for 8–24 hours</p>
+<p>✓ Decreased WBC</p>
+<pre><code>✓ A functioning gastrointestinal (GI) tract</code></pre>
+<h2>FAILURE OF ANTIMICROBIAL THERAPY</h2>
+<li>A variety of factors may be responsible for the apparent lack of response to therapy.</li>
+<p>It is possible that the disease is not infectious or nonbacterial in origin, or there is</p>
+<p>an undetected pathogen in a polymicrobial infection. Other factors include those</p>
+<p>directly related to drug selection, the host, or the pathogen. Laboratory error in iden-</p>
+<p>tification and/or susceptibility testing errors are rare.</p>
+<p>Failures Caused by Drug Selection</p>
+<li>Factors directly related to the drug selection include an inappropriate selection of</li>
+<p>drug, dosage, or route of administration. Malabsorption of a drug product due to</p>
+<p>GI disease (eg, short-bowel syndrome) or a drug interaction (eg, complexation of</p>
+<p>fluoroquinolones with multivalent cations resulting in reduced absorption) may lead</p>
+<p>to potentially subtherapeutic serum concentrations.</p>
+<li>Accelerated drug elimination is also a possible reason for failure and may occur</li>
+<p>in patients with cystic fibrosis or during pregnancy, when more rapid clearance or</p>
+<p>larger volumes of distribution may result in low serum concentrations, particularly</p>
+<p>for aminoglycosides.</p>
+<li>A common cause of failure of therapy is poor penetration into the site of infection.</li>
+<p>This is especially true for the so-called privileged sites, such as the CNS, the eye, and</p>
+<p>the prostate gland.</p>
+<p>377</p>
+<p>ch35.indd 377 19-11-2020 14:26:36</p>
+<h2>SECTION 8 | Infectious Diseases</h2>
+<p>Failures Caused by Host Factors</p>
+<li>Patients who are immunosuppressed (eg, granulocytopenia from chemotherapy and</li>
+<p>acquired immunodeficiency syndrome) may respond poorly to therapy because their</p>
+<p>own defenses are inadequate to eradicate the infection despite seemingly adequate</p>
+<p>drug regimens.</p>
+<li>Other host factors are related to the necessity for surgical drainage of abscesses or</li>
+<p>removal of foreign bodies and/or necrotic tissue. If these situations are not corrected,</p>
+<p>they result in persistent infection and, occasionally, bacteremia, despite adequate</p>
+<p>antimicrobial therapy.</p>
+<p>Failures Caused by Microorganisms</p>
+<li>Factors related to the pathogen include the development of drug resistance during</li>
+<p>therapy. Primary resistance refers to the intrinsic resistance of the pathogens produc-</p>
+<p>ing the infection. However, acquisition of resistance during treatment has become a</p>
+<p>major problem as well.</p>
+<li>The increase in resistance among pathogenic organisms is believed to be due, in large</li>
+<p>part, to continued overuse of antimicrobials in the community, as well as in hospitals,</p>
+<p>and the increasing prevalence of immunosuppressed patients receiving long-term</p>
+<p>suppressive antimicrobials for the prevention of infections.</p>
+<p>See Chapter 123, Antimicrobial Regimen Selection, authored by Grace C. Lee and David</p>
+<p>S. Burgess, for a more detailed discussion of this topic.</p>
+<p>378</p>
+<p>ch35.indd 378 19-11-2020 14:26:36</p>
+
+        </main>
+        <footer>
+            Converted with High Precision by Manus - &copy; 2026
+        </footer>
+    </div>
+</body>
+</html>
