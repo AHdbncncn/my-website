@@ -1,940 +1,1590 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3. Osteoporosis</title>
+    <title>هشاشة العظام - Osteoporosis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #159895;
-            --accent-color: #eb455f;
-            --bg-color: #f8f9fa;
-            --text-color: #2c3333;
-            --white: #ffffff;
-            --table-header: #2d4263;
-            --table-row-even: #f1f6f9;
-            --code-bg: #1e1e1e;
-            --code-text: #d4d4d4;
-            --p-color-1: #2c3e50;
-            --p-color-2: #34495e;
-            --p-color-3: #2980b9;
+            --primary-color: #4a6572;
+            --secondary-color: #5d9b9b;
+            --accent-color: #c96a2c;
+            --light-color: #f5f5f5;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --danger-color: #f44336;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.8;
-            background-color: var(--bg-color);
+            background-color: #f9f9f9;
             color: var(--text-color);
-            padding: 40px 20px;
-            direction: ltr;
-            text-align: left;
+            line-height: 1.7;
+            padding-bottom: 30px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: var(--white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            padding: 20px;
         }
 
+        /* Header Styles */
         header {
-            border-bottom: 4px solid var(--secondary-color);
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 35px 0;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
-            color: var(--primary-color);
             font-size: 2.8rem;
-            margin-bottom: 10px;
-            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .lang-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 25px;
+            margin: 0 8px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-btn i {
+            margin-left: 8px;
+        }
+
+        .lang-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-btn.active {
+            background-color: white;
+            color: var(--primary-color);
+            border-color: white;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 140px;
+            background-color: #f1f1f1;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tab-btn.active {
+            background-color: white;
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        /* Main Content Box */
+        .main-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
         }
 
         h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-left: 8px solid var(--secondary-color);
-            padding-left: 20px;
-            background: #f0f9f9;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-radius: 10px 0 0 10px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
         }
 
         h3 {
-            color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-decoration: underline;
-            text-decoration-color: var(--accent-color);
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: var(--dark-color);
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-align: justify;
-            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        p:nth-of-type(3n+1) { color: var(--p-color-1); }
-        p:nth-of-type(3n+2) { color: var(--p-color-2); }
-        p:nth-of-type(3n+3) { color: var(--p-color-3); }
+        .english-term {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-style: italic;
+            background-color: #f0f7f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border-right: 3px solid var(--accent-color);
+        }
 
+        /* Lists */
+        ul, ol {
+            margin: 0 25px 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            counter-increment: item;
+        }
+
+        ol li:before {
+            content: counter(item) ".";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Tables */
         .table-container {
-            width: 100%;
             overflow-x: auto;
             margin: 30px 0;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: var(--border-radius);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px;
-        }
-
-        th, td {
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            text-align: left;
+            min-width: 700px;
         }
 
         th {
-            background-color: var(--table-header);
+            background-color: var(--primary-color);
             color: white;
+            padding: 18px 15px;
+            text-align: right;
             font-weight: 600;
-            text-transform: uppercase;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
 
         tr:nth-child(even) {
-            background-color: var(--table-row-even);
+            background-color: #f9f9f9;
         }
 
         tr:hover {
-            background-color: #e9f5f5;
+            background-color: #f0f7f7;
         }
 
-        pre {
-            background-color: var(--code-bg);
-            color: var(--code-text);
-            padding: 25px;
-            border-radius: 12px;
-            overflow-x: auto;
-            margin: 30px 0;
-            border-left: 6px solid var(--accent-color);
-            font-family: 'Consolas', 'Monaco', monospace;
-            direction: ltr;
-            text-align: left;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        code {
-            background-color: #fce4ec;
-            padding: 3px 8px;
-            border-radius: 6px;
-            color: var(--accent-color);
-            font-family: inherit;
-            font-weight: 600;
-        }
-
-        ul, ol {
-            margin-bottom: 25px;
-            padding-left: 40px;
-        }
-
-        li {
-            margin-bottom: 12px;
+        /* Info Boxes */
+        .info-box {
+            background-color: #f0f7f7;
+            border-right: 5px solid var(--secondary-color);
+            padding: 22px;
+            margin: 28px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
             position: relative;
         }
 
-        @media (max-width: 768px) {
-            body { padding: 15px 10px; }
-            .container { padding: 25px; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.6rem; }
-            p { font-size: 1rem; }
+        .info-box:before {
+            content: '\f05a';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
         }
 
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background-color: #fff8e6;
+            border-right: 5px solid #ffc107;
+            padding: 22px;
+            margin: 28px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            position: relative;
+        }
+
+        .warning-box:before {
+            content: '\f071';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: #ff9800;
+            font-size: 1.2rem;
+        }
+
+        /* Algorithm Box */
+        .algorithm-box {
+            background-color: #e8f4fc;
+            border-right: 5px solid var(--secondary-color);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .algorithm-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .algorithm-title i {
+            margin-left: 12px;
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+        }
+
+        /* Risk Factor Tags */
+        .risk-factor {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #bbdefb;
+        }
+
+        .risk-factor.high {
+            background-color: #ffebee;
+            color: #c62828;
+            border-color: #ffcdd2;
+        }
+
+        /* Medication Card */
+        .medication-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .medication-name {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 60px;
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            font-size: 1rem;
-            color: #888;
-            border-top: 2px solid #eee;
-            padding-top: 30px;
+            padding: 25px;
+            margin-top: 50px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .main-content {
+                padding: 25px;
+            }
+            
+            .tab-btn {
+                min-width: 120px;
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            th, td {
+                padding: 12px 10px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .language-toggle, .nav-tabs {
+                display: none;
+            }
+            
+            .content-section {
+                display: block !important;
+                box-shadow: none;
+            }
+            
+            header {
+                background: white !important;
+                color: black !important;
+                box-shadow: none;
+            }
+            
+            .main-content {
+                box-shadow: none;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>3. Osteoporosis</h1>
-        </header>
-        <main>
-            <p>00</p>
-<p>22</p>
-<h2>RETPAHC</h2>
-<p>3</p>
-<p>ChapOtesrt_eToiptloerosis</p>
-<li>Osteoporosis is a bone disorder characterized by low bone density, impaired bone</li>
-<p>architecture, and compromised bone strength predisposing to fracture.</p>
-<h2>PATHOPHYSIOLOGY</h2>
-<li>Bone loss occurs when resorption exceeds formation, usually from high bone turn-</li>
-<p>over when the number or depth of bone resorption sites greatly exceeds the ability of</p>
-<p>osteoblasts to form new bone. Accelerated bone turnover can increase the amount of</p>
-<p>immature bone that is not adequately mineralized.</p>
-<li>Men and women begin to lose bone mass starting in the third or fourth decade</li>
-<p>because of reduced bone formation. Estrogen deficiency during menopause</p>
-<p>increases osteoclast activity, increasing bone resorption more than formation. Men</p>
-<p>are at a lower risk for developing osteoporosis and osteoporotic fractures because</p>
-<p>of larger bone size, greater peak bone mass, increase in bone width with aging,</p>
-<p>fewer falls, and shorter life expectancy. Male osteoporosis results from aging or</p>
-<p>secondary causes.</p>
-<li>Age-related osteoporosis results from hormone, calcium, and vitamin D deficiencies;</li>
-<pre><code>decreased production or function of cytokines; decreased body water; less exercise;</code></pre>
-<p>and other factors that result in accelerated bone turnover and reduced osteoblast</p>
-<p>formation.</p>
-<li>Drug-induced osteoporosis may result from systemic corticosteroids, excessive thy-</li>
-<p>roid hormone replacement, antiepileptic drugs (eg, phenytoin, phenobarbital), depot</p>
-<p>medroxyprogesterone acetate, and other agents.</p>
-<h2>CLINICAL PRESENTATION</h2>
-<li>Many patients are unaware that they have osteoporosis and only present after frac-</li>
-<p>ture. Fractures can occur after bending, lifting, or falling or independent of any</p>
-<p>activity.</p>
-<li>The most common fractures involve vertebrae, proximal femur, and distal radius</li>
-<p>(wrist or Colles fracture). Vertebral fractures may be asymptomatic or present with</p>
-<p>moderate to severe back pain that radiates down a leg. Pain usually subsides after</p>
-<p>2–4 weeks, but residual back pain may persist. Multiple vertebral fractures decrease</p>
-<p>height and sometimes curve the spine (kyphosis or lordosis).</p>
-<li>Patients with a nonvertebral fracture frequently present with severe pain, swelling,</li>
-<pre><code>and reduced function and mobility at the fracture site.</code></pre>
-<h2>DIAGNOSIS</h2>
-<li>The FRAX tool uses the following risk factors to predict the percent probability of</li>
-<p>fracture in the next 10 years: age, race/ethnicity, sex, previous fragility fracture, par-</p>
-<p>ent history of hip fracture, body mass index, glucocorticoid use, current smoking,</p>
-<p>alcohol (≥3 drinks per day), rheumatoid arthritis, and select secondary causes with</p>
-<p>femoral neck or total hip bone mineral density (BMD) data optional.</p>
-<li>The Garvan calculator uses four risk factors (age, sex, low-trauma fracture, and falls)</li>
-<p>with the option to also use BMD. It calculates 5- and 10-year risk estimates of any</p>
-<p>osteoporotic/fragility fracture and hip fracture. This tool corrects some disadvantages</p>
-<p>of FRAX because it includes falls and number of previous fractures, but it does not</p>
-<p>use as many other risk factors.</p>
-<li>Physical examination findings may include bone pain, postural changes (ie, kyphosis),</li>
-<p>and loss of height (&gt;1.5 in [3.8 cm]).</p>
-<p>ch03.indd 22 18-11-2020 15:46:39</p>
-<div class="table-container"><table><tr><th></th><th>ChapOtesrt_eToiptloerosis</th><th>3
-00</th><th>RETPAHC</th></tr><tr><td></td><td></td><td></td><td></td></tr></table></div><h2>Osteoporosis | CHAPTER 3</h2>
-<li>Laboratory testing: complete blood count, serum creatinine, calcium, phosphorus,</li>
-<p>electrolytes, alkaline phosphatase, albumin, thyroid-stimulating hormone, total</p>
-<p>testosterone (for men), 25-hydroxyvitamin D, and 24-hour urine concentrations of</p>
-<p>calcium and phosphorus.</p>
-<li>Measurement of central (hip and spine) BMD with dual-energy x-ray absorptiometry</li>
-<p>(DXA) is the diagnostic standard. Measurement at peripheral sites (forearm, heel,</p>
-<p>and finger) with DXA or quantitative ultrasonography is used only for screening and</p>
-<p>for determining need for further testing.</p>
-<li>A T-score compares the patient’s BMD to the mean BMD of a healthy, young (20- to</li>
-<p>29-year-old), sex-matched, white reference population. The T-score is the number of</p>
-<p>standard deviations from the mean of the reference population.</p>
-<li>Diagnosis of osteoporosis is based on low-trauma fracture or femoral neck, total hip,</li>
-<p>and/or spine DXA using World Health Organization (WHO) T-score thresholds.</p>
-<p>Normal bone mass is T-score above −1, low bone mass (osteopenia) is T-score</p>
-<p>between −1 and −2.4, and osteoporosis is T-score at or below −2.5.</p>
-<h2>TREATMENT</h2>
-<li>Goals of Treatment: The primary goal of osteoporosis care is prevention. Optimiz-</li>
-<p>ing peak bone mass when young reduces the future incidence of osteoporosis. After</p>
-<p>low bone mass or osteoporosis develops, the objective is to stabilize or improve bone</p>
-<p>mass and strength and prevent fractures. Goals in patients with osteoporotic frac-</p>
-<pre><code>tures include reducing pain and deformity, improving function, reducing falls and</code></pre>
-<p>fractures, and improving quality of life.</p>
-<li>Figure 3-1 provides an osteoporosis management algorithm for postmenopausal</li>
-<p>women and men ages 50 and older.</p>
-<h2>NONPHARMACOLOGIC THERAPY</h2>
-<li>All individuals should have a balanced diet with adequate intake of calcium and</li>
-<p>vitamin D (Table 3-1). Achieving daily calcium requirements from calcium-</p>
-<p>containing foods is preferred.</p>
-<p>✓ Consumers can calculate the amount of calcium in a food serving by adding a zero</p>
-<p>to the percentage of the daily value on food labels. One serving of milk (8 oz or</p>
-<p>240 mL) has 30% of the daily value of calcium; this converts to 300 mg of calcium</p>
-<p>per serving.</p>
-<p>✓ To calculate the amount of vitamin D in a food serving, multiply the percent daily</p>
-<p>value of vitamin D listed on the food label by 4. For example, 20% vitamin D = 80</p>
-<p>units.</p>
-<li>Protein is required for bone formation; the recommended dietary allowance (RDA)</li>
-<p>is 0.8 g/kg body weight per day for adults, increasing to 1–1.2 g/kg body weight in</p>
-<p>older adults.</p>
-<li>Alcohol consumption should not exceed 1–2 drinks per day for women and 2–3</li>
-<p>drinks per day for men.</p>
-<li>Ideally, caffeine intake should be limited to 2 or fewer servings per day.</li>
-<li>Smoking cessation helps optimize peak bone mass, minimize bone loss, and ulti-</li>
-<p>mately reduce fracture risk.</p>
-<li>Weight-bearing aerobic and strengthening exercises can decrease risk of falls and</li>
-<p>fractures by improving muscle strength, coordination, balance, and mobility.</p>
-<li>Fall prevention programs that are multifactorial can decrease falls, fractures, other</li>
-<p>injuries, and nursing home and hospital admissions.</p>
-<li>Vertebroplasty and kyphoplasty involve injection of cement into fractured vertebra(e)</li>
-<p>for patients with debilitating pain from compression fractures. Although intended to</p>
-<p>stabilize damaged vertebrae, reduce pain, and decrease opioid intake, recent research</p>
-<p>demonstrated only short-term benefit with no major pain relief and the potential for</p>
-<p>post-procedure complications.</p>
-<p>23</p>
-<p>ch03.indd 23 18-11-2020 15:46:40</p>
-<h2>SECTION 1 | BONE AND JOINT DISORDERS</h2>
-<li>Woman ≥65 years of age</li>
-<li>Man ≥70 years of age</li>
-<li>Postmenopausal woman <65 years of age</li>
-<p>with a FRAX 10-year major osteoporotic</p>
-<p>fracture score &gt;8.4%</p>
-<li>Man 50 to 69 years old with clinical risk</li>
-<p>factors for fracturea</p>
-<li>Abnormal peripheral BMD test</li>
-<p>Presence of a low-trauma • Radiographic evidence of low bone mass</p>
-<p>fracture (vertebrae or hip) No • Medical conditions or medications known</p>
-<p>to increase the risk for bone loss and</p>
-<p>fracture (eg, rheumatoid arthritis,</p>
-<p>Yes glucocorticoids ≥3 months, certain</p>
-<p>chemotherapies)</p>
-<li>• E c B a v o a u n l s e u e a h s t e e a f l o th r y s e lif c e o s n t d yl a e r b y Yes T- O s s c t o e r f o e r p a ≤ o c – t r u o 2 r s .5 e is a r i o t s r f k e h m ig o h ral</li>
-<li>D 1, i 2 e 0 ta 0 r y m c g a l d c a iu il m yc 1,000 to T N -s o c r o m re a l ≥ B – M 1 D .0 Send for central DXA testing T- n s e c c o k re o – r 1 s . p 1 in t e o O –2 R .4</li>
-<li>Vitamin D at least 800 to at femoral neck or</li>
-<li>1 M t • • r , e r z o a 0 e F A i a o r b d s 0 i l r t t l e a i d 0 s e m e c d l t e d r o a u e n r n l r p t o i n n o a i n o a o n i t n t t s e r n e a s i d u a : c t o t t t m d e a h h i a s d a , l e e e a c e i e l r r n b i d y , d a a e d p p r y y o : d n a – te, • • • D 1 V 1 B i , , o i t R 2 0 e a n e 0 0 t m e a - 0 0 r e i h y n m u v e a c n D a g a l i l u t t l s 8 d c h a 0 a i y t d u e i 0 a l m l y i B i f t c l e o y M 1 s , t D 0 y 0 l u e 0 s b i t n o g m f a e o T F m a f - R j h o o s A i r L c r p f X a r o o o a f l r s w r 1 c e n a t 0 t e e c u – b - o c t r y 1 o u p k e e . n r o 1 a e o ≤ e r r r o t 2 ≤ m o s p s 0 3 i p r s – % a % o i - 2 n s b r h . e s e a o 4 l b r A a a i t a N l t e i l t D l d y • s E f p v ra i a n o c lu e s t p u t a f A e r r r t a o o e e N c b p D f ≥ t a o o u 3 b r a r r o % i e s l F s i e t ≥ i R y s o c 2 A - r o o 0 r X n f a e % d l h l 1 l a a i h 0 m p t r e - y a d y j e o a r r</li>
-<p>ibandronate, central DXA in 5 years or as causes</p>
-<p>raloxifene,f appropriate • Bone healthy lifestyleb</p>
-<p>romosozumab,e • Dietary calcium 1,000 to</p>
-<p>or teriparatideg • Bone healthy lifestyleb 1,200 mg dailyc</p>
-<li>Last line: intranasal • Dietary calcium 1,000 to • Vitamin D at least 800 to</li>
-<p>calcitonin 1,200 mg dailyc 1,000 units daily</p>
-<p>O ce b n ta tr i a n l b B a M se D l in te e s ting • V 1 i , t 0 a 0 m 0 i n u n D it s 8 0 d 0 a i t l o y • M tre e a d t i m ca e t n io t n d o th s e e r s a d py –</p>
-<p>for monitoring • Medication therapy – • First line: alendronate,</p>
-<p>response to therapy. prevention doses risedronate,</p>
-<p>Re-evaluate BMD using • C fa o c n to s r id s e e r x e i d s t if risk z o o r l d e e d n ro o n s i u c m a a c b id</p>
-<p>central DXA in 2 to 5 years • G w e o n m e e ra n l l w y h n o o t a f r o e r or are • A ab lt a e l r o n p a a te ra t t h id e e ra ,e py:</p>
-<p>considering pregnancy i r b a a lo n x d if r e o n n e a , t f e,</p>
-<p>Re-evaluate BMD using central romosozumab,e</p>
-<p>DXA in ≥2 years or as or teriparatideg</p>
-<p>appropriate • Last line:</p>
-<p>intranasal calcitonin</p>
-<p>Re-evaluate BMD using</p>
-<p>central DXA in 2 to 5 years</p>
-<p>or as appropriate</p>
-<p>aMajor clinical risk factors for fracture: current smoker, low body weight or body mass index, personal</p>
-<p>history of fracture as an adult (after age 50 years), history of osteoporosis/low trauma fracture in a</p>
-<p>first-degree relative, excessive alcohol intake.</p>
-<p>bBone-healthy lifestyle includes well-balanced diet with adequate calcium, vitamin D, and protein intakes;</p>
-<p>smoking cessation; limited alcohol intake; weight-bearing/resistance exercises; and fall prevention.</p>
-<p>cDietary calcium preferred. If diet is inadequate, supplement as necessary.</p>
-<p>dSometimes men with hypogonadism also receive testosterone replacement; sometimes women with</p>
-<p>menopausal symptoms receive low-dose hormone therapy for a short time.</p>
-<p>eNewer agents marketed after osteoporosis guidelines published; similar uses as teriparatide.</p>
-<p>fRaloxifene can be a good option in women at high risk for breast cancer.</p>
-<p>gTeriparatide can be considered a first-line option in patients with a very high risk of fracture</p>
-<p>(e.g, T-score ≤3.5 or multiple low trauma fractures) or intolerant to other medications.</p>
-<p>hSome providers use age-adjusted FRAX thresholds versus set thresholds for all age groups.</p>
-<p>(BMD, bone mineral density; DXA, dual-energy x-ray absorptiometry; FRAX, World Health Organization</p>
-<p>Fracture Risk Assessment Tool.)</p>
-<p>FIGURE 3-1. Algorithm for the management of osteoporosis in postmeno-</p>
-<p>pausal women and men aged 50 and older.</p>
-<h2>ALGRAWANY</h2>
-<p>24</p>
-<p>https://www.facebook.com/groups/2202763316616203</p>
-<p>ch03.indd 24 18-11-2020 15:46:41</p>
-<h2>Osteoporosis | CHAPTER 3</h2>
-<p>TABLE 3-1 Calcium and Vitamin D Recommended Dietary Allowances (RDAs) and Tolerable</p>
-<p>Upper Intake Levels (ULs)</p>
-<p>Calcium Vitamin D</p>
-<p>Elemental Tolerable Tolerable</p>
-<p>Calcium Upper Intake Vitamin D Upper Intake</p>
-<p>Group and Ages RDA (mg) Level (mg) RDA (Units)a Level (Units)</p>
-<p>Infants</p>
-<p>Birth–6 months 200b 1000 400b 1000</p>
-<p>7–12 months 260b 1500 400b 1500</p>
-<p>Children</p>
-<p>1–3 years 700 2500 600 2500</p>
-<p>4–8 years 1000 2500 600 3000</p>
-<p>9–18 years 1300 3000 600 4000</p>
-<p>Adults</p>
-<p>19–50 years 1000 2500 600b,c 4000</p>
-<p>51–70 1000 2000 600b,c 4000</p>
-<p>years (men)</p>
-<p>51–70 years 1200 2000 600b,c 4000</p>
-<p>(women)</p>
-<p>&gt;70 years 1200 2000 800b,c 4000</p>
-<p>aSome guidelines recommend intake to achieve a 25(OH) vitamin D concentration &gt;30 ng/mL</p>
-<p>(mcg/L; 75 nmol/L), which is higher than the Institute of Medicine goal of &gt;20 ng/mL (mcg/L;</p>
-<p>50 nmol/L).</p>
-<p>bAdequate intake (evidence insufficient to determine an RDA).</p>
-<p>cGuidelines recommend 800–1000 units or 1000–2000 units for adults with osteoporosis.</p>
-<h2>PHARMACOLOGIC THERAPY</h2>
-<h2>GENERAL APPROACH</h2>
-<li>Combined with adequate calcium and vitamin D intakes, alendronate, risedronate,</li>
-<p>zoledronic acid, and denosumab are the prescription medications of choice because</p>
-<p>they reduce both hip and vertebral fracture risks.</p>
-<li>Abaloparatide, bazedoxifene/conjugated equine estrogens, ibandronate, raloxifene,</li>
-<p>romosozumab, and teriparatide are second-line alternatives because they decrease</p>
-<p>vertebral but not hip fracture risks.</p>
-<li>Calcitonin is last-line therapy.</li>
-<li>Estrogen and testosterone are not used for osteoporosis treatment but can have a</li>
-<p>positive bone effect when prescribed for other conditions.</p>
-<h2>ANTIRESORPTIVE THERAPY</h2>
-<p>Calcium Supplementation</p>
-<li>Calcium generally maintains or increases BMD slightly, but its effects are less than</li>
-<p>those of other therapies. There are insufficient data to support using calcium and</p>
-<p>vitamin D supplementation to reduce fracture incidence. Because the fraction of</p>
-<p>calcium absorbed decreases with increasing dose, maximum single doses of 600 mg</p>
-<p>or less of elemental calcium are recommended.</p>
-<li>Calcium carbonate is the salt of choice because it contains the highest concentration</li>
-<p>of elemental calcium (40%) and is typically least expensive. It should be ingested with</p>
-<p>meals to enhance absorption in an acidic environment.</p>
-<p>25</p>
-<p>ch03.indd 25 18-11-2020 15:46:42</p>
-<div class="table-container"><table><tr><th>TABLE 3-1 Calcium and Vitamin D Recommended Dietary Allowances (RDAs) and Tolerable
-Upper Intake Levels (ULs)</th><th></th><th></th><th></th><th></th></tr><tr><td>Group and Ages</td><td>Elemental
-Calcium
-RDA (mg)</td><td>Calcium
-Tolerable
-Upper Intake
-Level (mg)</td><td>Vitamin D
-RDA (Units)a</td><td>Vitamin D
-Tolerable
-Upper Intake
-Level (Units)</td></tr><tr><td>Infants</td><td></td><td></td><td></td><td></td></tr><tr><td>Birth–6 months</td><td>200b</td><td>1000</td><td>400b</td><td>1000</td></tr><tr><td>7–12 months</td><td>260b</td><td>1500</td><td>400b</td><td>1500</td></tr><tr><td>Children</td><td></td><td></td><td></td><td></td></tr><tr><td>1–3 years</td><td>700</td><td>2500</td><td>600</td><td>2500</td></tr><tr><td>4–8 years</td><td>1000</td><td>2500</td><td>600</td><td>3000</td></tr><tr><td>9–18 years</td><td>1300</td><td>3000</td><td>600</td><td>4000</td></tr><tr><td>Adults</td><td></td><td></td><td></td><td></td></tr><tr><td>19–50 years</td><td>1000</td><td>2500</td><td>600b,c</td><td>4000</td></tr><tr><td>51–70
-years (men)</td><td>1000</td><td>2000</td><td>600b,c</td><td>4000</td></tr><tr><td>51–70 years
-(women)</td><td>1200</td><td>2000</td><td>600b,c</td><td>4000</td></tr><tr><td>&gt;70 years</td><td>1200</td><td>2000</td><td>800b,c</td><td>4000</td></tr></table></div><h2>SECTION 1 | BONE AND JOINT DISORDERS</h2>
-<li>Calcium citrate (21% calcium) has acid-independent absorption and need not be</li>
-<p>taken with meals. It may have fewer GI side effects than calcium carbonate.</p>
-<li>Tricalcium phosphate contains 38% calcium, but calcium-phosphate complexes</li>
-<p>could limit overall calcium absorption. It may be useful in patients with hypophos-</p>
-<p>phatemia that cannot be resolved with increased dietary intake.</p>
-<li>Constipation is the most common calcium-related adverse reaction; treat with</li>
-<p>increased water intake, dietary fiber (given separately from calcium), and exercise.</p>
-<p>Calcium carbonate can sometimes cause flatulence or upset stomach. Calcium causes</p>
-<p>kidney stones rarely.</p>
-<li>Calcium can decrease the oral absorption of some drugs including iron, tetracyclines,</li>
-<p>quinolones, bisphosphonates, and thyroid supplements.</p>
-<p>Vitamin D Supplementation</p>
-<li>Vitamin D supplementation using 700–800 units per day has been shown to sig-</li>
-<p>nificantly reduce the incidence of both hip and nonvertebral fractures with small</p>
-<p>increases in BMD.</p>
-<li>Supplementation is usually provided with daily nonprescription cholecalciferol</li>
-<p>(vitamin D) products. Higher-dose prescription ergocalciferol (vitamin D) regi-</p>
-<p>3 2</p>
-<p>mens given weekly, monthly, or quarterly may be used for replacement and main-</p>
-<p>tenance therapy. The RDAs in Table 3-1 should be achieved through food and</p>
-<p>supplementation.</p>
-<li>Current guidelines recommend treating patients with osteoporosis to a</li>
-<p>25-hydroxyvitamin D concentration of at least 30 ng/mL (mcg/L; 75 nmol/L) or</p>
-<p>30–50 ng/mL.</p>
-<li>Because the half-life of vitamin D is about 1 month, recheck the vitamin D concentra-</li>
-<p>tion after about 3 months of therapy.</p>
-<li>Medications that can induce vitamin D metabolism include rifampin, phenytoin, bar-</li>
-<p>biturates, valproic acid, and carbamazepine. Vitamin D absorption can be decreased</p>
-<p>by cholestyramine, colestipol, orlistat, and mineral oil. Vitamin D can enhance</p>
-<p>the absorption of aluminum; therefore, aluminum-containing products should be</p>
-<p>avoided to prevent aluminum toxicity.</p>
-<p>Bisphosphonates</p>
-<li>Bisphosphonates (Table 3-2) mimic pyrophosphate, an endogenous bone resorption</li>
-<p>inhibitor. Therapy leads to decreased osteoclast maturation, number, recruitment,</p>
-<p>bone adhesion, and life span. Incorporation into bone gives bisphosphonates long</p>
-<p>biologic half-lives of up to 10 years.</p>
-<li>Bisphosphonates consistently increase BMD and reduce fracture risk, with differ-</li>
-<p>ences in sites of fracture reduction among agents. Ibandronate is not a first-line</p>
-<p>therapy because of the lack of hip fracture reduction data.</p>
-<li>BMD increases are dose dependent and greatest in the first 12 months of therapy.</li>
-<p>After discontinuation, the increased BMD is sustained for a prolonged period that</p>
-<p>varies per bisphosphonate.</p>
-<li>Alendronate, risedronate, and IV zoledronic acid are Food and Drug Administration</li>
-<p>(FDA) indicated for postmenopausal, male, and glucocorticoid-induced osteoporosis.</p>
-<p>IV and oral ibandronate are indicated only for postmenopausal osteoporosis. Weekly</p>
-<p>alendronate, weekly and monthly risedronate, and monthly oral and quarterly IV iban-</p>
-<p>dronate therapy produce equivalent BMD changes to their respective daily regimens.</p>
-<li>Oral bisphosphonates must be administered correctly to optimize clinical benefit</li>
-<p>and minimize adverse GI effects. Each oral tablet should be taken in the morning</p>
-<p>with at least 6 oz (180 mL) of plain water (not coffee, juice, mineral water, or milk)</p>
-<p>at least 30 minutes (60 minutes for oral ibandronate) before consuming any food,</p>
-<p>supplements, or medications. An exception is delayed-release risedronate, which is</p>
-<p>administered immediately after breakfast with at least 4 oz (120 mL) of plain water.</p>
-<p>The patient should remain upright (sitting or standing) for at least 30 minutes after</p>
-<p>alendronate and risedronate and 1 hour after ibandronate to prevent esophageal</p>
-<p>irritation and ulceration.</p>
-<p>26</p>
-<p>ch03.indd 26 18-11-2020 15:46:42</p>
-<p>27</p>
-<p>Osteoporosis</p>
-<p>|</p>
-<h2>CHAPTER</h2>
-<p>3</p>
-<p>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis</p>
-<p>Drug Brand Name Dose Comments</p>
-<p>Antiresorptive Medications—Nutritional Supplements</p>
-<p>Calcium Various Adequate daily intake: IOM: 200–1200 mg/day, Recommend food first to achieve goal intake. Available</p>
-<p>varies per age); supplement dose is difference in different salts including carbonate and citrate,</p>
-<p>between required adequate intake and dietary absorption of other salts not fully quantified. Different</p>
-<p>intake. formulations including chewable, liquid, gummy,</p>
-<p>Immediate-release doses should be softgel, drink, and wafer; different combination</p>
-<p>&lt;500–600 mg. products. Review package to determine number of</p>
-<p>units to create a serving size and desired amount</p>
-<p>of elemental calcium. Give calcium carbonate with</p>
-<p>meals to improve absorption.</p>
-<p>Vitamin D Over the counter: Adequate daily intake: IOM: 400–800 units/day Vegetarians and vegans need to read label to determine</p>
-<p>D (cholecalciferol) Tablets, 400, 1000, and 2000 units to achieve adequate intake; NOF: 800–1000 if a plant-based product.</p>
-<p>D 3 2 (ergocalciferol) Cap 1 s 0 u ,0 le 0 , 0 4 u 0 n 0, i t 1 s 000, 2000, 5000, and u co n n it c s e o n r t a r l a ly ti o d n ai s l , y m ; if a l l o a w bs o 25 rp (O tio H n ) , v o it r a a m lt i e n r e D d Slig 2 h 5 t ( O ad H v ) a v n it t a a m ge in o D f D c 3 o o n v c e e r n D tr 2 a f t o io r n in s. creasing serum</p>
-<p>Gummies, 300, 500, 1000 units m m e ig t h ab t o b l e is r m eq h u i i g re h d e . r doses (&gt;2000 units daily) For drops, make sure measurement is correct for</p>
-<p>Drops 300, 400, 1000, and 2000 desired dose.</p>
-<p>units/mL or drop Vitamin D deficiency: 50,000 units orally once to</p>
-<p>Solution, 400 and 5000 units/mL twice weekly for 8–12 weeks; repeat as needed Ability of sprays, lotions, and creams to resolve</p>
-<p>Spray 1000 and 5000 units/spray until therapeutic concentrations. d un efi kn ci o e w nc n i . es or maintain adequate intakes is</p>
-<p>Creams and lotions 500 and 1000</p>
-<p>units per ¼ teaspoonful</p>
-<p>Prescription:</p>
-<p>Capsule, 50,000 units</p>
-<p>Solution, 8000 units/mL</p>
-<p>(continued )</p>
-<p>ch03.indd</p>
-<p>27</p>
-<p>18-11-2020</p>
-<p>15:46:43</p>
-<div class="table-container"><table><tr><th>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis</th><th></th><th></th><th></th></tr><tr><td>Drug</td><td>Brand Name</td><td>Dose</td><td>Comments</td></tr><tr><td>Antiresorptive Medications—Nutritional Supplements</td><td></td><td></td><td></td></tr><tr><td>Calcium</td><td>Various</td><td>Adequate daily intake: IOM: 200–1200 mg/day,
-varies per age); supplement dose is difference
-between required adequate intake and dietary
-intake.
-Immediate-release doses should be
-&lt;500–600 mg.</td><td>Recommend food first to achieve goal intake. Available
-in different salts including carbonate and citrate,
-absorption of other salts not fully quantified. Different
-formulations including chewable, liquid, gummy,
-softgel, drink, and wafer; different combination
-products. Review package to determine number of
-units to create a serving size and desired amount
-of elemental calcium. Give calcium carbonate with
-meals to improve absorption.</td></tr><tr><td>Vitamin D
-D (cholecalciferol)
-3
-D (ergocalciferol)
-2</td><td>Over the counter:
-Tablets, 400, 1000, and 2000 units
-Capsule, 400, 1000, 2000, 5000, and
-10,000 units
-Gummies, 300, 500, 1000 units
-Drops 300, 400, 1000, and 2000
-units/mL or drop
-Solution, 400 and 5000 units/mL
-Spray 1000 and 5000 units/spray
-Creams and lotions 500 and 1000
-units per ¼ teaspoonful
-Prescription:
-Capsule, 50,000 units
-Solution, 8000 units/mL</td><td>Adequate daily intake: IOM: 400–800 units/day
-to achieve adequate intake; NOF: 800–1000
-units orally daily; if low 25(OH) vitamin D
-concentrations, malabsorption, or altered
-metabolism higher doses (&gt;2000 units daily)
-might be required.
-Vitamin D deficiency: 50,000 units orally once to
-twice weekly for 8–12 weeks; repeat as needed
-until therapeutic concentrations.</td><td>Vegetarians and vegans need to read label to determine
-if a plant-based product.
-Slight advantage of D over D for increasing serum
-3 2
-25(OH) vitamin D concentrations.
-For drops, make sure measurement is correct for
-desired dose.
-Ability of sprays, lotions, and creams to resolve
-deficiencies or maintain adequate intakes is
-unknown.
-(continued )</td></tr></table></div><h2>28 SECTION</h2>
-<p>1</p>
-<p>|</p>
-<h2>BONE</h2>
-<h2>AND</h2>
-<h2>JOINT</h2>
-<h2>DISORDERS</h2>
-<p>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis (Continued )</p>
-<p>Drug Brand Name Dose Comments</p>
-<p>Antiresorptive Prescription Medications</p>
-<p>Bisphosphonates</p>
-<p>Alendronate Fosamax Treatment: 10 mg orally daily or 70 mg orally Generic available for weekly tablet product.</p>
-<p>Fosamax Plus D weekly 70 mg dose is available as a tablet, effervescent tablet,</p>
-<p>Binosto (effervescent tab) Prevention: 5 mg orally daily or 35 mg orally oral liquid or combination tablet with 2800 or 5600</p>
-<p>weekly units of vitamin D.</p>
-<p>3</p>
-<p>Administered in the morning on an empty stomach</p>
-<p>with 6–8 ounces of plain water. Do not eat and</p>
-<p>remain upright for at least 30 minutes following</p>
-<p>administration.</p>
-<p>Do not coadminister with any other medication or</p>
-<p>supplements, including calcium and vitamin D.</p>
-<p>Ibandronate Boniva Treatment: 150 mg orally monthly, 3 mg Generic available for oral product.</p>
-<p>IV quarterly Administration instructions same as for alendronate,</p>
-<p>Prevention: 150 mg orally monthly except must delay eating and remain upright for at</p>
-<p>least 60 minutes.</p>
-<p>Risedronate Actonel Treatment and prevention: 5 mg orally daily, Generic available for immediate-release product.</p>
-<p>Atelvia (delayed-release) 35 mg orally weekly, 150 mg orally monthly 35 mg dose is also available as a delayed-release</p>
-<p>product.</p>
-<p>Administration instructions same as for alendronate,</p>
-<p>except delayed-release product is taken immediately</p>
-<p>following breakfast.</p>
-<p>ch03.indd</p>
-<p>28</p>
-<p>18-11-2020</p>
-<p>15:46:43</p>
-<div class="table-container"><table><tr><th>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis (Continued )
-Drug Brand Name Dose Comments</th><th></th><th></th><th></th></tr><tr><td>Antiresorptive Prescription Medications</td><td></td><td></td><td></td></tr><tr><td>Bisphosphonates</td><td></td><td></td><td></td></tr><tr><td>Alendronate</td><td>Fosamax
-Fosamax Plus D
-Binosto (effervescent tab)</td><td>Treatment: 10 mg orally daily or 70 mg orally
-weekly
-Prevention: 5 mg orally daily or 35 mg orally
-weekly</td><td>Generic available for weekly tablet product.
-70 mg dose is available as a tablet, effervescent tablet,
-oral liquid or combination tablet with 2800 or 5600
-units of vitamin D.
-3
-Administered in the morning on an empty stomach
-with 6–8 ounces of plain water. Do not eat and
-remain upright for at least 30 minutes following
-administration.
-Do not coadminister with any other medication or
-supplements, including calcium and vitamin D.</td></tr><tr><td>Ibandronate</td><td>Boniva</td><td>Treatment: 150 mg orally monthly, 3 mg
-IV quarterly
-Prevention: 150 mg orally monthly</td><td>Generic available for oral product.
-Administration instructions same as for alendronate,
-except must delay eating and remain upright for at
-least 60 minutes.</td></tr><tr><td>Risedronate</td><td>Actonel
-Atelvia (delayed-release)</td><td>Treatment and prevention: 5 mg orally daily,
-35 mg orally weekly, 150 mg orally monthly</td><td>Generic available for immediate-release product.
-35 mg dose is also available as a delayed-release
-product.
-Administration instructions same as for alendronate,
-except delayed-release product is taken immediately
-following breakfast.</td></tr></table></div><p>29</p>
-<p>Osteoporosis</p>
-<p>|</p>
-<h2>CHAPTER</h2>
-<p>3</p>
-<p>Zoledronic acid Reclast Treatment: 5 mg IV infusion yearly Can premedicate with acetaminophen to decrease</p>
-<p>Prevention: 5 mg IV infusion every 2 years infusion reactions.</p>
-<p>Contraindicated if CrCl &lt;35 mL/min</p>
-<p>Also marketed under the brand name Zometa (4 mg)</p>
-<p>for treatment of hypercalcemia and prevention of</p>
-<p>skeletal-related events from bone metastases from solid</p>
-<p>tumors with different dosing.</p>
-<p>RANK Ligand Inhibitor</p>
-<p>Denosumab Prolia Treatment: 60 mg SC every 6 months Administered by a healthcare practitioner.</p>
-<p>Correct hypocalcemia before administration.</p>
-<p>Also marketed under the brand name Xgeva (70 mg/mL)</p>
-<p>for treatment of hypercalcemia and prevention of</p>
-<p>skeletal-related events from bone metastases from solid</p>
-<p>tumors with different dosing.</p>
-<p>Estrogen Agonist/Antagonist and Tissue Selective Estrogen Complex</p>
-<p>Raloxifene Evista 60 mg orally daily Generic available</p>
-<p>Bazedoxifene with Duavee 20 mg plus 0.45 mg CEE orally daily For postmenopausal women with a uterus; no</p>
-<p>conjugated progestogen needed. Bazedoxifene monotherapy</p>
-<p>equine estrogens available in some countries.</p>
-<h2>(CEE)</h2>
-<p>Calcitonin (salmon) Fortical 200 units (1 spray) intranasally daily, alternating Generic available. Also available as an SC injection.</p>
-<p>nares every other day. Refrigerate nasal spray until opened for daily use, then</p>
-<p>room temperature.</p>
-<p>Prime with first use.</p>
-<p>(continued )</p>
-<p>ch03.indd</p>
-<p>29</p>
-<p>18-11-2020</p>
-<p>15:46:43</p>
-<div class="table-container"><table><tr><th>Zoledronic acid</th><th>Reclast</th><th>Treatment: 5 mg IV infusion yearly
-Prevention: 5 mg IV infusion every 2 years</th><th>Can premedicate with acetaminophen to decrease
-infusion reactions.
-Contraindicated if CrCl &lt;35 mL/min
-Also marketed under the brand name Zometa (4 mg)
-for treatment of hypercalcemia and prevention of
-skeletal-related events from bone metastases from solid
-tumors with different dosing.</th></tr><tr><td>RANK Ligand Inhibitor</td><td></td><td></td><td></td></tr><tr><td>Denosumab</td><td>Prolia</td><td>Treatment: 60 mg SC every 6 months</td><td>Administered by a healthcare practitioner.
-Correct hypocalcemia before administration.
-Also marketed under the brand name Xgeva (70 mg/mL)
-for treatment of hypercalcemia and prevention of
-skeletal-related events from bone metastases from solid
-tumors with different dosing.</td></tr><tr><td>Estrogen Agonist/Antagonist and Tissue Selective Estrogen Complex</td><td></td><td></td><td></td></tr><tr><td>Raloxifene</td><td>Evista</td><td>60 mg orally daily</td><td>Generic available</td></tr><tr><td>Bazedoxifene with
-conjugated
-equine estrogens
-(CEE)</td><td>Duavee</td><td>20 mg plus 0.45 mg CEE orally daily</td><td>For postmenopausal women with a uterus; no
-progestogen needed. Bazedoxifene monotherapy
-available in some countries.</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>Calcitonin (salmon)</td><td>Fortical</td><td>200 units (1 spray) intranasally daily, alternating
-nares every other day.</td><td>Generic available. Also available as an SC injection.
-Refrigerate nasal spray until opened for daily use, then
-room temperature.
-Prime with first use.
-(continued )</td></tr></table></div><h2>30 SECTION</h2>
-<p>1</p>
-<p>|</p>
-<h2>BONE</h2>
-<h2>AND</h2>
-<h2>JOINT</h2>
-<h2>DISORDERS</h2>
-<p>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis (Continued )</p>
-<p>Drug Brand Name Dose Comments</p>
-<p>Formation Medications</p>
-<p>Recombinant human parathyroid hormone (PTH 1–34 units)</p>
-<p>Teriparatide Forteo 20 mcg SC daily for up to 2 years First dose sitting or lying. Refrigerate before and after</p>
-<p>PF708 approved biosimilar; under each use. Use new needle with each dose. Inject</p>
-<p>investigation to determine thigh or stomach. Discard after 28 days or if cloudy.</p>
-<p>therapeutic equivalence</p>
-<p>Human parathyroid hormone–related peptide (PTHrP[1–34]) analog</p>
-<p>Abaloparatide Tymlos 80 mcg SC daily for up to 2 years First dose sitting or lying. Refrigerate before use then keep</p>
-<p>at room temperature. Use new needle with each dose.</p>
-<p>Inject in abdomen. Discard after 30 days.</p>
-<p>Formation and Antiresorptive Medication</p>
-<p>Sclerostin inhibitor</p>
-<p>Romosozumab Evenity 210 mg SC monthly for 1 year; administered as Correct hypocalcemia before administration.</p>
-<p>two single-use 105-mg/1.17-mL prefilled Refrigerate. Leave at room temperature for at least 30</p>
-<p>syringes minutes before use.</p>
-<p>Inject in abdomen, thigh, or upper arm; preferably each</p>
-<p>injection at a different site.</p>
-<p>IOM, Institute of Medicine; IV, intravenously; NOF, National Osteoporosis Foundation; NSAID, nonsteroidal anti-inflammatory drug; SC, subcutaneously.</p>
-<p>Data from product prescribing information.</p>
-<p>ch03.indd</p>
-<p>30</p>
-<p>18-11-2020</p>
-<p>15:46:43</p>
-<div class="table-container"><table><tr><th>TABLE 3-2 Medications Used to Prevent and Treat Osteoporosis (Continued )
-Drug Brand Name Dose Comments</th><th></th><th></th><th></th></tr><tr><td>Formation Medications</td><td></td><td></td><td></td></tr><tr><td>Recombinant human parathyroid hormone (PTH 1–34 units)</td><td></td><td></td><td></td></tr><tr><td>Teriparatide</td><td>Forteo
-PF708 approved biosimilar; under
-investigation to determine
-therapeutic equivalence</td><td>20 mcg SC daily for up to 2 years</td><td>First dose sitting or lying. Refrigerate before and after
-each use. Use new needle with each dose. Inject
-thigh or stomach. Discard after 28 days or if cloudy.</td></tr><tr><td>Human parathyroid hormone–related peptide (PTHrP[1–34]) analog</td><td></td><td></td><td></td></tr><tr><td>Abaloparatide</td><td>Tymlos</td><td>80 mcg SC daily for up to 2 years</td><td>First dose sitting or lying. Refrigerate before use then keep
-at room temperature. Use new needle with each dose.
-Inject in abdomen. Discard after 30 days.</td></tr><tr><td>Formation and Antiresorptive Medication</td><td></td><td></td><td></td></tr><tr><td>Sclerostin inhibitor</td><td></td><td></td><td></td></tr><tr><td>Romosozumab</td><td>Evenity</td><td>210 mg SC monthly for 1 year; administered as
-two single-use 105-mg/1.17-mL prefilled
-syringes</td><td>Correct hypocalcemia before administration.
-Refrigerate. Leave at room temperature for at least 30
-minutes before use.
-Inject in abdomen, thigh, or upper arm; preferably each
-injection at a different site.</td></tr></table></div><h2>Osteoporosis | CHAPTER 3</h2>
-<li>If a patient misses a weekly dose, it can be taken the next day. If more than 1 day has</li>
-<p>elapsed, that dose is skipped. If a patient misses a monthly dose, it can be taken up to</p>
-<p>7 days before the next scheduled dose.</p>
-<li>The most common bisphosphonate adverse effects include nausea, abdominal pain,</li>
-<p>and dyspepsia. Esophageal, gastric, or duodenal irritation, perforation, ulceration,</p>
-<p>or bleeding may occur. The most common adverse effects of IV bisphosphonates</p>
-<p>include fever, flu-like symptoms, and local injection-site reactions.</p>
-<li>Rare adverse effects include osteonecrosis of the jaw (ONJ) and subtrochanteric</li>
-<p>femoral (atypical) fractures. ONJ occurs more commonly in patients with cancer</p>
-<p>receiving higher-dose IV bisphosphonate therapy and other risk factors including</p>
-<p>glucocorticoid therapy and diabetes mellitus.</p>
-<li>The optimal duration of bisphosphonate therapy is unknown. Some experts recom-</li>
-<p>mend considering a bisphosphonate holiday (defined as disruption of therapy during</p>
-<p>which medication effects exist with a plan for medication reinstitution) in postmeno-</p>
-<p>pausal women after 5 years of oral bisphosphonates or 3 years of IV bisphosphonates</p>
-<p>if no significant fracture history, hip BMD T-score is above –2.5, and fracture risk is</p>
-<p>not high. In women with a high fracture risk or lower hip BMD T-scores, continuing</p>
-<p>oral bisphosphonates for 10 years or IV bisphosphonates for 6 years should be con-</p>
-<p>sidered. A bisphosphonate holiday should last for ≤5 years with BMD and patient</p>
-<p>assessment done every 2–4 years.</p>
-<p>Denosumab</p>
-<li>Denosumab (Prolia) is a RANK ligand inhibitor that inhibits osteoclast formation</li>
-<p>and increases osteoclast apoptosis. It is indicated for treatment of osteoporosis in</p>
-<p>women and men at high risk for fracture, for glucocorticoid-induced osteoporosis,</p>
-<p>to increase bone mass in men receiving androgen-deprivation therapy for nonmeta-</p>
-<p>static prostate cancer, and in women receiving adjuvant aromatase inhibitor therapy</p>
-<p>for breast cancer who are at high risk for fracture.</p>
-<li>Over 3 years, denosumab significantly decreased vertebral fractures, nonvertebral</li>
-<p>fractures, and hip fractures in postmenopausal women with low bone density. Con-</p>
-<p>tinued increases in BMD occur with long-term treatment with no plateau in BMD</p>
-<p>effects over 10 years.</p>
-<li>Denosumab is administered as a 60-mg subcutaneous (SC) injection in the upper</li>
-<p>arm, upper thigh, or abdomen once every 6 months.</p>
-<li>Adverse reactions not associated with the injection site include back pain, arthralgia,</li>
-<p>and infection. ONJ and atypical femoral shaft fracture occur rarely. Denosumab is</p>
-<p>contraindicated in patients with hypocalcemia until the condition is corrected.</p>
-<li>After 5–10 years of therapy, patients should be reevaluated for medication continua-</li>
-<p>tion, discontinuation, or switching to a different medication.</p>
-<p>Mixed Estrogen Agonists/Antagonists and Tissue-Selective</p>
-<p>Estrogen Complexes</p>
-<li>Raloxifene (Evista) is an estrogen agonist/antagonist that is an estrogen agonist on</li>
-<p>bone receptors but an antagonist at breast receptors, with minimal effects on the</p>
-<p>uterus. It is approved for prevention and treatment of postmenopausal osteoporosis</p>
-<p>and for reducing the risk of invasive breast cancer in postmenopausal women with</p>
-<p>and without osteoporosis.</p>
-<li>Bazedoxifene is an estrogen agonist/antagonist that is an agonist at bone and antago-</li>
-<p>nist at the uterus and breast; however, it has no breast cancer prevention effects. The</p>
-<p>proprietary product Duavee is combined with conjugated equine estrogens (CEE),</p>
-<p>making it a tissue-selective estrogen complex. It is approved for prevention of post-</p>
-<p>menopausal osteoporosis and vasomotor menstrual symptoms.</p>
-<li>Raloxifene and bazedoxifene decrease vertebral but not hip fractures. The drugs</li>
-<p>increase spine and hip BMD, but to a lesser extent than bisphosphonates. Data for</p>
-<p>both drugs support beneficial effects for up to 7–8 years of use. However, the benefit</p>
-<p>is lost after discontinuation, and bone loss returns to age- or disease-related rates.</p>
-<p>31</p>
-<p>ch03.indd 31 18-11-2020 15:46:44</p>
-<h2>SECTION 1 | BONE AND JOINT DISORDERS</h2>
-<li>Hot flushes are common with raloxifene but decreased with bazedoxifene/CEE. Ral-</li>
-<p>oxifene rarely causes endometrial thickening and bleeding; bazedoxifene decreases</p>
-<p>these events making progestogen therapy unnecessary when combined with CEE.</p>
-<p>Leg cramps and muscle spasms are common with these agents. Thromboembolic</p>
-<p>events are uncommon (&lt;1.5%) but can be fatal. Bazedoxifene/CEE has all of the</p>
-<p>contraindications and precautions for estrogens as a class.</p>
-<p>Calcitonin</p>
-<li>Calcitonin is an endogenous hormone released from the thyroid gland when serum</li>
-<p>calcium is elevated. Salmon calcitonin is used clinically because it is more potent and</p>
-<p>longer lasting than the mammalian form.</p>
-<li>Calcitonin is indicated for osteoporosis treatment for women at least 5 years past</li>
-<p>menopause. An FDA Advisory Committee Panel voted against continued use for post-</p>
-<p>menopausal osteoporosis, but it can be used if alternative therapies are not appropriate.</p>
-<li>Only vertebral fractures have been documented to decrease with intranasal calcitonin</li>
-<p>therapy. Calcitonin does not consistently affect hip BMD. No calcitonin data exist</p>
-<p>for men. Intranasal calcitonin may provide some pain relief in patients with acute</p>
-<p>vertebral fractures, but such use should be short-term (4 weeks) and not in place of</p>
-<p>other more appropriate analgesic or osteoporosis therapy.</p>
-<p>Hormone Therapies</p>
-<li>Hormone therapies (estrogen and testosterone) are not recommended solely for osteo-</li>
-<p>porosis but have positive bone effects when used for other indications. Estrogen therapy</p>
-<p>can be a good choice for women going through early menopause when protection against</p>
-<p>bone loss is needed in addition to reduction of vasomotor symptoms, reserving other</p>
-<p>osteoporosis therapy until treatment is reassessed closer to the average age of menopause.</p>
-<li>Estrogen with or without a progestogen significantly decreases fracture risk and bone</li>
-<p>loss in women. Oral and transdermal estrogens at equivalent doses and continuous</p>
-<p>or cyclic regimens have similar BMD effects. Effect on BMD is dose dependent, with</p>
-<p>some benefit seen with lower estrogen doses. When estrogen therapy is discontinued,</p>
-<p>bone loss accelerates and fracture protection is lost.</p>
-<li>Testosterone is used to treat hypogonadism in men, but an osteoporosis medication</li>
-<p>should be added when risk for osteoporotic fracture is high. No fracture data are</p>
-<p>available, but some data support minor bone loss prevention for testosterone use in</p>
-<p>men and women.</p>
-<h2>FORMATION MEDICATIONS</h2>
-<p>Parathyroid Hormone Analogs</p>
-<li>Abaloparatide (Tymlos) is an analog of parathyroid hormone-related peptide</li>
-<p>(PTHrP), and teriparatide (Forteo) and PF708 (approved with Forteo [teriparatide</p>
-<p>injection] as the reference drug) are analogs of parathyroid hormone (PTH); these</p>
-<p>agents are indicated for the treatment of postmenopausal women with osteoporosis</p>
-<p>at high risk for fracture, defined as multiple risk factors for fracture, history of osteo-</p>
-<p>porotic fracture, or failure or intolerance to other therapies. Teriparatide is also FDA</p>
-<p>approved for men with idiopathic or hypogonadal osteoporosis who are at high risk</p>
-<p>for fracture, men intolerant to other osteoporosis medications, and patients with</p>
-<p>glucocorticoid-induced osteoporosis.</p>
-<li>Teriparatide increases bone formation with a minor increase in bone resorption for a</li>
-<p>net anabolic effect when administered intermittently (ie, subcutaneously once daily).</p>
-<p>Abaloparatide has a greater anabolic effect with less activation of bone resorption and</p>
-<p>remodeling than teriparatide. Both medications improve bone mass.</p>
-<li>Two years of teriparatide or abaloparatide reduces vertebral and nonvertebral frac-</li>
-<p>ture risk in postmenopausal women. Observational teriparatide data suggest a similar</p>
-<p>fracture benefit in men, whereas no data are available regarding abaloparatide use in</p>
-<p>men. Discontinuation of PTH analog therapy results in decreased BMD, which can</p>
-<p>be alleviated with subsequent antiresorptive therapy.</p>
-<p>32</p>
-<p>ch03.indd 32 18-11-2020 15:46:44</p>
-<h2>Osteoporosis | CHAPTER 3</h2>
-<li>Transient hypercalcemia can occur and is less common with abaloparatide than teripa-</li>
-<p>ratide (3.4% vs 6.4%, respectively). Because of an increased incidence of osteosarcoma</p>
-<p>in rats, both medications contain a box warning against use in patients at increased risk</p>
-<p>for osteosarcoma; this adverse effect has not occurred in people. PTH analogs should</p>
-<p>not be used in patients with hypercalcemia, metabolic bone diseases other than osteopo-</p>
-<p>rosis, metastatic or skeletal cancers, or premenopausal women of childbearing potential.</p>
-<h2>FORMATION AND ANTIRESORPTIVE MEDICATION</h2>
-<p>Romosozumab</p>
-<li>Romosozumab (Evenity) is a humanized monoclonal antibody that binds to scleros-</li>
-<p>tin to prevent inhibition of bone formation and decrease bone resorption, an activity</p>
-<p>that differentiates this medication from other anabolic therapies. It indicated for</p>
-<p>postmenopausal women at high risk for fracture defined as multiple risk factors for</p>
-<p>fracture, a history of osteoporotic fracture, or failure or intolerance to other therapies.</p>
-<li>After 1 year of therapy in postmenopausal women, vertebral fractures decreased</li>
-<p>by 73%, with a nonsignificant decrease in nonvertebral fractures of 25%; lumbar</p>
-<p>spine and hip BMD statistically increase after 1 year of treatment. To prevent BMD</p>
-<p>loss after discontinuation, 1 year of denosumab or alendronate after romosozumab</p>
-<p>resulted in BMD continuing to increase at both sites.</p>
-<li>The most common adverse effects are headache and arthralgia; hypercalcemia occurs</li>
-<p>in &lt;1% of patients. Mild injection site irritation occurs in 6%–8% of patients. Romo-</p>
-<p>sozumab antibodies may occur in 10%–20% of patients but are generally not neutral-</p>
-<p>izing and do not reduce efficacy. Serious cardiovascular events have been reported,</p>
-<p>and the labeling contains a boxed warning of an increased risk of myocardial infarc-</p>
-<p>tion (MI), stroke, and cardiovascular death. Romosozumab should not be used</p>
-<p>within 1 year of an MI or stroke, and benefit–risk evaluation should be conducted in</p>
-<p>patients with or at risk for these conditions. Rare cases of ONJ and atypical femoral</p>
-<p>fractures have been reported.</p>
-<li>Therapy should be limited to 12 monthly doses. If osteoporosis therapy remains war-</li>
-<p>ranted, continued therapy with an antiresorptive agent should be considered.</p>
-<h2>SEQUENTIAL AND COMBINATION THERAPY</h2>
-<li>In sequential therapy, an anabolic agent is given first to increase bone remodeling</li>
-<p>units and bone mass, followed by an antiresorptive agent to continue with bone</p>
-<p>formation. This regimen is generally reserved for patients with severe osteoporosis</p>
-<p>because of the cost of anabolic agents.</p>
-<p>✓ Starting with an antiresorptive first and then switching to teriparatide results in</p>
-<p>lower BMD increases but may be especially useful for patients who have fractured</p>
-<p>or continue to lose bone mass while on antiresorptive therapy.</p>
-<p>✓ Small increases in BMD can occur after switching from an oral bisphosphonate</p>
-<p>to denosumab. This sequential therapy can be used during a bisphosphonate drug</p>
-<p>holiday or for bisphosphonate treatment failures (ie, no BMD changes or fracture).</p>
-<li>Combination therapy is rarely used because of no documented fracture benefit,</li>
-<p>increased cost, concern for dual suppression of bone turnover, and potential for</p>
-<p>more adverse effects. When raloxifene is used for breast cancer prevention, another</p>
-<p>antiresorptive agent is sometimes prescribed, especially if hip fracture risk is high.</p>
-<h2>GLUCOCORTICOID-INDUCED OSTEOPOROSIS</h2>
-<li>Glucocorticoids decrease bone formation through decreased proliferation and differ-</li>
-<p>entiation as well as enhanced apoptosis of osteoblasts. They also increase the number</p>
-<p>of osteoclasts, increase bone resorption, decrease calcium absorption, and increase</p>
-<p>renal calcium excretion.</p>
-<li>All glucocorticoid doses and formulations have been associated with increased bone</li>
-<p>loss and fractures; however, risk is much greater with oral prednisone doses ≥5 mg</p>
-<p>daily (or equivalent) and oral therapy vs inhaler or intranasal therapy.</p>
-<p>33</p>
-<p>ch03.indd 33 18-11-2020 15:46:45</p>
-<h2>SECTION 1 | BONE AND JOINT DISORDERS</h2>
-<li>Bone losses are rapid, with up to 12%–15% loss over the first year; the greatest</li>
-<p>decrease occurs in the first 6 months of therapy. Bone loss is about 2%–3% per year</p>
-<p>after the first year.</p>
-<li>Perform an initial BMD assessment prior to or within 6 months of glucocorticoid</li>
-<p>initiation for adults ≥40 years of age and for adults &lt;40 years of age with a history</p>
-<p>of fragility fracture or other risk factors. Repeat BMD testing is recommended every</p>
-<p>2–3 years during osteoporosis therapy for those taking very high glucocorticoid doses</p>
-<p>(≥30 mg prednisone per day or a cumulative dose &gt;5 g in the past year), a fracture</p>
-<p>18 months or more after starting osteoporosis therapy, medication adherence or</p>
-<p>absorption concerns, or other risk factors for osteoporosis.</p>
-<li>All patients starting or receiving systemic glucocorticoid therapy (any dose or dura-</li>
-<p>tion) should practice a bone-healthy lifestyle and ingest 1000–1200 mg elemental cal-</p>
-<p>cium and 600–800 units of vitamin D daily to achieve therapeutic 25-hydroxyvitamin</p>
-<p>D concentrations. Use the lowest possible corticosteroid dose and duration.</p>
-<li>Treatment guidelines divide recommendations for prescription medication use by</li>
-<p>fracture risk and age. Alendronate, risedronate, zoledronic acid, denosumab, and</p>
-<p>teriparatide are FDA approved for glucocorticoid-induced osteoporosis.</p>
-<li>Standard osteoporosis therapy doses are used. Oral bisphosphonates are recom-</li>
-<p>mended first-line, although IV bisphosphonates can be used in nonadherent patients</p>
-<p>or those unable to take the oral preparations. Teriparatide is recommended for</p>
-<p>patients who cannot use a bisphosphonate, and denosumab is recommended if</p>
-<p>neither a bisphosphonate nor teriparatide can be used. Denosumab is not recom-</p>
-<p>mended as first-line therapy due to limited safety data in this population. Raloxifene</p>
-<p>does not have an FDA indication for this use, but there are clinical data documenting</p>
-<p>improved BMD at the lumbar spine in patients taking glucocorticoids.</p>
-<h2>EVALUATION OF THERAPEUTIC OUTCOMES</h2>
-<li>Assess medication adherence and tolerability at each visit.</li>
-<li>Ask patients about possible fracture symptoms (eg, bone pain, disability) at each</li>
-<p>visit. Assessment of fracture, back pain, and height loss can help identify worsening</p>
-<p>osteoporosis.</p>
-<li>Obtain a central DXA BMD measurement after 1–2 years or 3–5 years after initiat-</li>
-<p>ing a medication therapy to monitor response. Repeat a central DXA every 2 years</p>
-<p>until BMD is stable, at which time the reassessment interval can be lengthened. More</p>
-<p>frequent monitoring may be warranted in patients with conditions associated with</p>
-<p>high rates of bone loss (eg, glucocorticoid use).</p>
-<p>See Chapter 108, Osteoporosis, authored by Mary Beth O’Connell, Jill S. Borchert, Erin M.</p>
-<p>Slazak, and Joseph P. Fava for a more detailed discussion of this topic.</p>
-<h2>ALGRAWANY</h2>
-<p>34</p>
-<p>https://www.facebook.com/groups/2202763316616203</p>
-<p>ch03.indd 34 18-11-2020 15:46:45</p>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>هشاشة العظام</h1>
+            <div class="subtitle">Osteoporosis</div>
+            <p>اضطراب عظمي يتميز بانخفاض كثافة العظام وضعف بنيتها، مما يزيد من خطر الكسور</p>
+            
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" id="arabic-btn">
+                    <i class="fas fa-language"></i> العربية
+                </button>
+                <button class="lang-btn" id="english-btn">
+                    <i class="fas fa-language"></i> English
+                </button>
+            </div>
+        </div>
+    </header>
 
-        </main>
-        <footer>
-            Converted with High Precision by Manus - &copy; 2026
-        </footer>
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" id="nav-tabs">
+            <button class="tab-btn active" data-target="section1">الفيزيولوجيا المرضية</button>
+            <button class="tab-btn" data-target="section2">العرض السريري</button>
+            <button class="tab-btn" data-target="section3">التشخيص</button>
+            <button class="tab-btn" data-target="section4">العلاج العام</button>
+            <button class="tab-btn" data-target="section5">العلاج الدوائي</button>
+            <button class="tab-btn" data-target="section6">الجداول والأدوية</button>
+        </div>
+
+        <!-- Arabic Content -->
+        <div class="content-section active" id="arabic-content">
+            <div class="main-content">
+                <!-- Section 1: Pathophysiology -->
+                <section id="section1">
+                    <h2>الفيزيولوجيا المرضية (Pathophysiology)</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> ما هي هشاشة العظام؟</h4>
+                        <p>هشاشة العظام (<span class="english-term">Osteoporosis</span>) هي اضطراب عظمي يتميز بانخفاض كثافة العظام (<span class="english-term">low bone density</span>)، وضعف بنية العظام (<span class="english-term">impaired bone architecture</span>)، وضعف قوة العظام (<span class="english-term">compromised bone strength</span>) مما يزيد من قابلية الإصابة بالكسور.</p>
+                    </div>
+
+                    <h3>آلية فقدان العظام:</h3>
+                    <ol>
+                        <li>يحدث فقدان العظم عندما يتجاوز الامتصاص (<span class="english-term">resorption</span>) التكوين (<span class="english-term">formation</span>)</li>
+                        <li>عادة ما يحدث هذا بسبب ارتفاع معدل دوران العظام (<span class="english-term">high bone turnover</span>) عندما يتجاوز عدد أو عمق مواقع امتصاص العظام قدرة الخلايا البانية للعظام (<span class="english-term">osteoblasts</span>) على تكوين عظم جديد</li>
+                        <li>يمكن أن يزيد التسارع في معدل دوران العظام من كمية العظام غير الناضجة التي لا تتمعدن بشكل كافٍ</li>
+                    </ol>
+
+                    <h3>فقدان الكتلة العظمية:</h3>
+                    <ul>
+                        <li>يبدأ الرجال والنساء في فقدان الكتلة العظمية (<span class="english-term">bone mass</span>) بدءًا من العقد الثالث أو الرابع بسبب انخفاض تكوين العظام</li>
+                        <li>نقص هرمون الإستروجين (<span class="english-term">estrogen deficiency</span>) أثناء انقطاع الطمث يزيد من نشاط الخلايا الآكلة للعظام (<span class="english-term">osteoclast activity</span>)، مما يزيد من امتصاص العظام أكثر من تكوينها</li>
+                        <li>الرجال أقل عرضة للإصابة بهشاشة العظام وكسور هشاشة العظام بسبب:
+                            <ul>
+                                <li>حجم العظام الأكبر</li>
+                                <li>ذروة كتلة العظام الأعلى</li>
+                                <li>زيادة عرض العظام مع التقدم في العمر</li>
+                                <li>عدد أقل من السقوط</li>
+                                <li>مدة حياة أقصر</li>
+                            </ul>
+                        </li>
+                        <li>تحدث هشاشة العظام عند الرجال بسبب الشيخوخة أو أسباب ثانوية</li>
+                    </ul>
+
+                    <h3>أنواع هشاشة العظام:</h3>
+                    <div class="info-box">
+                        <h4>1. هشاشة العظام المرتبطة بالعمر (<span class="english-term">Age-related osteoporosis</span>)</h4>
+                        <p>تنتج عن نقص الهرمونات، الكالسيوم، وفيتامين د؛ انخفاض إنتاج أو وظيفة السيتوكينات؛ انخفاض ماء الجسم؛ قلة التمارين الرياضية؛ وعوامل أخرى تؤدي إلى تسارع دوران العظام وانخفاض تكوين الخلايا البانية للعظام.</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>2. هشاشة العظام الناتجة عن الأدوية (<span class="english-term">Drug-induced osteoporosis</span>)</h4>
+                        <p>قد تنتج عن الكورتيكوستيرويدات الجهازية (<span class="english-term">systemic corticosteroids</span>)، استبدال هرمون الغدة الدرقية الزائد، الأدوية المضادة للصرع (مثل فينيتوين، فينوباربيتال)، ميدروكسي بروجستيرون أسيتات العضلي (<span class="english-term">depot medroxyprogesterone acetate</span>)، وعوامل أخرى.</p>
+                    </div>
+                </section>
+                
+                <!-- Section 2: Clinical Presentation -->
+                <section id="section2">
+                    <h2>العرض السريري (Clinical Presentation)</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-exclamation-circle"></i> ملاحظة هامة:</h4>
+                        <p>العديد من المرضى لا يدركون أنهم مصابون بهشاشة العظام ويظهرون فقط بعد حدوث الكسر. يمكن أن تحدث الكسور بعد الانحناء، الرفع، أو السقوط أو بشكل مستقل عن أي نشاط.</p>
+                    </div>
+
+                    <h3>الكسور الأكثر شيوعًا:</h3>
+                    <div class="medication-card">
+                        <div class="medication-name">1. كسور الفقرات (<span class="english-term">Vertebral fractures</span>)</div>
+                        <ul>
+                            <li>قد تكون بدون أعراض أو تظهر بألم خفيف إلى شديد في الظهر يشع إلى أسفل الساق</li>
+                            <li>عادة ما يخف الألم بعد 2-4 أسابيع، ولكن قد يستمر ألم الظهر المتبقي</li>
+                            <li>تقلل الكسور الفقرية المتعددة من الطول وتقوس أحيانًا العمود الفقري (حداب أو تقعر)</li>
+                        </ul>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">2. كسور عظم الفخذ القريب (<span class="english-term">Proximal femur fractures</span>)</div>
+                        <p>كسور الورك - غالبًا ما تكون نتيجة للسقوط وتتطلب تدخلًا جراحيًا في كثير من الأحيان.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">3. كسور نصف قطر الساعد البعيد (<span class="english-term">Distal radius fractures</span>)</div>
+                        <p>كسور الرسغ أو كسر كوليس - تحدث غالبًا عند السقوط على يد ممدودة.</p>
+                    </div>
+
+                    <h3>عوامل الخطر (<span class="english-term">Risk Factors</span>):</h3>
+                    <div>
+                        <span class="risk-factor">العمر المتقدم</span>
+                        <span class="risk-factor">الجنس (الإناث أكثر عرضة)</span>
+                        <span class="risk-factor">تاريخ عائلي لهشاشة العظام</span>
+                        <span class="risk-factor">انخفاض مؤشر كتلة الجسم</span>
+                        <span class="risk-factor">التدخين</span>
+                        <span class="risk-factor">استهلاك الكحول المفرط</span>
+                        <span class="risk-factor">قلة النشاط البدني</span>
+                        <span class="risk-factor">نقص الكالسيوم وفيتامين د</span>
+                        <span class="risk-factor">استخدام الكورتيكوستيرويدات</span>
+                        <span class="risk-factor">انقطاع الطمث المبكر</span>
+                    </div>
+                </section>
+                
+                <!-- Section 3: Diagnosis -->
+                <section id="section3">
+                    <h2>التشخيص (Diagnosis)</h2>
+                    
+                    <h3>أدوات التنبؤ بالكسور:</h3>
+                    <div class="medication-card">
+                        <div class="medication-name">أداة FRAX (<span class="english-term">Fracture Risk Assessment Tool</span>)</div>
+                        <p>تستخدم عوامل الخطر التالية للتنبؤ بنسبة احتمال الكسر في السنوات العشر القادمة:</p>
+                        <ul>
+                            <li>العمر، العرق/الإثنية، الجنس</li>
+                            <li>كسر هش سابق</li>
+                            <li>تاريخ عائلي لكسر الورك</li>
+                            <li>مؤشر كتلة الجسم</li>
+                            <li>استخدام الجلوكوكورتيكويدات</li>
+                            <li>التدخين الحالي</li>
+                            <li>الكحول (≥3 مشروبات يوميًا)</li>
+                            <li>التهاب المفاصل الروماتويدي</li>
+                            <li>أسباب ثانوية مختارة</li>
+                        </ul>
+                        <p>مع أو بدون بيانات كثافة المعادن العظمية (<span class="english-term">BMD</span>) لعنق الفخذ أو الورك الكلي.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">حاسبة غارفان (<span class="english-term">Garvan calculator</span>)</div>
+                        <p>تستخدم أربعة عوامل خطر (العمر، الجنس، كسر منخفض الصدمة، والسقوط) مع خيار استخدام كثافة المعادن العظمية أيضًا. تحسب تقديرات خطر 5 و10 سنوات لأي كسر هشاشة وكسر الورك.</p>
+                    </div>
+
+                    <h3>قياس كثافة المعادن العظمية (<span class="english-term">Bone Mineral Density - BMD</span>):</h3>
+                    <ul>
+                        <li>قياس كثافة المعادن العظمية المركزية (الورك والعمود الفقري) باستخدام امتصاص الأشعة السينية ثنائي البواعث (<span class="english-term">Dual-energy X-ray Absorptiometry - DXA</span>) هو المعيار التشخيصي</li>
+                        <li>القياس في المواقع الطرفية (الساعد، الكعب، والإصبع) باستخدام DXA أو التصوير بالموجات فوق الصوتية الكمي يستخدم فقط للفحص ولتحديد الحاجة لمزيد من الاختبارات</li>
+                    </ul>
+
+                    <h3>تفسير نتيجة T-score:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>التصنيف</th>
+                                    <th>نطاق T-score</th>
+                                    <th>التفسير</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>كتلة عظمية طبيعية</td>
+                                    <td>أعلى من -1</td>
+                                    <td>كثافة عظام طبيعية</td>
+                                </tr>
+                                <tr>
+                                    <td>انخفاض الكتلة العظمية (تخلخل العظام)</td>
+                                    <td>بين -1 و -2.4</td>
+                                    <td>انخفاض في كثافة العظام</td>
+                                </tr>
+                                <tr>
+                                    <td>هشاشة العظام</td>
+                                    <td>عند أو أقل من -2.5</td>
+                                    <td>هشاشة عظام مؤكدة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>الفحوصات المخبرية:</h3>
+                    <ul>
+                        <li>صورة دم كاملة، كرياتينين المصل، الكالسيوم، الفوسفور، الشوارد الكهربية</li>
+                        <li>الفوسفاتاز القلوي، الألبومين، هرمون تحفيز الغدة الدرقية</li>
+                        <li>التستوستيرون الكلي (للرجال)، 25-هيدروكسي فيتامين د</li>
+                        <li>تركيزات البول لمدة 24 ساعة من الكالسيوم والفوسفور</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 4: General Treatment -->
+                <section id="section4">
+                    <h2>العلاج العام (Treatment)</h2>
+                    
+                    <h3>أهداف العلاج:</h3>
+                    <ol>
+                        <li><strong>الوقاية الأولية:</strong> تحسين ذروة الكتلة العظمية (<span class="english-term">peak bone mass</span>) عندما يكون الشخص شابًا لتقليل حدوث هشاشة العظام في المستقبل</li>
+                        <li><strong>الوقاية الثانوية:</strong> بعد تطور انخفاض الكتلة العظمية أو هشاشة العظام، الهدف هو تثبيت أو تحسين الكتلة العظمية والقوة ومنع الكسور</li>
+                        <li><strong>في المرضى الذين يعانون من كسور هشاشة العظام:</strong> تقليل الألم والتشوه، تحسين الوظيفة، تقليل السقوط والكسور، وتحسين نوعية الحياة</li>
+                    </ol>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-project-diagram"></i> خوارزمية إدارة هشاشة العظام
+                        </div>
+                        <ol>
+                            <li><strong>وجود كسر منخفض الصدمة:</strong>
+                                <ul>
+                                    <li>تقييم الأسباب الثانوية</li>
+                                    <li>نمط حياة صحي للعظام</li>
+                                    <li>كالسيوم غذائي 1000-1200 مجم يوميًا</li>
+                                    <li>فيتامين د 800-1000 وحدة دولية على الأقل يوميًا</li>
+                                    <li>علاج دوائي بجرعات علاجية</li>
+                                </ul>
+                            </li>
+                            <li><strong>انخفاض الكتلة العظمية:</strong>
+                                <ul>
+                                    <li>نمط حياة صحي للعظام</li>
+                                    <li>كالسيوم غذائي 1000-1200 مجم يوميًا</li>
+                                    <li>فيتامين د 800-1000 وحدة دولية يوميًا</li>
+                                    <li>علاج دوائي بجرعات وقائية إذا كانت عوامل خطر موجودة</li>
+                                </ul>
+                            </li>
+                            <li><strong>هشاشة العظام أو خطر كسر مرتفع:</strong>
+                                <ul>
+                                    <li>تقييم الأسباب الثانوية</li>
+                                    <li>نمط حياة صحي للعظام</li>
+                                    <li>كالسيوم غذائي 1000-1200 مجم يوميًا</li>
+                                    <li>فيتامين د 800-1000 وحدة دولية على الأقل يوميًا</li>
+                                    <li>علاج دوائي بجرعات علاجية</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h3>العلاج غير الدوائي (<span class="english-term">Nonpharmacologic Therapy</span>):</h3>
+                    <ul>
+                        <li><strong>التغذية المتوازنة:</strong> تناول كافٍ من الكالسيوم وفيتامين د</li>
+                        <li><strong>البروتين:</strong> ضروري لتكوين العظام. الحصة الغذائية الموصى بها (<span class="english-term">RDA</span>) هي 0.8 غ/كغ وزن الجسم يوميًا للبالغين، تزداد إلى 1-1.2 غ/كغ وزن الجسم لدى كبار السن</li>
+                        <li><strong>الكحول:</strong> لا يجب أن يتجاوز 1-2 مشروب يوميًا للنساء و2-3 مشروبات يوميًا للرجال</li>
+                        <li><strong>الكافيين:</strong> يفضل الحد من تناوله إلى حصتين أو أقل يوميًا</li>
+                        <li><strong>الإقلاع عن التدخين:</strong> يساعد في تحسين ذروة الكتلة العظمية، وتقليل فقدان العظام، وتقليل خطر الكسور</li>
+                        <li><strong>التمارين الرياضية:</strong> التمارين الهوائية الحاملة للوزن وتمارين التقوية يمكن أن تقلل من خطر السقوط والكسور عن طريق تحسين قوة العضلات، التنسيق، التوازن، والحركة</li>
+                        <li><strong>برامج منع السقوط:</strong> متعددة العوامل يمكن أن تقلل من السقوط، الكسور، إصابات أخرى، ودخول دار رعاية المسنين والمستشفى</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-calculator"></i> كيفية حساب الكالسيوم وفيتامين د من الملصقات الغذائية:</h4>
+                        <ul>
+                            <li><strong>الكالسيوم:</strong> أضف صفرًا إلى النسبة المئوية للقيمة اليومية على ملصقات الطعام. على سبيل المثال: يحتوي حصة واحدة من الحليب (240 مل) على 30٪ من القيمة اليومية للكالسيوم؛ وهذا يحول إلى 300 مجم من الكالسيوم لكل حصة.</li>
+                            <li><strong>فيتامين د:</strong> اضرب النسبة المئوية للقيمة اليومية لفيتامين د المدرجة على ملصق الطعام في 4. على سبيل المثال: 20٪ فيتامين د = 80 وحدة دولية.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Pharmacologic Therapy -->
+                <section id="section5">
+                    <h2>العلاج الدوائي (Pharmacologic Therapy)</h2>
+                    
+                    <h3>النهج العام:</h3>
+                    <ul>
+                        <li>مقترنة بتناول كافٍ من الكالسيوم وفيتامين د، تعتبر أليندرونات، ريسيدرونات، حمض زوليدرونيك، ودينوسوماب الأدوية الموصوفة المفضلة لأنها تقلل من مخاطر كسور الورك والفقرات</li>
+                        <li>أبالوباراتيد، بازيدوكسيفين/الإستروجينات الخيلية المترافقة، إيباندرونات، رالوكسيفين، روموسوزوماب، وتيريباراتيد هي بدائل من الخط الثاني لأنها تقلل من مخاطر الفقرات ولكن ليس كسور الورك</li>
+                        <li>الكالسيتونين هو علاج الخط الأخير</li>
+                        <li>لا تستخدم الإستروجين والتستوستيرون لعلاج هشاشة العظام ولكن يمكن أن يكون لها تأثير إيجابي على العظام عند وصفها لحالات أخرى</li>
+                    </ul>
+
+                    <h3>العلاجات المضادة لامتصاص العظام (<span class="english-term">Antiresorptive Therapy</span>):</h3>
+                    
+                    <div class="medication-card">
+                        <div class="medication-name">البايفوسفونات (<span class="english-term">Bisphosphonates</span>)</div>
+                        <p><strong>الآلية:</strong> تحاكي البيروفوسفات، وهو مثبط داخلي لامتصاص العظام. يؤدي العلاج إلى انخفاض نضج الخلايا الآكلة للعظام، عددها، تجنيدها، التصاقها بالعظام، وعمرها الافتراضي.</p>
+                        <p><strong>الأدوية:</strong> أليندرونات، ريسيدرونات، إيباندرونات، حمض زوليدرونيك (وريدي)</p>
+                        <p><strong>طريقة تناول الفموية:</strong> تؤخذ في الصباح مع 180 مل على الأقل من الماء العادي، قبل 30-60 دقيقة من تناول أي طعام، مكملات، أو أدوية، والبقاء في وضعية الجلوس أو الوقوف لمدة 30-60 دقيقة بعد التناول.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">دينوسوماب (<span class="english-term">Denosumab - Prolia</span>)</div>
+                        <p><strong>الآلية:</strong> مثبط ليجاند RANK الذي يمنع تكوين الخلايا الآكلة للعظام ويزيد من موت الخلايا المبرمج لها.</p>
+                        <p><strong>الجرعة:</strong> 60 مجم حقن تحت الجلد مرة كل 6 أشهر</p>
+                        <p><strong>المؤشرات:</strong> علاج هشاشة العظام في النساء والرجال المعرضين لخطر كبير للكسر، لهشاشة العظام الناجمة عن الجلوكوكورتيكويدات</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">رالوكسيفين (<span class="english-term">Raloxifene - Evista</span>)</div>
+                        <p><strong>الآلية:</strong> ناهض/مضاد للإستروجين وهو ناهض لمستقبلات العظام لكنه مضاد لمستقبلات الثدي، مع تأثيرات طفيفة على الرحم.</p>
+                        <p><strong>المؤشرات:</strong> الوقاية والعلاج من هشاشة العظام بعد انقطاع الطمث وتقليل خطر سرطان الثدي الغازي لدى النساء بعد انقطاع الطمث مع أو بدون هشاشة العظام</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">كالسيتونين (<span class="english-term">Calcitonin</span>)</div>
+                        <p><strong>الآلية:</strong> هرمون داخلي يطلقه الغدة الدرقية عندما يرتفع الكالسيوم في المصل.</p>
+                        <p><strong>الشكل:</strong> رذاذ أنفي (200 وحدة يوميًا) أو حقن تحت الجلد</p>
+                        <p><strong>المؤشرات:</strong> علاج هشاشة العظام للنساء بعد 5 سنوات على الأقل من انقطاع الطمث. يمكن استخدامه إذا لم تكن العلاجات البديلة مناسبة.</p>
+                    </div>
+
+                    <h3>أدوية تكوين العظام (<span class="english-term">Formation Medications</span>):</h3>
+                    
+                    <div class="medication-card">
+                        <div class="medication-name">تيريباراتيد (<span class="english-term">Teriparatide - Forteo</span>)</div>
+                        <p><strong>الآلية:</strong> نظير لهرمون الغدة الجار درقية (PTH) يزيد من تكوين العظام مع زيادة طفيفة في امتصاص العظام لتأثير بناء صافٍ عند إعطائه بشكل متقطع.</p>
+                        <p><strong>الجرعة:</strong> 20 ميكروغرام حقن تحت الجلد يوميًا لمدة تصل إلى سنتين</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">أبالوباراتيد (<span class="english-term">Abaloparatide - Tymlos</span>)</div>
+                        <p><strong>الآلية:</strong> نظير للببتيد المرتبط بهرمون الغدة الجار درقية (PTHrP) له تأثير بناء أكبر مع تنشيط أقل لامتصاص العظام وإعادة تشكيلها مقارنة بتيريباراتيد.</p>
+                        <p><strong>الجرعة:</strong> 80 ميكروغرام حقن تحت الجلد يوميًا لمدة تصل إلى سنتين</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">روموسوزوماب (<span class="english-term">Romosozumab - Evenity</span>)</div>
+                        <p><strong>الآلية:</strong> جسم مضاد وحيد النسيلة يربط سكليروستين لمنع تثبيط تكوين العظام وتقليل امتصاص العظام.</p>
+                        <p><strong>الجرعة:</strong> 210 مجم حقن تحت الجلد شهريًا لمدة سنة واحدة</p>
+                        <p><strong>التحذير:</strong> يحتوي على تحذير في الصندوق بشأن زيادة خطر احتشاء عضلة القلب، السكتة الدماغية، والوفاة القلبية الوعائية</p>
+                    </div>
+                </section>
+                
+                <!-- Section 6: Tables and Medications -->
+                <section id="section6">
+                    <h2>الجداول والأدوية (Tables and Medications)</h2>
+                    
+                    <h3>الكالسيوم وفيتامين د - الحصص الغذائية الموصى بها (RDAs):</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>المجموعة والعمر</th>
+                                    <th>الكالسيوم العنصري RDA (مجم)</th>
+                                    <th>فيتامين د RDA (وحدة دولية)</th>
+                                    <th>الحد الأعلى المسموح به للكالسيوم (مجم)</th>
+                                    <th>الحد الأعلى المسموح به لفيتامين د (وحدة دولية)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الأطفال 1-3 سنوات</td>
+                                    <td>700</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>2500</td>
+                                </tr>
+                                <tr>
+                                    <td>الأطفال 4-8 سنوات</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>3000</td>
+                                </tr>
+                                <tr>
+                                    <td>المراهقون 9-18 سنة</td>
+                                    <td>1300</td>
+                                    <td>600</td>
+                                    <td>3000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>البالغون 19-50 سنة</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>النساء 51-70 سنة</td>
+                                    <td>1200</td>
+                                    <td>600</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>الرجال 51-70 سنة</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>أكبر من 70 سنة</td>
+                                    <td>1200</td>
+                                    <td>800</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>أدوية هشاشة العظام:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الدواء</th>
+                                    <th>الاسم التجاري</th>
+                                    <th>الجرعة</th>
+                                    <th>ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>أليندرونات (<span class="english-term">Alendronate</span>)</td>
+                                    <td>فوساماكس (<span class="english-term">Fosamax</span>)</td>
+                                    <td>علاج: 10 مجم يوميًا أو 70 مجم أسبوعيًا<br>وقاية: 5 مجم يوميًا أو 35 مجم أسبوعيًا</td>
+                                    <td>يؤخذ على معدة فارغة مع الماء، الانتظار 30 دقيقة قبل الأكل</td>
+                                </tr>
+                                <tr>
+                                    <td>ريسيدرونات (<span class="english-term">Risedronate</span>)</td>
+                                    <td>أكتونيل (<span class="english-term">Actonel</span>)</td>
+                                    <td>5 مجم يوميًا، 35 مجم أسبوعيًا، 150 مجم شهريًا</td>
+                                    <td>يؤخذ على معدة فارغة مع الماء</td>
+                                </tr>
+                                <tr>
+                                    <td>إيباندرونات (<span class="english-term">Ibandronate</span>)</td>
+                                    <td>بونيفا (<span class="english-term">Boniva</span>)</td>
+                                    <td>150 مجم شهريًا فمويًا، 3 مجم وريديًا ربع سنويًا</td>
+                                    <td>الانتظار 60 دقيقة قبل الأكل</td>
+                                </tr>
+                                <tr>
+                                    <td>حمض زوليدرونيك (<span class="english-term">Zoledronic acid</span>)</td>
+                                    <td>ريكلاست (<span class="english-term">Reclast</span>)</td>
+                                    <td>5 مجم تسريب وريدي سنويًا</td>
+                                    <td>موانع إذا كان معدل الترشيح الكبيبي &lt;35 مل/دقيقة</td>
+                                </tr>
+                                <tr>
+                                    <td>دينوسوماب (<span class="english-term">Denosumab</span>)</td>
+                                    <td>بروليا (<span class="english-term">Prolia</span>)</td>
+                                    <td>60 مجم تحت الجلد كل 6 أشهر</td>
+                                    <td>يجب تصحيح نقص الكالسيوم قبل الإعطاء</td>
+                                </tr>
+                                <tr>
+                                    <td>تيريباراتيد (<span class="english-term">Teriparatide</span>)</td>
+                                    <td>فورتيو (<span class="english-term">Forteo</span>)</td>
+                                    <td>20 ميكروغرام تحت الجلد يوميًا لمدة تصل إلى سنتين</td>
+                                    <td>يحفظ في الثلاجة، يرمى بعد 28 يومًا</td>
+                                </tr>
+                                <tr>
+                                    <td>روموسوزوماب (<span class="english-term">Romosozumab</span>)</td>
+                                    <td>إيفينيتي (<span class="english-term">Evenity</span>)</td>
+                                    <td>210 مجم تحت الجلد شهريًا لمدة سنة</td>
+                                    <td>تحذير من خطر القلب والأوعية الدموية</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>هشاشة العظام الناتجة عن الجلوكوكورتيكويدات:</h3>
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> معلومات هامة:</h4>
+                        <ul>
+                            <li>جميع جرعات وأشكال الجلوكوكورتيكويدات ارتبطت بزيادة فقدان العظام والكسور</li>
+                            <li>يكون الخطر أكبر بكثير مع جرعات البريدنيزون الفموية ≥5 مجم يوميًا (أو ما يعادلها) والعلاج الفموي مقابل العلاج بالاستنشاق أو الأنف</li>
+                            <li>تكون خسائر العظام سريعة، مع فقدان يصل إلى 12-15٪ خلال السنة الأولى</li>
+                            <li>يوصى بإجراء تقييم أولي لكثافة المعادن العظمية قبل أو خلال 6 أشهر من بدء الجلوكوكورتيكويدات</li>
+                        </ul>
+                    </div>
+
+                    <h3>تقييم النتائج العلاجية:</h3>
+                    <ul>
+                        <li>تقييم الالتزام بالدواء وتحملها في كل زيارة</li>
+                        <li>السؤال عن أعراض الكسر المحتملة (مثل ألم العظام، الإعاقة) في كل زيارة</li>
+                        <li>الحصول على قياس كثافة المعادن العظمية المركزية بعد 1-2 سنة أو 3-5 سنوات بعد بدء العلاج الدوائي لمراقبة الاستجابة</li>
+                        <li>تكرار كثافة المعادن العظمية المركزية كل سنتين حتى تصبح كثافة المعادن العظمية مستقرة</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="content-section" id="english-content">
+            <div class="main-content">
+                <!-- Section 1: Pathophysiology -->
+                <section id="section1-en">
+                    <h2>Pathophysiology</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-info-circle"></i> What is Osteoporosis?</h4>
+                        <p>Osteoporosis is a bone disorder characterized by low bone density, impaired bone architecture, and compromised bone strength predisposing to fracture.</p>
+                    </div>
+
+                    <h3>Bone Loss Mechanism:</h3>
+                    <ol>
+                        <li>Bone loss occurs when resorption exceeds formation</li>
+                        <li>Usually from high bone turnover when the number or depth of bone resorption sites greatly exceeds the ability of osteoblasts to form new bone</li>
+                        <li>Accelerated bone turnover can increase the amount of immature bone that is not adequately mineralized</li>
+                    </ol>
+
+                    <h3>Bone Mass Loss:</h3>
+                    <ul>
+                        <li>Men and women begin to lose bone mass starting in the third or fourth decade because of reduced bone formation</li>
+                        <li>Estrogen deficiency during menopause increases osteoclast activity, increasing bone resorption more than formation</li>
+                        <li>Men are at a lower risk for developing osteoporosis and osteoporotic fractures because of:
+                            <ul>
+                                <li>Larger bone size</li>
+                                <li>Greater peak bone mass</li>
+                                <li>Increase in bone width with aging</li>
+                                <li>Fewer falls</li>
+                                <li>Shorter life expectancy</li>
+                            </ul>
+                        </li>
+                        <li>Male osteoporosis results from aging or secondary causes</li>
+                    </ul>
+
+                    <h3>Types of Osteoporosis:</h3>
+                    <div class="info-box">
+                        <h4>1. Age-related osteoporosis</h4>
+                        <p>Results from hormone, calcium, and vitamin D deficiencies; decreased production or function of cytokines; decreased body water; less exercise; and other factors that result in accelerated bone turnover and reduced osteoblast formation.</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>2. Drug-induced osteoporosis</h4>
+                        <p>May result from systemic corticosteroids, excessive thyroid hormone replacement, antiepileptic drugs (eg, phenytoin, phenobarbital), depot medroxyprogesterone acetate, and other agents.</p>
+                    </div>
+                </section>
+                
+                <!-- Section 2: Clinical Presentation -->
+                <section id="section2-en">
+                    <h2>Clinical Presentation</h2>
+                    
+                    <div class="info-box">
+                        <h4><i class="fas fa-exclamation-circle"></i> Important Note:</h4>
+                        <p>Many patients are unaware that they have osteoporosis and only present after fracture. Fractures can occur after bending, lifting, or falling or independent of any activity.</p>
+                    </div>
+
+                    <h3>Most Common Fractures:</h3>
+                    <div class="medication-card">
+                        <div class="medication-name">1. Vertebral fractures</div>
+                        <ul>
+                            <li>May be asymptomatic or present with moderate to severe back pain that radiates down a leg</li>
+                            <li>Pain usually subsides after 2–4 weeks, but residual back pain may persist</li>
+                            <li>Multiple vertebral fractures decrease height and sometimes curve the spine (kyphosis or lordosis)</li>
+                        </ul>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">2. Proximal femur fractures</div>
+                        <p>Hip fractures - often result from falls and frequently require surgical intervention.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">3. Distal radius fractures</div>
+                        <p>Wrist or Colles fractures - often occur when falling on an outstretched hand.</p>
+                    </div>
+
+                    <h3>Risk Factors:</h3>
+                    <div>
+                        <span class="risk-factor">Advanced age</span>
+                        <span class="risk-factor">Female sex</span>
+                        <span class="risk-factor">Family history of osteoporosis</span>
+                        <span class="risk-factor">Low body mass index</span>
+                        <span class="risk-factor">Smoking</span>
+                        <span class="risk-factor">Excessive alcohol consumption</span>
+                        <span class="risk-factor">Physical inactivity</span>
+                        <span class="risk-factor">Calcium and vitamin D deficiency</span>
+                        <span class="risk-factor">Glucocorticoid use</span>
+                        <span class="risk-factor">Early menopause</span>
+                    </div>
+                </section>
+                
+                <!-- Section 3: Diagnosis -->
+                <section id="section3-en">
+                    <h2>Diagnosis</h2>
+                    
+                    <h3>Fracture Prediction Tools:</h3>
+                    <div class="medication-card">
+                        <div class="medication-name">FRAX Tool (Fracture Risk Assessment Tool)</div>
+                        <p>Uses the following risk factors to predict the percent probability of fracture in the next 10 years:</p>
+                        <ul>
+                            <li>Age, race/ethnicity, sex</li>
+                            <li>Previous fragility fracture</li>
+                            <li>Parent history of hip fracture</li>
+                            <li>Body mass index</li>
+                            <li>Glucocorticoid use</li>
+                            <li>Current smoking</li>
+                            <li>Alcohol (≥3 drinks per day)</li>
+                            <li>Rheumatoid arthritis</li>
+                            <li>Select secondary causes</li>
+                        </ul>
+                        <p>With or without femoral neck or total hip bone mineral density (BMD) data.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Garvan Calculator</div>
+                        <p>Uses four risk factors (age, sex, low-trauma fracture, and falls) with the option to also use BMD. It calculates 5- and 10-year risk estimates of any osteoporotic/fragility fracture and hip fracture.</p>
+                    </div>
+
+                    <h3>Bone Mineral Density (BMD) Measurement:</h3>
+                    <ul>
+                        <li>Measurement of central (hip and spine) BMD with dual-energy x-ray absorptiometry (DXA) is the diagnostic standard</li>
+                        <li>Measurement at peripheral sites (forearm, heel, and finger) with DXA or quantitative ultrasonography is used only for screening and for determining need for further testing</li>
+                    </ul>
+
+                    <h3>T-score Interpretation:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Classification</th>
+                                    <th>T-score Range</th>
+                                    <th>Interpretation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Normal bone mass</td>
+                                    <td>Above -1</td>
+                                    <td>Normal bone density</td>
+                                </tr>
+                                <tr>
+                                    <td>Low bone mass (osteopenia)</td>
+                                    <td>Between -1 and -2.4</td>
+                                    <td>Low bone density</td>
+                                </tr>
+                                <tr>
+                                    <td>Osteoporosis</td>
+                                    <td>At or below -2.5</td>
+                                    <td>Confirmed osteoporosis</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Laboratory Testing:</h3>
+                    <ul>
+                        <li>Complete blood count, serum creatinine, calcium, phosphorus, electrolytes</li>
+                        <li>Alkaline phosphatase, albumin, thyroid-stimulating hormone</li>
+                        <li>Total testosterone (for men), 25-hydroxyvitamin D</li>
+                        <li>24-hour urine concentrations of calcium and phosphorus</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 4: General Treatment -->
+                <section id="section4-en">
+                    <h2>General Treatment</h2>
+                    
+                    <h3>Goals of Treatment:</h3>
+                    <ol>
+                        <li><strong>Primary Prevention:</strong> Optimizing peak bone mass when young reduces the future incidence of osteoporosis</li>
+                        <li><strong>Secondary Prevention:</strong> After low bone mass or osteoporosis develops, the objective is to stabilize or improve bone mass and strength and prevent fractures</li>
+                        <li><strong>In patients with osteoporotic fractures:</strong> Reducing pain and deformity, improving function, reducing falls and fractures, and improving quality of life</li>
+                    </ol>
+
+                    <div class="algorithm-box">
+                        <div class="algorithm-title">
+                            <i class="fas fa-project-diagram"></i> Osteoporosis Management Algorithm
+                        </div>
+                        <ol>
+                            <li><strong>Presence of a low-trauma fracture:</strong>
+                                <ul>
+                                    <li>Evaluate for secondary causes</li>
+                                    <li>Bone healthy lifestyle</li>
+                                    <li>Dietary calcium 1,000 to 1,200 mg daily</li>
+                                    <li>Vitamin D at least 800 to 1,000 units daily</li>
+                                    <li>Medication therapy - treatment doses</li>
+                                </ul>
+                            </li>
+                            <li><strong>Low bone mass:</strong>
+                                <ul>
+                                    <li>Bone healthy lifestyle</li>
+                                    <li>Dietary calcium 1,000 to 1,200 mg daily</li>
+                                    <li>Vitamin D 800 to 1,000 units daily</li>
+                                    <li>Medication therapy - prevention doses if risk factors exist</li>
+                                </ul>
+                            </li>
+                            <li><strong>Osteoporosis or high fracture risk:</strong>
+                                <ul>
+                                    <li>Evaluate for secondary causes</li>
+                                    <li>Bone healthy lifestyle</li>
+                                    <li>Dietary calcium 1,000 to 1,200 mg daily</li>
+                                    <li>Vitamin D at least 800 to 1,000 units daily</li>
+                                    <li>Medication therapy - treatment doses</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h3>Nonpharmacologic Therapy:</h3>
+                    <ul>
+                        <li><strong>Balanced diet:</strong> Adequate intake of calcium and vitamin D</li>
+                        <li><strong>Protein:</strong> Required for bone formation. The recommended dietary allowance (RDA) is 0.8 g/kg body weight per day for adults, increasing to 1–1.2 g/kg body weight in older adults</li>
+                        <li><strong>Alcohol:</strong> Should not exceed 1–2 drinks per day for women and 2–3 drinks per day for men</li>
+                        <li><strong>Caffeine:</strong> Ideally limited to 2 or fewer servings per day</li>
+                        <li><strong>Smoking cessation:</strong> Helps optimize peak bone mass, minimize bone loss, and ultimately reduce fracture risk</li>
+                        <li><strong>Exercise:</strong> Weight-bearing aerobic and strengthening exercises can decrease risk of falls and fractures by improving muscle strength, coordination, balance, and mobility</li>
+                        <li><strong>Fall prevention programs:</strong> Multifactorial programs can decrease falls, fractures, other injuries, and nursing home and hospital admissions</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <h4><i class="fas fa-calculator"></i> How to Calculate Calcium and Vitamin D from Food Labels:</h4>
+                        <ul>
+                            <li><strong>Calcium:</strong> Add a zero to the percentage of the daily value on food labels. For example: One serving of milk (8 oz or 240 mL) has 30% of the daily value of calcium; this converts to 300 mg of calcium per serving.</li>
+                            <li><strong>Vitamin D:</strong> Multiply the percent daily value of vitamin D listed on the food label by 4. For example: 20% vitamin D = 80 units.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Pharmacologic Therapy -->
+                <section id="section5-en">
+                    <h2>Pharmacologic Therapy</h2>
+                    
+                    <h3>General Approach:</h3>
+                    <ul>
+                        <li>Combined with adequate calcium and vitamin D intakes, alendronate, risedronate, zoledronic acid, and denosumab are the prescription medications of choice because they reduce both hip and vertebral fracture risks</li>
+                        <li>Abaloparatide, bazedoxifene/conjugated equine estrogens, ibandronate, raloxifene, romosozumab, and teriparatide are second-line alternatives because they decrease vertebral but not hip fracture risks</li>
+                        <li>Calcitonin is last-line therapy</li>
+                        <li>Estrogen and testosterone are not used for osteoporosis treatment but can have a positive bone effect when prescribed for other conditions</li>
+                    </ul>
+
+                    <h3>Antiresorptive Therapy:</h3>
+                    
+                    <div class="medication-card">
+                        <div class="medication-name">Bisphosphonates</div>
+                        <p><strong>Mechanism:</strong> Mimic pyrophosphate, an endogenous bone resorption inhibitor. Therapy leads to decreased osteoclast maturation, number, recruitment, bone adhesion, and life span.</p>
+                        <p><strong>Medications:</strong> Alendronate, risedronate, ibandronate, zoledronic acid (IV)</p>
+                        <p><strong>Oral Administration:</strong> Taken in the morning with at least 6 oz (180 mL) of plain water, 30-60 minutes before consuming any food, supplements, or medications, and remain upright for 30-60 minutes after administration.</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Denosumab (Prolia)</div>
+                        <p><strong>Mechanism:</strong> A RANK ligand inhibitor that inhibits osteoclast formation and increases osteoclast apoptosis.</p>
+                        <p><strong>Dose:</strong> 60 mg subcutaneous injection once every 6 months</p>
+                        <p><strong>Indications:</strong> Treatment of osteoporosis in women and men at high risk for fracture, for glucocorticoid-induced osteoporosis</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Raloxifene (Evista)</div>
+                        <p><strong>Mechanism:</strong> An estrogen agonist/antagonist that is an estrogen agonist on bone receptors but an antagonist at breast receptors, with minimal effects on the uterus.</p>
+                        <p><strong>Indications:</strong> Prevention and treatment of postmenopausal osteoporosis and for reducing the risk of invasive breast cancer in postmenopausal women with and without osteoporosis</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Calcitonin</div>
+                        <p><strong>Mechanism:</strong> An endogenous hormone released from the thyroid gland when serum calcium is elevated.</p>
+                        <p><strong>Form:</strong> Intranasal spray (200 units daily) or subcutaneous injection</p>
+                        <p><strong>Indications:</strong> Osteoporosis treatment for women at least 5 years past menopause. Can be used if alternative therapies are not appropriate.</p>
+                    </div>
+
+                    <h3>Formation Medications:</h3>
+                    
+                    <div class="medication-card">
+                        <div class="medication-name">Teriparatide (Forteo)</div>
+                        <p><strong>Mechanism:</strong> An analog of parathyroid hormone (PTH) that increases bone formation with a minor increase in bone resorption for a net anabolic effect when administered intermittently.</p>
+                        <p><strong>Dose:</strong> 20 mcg subcutaneous daily for up to 2 years</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Abaloparatide (Tymlos)</div>
+                        <p><strong>Mechanism:</strong> An analog of parathyroid hormone-related peptide (PTHrP) that has a greater anabolic effect with less activation of bone resorption and remodeling than teriparatide.</p>
+                        <p><strong>Dose:</strong> 80 mcg subcutaneous daily for up to 2 years</p>
+                    </div>
+
+                    <div class="medication-card">
+                        <div class="medication-name">Romosozumab (Evenity)</div>
+                        <p><strong>Mechanism:</strong> A humanized monoclonal antibody that binds to sclerostin to prevent inhibition of bone formation and decrease bone resorption.</p>
+                        <p><strong>Dose:</strong> 210 mg subcutaneous monthly for 1 year</p>
+                        <p><strong>Warning:</strong> Contains a boxed warning of an increased risk of myocardial infarction, stroke, and cardiovascular death</p>
+                    </div>
+                </section>
+                
+                <!-- Section 6: Tables and Medications -->
+                <section id="section6-en">
+                    <h2>Tables and Medications</h2>
+                    
+                    <h3>Calcium and Vitamin D - Recommended Dietary Allowances (RDAs):</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Group and Ages</th>
+                                    <th>Elemental Calcium RDA (mg)</th>
+                                    <th>Vitamin D RDA (Units)</th>
+                                    <th>Calcium Tolerable Upper Intake Level (mg)</th>
+                                    <th>Vitamin D Tolerable Upper Intake Level (Units)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Children 1-3 years</td>
+                                    <td>700</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>2500</td>
+                                </tr>
+                                <tr>
+                                    <td>Children 4-8 years</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>3000</td>
+                                </tr>
+                                <tr>
+                                    <td>Adolescents 9-18 years</td>
+                                    <td>1300</td>
+                                    <td>600</td>
+                                    <td>3000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Adults 19-50 years</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2500</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Women 51-70 years</td>
+                                    <td>1200</td>
+                                    <td>600</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Men 51-70 years</td>
+                                    <td>1000</td>
+                                    <td>600</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                                <tr>
+                                    <td>Over 70 years</td>
+                                    <td>1200</td>
+                                    <td>800</td>
+                                    <td>2000</td>
+                                    <td>4000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Osteoporosis Medications:</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Drug</th>
+                                    <th>Brand Name</th>
+                                    <th>Dose</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alendronate</td>
+                                    <td>Fosamax</td>
+                                    <td>Treatment: 10 mg daily or 70 mg weekly<br>Prevention: 5 mg daily or 35 mg weekly</td>
+                                    <td>Take on empty stomach with water, wait 30 min before eating</td>
+                                </tr>
+                                <tr>
+                                    <td>Risedronate</td>
+                                    <td>Actonel</td>
+                                    <td>5 mg daily, 35 mg weekly, 150 mg monthly</td>
+                                    <td>Take on empty stomach with water</td>
+                                </tr>
+                                <tr>
+                                    <td>Ibandronate</td>
+                                    <td>Boniva</td>
+                                    <td>150 mg monthly orally, 3 mg IV quarterly</td>
+                                    <td>Wait 60 minutes before eating</td>
+                                </tr>
+                                <tr>
+                                    <td>Zoledronic acid</td>
+                                    <td>Reclast</td>
+                                    <td>5 mg IV infusion yearly</td>
+                                    <td>Contraindicated if CrCl &lt;35 mL/min</td>
+                                </tr>
+                                <tr>
+                                    <td>Denosumab</td>
+                                    <td>Prolia</td>
+                                    <td>60 mg SC every 6 months</td>
+                                    <td>Correct hypocalcemia before administration</td>
+                                </tr>
+                                <tr>
+                                    <td>Teriparatide</td>
+                                    <td>Forteo</td>
+                                    <td>20 mcg SC daily for up to 2 years</td>
+                                    <td>Refrigerate, discard after 28 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Romosozumab</td>
+                                    <td>Evenity</td>
+                                    <td>210 mg SC monthly for 1 year</td>
+                                    <td>Cardiovascular risk warning</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Glucocorticoid-Induced Osteoporosis:</h3>
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Important Information:</h4>
+                        <ul>
+                            <li>All glucocorticoid doses and formulations have been associated with increased bone loss and fractures</li>
+                            <li>Risk is much greater with oral prednisone doses ≥5 mg daily (or equivalent) and oral therapy vs inhaler or intranasal therapy</li>
+                            <li>Bone losses are rapid, with up to 12%–15% loss over the first year</li>
+                            <li>Perform an initial BMD assessment prior to or within 6 months of glucocorticoid initiation</li>
+                        </ul>
+                    </div>
+
+                    <h3>Evaluation of Therapeutic Outcomes:</h3>
+                    <ul>
+                        <li>Assess medication adherence and tolerability at each visit</li>
+                        <li>Ask patients about possible fracture symptoms (eg, bone pain, disability) at each visit</li>
+                        <li>Obtain a central DXA BMD measurement after 1–2 years or 3–5 years after initiating a medication therapy to monitor response</li>
+                        <li>Repeat a central DXA every 2 years until BMD is stable</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>مرجع هشاشة العظام - Osteoporosis Reference</p>
+            <p>© 2023 - مصدر: قسم اضطرابات العظام والمفاصل</p>
+            <p>ملاحظة: هذه المعلومات للأغراض التعليمية فقط ولا تغني عن استشارة الطبيب</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        document.getElementById('arabic-btn').addEventListener('click', function() {
+            document.getElementById('arabic-content').classList.add('active');
+            document.getElementById('english-content').classList.remove('active');
+            document.getElementById('arabic-btn').classList.add('active');
+            document.getElementById('english-btn').classList.remove('active');
+            
+            // Update tab buttons text to Arabic
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const arabicLabels = ['الفيزيولوجيا المرضية', 'العرض السريري', 'التشخيص', 'العلاج العام', 'العلاج الدوائي', 'الجداول والأدوية'];
+            
+            tabButtons.forEach((button, index) => {
+                button.textContent = arabicLabels[index];
+            });
+        });
+        
+        document.getElementById('english-btn').addEventListener('click', function() {
+            document.getElementById('english-content').classList.add('active');
+            document.getElementById('arabic-content').classList.remove('active');
+            document.getElementById('english-btn').classList.add('active');
+            document.getElementById('arabic-btn').classList.remove('active');
+            
+            // Update tab buttons text to English
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const englishLabels = ['Pathophysiology', 'Clinical Presentation', 'Diagnosis', 'General Treatment', 'Pharmacologic Therapy', 'Tables & Medications'];
+            
+            tabButtons.forEach((button, index) => {
+                button.textContent = englishLabels[index];
+            });
+        });
+        
+        // Tab Navigation Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                const targetSectionId = this.getAttribute('data-target');
+                const isArabicActive = document.getElementById('arabic-content').classList.contains('active');
+                
+                if (isArabicActive) {
+                    // Scroll to section in Arabic content
+                    const targetSection = document.getElementById(targetSectionId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // Scroll to section in English content
+                    const targetSection = document.getElementById(targetSectionId + '-en');
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Highlight English terms in Arabic content on hover
+        const englishTerms = document.querySelectorAll('.english-term');
+        englishTerms.forEach(term => {
+            term.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#e0f2f1';
+                this.style.padding = '3px 8px';
+                this.style.borderRadius = '4px';
+                this.style.transition = 'all 0.2s';
+                this.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+            });
+            
+            term.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#f0f7f7';
+                this.style.padding = '2px 6px';
+                this.style.boxShadow = 'none';
+            });
+        });
+        
+        // Initialize first section as active in navigation
+        document.querySelector('.tab-btn').click();
+        
+        // Scroll to top functionality
+        const scrollTopButton = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Print functionality
+        window.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
 </body>
 </html>
